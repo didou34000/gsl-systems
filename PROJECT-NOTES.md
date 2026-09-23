@@ -31,3 +31,10 @@ Tous les appels à un nouveau devis aboutissent à /demande-de-devis. Les param�
 Simulations et anciens brouillons (/espace) sont séparés des demandes actuelles (/professionnel). Les prix/délais précis des exemples sur mesure ont été retirés. Les caractéristiques Procédé ne sont plus dupliquées. La CNC propose uniquement des capacités d’usinage liées.
 Coordonnées d’exploitant : en attente de confirmation de l’utilisateur, aucune donnée personnelle issue des outils de compte n’a été publiée. Renseigner lib/operator.ts lorsque les coordonnées professionnelles sont confirmées. La page /contact explique le rôle et indique honnêtement cette absence.
 Validation : 121 assertions HTTP/statuts/données incluant conservation du contexte après réouverture de SQLite, refus de substitution du fournisseur et de référence rejetée. TypeScript; navigateur : vidéo pause, recherche, contexte CNC/fabricant et garde compte fournisseur; mobile 390 px sans débordement, source vidéo mobile en lecture muette. Le test de devis multi-identités utilise des comptes fictifs dans le harness isolé, pas plusieurs comptes réels en production.
+
+## Readability and catalogue refinement
+- Larger functional typography, explicit demo badges on product cards, darker secondary copy.
+- Home: requested positioning; 480–560 px desktop video, four concise sections, examples in place of long supplier lesson. Existing video accessibility and deferred loading preserved.
+- Header prioritizes catalogue/fabricants/method; no duplicate home/catalogue search, mobile menu retains account and quote links.
+- Catalogue compact empty network notice, earlier demo results, active filter summary/reset, declared/illustrative quantity filters applied to both datasets. Removed misleading per-sector demo counts beside shared filters.
+- QA: desktop 1280×720 and mobile 390×844; no horizontal overflow; first card visible before fold; selected product/supplier preserved and supplier guard actionable. 121 B2B HTTP/status/data assertions passed.
