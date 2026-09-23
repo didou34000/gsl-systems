@@ -1,2 +1,1 @@
-import Marketplace from './marketplace';
-export default function Page(){return <Marketplace/>}
+export default function Page(){return null}
