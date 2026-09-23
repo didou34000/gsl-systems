@@ -55,5 +55,31 @@ try{
  const sent=(await snapshot('A')).rfqs[0];await call('A',{...rfqBody,id:sent.id,revision:sent.revision},'dashboard',409);await call('A',{action:'delete_rfq',id:sent.id,revision:sent.revision},'dashboard',409);
  const disposable=await call('A',{...rfqBody,title:'Brouillon à supprimer'});const before=(await snapshot('A')).rfqs.find(r=>r.id===disposable.id);await call('C',{action:'delete_rfq',id:before.id,revision:before.revision},'dashboard',403);await call('A',{action:'delete_rfq',id:before.id,revision:before.revision});assert.ok(!(await snapshot('A')).rfqs.some(r=>r.id===before.id));assertions++;
  assert.equal((await snapshot('C')).threads.length,0);assert.equal((await snapshot('C')).rfqs.length,0);assertions+=2;
+
+ // Two journeys share the same requests, permissions and conversation tables.
+ const assisted=await call('A',{...rfqBody,title:'Dossier accompagné TEST',mode:'assisted'});let ar=await call('A',null,'rfq&id='+assisted.id);
+ await call('R',null,'rfq&id='+ar.id,403);assert.equal((await call('R',null,'sourcing')).length,0);assertions++;
+ await call('A',{action:'send_rfq',id:ar.id,revision:ar.revision,suppliers:[B.id]},'dashboard',409);
+ await call('C',{action:'submit_assistance',id:ar.id,revision:ar.revision},'dashboard',403);
+ await call('A',{action:'submit_assistance',id:ar.id,revision:ar.revision});ar=await call('A',null,'rfq&id='+ar.id);
+ await call('R',null,'rfq&id='+ar.id);await call('B',null,'rfq&id='+ar.id,403);await call('C',null,'sourcing',403);
+ await call('A',{...rfqBody,id:ar.id,revision:ar.revision},'dashboard',409);
+ await call('B',{action:'review_assistance',id:ar.id,revision:ar.revision,decision:'ready',note:'Intrusion interdite'},'dashboard',403);
+ await call('R',{action:'review_assistance',id:ar.id,revision:ar.revision,decision:'ready',note:'Dossier de test examiné. Sélection des fabricants par l’acheteur.'});ar=await call('A',null,'rfq&id='+ar.id);
+ await call('A',{action:'send_rfq',id:ar.id,revision:ar.revision,suppliers:[B.id]});assert.equal((await snapshot('B')).threads.find(t=>t.rfq_id===ar.id).rfq_id,ar.id);assertions++;
+ await call('A',{action:'bookmark',productId:p.id,selected:true});assert.equal((await call('A',null,'catalogue')).bookmarks[0].product_id,p.id);assert.equal((await call('C',null,'catalogue')).bookmarks.length,0);assertions+=2;
+ await call('A',{action:'report',productId:p.id,reason:'Signalement fictif pour vérifier la revue.'});await call('B',null,'reports',403);const reports=await call('R',null,'reports');await call('R',{action:'resolve_report',id:reports[0].id,note:'Signalement de test traité.'});
+ await call('B',null,'deals',403);
+ const realOffer=(await call('A',null,'thread&id='+bt.id)).offers[0];await call('C',{action:'declare_order',offerId:realOffer.id,reference:'TEST-C',note:'Intrusion de test refusée'},'dashboard',403);await call('B',{action:'declare_order',offerId:realOffer.id,reference:'TEST-B',note:'Seul acheteur peut déclarer'},'dashboard',403);
+ await call('A',{action:'declare_order',offerId:realOffer.id,reference:'TEST-ORDER-001',note:'Commande de test déclarée hors plateforme, aucun paiement.'});assert.equal((await call('B',null,'thread&id='+bt.id)).orders[0].reference,'TEST-ORDER-001');assertions++;assert.equal((await call('R',null,'deals'))[0].offer_id,realOffer.id);assertions++;
+ await call('A',{action:'declare_order',offerId:realOffer.id,reference:'TEST-DOUBLE',note:'Double déclaration à refuser'},'dashboard',409);
+ const cap=await call('B',{...productBody,kind:'capacity',process:'Fraisage CNC',materials:'Aluminium',equipment:'Centre 3 axes déclaré',dimensions:'Selon plan',volumes:'Prototypes',moq:0,priceCents:0});await approveAndPublish('B','product',cap.id);assert.equal((await call('A',null,'catalogue&q=Fraisage')).products[0].kind,'capacity');assertions++;
+ let cp=(await snapshot('B')).products.find(x=>x.id===cap.id);await call('D',{action:'archive_product',id:cp.id,revision:cp.revision},'dashboard',403);await call('B',{action:'archive_product',id:cp.id,revision:cp.revision});assert.ok(!(await call('A',null,'catalogue')).products.some(x=>x.id===cap.id));assertions++;
+ // Exercise the production file handler with an isolated in-memory object bucket.
+ const filesPath=dir+'/files.mjs';writeFileSync(filesPath,ts.transpileModule(readFileSync('lib/b2b/files.ts','utf8'),{compilerOptions:{target:ts.ScriptTarget.ES2022,module:ts.ModuleKind.ESNext}}).outputText);
+ const {handleFiles}=await import(pathToFileURL(filesPath));const objects=new Map();const bucket={put:async(k,v)=>objects.set(k,v),get:async k=>objects.has(k)?{body:objects.get(k)}:null,delete:async k=>objects.delete(k)};
+ async function fileCall(u,query,upload,expected=200){const form=new FormData();if(upload){form.set('file',new File(['%PDF-1.7 TEST'],upload,{type:'application/pdf'}));form.set('authorized','yes')}const response=await handleFiles(new Request(base+'/api/files?'+query,{method:upload?'POST':'GET',headers:{Origin:base},...(upload?{body:form}:{})}),{db,bucket,user:users[u]||null});assert.equal(response.status,expected,await response.clone().text());assertions++;return response.headers.get('content-type')?.includes('json')?response.json():response.text()}
+ const privateR=await call('A',{...rfqBody,title:'Plans privés test'});const f=await fileCall('A','rfq='+privateR.id,'plan-test.pdf');await fileCall('B','id='+f.id,null,403);await fileCall('C','id='+f.id,null,403);await fileCall('R','id='+f.id,null,403);await fileCall('A','id='+f.id);await fileCall('A','rfq='+privateR.id,'unsafe.html',400);
+ let fr=await call('A',null,'rfq&id='+privateR.id);await call('A',{action:'send_rfq',id:fr.id,revision:fr.revision,suppliers:[B.id]});await fileCall('B','id='+f.id);await fileCall('R','id='+f.id,null,403);await fileCall('D','id='+f.id,null,403);await fileCall('A','rfq='+fr.id,'late.pdf',409);await fileCall('B','rfq='+fr.id,'intrusion.pdf',403);
  console.log(`PASS: ${assertions} HTTP/status/data assertions; identities A/B/C/D/reviewer; real SQLite persistence reopened.`);
 }finally{await new Promise(r=>server.close(r));sqlite.close();rmSync(file,{force:true})}

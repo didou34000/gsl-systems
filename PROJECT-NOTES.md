@@ -38,3 +38,14 @@ Validation : 121 assertions HTTP/statuts/données incluant conservation du conte
 - Header prioritizes catalogue/fabricants/method; no duplicate home/catalogue search, mobile menu retains account and quote links.
 - Catalogue compact empty network notice, earlier demo results, active filter summary/reset, declared/illustrative quantity filters applied to both datasets. Removed misleading per-sector demo counts beside shared filters.
 - QA: desktop 1280×720 and mobile 390×844; no horizontal overflow; first card visible before fold; selected product/supplier preserved and supplier guard actionable. 121 B2B HTTP/status/data assertions passed.
+
+## Deux offres — marketplace et sourcing accompagné
+- Même authentification, organisations, RFQ, conversations et propositions. `rfqs.mode` distingue autonome/accompagné. Les drafts ne sont visibles qu’au propriétaire. Transmission CD systems explicite avant accès des reviewers ; consultation fournisseurs ensuite avec destinataires confirmés.
+- Examen humain fermé tant qu’aucun reviewer n’est configuré. Aucun droit attribué en production par ce travail. Réseau turc à constituer/qualifier, offre humaine et conditions commerciales à définir.
+- Fiches produit/capacité, données techniques déclarées, minimum/prix facultatifs (0 = non renseigné), archive, favoris persistants et comparaison commune, signalements/revue.
+- R2 `FILES` + D1 metadata : plans privés, pièces jointes de fiches ; max 10 Mo, téléchargement authentifié en pièce jointe uniquement, jamais de plan dans le catalogue. Upload interdit après transmission ; CAS de révision avant ajout metadata pour éviter le partage d’un fichier ajouté pendant l’envoi. Supplier files visibles avec publication approuvée ; aucun audit implicite.
+- Déclaration de commande hors plateforme liée à un devis existant, acheteur seulement, visible au fabricant et aux administrateurs, unicité par devis. Aucun paiement, commission ou qualification de paiement effectué.
+- Suivi échantillons/premières pièces par messages ; pas de logistique, transport, inspection physique ou notifications externes automatisés. Fichiers déposés en téléchargement, pas de galerie d’images ni prévisualisation CAD.
+- Test UI : rôles temporaires exclusivement dans la base locale, restaurés après contrôle ; aucune validation/publication réelle. Tests automatisés API avec SQLite isolée et bucket de test.
+
+- Validation finale : 187 assertions HTTP/données/autorisations, TypeScript, aperçu desktop/mobile et retour de connexion conservant mode et référence. Les profils temporaires de test ont été restaurés.

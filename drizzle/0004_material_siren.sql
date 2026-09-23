@@ -1,0 +1,1 @@
+CREATE UNIQUE INDEX `idx_orders_offer` ON `declared_orders` (`offer_id`);
