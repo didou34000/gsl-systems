@@ -19,7 +19,7 @@ const actions=z.discriminatedUnion('action',[
  z.object({action:z.literal('review'),target:z.enum(['org','product','document']),...version,decision:z.enum(['approved','rejected']),note:txt(5,2000)}).strict(),
  z.object({action:z.literal('publish'),target:z.enum(['org','product']),...version,published:z.boolean()}).strict(),
  z.object({action:z.literal('document'),productId:id.optional(),label:txt(3,160),reference:txt(2,160),issuer:txt(2,160),scope:txt(10,2000)}).strict(),
- z.object({action:z.literal('save_rfq'),id:id.optional(),revision:id.optional(),title:txt(3,160),quantity:z.number().int().min(1).max(100000000),details:txt(20,8000)}).strict(),
+ z.object({action:z.literal('save_rfq'),id:id.optional(),revision:id.optional(),productId:id.optional(),supplierId:id.optional(),title:txt(3,160),quantity:z.number().int().min(1).max(100000000),details:txt(20,8000)}).strict(),
  z.object({action:z.literal('delete_rfq'),...version}).strict(),
  z.object({action:z.literal('send_rfq'),...version,suppliers:z.array(id).min(1).max(10).refine(v=>new Set(v).size===v.length)}).strict(),
  z.object({action:z.literal('message'),threadId:id,body:txt(1,5000)}).strict(),
@@ -39,7 +39,7 @@ export async function handleBusiness(request:Request,{db,user,reviewerIds=[]}:Co
   const reviewConfigured=reviewerIds.length>0||!!await one('SELECT user_id FROM reviewers LIMIT 1');
   const requireOrg=(kind?:string)=>{if(!org||!member||!['owner','member'].includes(member.role)||(kind&&org.kind!==kind))deny();return org!};
   const own=async(target:keyof typeof table,key:string)=>{const o=requireOrg('supplier');const row=await one(`SELECT * FROM ${table[target]} WHERE id=?`,key);if(!row)missing();if((target==='org'?row!.id:row!.org_id)!==o.id)deny();return row!};
-  const conversation=async(key:string)=>{const o=requireOrg();const t=await one('SELECT t.*, r.buyer_org_id, r.title, r.quantity, r.details FROM business_threads t JOIN rfqs r ON r.id=t.rfq_id WHERE t.id=?',key);if(!t)missing();if(t!.buyer_org_id!==o.id&&t!.supplier_org_id!==o.id)deny();return t!};
+  const conversation=async(key:string)=>{const o=requireOrg();const t=await one('SELECT t.*, r.buyer_org_id, r.title, r.quantity, r.details,r.product_name,r.supplier_name,r.supplier_org_id AS selected_supplier FROM business_threads t JOIN rfqs r ON r.id=t.rfq_id WHERE t.id=?',key);if(!t)missing();if(t!.buyer_org_id!==o.id&&t!.supplier_org_id!==o.id)deny();return t!};
   if(request.method==='GET'){
    const q=new URL(request.url).searchParams,view=q.get('view')||'dashboard';
    if(view==='catalogue'){const query=(q.get('q')||'').slice(0,200);return json({products:await all("SELECT p.id,p.name,p.category,p.description,p.moq,p.price_cents,o.name AS company,o.country,o.id AS org_id FROM business_products p JOIN organisations o ON o.id=p.org_id WHERE p.status='approved' AND p.published='yes' AND o.status='approved' AND o.published='yes' AND (instr(lower(p.name||' '||p.category||' '||p.description||' '||o.name),lower(?))>0) ORDER BY p.created_at DESC LIMIT 100",query),suppliers:await all("SELECT id,name,country,description FROM organisations WHERE kind='supplier' AND status='approved' AND published='yes' ORDER BY name LIMIT 100")});}
@@ -78,12 +78,23 @@ export async function handleBusiness(request:Request,{db,user,reviewerIds=[]}:Co
   if(a.action==='publish'){await own(a.target,a.id);await changed(stmt(`UPDATE ${table[a.target]} SET published=?,revision=? WHERE id=? AND revision=? AND status='approved'`,a.published?'yes':'no',rev,a.id,a.revision));return json({ok:true});}
   if(a.action==='document'){const o=requireOrg('supplier');if(a.productId)await own('product',a.productId);await stmt("INSERT INTO document_registers (id,org_id,product_id,label,reference,issuer,scope,status,review_note,revision,created_at) VALUES (?,?,?,?,?,?,?,'unreviewed','',?,?)",newId,o.id,a.productId||null,a.label,a.reference,a.issuer,a.scope,rev,now).run();return json({id:newId});}
   if(a.action==='save_rfq'){
-   const o=requireOrg('buyer');if(a.id){const r=await one('SELECT * FROM rfqs WHERE id=?',a.id);if(!r)missing();if(r!.buyer_org_id!==o.id)deny();await changed(stmt("UPDATE rfqs SET title=?,quantity=?,details=?,revision=? WHERE id=? AND buyer_org_id=? AND revision=? AND status='draft'",a.title,String(a.quantity),a.details,rev,a.id,o.id,a.revision||''));}
-   else await stmt("INSERT INTO rfqs (id,buyer_org_id,title,quantity,details,status,revision,created_at) VALUES (?,?,?,?,?,'draft',?,?)",newId,o.id,a.title,String(a.quantity),a.details,rev,now).run();return json({id:a.id||newId});
+   const o=requireOrg('buyer');
+   if(a.id){const r=await one('SELECT * FROM rfqs WHERE id=?',a.id);if(!r)missing();if(r!.buyer_org_id!==o.id)deny();
+    if((a.productId&&a.productId!==r!.product_id)||(a.supplierId&&a.supplierId!==r!.supplier_org_id))throw new HttpError(400,'Le destinataire d’origine est conservé. Créez une autre demande pour changer de référence.');
+    await changed(stmt("UPDATE rfqs SET title=?,quantity=?,details=?,revision=? WHERE id=? AND buyer_org_id=? AND revision=? AND status='draft'",a.title,String(a.quantity),a.details,rev,a.id,o.id,a.revision||''));
+   }else{
+    let product:Row|null=null,supplier:Row|null=null;
+    if(a.productId){product=await one("SELECT p.* FROM business_products p JOIN organisations o ON o.id=p.org_id WHERE p.id=? AND p.status='approved' AND p.published='yes' AND o.status='approved' AND o.published='yes'",a.productId);if(!product)throw new HttpError(400,'Cette référence n’est plus disponible. Revenez au catalogue.');}
+    const supplierId=product?.org_id||a.supplierId;
+    if(supplierId){supplier=await one("SELECT * FROM organisations WHERE id=? AND kind='supplier' AND status='approved' AND published='yes'",supplierId);if(!supplier)throw new HttpError(400,'Ce fournisseur n’est plus disponible. Revenez au catalogue.');}
+    if(product&&a.supplierId&&a.supplierId!==product.org_id)throw new HttpError(400,'Produit et fournisseur incohérents.');
+    await stmt("INSERT INTO rfqs (id,buyer_org_id,title,quantity,details,status,revision,created_at,product_id,supplier_org_id,product_name,supplier_name) VALUES (?,?,?,?,?,'draft',?,?,?,?,?,?)",newId,o.id,a.title,String(a.quantity),a.details,rev,now,product?.id||null,supplier?.id||null,product?.name||null,supplier?.name||null).run();
+   }return json({id:a.id||newId});
   }
   if(a.action==='delete_rfq'||a.action==='send_rfq'){
    const o=requireOrg('buyer'),r=await one('SELECT * FROM rfqs WHERE id=?',a.id);if(!r)missing();if(r!.buyer_org_id!==o.id)deny();if(r!.status!=='draft'||r!.revision!==a.revision)conflict();
    if(a.action==='delete_rfq'){await changed(stmt("UPDATE rfqs SET status='deleted',revision=? WHERE id=? AND buyer_org_id=? AND revision=? AND status='draft'",rev,a.id,o.id,a.revision));return json({ok:true});}
+   if(r!.supplier_org_id&&!a.suppliers.includes(r!.supplier_org_id))throw new HttpError(400,'Conservez le fournisseur sélectionné pour cette demande.');
    for(const supplier of a.suppliers){if(!await one("SELECT id FROM organisations WHERE id=? AND kind='supplier' AND status='approved' AND published='yes'",supplier))throw new HttpError(400,'Un fournisseur sélectionné n’est plus disponible.');}
    // Compare-and-swap first; inserts require this operation's unique revision.
    const results=await db.batch([stmt("UPDATE rfqs SET status='sent',revision=? WHERE id=? AND buyer_org_id=? AND revision=? AND status='draft'",rev,a.id,o.id,a.revision),...a.suppliers.map(s=>stmt("INSERT INTO business_threads (id,rfq_id,supplier_org_id,created_at) SELECT ?,?,?,? WHERE EXISTS(SELECT 1 FROM rfqs WHERE id=? AND revision=? AND status='sent')",crypto.randomUUID(),a.id,s,now,a.id,rev))]);if(results[0].meta.changes!==1)conflict();return json({ok:true});

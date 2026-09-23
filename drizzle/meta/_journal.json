@@ -15,6 +15,13 @@
       "when": 1790173122198,
       "tag": "0001_concerned_ultimates",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790174728245,
+      "tag": "0002_mushy_raider",
+      "breakpoints": true
     }
   ]
 }
