@@ -6,5 +6,5 @@ import './globals.css';
 import './brand.css';
 import './discovery.css';
 import './auth.css';
-export const metadata:Metadata={title:'IS systems — Industrial sourcing & marketplace',description:'Find industrial products and manufacturing capabilities. Explore product specifications, supplier profiles and locations. Private demonstration.',robots:{index:false,follow:false},icons:{icon:'/favicon.svg',shortcut:'/favicon.svg'}};
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><Suspense fallback={<div className="loading-page">IS systems · Loading…</div>}><LanguageProvider><Marketplace>{children}</Marketplace></LanguageProvider></Suspense></body></html>}
+export const metadata:Metadata={title:'GSL systems — Industrial sourcing & marketplace',description:'Find industrial products and manufacturing capabilities. Explore product specifications, supplier profiles and locations. Private demonstration.',robots:{index:false,follow:false},icons:{icon:'/favicon.svg',shortcut:'/favicon.svg'}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en"><body><Suspense fallback={<div className="loading-page">GSL systems · Loading…</div>}><LanguageProvider><Marketplace>{children}</Marketplace></LanguageProvider></Suspense></body></html>}
