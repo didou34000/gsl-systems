@@ -17,9 +17,10 @@ export async function POST(request:Request){
  let body;try{body=JSON.parse(raw)}catch{return json({error:'INVALID'},400)}
  if(!body||typeof body!=='object'||Array.isArray(body))return json({error:'INVALID'},400);
  const action=body.action;const email=typeof body.email==='string'?body.email.trim().toLowerCase():'';
- const emailAction=['signup','login','reset','resend'].includes(action);
+ const emailAction=['signup','login','reset','resend','verify'].includes(action);
  if(emailAction&&(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||email.length>254))return json({error:'EMAIL'},400);
  if(['signup','password'].includes(action)&&!validPassword(body.password))return json({error:'PASSWORD'},400);
+ if(action==='verify'&&(typeof body.code!=='string'||!/^\d{8}$/.test(body.code)||!['signup','recovery'].includes(body.flow)))return json({error:'CODE_INVALID'},400);
  if(action==='login'&&(typeof body.password!=='string'||body.password.length>128||!body.password))return json({error:'CREDENTIALS'},400);
  try {
   const db=await authClient();
@@ -28,6 +29,9 @@ export async function POST(request:Request){
   if(action==='signup'){
    if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
    ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback,data:{display_name:body.name.trim(),language:body.language==='fr'?'fr':'en'}}}));
+  }else if(action==='verify'){
+   ({error}=await db.auth.verifyOtp({email,token:body.code,type:body.flow==='recovery'?'recovery':'email'}));
+   if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe':'/compte?confirmed=1'});
   }else if(action==='login'){
    ({error}=await db.auth.signInWithPassword({email,password:body.password}));
    if(!error)return json({ok:true,next:safeNext(body.next)});
@@ -50,6 +54,7 @@ export async function POST(request:Request){
   }else return json({error:'INVALID'},400);
   if(error){
    if(error.status===429||error.code?.includes('rate_limit'))return json({error:'RATE_LIMIT'},429);
+   if(action==='verify')return json({error:'CODE_INVALID'},400);
    if(error.code==='email_not_confirmed')return json({error:'CONFIRM_EMAIL'},400);
    if(action==='login')return json({error:'CREDENTIALS'},400);
    if(error.code==='same_password')return json({error:'SAME_PASSWORD'},400);

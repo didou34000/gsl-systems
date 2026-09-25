@@ -18,7 +18,7 @@ The server uses the project publishable key, not a service-role key. Session coo
 
 Supabase has email confirmation enabled and a 12-character minimum password. SMTP is configured through OVH with contact@gsl-systems.com (credentials stored only in Supabase). Callback and recovery callback URLs are explicitly allowed for www.gsl-systems.com and gsl-systems.vercel.app. Do not broaden these to arbitrary preview hosts.
 
-The default email link must be opened in the same browser used to request it (PKCE). A cross-browser/expired link presents a resend path. SMTP acceptance alone does not prove inbox delivery; validate registration and recovery with an owned mailbox before claiming end-to-end completion.
+Confirmation and recovery use an 8-digit one-time code (10-minute expiry), entered at `/confirmer-email`. The email can be read on another device. The old PKCE callback remains available for links issued before the switch. French branded email templates are versioned in `supabase/email-templates/`. SMTP acceptance alone does not prove inbox delivery; validate registration and recovery with an owned mailbox before claiming end-to-end completion.
 
 ## Scope
 

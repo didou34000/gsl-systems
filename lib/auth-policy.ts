@@ -1,7 +1,7 @@
 export function safeNext(value:unknown):string {
   if(typeof value!=='string'||!value.startsWith('/')||value.startsWith('//')||value.includes('\\')) return '/compte';
   const url=new URL(value,'https://app.local');
-  if(url.origin!=='https://app.local'||/^\/(auth|api|connexion|inscription|mot-de-passe|nouveau-mot-de-passe|signin|signout)/.test(url.pathname)) return '/compte';
+  if(url.origin!=='https://app.local'||/^\/(auth|api|connexion|confirmer-email|inscription|mot-de-passe|nouveau-mot-de-passe|signin|signout)/.test(url.pathname)) return '/compte';
   return url.pathname+url.search;
 }
 export function allowedOrigin(request:Request):string|null {
