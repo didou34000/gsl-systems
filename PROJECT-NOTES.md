@@ -49,3 +49,12 @@ Validation : 121 assertions HTTP/statuts/données incluant conservation du conte
 - Test UI : rôles temporaires exclusivement dans la base locale, restaurés après contrôle ; aucune validation/publication réelle. Tests automatisés API avec SQLite isolée et bucket de test.
 
 - Validation finale : 187 assertions HTTP/données/autorisations, TypeScript, aperçu desktop/mobile et retour de connexion conservant mode et référence. Les profils temporaires de test ont été restaurés.
+
+
+## September 25 — industrial discovery and language
+- Home keeps the existing film hero, followed immediately by six filterable product examples and a manufacturer-directory preview. Old numbered editorial steps removed.
+- New shared discovery components cover catalogue, manufacturer directory, product and company details, industry/country entry pages. Combined bilingual keyword search, country/industry/process filters, quantities, sorting, pagination, grid/list display, existing saved-products and comparison actions.
+- English is the default for these discovery pages and the shared header/footer. EN/FR selection uses the is-language device preference and updates document language. Other existing workspace/help/request pages remain French, explicitly indicated in English mode. Supplier-authored network content is not automatically translated.
+- Demo data stays clearly fictional. Addresses are not invented: city/country shown, street and production-site addresses marked not supplied. Google Maps is loaded only after the visitor clicks, with a city-only disclaimer and external map link.
+- Published network entries remain in a distinct catalogue source tab. No backend workflow, permission, record or database migration changed.
+- Verification: scripts/test-discovery.mjs checks cross-language search, combined filters, sorting, flags, unchanged product/supplier identities. TypeScript and production build passed.
