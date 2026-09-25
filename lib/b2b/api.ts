@@ -111,7 +111,7 @@ export async function handleBusiness(request:Request,{db,user,reviewerIds=[]}:Co
    const results=await db.batch([stmt("UPDATE rfqs SET status='sent',revision=? WHERE id=? AND buyer_org_id=? AND revision=? AND status='draft'",rev,a.id,o.id,a.revision),...a.suppliers.map(s=>stmt("INSERT INTO business_threads (id,rfq_id,supplier_org_id,created_at) SELECT ?,?,?,? WHERE EXISTS(SELECT 1 FROM rfqs WHERE id=? AND revision=? AND status='sent')",crypto.randomUUID(),a.id,s,now,a.id,rev))]);if(results[0].meta.changes!==1)conflict();return json({ok:true});
   }
   if(a.action==='submit_assistance'){
-   const o=requireOrg('buyer');const r=await one('SELECT * FROM rfqs WHERE id=?',a.id);if(!r)missing();if(r!.buyer_org_id!==o.id)deny();if(!reviewConfigured)throw new HttpError(409,'L’examen CD systems n’est pas encore ouvert. Votre brouillon reste privé.');
+   const o=requireOrg('buyer');const r=await one('SELECT * FROM rfqs WHERE id=?',a.id);if(!r)missing();if(r!.buyer_org_id!==o.id)deny();if(!reviewConfigured)throw new HttpError(409,'L’examen IS systems n’est pas encore ouvert. Votre brouillon reste privé.');
    await changed(stmt("UPDATE rfqs SET assistance_status='submitted',assistance_note='',revision=? WHERE id=? AND buyer_org_id=? AND revision=? AND mode='assisted' AND status='draft' AND assistance_status IN ('draft','needs_changes')",rev,a.id,o.id,a.revision));return json({ok:true});
   }
   if(a.action==='review_assistance'){
