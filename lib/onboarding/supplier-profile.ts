@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import {availableCountries} from './country-options';
 import {assessCountryDetails} from './country-requirements';
 const text=z.string().trim().max(250).default('');
 const long=z.string().trim().max(5000).default('');
@@ -28,7 +29,8 @@ export type ProfileIssue={step:number;path:string;en:string;fr:string};
 export function profileIssues(p:SupplierProfile,files:SupplierFile[],today=new Date().toISOString().slice(0,10)):ProfileIssue[]{
  const out:ProfileIssue[]=[];const need=(ok:unknown,step:number,path:string,en:string,fr:string)=>{if(!ok)out.push({step,path,en,fr})};
  need(p.legalName.length>=2,0,'legalName','Enter the registered company name.','Renseignez la raison sociale.');
- need(p.country,0,'country','Choose the country of registration.','Choisissez le pays d’immatriculation.');
+ need(p.country&&availableCountries.includes(p.country),0,'country','Choose one of the countries currently open for registration.','Choisissez un pays ouvert aux inscriptions pour le moment.');
+ need(p.website,0,'website','Add your company website or a verifiable professional profile URL.','Ajoutez le site de l’entreprise ou l’URL d’un profil professionnel vérifiable.');
  need(p.legalForm,0,'legalForm','Enter the legal form.','Indiquez la forme juridique.');
  need(p.headquarters.line&&p.headquarters.city,0,'headquarters','Complete the registered office address.','Complétez l’adresse du siège social.');
  need(p.description.length>=100,0,'description','Describe the business in at least 100 characters.','Décrivez l’activité en au moins 100 caractères.');

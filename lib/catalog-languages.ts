@@ -27,7 +27,6 @@ const descriptions=[
 const ids=['pieces-usinees-cnc','coffrets-electriques','cartons-personnalises','vetements-professionnels','profiles-aluminium','pieces-plastiques','tolerie-laser','faisceaux-electriques','linge-professionnel','tables-atelier','structures-metalliques','bureaux-professionnels'];
 export function localText(value:string,language:string){return language==='en'?english[value]||value:value}
 export function localProduct(p:Product,language:string):Product{if(language==='fr')return p;const index=ids.indexOf(p.id);return {...p,name:names[index]||p.name,description:descriptions[index]||p.description,country:localText(p.country,language),material:localText(p.material,language),process:localText(p.process,language),specs:p.specs.map(([k,v])=>[localText(k,language),localText(v,language)])}}
-export function countryFlag(country:string){const code=countries.find(c=>c.name===country)?.code;return code?String.fromCodePoint(...[...code].map(c=>127397+c.charCodeAt(0))):'🌐'}
 export function normalizeSearch(value:string){return value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
 export function matchesSearch(values:string[],query:string){const haystack=normalizeSearch(values.join(' '));return normalizeSearch(query).split(/\s+/).every(term=>haystack.includes(term))}
 export type DiscoveryFilters={query?:string;country?:string;category?:string;process?:string;maxQuantity?:string;sort?:string;language?:string};

@@ -4,7 +4,7 @@ Entry: /espace-fournisseur, from header, mobile navigation and account. Existing
 
 Six sections: identity and country registry; production sites and capabilities; product/service offers; images and evidence; commercial/export details; private profile preview and submission.
 
-Country templates: TR, GE, MA, TN, FR. All ISO country choices are accepted, but other countries explicitly require a country-specific manual review. Required registry fields are GSL intake policy, not a statement of universal law. Existing templates are reused without assuming that EU registration confers product conformity. Sole traders do not enter personal identity numbers.
+Country templates: TR, GE, MA, TN, FR. The initial selector is limited to 13 countries: FR, DE, IT, ES, PL, RO, GB, TR, GE, MA, TN, US, CN. Other ISO codes remain readable in historical drafts, but registration submission requires a currently supported country. Countries without a researched template explicitly require a country-specific manual review. Required registry fields are GSL intake policy, not a statement of universal law. Existing templates are reused without assuming that EU registration confers product conformity. Sole traders do not enter personal identity numbers.
 
 Product conformity is recorded per exact reference. CE applicability can remain pending assessment; it never produces a compliance badge. A declared applicable CE product needs legislation and a linked technical declaration. A non-applicable declaration needs explanation. Management certificates, product certificates and test reports are separate, with issuer, identifier, covered scope, product linkage, dates, optional notified-body number and evidence. Expired certificates cannot support a submission. No automatic NANDO certification claim.
 
@@ -40,3 +40,9 @@ Users cannot grant themselves reviewed status, write reviewer notes or forge tim
 - https://napr.gov.ge/EN/page/consultation-cards/business-registration-consultation
 - https://entreprendre.service-public.gouv.fr/vosdroits/R19859
 - Country-specific source URLs are also stored in lib/onboarding/country-requirements.ts.
+
+## September 27 refinements
+
+The company review section now explains identity, professional presence/contact, B2B relevance/duplicates and supporting evidence. A website or verifiable public professional profile is required at submission. These are manual GSL review criteria, not claims that automatic checks have occurred. Inspired by https://help.europages.com/en/supplier/why-has-my-registration-been-declined .
+
+Flags are local SVG assets from flag-icons v7.3.2 (MIT), with the original license at public/flags/LICENSE.txt. No flag emojis or external asset calls. The grouped country selector supports keyboard navigation, Escape dismissal and selection state.
