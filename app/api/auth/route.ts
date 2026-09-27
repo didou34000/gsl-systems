@@ -31,7 +31,7 @@ export async function POST(request:Request){
    ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback,data:{display_name:body.name.trim(),language:body.language==='fr'?'fr':'en'}}}));
   }else if(action==='verify'){
    ({error}=await db.auth.verifyOtp({email,token:body.code,type:body.flow==='recovery'?'recovery':'email'}));
-   if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe':'/compte?confirmed=1'});
+   if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe':safeNext(body.next)==='/compte'?'/compte?confirmed=1':safeNext(body.next)});
   }else if(action==='login'){
    ({error}=await db.auth.signInWithPassword({email,password:body.password}));
    if(!error)return json({ok:true,next:safeNext(body.next)});
