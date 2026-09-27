@@ -20,3 +20,31 @@ body:has(.gsl-home) .account-register{background:#a33b32;border-color:#a33b32}bo
 /* Supplier-directory hierarchy: clear headings, readable details, fewer cues. */
 .gsl-home .film-hero{margin:0;border-radius:0;min-height:460px}.gsl-home .film-hero .film-content{width:calc(100% - 96px);max-width:1160px;padding-top:48px;padding-bottom:82px}.gsl-home .film-hero h1{font-family:Arial,Helvetica,sans-serif;font-size:clamp(34px,3.4vw,48px);font-weight:650;line-height:1.17;letter-spacing:-1.2px;max-width:760px;margin:0 0 20px;text-wrap:balance}.gsl-home .film-description{max-width:650px;font-size:18px;line-height:1.6;margin:0 0 26px}.gsl-home .gsl-search-box{width:min(100%,850px);border-radius:5px;padding:8px;box-shadow:none}.gsl-home .gsl-search-modes button{font-size:16px;min-height:46px;padding:10px 20px;border-radius:3px}.gsl-home .gsl-search-box input{font-size:17px}.gsl-home .gsl-search-box form button{font-size:16px;min-height:52px;border-radius:3px}.gsl-home .film-bottom{font-size:13px;bottom:16px}.gsl-home .film-bottom button{font-size:14px;min-height:44px}.gsl-home .gsl-section{padding-block:48px}.gsl-home .gsl-section-head{align-items:center;margin-bottom:22px}.gsl-home h2{font-size:32px;line-height:1.25;font-weight:650;letter-spacing:-.6px}.gsl-home .gsl-section-head p:not(.gsl-kicker){font-size:17px;line-height:1.6;max-width:740px}.gsl-home .gsl-section-head>a{font-size:16px;min-height:44px;white-space:normal;flex-shrink:0}.gsl-home .gsl-demo-note{font-size:14px;line-height:1.6;margin-bottom:24px}.gsl-home .discovery-category{font-size:15px;color:#625c57}.gsl-home .discovery-product h3{font-size:21px;line-height:1.35;margin-bottom:18px}.gsl-home .discovery-product dl>div{font-size:16px;grid-template-columns:88px 1fr;gap:12px;padding:6px 0}.gsl-home .discovery-price{font-size:16px}.gsl-home .discovery-maker,.gsl-home .discovery-country{font-size:15px}.gsl-home .discovery-product-bottom>a{font-size:16px;min-height:44px}.gsl-home .discovery-product-bottom label{font-size:15px;min-height:32px}.gsl-home .discovery-demo{font-size:13px}.gsl-home .gsl-sector-grid strong{font-size:17px;font-weight:500}.gsl-home .gsl-sectors{padding-block:36px}.gsl-home .discovery-supplier h3{font-size:21px}.gsl-home .discovery-supplier dl>div{font-size:16px;grid-template-columns:110px 1fr}.gsl-home .discovery-tags>span{font-size:14px}.gsl-home .discovery-footnote{font-size:14px;line-height:1.6}.gsl-home .supplier-offer-strip{display:none}.gsl-home .discovery-supplier-actions{margin-top:22px}.gsl-home .discovery-supplier-actions>a{font-size:16px}.gsl-home .gsl-method li p{font-size:16px!important}.gsl-home .gsl-method li>span{display:none}.gsl-home .gsl-method a{font-size:16px}.gsl-home .gsl-join{padding-block:48px}.gsl-home .gsl-join p{font-size:17px}
 @media(max-width:760px){.gsl-home .film-hero{min-height:540px}.gsl-home .film-hero .film-content{width:calc(100% - 36px);padding-top:32px;padding-bottom:90px}.gsl-home .film-hero h1{font-size:32px;line-height:1.18;letter-spacing:-.7px}.gsl-home .film-description{font-size:16px;margin-bottom:22px}.gsl-home .gsl-search-box input{font-size:16px}.gsl-home .gsl-search-modes button{font-size:16px}.gsl-home .film-bottom{font-size:12px;width:calc(100% - 36px)}.gsl-home .film-bottom>span{max-width:205px}.gsl-home h2{font-size:27px}.gsl-home .gsl-section{padding-block:32px}.gsl-home .gsl-section-head p:not(.gsl-kicker){font-size:16px}.gsl-home .gsl-sector-grid{grid-template-columns:1fr 1fr;gap:0 18px}.gsl-home .gsl-sector-grid strong{font-size:16px}.gsl-home .gsl-section-head>a{margin-top:12px}.gsl-home .gsl-join p{font-size:16px}}
+
+/* Airy catalogue surfaces and quiet, functional wayfinding. */
+.gsl-home .film-hero{min-height:640px;display:flex;align-items:center;max-width:none}
+.gsl-home .film-hero .film-content{padding-top:70px;padding-bottom:100px}
+.gsl-home .gsl-search-modes button{display:inline-flex;align-items:center;gap:9px}
+.gsl-home .gsl-icon-heading{display:flex;align-items:center;gap:13px}
+.gsl-home .gsl-icon-heading>svg{flex-shrink:0;color:#8d4339}
+.gsl-home .gsl-method .gsl-icon-heading>svg{color:inherit}
+.gsl-home{background:#f7f7f5}
+.gsl-home .gsl-section{padding-block:64px}
+.gsl-home .gsl-section-head{margin-bottom:28px}
+.gsl-home .discovery-grid,.gsl-home .discovery-suppliers-grid{gap:28px}
+.gsl-home .discovery-product{background:#fff;border-radius:10px;overflow:hidden}
+.gsl-home .discovery-product-image{border-radius:0;aspect-ratio:1.7}
+.gsl-home .discovery-product-body{padding:22px}
+.gsl-home .discovery-supplier{background:#fff;border-radius:10px}
+.gsl-home .gsl-sectors{background:#f0f1ee;padding-block:48px}
+.gsl-home .gsl-sector-grid>a{border-color:#dddeda;padding-block:27px}
+.gsl-home .gsl-section-head>a{border-bottom:0}
+@media(max-width:760px){
+.gsl-home .film-hero{min-height:620px}
+.gsl-home .film-hero .film-content{padding-top:45px;padding-bottom:100px}
+.gsl-home .gsl-section{padding-block:40px}
+.gsl-home .gsl-icon-heading{gap:10px}
+.gsl-home .gsl-icon-heading>svg{width:22px;height:22px}
+.gsl-home .discovery-product-body{padding:20px}
+.gsl-home .gsl-search-modes button{padding-inline:14px}
+}
