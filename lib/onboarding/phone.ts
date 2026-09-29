@@ -1,0 +1,2 @@
+import {parsePhoneNumberFromString,type CountryCode} from 'libphonenumber-js';
+export function phoneDetails(raw:string,country?:string){if(!raw.trim())return {original:raw,e164:'',valid:true};try{const parsed=parsePhoneNumberFromString(raw,country?country as CountryCode:undefined);return {original:raw,e164:parsed?.isValid()?parsed.number:'',valid:!!parsed?.isValid()}}catch{return {original:raw,e164:'',valid:false}}}

@@ -14,9 +14,11 @@ export async function POST(request:Request){
  const bytes=new Uint8Array(await file.arrayBuffer());const pdf=bytes.slice(0,5).toString()==='37,80,68,70,45';const png=bytes.slice(0,8).toString()==='137,80,78,71,13,10,26,10';const jpg=bytes[0]===255&&bytes[1]===216&&bytes[2]===255;const webp=new TextDecoder().decode(bytes.slice(0,4))==='RIFF'&&new TextDecoder().decode(bytes.slice(8,12))==='WEBP';
  const mime=pdf?'application/pdf':png?'image/png':jpg?'image/jpeg':webp?'image/webp':'';
  if(!mime||(['logo','factory','product'].includes(kind)&&pdf))return json({error:'FILE_TYPE'},400);
- const id=crypto.randomUUID();const path=`${user.id}/${id}.${pdf?'pdf':png?'png':jpg?'jpg':'webp'}`;
- const {error:ue}=await db.storage.from('gsl-onboarding').upload(path,bytes,{contentType:mime,upsert:false});if(ue)throw ue;
- const {error:ie}=await db.from('supplier_application_files').insert({id,owner_id:user.id,object_path:path,kind,name:file.name.slice(0,180),size:file.size,caption});if(ie){await db.storage.from('gsl-onboarding').remove([path]);throw ie;}
+ const {data:reservation,error:reservationError}=await db.rpc('manage_upload',{action:'reserve',args:{rightsAttested:form.get('rightsAttested')==='true',kind,name:file.name.slice(0,180),size:file.size,caption,extension:pdf?'pdf':png?'png':jpg?'jpg':'webp'}});if(reservationError)throw reservationError;
+ const {id,path}=reservation as {id:string;path:string};
+ const {error:ue}=await db.storage.from('gsl-onboarding').upload(path,bytes,{contentType:mime,upsert:false});
+ if(ue){const {error:cleanupError}=await db.storage.from('gsl-onboarding').remove([path]);if(!cleanupError)await db.rpc('manage_upload',{action:'removed',args:{id}});throw ue;}
+ const {error:ie}=await db.rpc('manage_upload',{action:'finalize',args:{id}});if(ie){const {error:cleanupError}=await db.storage.from('gsl-onboarding').remove([path]);if(!cleanupError)await db.rpc('manage_upload',{action:'removed',args:{id}});throw ie;}
  return json({ok:true});
  }catch{return json({error:'UNAVAILABLE'},503)}
 }
@@ -25,8 +27,8 @@ export async function DELETE(request:Request){
  try{const db=await authClient();const {data:{user}}=await db.auth.getUser();if(!user?.email_confirmed_at)return json({error:'LOGIN_REQUIRED'},401);
  const id=new URL(request.url).searchParams.get('id');if(!id||!/^[-0-9a-f]{36}$/.test(id))return json({error:'INVALID'},400);
  const {data:app}=await db.from('supplier_applications').select('status').eq('owner_id',user.id).maybeSingle();if(!app||!['draft','changes_requested'].includes(app.status))return json({error:'LOCKED'},409);
- const {data:file,error}=await db.from('supplier_application_files').select('object_path').eq('owner_id',user.id).eq('id',id).maybeSingle();if(error)throw error;if(!file)return json({error:'NOT_FOUND'},404);
- const {error:se}=await db.storage.from('gsl-onboarding').remove([file.object_path]);if(se)throw se;
- const {error:de}=await db.from('supplier_application_files').delete().eq('id',id).eq('owner_id',user.id);if(de)throw de;return json({ok:true});
+ const {data:file,error}=await db.rpc('manage_upload',{action:'delete',args:{id}});if(error)throw error;if(!file)return json({error:'NOT_FOUND'},404);
+ const {error:se}=await db.storage.from('gsl-onboarding').remove([file.path]);if(se)throw se;
+ const {error:de}=await db.rpc('manage_upload',{action:'removed',args:{id}});if(de)throw de;return json({ok:true});
  }catch{return json({error:'UNAVAILABLE'},503)}
 }

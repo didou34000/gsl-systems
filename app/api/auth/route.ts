@@ -24,21 +24,23 @@ export async function POST(request:Request){
  if(action==='login'&&(typeof body.password!=='string'||body.password.length>128||!body.password))return json({error:'CREDENTIALS'},400);
  try {
   const db=await authClient();
-  const callback=origin+'/auth/callback';
+  const callback=new URL('/auth/callback',origin);
+  callback.searchParams.set('next',safeNext(body.next));
+  callback.searchParams.set('lang',body.language==='fr'?'fr':'en');
   let error:{code?:string;status?:number;message:string}|null=null;
   if(action==='signup'){
    if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
-   ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback,data:{display_name:body.name.trim(),language:body.language==='fr'?'fr':'en'}}}));
+   ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback.toString(),data:{display_name:body.name.trim(),language:body.language==='fr'?'fr':'en'}}}));
   }else if(action==='verify'){
    ({error}=await db.auth.verifyOtp({email,token:body.code,type:body.flow==='recovery'?'recovery':'email'}));
-   if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe':safeNext(body.next)==='/compte'?'/compte?confirmed=1':safeNext(body.next)});
+   if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe?next='+encodeURIComponent(safeNext(body.next)):safeNext(body.next)==='/compte'?'/compte?confirmed=1':safeNext(body.next)});
   }else if(action==='login'){
    ({error}=await db.auth.signInWithPassword({email,password:body.password}));
    if(!error)return json({ok:true,next:safeNext(body.next)});
   }else if(action==='reset'){
-   ({error}=await db.auth.resetPasswordForEmail(email,{redirectTo:callback+'?flow=recovery'}));
+   ({error}=await db.auth.resetPasswordForEmail(email,{redirectTo:callback.toString()+'&flow=recovery'}));
   }else if(action==='resend'){
-   ({error}=await db.auth.resend({type:'signup',email,options:{emailRedirectTo:callback}}));
+   ({error}=await db.auth.resend({type:'signup',email,options:{emailRedirectTo:callback.toString()}}));
   }else if(action==='logout'){
    ({error}=await db.auth.signOut({scope:'local'}));
   }else if(action==='password'||action==='profile'){
