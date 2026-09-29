@@ -6,13 +6,13 @@
 | Base de tests | PGlite en mémoire dans test-postgres.mjs | Toutes les migrations locales appliquées, fixtures isolées, tests de droits exécutés |
 | UI locale | localhost:5191, build Next.js de la branche | Contact, catalogue indisponible honnête, méthode, connexion avec contexte ; langue FR/EN et largeurs 390/768 px contrôlées ; pas de Supabase configuré |
 | Préproduction Supabase | GSL Systems — préproduction, Paris, même organisation | Création autorisée à 0/mois puis refusée : quota gratuit de deux projets actifs atteint. Dorian a indiqué libérer une place ; aucun projet existant modifié. |
-| Vercel preview de cette branche | Non déployée | Aucun statut ready ne peut être annoncé |
+| Vercel preview de cette branche | Déclenchée automatiquement par GitHub | Contrôle Vercel pending observé. Le connecteur Vercel refuse le périmètre de l’équipe (403) ; aucune recette ni disponibilité validée. |
 
 Variables : [environment.example](environment.example). Les clés de service restent exclusivement dans les secrets serveur. Le contact professionnel confirmé est contact@gsl-systems.com ; sa présence ne prouve pas le fonctionnement SMTP.
 
 ## Migrations
 
-Deux migrations ajoutées : `20260929112314_operational_workflows.sql` et `20260929114840_complete_operational_actions.sql`. Elles ont été exécutées uniquement dans PostgreSQL embarqué. La seconde comprend recherche, commandes, revue, fichiers, notifications et contrôle de republication ; lire sa portée avant application.
+Trois migrations ajoutées : `20260929112314_operational_workflows.sql` `20260929114840_complete_operational_actions.sql` et `20260929160000_workspace_pagination.sql`. Elles ont été exécutées uniquement dans PostgreSQL embarqué. La seconde comprend recherche, commandes, revue, fichiers, notifications et contrôle de republication ; lire sa portée avant application.
 
 Le projet distant comporte cinq migrations historiques dont les horodatages diffèrent des fichiers locaux. Ne pas exécuter un push aveugle : comparer les définitions distantes et locales, établir un rapprochement des cinq migrations, sauvegarder le schéma et appliquer les ajouts sur un projet dédié. Ne jamais marquer une version appliquée sans avoir vérifié son contenu.
 

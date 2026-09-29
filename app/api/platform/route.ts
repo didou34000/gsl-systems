@@ -29,17 +29,17 @@ export async function GET(request:Request){try{
   // RLS limits ordinary users to their own row; dedicated RPC checks reviewer first.
   const {data,error}=await db.rpc('review_queue');if(error)return json({error:'REVIEW_ACCESS_REQUIRED'},403);return json({applications:data});
  }
- const [organizations,rfqs,threads,items,offers,invitations,members]=await Promise.all([
+ const company=z.string().uuid().safeParse(url.searchParams.get('organization'));const page=z.coerce.number().int().min(0).max(100000).safeParse(url.searchParams.get('page')||0);
+ if(url.searchParams.has('organization')&&!company.success||!page.success)return json({error:'INVALID'},400);
+ const [organizations,invitations,members]=await Promise.all([
   db.from('organizations').select('id,legal_name,country_code,buyer,supplier').order('legal_name'),
-  db.from('rfqs').select('id,organization_id,title,details,state,revision,destination_country,sent_snapshot,draft_items,created_at').order('created_at',{ascending:false}).limit(100),
-  db.from('threads').select('id,rfq_id,supplier_organization_id').limit(100),
-  db.from('rfq_items').select('id,rfq_id,description,quantity,unit,selected_product_id').limit(500),
-  db.from('offers').select('id,thread_id,version,amount_minor,currency,currency_decimals,lines,terms,lead_time_assumptions,valid_until,transport,exclusions,fixed_fee_minor').order('version',{ascending:false}).limit(100),
-  db.from('organization_invitations').select('id,organization_id,email,role,state,expires_at').limit(100),
-  db.from('memberships').select('organization_id,user_id,role,active').limit(100),
+  db.from('organization_invitations').select('id,organization_id,email,role,state,expires_at').eq('state','pending').limit(100),
+  db.from('memberships').select('organization_id,user_id,role,active').eq('active',true).limit(1000),
  ]);
- if([organizations,rfqs,threads,offers,items,invitations,members].some(r=>r.error))throw Error('READ');
- return json({currentUser:{id:user.id,email:user.email},organizations:organizations.data,rfqs:rfqs.data?.map(r=>({...r,items:r.state==='draft'?(r.draft_items||[]).map((i:Record<string,unknown>)=>({...i,selected_product_id:i.product})):items.data?.filter(i=>i.rfq_id===r.id)})),threads:threads.data,offers:offers.data,invitations:invitations.data,members:members.data});
+ if([organizations,invitations,members].some(r=>r.error))throw Error('READ');
+ let workspace:{rfqs:Record<string,unknown>[];threads:unknown[];items:Record<string,unknown>[];offers:unknown[];page:number;hasMore:boolean;total:number}={rfqs:[],threads:[],items:[],offers:[],page:0,hasMore:false,total:0};
+ if(company.success){const result=await db.rpc('workspace_requests',{company:company.data,page_number:page.data});if(result.error){if(result.error.message.includes('FORBIDDEN'))return json({error:'FORBIDDEN'},403);throw result.error}workspace=result.data}
+ return json({currentUser:{id:user.id,email:user.email},organizations:organizations.data,rfqs:workspace.rfqs.map(r=>({...r,items:r.state==='draft'?((r.draft_items||[]) as Record<string,unknown>[]).map(i=>({...i,selected_product_id:i.product})):workspace.items.filter(i=>i.rfq_id===r.id)})),threads:workspace.threads,offers:workspace.offers,invitations:invitations.data,members:members.data,pagination:{page:workspace.page,hasMore:workspace.hasMore,total:workspace.total}});
 }catch{return json({error:'PLATFORM_UNAVAILABLE'},503)}}
 const commandSchema=z.object({action:z.enum(['buyer_company','enable_buyer','review','withdraw','save_rfq','send_rfq','message','offer','select_offer','cancel_rfq','share_assistance','add_recipient','claim_review','review_checks','invite_member','accept_invitation','remove_member','revoke_invitation']),command:z.string().uuid(),args:z.record(z.unknown())}).strict();
 export async function POST(request:Request){

@@ -21,9 +21,9 @@ Branche `codex/operational-platform`, base `ca1f72f`. Production inchangée. Ce 
 | 15 — Fichiers | Implémenté, services à configurer | Réservations, quotas, suppression coordonnée, scan, diffusion limitée ; dérivés WebP approuvés. Scanner réel absent. |
 | 16 — Membres et accès | Implémenté, recette SQL | Invitations liées à l’adresse, rôles, révocation effective ; AAL2 pour les reviewers. |
 | 17 — Revue | Implémenté, recette SQL partielle | Assignation, contrôles versionnés, compléments, publication/retrait/republication. Refus motivé ajouté et testé ; habilitation réelle à attribuer et recours à compléter. |
-| 18 — Intégrité | Implémenté, recette SQL | 7 migrations appliquées localement ; contraintes, RLS, commandes idempotentes, types générés locaux. Historique distant à rapprocher. |
+| 18 — Intégrité | Implémenté, recette SQL | 8 migrations appliquées localement ; contraintes, RLS, commandes idempotentes, types générés locaux. Historique distant à rapprocher. |
 | 19 — Demandes de devis | Implémenté, recette SQL partielle | Brouillon, destinataires nommés, aperçu, snapshot, transmission atomique, annulation. Ajout destinataire disponible en interface ; assistance en RPC, interface à compléter. |
-| 20 — Messagerie | Implémenté, recette partielle | Messages privés persistants, idempotence, historique paginé par conversation ; liste globale des dossiers encore plafonnée. |
+| 20 — Messagerie | Implémenté, recette partielle | Messages privés persistants, idempotence, historique paginé par conversation ; demandes paginées par entreprise (20 par page), testées sur 25 brouillons. |
 | 21 — Offres | Implémenté, recette partielle | Lignes, frais fixes, devises exactes, historique, sélection sans paiement. Équivalence commerciale détaillée à valider. |
 | 22 — Contact et emails | Implémenté, livraison non vérifiée | Référence contact, outbox transactionnelle, worker SMTP FR/EN, relances bornées. Scheduler, DNS et réception non testés. |
 | 23 — Confiance et confidentialité | Partiel | Méthode claire, export et demande de suppression. Raison sociale, adresse et durées de conservation à confirmer. |
@@ -42,7 +42,7 @@ Branche `codex/operational-platform`, base `ca1f72f`. Production inchangée. Ce 
 - `npm run test:operational` : succès sur règles, formulaires, pays, PostgreSQL embarqué et dérivés images.
 - `npm run build` : succès Next.js avec compilation TypeScript, après correction MFA et historique des messages.
 - `npm run lint` : zéro erreur, 52 avertissements ; ne constitue pas un audit d’accessibilité.
-- Migrations : les cinq migrations historiques et les deux migrations du 29 septembre appliquées uniquement dans PGlite éphémère. Aucun changement de schéma hébergé.
+- Migrations : les cinq migrations historiques et les trois migrations du 29 septembre appliquées uniquement dans PGlite éphémère. Aucun changement de schéma hébergé.
 - Navigateur : `/contact`, `/fabricants` et `/notre-methode?lang=fr` et `/connexion?lang=fr&next=%2Foperations` ouverts localement. Catalogue en indisponibilité réelle sans backend local configuré. Aucun compte ou email de production créé pour la recette.
 
 ## Documents
