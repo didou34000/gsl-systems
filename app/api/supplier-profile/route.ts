@@ -1,6 +1,8 @@
 import {authClient} from '@/lib/supabase/server';
+import {phoneDetails} from '@/lib/onboarding/phone';
+import {getCountryRequirements} from '@/lib/onboarding/country-requirements';
 import {allowedOrigin} from '@/lib/auth-policy';
-import {supplierSchema,profileIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
+import {supplierSchema,supplierDraftSchema,profileIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 export async function GET(){try{
@@ -9,7 +11,8 @@ export async function GET(){try{
  const {data:files,error:fe}=await db.from('supplier_application_files').select('id,kind,name,size,caption,object_path').eq('owner_id',user.id).order('created_at');if(fe)throw fe;
  const signed=await Promise.all((files||[]).map(async f=>{const {data}=await db.storage.from('gsl-onboarding').createSignedUrl(f.object_path,600,{download:!['logo','factory','product'].includes(f.kind)});return {id:f.id,kind:f.kind,name:f.name,size:f.size,caption:f.caption,url:data?.signedUrl}}));
  const {data:events,error:ee}=await db.from('supplier_application_events').select('id,status,created_at').eq('owner_id',user.id).order('created_at',{ascending:false}).limit(20);if(ee)throw ee;
- return json({application,files:signed,events,email:user.email});
+ const {data:pendingUploads,error:pe}=await db.from('onboarding_uploads').select('id,name,state').eq('owner_id',user.id).in('state',['reserved','deleting','failed']);if(pe)throw pe;
+ return json({application,files:signed,pendingUploads,events,email:user.email});
 }catch{return json({error:'UNAVAILABLE'},503)}}
 export async function POST(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);
@@ -19,11 +22,13 @@ export async function POST(request:Request){
  const {data:current,error:re}=await db.from('supplier_applications').select('revision,status').eq('owner_id',user.id).maybeSingle();if(re)throw re;
  if((current?.revision||0)!==body.revision)return json({error:'CONFLICT'},409);
  if(body.action==='reopen'){
- if(!current||!['submitted','changes_requested'].includes(current.status))return json({error:'LOCKED'},409);
- const {data,error}=await db.from('supplier_applications').update({status:'draft'}).eq('owner_id',user.id).eq('revision',body.revision).select('revision,status,updated_at').maybeSingle();if(error)throw error;if(!data)return json({error:'CONFLICT'},409);return json({application:data});}
+ if(!current||!['reviewed','submitted','changes_requested'].includes(current.status))return json({error:'LOCKED'},409);
+ const {data,error}=await db.rpc('reopen_supplier',{expected_revision:body.revision});if(error)throw error;if(!data)return json({error:'CONFLICT'},409);return json({application:data});}
  if(current&&!['draft','changes_requested'].includes(current.status))return json({error:'LOCKED'},409);
- const parsed=supplierSchema.safeParse(body.profile);if(!parsed.success)return json({error:'INVALID',fields:parsed.error.issues.map(i=>i.path.join('.'))},400);
- const profile=parsed.data;
+ const parsed=(body.action==='submit'?supplierSchema:supplierDraftSchema).safeParse(body.profile);if(!parsed.success)return json({error:'INVALID',fields:parsed.error.issues.map(i=>i.path.join('.'))},400);
+ const profile=parsed.data;const phone=phoneDetails(profile.contact.phone,profile.contact.phoneCountry);profile.contact.phoneE164=phone.e164;
+ if(body.action==='submit'&&profile.contact.phone&&!phone.valid)return json({error:'INVALID_PHONE',fields:['contact.phone']},422);
+ if(body.action==='submit')profile.countryRulesVersion=getCountryRequirements(profile.country).version;
  if(profile.country)profile.headquarters.country=profile.country;
  if(body.action==='submit'){
  const {data:files,error}=await db.from('supplier_application_files').select('id,kind,name,size,caption').eq('owner_id',user.id);if(error)throw error;
@@ -32,5 +37,5 @@ export async function POST(request:Request){
  const query=current?db.from('supplier_applications').update(values).eq('owner_id',user.id).eq('revision',body.revision):db.from('supplier_applications').insert({owner_id:user.id,...values});
  const {data,error}=await query.select('revision,status,updated_at').maybeSingle();if(error?.code==='23505')return json({error:'CONFLICT'},409);if(error)throw error;if(!data)return json({error:'CONFLICT'},409);
  return json({application:data});
- }catch{return json({error:'UNAVAILABLE'},503)}
+ }catch(e){if(e&&typeof e==='object'&&'message' in e&&String(e.message).includes('FILES_PENDING'))return json({error:'FILES_PENDING'},409);return json({error:'UNAVAILABLE'},503)}
 }

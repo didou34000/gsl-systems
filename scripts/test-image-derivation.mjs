@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import ts from 'typescript';
+import sharp from 'sharp';
+const compile=path=>ts.transpileModule(fs.readFileSync(path,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const signature='data:text/javascript;base64,'+Buffer.from(compile('lib/files/signature.ts')).toString('base64');
+const source=compile('lib/files/derive-image.ts').replace("'sharp'",JSON.stringify(import.meta.resolve('sharp'))).replace("'./signature'",JSON.stringify(signature));
+const {derivePublicImage}=await import('data:text/javascript;base64,'+Buffer.from(source).toString('base64'));
+const original=await sharp({create:{width:2000,height:40,channels:3,background:'#776655'}}).withMetadata({exif:{IFD0:{Artist:'Synthetic test metadata'}}}).png().toBuffer();
+assert.ok((await sharp(original).metadata()).exif);
+const derivative=await derivePublicImage(new Uint8Array(original));const metadata=await sharp(derivative).metadata();assert.equal(metadata.format,'webp');assert.ok(metadata.width<=1600);assert.equal(metadata.exif,undefined);assert.equal(metadata.icc,undefined);
+await assert.rejects(derivePublicImage(new TextEncoder().encode('%PDF-1.7 test')),/RASTER_IMAGE_REQUIRED/);
+await assert.rejects(derivePublicImage(new Uint8Array([137,80,78,71,13,10,26,10])));
+console.log('Image derivation: real PNG decoded, WebP bounded to 1600 pixels, EXIF/ICC removed, PDF and corrupt raster rejected.');

@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {safeNext} from '../lib/auth-policy.ts';
+import {runtimeConfig} from '../lib/runtime-config.ts';
+import {toMinorUnits} from '../lib/money.ts';
+for(const next of ['/%2f%2fevil.test','/%5cevil.test','/%252f%252fevil.test','/\n/evil.test','/%00x','/api%2fauth'])assert.equal(safeNext(next),'/compte');
+assert.equal(safeNext('/operations?supplier=123'),'/operations?supplier=123');
+assert.throws(()=>runtimeConfig({}),/CONFIGURATION/);
+assert.throws(()=>runtimeConfig({GSL_ENVIRONMENT:'test',SUPABASE_URL:'https://ihugldueruspxdyooycc.supabase.co',SUPABASE_PUBLISHABLE_KEY:'synthetic'}),/PRODUCTION_DATABASE_REFUSED/);
+assert.equal(runtimeConfig({GSL_ENVIRONMENT:'test',SUPABASE_URL:'http://127.0.0.1:54321',SUPABASE_PUBLISHABLE_KEY:'synthetic'}).stage,'test');
+assert.equal(toMinorUnits('12,34','EUR'),'1234');assert.equal(toMinorUnits('12.345','TND'),'12345');assert.equal(toMinorUnits('120','JPY'),'120');
+assert.throws(()=>toMinorUnits('1.23','JPY'),/PRECISION/);assert.throws(()=>toMinorUnits('1','ZZZ'),/CURRENCY/);assert.throws(()=>toMinorUnits('9007199254740992','JPY'),/AMOUNT_TOO_LARGE/);
+console.log('Operational rules: encoded redirects, production guard, exact decimal currency calculations passed.');

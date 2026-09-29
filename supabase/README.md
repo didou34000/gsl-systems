@@ -1,16 +1,7 @@
-# GSL Systems — Supabase
+# Supabase GSL systems
 
-Projet : `ihugldueruspxdyooycc` · région Paris (`eu-west-3`).
+Les migrations et tests de cette branche sont décrits dans [../docs/environments.md](../docs/environments.md). Le projet `ihugldueruspxdyooycc` est la production existante ; il n'est jamais une cible de fixtures.
 
-[Console du projet](https://supabase.com/dashboard/project/ihugldueruspxdyooycc)
+`npm run test:operational` applique les migrations à PostgreSQL embarqué PGlite, passe sous les rôles ordinaires pour tester RLS, puis détruit la base. Cela n'atteste pas du fonctionnement des services Auth/Storage hébergés.
 
-Les quatre migrations présentes ont été appliquées à ce projet neuf. Elles ne doivent pas être appliquées à un projet Supabase contenant une autre application : la migration initiale définit les droits des tables publiques de ce projet dédié.
-
-- `migrations/` : schéma, permissions et fiches pays.
-- `tests/tenant-isolation.sql` : test transactionnel, fixtures Auth annulées avec `ROLLBACK`. Exécuter avec un rôle d’administration dans un environnement de test. Il se place ensuite dans les rôles utilisateurs réels pour les assertions.
-- `../scripts/test-country-requirements.mjs` : contrôles des formulaires pays.
-- `../docs/SUPABASE-ARCHITECTURE.md` : modèle, sources officielles et limites d’intégration.
-
-Cette base n’est pas encore connectée au site. Ne pas remplacer les variables de l’hébergement actuel avant la migration de l’authentification et des services de données. Aucune clé secrète ou mot de passe n’est inclus dans ce dépôt.
-
-Résultats du 25 septembre 2026 : tests d’accès réussis, aucune anomalie dans le rapport de sécurité Supabase, aucun compte de test conservé. Le stockage est privé ; les documents partagés ne sont lisibles par un fournisseur que s’ils sont liés à une demande reçue et marqués analysés par un traitement serveur. L’analyse de fichiers et la publication des photos restent à intégrer.
+Les nouveaux workflows n'ont pas été migrés sur le projet distant pendant cette reprise. Les notes du 25 septembre ont été archivées dans `docs/history/README-supabase-2026-09-25.md`.

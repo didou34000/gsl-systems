@@ -1,0 +1,6 @@
+import {publicCatalogue} from '@/lib/supabase/public-catalogue';
+import {createClient} from '@supabase/supabase-js';
+import {runtimeConfig} from '@/lib/runtime-config';
+import {z} from 'zod';
+export const dynamic='force-dynamic';
+export async function GET(_request:Request,{params}:{params:Promise<{id:string}>}){const headers={'Cache-Control':'no-store','X-Content-Type-Options':'nosniff'};try{const {id}=await params;if(!z.string().uuid().safeParse(id).success)return new Response(null,{status:404,headers});const {data,error}=await publicCatalogue().from('published_media').select('id,organization_id').eq('id',id).maybeSingle();if(error)throw error;if(!data)return new Response(null,{status:404,headers});if(!process.env.SUPABASE_SERVICE_ROLE_KEY)throw Error();const {url}=runtimeConfig();const db=createClient(url,process.env.SUPABASE_SERVICE_ROLE_KEY,{auth:{persistSession:false,autoRefreshToken:false}});const image=await db.storage.from('gsl-derived-media').download(data.organization_id+'/'+id+'.webp');if(image.error)throw image.error;return new Response(image.data,{headers:{...headers,'Content-Type':'image/webp','Content-Security-Policy':"default-src 'none'; sandbox"}})}catch{return new Response(null,{status:503,headers})}}

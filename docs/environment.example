@@ -1,0 +1,19 @@
+# No secrets or production credentials in this file. Copy to a private local env file.
+GSL_ENVIRONMENT=development
+GSL_SITE_URL=http://localhost:5173
+SUPABASE_URL=https://YOUR_DEDICATED_TEST_PROJECT.supabase.co
+SUPABASE_PUBLISHABLE_KEY=YOUR_TEST_PUBLISHABLE_KEY
+GSL_PUBLIC_INDEXING_ENABLED=false
+GSL_LEGACY_SITES=false
+# Only needed by trusted notification/scanner/public image derivation code; NEVER NEXT_PUBLIC_.
+SUPABASE_SERVICE_ROLE_KEY=
+GSL_TRANSACTIONAL_EMAIL_ENABLED=false
+GSL_SMTP_HOST=
+GSL_SMTP_PORT=465
+GSL_SMTP_USER=
+GSL_SMTP_PASSWORD=
+GSL_EMAIL_FROM=contact@gsl-systems.com
+GSL_WORKER_SECRET=
+# An authorised HTTPS scanner accepting raw bytes; see the runbook for response contract.
+GSL_SCAN_URL=
+GSL_SCAN_TOKEN=
