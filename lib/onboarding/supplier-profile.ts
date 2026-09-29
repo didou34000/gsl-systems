@@ -25,7 +25,7 @@ export type SupplierProfile=z.infer<typeof supplierSchema>;
 export type SupplierFile={id:string;kind:'logo'|'factory'|'product'|'registration'|'certificate'|'technical';name:string;url?:string;size:number;caption:string};
 export const blankAddress=()=>({line:'',city:'',region:'',postalCode:'',country:''});
 export function emptyProfile():SupplierProfile{return supplierSchema.parse({headquarters:blankAddress(),contact:{},capabilities:{},trade:{}})}
-export const steps=[['Company & contact','Entreprise et contact'],['Capabilities & offers','Capacités et offres'],['Supporting documents','Justificatifs'],['Review & submit','Aperçu et envoi']];
+export const steps=[['Company','Entreprise'],['Capabilities','Capacités'],['Products','Produits'],['Documents','Documents'],['Validation','Validation']];
 export type ProfileIssue={step:number;path:string;en:string;fr:string};
 export function profileIssues(p:SupplierProfile,files:SupplierFile[],today=new Date().toISOString().slice(0,10)):ProfileIssue[]{
  const out:ProfileIssue[]=[];const need=(ok:unknown,step:number,path:string,en:string,fr:string)=>{if(!ok)out.push({step,path,en,fr})};
@@ -48,7 +48,7 @@ export function profileIssues(p:SupplierProfile,files:SupplierFile[],today=new D
  need(p.contact.name&&p.contact.role&&p.contact.email,4,'contact','Enter a contact name, role and email.','Indiquez le nom, la fonction et l’email du contact.');
  need(p.trade.markets&&p.contact.languages,4,'trade','Specify delivery markets and contact languages.','Précisez les marchés livrés et les langues du contact.');
  need(p.attestation,5,'attestation','Confirm that you are authorised to submit this company profile.','Confirmez que vous êtes habilité à soumettre ce dossier.');
- return out.map(issue=>({...issue,step:[0,1,1,2,0,3][issue.step]}));
+ return out.map(issue=>({...issue,step:issue.step===0?(['legalName','country','activity'].includes(issue.path)?0:4):[0,1,2,3,4,4][issue.step]}));
 }
 
 // Drafts retain partial strings, but never accept unknown properties or unbounded input.
