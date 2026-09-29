@@ -20,7 +20,7 @@ Branche `codex/operational-platform`, base `ca1f72f`. Production inchangée. Ce 
 | 14 — Authentification | Implémenté, hébergement bloqué | Retour/langue, récupération, cookies privés, MFA TOTP. Configuration OTP/SMTP distante et réception à vérifier. |
 | 15 — Fichiers | Implémenté, services à configurer | Réservations, quotas, suppression coordonnée, scan, diffusion limitée ; dérivés WebP approuvés. Scanner réel absent. |
 | 16 — Membres et accès | Implémenté, recette SQL | Invitations liées à l’adresse, rôles, révocation effective ; AAL2 pour les reviewers. |
-| 17 — Revue | Implémenté, recette SQL partielle | Assignation, contrôles versionnés, compléments, publication/retrait/republication. Habilitation réelle à attribuer ; refus définitif à compléter. |
+| 17 — Revue | Implémenté, recette SQL partielle | Assignation, contrôles versionnés, compléments, publication/retrait/republication. Refus motivé ajouté et testé ; habilitation réelle à attribuer et recours à compléter. |
 | 18 — Intégrité | Implémenté, recette SQL | 7 migrations appliquées localement ; contraintes, RLS, commandes idempotentes, types générés locaux. Historique distant à rapprocher. |
 | 19 — Demandes de devis | Implémenté, recette SQL partielle | Brouillon, destinataires nommés, aperçu, snapshot, transmission atomique, annulation. Ajout destinataire disponible en interface ; assistance en RPC, interface à compléter. |
 | 20 — Messagerie | Implémenté, recette partielle | Messages privés persistants, idempotence, historique paginé par conversation ; liste globale des dossiers encore plafonnée. |
@@ -52,3 +52,7 @@ Branche `codex/operational-platform`, base `ca1f72f`. Production inchangée. Ce 
 ## Responsabilités à confirmer
 
 Dorian Vuattoux / Célian Duval : identité légale, adresse professionnelle, responsable habilité, destinataires de test et politique de conservation. Contact confirmé : contact@gsl-systems.com. Une mention nominative ne vaut pas attribution d’un droit reviewer. La création d’une préproduction à 0 par mois a été autorisée, puis refusée par Supabase (deux projets gratuits actifs). Dorian a indiqué libérer une place.
+
+## Version remise
+
+Commit initial `80997b8`, branche poussée sur GitHub. Demande de revue en brouillon : https://github.com/didou34000/gsl-systems/pull/1. Aucune fusion, migration hébergée ou publication de production réalisée.

@@ -27,3 +27,7 @@ Cette première politique retire la fiche pendant toute révision, y compris éd
 L'écran présente les demandes de contact non traitées, le nombre et l'âge des emails en attente et les échecs d'envoi. « Marquer traitée » ne répond pas au contact et ne lui envoie rien. Toute réponse humaine doit être réellement effectuée par l'opérateur via sa messagerie.
 
 Un accusé SMTP n'est pas une livraison reçue. Le détail de la file est réservé aux opérateurs ; aucune pièce jointe confidentielle n'est incluse dans les notifications.
+
+## Refus de publication
+
+Le reviewer assigné peut refuser une version avec un motif visible du fournisseur. La décision est historisée et sa notification mise en file. Le dossier passe en lecture seule ; le fournisseur peut contacter GSL pour demander un réexamen, mais ne peut ni s’auto-publier ni effacer le refus en rouvrant le dossier. Un circuit de recours administratif dans l’interface reste à compléter.

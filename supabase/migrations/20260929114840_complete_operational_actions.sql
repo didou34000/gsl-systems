@@ -1,3 +1,5 @@
+alter table public.supplier_applications drop constraint supplier_applications_status_check;
+alter table public.supplier_applications add constraint supplier_applications_status_check check(status in ('draft','submitted','in_review','changes_requested','reviewed','rejected'));
 alter table public.published_supplier_profiles add column public_details jsonb not null default '{}';
 -- Public search reads approved projections under the caller's RLS only.
 create function public.catalogue_token(v text) returns text language sql immutable security invoker set search_path='' as $$
@@ -92,6 +94,8 @@ begin
   if not exists(select 1 from public.review_assignments a where a.owner_id=app.owner_id and a.reviewer_id=actor and a.submission_revision=app.revision) then raise exception 'ASSIGNED_TO_ANOTHER_REVIEWER';end if;
   if args->>'decision'='changes_requested' then
    update public.supplier_applications set status='changes_requested',reviewer_notes=args->>'feedback' where owner_id=app.owner_id;
+  elsif args->>'decision'='reject' then
+   update public.supplier_applications set status='rejected',reviewer_notes=args->>'feedback' where owner_id=app.owner_id;
   elsif args->>'decision'='publish' then
    if not exists(select 1 from public.review_assignments a where a.owner_id=app.owner_id and a.reviewer_id=actor and a.submission_revision=app.revision and a.identity_checked and a.scope_checked and a.privacy_checked) then raise exception 'REVIEW_CHECKS_REQUIRED';end if;
    if not exists(select 1 from public.supplier_submission_versions where owner_id=app.owner_id and revision=app.revision) then raise exception 'SUBMISSION_REQUIRED';end if;
