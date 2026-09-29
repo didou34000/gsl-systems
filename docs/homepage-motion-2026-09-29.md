@@ -17,3 +17,7 @@ The homepage now uses aerial container-terminal footage and an interactive Europ
 - Pause control stops map animations. IntersectionObserver pauses them outside the viewport. Reduced-motion preference disables map animation and video autoplay.
 - Video retains its poster for data-saving connections and failed autoplay.
 - Existing hosted catalogue/account configuration is outside this visual change.
+
+## Revision: country page and longer film
+
+At the user’s request, the map is now on `/pays`, removed from both live and demo homepages. The country directory and its filters remain accessible below the map. The same container-terminal footage now runs for 40 seconds (source seconds 0–33.333, slowed to 5/6 speed) instead of 18 seconds. Desktop is 1440 × 810; mobile remains 640 × 800. Poster updated to match the opening frame, with versioned asset URLs to avoid stale browser caches. Build and targeted lint pass (existing image warning only). Browser confirms zero maps on the homepage, 40-second playback, and the map on the country page.
