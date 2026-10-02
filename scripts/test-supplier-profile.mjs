@@ -7,7 +7,7 @@ const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso
 const country='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-requirements.ts')).toString('base64');
 const options='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso))).toString('base64');
 const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
-const {supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const {supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const p=emptyProfile();
 assert.ok(profileIssues(p,[]).length>5);
 Object.assign(p,{activity:'manufacturer',website:'https://example.com',legalName:'Test company',country:'TR',legalForm:'Ltd',description:'A'.repeat(120),identifiers:{mersis:'test',trade_registry_number:'test',trade_registry_office:'test'},attestation:true});
@@ -38,3 +38,10 @@ assert.equal(supplierDraftSchema.safeParse({...emptyProfile(),website:'https://'
 assert.equal(supplierDraftSchema.safeParse({...emptyProfile(),reviewer:true}).success,false);
 assert.equal(certificateSchema.safeParse({id:crypto.randomUUID(),scope:'management',issued:'2026-02-30'}).success,false);
 console.log('Partial drafts, unknown privilege fields and invalid calendar date checked.');
+
+assert.equal(productSchema.parse({id:crypto.randomUUID(),category:'machining',moq:'1 250,5'}).category,'metal');
+assert.equal(productSchema.parse({id:crypto.randomUUID(),moq:'1 250,5'}).moq,'1250.5');
+assert.equal(supplierValidationIssues({...emptyProfile(),website:'incorrect'})[0].step,0);
+assert.equal(supplierValidationIssues({...emptyProfile(),products:[{...productSchema.parse({id:crypto.randomUUID()}),moq:'-1'}]})[0].step,2);
+assert.equal(profileIssues(emptyProfile(),[]).find(x=>x.path==='headquarters').step,0);
+console.log('Supplier regression checks: canonical categories, French quantities and precise validation destinations passed.');

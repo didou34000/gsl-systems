@@ -22,11 +22,13 @@ export const requirementFields=[
 ] as const;
 export type RequirementKey=typeof requirementFields[number]['key'];
 const textShape=Object.fromEntries(requirementFields.map(f=>[f.key,z.string().max('max'in f?f.max:100)])) as Record<RequirementKey,z.ZodString>;
-export const requirementSchema=z.object({fields:z.object(textShape),destination:z.string().refine(c=>c===''||countryCodes.includes(c)),items:z.array(z.object({description:z.string().max(1000),quantity:z.string().max(20),unit:z.enum(['pcs','kg','m','m2','set'])})).min(1).max(50)});
+export const requirementSchema=z.object({mode:z.enum(['guided','custom']).default('guided'),customFields:z.array(z.object({id:z.string().uuid(),label:z.string().max(100),value:z.string().max(2000)})).max(12).default([]),fields:z.object(textShape),destination:z.string().refine(c=>c===''||countryCodes.includes(c)),items:z.array(z.object({description:z.string().max(1000),quantity:z.string().max(20),unit:z.enum(['pcs','kg','m','m2','set'])})).min(1).max(50)});
 export type Requirement=z.infer<typeof requirementSchema>;
-export function emptyRequirement():Requirement{return {fields:Object.fromEntries(requirementFields.map(f=>[f.key,''])) as Record<RequirementKey,string>,destination:'',items:[{description:'',quantity:'',unit:'pcs'}]};}
+export function emptyRequirement():Requirement{return {mode:'guided',customFields:[],fields:Object.fromEntries(requirementFields.map(f=>[f.key,''])) as Record<RequirementKey,string>,destination:'',items:[{description:'',quantity:'',unit:'pcs'}]};}
 export function requirementIssues(d:Requirement,step:number,today:string):string[]{
  const issues:string[]=[];
+ if((step===0&&d.mode==='custom'||step===2)&&d.customFields.some(f=>Boolean(f.label.trim())!==Boolean(f.value.trim())))issues.push('customFields');
+ if(step===2&&Math.max(requirementDetails(d,'fr').length,requirementDetails(d,'en').length)>10000)issues.push('detailsLimit');
  if(step===0){if(d.fields.title.trim().length<3)issues.push('title');if(d.fields.description.trim().length<20)issues.push('description');}
  if(step===1&&d.items.some(i=>!i.description.trim()||!/^\d+(?:[.,]\d+)?$/.test(i.quantity.replace(/[\s\u00a0\u202f]/g,''))||Number(i.quantity.replace(/[\s\u00a0\u202f]/g,'').replace(',','.'))<=0||Number(i.quantity.replace(/[\s\u00a0\u202f]/g,'').replace(',','.'))>1e12))issues.push('items');
  if(step===2){if(!countryCodes.includes(d.destination))issues.push('destination');for(const key of ['responseDate','deliveryDate'] as const)if(d.fields[key]&&(!/^\d{4}-\d{2}-\d{2}$/.test(d.fields[key])||Number.isNaN(Date.parse(d.fields[key]))||new Date(d.fields[key]).toISOString().slice(0,10)!==d.fields[key]||d.fields[key]<today))issues.push(key);if(d.fields.responseDate&&d.fields.deliveryDate&&d.fields.responseDate>d.fields.deliveryDate)issues.push('dateOrder');}
@@ -34,6 +36,6 @@ export function requirementIssues(d:Requirement,step:number,today:string):string
 }
 export function requirementDetails(d:Requirement,language:'fr'|'en'){
  const names=new Intl.DisplayNames([language],{type:'region'});
- return requirementFields.filter(f=>f.key!=='title'&&d.fields[f.key].trim()).map(f=>{let value=d.fields[f.key];if('options'in f&&language==='en'){const n=f.options.indexOf(value as never);if(n>=0)value=f.english[n];}return `${f[language]}\n${value}`}).join('\n\n')+'\n\n'+(language==='fr'?'Pays de livraison':'Delivery country')+'\n'+(d.destination?names.of(d.destination):'—');
+ return requirementFields.filter(f=>f.key!=='title'&&d.fields[f.key].trim()).map(f=>{let value=d.fields[f.key];if('options'in f&&language==='en'){const n=f.options.indexOf(value as never);if(n>=0)value=f.english[n];}return `${f[language]}\n${value}`}).join('\n\n')+'\n\n'+(language==='fr'?'Pays de livraison':'Delivery country')+'\n'+(d.destination?names.of(d.destination):'—')+d.customFields.filter(f=>f.label.trim()&&f.value.trim()).map(f=>'\n\n'+f.label.trim()+'\n'+f.value.trim()).join('');
 }
 export function requirementExport(d:Requirement,language:'fr'|'en'){return `${d.fields.title||'GSL Systems'}\n\n${requirementDetails(d,language)}\n\n${language==='fr'?'Articles demandés':'Requested items'}\n${d.items.map((i,n)=>`${n+1}. ${i.description} — ${i.quantity} ${i.unit}`).join('\n')}\n\n${language==='fr'?'Brouillon privé — aucun envoi à un fournisseur.':'Private draft — not sent to suppliers.'}`;}
