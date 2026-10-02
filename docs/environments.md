@@ -2,7 +2,7 @@
 
 | Environnement | Identité | État vérifié |
 |---|---|---|
-| Production actuelle | www.gsl-systems.com ; Supabase ihugldueruspxdyooycc | Inventaire lu, aucune migration ni donnée modifiée pendant cette reprise |
+| Production actuelle | www.gsl-systems.com ; Supabase ihugldueruspxdyooycc | Connexion de production configurée le 2026-10-02 ; migrations opérationnelles et messagerie installées après vérification locale et accord utilisateur. Voir production-2026-10-02.md. |
 | Base de tests | PGlite en mémoire dans test-postgres.mjs | Toutes les migrations locales appliquées, fixtures isolées, tests de droits exécutés |
 | UI locale | localhost:5191, build Next.js de la branche | Contact, catalogue indisponible honnête, méthode, connexion avec contexte ; langue FR/EN et largeurs 390/768 px contrôlées ; pas de Supabase configuré |
 | Préproduction Supabase | GSL Systems — préproduction, Paris, même organisation | Création autorisée à 0/mois puis refusée : quota gratuit de deux projets actifs atteint. Dorian a indiqué libérer une place ; aucun projet existant modifié. |

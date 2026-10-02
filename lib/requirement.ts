@@ -28,8 +28,8 @@ export function emptyRequirement():Requirement{return {fields:Object.fromEntries
 export function requirementIssues(d:Requirement,step:number,today:string):string[]{
  const issues:string[]=[];
  if(step===0){if(d.fields.title.trim().length<3)issues.push('title');if(d.fields.description.trim().length<20)issues.push('description');}
- if(step===1&&d.items.some(i=>!i.description.trim()||!/^\d+(?:[.,]\d+)?$/.test(i.quantity)||Number(i.quantity.replace(',','.'))<=0||Number(i.quantity.replace(',','.'))>1e12))issues.push('items');
- if(step===2){if(!countryCodes.includes(d.destination))issues.push('destination');for(const key of ['responseDate','deliveryDate'] as const)if(d.fields[key]&&d.fields[key]<today)issues.push(key);if(d.fields.responseDate&&d.fields.deliveryDate&&d.fields.responseDate>d.fields.deliveryDate)issues.push('dateOrder');}
+ if(step===1&&d.items.some(i=>!i.description.trim()||!/^\d+(?:[.,]\d+)?$/.test(i.quantity.replace(/[\s\u00a0\u202f]/g,''))||Number(i.quantity.replace(/[\s\u00a0\u202f]/g,'').replace(',','.'))<=0||Number(i.quantity.replace(/[\s\u00a0\u202f]/g,'').replace(',','.'))>1e12))issues.push('items');
+ if(step===2){if(!countryCodes.includes(d.destination))issues.push('destination');for(const key of ['responseDate','deliveryDate'] as const)if(d.fields[key]&&(!/^\d{4}-\d{2}-\d{2}$/.test(d.fields[key])||Number.isNaN(Date.parse(d.fields[key]))||new Date(d.fields[key]).toISOString().slice(0,10)!==d.fields[key]||d.fields[key]<today))issues.push(key);if(d.fields.responseDate&&d.fields.deliveryDate&&d.fields.responseDate>d.fields.deliveryDate)issues.push('dateOrder');}
  return issues;
 }
 export function requirementDetails(d:Requirement,language:'fr'|'en'){

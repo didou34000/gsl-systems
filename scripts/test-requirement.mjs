@@ -14,6 +14,8 @@ d.fields.title='Boîtier industriel';d.fields.description='Aluminium usiné selo
 d.items=[{description:'Pièce A',quantity:'250,5',unit:'kg'},{description:'Pièce B',quantity:'500',unit:'pcs'}];d.destination='JP';
 for(let step=0;step<3;step++)assert.deepEqual(requirementIssues(d,step,'2026-10-02'),[]);
 for(const q of ['0','-1','1e5','1.2.3','NaN','1000000000001']){const x=structuredClone(d);x.items[0].quantity=q;assert.deepEqual(requirementIssues(x,1,'2026-10-02'),['items']);}
+for(const q of ['1 250,5','1\u202f250.5']){const x=structuredClone(d);x.items[0].quantity=q;assert.deepEqual(requirementIssues(x,1,'2026-10-02'),[]);}
+for(const date of ['2027-02-29','2027-13-01','not-a-date']){const x=structuredClone(d);x.fields.deliveryDate=date;assert.ok(requirementIssues(x,2,'2026-10-02').includes('deliveryDate'));}
 d.fields.responseDate='2026-12-20';d.fields.deliveryDate='2026-12-01';assert.ok(requirementIssues(d,2,'2026-10-02').includes('dateOrder'));
 d.fields.responseDate='2026-09-01';assert.ok(requirementIssues(d,2,'2026-10-02').includes('responseDate'));
 d.fields.responseDate='2026-11-01';assert.deepEqual(requirementIssues(d,2,'2026-10-02'),[]);
