@@ -14,7 +14,7 @@ create table storage.objects(id uuid default gen_random_uuid(),bucket_id text,na
 alter table storage.objects enable row level security;
 create function storage.foldername(text) returns text[] language sql immutable as $$ select string_to_array($1,'/') $$;
 grant usage on schema public,auth,storage to anon,authenticated;
-grant select,insert,update,delete on storage.objects to authenticated;`);
+grant select,insert,update,delete on storage.objects to authenticated;grant select on storage.objects to anon;`);
 for(const name of (await readdir('supabase/migrations')).filter(n=>n.endsWith('.sql')).sort()){
  await db.exec(await readFile('supabase/migrations/'+name,'utf8'));console.log('Applied locally:',name);
 }
@@ -26,6 +26,7 @@ await (await import('./test-request-files.mjs')).testRequestFiles(db);
 await (await import('./test-republication.mjs')).testRepublication(db);
 await (await import('./test-company-publication.mjs')).testCompanyPublication(db);
 await (await import('./test-product-publication.mjs')).testProductPublication(db);
+await (await import('./test-company-branding.mjs')).testCompanyBranding(db);
 await (await import('./test-privacy.mjs')).testPrivacy(db);
 await (await import('./test-workspace-pagination.mjs')).testWorkspacePagination(db);
 await db.exec('reset role');
