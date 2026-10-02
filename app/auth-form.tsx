@@ -13,8 +13,9 @@ export default function AuthForm({mode:initialMode}:{mode:Mode}){
  const [mode,setMode]=useState(initialMode);
  function switchMode(next:Mode){setMode(next);setError('');setMessage('');setPassword('');setRepeat('');setSent(false);}
  const {l,language}=useLanguage(); const search=useSearchParams();
- const [purpose,setPurpose]=useState(search.get('next')?.startsWith('/espace-fournisseur')?'supplier':'buyer');
- const destination=mode==='signup'?(purpose==='supplier'?'/espace-fournisseur':safeNext(search.get('next')?.startsWith('/espace-fournisseur')?null:search.get('next'))):safeNext(search.get('next'));
+ const supplierNext=['/espace-fournisseur','/mes-produits'].some(path=>search.get('next')?.startsWith(path));const supplierDestination=search.get('next')?.startsWith('/mes-produits')?'/mes-produits':'/espace-fournisseur';
+ const [purpose,setPurpose]=useState(supplierNext?'supplier':'buyer');
+ const destination=mode==='signup'?(purpose==='supplier'?supplierDestination:safeNext(supplierNext?null:search.get('next'))):safeNext(search.get('next'));
  const [code,setCode]=useState('');
  const flow=search.get('flow')==='recovery'?'recovery':'signup';
  const [typedEmail,setEmail]=useState<string|null>(null),[name,setName]=useState(''),[password,setPassword]=useState(''),[repeat,setRepeat]=useState(''),[show,setShow]=useState(false),[busy,setBusy]=useState(false),[message,setMessage]=useState(''),[error,setError]=useState(''),[user,setUser]=useState<Account|null>(null),[loading,setLoading]=useState(mode==='account'||mode==='password'),[sent,setSent]=useState(false),[cooldown,setCooldown]=useState(0);
