@@ -2,6 +2,19 @@ import {authClient} from '@/lib/supabase/server';
 import {allowedOrigin} from '@/lib/auth-policy';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
+// Resolve the current private object on every open; links do not expire after ten minutes.
+export async function GET(request:Request){
+ const headers={'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Content-Security-Policy':"sandbox; default-src 'none'"};
+ try{
+  const id=new URL(request.url).searchParams.get('id');if(!id||!/^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i.test(id))return new Response('Document invalide.',{status:400,headers});
+  const db=await authClient();const {data:{user}}=await db.auth.getUser();if(!user?.email_confirmed_at)return new Response('Connectez-vous à votre compte pour ouvrir ce document.',{status:401,headers});
+  const {data:file,error}=await db.from('supplier_application_files').select('object_path,name').eq('id',id).eq('owner_id',user.id).maybeSingle();
+  if(error)throw error;if(!file)return new Response('Document introuvable.',{status:404,headers});
+  const {data,error:downloadError}=await db.storage.from('gsl-onboarding').download(file.object_path);if(downloadError||!data)throw downloadError;
+  const type=['application/pdf','image/jpeg','image/png','image/webp'].includes(data.type)?data.type:'application/octet-stream';
+  return new Response(data,{headers:{...headers,'Content-Type':type,'Content-Disposition':`${type==='application/octet-stream'?'attachment':'inline'}; filename*=UTF-8''${encodeURIComponent(file.name.replace(/[\r\n]/g,''))}`}});
+ }catch{return new Response('Impossible d’ouvrir le document pour le moment. Réessayez.',{status:503,headers})}
+}
 export async function POST(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);
  if(Number(request.headers.get('content-length')||0)>3500000)return json({error:'FILE_SIZE'},413);
@@ -20,7 +33,7 @@ export async function POST(request:Request){
  if(ue){const {error:cleanupError}=await db.storage.from('gsl-onboarding').remove([path]);if(!cleanupError)await db.rpc('manage_upload',{action:'removed',args:{id}});throw ue;}
  const {error:ie}=await db.rpc('manage_upload',{action:'finalize',args:{id}});if(ie){const {error:cleanupError}=await db.storage.from('gsl-onboarding').remove([path]);if(!cleanupError)await db.rpc('manage_upload',{action:'removed',args:{id}});throw ie;}
  return json({ok:true});
- }catch{return json({error:'UNAVAILABLE'},503)}
+ }catch(e){const code=e&&typeof e==='object'&&'message' in e?String(e.message):'';for(const known of ['FILE_LIMIT','LOCKED','LOGIN_REQUIRED'])if(code.includes(known))return json({error:known},known==='LOGIN_REQUIRED'?401:409);return json({error:'UPLOAD_FAILED'},503)}
 }
 export async function DELETE(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);
