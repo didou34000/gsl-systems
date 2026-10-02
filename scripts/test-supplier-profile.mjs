@@ -7,7 +7,7 @@ const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso
 const country='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-requirements.ts')).toString('base64');
 const options='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso))).toString('base64');
 const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
-const {supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const {documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const p=emptyProfile();
 assert.ok(profileIssues(p,[]).length>5);
 Object.assign(p,{activity:'manufacturer',website:'https://example.com',legalName:'Test company',country:'TR',legalForm:'Ltd',description:'A'.repeat(120),identifiers:{mersis:'test',trade_registry_number:'test',trade_registry_office:'test'},attestation:true});
@@ -27,7 +27,7 @@ p.products[0].ceReason='Component assessed separately';assert.deepEqual(profileI
 p.country='GE';assert.ok(profileSuggestions(p,files).some(x=>x.path==='identifiers'));assert.ok(!profileIssues(p,files).some(x=>x.path==='identifiers'));
 p.identifiers={identification_code:'test'};assert.deepEqual(profileIssues(p,files),[]);
 p.certificates=[certificateSchema.parse({id:crypto.randomUUID(),scope:'product',name:'Test',issuer:'Lab',number:'1',coveredScope:'P1',productId:crypto.randomUUID(),documentId:'certificate',expires:'2020-01-01'})];
-assert.ok(profileIssues(p,files).some(x=>x.path.endsWith('.productId')));assert.ok(!profileIssues(p,files).some(x=>x.path.endsWith('.expires')),'expired evidence stays private and historical; it does not certify a product');
+assert.ok(documentIssues(p,files).some(x=>x.path.endsWith('.productId')));assert.ok(!profileIssues(p,files).some(x=>x.path.endsWith('.expires')),'expired evidence stays private and historical; it does not certify a product');
 assert.equal(supplierSchema.safeParse({...p,country:'ZZ'}).success,false);
 assert.equal(supplierSchema.safeParse({...p,website:'javascript:alert(1)'}).success,false);
 assert.equal(supplierSchema.safeParse({...p,trade:{...p.trade,responseDays:'-1'}}).success,false);
@@ -54,3 +54,11 @@ assert.deepEqual(profileIssues(minimal,[]),[],'private product drafts do not blo
 minimal.products[0].listingStatus='publish';assert.ok(profileIssues(minimal,[]).some(x=>x.path==='products.0'),'published products still need their essential description');
 Object.assign(minimal.products[0],{category:'metal',description:'Custom metal part manufactured on request.',origin:'TR'});assert.deepEqual(profileIssues(minimal,[]),[],'photos, MOQ, materials and model reference can follow');
 console.log('Progressive profiles: minimal company, optional enrichment, independent product drafts and minimum product essentials passed.');
+
+minimal.products=[];minimal.certificates=[certificateSchema.parse({id:crypto.randomUUID(),scope:'management'})];
+minimal.certificates[0].verificationUrl='https://';minimal.certificates[0].issued='2026-02-30';
+assert.equal(supplierSubmissionSchema.safeParse(minimal).success,true,'unfinished private certificate fields never block submission');
+assert.deepEqual(profileIssues(minimal,[]),[],'missing certificate details and attachment are optional');
+assert.ok(profileSuggestions(minimal,[]).some(x=>x.path.startsWith('certificates')),'unfinished evidence remains visible as optional work');
+assert.ok(profileIssues({...minimal,legalName:''},[]).some(x=>x.path==='legalName'),'essential identity still required');
+console.log('Optional documents: incomplete certificates retained privately, submission allowed and essentials still enforced.');
