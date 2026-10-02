@@ -12,7 +12,7 @@
     "start": "next start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate",
-    "test:operational": "node --experimental-strip-types scripts/test-operational-rules.mjs && node scripts/test-supplier-profile.mjs && node scripts/test-country-requirements.mjs && node scripts/test-requirement.mjs && node scripts/test-postgres.mjs && node scripts/test-image-derivation.mjs",
+    "test:operational": "node --experimental-strip-types scripts/test-operational-rules.mjs && node scripts/test-supplier-profile.mjs && node scripts/test-supplier-files.mjs && node scripts/test-country-requirements.mjs && node scripts/test-requirement.mjs && node scripts/test-postgres.mjs && node scripts/test-image-derivation.mjs",
     "build:vercel": "next build --webpack",
     "dev:legacy": "node scripts/run-framework.mjs dev",
     "build:legacy": "node scripts/run-framework.mjs build",
