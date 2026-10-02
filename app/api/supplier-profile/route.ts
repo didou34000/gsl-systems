@@ -12,7 +12,8 @@ export async function GET(){try{
  const signed=await Promise.all((files||[]).map(async f=>{const {data}=await db.storage.from('gsl-onboarding').createSignedUrl(f.object_path,600,{download:!['logo','factory','product'].includes(f.kind)});return {id:f.id,kind:f.kind,name:f.name,size:f.size,caption:f.caption,url:data?.signedUrl}}));
  const {data:events,error:ee}=await db.from('supplier_application_events').select('id,status,created_at').eq('owner_id',user.id).order('created_at',{ascending:false}).limit(20);if(ee)throw ee;
  const {data:pendingUploads,error:pe}=await db.from('onboarding_uploads').select('id,name,state').eq('owner_id',user.id).in('state',['reserved','deleting','failed']);if(pe)throw pe;
- return json({application,files:signed,pendingUploads,events,email:user.email});
+ const publication=application?.organization_id?await db.from('published_supplier_profiles').select('organization_id').eq('organization_id',application.organization_id).is('withdrawn_at',null).maybeSingle():null;if(publication?.error)throw publication.error;
+ return json({application,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email});
 }catch{return json({error:'UNAVAILABLE'},503)}}
 export async function POST(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);

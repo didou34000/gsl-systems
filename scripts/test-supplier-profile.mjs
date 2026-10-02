@@ -7,7 +7,7 @@ const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso
 const country='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-requirements.ts')).toString('base64');
 const options='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso))).toString('base64');
 const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
-const {supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const {supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const p=emptyProfile();
 assert.ok(profileIssues(p,[]).length>5);
 Object.assign(p,{activity:'manufacturer',website:'https://example.com',legalName:'Test company',country:'TR',legalForm:'Ltd',description:'A'.repeat(120),identifiers:{mersis:'test',trade_registry_number:'test',trade_registry_office:'test'},attestation:true});
@@ -24,7 +24,7 @@ p.products[0].legislation='Applicable legislation';p.products[0].documentId='dec
 files.push({id:'declaration',kind:'technical',name:'d.pdf',size:10,caption:''});assert.deepEqual(profileIssues(p,files),[]);
 p.products[0].ce='not_applicable';assert.ok(profileIssues(p,files).some(x=>x.path.endsWith('.ceReason')));
 p.products[0].ceReason='Component assessed separately';assert.deepEqual(profileIssues(p,files),[]);
-p.country='GE';assert.ok(profileIssues(p,files).some(x=>x.path==='identifiers'));
+p.country='GE';assert.ok(profileSuggestions(p,files).some(x=>x.path==='identifiers'));assert.ok(!profileIssues(p,files).some(x=>x.path==='identifiers'));
 p.identifiers={identification_code:'test'};assert.deepEqual(profileIssues(p,files),[]);
 p.certificates=[certificateSchema.parse({id:crypto.randomUUID(),scope:'product',name:'Test',issuer:'Lab',number:'1',coveredScope:'P1',productId:crypto.randomUUID(),documentId:'certificate',expires:'2020-01-01'})];
 assert.ok(profileIssues(p,files).some(x=>x.path.endsWith('.productId')));assert.ok(!profileIssues(p,files).some(x=>x.path.endsWith('.expires')),'expired evidence stays private and historical; it does not certify a product');
@@ -45,3 +45,12 @@ assert.equal(supplierValidationIssues({...emptyProfile(),website:'incorrect'})[0
 assert.equal(supplierValidationIssues({...emptyProfile(),products:[{...productSchema.parse({id:crypto.randomUUID()}),moq:'-1'}]})[0].step,2);
 assert.equal(profileIssues(emptyProfile(),[]).find(x=>x.path==='headquarters').step,0);
 console.log('Supplier regression checks: canonical categories, French quantities and precise validation destinations passed.');
+
+const minimal=emptyProfile();Object.assign(minimal,{legalName:'Minimal company',country:'TR',activity:'manufacturer',description:'Industrial workshop producing custom parts.',attestation:true});minimal.headquarters.city='Bursa';minimal.contact.name='Contact';minimal.contact.email='contact@example.invalid';
+assert.deepEqual(profileIssues(minimal,[]),[],'company can start without products, files, full address, registry IDs or capabilities');
+assert.ok(profileSuggestions(minimal,[]).length>=5);
+minimal.products=[productSchema.parse({id:crypto.randomUUID(),listingStatus:'draft',name:'Work in progress'})];
+assert.deepEqual(profileIssues(minimal,[]),[],'private product drafts do not block company submission');
+minimal.products[0].listingStatus='publish';assert.ok(profileIssues(minimal,[]).some(x=>x.path==='products.0'),'published products still need their essential description');
+Object.assign(minimal.products[0],{category:'metal',description:'Custom metal part manufactured on request.',origin:'TR'});assert.deepEqual(profileIssues(minimal,[]),[],'photos, MOQ, materials and model reference can follow');
+console.log('Progressive profiles: minimal company, optional enrichment, independent product drafts and minimum product essentials passed.');
