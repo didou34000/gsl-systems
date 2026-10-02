@@ -30,3 +30,12 @@ assert.equal(requirementSchema.safeParse({...d,items:[]}).success,false);
 assert.equal(requirementSchema.safeParse({...d,items:Array(51).fill(d.items[0])}).success,false);
 const maximum=emptyRequirement();for(const f of requirementFields)maximum.fields[f.key]='x'.repeat('max'in f?f.max:100);maximum.destination='FR';assert.ok(requirementDetails(maximum,'fr').length<=10000,'Serialized details fit backend limit');
 console.log('Requirement validation, full-detail serialization, decimal quantities and restore schema passed.');
+
+const custom=emptyRequirement();custom.mode='custom';custom.fields.title='Pièce spéciale';custom.fields.description='Un besoin industriel libre et spécifique.';custom.customFields=[{id:crypto.randomUUID(),label:'Compatibilité machine',value:'Bride M12, entraxe à confirmer sur plan.'}];
+assert.ok(requirementDetails(custom,'fr').includes('Compatibilité machine\nBride M12'));
+assert.ok(requirementExport(custom,'fr').includes('Compatibilité machine'));
+const restored=requirementSchema.parse(JSON.parse(JSON.stringify(custom)));assert.equal(restored.mode,'custom');assert.equal(restored.customFields[0].value,custom.customFields[0].value);
+assert.equal(requirementSchema.parse({fields:d.fields,items:d.items,destination:d.destination}).mode,'guided','Legacy drafts still load');
+custom.customFields[0].label='';assert.ok(requirementIssues(custom,0,'2026-10-02').includes('customFields'));
+custom.customFields=Array.from({length:6},()=>({id:crypto.randomUUID(),label:'Spécification',value:'x'.repeat(2000)}));assert.ok(requirementIssues(custom,2,'2026-10-02').includes('detailsLimit'));
+console.log('Custom enquiry: editable sections, exports, restore, legacy compatibility and payload length guard passed.');

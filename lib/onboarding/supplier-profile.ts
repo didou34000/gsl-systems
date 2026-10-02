@@ -9,8 +9,9 @@ export {countryCodes} from './iso-countries';
 import {countryCodes} from './iso-countries';
 const country=z.string().refine(c=>!c||countryCodes.includes(c),'COUNTRY').default('');
 const address=z.object({line:text,city:text,region:text,postalCode:text,country});
-const numeric=z.string().trim().max(30).transform(s=>s.replace(',','.')).refine(s=>!s||(/^\d+(\.\d+)?$/.test(s)&&Number(s)>0),'POSITIVE_NUMBER').default('');
-export const productSchema=z.object({id:z.string().uuid(),name:text,reference:text,category:text,description:long,materials:text,processes:text,moq:numeric,unit:text,leadTime:text,origin:country,ce:z.enum(['unknown','required','not_applicable']).default('unknown'),ceReason:long,legislation:text,standards:text,documentId:text});
+const numeric=z.string().trim().max(30).transform(s=>s.replace(/[\s\u00a0\u202f]/g,'').replace(',','.')).refine(s=>!s||(/^\d+(\.\d+)?$/.test(s)&&Number(s)>0),'POSITIVE_NUMBER').default('');
+export function normalizeProductCategory(value:string){return ({machining:'metal',machinery:'machines',electrical:'electricite',plastics:'plasturgie',textiles:'textile',packaging:'emballage'} as Record<string,string>)[value]||value;}
+export const productSchema=z.object({id:z.string().uuid(),name:text,reference:text,category:text.transform(normalizeProductCategory),description:long,materials:text,processes:text,moq:numeric,unit:text,leadTime:text,origin:country,ce:z.enum(['unknown','required','not_applicable']).default('unknown'),ceReason:long,legislation:text,standards:text,documentId:text});
 export const certificateSchema=z.object({id:z.string().uuid(),scope:z.enum(['management','product','test']),name:text,issuer:text,number:text,productId:text,coveredScope:long,issued:date,expires:date,notifiedBody:z.string().regex(/^(\d{4})?$/).default(''),verificationUrl:url,documentId:text});
 export const supplierSchema=z.object({
  countryRulesVersion:text,legalName:text,tradingName:text,country,entityKind:z.enum(['company','sole_trader','other']).default('company'),legalForm:text,identifiers:z.record(z.string().max(80),z.string().trim().max(250)).default({}),
@@ -48,7 +49,7 @@ export function profileIssues(p:SupplierProfile,files:SupplierFile[],today=new D
  need(p.contact.name&&p.contact.role&&p.contact.email,4,'contact','Enter a contact name, role and email.','Indiquez le nom, la fonction et l’email du contact.');
  need(p.trade.markets&&p.contact.languages,4,'trade','Specify delivery markets and contact languages.','Précisez les marchés livrés et les langues du contact.');
  need(p.attestation,5,'attestation','Confirm that you are authorised to submit this company profile.','Confirmez que vous êtes habilité à soumettre ce dossier.');
- return out.map(issue=>({...issue,step:issue.step===0?(['legalName','country','activity'].includes(issue.path)?0:4):[0,1,2,3,4,4][issue.step]}));
+ return out.map(issue=>({...issue,step:Math.min(issue.step,4)}));
 }
 
 // Drafts retain partial strings, but never accept unknown properties or unbounded input.
@@ -63,3 +64,10 @@ function draftShape(schema:z.ZodTypeAny,key=''):z.ZodTypeAny {
  return schema;
 }
 export const supplierDraftSchema=draftShape(supplierSchema) as z.ZodType<SupplierProfile>;
+
+/** Explicit destinations for strict validation failures; drafts remain permissive. */
+export function supplierValidationIssues(profile:SupplierProfile):ProfileIssue[]{
+ const result=supplierSchema.safeParse(profile);if(result.success)return [];
+ const labels:Record<string,[string,string]>={website:['Website (https://…)','Site internet (https://…)'],founded:['Year founded','Année de création'],email:['Email address','Adresse email'],phoneCountry:['Phone country','Pays du téléphone'],moq:['Minimum order quantity','Quantité minimale'],area:['Surface area','Surface'],responseDays:['Response time','Délai de réponse'],issued:['Issue date','Date d’émission'],expires:['Expiry date','Date d’expiration'],verificationUrl:['Verification URL','Lien de vérification'],notifiedBody:['Notified body number','Numéro d’organisme notifié'],origin:['Country of manufacture','Pays de fabrication'],country:['Country','Pays']};
+ return result.error.issues.map(i=>{const root=String(i.path[0]),leaf=String(i.path.at(-1)),label=labels[leaf]||[leaf,leaf],index=typeof i.path[1]==='number'?` ${Number(i.path[1])+1}`:'';const section=root==='products'?['Product','Produit']:root==='sites'?['Site','Site']:root==='certificates'?['Certificate','Certificat']:['',''];return {path:i.path.join('.'),step:root==='products'?2:root==='sites'||root==='capabilities'?1:root==='certificates'?3:['contact','trade'].includes(root)?4:0,en:`${section[0]}${index}${section[0]?' — ':''}${label[0]}: check the format or length.`,fr:`${section[1]}${index}${section[1]?' — ':''}${label[1]} : vérifiez le format ou la longueur.`};});
+}

@@ -2,7 +2,7 @@ import {authClient} from '@/lib/supabase/server';
 import {phoneDetails} from '@/lib/onboarding/phone';
 import {getCountryRequirements} from '@/lib/onboarding/country-requirements';
 import {allowedOrigin} from '@/lib/auth-policy';
-import {supplierSchema,supplierDraftSchema,profileIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
+import {supplierSchema,supplierDraftSchema,profileIssues,supplierValidationIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 export async function GET(){try{
@@ -25,7 +25,7 @@ export async function POST(request:Request){
  if(!current||!['reviewed','submitted','changes_requested'].includes(current.status))return json({error:'LOCKED'},409);
  const {data,error}=await db.rpc('reopen_supplier',{expected_revision:body.revision});if(error)throw error;if(!data)return json({error:'CONFLICT'},409);return json({application:data});}
  if(current&&!['draft','changes_requested'].includes(current.status))return json({error:'LOCKED'},409);
- const parsed=(body.action==='submit'?supplierSchema:supplierDraftSchema).safeParse(body.profile);if(!parsed.success)return json({error:'INVALID',fields:parsed.error.issues.map(i=>i.path.join('.'))},400);
+ const parsed=(body.action==='submit'?supplierSchema:supplierDraftSchema).safeParse(body.profile);if(!parsed.success)return json({error:'INVALID',fields:parsed.error.issues.map(i=>i.path.join('.')),issues:body.action==='submit'?supplierValidationIssues(body.profile):[]},400);
  const profile=parsed.data;const phone=phoneDetails(profile.contact.phone,profile.contact.phoneCountry);profile.contact.phoneE164=phone.e164;
  if(body.action==='submit'&&profile.contact.phone&&!phone.valid)return json({error:'INVALID_PHONE',fields:['contact.phone']},422);
  if(body.action==='submit')profile.countryRulesVersion=getCountryRequirements(profile.country).version;

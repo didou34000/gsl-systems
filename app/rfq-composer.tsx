@@ -10,7 +10,7 @@ export default function RfqComposer({organization,draft,product,onSaved,onCancel
  const [lines,setLines]=useState<Line[]>((draft?.items||[{description:'',quantity:'',unit:'pcs',selected_product_id:product}]).map(x=>({...x,id:crypto.randomUUID(),quantity:String(x.quantity)})));
  const [status,setStatus]=useState<'idle'|'saving'|'saved'|'error'|'conflict'>('idle');
  const identity=useRef({id:draft?.id,revision:draft?.revision});const inFlight=useRef(false);const retry=useRef<{signature:string;command:string}|null>(null);const saved=useRef('');
- const payload=JSON.stringify({organization,title,details,destination:country,items:lines.map(x=>({description:x.description,quantity:x.quantity.replace(',','.'),unit:x.unit,product:x.selected_product_id}))});const latest=useRef(payload);useEffect(()=>{latest.current=payload},[payload]);
+ const payload=JSON.stringify({organization,title,details,destination:country,items:lines.map(x=>({description:x.description,quantity:x.quantity.replace(/[\s\u00a0\u202f]/g,'').replace(',','.'),unit:x.unit,product:x.selected_product_id}))});const latest=useRef(payload);useEffect(()=>{latest.current=payload},[payload]);
  const initial=useRef(payload);
  const persist=useCallback(async()=>{
   if(inFlight.current||status==='conflict')return false;
