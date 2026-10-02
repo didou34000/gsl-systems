@@ -1,92 +1,30 @@
 'use client';
-
-import {useEffect, useRef, useState, type CSSProperties} from 'react';
-import {ArrowUpRight, Pause, Play} from 'lucide-react';
+import {useEffect,useMemo,useState} from 'react';
+import {ArrowUpRight,Plus,Minus,RotateCcw,Search,Globe2,Factory} from 'lucide-react';
 import Link from '@/components/site-link';
+import {countryCodes} from '@/lib/onboarding/iso-countries';
+import world from '@/lib/maps/world.json';
 import {useLanguage} from './language';
-
-// Illustrative locations, not supplier locations or live transport routes.
-const places = [
-  {code:'FR', en:'France', fr:'France', lon:2.35, lat:48.86, dx:-15, dy:26, anchor:'end'},
-  {code:'DE', en:'Germany', fr:'Allemagne', lon:13.4, lat:52.52, dx:14, dy:5, anchor:'start'},
-  {code:'IT', en:'Italy', fr:'Italie', lon:9.19, lat:45.46, dx:12, dy:27, anchor:'start'},
-  {code:'PL', en:'Poland', fr:'Pologne', lon:21.01, lat:52.23, dx:13, dy:26, anchor:'start'},
-  {code:'TR', en:'Türkiye', fr:'Turquie', lon:28.98, lat:41.01, dx:12, dy:25, anchor:'start'},
-  {code:'GE', en:'Georgia', fr:'Géorgie', lon:44.79, lat:41.72, dx:-12, dy:-17, anchor:'end'},
-] as const;
-
-function project(lon:number,lat:number) {
-  const merc=(value:number)=>Math.log(Math.tan(Math.PI/4+value*Math.PI/360));
-  return {x:(lon+13)*15,y:(merc(64)-merc(lat))*560/(merc(64)-merc(33))};
-}
-
-export default function SourcingNetwork() {
-  const {l}=useLanguage();
-  const section=useRef<HTMLElement>(null);
-  const [selected,setSelected]=useState<string>('FR');
-  const [paused,setPaused]=useState(false);
-  const [visible,setVisible]=useState(false);
-  const [reduced,setReduced]=useState(true);
-  useEffect(()=>{
-    const media=matchMedia('(prefers-reduced-motion: reduce)');
-    const update=()=>setReduced(media.matches);
-    update();
-    media.addEventListener('change',update);
-    const observer=new IntersectionObserver(([entry])=>setVisible(entry.isIntersecting),{threshold:0.15});
-    if(section.current)observer.observe(section.current);
-    return()=>{media.removeEventListener('change',update);observer.disconnect()};
-  },[]);
-  const origin=places.find(place=>place.code===selected)!;
-  const start=project(origin.lon,origin.lat);
-  return <section ref={section} className="sourcing-network" aria-labelledby="network-title" data-animating={visible&&!paused&&!reduced}>
-    <div className="container network-layout">
-      <div className="network-copy">
-        <p className="network-eyebrow"><span/>{l('GLOBAL SUPPLY LINK','GLOBAL SUPPLY LINK')}</p>
-        <h2 id="network-title">{l('Closer to the right','Plus près du bon')}<br/><em>{l('manufacturer.','fabricant.')}</em></h2>
-        <p className="network-intro">{l('From Europe to its industrial neighbours. Explore manufacturing locations and connect your project to new possibilities.','De l’Europe à ses voisins industriels. Explorez les lieux de production et ouvrez de nouvelles possibilités pour votre projet.')}</p>
-        <div className="network-countries" role="group" aria-label={l('Explore a country','Explorer un pays')}>
-          {places.map(place=><button key={place.code} type="button" aria-pressed={selected===place.code} onClick={()=>setSelected(place.code)}><span>{place.code}</span>{l(place.en,place.fr)}</button>)}
-        </div>
-        <Link className="network-link" href={'/fabricants?country='+selected}>{l('Explore manufacturers','Explorer les fabricants')}<ArrowUpRight size={19}/></Link>
-      </div>
-      <div className="network-visual">
-        <div className="network-map-meta"><span>{l('INDUSTRIAL CONNECTIONS','CONNEXIONS INDUSTRIELLES')}</span><span>EUROPE & BEYOND</span></div>
-        <div className="network-map-frame">
-          <svg className="network-map" viewBox="0 0 900 560" aria-hidden="true">
-            <defs>
-              <pattern id="network-grid" width="45" height="45" patternUnits="userSpaceOnUse"><path d="M45 0H0V45" fill="none" stroke="#e1cbb2" strokeOpacity=".06"/></pattern>
-              <radialGradient id="network-halo"><stop stopColor="#cb865e" stopOpacity=".17"/><stop offset="1" stopColor="#cb865e" stopOpacity="0"/></radialGradient>
-              <filter id="network-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
-            </defs>
-            <rect width="900" height="560" fill="url(#network-grid)"/>
-            <circle cx={start.x} cy={start.y} r="260" fill="url(#network-halo)"/>
-            <image href="/maps/europe-sourcing.svg" width="900" height="560"/>
-            <text x="76" y="358" className="network-ocean">ATLANTIC</text>
-            <text x="388" y="520" className="network-ocean">MEDITERRANEAN</text>
-            {places.filter(place=>place.code!==selected).map((place,index)=>{
-              const end=project(place.lon,place.lat);
-              const lift=Math.min(135,Math.hypot(end.x-start.x,end.y-start.y)*.27);
-              const path=`M ${start.x} ${start.y} Q ${(start.x+end.x)/2} ${(start.y+end.y)/2-lift} ${end.x} ${end.y}`;
-              return <g key={selected+place.code} style={{'--route-delay':`${index*-.9}s`,'--route-duration':`${4+index*.55}s`} as CSSProperties}>
-                <path className="network-route" d={path}/>
-                <path className="network-signal network-signal-glow" d={path} pathLength="100" filter="url(#network-glow)"/>
-                <path className="network-signal" d={path} pathLength="100"/>
-              </g>;
-            })}
-            {places.map((place,index)=>{
-              const p=project(place.lon,place.lat);
-              return <g key={place.code} className={selected===place.code?'network-node is-origin':'network-node'} style={{'--node-delay':`${index*-.7}s`} as CSSProperties}>
-                <circle className="network-pulse" cx={p.x} cy={p.y} r="15"/>
-                <circle className="network-node-ring" cx={p.x} cy={p.y} r={selected===place.code?11:7}/>
-                <circle className="network-node-core" cx={p.x} cy={p.y} r={selected===place.code?4:3}/>
-                <text x={p.x+place.dx} y={p.y+place.dy} textAnchor={place.anchor}>{l(place.en,place.fr)}</text>
-              </g>;
-            })}
-          </svg>
-          <div className="network-map-caption"><span className="network-caption-dot"/><span>{l('Sourcing starts with a connection.','Tout commence par une connexion.')}</span></div>
-        </div>
-        <div className="network-map-footer"><span>{l('Illustrative connections · not live shipments','Liaisons illustratives · aucun suivi de livraison')}</span>{!reduced&&<button type="button" onClick={()=>setPaused(value=>!value)} aria-label={paused?l('Play map animation','Animer la carte'):l('Pause map animation','Mettre la carte en pause')}>{paused?<Play size={14}/>:<Pause size={14}/>}<span>{paused?l('Play','Animer'):l('Pause','Pause')}</span></button>}</div>
-      </div>
-    </div>
-  </section>;
+import type {Hit} from './catalogue-live';
+const regions=[{id:'world',en:'World',fr:'Monde',x:0,y:0,w:1080,h:450},{id:'europe',en:'Europe',fr:'Europe',x:480,y:32,w:270,h:185},{id:'asia',en:'Asia',fr:'Asie',x:670,y:25,w:400,h:310},{id:'africa',en:'Africa',fr:'Afrique',x:470,y:140,w:290,h:270},{id:'americas',en:'Americas',fr:'Amériques',x:80,y:0,w:410,h:440},{id:'oceania',en:'Oceania',fr:'Océanie',x:885,y:210,w:195,h:200}];
+export default function SourcingNetwork(){
+ const {l,language}=useLanguage();const [selected,setSelected]=useState('FR'),[query,setQuery]=useState(''),[region,setRegion]=useState('europe'),[zoom,setZoom]=useState(1),[focus,setFocus]=useState<number[]|null>(null),[retry,setRetry]=useState(0);
+ const [result,setResult]=useState<{country:string;loading:boolean;error:boolean;hits:Hit[];count:number}>({country:'FR',loading:true,error:false,hits:[],count:0});
+ const names=useMemo(()=>new Intl.DisplayNames([language],{type:'region'}),[language]);
+ const choices=useMemo(()=>countryCodes.map(code=>({code,name:names.of(code)||code})).sort((a,b)=>a.name.localeCompare(b.name,language)),[names,language]);
+ const normalize=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+ const filtered=choices.filter(c=>normalize(c.name+' '+c.code).includes(normalize(query)));
+ useEffect(()=>{const c=new AbortController();fetch('/api/platform?view=catalogue&country='+selected,{signal:c.signal,cache:'no-store'}).then(async r=>{if(!r.ok)throw Error();return r.json() as Promise<{suppliers:Hit[];count:number}>}).then(d=>setResult({country:selected,loading:false,error:false,hits:d.suppliers,count:d.count})).catch(e=>{if(e.name!=='AbortError')setResult({country:selected,loading:false,error:true,hits:[],count:0})});return()=>c.abort()},[selected,retry]);
+ const choose=(code:string)=>{setSelected(code);const shape=world.find(c=>c.code===code);if(shape){const [x,y,w,h]=shape.box;const width=Math.max(w+50,(h+40)*2.25,100);setFocus([Math.max(0,Math.min(1080-width,x+w/2-width/2)),Math.max(0,y+h/2-width/4.5),width,width/2.25]);setZoom(1)}};
+ const area=regions.find(r=>r.id===region)!;const base=focus||[area.x,area.y,area.w,area.h];const box=[base[0]+base[2]*(1-1/zoom)/2,base[1]+base[3]*(1-1/zoom)/2,base[2]/zoom,base[3]/zoom];
+ const loading=result.country!==selected||result.loading;
+ return <section className="atlas container">
+  <header className="atlas-heading"><div><p className="eyebrow">{l('THE MANUFACTURING ATLAS','L’ATLAS INDUSTRIEL')}</p><h1>{l('Your next partner.','Votre prochain partenaire.')}<br/><em>{l('A world to explore.','Un monde à explorer.')}</em></h1></div><p>{l('Choose a country to explore its published manufacturing capabilities and the companies behind them.','Choisissez un pays pour explorer ses capacités de fabrication publiées et les entreprises qui les proposent.')}</p></header>
+  <div className="atlas-toolbar"><nav aria-label={l('Map regions','Régions de la carte')}>{regions.map(r=><button key={r.id} aria-pressed={region===r.id&&!focus} onClick={()=>{setRegion(r.id);setFocus(null);setZoom(1)}}>{language==='fr'?r.fr:r.en}</button>)}</nav><span><Globe2 size={15}/>{choices.length} {l('countries & territories','pays et territoires')}</span></div>
+  <div className="atlas-layout"><div className="atlas-canvas"><svg viewBox="0 0 1080 480" role="group" aria-label={l('Interactive country map. The country search below offers the same selections.','Carte interactive des pays. La recherche de pays ci-dessous permet les mêmes sélections.')}><defs><pattern id="atlas-grid" width="90" height="60" patternUnits="userSpaceOnUse"><path d="M90 0H0V60" fill="none" stroke="#cad7d5" strokeWidth=".6"/></pattern></defs><rect width="1080" height="480" fill="url(#atlas-grid)"/><g className="atlas-geography" style={{transform:`translate(${(1080-box[2]*Math.min(1080/box[2],480/box[3]))/2}px, ${(480-box[3]*Math.min(1080/box[2],480/box[3]))/2}px) scale(${Math.min(1080/box[2],480/box[3])}) translate(${-box[0]}px, ${-box[1]}px)`}}>{world.map((c,i)=><path key={c.code+i} d={c.path} vectorEffect="non-scaling-stroke" className={c.code===selected?'selected':''} onClick={()=>countryCodes.includes(c.code)&&choose(c.code)}><title>{countryCodes.includes(c.code)?names.of(c.code):c.name}</title></path>)}</g></svg><span className="atlas-watermark">GSL / {l('MANUFACTURING ATLAS','ATLAS INDUSTRIEL')}</span><div className="atlas-controls"><button aria-label={l('Zoom in','Zoom avant')} disabled={zoom>=3} onClick={()=>setZoom(z=>Math.min(3,z+.5))}><Plus size={18}/></button><button aria-label={l('Zoom out','Zoom arrière')} disabled={zoom<=1} onClick={()=>setZoom(z=>Math.max(1,z-.5))}><Minus size={18}/></button><button aria-label={l('Reset map','Réinitialiser la carte')} onClick={()=>{setFocus(null);setZoom(1)}}><RotateCcw size={16}/></button></div><div className="atlas-legend"><i/>{names.of(selected)} · {l('Selected country','Pays sélectionné')}</div></div>
+  <aside className="atlas-detail" aria-live="polite"><span className="atlas-code">{selected}</span><p className="eyebrow">{l('MANUFACTURING IN','FABRICATION EN')}</p><h2>{names.of(selected)}</h2><p>{l('Suppliers and manufacturers with published production capabilities in this country.','Fournisseurs et fabricants ayant des capacités de production publiées dans ce pays.')}</p>{loading?<p role="status">{l('Loading profiles…','Chargement des fiches…')}</p>:result.error?<div className="atlas-status"><Factory size={22}/><strong>{l('Profiles unavailable','Fiches indisponibles')}</strong><p>{l('The catalogue could not be loaded. Please try again shortly.','Le catalogue n’a pas pu être chargé. Réessayez dans quelques instants.')}</p><button onClick={()=>{setResult(r=>({...r,loading:true}));setRetry(n=>n+1)}}>{l('Try again','Réessayer')}</button></div>:<><strong className="atlas-count">{result.count} <small>{l('published profiles','fiches publiées')}</small></strong>{result.hits.slice(0,3).map(hit=><Link className="atlas-supplier" key={hit.organization_id} href={'/fabricants/'+hit.organization_id}><span>{hit.display_name}<small>{hit.matched_products.map(p=>p.name).slice(0,2).join(' · ')}</small></span><ArrowUpRight size={17}/></Link>)}{result.count===0&&<p>{l('No published capabilities match this country yet.','Aucune capacité publiée ne correspond à ce pays pour le moment.')}</p>}</>}
+  <Link className="atlas-open" href={'/fabricants?country='+selected}>{l('Explore this country','Explorer ce pays')}<ArrowUpRight size={17}/></Link><Link className="atlas-need" href={'/decrire-mon-besoin'}>{l('Describe my requirement','Décrire mon besoin')} →</Link></aside></div>
+  <div className="atlas-source"><span>{l('Geographic coverage does not guarantee supplier availability. Production location is distinct from registered office.','La couverture géographique ne garantit pas la présence d’un fournisseur. Le lieu de production est distinct du siège social.')}</span><a href="https://www.naturalearthdata.com/about/terms-of-use/" target="_blank" rel="noreferrer">Natural Earth · 1:110m</a></div>
+  <section className="atlas-index" aria-labelledby="atlas-index-title"><div><p className="eyebrow">{l('COUNTRY INDEX','INDEX DES PAYS')}</p><h2 id="atlas-index-title">{l('Every destination, within reach.','Chaque destination, à portée de main.')}</h2><p>{l('Small territories remain accessible here, even when their outline is not visible at this scale.','Les petits territoires restent accessibles ici, même lorsque leur contour n’est pas visible à cette échelle.')}</p></div><label className="atlas-search"><Search size={18}/><input type="search" value={query} onChange={e=>setQuery(e.target.value)} placeholder={l('Search a country…','Rechercher un pays…')} aria-label={l('Search a country','Rechercher un pays')}/></label><div className="atlas-country-list">{filtered.map(c=><button key={c.code} aria-pressed={selected===c.code} onClick={()=>{choose(c.code);document.querySelector('.atlas-toolbar')?.scrollIntoView({block:'start'})}}><span>{c.code}</span>{c.name}<ArrowUpRight size={14}/></button>)}{filtered.length===0&&<p>{l('No countries found.','Aucun pays trouvé.')}</p>}</div></section>
+ </section>;
 }
