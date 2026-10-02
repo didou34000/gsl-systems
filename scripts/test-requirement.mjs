@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import ts from 'typescript';
+import {pathToFileURL} from 'node:url';
+const compile=p=>ts.transpileModule(fs.readFileSync(p,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso-countries.ts')).toString('base64');
+const code=compile('lib/requirement.ts').replace("'./onboarding/iso-countries'",JSON.stringify(iso)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const {emptyRequirement,requirementSchema,requirementIssues,requirementDetails,requirementExport,requirementFields}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const d=emptyRequirement();
+assert.deepEqual(requirementIssues(d,0,'2026-10-02'),['title','description']);
+assert.deepEqual(requirementIssues(d,1,'2026-10-02'),['items']);
+assert.deepEqual(requirementIssues(d,2,'2026-10-02'),['destination']);
+d.fields.title='Boîtier industriel';d.fields.description='Aluminium usiné selon plan pour un capteur industriel.';
+d.items=[{description:'Pièce A',quantity:'250,5',unit:'kg'},{description:'Pièce B',quantity:'500',unit:'pcs'}];d.destination='JP';
+for(let step=0;step<3;step++)assert.deepEqual(requirementIssues(d,step,'2026-10-02'),[]);
+for(const q of ['0','-1','1e5','1.2.3','NaN','1000000000001']){const x=structuredClone(d);x.items[0].quantity=q;assert.deepEqual(requirementIssues(x,1,'2026-10-02'),['items']);}
+d.fields.responseDate='2026-12-20';d.fields.deliveryDate='2026-12-01';assert.ok(requirementIssues(d,2,'2026-10-02').includes('dateOrder'));
+d.fields.responseDate='2026-09-01';assert.ok(requirementIssues(d,2,'2026-10-02').includes('responseDate'));
+d.fields.responseDate='2026-11-01';assert.deepEqual(requirementIssues(d,2,'2026-10-02'),[]);
+for(const f of requirementFields){if(!d.fields[f.key])d.fields[f.key]='Détail '+f.key;}
+d.fields.frequency='Trimestrielle';
+const fr=requirementDetails(d,'fr'),en=requirementDetails(d,'en');
+for(const f of requirementFields.filter(f=>f.key!=='title'))assert.ok(fr.includes(d.fields[f.key]),f.key+' retained in saved brief');
+assert.ok(en.includes('Quarterly'));assert.ok(en.includes('Japan'));assert.ok(requirementExport(d,'fr').includes('250,5 kg'));
+assert.ok(requirementSchema.safeParse(JSON.parse(JSON.stringify(d))).success);
+assert.equal(requirementSchema.safeParse({...d,destination:'ZZ'}).success,false);
+assert.equal(requirementSchema.safeParse({...d,items:[]}).success,false);
+assert.equal(requirementSchema.safeParse({...d,items:Array(51).fill(d.items[0])}).success,false);
+const maximum=emptyRequirement();for(const f of requirementFields)maximum.fields[f.key]='x'.repeat('max'in f?f.max:100);maximum.destination='FR';assert.ok(requirementDetails(maximum,'fr').length<=10000,'Serialized details fit backend limit');
+console.log('Requirement validation, full-detail serialization, decimal quantities and restore schema passed.');
