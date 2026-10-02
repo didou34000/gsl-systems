@@ -98,3 +98,12 @@ export const companyPublicationSchema=supplierDraftSchema.superRefine((p,ctx)=>{
 export function companyIssues(p:SupplierProfile):ProfileIssue[]{
  return profileIssues({...p,sites:[],products:[],certificates:[]},[]);
 }
+
+export function productPublicationIssues(p:SupplierProfile):ProfileIssue[]{
+ const out:ProfileIssue[]=[];
+ p.products.forEach((v,i)=>{if(v.listingStatus==='draft')return;
+ if(!v.name.trim()||!['metal','machines','electricite','construction','plasturgie','textile','emballage','mobilier','other'].includes(normalizeProductCategory(v.category))||v.description.trim().length<30||!countryCodes.includes(v.origin))out.push({step:2,path:`products.${i}`,en:'Complete the product name, category, description (30 characters) and manufacturing country.',fr:'Renseignez le nom, la catégorie, la description (30 caractères) et le pays de fabrication du produit.'});
+ });
+ if(!p.attestation)out.push({step:4,path:'attestation',en:'Confirm you are authorised to publish these products.',fr:'Confirmez que vous êtes habilité à publier ces produits.'});
+ return out;
+}

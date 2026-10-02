@@ -7,7 +7,7 @@ const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso
 const country='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-requirements.ts')).toString('base64');
 const options='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso))).toString('base64');
 const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
-const {documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const {productPublicationIssues,documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const p=emptyProfile();
 assert.ok(profileIssues(p,[]).length>5);
 Object.assign(p,{activity:'manufacturer',website:'https://example.com',legalName:'Test company',country:'TR',legalForm:'Ltd',description:'A'.repeat(120),identifiers:{mersis:'test',trade_registry_number:'test',trade_registry_office:'test'},attestation:true});
@@ -62,3 +62,8 @@ assert.deepEqual(profileIssues(minimal,[]),[],'missing certificate details and a
 assert.ok(profileSuggestions(minimal,[]).some(x=>x.path.startsWith('certificates')),'unfinished evidence remains visible as optional work');
 assert.ok(profileIssues({...minimal,legalName:''},[]).some(x=>x.path==='legalName'),'essential identity still required');
 console.log('Optional documents: incomplete certificates retained privately, submission allowed and essentials still enforced.');
+
+const directProduct={...minimal,contact:{...minimal.contact,email:'unfinished'},products:[productSchema.parse({id:crypto.randomUUID(),listingStatus:'publish',name:'Industrial product',category:'metal',description:'A made-to-order metal component for industrial use.',origin:'TR',ce:'required'})]};
+assert.deepEqual(productPublicationIssues(directProduct),[],'documents and partial company contact do not block products');
+assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],origin:''}]}).some(x=>x.path==='products.0'));
+console.log('Product essentials validated without optional certificates, CE documents or company draft fields.');

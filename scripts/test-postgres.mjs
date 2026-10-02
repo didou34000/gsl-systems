@@ -25,6 +25,7 @@ await (await import('./test-security-extensions.mjs')).testSecurityExtensions(db
 await (await import('./test-request-files.mjs')).testRequestFiles(db);
 await (await import('./test-republication.mjs')).testRepublication(db);
 await (await import('./test-company-publication.mjs')).testCompanyPublication(db);
+await (await import('./test-product-publication.mjs')).testProductPublication(db);
 await (await import('./test-privacy.mjs')).testPrivacy(db);
 await (await import('./test-workspace-pagination.mjs')).testWorkspacePagination(db);
 await db.exec('reset role');
