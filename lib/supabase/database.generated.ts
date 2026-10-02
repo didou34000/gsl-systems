@@ -251,6 +251,26 @@ export interface DatabaseRows {
     assessment_procedure: string;
     notified_body_number: string | null;
   };
+  product_conversations: {
+    id: string;
+    buyer_organization_id: string;
+    supplier_organization_id: string;
+    product_id: string;
+    product_name: string;
+    buyer_name: string;
+    supplier_name: string;
+    created_at: string;
+    updated_at: string;
+  };
+  product_messages: {
+    id: string;
+    conversation_id: string;
+    sender_organization_id: string;
+    sender_user_id: string;
+    body: string;
+    command_id: string;
+    created_at: string;
+  };
   production_sites: {
     id: string;
     organization_id: string;

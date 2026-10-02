@@ -65,5 +65,6 @@ export async function testWorkflows(db){
  await assert.rejects(db.query("select public.finish_notification($1,$2,'accepted','test',null)",[jobs[0].id,randomUUID()]),/LEASE_CONFLICT/);
  await db.query("select public.finish_notification($1,$2,'accepted','test',null)",[jobs[0].id,lease]);
  await db.exec('reset role');assert.equal((await db.query('select state from public.notification_outbox where id=$1',[jobs[0].id])).rows[0].state,'accepted');
+ await (await import('./test-product-messaging.mjs')).testProductMessaging(db,{buyer,other,supplier,org,supplierOrg:pub.organizationId});
  console.log('Workflow integration: isolation, atomic send, notification transactions, search filters/units/unknowns, offer selection and deduplication passed.');
 }
