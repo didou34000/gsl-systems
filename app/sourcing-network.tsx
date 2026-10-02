@@ -3,6 +3,7 @@ import {useEffect,useMemo,useState} from 'react';
 import {ArrowUpRight,Plus,Minus,RotateCcw,Search,Globe2,Factory} from 'lucide-react';
 import Link from '@/components/site-link';
 import {countryCodes} from '@/lib/onboarding/iso-countries';
+import {countryName,countryOptions} from '@/lib/country-names';
 import world from '@/lib/maps/world.json';
 import {useLanguage} from './language';
 import type {Hit} from './catalogue-live';
@@ -10,8 +11,8 @@ const regions=[{id:'world',en:'World',fr:'Monde',x:0,y:0,w:1080,h:450},{id:'euro
 export default function SourcingNetwork(){
  const {l,language}=useLanguage();const [selected,setSelected]=useState('FR'),[query,setQuery]=useState(''),[region,setRegion]=useState('europe'),[zoom,setZoom]=useState(1),[focus,setFocus]=useState<number[]|null>(null),[retry,setRetry]=useState(0);
  const [result,setResult]=useState<{country:string;loading:boolean;error:boolean;hits:Hit[];count:number}>({country:'FR',loading:true,error:false,hits:[],count:0});
- const names=useMemo(()=>new Intl.DisplayNames([language],{type:'region'}),[language]);
- const choices=useMemo(()=>countryCodes.map(code=>({code,name:names.of(code)||code})).sort((a,b)=>a.name.localeCompare(b.name,language)),[names,language]);
+ const names=useMemo(()=>({of:(code:string)=>countryName(code,language)}),[language]);
+ const choices=countryOptions(language);
  const normalize=(s:string)=>s.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
  const filtered=choices.filter(c=>normalize(c.name+' '+c.code).includes(normalize(query)));
  useEffect(()=>{const c=new AbortController();fetch('/api/platform?view=catalogue&country='+selected,{signal:c.signal,cache:'no-store'}).then(async r=>{if(!r.ok)throw Error();return r.json() as Promise<{suppliers:Hit[];count:number}>}).then(d=>setResult({country:selected,loading:false,error:false,hits:d.suppliers,count:d.count})).catch(e=>{if(e.name!=='AbortError')setResult({country:selected,loading:false,error:true,hits:[],count:0})});return()=>c.abort()},[selected,retry]);
