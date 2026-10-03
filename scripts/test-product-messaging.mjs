@@ -3,6 +3,7 @@ import {randomUUID} from 'node:crypto';
 export async function testProductMessaging(db,{buyer,other,supplier,org,supplierOrg}){
  async function as(id){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id]);await db.exec('set role authenticated')}
  const send=(company,product,conversation,body,key=randomUUID())=>db.query('select public.send_product_message($1,$2,$3,$4,$5) result',[company,product,conversation,body,key]).then(r=>r.rows[0].result);
+ await db.exec('reset role');await db.query('update auth.users set email_confirmed_at=now() where id=any($1::uuid[])',[[buyer,other,supplier]]);
  await as(buyer);
  const product=(await db.query('select product_id from public.published_products where organization_id=$1 and withdrawn_at is null',[supplierOrg])).rows[0].product_id;
  const key=randomUUID(),first=await send(org,product,null,'Synthetic product question',key);
@@ -33,5 +34,31 @@ export async function testProductMessaging(db,{buyer,other,supplier,org,supplier
  await db.exec('reset role');await db.query('update public.memberships set active=true where organization_id=$1 and user_id=$2',[org,buyer]);
  await db.exec('set role anon');await assert.rejects(db.query('select * from public.product_messages'));
  await db.exec('reset role');
+ // Direct company contact also works when the initiating company is not marked as a buyer.
+ const direct=(company,target,conversation,body,key=randomUUID())=>db.query('select public.send_direct_message($1,null,$2,$3,$4,$5) result',[company,target,conversation,body,key]).then(r=>r.rows[0].result);
+ const unread=()=>db.query('select public.messaging_unread() n').then(r=>Number(r.rows[0].n));
+ const summary=id=>db.query('select public.messaging_summary($1) value',[[id]]).then(r=>r.rows[0].value);
+ const mark=ids=>db.query('select public.mark_messages_read($1)',[ids]);
+ await db.query('update public.organizations set buyer=false,supplier=true where id=$1',[org]);
+ await as(buyer);const directKey=randomUUID(),contact=await direct(org,supplierOrg,null,'Direct company enquiry',directKey);
+ assert.deepEqual(await direct(org,supplierOrg,null,'Direct company enquiry',directKey),contact);
+ assert.equal((await direct(org,supplierOrg,null,'Another direct question')).conversation,contact.conversation);
+ await assert.rejects(direct(org,supplierOrg,null,'Changed retry',directKey),/IDEMPOTENCY_CONFLICT/);
+ await assert.rejects(db.query('select public.send_direct_message($1,$2,$3,null,$4,$5)',[org,product,supplierOrg,'Two targets',randomUUID()]),/INVALID/);
+ await as(supplier);assert.equal((await summary(contact.conversation))[0].unread,2);
+ const beforeRead=await unread();await mark([contact.message]);assert.equal(await unread(),beforeRead-1);
+ await mark([contact.message]);assert.equal(await unread(),beforeRead-1);
+ const reply=await direct(supplierOrg,null,contact.conversation,'Direct manufacturer reply');
+ await as(buyer);assert.equal((await summary(contact.conversation))[0].unread,1);await mark([reply.message]);assert.equal((await summary(contact.conversation))[0].unread,0);
+ await as(other);assert.deepEqual(await summary(contact.conversation),[]);assert.equal(await unread(),0);await mark([reply.message]);
+ await assert.rejects(direct(org,null,contact.conversation,'Outsider'),/FORBIDDEN/);
+ await db.exec('reset role');assert.equal((await db.query('select * from private.message_reads where user_id=$1',[other])).rows.length,0);
+ await db.query('update public.published_supplier_profiles set withdrawn_at=now() where organization_id=$1',[supplierOrg]);
+ await as(buyer);await assert.rejects(direct(org,supplierOrg,null,'Withdrawn supplier'),/NOT_PUBLISHED/);await direct(org,null,contact.conversation,'Keep existing conversation');
+ await db.exec('reset role');await db.query('update public.published_supplier_profiles set withdrawn_at=null where organization_id=$1',[supplierOrg]);await db.query('update public.organizations set buyer=true,supplier=false where id=$1',[org]);
+ await db.query('update public.memberships set active=false where organization_id=$1 and user_id=$2',[org,buyer]);await as(buyer);assert.deepEqual(await summary(contact.conversation),[]);assert.equal(await unread(),0);
+ await db.exec('reset role');await db.query('update public.memberships set active=true where organization_id=$1 and user_id=$2',[org,buyer]);
+ await db.exec('set role anon');await assert.rejects(unread());await assert.rejects(mark([reply.message]));await db.exec('reset role');
+ console.log('Direct company contact, unread counts, per-user read isolation and revoked access passed.');
  console.log('Product messaging: buyer/manufacturer exchange, idempotency, isolation, impersonation, revoked access and product withdrawal passed.');
 }
