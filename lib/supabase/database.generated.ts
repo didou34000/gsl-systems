@@ -255,7 +255,7 @@ export interface DatabaseRows {
     id: string;
     buyer_organization_id: string;
     supplier_organization_id: string;
-    product_id: string;
+    product_id: string | null;
     product_name: string;
     buyer_name: string;
     supplier_name: string;
