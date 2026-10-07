@@ -1,0 +1,872 @@
+{
+  "Language": [
+    "Idioma",
+    "Idioma",
+    "Sprache",
+    "Lingua",
+    "Dil",
+    "اللغة",
+    "भाषा",
+    "语言"
+  ],
+  "Products": [
+    "Productos",
+    "Produtos",
+    "Produkte",
+    "Prodotti",
+    "Ürünler",
+    "المنتجات",
+    "उत्पाद",
+    "产品"
+  ],
+  "Manufacturers": [
+    "Fabricantes",
+    "Fabricantes",
+    "Hersteller",
+    "Produttori",
+    "Üreticiler",
+    "المصنّعون",
+    "निर्माता",
+    "制造商"
+  ],
+  "Describe my requirement": [
+    "Describir mi necesidad",
+    "Descrever a minha necessidade",
+    "Bedarf beschreiben",
+    "Descrivi la mia esigenza",
+    "İhtiyacımı açıkla",
+    "وصف احتياجي",
+    "अपनी आवश्यकता बताएँ",
+    "描述我的需求"
+  ],
+  "My workspace": [
+    "Mi espacio",
+    "O meu espaço",
+    "Mein Arbeitsbereich",
+    "Il mio spazio",
+    "Çalışma alanım",
+    "مساحة عملي",
+    "मेरा कार्यक्षेत्र",
+    "我的工作区"
+  ],
+  "Saved products": [
+    "Productos guardados",
+    "Produtos guardados",
+    "Gespeicherte Produkte",
+    "Prodotti salvati",
+    "Kaydedilen ürünler",
+    "المنتجات المحفوظة",
+    "सहेजे गए उत्पाद",
+    "已收藏产品"
+  ],
+  "Saved": [
+    "Guardado",
+    "Guardado",
+    "Gespeichert",
+    "Salvato",
+    "Kaydedildi",
+    "تم الحفظ",
+    "सहेजा गया",
+    "已保存"
+  ],
+  "My account": [
+    "Mi cuenta",
+    "A minha conta",
+    "Mein Konto",
+    "Il mio account",
+    "Hesabım",
+    "حسابي",
+    "मेरा खाता",
+    "我的账户"
+  ],
+  "Request a quote": [
+    "Solicitar presupuesto",
+    "Pedir orçamento",
+    "Angebot anfordern",
+    "Richiedi preventivo",
+    "Teklif iste",
+    "طلب عرض سعر",
+    "मूल्य प्रस्ताव माँगें",
+    "请求报价"
+  ],
+  "Toggle navigation": [
+    "Mostrar navegación",
+    "Mostrar navegação",
+    "Navigation öffnen",
+    "Apri navigazione",
+    "Menüyü aç",
+    "فتح قائمة التنقل",
+    "नेविगेशन खोलें",
+    "切换导航"
+  ],
+  "Industries": [
+    "Sectores",
+    "Setores",
+    "Branchen",
+    "Settori",
+    "Sektörler",
+    "القطاعات",
+    "उद्योग",
+    "行业"
+  ],
+  "Countries": [
+    "Países",
+    "Países",
+    "Länder",
+    "Paesi",
+    "Ülkeler",
+    "الدول",
+    "देश",
+    "国家"
+  ],
+  "Join as a supplier": [
+    "Registrarse como proveedor",
+    "Registar como fornecedor",
+    "Als Lieferant registrieren",
+    "Registrati come fornitore",
+    "Tedarikçi olarak katıl",
+    "التسجيل كمورّد",
+    "आपूर्तिकर्ता के रूप में जुड़ें",
+    "以供应商身份加入"
+  ],
+  "Supplier profile": [
+    "Perfil del proveedor",
+    "Perfil do fornecedor",
+    "Lieferantenprofil",
+    "Profilo fornitore",
+    "Tedarikçi profili",
+    "ملف المورّد",
+    "आपूर्तिकर्ता प्रोफ़ाइल",
+    "供应商资料"
+  ],
+  "Leave demo": [
+    "Salir de la demostración",
+    "Sair da demonstração",
+    "Demo verlassen",
+    "Esci dalla demo",
+    "Demodan çık",
+    "مغادرة العرض التجريبي",
+    "डेमो से बाहर निकलें",
+    "退出演示"
+  ],
+  "Official resources": [
+    "Recursos oficiales",
+    "Recursos oficiais",
+    "Offizielle Quellen",
+    "Risorse ufficiali",
+    "Resmî kaynaklar",
+    "المصادر الرسمية",
+    "आधिकारिक संसाधन",
+    "官方资源"
+  ],
+  "Product requirements": [
+    "Requisitos del producto",
+    "Requisitos do produto",
+    "Produktanforderungen",
+    "Requisiti del prodotto",
+    "Ürün gereklilikleri",
+    "متطلبات المنتج",
+    "उत्पाद आवश्यकताएँ",
+    "产品要求"
+  ],
+  "Import requirements": [
+    "Requisitos de importación",
+    "Requisitos de importação",
+    "Einfuhranforderungen",
+    "Requisiti di importazione",
+    "İthalat gereklilikleri",
+    "متطلبات الاستيراد",
+    "आयात आवश्यकताएँ",
+    "进口要求"
+  ],
+  "For buyers": [
+    "Para compradores",
+    "Para compradores",
+    "Für Einkäufer",
+    "Per gli acquirenti",
+    "Alıcılar için",
+    "للمشترين",
+    "खरीदारों के लिए",
+    "买家专区"
+  ],
+  "Browse products": [
+    "Explorar productos",
+    "Explorar produtos",
+    "Produkte entdecken",
+    "Esplora prodotti",
+    "Ürünleri incele",
+    "تصفّح المنتجات",
+    "उत्पाद देखें",
+    "浏览产品"
+  ],
+  "Find a manufacturer": [
+    "Buscar un fabricante",
+    "Encontrar um fabricante",
+    "Hersteller finden",
+    "Trova un produttore",
+    "Üretici bul",
+    "البحث عن مصنّع",
+    "निर्माता खोजें",
+    "查找制造商"
+  ],
+  "Prepare an enquiry": [
+    "Preparar una solicitud",
+    "Preparar um pedido",
+    "Anfrage vorbereiten",
+    "Prepara una richiesta",
+    "Talep hazırla",
+    "إعداد استفسار",
+    "पूछताछ तैयार करें",
+    "准备询价"
+  ],
+  "Compare products": [
+    "Comparar productos",
+    "Comparar produtos",
+    "Produkte vergleichen",
+    "Confronta prodotti",
+    "Ürünleri karşılaştır",
+    "مقارنة المنتجات",
+    "उत्पादों की तुलना करें",
+    "比较产品"
+  ],
+  "For manufacturers": [
+    "Para fabricantes",
+    "Para fabricantes",
+    "Für Hersteller",
+    "Per i produttori",
+    "Üreticiler için",
+    "للمصنّعين",
+    "निर्माताओं के लिए",
+    "制造商专区"
+  ],
+  "List my company": [
+    "Registrar mi empresa",
+    "Registar a minha empresa",
+    "Mein Unternehmen eintragen",
+    "Registra la mia azienda",
+    "Şirketimi kaydet",
+    "إدراج شركتي",
+    "अपनी कंपनी सूचीबद्ध करें",
+    "登记我的企业"
+  ],
+  "Manage my products": [
+    "Gestionar mis productos",
+    "Gerir os meus produtos",
+    "Meine Produkte verwalten",
+    "Gestisci i miei prodotti",
+    "Ürünlerimi yönet",
+    "إدارة منتجاتي",
+    "अपने उत्पाद प्रबंधित करें",
+    "管理我的产品"
+  ],
+  "Sourcing countries": [
+    "Países de aprovisionamiento",
+    "Países de fornecimento",
+    "Beschaffungsländer",
+    "Paesi di approvvigionamento",
+    "Tedarik ülkeleri",
+    "دول التوريد",
+    "सोर्सिंग देश",
+    "采购国家"
+  ],
+  "Assisted sourcing": [
+    "Aprovisionamiento asistido",
+    "Apoio ao fornecimento",
+    "Unterstützte Beschaffung",
+    "Approvvigionamento assistito",
+    "Destekli tedarik",
+    "توريد بمساعدة",
+    "सहायता प्राप्त सोर्सिंग",
+    "采购协助"
+  ],
+  "Our method": [
+    "Nuestro método",
+    "O nosso método",
+    "Unsere Methode",
+    "Il nostro metodo",
+    "Yöntemimiz",
+    "منهجنا",
+    "हमारी पद्धति",
+    "我们的方法"
+  ],
+  "Guides & resources": [
+    "Guías y recursos",
+    "Guias e recursos",
+    "Leitfäden und Ressourcen",
+    "Guide e risorse",
+    "Kılavuzlar ve kaynaklar",
+    "الأدلة والموارد",
+    "मार्गदर्शिकाएँ और संसाधन",
+    "指南与资源"
+  ],
+  "Cost calculator": [
+    "Calculadora de costes",
+    "Calculadora de custos",
+    "Kostenrechner",
+    "Calcolatore dei costi",
+    "Maliyet hesaplayıcı",
+    "حاسبة التكاليف",
+    "लागत कैलकुलेटर",
+    "成本计算器"
+  ],
+  "Help centre": [
+    "Centro de ayuda",
+    "Centro de ajuda",
+    "Hilfezentrum",
+    "Centro assistenza",
+    "Yardım merkezi",
+    "مركز المساعدة",
+    "सहायता केंद्र",
+    "帮助中心"
+  ],
+  "Operator & contact": [
+    "Operador y contacto",
+    "Operador e contacto",
+    "Betreiber und Kontakt",
+    "Gestore e contatti",
+    "İşletmeci ve iletişim",
+    "المشغّل والتواصل",
+    "संचालक और संपर्क",
+    "运营方与联系"
+  ],
+  "About this version": [
+    "Acerca de esta versión",
+    "Sobre esta versão",
+    "Über diese Version",
+    "Informazioni sulla versione",
+    "Bu sürüm hakkında",
+    "حول هذا الإصدار",
+    "इस संस्करण के बारे में",
+    "关于此版本"
+  ],
+  "Data & privacy": [
+    "Datos y privacidad",
+    "Dados e privacidade",
+    "Daten und Datenschutz",
+    "Dati e privacy",
+    "Veriler ve gizlilik",
+    "البيانات والخصوصية",
+    "डेटा और गोपनीयता",
+    "数据与隐私"
+  ],
+  "Credits": [
+    "Créditos",
+    "Créditos",
+    "Quellenangaben",
+    "Crediti",
+    "Katkıda bulunanlar",
+    "الاعتمادات",
+    "श्रेय",
+    "鸣谢"
+  ],
+  "products to compare": [
+    "productos para comparar",
+    "produtos para comparar",
+    "Produkte zum Vergleich",
+    "prodotti da confrontare",
+    "karşılaştırılacak ürün",
+    "منتجات للمقارنة",
+    "उत्पाद तुलना के लिए",
+    "件待比较产品"
+  ],
+  "Temporary selection · up to 3": [
+    "Selección temporal · hasta 3",
+    "Seleção temporária · até 3",
+    "Temporäre Auswahl · bis zu 3",
+    "Selezione temporanea · fino a 3",
+    "Geçici seçim · en fazla 3",
+    "اختيار مؤقت · حتى 3",
+    "अस्थायी चयन · अधिकतम 3",
+    "临时选择 · 最多3件"
+  ],
+  "Compare": [
+    "Comparar",
+    "Comparar",
+    "Vergleichen",
+    "Confronta",
+    "Karşılaştır",
+    "مقارنة",
+    "तुलना करें",
+    "比较"
+  ],
+  "Online · unverified": [
+    "En línea · sin verificar",
+    "Online · não verificada",
+    "Online · ungeprüft",
+    "Online · non verificata",
+    "Yayında · doğrulanmamış",
+    "منشورة · غير موثّقة",
+    "ऑनलाइन · असत्यापित",
+    "已上线 · 未验证"
+  ],
+  "Draft": [
+    "Borrador",
+    "Rascunho",
+    "Entwurf",
+    "Bozza",
+    "Taslak",
+    "مسودة",
+    "प्रारूप",
+    "草稿"
+  ],
+  "Submitted for review": [
+    "Enviado a revisión",
+    "Enviado para revisão",
+    "Zur Prüfung eingereicht",
+    "Inviato per revisione",
+    "İncelemeye gönderildi",
+    "مقدّم للمراجعة",
+    "समीक्षा हेतु भेजा गया",
+    "已提交审核"
+  ],
+  "Under review": [
+    "En revisión",
+    "Em revisão",
+    "In Prüfung",
+    "In revisione",
+    "İnceleniyor",
+    "قيد المراجعة",
+    "समीक्षाधीन",
+    "审核中"
+  ],
+  "Information requested": [
+    "Información solicitada",
+    "Informações solicitadas",
+    "Informationen angefordert",
+    "Informazioni richieste",
+    "Bilgi istendi",
+    "معلومات مطلوبة",
+    "जानकारी माँगी गई",
+    "已要求补充信息"
+  ],
+  "Published": [
+    "Publicado",
+    "Publicado",
+    "Veröffentlicht",
+    "Pubblicato",
+    "Yayınlandı",
+    "منشور",
+    "प्रकाशित",
+    "已发布"
+  ],
+  "Review feedback available": [
+    "Comentarios de revisión disponibles",
+    "Parecer da revisão disponível",
+    "Prüfrückmeldung verfügbar",
+    "Esito della revisione disponibile",
+    "İnceleme geri bildirimi hazır",
+    "ملاحظات المراجعة متاحة",
+    "समीक्षा प्रतिक्रिया उपलब्ध",
+    "审核意见已就绪"
+  ],
+  "Sent to manufacturers": [
+    "Enviado a fabricantes",
+    "Enviado aos fabricantes",
+    "An Hersteller gesendet",
+    "Inviato ai produttori",
+    "Üreticilere gönderildi",
+    "مُرسل إلى المصنّعين",
+    "निर्माताओं को भेजा गया",
+    "已发送给制造商"
+  ],
+  "Quote selected": [
+    "Oferta seleccionada",
+    "Proposta selecionada",
+    "Angebot ausgewählt",
+    "Preventivo selezionato",
+    "Teklif seçildi",
+    "تم اختيار العرض",
+    "प्रस्ताव चुना गया",
+    "已选定报价"
+  ],
+  "Cancelled": [
+    "Cancelado",
+    "Cancelado",
+    "Storniert",
+    "Annullato",
+    "İptal edildi",
+    "ملغى",
+    "रद्द",
+    "已取消"
+  ],
+  "Back to my workspace": [
+    "Volver a mi espacio",
+    "Voltar ao meu espaço",
+    "Zurück zu meinem Arbeitsbereich",
+    "Torna al mio spazio",
+    "Çalışma alanıma dön",
+    "العودة إلى مساحة عملي",
+    "अपने कार्यक्षेत्र पर लौटें",
+    "返回我的工作区"
+  ],
+  "Your professional workspace": [
+    "Tu espacio profesional",
+    "O seu espaço profissional",
+    "Ihr beruflicher Arbeitsbereich",
+    "Il tuo spazio professionale",
+    "Profesyonel çalışma alanınız",
+    "مساحة عملك المهنية",
+    "आपका पेशेवर कार्यक्षेत्र",
+    "您的专业工作区"
+  ],
+  "Sign in to find your messages, saved products and requests.": [
+    "Inicia sesión para ver tus mensajes, productos guardados y solicitudes.",
+    "Inicie sessão para ver mensagens, produtos guardados e pedidos.",
+    "Melden Sie sich an, um Nachrichten, gespeicherte Produkte und Anfragen zu sehen.",
+    "Accedi per trovare messaggi, prodotti salvati e richieste.",
+    "Mesajlarınızı, kayıtlı ürünlerinizi ve taleplerinizi görmek için giriş yapın.",
+    "سجّل الدخول لعرض رسائلك ومنتجاتك المحفوظة وطلباتك.",
+    "अपने संदेश, सहेजे गए उत्पाद और अनुरोध देखने के लिए साइन इन करें।",
+    "登录以查看消息、收藏产品和询价。"
+  ],
+  "Sign in or create an account": [
+    "Iniciar sesión o crear una cuenta",
+    "Iniciar sessão ou criar conta",
+    "Anmelden oder Konto erstellen",
+    "Accedi o crea un account",
+    "Giriş yap veya hesap oluştur",
+    "تسجيل الدخول أو إنشاء حساب",
+    "साइन इन करें या खाता बनाएँ",
+    "登录或创建账户"
+  ],
+  "Your workspace could not be loaded.": [
+    "No se ha podido cargar tu espacio.",
+    "Não foi possível carregar o seu espaço.",
+    "Ihr Arbeitsbereich konnte nicht geladen werden.",
+    "Impossibile caricare il tuo spazio.",
+    "Çalışma alanınız yüklenemedi.",
+    "تعذّر تحميل مساحة عملك.",
+    "आपका कार्यक्षेत्र लोड नहीं हो सका।",
+    "无法加载您的工作区。"
+  ],
+  "Retry": [
+    "Reintentar",
+    "Tentar novamente",
+    "Erneut versuchen",
+    "Riprova",
+    "Yeniden dene",
+    "إعادة المحاولة",
+    "फिर कोशिश करें",
+    "重试"
+  ],
+  "Loading your workspace…": [
+    "Cargando tu espacio…",
+    "A carregar o seu espaço…",
+    "Arbeitsbereich wird geladen…",
+    "Caricamento dello spazio…",
+    "Çalışma alanınız yükleniyor…",
+    "جارٍ تحميل مساحة عملك…",
+    "आपका कार्यक्षेत्र लोड हो रहा है…",
+    "正在加载工作区…"
+  ],
+  "Messages": [
+    "Mensajes",
+    "Mensagens",
+    "Nachrichten",
+    "Messaggi",
+    "Mesajlar",
+    "الرسائل",
+    "संदेश",
+    "消息"
+  ],
+  "Your direct conversations with manufacturers.": [
+    "Tus conversaciones directas con fabricantes.",
+    "As suas conversas diretas com fabricantes.",
+    "Ihre direkten Gespräche mit Herstellern.",
+    "Le tue conversazioni dirette con i produttori.",
+    "Üreticilerle doğrudan yazışmalarınız.",
+    "محادثاتك المباشرة مع المصنّعين.",
+    "निर्माताओं के साथ आपकी सीधी बातचीत।",
+    "您与制造商的直接对话。"
+  ],
+  "products saved to your account.": [
+    "productos guardados en tu cuenta.",
+    "produtos guardados na sua conta.",
+    "in Ihrem Konto gespeicherte Produkte.",
+    "prodotti salvati nel tuo account.",
+    "hesabınıza kaydedilmiş ürün.",
+    "منتجات محفوظة في حسابك.",
+    "उत्पाद आपके खाते में सहेजे गए।",
+    "件产品已保存到您的账户。"
+  ],
+  "My requests": [
+    "Mis solicitudes",
+    "Os meus pedidos",
+    "Meine Anfragen",
+    "Le mie richieste",
+    "Taleplerim",
+    "طلباتي",
+    "मेरे अनुरोध",
+    "我的询价"
+  ],
+  "Drafts, sent enquiries and manufacturer replies.": [
+    "Borradores, solicitudes enviadas y respuestas de fabricantes.",
+    "Rascunhos, pedidos enviados e respostas dos fabricantes.",
+    "Entwürfe, versendete Anfragen und Herstellerantworten.",
+    "Bozze, richieste inviate e risposte dei produttori.",
+    "Taslaklar, gönderilen talepler ve üretici yanıtları.",
+    "المسودات والاستفسارات المرسلة وردود المصنّعين.",
+    "प्रारूप, भेजी गई पूछताछ और निर्माताओं के उत्तर।",
+    "草稿、已发送询价及制造商回复。"
+  ],
+  "My company": [
+    "Mi empresa",
+    "A minha empresa",
+    "Mein Unternehmen",
+    "La mia azienda",
+    "Şirketim",
+    "شركتي",
+    "मेरी कंपनी",
+    "我的企业"
+  ],
+  "Identity, locations and manufacturing capabilities.": [
+    "Identidad, ubicaciones y capacidades de fabricación.",
+    "Identidade, localizações e capacidades de fabrico.",
+    "Identität, Standorte und Fertigungskapazitäten.",
+    "Identità, sedi e capacità produttive.",
+    "Kimlik, konumlar ve üretim yetenekleri.",
+    "الهوية والمواقع والقدرات التصنيعية.",
+    "पहचान, स्थान और विनिर्माण क्षमताएँ।",
+    "企业信息、地点与生产能力。"
+  ],
+  "My products": [
+    "Mis productos",
+    "Os meus produtos",
+    "Meine Produkte",
+    "I miei prodotti",
+    "Ürünlerim",
+    "منتجاتي",
+    "मेरे उत्पाद",
+    "我的产品"
+  ],
+  "Product sheets, photos, quantities and technical information.": [
+    "Fichas de producto, fotos, cantidades e información técnica.",
+    "Fichas de produtos, fotografias, quantidades e informações técnicas.",
+    "Produktblätter, Fotos, Mengen und technische Informationen.",
+    "Schede prodotto, foto, quantità e informazioni tecniche.",
+    "Ürün bilgileri, fotoğraflar, miktarlar ve teknik bilgiler.",
+    "بطاقات المنتجات والصور والكميات والمعلومات التقنية.",
+    "उत्पाद विवरण, फ़ोटो, मात्रा और तकनीकी जानकारी।",
+    "产品资料、照片、数量及技术信息。"
+  ],
+  "MY GSL WORKSPACE": [
+    "MI ESPACIO GSL",
+    "O MEU ESPAÇO GSL",
+    "MEIN GSL-ARBEITSBEREICH",
+    "IL MIO SPAZIO GSL",
+    "GSL ÇALIŞMA ALANIM",
+    "مساحة عملي في GSL",
+    "मेरा GSL कार्यक्षेत्र",
+    "我的 GSL 工作区"
+  ],
+  "Hello": [
+    "Hola",
+    "Olá",
+    "Hallo",
+    "Ciao",
+    "Merhaba",
+    "مرحبًا",
+    "नमस्ते",
+    "您好"
+  ],
+  "Your industrial sourcing, in one place.": [
+    "Tu aprovisionamiento industrial, en un solo lugar.",
+    "O seu fornecimento industrial, num só lugar.",
+    "Ihre industrielle Beschaffung an einem Ort.",
+    "Il tuo approvvigionamento industriale, in un unico posto.",
+    "Endüstriyel tedarikiniz tek bir yerde.",
+    "كل احتياجات التوريد الصناعي في مكان واحد.",
+    "आपकी औद्योगिक सोर्सिंग, एक ही जगह।",
+    "一站式管理您的工业采购。"
+  ],
+  "Account settings": [
+    "Ajustes de cuenta",
+    "Definições da conta",
+    "Kontoeinstellungen",
+    "Impostazioni account",
+    "Hesap ayarları",
+    "إعدادات الحساب",
+    "खाता सेटिंग",
+    "账户设置"
+  ],
+  "Recent requests": [
+    "Solicitudes recientes",
+    "Pedidos recentes",
+    "Aktuelle Anfragen",
+    "Richieste recenti",
+    "Son talepler",
+    "الطلبات الأخيرة",
+    "हाल के अनुरोध",
+    "最近询价"
+  ],
+  "New request": [
+    "Nueva solicitud",
+    "Novo pedido",
+    "Neue Anfrage",
+    "Nuova richiesta",
+    "Yeni talep",
+    "طلب جديد",
+    "नया अनुरोध",
+    "新建询价"
+  ],
+  "Untitled draft": [
+    "Borrador sin título",
+    "Rascunho sem título",
+    "Unbenannter Entwurf",
+    "Bozza senza titolo",
+    "Başlıksız taslak",
+    "مسودة بلا عنوان",
+    "बिना शीर्षक का प्रारूप",
+    "未命名草稿"
+  ],
+  "Start with a guided questionnaire or a custom request.": [
+    "Empieza con un cuestionario guiado o una solicitud personalizada.",
+    "Comece com um questionário guiado ou um pedido personalizado.",
+    "Beginnen Sie mit einem geführten Fragebogen oder einer individuellen Anfrage.",
+    "Inizia con un questionario guidato o una richiesta personalizzata.",
+    "Rehberli anket veya özel taleple başlayın.",
+    "ابدأ باستبيان إرشادي أو طلب مخصّص.",
+    "निर्देशित प्रश्नावली या कस्टम अनुरोध से शुरू करें।",
+    "从引导问卷或自定义询价开始。"
+  ],
+  "Conversations": [
+    "Conversaciones",
+    "Conversas",
+    "Gespräche",
+    "Conversazioni",
+    "Görüşmeler",
+    "المحادثات",
+    "बातचीत",
+    "对话"
+  ],
+  "Open inbox": [
+    "Abrir mensajes",
+    "Abrir mensagens",
+    "Posteingang öffnen",
+    "Apri messaggi",
+    "Gelen kutusunu aç",
+    "فتح صندوق الرسائل",
+    "इनबॉक्स खोलें",
+    "打开收件箱"
+  ],
+  "Open a product to contact its manufacturer.": [
+    "Abre un producto para contactar con su fabricante.",
+    "Abra um produto para contactar o fabricante.",
+    "Öffnen Sie ein Produkt, um den Hersteller zu kontaktieren.",
+    "Apri un prodotto per contattare il produttore.",
+    "Üreticisine ulaşmak için bir ürünü açın.",
+    "افتح منتجًا للتواصل مع مصنّعه.",
+    "निर्माता से संपर्क करने के लिए उत्पाद खोलें।",
+    "打开产品页面即可联系制造商。"
+  ],
+  "Your product catalogue": [
+    "Tu catálogo de productos",
+    "O seu catálogo de produtos",
+    "Ihr Produktkatalog",
+    "Il tuo catalogo prodotti",
+    "Ürün kataloğunuz",
+    "كتالوج منتجاتك",
+    "आपकी उत्पाद सूची",
+    "您的产品目录"
+  ],
+  "products in your catalogue.": [
+    "productos en tu catálogo.",
+    "produtos no seu catálogo.",
+    "Produkte in Ihrem Katalog.",
+    "prodotti nel tuo catalogo.",
+    "kataloğunuzdaki ürün.",
+    "منتجات في كتالوجك.",
+    "उत्पाद आपकी सूची में।",
+    "件产品已加入目录。"
+  ],
+  "Add your product references in a dedicated workspace.": [
+    "Añade tus referencias en un espacio dedicado.",
+    "Adicione referências de produtos num espaço dedicado.",
+    "Fügen Sie Ihre Produkte in einem eigenen Arbeitsbereich hinzu.",
+    "Aggiungi i tuoi prodotti in uno spazio dedicato.",
+    "Ürünlerinizi özel çalışma alanında ekleyin.",
+    "أضف منتجاتك في مساحة عمل مخصّصة.",
+    "समर्पित कार्यक्षेत्र में अपने उत्पाद जोड़ें।",
+    "在专属工作区添加您的产品。"
+  ],
+  "Administration": [
+    "Administración",
+    "Administração",
+    "Verwaltung",
+    "Amministrazione",
+    "Yönetim",
+    "الإدارة",
+    "प्रशासन",
+    "管理后台"
+  ],
+  "Manage companies, contacts and platform activity.": [
+    "Gestionar empresas, contactos y actividad de la plataforma.",
+    "Gerir empresas, contactos e atividade da plataforma.",
+    "Unternehmen, Kontakte und Plattformaktivität verwalten.",
+    "Gestisci aziende, contatti e attività della piattaforma.",
+    "Şirketleri, iletişim taleplerini ve platform etkinliğini yönetin.",
+    "إدارة الشركات وجهات الاتصال ونشاط المنصة.",
+    "कंपनियाँ, संपर्क और प्लेटफ़ॉर्म गतिविधि प्रबंधित करें।",
+    "管理企业、联系人及平台活动。"
+  ],
+  "Drop a file here or browse": [
+    "Arrastra un archivo aquí o selecciónalo",
+    "Arraste um ficheiro para aqui ou procure",
+    "Datei hier ablegen oder auswählen",
+    "Trascina un file qui o selezionalo",
+    "Dosyayı buraya bırakın veya seçin",
+    "أفلت ملفًا هنا أو تصفّح",
+    "फ़ाइल यहाँ छोड़ें या चुनें",
+    "拖放文件到此处或浏览"
+  ],
+  "Drop images here or browse": [
+    "Arrastra imágenes aquí o selecciónalas",
+    "Arraste imagens para aqui ou procure",
+    "Bilder hier ablegen oder auswählen",
+    "Trascina immagini qui o selezionale",
+    "Görselleri buraya bırakın veya seçin",
+    "أفلت الصور هنا أو تصفّح",
+    "चित्र यहाँ छोड़ें या चुनें",
+    "拖放图片到此处或浏览"
+  ],
+  "Move photo left": [
+    "Mover foto a la izquierda",
+    "Mover fotografia para a esquerda",
+    "Foto nach links verschieben",
+    "Sposta foto a sinistra",
+    "Fotoğrafı sola taşı",
+    "نقل الصورة إلى اليسار",
+    "फ़ोटो बाएँ ले जाएँ",
+    "向左移动照片"
+  ],
+  "Move photo right": [
+    "Mover foto a la derecha",
+    "Mover fotografia para a direita",
+    "Foto nach rechts verschieben",
+    "Sposta foto a destra",
+    "Fotoğrafı sağa taşı",
+    "نقل الصورة إلى اليمين",
+    "फ़ोटो दाएँ ले जाएँ",
+    "向右移动照片"
+  ],
+  "Invalid file type. Choose PDF, JPEG, PNG or WebP.": [
+    "Tipo de archivo no válido. Elige PDF, JPEG, PNG o WebP.",
+    "Tipo de ficheiro inválido. Escolha PDF, JPEG, PNG ou WebP.",
+    "Ungültiger Dateityp. Wählen Sie PDF, JPEG, PNG oder WebP.",
+    "Tipo di file non valido. Scegli PDF, JPEG, PNG o WebP.",
+    "Geçersiz dosya türü. PDF, JPEG, PNG veya WebP seçin.",
+    "نوع الملف غير صالح. اختر PDF أو JPEG أو PNG أو WebP.",
+    "अमान्य फ़ाइल प्रकार। PDF, JPEG, PNG या WebP चुनें।",
+    "文件类型无效。请选择 PDF、JPEG、PNG 或 WebP。"
+  ],
+  "Choose a valid JPEG, PNG or WebP image.": [
+    "Elige una imagen JPEG, PNG o WebP válida.",
+    "Escolha uma imagem JPEG, PNG ou WebP válida.",
+    "Wählen Sie ein gültiges JPEG-, PNG- oder WebP-Bild.",
+    "Scegli un'immagine JPEG, PNG o WebP valida.",
+    "Geçerli bir JPEG, PNG veya WebP görseli seçin.",
+    "اختر صورة صالحة بتنسيق JPEG أو PNG أو WebP.",
+    "मान्य JPEG, PNG या WebP चित्र चुनें।",
+    "请选择有效的 JPEG、PNG 或 WebP 图片。"
+  ]
+}

@@ -1,0 +1,3972 @@
+{
+  "Changes requested": [
+    "Cambios solicitados",
+    "Alterações solicitadas",
+    "Änderungen angefordert",
+    "Modifiche richieste",
+    "Değişiklik istendi",
+    "تعديلات مطلوبة",
+    "बदलाव का अनुरोध किया गया",
+    "需要修改"
+  ],
+  "Review completed": [
+    "Revisión completada",
+    "Análise concluída",
+    "Prüfung abgeschlossen",
+    "Verifica completata",
+    "İnceleme tamamlandı",
+    "اكتملت المراجعة",
+    "समीक्षा पूरी हुई",
+    "审核已完成"
+  ],
+  "Publication declined": [
+    "Publicación rechazada",
+    "Publicação recusada",
+    "Veröffentlichung abgelehnt",
+    "Pubblicazione rifiutata",
+    "Yayın reddedildi",
+    "رُفض النشر",
+    "प्रकाशन अस्वीकृत",
+    "发布被拒绝"
+  ],
+  "An image has not finished uploading or is unavailable. Remove it or upload it again.": [
+    "Una imagen no ha terminado de cargarse o no está disponible. Elimínela o vuelva a subirla.",
+    "Uma imagem não terminou de carregar ou está indisponível. Remova-a ou envie-a novamente.",
+    "Ein Bild wurde nicht vollständig hochgeladen oder ist nicht verfügbar. Entfernen Sie es oder laden Sie es erneut hoch.",
+    "Un'immagine non è stata caricata completamente o non è disponibile. Rimuovila o caricala di nuovo.",
+    "Bir görselin yüklenmesi tamamlanmadı veya görsel kullanılamıyor. Kaldırın ya da yeniden yükleyin.",
+    "لم يكتمل رفع إحدى الصور أو أنها غير متاحة. أزلها أو ارفعها مجددًا.",
+    "किसी चित्र का अपलोड अधूरा है या वह उपलब्ध नहीं है। उसे हटाएँ या दोबारा अपलोड करें।",
+    "有图片尚未上传完成或无法使用。请移除或重新上传。"
+  ],
+  "One logo and five cover photos maximum.": [
+    "Un logotipo y cinco fotos de portada como máximo.",
+    "No máximo um logótipo e cinco fotos de capa.",
+    "Höchstens ein Logo und fünf Titelbilder.",
+    "Al massimo un logo e cinque foto di copertina.",
+    "En fazla bir logo ve beş kapak fotoğrafı.",
+    "شعار واحد وخمس صور غلاف كحد أقصى.",
+    "अधिकतम एक लोगो और पाँच कवर फ़ोटो।",
+    "最多一个标志和五张封面照片。"
+  ],
+  "Publish your company first from My company, then publish your products.": [
+    "Publique primero su empresa desde Mi empresa y después sus productos.",
+    "Publique primeiro a sua empresa em Minha empresa e depois os seus produtos.",
+    "Veröffentlichen Sie zuerst Ihr Unternehmen unter Mein Unternehmen und danach Ihre Produkte.",
+    "Pubblica prima l'azienda da La mia azienda, poi i prodotti.",
+    "Önce Şirketim bölümünden şirketinizi, ardından ürünlerinizi yayınlayın.",
+    "انشر شركتك أولًا من قسم شركتي، ثم انشر منتجاتك.",
+    "पहले मेरी कंपनी से अपनी कंपनी प्रकाशित करें, फिर अपने उत्पाद प्रकाशित करें।",
+    "请先在“我的企业”中发布企业，再发布产品。"
+  ],
+  "The file could not be attached. It is still selected: try again.": [
+    "No se pudo adjuntar el archivo. Sigue seleccionado: inténtelo de nuevo.",
+    "Não foi possível anexar o ficheiro. Continua selecionado: tente novamente.",
+    "Die Datei konnte nicht angehängt werden. Sie ist weiterhin ausgewählt: Versuchen Sie es erneut.",
+    "Impossibile allegare il file. È ancora selezionato: riprova.",
+    "Dosya eklenemedi. Hâlâ seçili; yeniden deneyin.",
+    "تعذر إرفاق الملف. ما زال محددًا؛ حاول مجددًا.",
+    "फ़ाइल संलग्न नहीं हो सकी। वह अभी भी चुनी हुई है: दोबारा प्रयास करें।",
+    "无法附加文件。文件仍处于选中状态，请重试。"
+  ],
+  "This file is empty. Select another file.": [
+    "Este archivo está vacío. Seleccione otro.",
+    "Este ficheiro está vazio. Selecione outro.",
+    "Diese Datei ist leer. Wählen Sie eine andere Datei.",
+    "Questo file è vuoto. Selezionane un altro.",
+    "Bu dosya boş. Başka bir dosya seçin.",
+    "هذا الملف فارغ. اختر ملفًا آخر.",
+    "यह फ़ाइल खाली है। दूसरी फ़ाइल चुनें।",
+    "此文件为空。请选择其他文件。"
+  ],
+  "Check your phone number. Include its international calling code, or select its country.": [
+    "Compruebe su teléfono. Incluya el prefijo internacional o seleccione su país.",
+    "Verifique o telefone. Inclua o indicativo internacional ou selecione o país.",
+    "Prüfen Sie Ihre Telefonnummer. Geben Sie die internationale Vorwahl an oder wählen Sie das Land.",
+    "Controlla il numero di telefono. Includi il prefisso internazionale o seleziona il paese.",
+    "Telefon numaranızı kontrol edin. Uluslararası kodu ekleyin veya ülkesini seçin.",
+    "تحقق من رقم الهاتف. أضف رمز الاتصال الدولي أو اختر البلد.",
+    "अपना फ़ोन नंबर जाँचें। अंतरराष्ट्रीय कॉलिंग कोड जोड़ें या उसका देश चुनें।",
+    "请检查电话号码。填写国际区号或选择所属国家。"
+  ],
+  "Finish or cancel pending file uploads before submitting.": [
+    "Complete o cancele las cargas pendientes antes de enviar.",
+    "Conclua ou cancele os envios de ficheiros pendentes antes de submeter.",
+    "Schließen Sie ausstehende Datei-Uploads ab oder brechen Sie sie vor dem Einreichen ab.",
+    "Completa o annulla i caricamenti in sospeso prima dell'invio.",
+    "Göndermeden önce bekleyen dosya yüklemelerini tamamlayın veya iptal edin.",
+    "أكمل عمليات رفع الملفات المعلقة أو ألغها قبل الإرسال.",
+    "जमा करने से पहले लंबित फ़ाइल अपलोड पूरे करें या रद्द करें।",
+    "提交前请完成或取消待处理的文件上传。"
+  ],
+  "You are offline. Changes remain on this page. Saving resumes when connected.": [
+    "Está sin conexión. Los cambios permanecen en esta página. El guardado se reanudará al conectarse.",
+    "Está sem ligação. As alterações permanecem nesta página. A gravação será retomada quando voltar a ligar-se.",
+    "Sie sind offline. Änderungen bleiben auf dieser Seite. Das Speichern wird bei bestehender Verbindung fortgesetzt.",
+    "Sei offline. Le modifiche restano in questa pagina. Il salvataggio riprenderà quando tornerai online.",
+    "Çevrimdışısınız. Değişiklikler bu sayfada kalır. Bağlantı kurulunca kaydetme sürer.",
+    "أنت غير متصل. تبقى التغييرات في هذه الصفحة، ويُستأنف الحفظ عند الاتصال.",
+    "आप ऑफ़लाइन हैं। बदलाव इस पेज पर बने रहेंगे। कनेक्शन मिलने पर सहेजना फिर शुरू होगा।",
+    "您已离线。更改保留在此页面，联网后将继续保存。"
+  ],
+  "Sign in to save your company profile.": [
+    "Inicie sesión para guardar el perfil de su empresa.",
+    "Inicie sessão para guardar o perfil da empresa.",
+    "Melden Sie sich an, um Ihr Unternehmensprofil zu speichern.",
+    "Accedi per salvare il profilo aziendale.",
+    "Şirket profilinizi kaydetmek için giriş yapın.",
+    "سجّل الدخول لحفظ ملف شركتك.",
+    "कंपनी प्रोफ़ाइल सहेजने के लिए साइन इन करें।",
+    "登录后即可保存企业资料。"
+  ],
+  "This file changed in another tab. Reload before continuing.": [
+    "Este expediente cambió en otra pestaña. Recargue antes de continuar.",
+    "Este processo foi alterado noutro separador. Recarregue antes de continuar.",
+    "Dieser Antrag wurde in einem anderen Tab geändert. Laden Sie ihn vor dem Fortfahren neu.",
+    "Questa pratica è stata modificata in un'altra scheda. Ricarica prima di continuare.",
+    "Bu başvuru başka bir sekmede değiştirildi. Devam etmeden önce yeniden yükleyin.",
+    "عُدّل هذا الملف في علامة تبويب أخرى. أعد التحميل قبل المتابعة.",
+    "यह विवरण दूसरे टैब में बदला गया है। आगे बढ़ने से पहले दोबारा लोड करें।",
+    "此申请已在其他标签页中修改。请重新加载后继续。"
+  ],
+  "This file is being reviewed. Reopen it before editing.": [
+    "Este expediente está en revisión. Reábralo antes de editarlo.",
+    "Este processo está em análise. Reabra-o antes de o editar.",
+    "Dieser Antrag wird geprüft. Öffnen Sie ihn vor dem Bearbeiten erneut.",
+    "Questa pratica è in fase di verifica. Riaprila prima di modificarla.",
+    "Bu başvuru inceleniyor. Düzenlemeden önce yeniden açın.",
+    "هذا الملف قيد المراجعة. أعد فتحه قبل تعديله.",
+    "यह आवेदन समीक्षाधीन है। संपादन से पहले इसे फिर से खोलें।",
+    "此申请正在审核中。编辑前请重新打开。"
+  ],
+  "Check your email, website, dates and positive numeric values.": [
+    "Compruebe el correo, el sitio web, las fechas y los valores numéricos positivos.",
+    "Verifique o email, o site, as datas e os valores numéricos positivos.",
+    "Prüfen Sie E-Mail, Website, Datumsangaben und positive Zahlenwerte.",
+    "Controlla email, sito web, date e valori numerici positivi.",
+    "E-posta, web sitesi, tarihler ve pozitif sayısal değerleri kontrol edin.",
+    "تحقق من البريد الإلكتروني والموقع والتواريخ والقيم الرقمية الموجبة.",
+    "ईमेल, वेबसाइट, तारीखें और धनात्मक संख्यात्मक मान जाँचें।",
+    "请检查邮箱、网站、日期及正数数值。"
+  ],
+  "Complete the items listed below before submitting.": [
+    "Complete los elementos indicados abajo antes de enviar.",
+    "Preencha os itens indicados abaixo antes de submeter.",
+    "Vervollständigen Sie vor dem Einreichen die unten aufgeführten Angaben.",
+    "Completa gli elementi elencati sotto prima dell'invio.",
+    "Göndermeden önce aşağıdaki öğeleri tamamlayın.",
+    "أكمل العناصر المذكورة أدناه قبل الإرسال.",
+    "जमा करने से पहले नीचे दिए गए बिंदु पूरे करें।",
+    "提交前请完成下列项目。"
+  ],
+  "The file must be smaller than 3 MB.": [
+    "El archivo debe ser menor de 3 MB.",
+    "O ficheiro deve ter menos de 3 MB.",
+    "Die Datei muss kleiner als 3 MB sein.",
+    "Il file deve essere inferiore a 3 MB.",
+    "Dosya 3 MB'den küçük olmalıdır.",
+    "يجب أن يكون حجم الملف أقل من 3 ميغابايت.",
+    "फ़ाइल 3 MB से छोटी होनी चाहिए।",
+    "文件须小于3 MB。"
+  ],
+  "Use PDF, JPEG, PNG or WebP. A logo or photo must be an image.": [
+    "Use PDF, JPEG, PNG o WebP. Un logotipo o una foto debe ser una imagen.",
+    "Use PDF, JPEG, PNG ou WebP. Um logótipo ou foto deve ser uma imagem.",
+    "Verwenden Sie PDF, JPEG, PNG oder WebP. Logos und Fotos müssen Bilddateien sein.",
+    "Usa PDF, JPEG, PNG o WebP. Un logo o una foto deve essere un'immagine.",
+    "PDF, JPEG, PNG veya WebP kullanın. Logo veya fotoğraf bir görsel olmalıdır.",
+    "استخدم PDF أو JPEG أو PNG أو WebP. يجب أن يكون الشعار أو الصورة ملف صورة.",
+    "PDF, JPEG, PNG या WebP इस्तेमाल करें। लोगो या फ़ोटो चित्र फ़ाइल होनी चाहिए।",
+    "请使用PDF、JPEG、PNG或WebP格式。标志和照片必须为图片。"
+  ],
+  "Maximum 40 files per application.": [
+    "Máximo 40 archivos por solicitud.",
+    "No máximo 40 ficheiros por candidatura.",
+    "Höchstens 40 Dateien je Antrag.",
+    "Massimo 40 file per richiesta.",
+    "Başvuru başına en fazla 40 dosya.",
+    "40 ملفًا كحد أقصى لكل طلب.",
+    "हर आवेदन में अधिकतम 40 फ़ाइलें।",
+    "每份申请最多40个文件。"
+  ],
+  "Save your draft before uploading files.": [
+    "Guarde el borrador antes de subir archivos.",
+    "Guarde o rascunho antes de enviar ficheiros.",
+    "Speichern Sie Ihren Entwurf vor dem Hochladen von Dateien.",
+    "Salva la bozza prima di caricare i file.",
+    "Dosya yüklemeden önce taslağınızı kaydedin.",
+    "احفظ المسودة قبل رفع الملفات.",
+    "फ़ाइलें अपलोड करने से पहले ड्राफ़्ट सहेजें।",
+    "上传文件前请保存草稿。"
+  ],
+  "Saving is unavailable. Your current changes are still on this page. Try again.": [
+    "No se puede guardar ahora. Sus cambios siguen en esta página. Inténtelo de nuevo.",
+    "Não é possível guardar agora. As alterações continuam nesta página. Tente novamente.",
+    "Speichern ist derzeit nicht möglich. Ihre Änderungen bleiben auf dieser Seite. Versuchen Sie es erneut.",
+    "Salvataggio non disponibile. Le modifiche restano in questa pagina. Riprova.",
+    "Kaydetme şu anda kullanılamıyor. Değişiklikleriniz bu sayfada duruyor. Yeniden deneyin.",
+    "الحفظ غير متاح. تبقى تغييراتك في هذه الصفحة. حاول مجددًا.",
+    "अभी सहेजना उपलब्ध नहीं है। आपके बदलाव इस पेज पर मौजूद हैं। दोबारा प्रयास करें।",
+    "暂时无法保存。更改仍保留在此页面，请重试。"
+  ],
+  "Select": [
+    "Seleccionar",
+    "Selecionar",
+    "Auswählen",
+    "Seleziona",
+    "Seçin",
+    "اختر",
+    "चुनें",
+    "选择"
+  ],
+  "Your product catalogue is updated online. Products kept as private drafts are not displayed.": [
+    "Su catálogo se ha actualizado en línea. Los productos guardados como borradores privados no se muestran.",
+    "O catálogo foi atualizado online. Os produtos mantidos como rascunhos privados não são apresentados.",
+    "Ihr Produktkatalog wurde online aktualisiert. Produkte als private Entwürfe werden nicht angezeigt.",
+    "Il catalogo online è aggiornato. I prodotti mantenuti come bozze private non vengono mostrati.",
+    "Ürün kataloğunuz çevrimiçi güncellendi. Özel taslak olarak tutulan ürünler gösterilmez.",
+    "تم تحديث كتالوج منتجاتك على الإنترنت. لا تظهر المنتجات المحفوظة كمسودات خاصة.",
+    "आपकी ऑनलाइन उत्पाद सूची अपडेट हो गई है। निजी ड्राफ़्ट वाले उत्पाद नहीं दिखाए जाते।",
+    "线上产品目录已更新。保留为私密草稿的产品不会展示。"
+  ],
+  "Your company is online, marked as unverified. You can complete it later.": [
+    "Su empresa está en línea, marcada como no verificada. Puede completarla después.",
+    "A empresa está online, assinalada como não verificada. Pode completá-la mais tarde.",
+    "Ihr Unternehmen ist online und als ungeprüft markiert. Sie können das Profil später vervollständigen.",
+    "L'azienda è online, contrassegnata come non verificata. Puoi completarla in seguito.",
+    "Şirketiniz doğrulanmamış olarak yayında. Bilgileri daha sonra tamamlayabilirsiniz.",
+    "شركتك منشورة بعلامة غير متحقق منها. يمكنك استكمالها لاحقًا.",
+    "आपकी कंपनी ऑनलाइन है और असत्यापित चिह्नित है। आप विवरण बाद में पूरा कर सकते हैं।",
+    "企业已上线，标记为“未验证”。您可以稍后完善。"
+  ],
+  "Application received. You can follow its review from your account.": [
+    "Solicitud recibida. Puede seguir la revisión desde su cuenta.",
+    "Candidatura recebida. Pode acompanhar a análise na sua conta.",
+    "Antrag eingegangen. Sie können die Prüfung in Ihrem Konto verfolgen.",
+    "Richiesta ricevuta. Puoi seguirne la verifica dal tuo account.",
+    "Başvuru alındı. İncelemeyi hesabınızdan takip edebilirsiniz.",
+    "تم استلام الطلب. يمكنك متابعة مراجعته من حسابك.",
+    "आवेदन प्राप्त हुआ। आप अपने खाते से समीक्षा की स्थिति देख सकते हैं।",
+    "申请已收到。可在账户中查看审核进度。"
+  ],
+  "Your file is open for changes.": [
+    "Su expediente está abierto para modificaciones.",
+    "O seu processo está aberto para alterações.",
+    "Ihr Antrag kann jetzt bearbeitet werden.",
+    "La pratica è aperta alle modifiche.",
+    "Başvurunuz düzenlemeye açıldı.",
+    "ملفك مفتوح للتعديل.",
+    "आपका आवेदन बदलाव के लिए खुला है।",
+    "申请已开放编辑。"
+  ],
+  "Draft saved in your account.": [
+    "Borrador guardado en su cuenta.",
+    "Rascunho guardado na sua conta.",
+    "Entwurf in Ihrem Konto gespeichert.",
+    "Bozza salvata nel tuo account.",
+    "Taslak hesabınıza kaydedildi.",
+    "تم حفظ المسودة في حسابك.",
+    "ड्राफ़्ट आपके खाते में सहेजा गया।",
+    "草稿已保存到账户。"
+  ],
+  "File attached. You can open it below to check its contents. Authenticity is reviewed separately by GSL.": [
+    "Archivo adjunto. Puede abrirlo abajo para comprobar su contenido. GSL revisa su autenticidad por separado.",
+    "Ficheiro anexado. Pode abri-lo abaixo para verificar o conteúdo. A autenticidade é analisada separadamente pela GSL.",
+    "Datei angehängt. Öffnen Sie sie unten, um den Inhalt zu prüfen. GSL prüft die Echtheit gesondert.",
+    "File allegato. Puoi aprirlo sotto per controllarne il contenuto. GSL ne verifica l'autenticità separatamente.",
+    "Dosya eklendi. İçeriğini kontrol etmek için aşağıdan açabilirsiniz. Gerçekliği GSL tarafından ayrıca incelenir.",
+    "تم إرفاق الملف. يمكنك فتحه أدناه لفحص محتواه. تراجع GSL صحته بشكل منفصل.",
+    "फ़ाइल संलग्न हुई। सामग्री जाँचने के लिए नीचे खोलें। GSL इसकी प्रामाणिकता की अलग समीक्षा करता है।",
+    "文件已附加。可在下方打开检查内容。GSL将另行审核真实性。"
+  ],
+  "Remove this file from your application?": [
+    "¿Eliminar este archivo de su solicitud?",
+    "Remover este ficheiro da candidatura?",
+    "Diese Datei aus Ihrem Antrag entfernen?",
+    "Rimuovere questo file dalla richiesta?",
+    "Bu dosya başvurunuzdan kaldırılsın mı?",
+    "هل تريد إزالة هذا الملف من طلبك؟",
+    "इस फ़ाइल को आवेदन से हटाएँ?",
+    "从申请中移除此文件？"
+  ],
+  "Company logo": [
+    "Logotipo de la empresa",
+    "Logótipo da empresa",
+    "Firmenlogo",
+    "Logo aziendale",
+    "Şirket logosu",
+    "شعار الشركة",
+    "कंपनी का लोगो",
+    "企业标志"
+  ],
+  "Factory photo": [
+    "Foto de fábrica",
+    "Foto da fábrica",
+    "Fabrikfoto",
+    "Foto dello stabilimento",
+    "Fabrika fotoğrafı",
+    "صورة المصنع",
+    "कारखाने की फ़ोटो",
+    "工厂照片"
+  ],
+  "Product photo": [
+    "Foto del producto",
+    "Foto do produto",
+    "Produktfoto",
+    "Foto del prodotto",
+    "Ürün fotoğrafı",
+    "صورة المنتج",
+    "उत्पाद की फ़ोटो",
+    "产品照片"
+  ],
+  "Registration evidence": [
+    "Justificante de registro",
+    "Comprovativo de registo",
+    "Registrierungsnachweis",
+    "Documento di registrazione",
+    "Tescil belgesi",
+    "إثبات التسجيل",
+    "पंजीकरण का प्रमाण",
+    "注册证明"
+  ],
+  "Certificate or test report": [
+    "Certificado o informe de ensayo",
+    "Certificado ou relatório de ensaio",
+    "Zertifikat oder Prüfbericht",
+    "Certificato o rapporto di prova",
+    "Sertifika veya test raporu",
+    "شهادة أو تقرير اختبار",
+    "प्रमाणपत्र या परीक्षण रिपोर्ट",
+    "证书或测试报告"
+  ],
+  "Declaration / technical document": [
+    "Declaración / documento técnico",
+    "Declaração / documento técnico",
+    "Erklärung / technisches Dokument",
+    "Dichiarazione / documento tecnico",
+    "Beyan / teknik belge",
+    "إقرار / مستند فني",
+    "घोषणा / तकनीकी दस्तावेज़",
+    "声明／技术文档"
+  ],
+  "Loading your company workspace…": [
+    "Cargando su espacio de empresa…",
+    "A carregar a área da empresa…",
+    "Ihr Unternehmensbereich wird geladen…",
+    "Caricamento dell'area aziendale…",
+    "Şirket alanınız yükleniyor…",
+    "جارٍ تحميل مساحة شركتك…",
+    "आपकी कंपनी का कार्यक्षेत्र लोड हो रहा है…",
+    "正在加载企业工作区…"
+  ],
+  "MY PRODUCTS": [
+    "MIS PRODUCTOS",
+    "OS MEUS PRODUTOS",
+    "MEINE PRODUKTE",
+    "I MIEI PRODOTTI",
+    "ÜRÜNLERİM",
+    "منتجاتي",
+    "मेरे उत्पाद",
+    "我的产品"
+  ],
+  "Create your product catalogue.": [
+    "Cree su catálogo de productos.",
+    "Crie o catálogo dos seus produtos.",
+    "Erstellen Sie Ihren Produktkatalog.",
+    "Crea il tuo catalogo prodotti.",
+    "Ürün kataloğunuzu oluşturun.",
+    "أنشئ كتالوج منتجاتك.",
+    "अपनी उत्पाद सूची बनाएँ।",
+    "创建您的产品目录。"
+  ],
+  "Add product sheets, photos and specifications in a dedicated workspace. Your company profile is managed separately.": [
+    "Añada fichas, fotos y especificaciones en un espacio dedicado. El perfil de empresa se gestiona por separado.",
+    "Adicione fichas, fotos e especificações numa área dedicada. O perfil da empresa é gerido separadamente.",
+    "Fügen Sie Produktseiten, Fotos und Spezifikationen in einem eigenen Bereich hinzu. Ihr Unternehmensprofil wird separat verwaltet.",
+    "Aggiungi schede prodotto, foto e specifiche in un'area dedicata. Il profilo aziendale si gestisce separatamente.",
+    "Ayrı bir alanda ürün sayfaları, fotoğraflar ve teknik özellikler ekleyin. Şirket profiliniz ayrıca yönetilir.",
+    "أضف صفحات المنتجات والصور والمواصفات في مساحة مخصصة. يُدار ملف شركتك بشكل منفصل.",
+    "एक अलग कार्यक्षेत्र में उत्पाद विवरण, फ़ोटो और विशेषताएँ जोड़ें। कंपनी प्रोफ़ाइल अलग से प्रबंधित होती है।",
+    "在专用工作区添加产品资料、照片和规格。企业资料单独管理。"
+  ],
+  "SUPPLIER ACCESS": [
+    "ACCESO PARA PROVEEDORES",
+    "ACESSO DE FORNECEDORES",
+    "LIEFERANTENZUGANG",
+    "ACCESSO FORNITORI",
+    "TEDARİKÇİ GİRİŞİ",
+    "دخول الموردين",
+    "आपूर्तिकर्ता प्रवेश",
+    "供应商入口"
+  ],
+  "Build your industrial profile.": [
+    "Cree su perfil industrial.",
+    "Crie o seu perfil industrial.",
+    "Erstellen Sie Ihr Industrieprofil.",
+    "Crea il tuo profilo industriale.",
+    "Endüstriyel profilinizi oluşturun.",
+    "أنشئ ملفك الصناعي.",
+    "अपनी औद्योगिक प्रोफ़ाइल बनाएँ।",
+    "创建您的工业企业资料。"
+  ],
+  "Show what you manufacture, where you produce and how you work. Save your progress and prepare an evidence-backed profile for review.": [
+    "Muestre qué fabrica, dónde produce y cómo trabaja. Guarde sus avances y prepare un perfil con justificantes para su revisión.",
+    "Mostre o que fabrica, onde produz e como trabalha. Guarde o progresso e prepare um perfil com comprovativos para análise.",
+    "Zeigen Sie, was und wo Sie produzieren und wie Sie arbeiten. Speichern Sie Ihren Fortschritt und bereiten Sie ein belegtes Profil zur Prüfung vor.",
+    "Mostra cosa produci, dove e come lavori. Salva i progressi e prepara un profilo documentato per la verifica.",
+    "Ne ürettiğinizi, nerede üretim yaptığınızı ve nasıl çalıştığınızı gösterin. İlerlemenizi kaydedip belgelerle desteklenen bir profili incelemeye hazırlayın.",
+    "اعرض ما تصنعه وأين تنتج وكيف تعمل. احفظ تقدمك وجهّز ملفًا مدعومًا بالمستندات للمراجعة.",
+    "दिखाएँ कि आप क्या बनाते हैं, कहाँ उत्पादन करते हैं और कैसे काम करते हैं। प्रगति सहेजें और समीक्षा के लिए प्रमाण सहित प्रोफ़ाइल तैयार करें।",
+    "展示生产内容、地点和工作方式。保存进度，准备有证明材料支持的资料供审核。"
+  ],
+  "Your company": [
+    "Su empresa",
+    "A sua empresa",
+    "Ihr Unternehmen",
+    "La tua azienda",
+    "Şirketiniz",
+    "شركتك",
+    "आपकी कंपनी",
+    "您的企业"
+  ],
+  "Identity, local registration and production sites.": [
+    "Identidad, registro local y centros de producción.",
+    "Identidade, registo local e instalações de produção.",
+    "Identität, lokale Registrierung und Produktionsstandorte.",
+    "Identità, registrazione locale e siti produttivi.",
+    "Kimlik, yerel tescil ve üretim tesisleri.",
+    "الهوية والتسجيل المحلي ومواقع الإنتاج.",
+    "पहचान, स्थानीय पंजीकरण और उत्पादन स्थल।",
+    "企业身份、本地注册和生产场所。"
+  ],
+  "Your capabilities": [
+    "Sus capacidades",
+    "As suas capacidades",
+    "Ihre Fertigungsmöglichkeiten",
+    "Le tue capacità",
+    "Yetenekleriniz",
+    "قدراتك",
+    "आपकी क्षमताएँ",
+    "您的生产能力"
+  ],
+  "Processes, materials, equipment and product references.": [
+    "Procesos, materiales, equipos y referencias de productos.",
+    "Processos, materiais, equipamentos e referências de produtos.",
+    "Verfahren, Materialien, Maschinen und Produktreferenzen.",
+    "Processi, materiali, attrezzature e riferimenti dei prodotti.",
+    "Süreçler, malzemeler, ekipmanlar ve ürün referansları.",
+    "العمليات والمواد والمعدات ومراجع المنتجات.",
+    "प्रक्रियाएँ, सामग्री, उपकरण और उत्पाद संदर्भ।",
+    "工艺、材料、设备和产品型号。"
+  ],
+  "Your evidence": [
+    "Sus justificantes",
+    "Os seus comprovativos",
+    "Ihre Nachweise",
+    "I tuoi documenti",
+    "Belgeleriniz",
+    "مستنداتك الداعمة",
+    "आपके प्रमाण",
+    "您的证明材料"
+  ],
+  "Private documents, precise scopes and validity dates.": [
+    "Documentos privados, alcances precisos y fechas de validez.",
+    "Documentos privados, âmbitos precisos e datas de validade.",
+    "Private Dokumente, genaue Geltungsbereiche und Gültigkeitsdaten.",
+    "Documenti privati, ambiti precisi e date di validità.",
+    "Özel belgeler, kesin kapsamlar ve geçerlilik tarihleri.",
+    "مستندات خاصة ونطاقات دقيقة وتواريخ صلاحية.",
+    "निजी दस्तावेज़, सटीक दायरे और वैधता की तारीखें।",
+    "私密文件、准确的适用范围和有效期。"
+  ],
+  "Create my supplier account": [
+    "Crear mi cuenta de proveedor",
+    "Criar a minha conta de fornecedor",
+    "Mein Lieferantenkonto erstellen",
+    "Crea il mio account fornitore",
+    "Tedarikçi hesabımı oluştur",
+    "إنشاء حساب المورد الخاص بي",
+    "मेरा आपूर्तिकर्ता खाता बनाएँ",
+    "创建供应商账户"
+  ],
+  "Continue my application": [
+    "Continuar mi solicitud",
+    "Continuar a minha candidatura",
+    "Meinen Antrag fortsetzen",
+    "Continua la mia richiesta",
+    "Başvuruma devam et",
+    "متابعة طلبي",
+    "मेरा आवेदन जारी रखें",
+    "继续我的申请"
+  ],
+  "You can prepare your profile before collecting every document. Nothing is automatically published.": [
+    "Puede preparar su perfil antes de reunir todos los documentos. Nada se publica automáticamente.",
+    "Pode preparar o perfil antes de reunir todos os documentos. Nada é publicado automaticamente.",
+    "Sie können Ihr Profil vorbereiten, bevor alle Dokumente vorliegen. Nichts wird automatisch veröffentlicht.",
+    "Puoi preparare il profilo prima di raccogliere tutti i documenti. Nulla viene pubblicato automaticamente.",
+    "Tüm belgeleri toplamadan profilinizi hazırlayabilirsiniz. Hiçbir şey otomatik olarak yayınlanmaz.",
+    "يمكنك تجهيز ملفك قبل جمع جميع المستندات. لا يُنشر شيء تلقائيًا.",
+    "सभी दस्तावेज़ इकट्ठा करने से पहले प्रोफ़ाइल तैयार कर सकते हैं। कुछ भी अपने आप प्रकाशित नहीं होता।",
+    "可在收齐文件前准备资料。任何内容都不会自动发布。"
+  ],
+  "SUPPLIER WORKSPACE": [
+    "ESPACIO DEL PROVEEDOR",
+    "ÁREA DO FORNECEDOR",
+    "LIEFERANTENBEREICH",
+    "AREA FORNITORI",
+    "TEDARİKÇİ ALANI",
+    "مساحة المورد",
+    "आपूर्तिकर्ता कार्यक्षेत्र",
+    "供应商工作区"
+  ],
+  "Manage your product catalogue, separately from your company profile.": [
+    "Gestione su catálogo de productos por separado del perfil de empresa.",
+    "Gira o catálogo de produtos separadamente do perfil da empresa.",
+    "Verwalten Sie Ihren Produktkatalog getrennt vom Unternehmensprofil.",
+    "Gestisci il catalogo prodotti separatamente dal profilo aziendale.",
+    "Ürün kataloğunuzu şirket profilinizden ayrı yönetin.",
+    "أدر كتالوج منتجاتك بشكل منفصل عن ملف شركتك.",
+    "उत्पाद सूची को कंपनी प्रोफ़ाइल से अलग प्रबंधित करें।",
+    "独立于企业资料管理产品目录。"
+  ],
+  "Company identity and manufacturing capabilities.": [
+    "Identidad de empresa y capacidades de fabricación.",
+    "Identidade da empresa e capacidades de fabrico.",
+    "Unternehmensidentität und Fertigungsmöglichkeiten.",
+    "Identità aziendale e capacità produttive.",
+    "Şirket kimliği ve üretim yetenekleri.",
+    "هوية الشركة وقدرات التصنيع.",
+    "कंपनी की पहचान और विनिर्माण क्षमताएँ।",
+    "企业身份和制造能力。"
+  ],
+  "Online": [
+    "En línea",
+    "Online",
+    "Online",
+    "Online",
+    "Yayında",
+    "منشور",
+    "ऑनलाइन",
+    "已上线"
+  ],
+  "Saving…": [
+    "Guardando…",
+    "A guardar…",
+    "Wird gespeichert…",
+    "Salvataggio…",
+    "Kaydediliyor…",
+    "جارٍ الحفظ…",
+    "सहेजा जा रहा है…",
+    "正在保存…"
+  ],
+  "Unsaved changes": [
+    "Cambios sin guardar",
+    "Alterações não guardadas",
+    "Ungespeicherte Änderungen",
+    "Modifiche non salvate",
+    "Kaydedilmemiş değişiklikler",
+    "تغييرات غير محفوظة",
+    "बिना सहेजे बदलाव",
+    "尚未保存的更改"
+  ],
+  "Saved on ": [
+    "Guardado el ",
+    "Guardado em ",
+    "Gespeichert am ",
+    "Salvato il ",
+    "Kaydedildi: ",
+    "حُفظ في ",
+    "इस तारीख को सहेजा गया: ",
+    "保存于 "
+  ],
+  "Not saved yet": [
+    "Aún no guardado",
+    "Ainda não guardado",
+    "Noch nicht gespeichert",
+    "Non ancora salvato",
+    "Henüz kaydedilmedi",
+    "لم يُحفظ بعد",
+    "अभी सहेजा नहीं गया",
+    "尚未保存"
+  ],
+  "Manufacturer workspace": [
+    "Espacio del fabricante",
+    "Área do fabricante",
+    "Herstellerbereich",
+    "Area del produttore",
+    "Üretici alanı",
+    "مساحة المصنّع",
+    "निर्माता कार्यक्षेत्र",
+    "制造商工作区"
+  ],
+  "sections ready": [
+    "secciones listas",
+    "secções prontas",
+    "Abschnitte bereit",
+    "sezioni pronte",
+    "bölüm hazır",
+    "أقسام جاهزة",
+    "अनुभाग तैयार",
+    "个部分已完成"
+  ],
+  "Completeness does not mean verification.": [
+    "Estar completo no significa estar verificado.",
+    "Estar completo não significa estar verificado.",
+    "Vollständigkeit bedeutet keine Verifizierung.",
+    "La completezza non equivale a una verifica.",
+    "Eksiksiz olmak, doğrulanmış olmak değildir.",
+    "اكتمال المعلومات لا يعني التحقق منها.",
+    "विवरण पूरा होने का मतलब सत्यापन नहीं है।",
+    "填写完整并不代表已通过验证。"
+  ],
+  "Application steps": [
+    "Pasos de la solicitud",
+    "Etapas da candidatura",
+    "Antragsschritte",
+    "Passaggi della richiesta",
+    "Başvuru adımları",
+    "خطوات الطلب",
+    "आवेदन के चरण",
+    "申请步骤"
+  ],
+  "Documents (optional)": [
+    "Documentos (opcionales)",
+    "Documentos (opcionais)",
+    "Dokumente (optional)",
+    "Documenti (facoltativi)",
+    "Belgeler (isteğe bağlı)",
+    "مستندات (اختيارية)",
+    "दस्तावेज़ (वैकल्पिक)",
+    "文件（选填）"
+  ],
+  "Review & publish": [
+    "Revisar y publicar",
+    "Rever e publicar",
+    "Prüfen und veröffentlichen",
+    "Rivedi e pubblica",
+    "Kontrol et ve yayınla",
+    "مراجعة ونشر",
+    "समीक्षा करके प्रकाशित करें",
+    "检查并发布"
+  ],
+  "Your draft and documents remain private during preparation and review.": [
+    "Su borrador y documentos permanecen privados durante la preparación y revisión.",
+    "O rascunho e os documentos permanecem privados durante a preparação e análise.",
+    "Ihr Entwurf und Ihre Dokumente bleiben während Vorbereitung und Prüfung privat.",
+    "La bozza e i documenti restano privati durante la preparazione e la verifica.",
+    "Taslağınız ve belgeleriniz hazırlık ve inceleme sırasında gizli kalır.",
+    "تبقى مسودتك ومستنداتك خاصة أثناء الإعداد والمراجعة.",
+    "तैयारी और समीक्षा के दौरान आपका ड्राफ़्ट और दस्तावेज़ निजी रहते हैं।",
+    "准备和审核期间，草稿及文件始终为私密状态。"
+  ],
+  "Back to my account": [
+    "Volver a mi cuenta",
+    "Voltar à minha conta",
+    "Zurück zu meinem Konto",
+    "Torna al mio account",
+    "Hesabıma dön",
+    "العودة إلى حسابي",
+    "मेरे खाते पर लौटें",
+    "返回我的账户"
+  ],
+  "Your published version stays online": [
+    "Su versión publicada sigue en línea",
+    "A versão publicada continua online",
+    "Ihre veröffentlichte Version bleibt online",
+    "La versione pubblicata resta online",
+    "Yayınlanan sürümünüz yayında kalır",
+    "تبقى نسختك المنشورة متاحة",
+    "आपका प्रकाशित संस्करण ऑनलाइन रहता है",
+    "已发布版本保持在线"
+  ],
+  "Start with the essentials": [
+    "Empiece por lo esencial",
+    "Comece pelo essencial",
+    "Beginnen Sie mit dem Wesentlichen",
+    "Inizia dalle informazioni essenziali",
+    "Temel bilgilerle başlayın",
+    "ابدأ بالأساسيات",
+    "ज़रूरी विवरण से शुरू करें",
+    "从基本信息开始"
+  ],
+  "Create product sheets, save drafts and add photos or technical details. Each product stays linked to your company. Publish immediately with the essentials, without mandatory documents.": [
+    "Cree fichas, guarde borradores y añada fotos o detalles técnicos. Cada producto sigue vinculado a su empresa. Publique de inmediato con lo esencial, sin documentos obligatorios.",
+    "Crie fichas, guarde rascunhos e adicione fotos ou detalhes técnicos. Cada produto fica ligado à empresa. Publique de imediato com o essencial, sem documentos obrigatórios.",
+    "Erstellen Sie Produktseiten, speichern Sie Entwürfe und ergänzen Sie Fotos oder technische Details. Jedes Produkt bleibt Ihrem Unternehmen zugeordnet. Veröffentlichen Sie sofort mit den Grundangaben, ohne Pflichtdokumente.",
+    "Crea schede prodotto, salva bozze e aggiungi foto o dettagli tecnici. Ogni prodotto resta collegato all'azienda. Pubblica subito con i dati essenziali, senza documenti obbligatori.",
+    "Ürün sayfaları oluşturun, taslakları kaydedin, fotoğraf veya teknik detaylar ekleyin. Her ürün şirketinize bağlı kalır. Zorunlu belge olmadan temel bilgilerle hemen yayınlayın.",
+    "أنشئ صفحات المنتجات واحفظ المسودات وأضف الصور أو التفاصيل الفنية. يبقى كل منتج مرتبطًا بشركتك. انشر فورًا بالمعلومات الأساسية دون مستندات إلزامية.",
+    "उत्पाद विवरण बनाएँ, ड्राफ़्ट सहेजें और फ़ोटो या तकनीकी जानकारी जोड़ें। हर उत्पाद कंपनी से जुड़ा रहता है। ज़रूरी विवरण के साथ तुरंत प्रकाशित करें; दस्तावेज़ अनिवार्य नहीं हैं।",
+    "创建产品资料、保存草稿并添加照片或技术信息。产品始终关联企业。填写基本信息即可立即发布，无需必交文件。"
+  ],
+  "Add or correct company and product information in your private draft. The current listing stays visible until you publish your changes.": [
+    "Añada o corrija datos de empresa y productos en su borrador privado. La ficha actual sigue visible hasta que publique los cambios.",
+    "Adicione ou corrija dados da empresa e dos produtos no rascunho privado. A ficha atual mantém-se visível até publicar as alterações.",
+    "Ergänzen oder korrigieren Sie Unternehmens- und Produktangaben im privaten Entwurf. Der aktuelle Eintrag bleibt bis zur Veröffentlichung Ihrer Änderungen sichtbar.",
+    "Aggiungi o correggi i dati aziendali e dei prodotti nella bozza privata. La scheda attuale resta visibile finché non pubblichi le modifiche.",
+    "Şirket ve ürün bilgilerini özel taslağınızda ekleyin veya düzeltin. Değişiklikleri yayınlayana kadar mevcut ilan görünür kalır.",
+    "أضف معلومات الشركة والمنتجات أو صححها في مسودتك الخاصة. تبقى الصفحة الحالية ظاهرة حتى تنشر التغييرات.",
+    "निजी ड्राफ़्ट में कंपनी और उत्पाद की जानकारी जोड़ें या सुधारें। बदलाव प्रकाशित करने तक मौजूदा विवरण दिखाई देता रहेगा।",
+    "在私密草稿中添加或修改企业及产品信息。发布更改之前，当前资料保持可见。"
+  ],
+  "Company name, country, city, activity, a short presentation and a contact are enough to start. Products, photos, registration details and manufacturing capabilities can follow. The company can be published immediately as unverified.": [
+    "Para empezar basta con nombre, país, ciudad, actividad, una breve presentación y un contacto. Puede añadir productos, fotos, registro y capacidades después. La empresa se puede publicar de inmediato como no verificada.",
+    "Para começar bastam nome, país, cidade, atividade, uma breve apresentação e um contacto. Produtos, fotos, registo e capacidades podem ser adicionados depois. A empresa pode ser publicada de imediato como não verificada.",
+    "Für den Anfang reichen Name, Land, Stadt, Tätigkeit, eine kurze Vorstellung und ein Kontakt. Produkte, Fotos, Registrierungsangaben und Fertigungsmöglichkeiten können folgen. Das Unternehmen kann sofort als ungeprüft veröffentlicht werden.",
+    "Per iniziare bastano nome, paese, città, attività, breve presentazione e un contatto. Prodotti, foto, dati di registrazione e capacità produttive si possono aggiungere dopo. L'azienda può essere pubblicata subito come non verificata.",
+    "Başlamak için şirket adı, ülke, şehir, faaliyet, kısa tanıtım ve iletişim kişisi yeterlidir. Ürünler, fotoğraflar, tescil bilgileri ve üretim yetenekleri sonra eklenebilir. Şirket hemen doğrulanmamış olarak yayınlanabilir.",
+    "يكفي للبدء اسم الشركة والبلد والمدينة والنشاط ونبذة قصيرة وجهة اتصال. يمكن إضافة المنتجات والصور والتسجيل وقدرات التصنيع لاحقًا. يمكن نشر الشركة فورًا باعتبارها غير متحقق منها.",
+    "शुरू करने के लिए कंपनी का नाम, देश, शहर, गतिविधि, संक्षिप्त परिचय और संपर्क पर्याप्त हैं। उत्पाद, फ़ोटो, पंजीकरण और विनिर्माण विवरण बाद में जोड़ें। कंपनी तुरंत असत्यापित रूप में प्रकाशित हो सकती है।",
+    "只需企业名称、国家、城市、业务、简短介绍及联系人即可开始。产品、照片、注册信息和制造能力可稍后添加。企业可立即以“未验证”状态发布。"
+  ],
+  "View published profile": [
+    "Ver perfil publicado",
+    "Ver perfil publicado",
+    "Veröffentlichtes Profil ansehen",
+    "Vedi il profilo pubblicato",
+    "Yayınlanan profili gör",
+    "عرض الملف المنشور",
+    "प्रकाशित प्रोफ़ाइल देखें",
+    "查看已发布资料"
+  ],
+  "Review and publish": [
+    "Revisar y publicar",
+    "Rever e publicar",
+    "Prüfen und veröffentlichen",
+    "Rivedi e pubblica",
+    "Kontrol et ve yayınla",
+    "مراجعة ونشر",
+    "समीक्षा करके प्रकाशित करें",
+    "检查并发布"
+  ],
+  "Publish your company before listing its products.": [
+    "Publique su empresa antes de sus productos.",
+    "Publique a empresa antes dos seus produtos.",
+    "Veröffentlichen Sie Ihr Unternehmen vor seinen Produkten.",
+    "Pubblica l'azienda prima dei suoi prodotti.",
+    "Ürünleri listelemeden önce şirketinizi yayınlayın.",
+    "انشر شركتك قبل إدراج منتجاتها.",
+    "उत्पाद सूचीबद्ध करने से पहले कंपनी प्रकाशित करें।",
+    "发布产品前请先发布企业。"
+  ],
+  "Go to My company": [
+    "Ir a Mi empresa",
+    "Ir para Minha empresa",
+    "Zu Mein Unternehmen",
+    "Vai a La mia azienda",
+    "Şirketim bölümüne git",
+    "الانتقال إلى شركتي",
+    "मेरी कंपनी पर जाएँ",
+    "前往“我的企业”"
+  ],
+  "Incomplete file operations": [
+    "Operaciones de archivos incompletas",
+    "Operações de ficheiros incompletas",
+    "Unvollständige Dateivorgänge",
+    "Operazioni sui file incomplete",
+    "Tamamlanmamış dosya işlemleri",
+    "عمليات ملفات غير مكتملة",
+    "अधूरे फ़ाइल कार्य",
+    "未完成的文件操作"
+  ],
+  "These transfers are not included in your submission. You can continue and retry them when editing your profile later.": [
+    "Estas transferencias no se incluyen en su envío. Puede continuar y reintentarlas al editar su perfil más tarde.",
+    "Estas transferências não são incluídas na submissão. Pode continuar e tentar novamente ao editar o perfil mais tarde.",
+    "Diese Übertragungen sind nicht Teil Ihrer Einreichung. Sie können fortfahren und sie später beim Bearbeiten Ihres Profils erneut versuchen.",
+    "Questi trasferimenti non sono inclusi nell'invio. Puoi continuare e riprovarli quando modificherai il profilo.",
+    "Bu aktarımlar başvurunuza dahil değildir. Devam edip profilinizi daha sonra düzenlerken yeniden deneyebilirsiniz.",
+    "لا تُدرج هذه التحويلات في طلبك. يمكنك المتابعة وإعادة المحاولة عند تعديل ملفك لاحقًا.",
+    "ये अपलोड आपके आवेदन में शामिल नहीं हैं। आगे बढ़ सकते हैं और बाद में प्रोफ़ाइल संपादित करते समय फिर प्रयास कर सकते हैं।",
+    "这些传输未包含在提交内容中。您可以继续，并在稍后编辑资料时重试。"
+  ],
+  "Cancel this transfer": [
+    "Cancelar esta transferencia",
+    "Cancelar esta transferência",
+    "Diese Übertragung abbrechen",
+    "Annulla questo trasferimento",
+    "Bu aktarımı iptal et",
+    "إلغاء هذا النقل",
+    "यह अपलोड रद्द करें",
+    "取消此次传输"
+  ],
+  "Reload the server version? Unsaved changes on this page will be discarded.": [
+    "¿Recargar la versión del servidor? Se perderán los cambios sin guardar de esta página.",
+    "Recarregar a versão do servidor? As alterações não guardadas nesta página serão descartadas.",
+    "Serverversion neu laden? Ungespeicherte Änderungen auf dieser Seite werden verworfen.",
+    "Ricaricare la versione del server? Le modifiche non salvate in questa pagina verranno perse.",
+    "Sunucu sürümü yeniden yüklensin mi? Bu sayfadaki kaydedilmemiş değişiklikler silinir.",
+    "هل تريد إعادة تحميل نسخة الخادم؟ ستُفقد التغييرات غير المحفوظة في هذه الصفحة.",
+    "सर्वर वाला संस्करण फिर लोड करें? इस पेज के बिना सहेजे बदलाव हट जाएँगे।",
+    "重新加载服务器版本？此页面未保存的更改将被丢弃。"
+  ],
+  "Reload server version": [
+    "Recargar versión del servidor",
+    "Recarregar versão do servidor",
+    "Serverversion neu laden",
+    "Ricarica la versione del server",
+    "Sunucu sürümünü yeniden yükle",
+    "إعادة تحميل نسخة الخادم",
+    "सर्वर संस्करण फिर लोड करें",
+    "重新加载服务器版本"
+  ],
+  "Feedback on your application": [
+    "Comentarios sobre su solicitud",
+    "Comentários sobre a candidatura",
+    "Rückmeldung zu Ihrem Antrag",
+    "Riscontro sulla tua richiesta",
+    "Başvurunuzla ilgili geri bildirim",
+    "ملاحظات بشأن طلبك",
+    "आपके आवेदन पर प्रतिक्रिया",
+    "申请反馈"
+  ],
+  "You can read your submitted information below. GSL reviews identity and supporting documents before any publication decision. No review deadline is guaranteed.": [
+    "Puede consultar abajo la información enviada. GSL revisa la identidad y los justificantes antes de decidir la publicación. No se garantiza ningún plazo de revisión.",
+    "Pode consultar abaixo os dados submetidos. A GSL analisa a identidade e os comprovativos antes de decidir a publicação. Não é garantido um prazo de análise.",
+    "Sie können Ihre eingereichten Angaben unten lesen. GSL prüft Identität und Nachweise vor einer Veröffentlichungsentscheidung. Eine Prüfungsfrist wird nicht garantiert.",
+    "Puoi leggere sotto le informazioni inviate. GSL verifica l'identità e i documenti prima di decidere sulla pubblicazione. Non è garantito un termine di verifica.",
+    "Gönderdiğiniz bilgileri aşağıda okuyabilirsiniz. GSL yayın kararından önce kimlik ve destekleyici belgeleri inceler. İnceleme süresi garanti edilmez.",
+    "يمكنك قراءة المعلومات المقدمة أدناه. تراجع GSL الهوية والمستندات قبل اتخاذ قرار النشر. لا توجد مهلة مضمونة للمراجعة.",
+    "जमा की गई जानकारी नीचे पढ़ सकते हैं। प्रकाशन का निर्णय लेने से पहले GSL पहचान और प्रमाणों की समीक्षा करता है। समीक्षा की कोई निश्चित समयसीमा नहीं है।",
+    "可在下方查看已提交信息。GSL会在决定发布前审核身份和证明材料，不保证审核完成期限。"
+  ],
+  "The reason is shown above. Contact GSL if you need this decision reviewed.": [
+    "El motivo se indica arriba. Contacte con GSL si necesita que se revise esta decisión.",
+    "O motivo é apresentado acima. Contacte a GSL se precisar de uma revisão desta decisão.",
+    "Der Grund steht oben. Kontaktieren Sie GSL, wenn diese Entscheidung überprüft werden soll.",
+    "La motivazione è indicata sopra. Contatta GSL se desideri una revisione della decisione.",
+    "Gerekçe yukarıda gösterilir. Kararın yeniden incelenmesini istiyorsanız GSL ile iletişime geçin.",
+    "السبب موضح أعلاه. تواصل مع GSL إذا أردت إعادة النظر في هذا القرار.",
+    "कारण ऊपर दिया गया है। निर्णय की दोबारा समीक्षा के लिए GSL से संपर्क करें।",
+    "原因已在上方列出。如需复核此决定，请联系GSL。"
+  ],
+  "Edit and complete": [
+    "Editar y completar",
+    "Editar e completar",
+    "Bearbeiten und vervollständigen",
+    "Modifica e completa",
+    "Düzenle ve tamamla",
+    "تعديل واستكمال",
+    "संपादित करके पूरा करें",
+    "编辑并完善"
+  ],
+  "Company identity": [
+    "Identidad de la empresa",
+    "Identidade da empresa",
+    "Unternehmensidentität",
+    "Identità aziendale",
+    "Şirket kimliği",
+    "هوية الشركة",
+    "कंपनी की पहचान",
+    "企业身份"
+  ],
+  "Use the information shown on your official registry extract. Fields marked * are needed for submission.": [
+    "Use los datos de su extracto oficial del registro. Los campos con * son necesarios para enviar.",
+    "Use os dados do extrato oficial do registo. Os campos com * são necessários para submeter.",
+    "Verwenden Sie die Angaben Ihres offiziellen Registerauszugs. Mit * markierte Felder sind für die Einreichung erforderlich.",
+    "Usa le informazioni dell'estratto ufficiale del registro. I campi con * sono necessari per l'invio.",
+    "Resmî sicil belgenizdeki bilgileri kullanın. * işaretli alanlar gönderim için gereklidir.",
+    "استخدم المعلومات الواردة في مستخرج السجل الرسمي. الحقول ذات * مطلوبة للإرسال.",
+    "आधिकारिक पंजीकरण दस्तावेज़ की जानकारी इस्तेमाल करें। * वाले फ़ील्ड जमा करने के लिए आवश्यक हैं।",
+    "请使用官方登记摘录上的信息。标有*的字段为提交必填项。"
+  ],
+  "Registered name": [
+    "Razón social",
+    "Denominação social",
+    "Eingetragener Name",
+    "Ragione sociale",
+    "Tescilli unvan",
+    "الاسم المسجل",
+    "पंजीकृत नाम",
+    "注册名称"
+  ],
+  "Trading name": [
+    "Nombre comercial",
+    "Nome comercial",
+    "Handelsname",
+    "Nome commerciale",
+    "Ticari ad",
+    "الاسم التجاري",
+    "व्यापारिक नाम",
+    "商号"
+  ],
+  "Country of registration *": [
+    "País de registro *",
+    "País de registo *",
+    "Registrierungsland *",
+    "Paese di registrazione *",
+    "Tescil ülkesi *",
+    "بلد التسجيل *",
+    "पंजीकरण का देश *",
+    "注册国家 *"
+  ],
+  "Changing country clears the current registration identifiers. Save the current version before continuing if needed. Continue?": [
+    "Cambiar el país borra los identificadores actuales de registro. Guarde la versión actual antes si lo necesita. ¿Continuar?",
+    "Mudar o país apaga os identificadores de registo atuais. Guarde a versão atual antes, se necessário. Continuar?",
+    "Ein Länderwechsel löscht die aktuellen Registrierungskennungen. Speichern Sie bei Bedarf vorher die aktuelle Version. Fortfahren?",
+    "Cambiare paese cancella gli identificativi di registrazione attuali. Se necessario, salva prima la versione attuale. Continuare?",
+    "Ülkeyi değiştirmek mevcut tescil numaralarını siler. Gerekirse önce mevcut sürümü kaydedin. Devam edilsin mi?",
+    "يؤدي تغيير البلد إلى مسح معرّفات التسجيل الحالية. احفظ النسخة الحالية أولًا إن لزم. هل تريد المتابعة؟",
+    "देश बदलने पर मौजूदा पंजीकरण पहचान संख्याएँ मिट जाएँगी। ज़रूरत हो तो पहले मौजूदा संस्करण सहेजें। जारी रखें?",
+    "更改国家将清除现有注册标识。如有需要，请先保存当前版本。是否继续？"
+  ],
+  "Entity type": [
+    "Tipo de entidad",
+    "Tipo de entidade",
+    "Unternehmensart",
+    "Tipo di entità",
+    "Kuruluş türü",
+    "نوع الكيان",
+    "संस्था का प्रकार",
+    "主体类型"
+  ],
+  "Changing entity type clears the current identifiers. Continue?": [
+    "Cambiar el tipo de entidad borra los identificadores actuales. ¿Continuar?",
+    "Mudar o tipo de entidade apaga os identificadores atuais. Continuar?",
+    "Ein Wechsel der Unternehmensart löscht die aktuellen Kennungen. Fortfahren?",
+    "Cambiare tipo di entità cancella gli identificativi attuali. Continuare?",
+    "Kuruluş türünü değiştirmek mevcut kimlik numaralarını siler. Devam edilsin mi?",
+    "يؤدي تغيير نوع الكيان إلى مسح المعرّفات الحالية. هل تريد المتابعة؟",
+    "संस्था का प्रकार बदलने पर मौजूदा पहचान संख्याएँ मिट जाएँगी। जारी रखें?",
+    "更改主体类型将清除现有标识。是否继续？"
+  ],
+  "Company": [
+    "Empresa",
+    "Empresa",
+    "Unternehmen",
+    "Azienda",
+    "Şirket",
+    "شركة",
+    "कंपनी",
+    "公司"
+  ],
+  "Sole trader": [
+    "Empresario individual",
+    "Empresário em nome individual",
+    "Einzelunternehmen",
+    "Ditta individuale",
+    "Şahıs işletmesi",
+    "مؤسسة فردية",
+    "एकल स्वामी व्यवसाय",
+    "个体经营者"
+  ],
+  "Other legal entity": [
+    "Otra entidad jurídica",
+    "Outra entidade jurídica",
+    "Andere Rechtsperson",
+    "Altra entità giuridica",
+    "Diğer tüzel kişilik",
+    "كيان قانوني آخر",
+    "अन्य कानूनी संस्था",
+    "其他法律实体"
+  ],
+  "Local legal form": [
+    "Forma jurídica local",
+    "Forma jurídica local",
+    "Lokale Rechtsform",
+    "Forma giuridica locale",
+    "Yerel hukuki yapı",
+    "الشكل القانوني المحلي",
+    "स्थानीय कानूनी स्वरूप",
+    "当地法律形式"
+  ],
+  "As written on your registry extract.": [
+    "Tal como figura en el extracto del registro.",
+    "Tal como consta no extrato do registo.",
+    "Wie im Registerauszug angegeben.",
+    "Come indicato nell'estratto del registro.",
+    "Sicil belgenizde yazıldığı şekilde.",
+    "كما ورد في مستخرج السجل.",
+    "पंजीकरण दस्तावेज़ में जैसा लिखा है।",
+    "与登记摘录一致。"
+  ],
+  "Main activity": [
+    "Actividad principal",
+    "Atividade principal",
+    "Haupttätigkeit",
+    "Attività principale",
+    "Ana faaliyet",
+    "النشاط الرئيسي",
+    "मुख्य गतिविधि",
+    "主营业务"
+  ],
+  "Manufacturer": [
+    "Fabricante",
+    "Fabricante",
+    "Hersteller",
+    "Produttore",
+    "Üretici",
+    "مصنّع",
+    "निर्माता",
+    "制造商"
+  ],
+  "Industrial subcontractor": [
+    "Subcontratista industrial",
+    "Subcontratante industrial",
+    "Industrieller Zulieferer",
+    "Subfornitore industriale",
+    "Endüstriyel alt yüklenici",
+    "مقاول صناعي من الباطن",
+    "औद्योगिक उपठेकेदार",
+    "工业分包商"
+  ],
+  "Distributor": [
+    "Distribuidor",
+    "Distribuidor",
+    "Vertriebspartner",
+    "Distributore",
+    "Distribütör",
+    "موزّع",
+    "वितरक",
+    "经销商"
+  ],
+  "Intermediary": [
+    "Intermediario",
+    "Intermediário",
+    "Vermittler",
+    "Intermediario",
+    "Aracı",
+    "وسيط",
+    "मध्यस्थ",
+    "中介"
+  ],
+  "Engineering / services": [
+    "Ingeniería / servicios",
+    "Engenharia / serviços",
+    "Ingenieurwesen / Dienstleistungen",
+    "Ingegneria / servizi",
+    "Mühendislik / hizmetler",
+    "هندسة / خدمات",
+    "इंजीनियरिंग / सेवाएँ",
+    "工程／服务"
+  ],
+  "Website or professional profile": [
+    "Sitio web o perfil profesional",
+    "Site ou perfil profissional",
+    "Website oder Unternehmensprofil",
+    "Sito web o profilo professionale",
+    "Web sitesi veya profesyonel profil",
+    "الموقع الإلكتروني أو الملف المهني",
+    "वेबसाइट या व्यावसायिक प्रोफ़ाइल",
+    "网站或专业平台资料"
+  ],
+  "A public page showing your business, products and contact details.": [
+    "Una página pública con su actividad, productos y datos de contacto.",
+    "Uma página pública com a atividade, os produtos e os contactos da empresa.",
+    "Eine öffentliche Seite mit Ihrem Unternehmen, Ihren Produkten und Kontaktdaten.",
+    "Una pagina pubblica con attività, prodotti e recapiti.",
+    "İşletmenizi, ürünlerinizi ve iletişim bilgilerinizi gösteren herkese açık bir sayfa.",
+    "صفحة عامة تعرض نشاطك ومنتجاتك وبيانات الاتصال.",
+    "आपके व्यवसाय, उत्पादों और संपर्क विवरण को दिखाने वाला सार्वजनिक पेज।",
+    "展示业务、产品和联系方式的公开页面。"
+  ],
+  "Founded in": [
+    "Año de fundación",
+    "Ano de fundação",
+    "Gründungsjahr",
+    "Anno di fondazione",
+    "Kuruluş yılı",
+    "سنة التأسيس",
+    "स्थापना वर्ष",
+    "成立年份"
+  ],
+  "Employees": [
+    "Empleados",
+    "Colaboradores",
+    "Beschäftigte",
+    "Dipendenti",
+    "Çalışanlar",
+    "الموظفون",
+    "कर्मचारी",
+    "员工人数"
+  ],
+  "Company presentation": [
+    "Presentación de la empresa",
+    "Apresentação da empresa",
+    "Unternehmensvorstellung",
+    "Presentazione aziendale",
+    "Şirket tanıtımı",
+    "نبذة عن الشركة",
+    "कंपनी का परिचय",
+    "企业介绍"
+  ],
+  "30 to 5,000 characters. Describe actual production, customers served and experience.": [
+    "De 30 a 5.000 caracteres. Describa la producción real, los clientes atendidos y la experiencia.",
+    "De 30 a 5.000 caracteres. Descreva a produção real, os clientes servidos e a experiência.",
+    "30 bis 5.000 Zeichen. Beschreiben Sie tatsächliche Produktion, Kunden und Erfahrung.",
+    "Da 30 a 5.000 caratteri. Descrivi produzione effettiva, clienti serviti ed esperienza.",
+    "30–5.000 karakter. Gerçek üretimi, hizmet verilen müşterileri ve deneyimi açıklayın.",
+    "من 30 إلى 5,000 حرف. صف الإنتاج الفعلي والعملاء والخبرة.",
+    "30 से 5,000 अक्षर। वास्तविक उत्पादन, ग्राहकों और अनुभव का वर्णन करें।",
+    "30至5,000字符。请描述实际生产情况、服务客户和经验。"
+  ],
+  "Local registration": [
+    "Registro local",
+    "Registo local",
+    "Lokale Registrierung",
+    "Registrazione locale",
+    "Yerel tescil",
+    "التسجيل المحلي",
+    "स्थानीय पंजीकरण",
+    "当地注册"
+  ],
+  "Country-specific review": [
+    "Revisión específica por país",
+    "Análise específica por país",
+    "Länderspezifische Prüfung",
+    "Verifica specifica per paese",
+    "Ülkeye özel inceleme",
+    "مراجعة حسب البلد",
+    "देश के अनुसार समीक्षा",
+    "按国家审核"
+  ],
+  "Open official registry": [
+    "Abrir registro oficial",
+    "Abrir registo oficial",
+    "Offizielles Register öffnen",
+    "Apri il registro ufficiale",
+    "Resmî sicili aç",
+    "فتح السجل الرسمي",
+    "आधिकारिक रजिस्टर खोलें",
+    "打开官方登记网站"
+  ],
+  "GSL document requirements, not an exhaustive list of legal obligations.": [
+    "Requisitos documentales de GSL, no una lista exhaustiva de obligaciones legales.",
+    "Requisitos documentais da GSL, não uma lista exaustiva de obrigações legais.",
+    "Dokumentenanforderungen von GSL, keine vollständige Liste rechtlicher Pflichten.",
+    "Requisiti documentali GSL, non un elenco completo degli obblighi legali.",
+    "GSL belge gereklilikleridir; tüm yasal yükümlülükleri kapsamaz.",
+    "متطلبات مستندات GSL وليست قائمة شاملة بالالتزامات القانونية.",
+    "ये GSL की दस्तावेज़ आवश्यकताएँ हैं, कानूनी दायित्वों की पूरी सूची नहीं।",
+    "这是GSL的文件要求，并非全部法律义务清单。"
+  ],
+  "Registered office": [
+    "Domicilio social",
+    "Sede social",
+    "Eingetragener Sitz",
+    "Sede legale",
+    "Kayıtlı merkez",
+    "المقر المسجل",
+    "पंजीकृत कार्यालय",
+    "注册地址"
+  ],
+  "The legal address can differ from the production site.": [
+    "La dirección legal puede diferir del centro de producción.",
+    "A morada legal pode ser diferente do local de produção.",
+    "Der rechtliche Sitz kann vom Produktionsstandort abweichen.",
+    "La sede legale può essere diversa dal sito produttivo.",
+    "Yasal adres üretim tesisinden farklı olabilir.",
+    "قد يختلف العنوان القانوني عن موقع الإنتاج.",
+    "कानूनी पता उत्पादन स्थल से अलग हो सकता है।",
+    "法定地址可与生产场所不同。"
+  ],
+  "Street address": [
+    "Dirección",
+    "Morada",
+    "Straße und Hausnummer",
+    "Indirizzo",
+    "Açık adres",
+    "عنوان الشارع",
+    "सड़क का पता",
+    "街道地址"
+  ],
+  "City": [
+    "Ciudad",
+    "Cidade",
+    "Stadt",
+    "Città",
+    "Şehir",
+    "المدينة",
+    "शहर",
+    "城市"
+  ],
+  "Postal code": [
+    "Código postal",
+    "Código postal",
+    "Postleitzahl",
+    "Codice postale",
+    "Posta kodu",
+    "الرمز البريدي",
+    "पिन कोड",
+    "邮政编码"
+  ],
+  "Region / province": [
+    "Región / provincia",
+    "Região / província",
+    "Region / Bundesland",
+    "Regione / provincia",
+    "Bölge / il",
+    "المنطقة / المحافظة",
+    "क्षेत्र / प्रांत",
+    "地区／省份"
+  ],
+  "Address displayed in profile preview": [
+    "Dirección mostrada en la vista previa",
+    "Morada apresentada na pré-visualização",
+    "In der Profilvorschau angezeigte Adresse",
+    "Indirizzo mostrato nell'anteprima",
+    "Profil önizlemesinde gösterilen adres",
+    "العنوان المعروض في معاينة الملف",
+    "प्रोफ़ाइल पूर्वावलोकन में दिखाया जाने वाला पता",
+    "预览中显示的地址"
+  ],
+  "City and country only": [
+    "Solo ciudad y país",
+    "Apenas cidade e país",
+    "Nur Stadt und Land",
+    "Solo città e paese",
+    "Yalnızca şehir ve ülke",
+    "المدينة والبلد فقط",
+    "सिर्फ़ शहर और देश",
+    "仅城市和国家"
+  ],
+  "Full business address": [
+    "Dirección comercial completa",
+    "Morada comercial completa",
+    "Vollständige Geschäftsadresse",
+    "Indirizzo aziendale completo",
+    "Tam iş adresi",
+    "عنوان العمل الكامل",
+    "पूरा व्यावसायिक पता",
+    "完整营业地址"
+  ],
+  "Manufacturing capabilities": [
+    "Capacidades de fabricación",
+    "Capacidades de fabrico",
+    "Fertigungsmöglichkeiten",
+    "Capacità produttive",
+    "Üretim yetenekleri",
+    "قدرات التصنيع",
+    "विनिर्माण क्षमताएँ",
+    "制造能力"
+  ],
+  "Use measurable facts. Specify units and the conditions behind your capacities.": [
+    "Use datos medibles. Especifique las unidades y condiciones de sus capacidades.",
+    "Use dados mensuráveis. Especifique unidades e condições das capacidades indicadas.",
+    "Verwenden Sie messbare Angaben. Nennen Sie Einheiten und Rahmenbedingungen Ihrer Kapazitäten.",
+    "Usa dati misurabili. Specifica unità e condizioni delle capacità dichiarate.",
+    "Ölçülebilir bilgiler kullanın. Kapasitelerin birimlerini ve geçerli koşullarını belirtin.",
+    "استخدم حقائق قابلة للقياس. حدد الوحدات والظروف الخاصة بقدراتك.",
+    "मापने योग्य तथ्य दें। क्षमता के साथ इकाइयाँ और लागू स्थितियाँ बताएँ।",
+    "使用可衡量的事实，注明产能单位及适用条件。"
+  ],
+  "Customer industries": [
+    "Sectores de los clientes",
+    "Setores dos clientes",
+    "Kundenbranchen",
+    "Settori dei clienti",
+    "Müşteri sektörleri",
+    "قطاعات العملاء",
+    "ग्राहकों के उद्योग",
+    "客户行业"
+  ],
+  "Automotive, machinery, energy…": [
+    "Automoción, maquinaria, energía…",
+    "Automóvel, maquinaria, energia…",
+    "Automobil, Maschinenbau, Energie…",
+    "Automotive, macchinari, energia…",
+    "Otomotiv, makine, enerji…",
+    "السيارات والآلات والطاقة…",
+    "ऑटोमोबाइल, मशीनरी, ऊर्जा…",
+    "汽车、机械、能源…"
+  ],
+  "Processes": [
+    "Procesos",
+    "Processos",
+    "Verfahren",
+    "Processi",
+    "Süreçler",
+    "العمليات",
+    "प्रक्रियाएँ",
+    "工艺"
+  ],
+  "Materials & grades": [
+    "Materiales y calidades",
+    "Materiais e classes",
+    "Materialien und Güteklassen",
+    "Materiali e gradi",
+    "Malzemeler ve kalite sınıfları",
+    "المواد ودرجاتها",
+    "सामग्री और ग्रेड",
+    "材料及牌号"
+  ],
+  "Equipment & machines": [
+    "Equipos y máquinas",
+    "Equipamentos e máquinas",
+    "Anlagen und Maschinen",
+    "Attrezzature e macchine",
+    "Ekipman ve makineler",
+    "المعدات والآلات",
+    "उपकरण और मशीनें",
+    "设备及机器"
+  ],
+  "Quality control": [
+    "Control de calidad",
+    "Controlo de qualidade",
+    "Qualitätskontrolle",
+    "Controllo qualità",
+    "Kalite kontrol",
+    "مراقبة الجودة",
+    "गुणवत्ता नियंत्रण",
+    "质量控制"
+  ],
+  "Subcontracted operations": [
+    "Operaciones subcontratadas",
+    "Operações subcontratadas",
+    "Ausgelagerte Arbeitsschritte",
+    "Lavorazioni esternalizzate",
+    "Dışarıya yaptırılan işlemler",
+    "العمليات المسندة للغير",
+    "उपठेके पर दी गई प्रक्रियाएँ",
+    "外包工序"
+  ],
+  "Make, model, quantity, axes, working envelope.": [
+    "Marca, modelo, cantidad, ejes y área de trabajo.",
+    "Marca, modelo, quantidade, eixos e área de trabalho.",
+    "Hersteller, Modell, Anzahl, Achsen und Arbeitsraum.",
+    "Marca, modello, quantità, assi e area di lavoro.",
+    "Marka, model, adet, eksenler ve çalışma alanı.",
+    "العلامة والطراز والعدد والمحاور ونطاق العمل.",
+    "ब्रांड, मॉडल, संख्या, अक्ष और कार्य क्षेत्र।",
+    "品牌、型号、数量、轴数及加工范围。"
+  ],
+  "Achievable tolerances": [
+    "Tolerancias alcanzables",
+    "Tolerâncias alcançáveis",
+    "Erreichbare Toleranzen",
+    "Tolleranze raggiungibili",
+    "Sağlanabilen toleranslar",
+    "التفاوتات الممكن تحقيقها",
+    "प्राप्त करने योग्य सहनशीलता",
+    "可达公差"
+  ],
+  "Include material, dimensions and measurement conditions.": [
+    "Incluya material, dimensiones y condiciones de medición.",
+    "Inclua material, dimensões e condições de medição.",
+    "Geben Sie Material, Abmessungen und Messbedingungen an.",
+    "Includi materiale, dimensioni e condizioni di misurazione.",
+    "Malzeme, boyutlar ve ölçüm koşullarını belirtin.",
+    "اذكر المادة والأبعاد وظروف القياس.",
+    "सामग्री, आयाम और माप की स्थितियाँ शामिल करें।",
+    "注明材料、尺寸及测量条件。"
+  ],
+  "Production capacity": [
+    "Capacidad de producción",
+    "Capacidade de produção",
+    "Produktionskapazität",
+    "Capacità di produzione",
+    "Üretim kapasitesi",
+    "الطاقة الإنتاجية",
+    "उत्पादन क्षमता",
+    "生产能力"
+  ],
+  "Pieces/month, shifts, available capacity…": [
+    "Piezas/mes, turnos, capacidad disponible…",
+    "Peças/mês, turnos, capacidade disponível…",
+    "Stück/Monat, Schichten, verfügbare Kapazität…",
+    "Pezzi/mese, turni, capacità disponibile…",
+    "Parça/ay, vardiyalar, kullanılabilir kapasite…",
+    "قطع/شهر، ورديات، طاقة متاحة…",
+    "इकाइयाँ/माह, पालियाँ, उपलब्ध क्षमता…",
+    "件/月、班次、可用产能…"
+  ],
+  "Production sites": [
+    "Centros de producción",
+    "Instalações de produção",
+    "Produktionsstandorte",
+    "Siti produttivi",
+    "Üretim tesisleri",
+    "مواقع الإنتاج",
+    "उत्पादन स्थल",
+    "生产场所"
+  ],
+  "Identify your own facilities and partner factories separately.": [
+    "Distinga sus instalaciones propias de las fábricas asociadas.",
+    "Distinga as instalações próprias das fábricas parceiras.",
+    "Unterscheiden Sie eigene Anlagen und Partnerfabriken.",
+    "Distingui gli impianti propri dagli stabilimenti dei partner.",
+    "Kendi tesislerinizi ve ortak fabrikaları ayrı belirtin.",
+    "ميّز منشآتك الخاصة عن مصانع الشركاء.",
+    "अपने संयंत्र और साझेदार कारखाने अलग-अलग बताएँ।",
+    "分别注明自有设施和合作工厂。"
+  ],
+  "Site": [
+    "Centro",
+    "Instalação",
+    "Standort",
+    "Sito",
+    "Tesis",
+    "موقع",
+    "स्थल",
+    "场所"
+  ],
+  "Remove site": [
+    "Eliminar centro",
+    "Remover instalação",
+    "Standort entfernen",
+    "Rimuovi sito",
+    "Tesisi kaldır",
+    "إزالة الموقع",
+    "स्थल हटाएँ",
+    "移除场所"
+  ],
+  "Site name": [
+    "Nombre del centro",
+    "Nome da instalação",
+    "Standortname",
+    "Nome del sito",
+    "Tesis adı",
+    "اسم الموقع",
+    "स्थल का नाम",
+    "场所名称"
+  ],
+  "Relationship": [
+    "Relación",
+    "Relação",
+    "Nutzungsverhältnis",
+    "Rapporto",
+    "İlişki",
+    "نوع العلاقة",
+    "संबंध",
+    "关系"
+  ],
+  "Owned": [
+    "En propiedad",
+    "Própria",
+    "Eigentum",
+    "Di proprietà",
+    "Mülkiyet",
+    "مملوك",
+    "स्वामित्व वाला",
+    "自有"
+  ],
+  "Leased": [
+    "Arrendado",
+    "Arrendada",
+    "Gemietet",
+    "In locazione",
+    "Kiralanmış",
+    "مستأجر",
+    "पट्टे पर",
+    "租赁"
+  ],
+  "Partner / subcontractor": [
+    "Socio / subcontratista",
+    "Parceiro / subcontratante",
+    "Partner / Unterauftragnehmer",
+    "Partner / subfornitore",
+    "Ortak / alt yüklenici",
+    "شريك / مقاول من الباطن",
+    "साझेदार / उपठेकेदार",
+    "合作伙伴／分包商"
+  ],
+  "Address": [
+    "Dirección",
+    "Morada",
+    "Adresse",
+    "Indirizzo",
+    "Adres",
+    "العنوان",
+    "पता",
+    "地址"
+  ],
+  "Region": [
+    "Región",
+    "Região",
+    "Region",
+    "Regione",
+    "Bölge",
+    "المنطقة",
+    "क्षेत्र",
+    "地区"
+  ],
+  "Production country": [
+    "País de producción",
+    "País de produção",
+    "Produktionsland",
+    "Paese di produzione",
+    "Üretim ülkesi",
+    "بلد الإنتاج",
+    "उत्पादन का देश",
+    "生产国家"
+  ],
+  "Surface area (m²)": [
+    "Superficie (m²)",
+    "Área (m²)",
+    "Fläche (m²)",
+    "Superficie (m²)",
+    "Yüzölçümü (m²)",
+    "المساحة (م²)",
+    "क्षेत्रफल (m²)",
+    "面积（m²）"
+  ],
+  "Add a production site": [
+    "Añadir centro de producción",
+    "Adicionar instalação de produção",
+    "Produktionsstandort hinzufügen",
+    "Aggiungi sito produttivo",
+    "Üretim tesisi ekle",
+    "إضافة موقع إنتاج",
+    "उत्पादन स्थल जोड़ें",
+    "添加生产场所"
+  ],
+  "Products & manufacturing services": [
+    "Productos y servicios de fabricación",
+    "Produtos e serviços de fabrico",
+    "Produkte und Fertigungsleistungen",
+    "Prodotti e servizi di produzione",
+    "Ürünler ve üretim hizmetleri",
+    "المنتجات وخدمات التصنيع",
+    "उत्पाद और विनिर्माण सेवाएँ",
+    "产品与制造服务"
+  ],
+  "Products are optional for your first company listing. For a product, start with a name, category, description and country of manufacture. Add photos, quantities and technical details later, or keep it as a private draft.": [
+    "Los productos son opcionales para su primera ficha de empresa. Empiece cada producto con nombre, categoría, descripción y país de fabricación. Añada fotos, cantidades y detalles técnicos después, o guárdelo como borrador privado.",
+    "Os produtos são opcionais na primeira ficha da empresa. Comece cada produto com nome, categoria, descrição e país de fabrico. Adicione fotos, quantidades e detalhes técnicos depois, ou mantenha-o como rascunho privado.",
+    "Produkte sind für Ihren ersten Unternehmenseintrag optional. Beginnen Sie bei einem Produkt mit Name, Kategorie, Beschreibung und Herstellungsland. Ergänzen Sie Fotos, Mengen und technische Details später oder behalten Sie es als privaten Entwurf.",
+    "I prodotti sono facoltativi per la prima scheda aziendale. Per ogni prodotto inizia con nome, categoria, descrizione e paese di fabbricazione. Aggiungi foto, quantità e dettagli tecnici dopo, oppure mantienilo come bozza privata.",
+    "İlk şirket ilanınızda ürünler isteğe bağlıdır. Ürün için ad, kategori, açıklama ve üretim ülkesiyle başlayın. Fotoğraf, miktar ve teknik detayları sonra ekleyin veya özel taslak olarak saklayın.",
+    "المنتجات اختيارية في أول صفحة لشركتك. ابدأ باسم المنتج وفئته ووصفه وبلد تصنيعه. أضف الصور والكميات والتفاصيل الفنية لاحقًا، أو احتفظ به كمسودة خاصة.",
+    "पहली कंपनी सूची में उत्पाद वैकल्पिक हैं। उत्पाद के लिए नाम, श्रेणी, विवरण और निर्माण देश से शुरू करें। फ़ोटो, मात्रा और तकनीकी जानकारी बाद में जोड़ें या निजी ड्राफ़्ट रखें।",
+    "首次发布企业时，产品为选填项。产品先填写名称、类别、描述和制造国家，照片、数量和技术信息可稍后添加，也可保留为私密草稿。"
+  ],
+  "Offer ": [
+    "Oferta ",
+    "Oferta ",
+    "Angebot ",
+    "Offerta ",
+    "Teklif ",
+    "عرض ",
+    "पेशकश ",
+    "产品或服务 "
+  ],
+  "Remove offer": [
+    "Eliminar oferta",
+    "Remover oferta",
+    "Angebot entfernen",
+    "Rimuovi offerta",
+    "Teklifi kaldır",
+    "إزالة العرض",
+    "पेशकश हटाएँ",
+    "移除产品或服务"
+  ],
+  "Product visibility": [
+    "Visibilidad del producto",
+    "Visibilidade do produto",
+    "Produktsichtbarkeit",
+    "Visibilità del prodotto",
+    "Ürün görünürlüğü",
+    "ظهور المنتج",
+    "उत्पाद की दृश्यता",
+    "产品可见性"
+  ],
+  "Include in the publication": [
+    "Incluir en la publicación",
+    "Incluir na publicação",
+    "In Veröffentlichung aufnehmen",
+    "Includi nella pubblicazione",
+    "Yayına dahil et",
+    "إدراج في النشر",
+    "प्रकाशन में शामिल करें",
+    "包含在发布内容中"
+  ],
+  "Private draft — complete later": [
+    "Borrador privado: completar después",
+    "Rascunho privado — completar mais tarde",
+    "Privater Entwurf – später vervollständigen",
+    "Bozza privata — completa in seguito",
+    "Özel taslak — daha sonra tamamlayın",
+    "مسودة خاصة — تُستكمل لاحقًا",
+    "निजी ड्राफ़्ट — बाद में पूरा करें",
+    "私密草稿——稍后完善"
+  ],
+  "Product or service name": [
+    "Nombre del producto o servicio",
+    "Nome do produto ou serviço",
+    "Produkt- oder Dienstleistungsname",
+    "Nome del prodotto o servizio",
+    "Ürün veya hizmet adı",
+    "اسم المنتج أو الخدمة",
+    "उत्पाद या सेवा का नाम",
+    "产品或服务名称"
+  ],
+  "Exact reference / model": [
+    "Referencia / modelo exacto",
+    "Referência / modelo exato",
+    "Genaue Referenz / Modell",
+    "Riferimento / modello esatto",
+    "Tam referans / model",
+    "المرجع / الطراز الدقيق",
+    "सटीक संदर्भ / मॉडल",
+    "准确型号／产品编号"
+  ],
+  "Category": [
+    "Categoría",
+    "Categoria",
+    "Kategorie",
+    "Categoria",
+    "Kategori",
+    "الفئة",
+    "श्रेणी",
+    "类别"
+  ],
+  "Machining & metal parts": [
+    "Mecanizado y piezas metálicas",
+    "Maquinação e peças metálicas",
+    "Zerspanung und Metallteile",
+    "Lavorazioni meccaniche e parti metalliche",
+    "Talaşlı imalat ve metal parçalar",
+    "التشغيل والقطع المعدنية",
+    "मशीनिंग और धातु के पुर्ज़े",
+    "机械加工与金属零件"
+  ],
+  "Machinery": [
+    "Maquinaria",
+    "Maquinaria",
+    "Maschinen",
+    "Macchinari",
+    "Makineler",
+    "الآلات",
+    "मशीनरी",
+    "机械"
+  ],
+  "Electrical equipment": [
+    "Equipos eléctricos",
+    "Equipamentos elétricos",
+    "Elektrische Ausrüstung",
+    "Apparecchiature elettriche",
+    "Elektrikli ekipmanlar",
+    "المعدات الكهربائية",
+    "विद्युत उपकरण",
+    "电气设备"
+  ],
+  "Construction products": [
+    "Productos de construcción",
+    "Produtos de construção",
+    "Bauprodukte",
+    "Prodotti da costruzione",
+    "İnşaat ürünleri",
+    "منتجات البناء",
+    "निर्माण उत्पाद",
+    "建筑产品"
+  ],
+  "Plastics & moulding": [
+    "Plásticos y moldeo",
+    "Plásticos e moldagem",
+    "Kunststoffe und Formgebung",
+    "Materie plastiche e stampaggio",
+    "Plastikler ve kalıplama",
+    "البلاستيك والقولبة",
+    "प्लास्टिक और ढलाई",
+    "塑料与成型"
+  ],
+  "Textiles": [
+    "Textiles",
+    "Têxteis",
+    "Textilien",
+    "Tessili",
+    "Tekstil",
+    "المنسوجات",
+    "वस्त्र",
+    "纺织品"
+  ],
+  "Packaging": [
+    "Embalaje",
+    "Embalagem",
+    "Verpackung",
+    "Imballaggi",
+    "Ambalaj",
+    "التغليف",
+    "पैकेजिंग",
+    "包装"
+  ],
+  "Professional furniture": [
+    "Mobiliario profesional",
+    "Mobiliário profissional",
+    "Gewerbemöbel",
+    "Arredamento professionale",
+    "Profesyonel mobilya",
+    "الأثاث المهني",
+    "व्यावसायिक फ़र्नीचर",
+    "商用家具"
+  ],
+  "Other": [
+    "Otro",
+    "Outro",
+    "Sonstiges",
+    "Altro",
+    "Diğer",
+    "أخرى",
+    "अन्य",
+    "其他"
+  ],
+  "Country of manufacture": [
+    "País de fabricación",
+    "País de fabrico",
+    "Herstellungsland",
+    "Paese di fabbricazione",
+    "Üretim ülkesi",
+    "بلد التصنيع",
+    "निर्माण का देश",
+    "制造国家"
+  ],
+  "Description & intended use": [
+    "Descripción y uso previsto",
+    "Descrição e utilização prevista",
+    "Beschreibung und Verwendungszweck",
+    "Descrizione e uso previsto",
+    "Açıklama ve kullanım amacı",
+    "الوصف والاستخدام المقصود",
+    "विवरण और निर्धारित उपयोग",
+    "描述及预期用途"
+  ],
+  "At least 30 characters. Include dimensions, applications and customisation.": [
+    "Al menos 30 caracteres. Incluya dimensiones, aplicaciones y personalización.",
+    "Pelo menos 30 caracteres. Inclua dimensões, aplicações e personalização.",
+    "Mindestens 30 Zeichen. Geben Sie Maße, Anwendungen und Anpassungsmöglichkeiten an.",
+    "Almeno 30 caratteri. Includi dimensioni, applicazioni e personalizzazione.",
+    "En az 30 karakter. Boyutları, uygulamaları ve özelleştirmeyi belirtin.",
+    "30 حرفًا على الأقل. اذكر الأبعاد والتطبيقات والتخصيص.",
+    "कम से कम 30 अक्षर। आयाम, उपयोग और अनुकूलन शामिल करें।",
+    "至少30字符。请注明尺寸、应用和定制选项。"
+  ],
+  "Materials": [
+    "Materiales",
+    "Materiais",
+    "Materialien",
+    "Materiali",
+    "Malzemeler",
+    "المواد",
+    "सामग्री",
+    "材料"
+  ],
+  "Minimum order quantity": [
+    "Cantidad mínima de pedido",
+    "Quantidade mínima de encomenda",
+    "Mindestbestellmenge",
+    "Quantità minima d'ordine",
+    "Minimum sipariş miktarı",
+    "الحد الأدنى لكمية الطلب",
+    "न्यूनतम ऑर्डर मात्रा",
+    "最小起订量"
+  ],
+  "Unit": [
+    "Unidad",
+    "Unidade",
+    "Einheit",
+    "Unità",
+    "Birim",
+    "الوحدة",
+    "इकाई",
+    "单位"
+  ],
+  "pieces": [
+    "piezas",
+    "peças",
+    "Stück",
+    "pezzi",
+    "adet",
+    "قطع",
+    "इकाइयाँ",
+    "件"
+  ],
+  "metres": [
+    "metros",
+    "metros",
+    "Meter",
+    "metri",
+    "metre",
+    "أمتار",
+    "मीटर",
+    "米"
+  ],
+  "sets": [
+    "conjuntos",
+    "conjuntos",
+    "Sätze",
+    "set",
+    "takım",
+    "مجموعات",
+    "सेट",
+    "套"
+  ],
+  "Lead time & assumptions": [
+    "Plazo y supuestos",
+    "Prazo e pressupostos",
+    "Lieferzeit und Annahmen",
+    "Tempi e presupposti",
+    "Teslim süresi ve varsayımlar",
+    "المدة والافتراضات",
+    "समयसीमा और धारणाएँ",
+    "交期及前提条件"
+  ],
+  "Optional. State the quantity, tooling and validation assumptions.": [
+    "Opcional. Indique los supuestos de cantidad, utillaje y validación.",
+    "Opcional. Indique os pressupostos de quantidade, ferramentas e validação.",
+    "Optional. Nennen Sie Annahmen zu Menge, Werkzeugen und Freigaben.",
+    "Facoltativo. Indica i presupposti su quantità, attrezzature e validazione.",
+    "İsteğe bağlı. Miktar, kalıp/alet ve onay varsayımlarını belirtin.",
+    "اختياري. حدد افتراضات الكمية والتجهيزات والتحقق.",
+    "वैकल्पिक। मात्रा, टूलिंग और अनुमोदन से जुड़ी धारणाएँ बताएँ।",
+    "选填。请说明数量、工装及验证前提。"
+  ],
+  "CE marking assessment": [
+    "Evaluación del marcado CE",
+    "Avaliação da marcação CE",
+    "Bewertung der CE-Kennzeichnung",
+    "Valutazione della marcatura CE",
+    "CE işareti değerlendirmesi",
+    "تقييم علامة CE",
+    "CE चिह्नांकन का आकलन",
+    "CE标志评估"
+  ],
+  "To be assessed": [
+    "Pendiente de evaluar",
+    "Por avaliar",
+    "Noch zu bewerten",
+    "Da valutare",
+    "Değerlendirilecek",
+    "يحتاج إلى تقييم",
+    "आकलन किया जाना है",
+    "待评估"
+  ],
+  "Applicable to this product": [
+    "Aplicable a este producto",
+    "Aplicável a este produto",
+    "Für dieses Produkt zutreffend",
+    "Applicabile a questo prodotto",
+    "Bu ürün için geçerli",
+    "ينطبق على هذا المنتج",
+    "इस उत्पाद पर लागू",
+    "适用于此产品"
+  ],
+  "Not applicable, with explanation": [
+    "No aplicable, con explicación",
+    "Não aplicável, com explicação",
+    "Nicht zutreffend, mit Begründung",
+    "Non applicabile, con spiegazione",
+    "Geçerli değil, açıklamayla",
+    "لا ينطبق، مع توضيح",
+    "लागू नहीं, कारण सहित",
+    "不适用，需说明原因"
+  ],
+  "Reason": [
+    "Motivo",
+    "Motivo",
+    "Begründung",
+    "Motivo",
+    "Gerekçe",
+    "السبب",
+    "कारण",
+    "原因"
+  ],
+  "Applicable EU legislation": [
+    "Legislación de la UE aplicable",
+    "Legislação da UE aplicável",
+    "Anwendbare EU-Vorschriften",
+    "Legislazione UE applicabile",
+    "Geçerli AB mevzuatı",
+    "تشريعات الاتحاد الأوروبي المنطبقة",
+    "लागू यूरोपीय संघ कानून",
+    "适用的欧盟法规"
+  ],
+  "Use the exact references in your declaration.": [
+    "Use las referencias exactas de su declaración.",
+    "Use as referências exatas da declaração.",
+    "Verwenden Sie die genauen Referenzen Ihrer Erklärung.",
+    "Usa i riferimenti esatti della dichiarazione.",
+    "Beyanınızdaki tam referansları kullanın.",
+    "استخدم المراجع الدقيقة الواردة في إقرارك.",
+    "अपनी घोषणा में दिए सटीक संदर्भ इस्तेमाल करें।",
+    "请使用声明中的准确法规编号。"
+  ],
+  "Declaration of conformity / performance": [
+    "Declaración de conformidad / prestaciones",
+    "Declaração de conformidade / desempenho",
+    "Konformitäts- / Leistungserklärung",
+    "Dichiarazione di conformità / prestazione",
+    "Uygunluk / performans beyanı",
+    "إقرار المطابقة / الأداء",
+    "अनुरूपता / प्रदर्शन की घोषणा",
+    "符合性／性能声明"
+  ],
+  "Standards & editions used": [
+    "Normas y ediciones utilizadas",
+    "Normas e edições utilizadas",
+    "Verwendete Normen und Ausgaben",
+    "Norme ed edizioni utilizzate",
+    "Kullanılan standartlar ve sürümleri",
+    "المعايير والإصدارات المستخدمة",
+    "इस्तेमाल किए मानक और संस्करण",
+    "采用的标准及版本"
+  ],
+  "CE marking is not required for every product. A certificate from a laboratory alone is not proof of full EU compliance. Upload the supporting declaration in Documents, then link it here.": [
+    "El marcado CE no se exige para todos los productos. Un certificado de laboratorio por sí solo no demuestra el cumplimiento íntegro de la normativa de la UE. Suba la declaración justificativa en Documentos y vincúlela aquí.",
+    "A marcação CE não é exigida para todos os produtos. Um certificado de laboratório, por si só, não comprova a conformidade integral com a UE. Envie a declaração em Documentos e associe-a aqui.",
+    "Die CE-Kennzeichnung ist nicht für jedes Produkt erforderlich. Ein Laborzertifikat allein belegt keine vollständige EU-Konformität. Laden Sie die entsprechende Erklärung unter Dokumente hoch und verknüpfen Sie sie hier.",
+    "La marcatura CE non è richiesta per ogni prodotto. Un certificato di laboratorio da solo non prova la piena conformità UE. Carica la dichiarazione in Documenti e collegala qui.",
+    "Her üründe CE işareti gerekmez. Tek başına laboratuvar sertifikası tam AB uygunluğunun kanıtı değildir. İlgili beyanı Belgeler bölümüne yükleyip burada bağlayın.",
+    "لا تُشترط علامة CE لكل منتج. شهادة المختبر وحدها لا تثبت الامتثال الكامل لمتطلبات الاتحاد الأوروبي. ارفع الإقرار الداعم في المستندات ثم اربطه هنا.",
+    "हर उत्पाद पर CE चिह्न आवश्यक नहीं है। केवल प्रयोगशाला प्रमाणपत्र पूर्ण EU अनुपालन का प्रमाण नहीं है। संबंधित घोषणा दस्तावेज़ अनुभाग में अपलोड करके यहाँ जोड़ें।",
+    "并非所有产品都需要CE标志。仅凭实验室证书无法证明完全符合欧盟要求。请在“文件”中上传相关声明，再在此关联。"
+  ],
+  "EU guidance": [
+    "Guía de la UE",
+    "Orientações da UE",
+    "EU-Leitfaden",
+    "Guida UE",
+    "AB rehberi",
+    "إرشادات الاتحاد الأوروبي",
+    "EU मार्गदर्शन",
+    "欧盟指南"
+  ],
+  "Add product photos and documents": [
+    "Añadir fotos y documentos del producto",
+    "Adicionar fotos e documentos do produto",
+    "Produktfotos und Dokumente hinzufügen",
+    "Aggiungi foto e documenti del prodotto",
+    "Ürün fotoğrafları ve belgeleri ekle",
+    "إضافة صور ومستندات المنتج",
+    "उत्पाद की फ़ोटो और दस्तावेज़ जोड़ें",
+    "添加产品照片和文件"
+  ],
+  "Add a product or service": [
+    "Añadir un producto o servicio",
+    "Adicionar um produto ou serviço",
+    "Produkt oder Dienstleistung hinzufügen",
+    "Aggiungi un prodotto o servizio",
+    "Ürün veya hizmet ekle",
+    "إضافة منتج أو خدمة",
+    "उत्पाद या सेवा जोड़ें",
+    "添加产品或服务"
+  ],
+  "OPTIONAL STEP": [
+    "PASO OPCIONAL",
+    "ETAPA OPCIONAL",
+    "OPTIONALER SCHRITT",
+    "PASSAGGIO FACOLTATIVO",
+    "İSTEĞE BAĞLI ADIM",
+    "خطوة اختيارية",
+    "वैकल्पिक चरण",
+    "可选步骤"
+  ],
+  "Add documents when you are ready": [
+    "Añada documentos cuando esté listo",
+    "Adicione documentos quando estiver pronto",
+    "Dokumente bei Bedarf hinzufügen",
+    "Aggiungi i documenti quando sei pronto",
+    "Hazır olduğunuzda belge ekleyin",
+    "أضف المستندات عندما تكون جاهزًا",
+    "तैयार होने पर दस्तावेज़ जोड़ें",
+    "准备好后再添加文件"
+  ],
+  "No document is required to publish your company or products. A logo, photos and certificates can be added later, even after the company is published.": [
+    "No se requiere ningún documento para publicar su empresa o productos. Puede añadir logotipo, fotos y certificados después, incluso tras publicar la empresa.",
+    "Não é exigido nenhum documento para publicar a empresa ou os produtos. Pode adicionar logótipo, fotos e certificados mais tarde, mesmo após publicar a empresa.",
+    "Zum Veröffentlichen Ihres Unternehmens oder Ihrer Produkte sind keine Dokumente erforderlich. Logo, Fotos und Zertifikate können auch nach der Veröffentlichung ergänzt werden.",
+    "Nessun documento è obbligatorio per pubblicare l'azienda o i prodotti. Logo, foto e certificati possono essere aggiunti dopo, anche a pubblicazione avvenuta.",
+    "Şirketinizi veya ürünlerinizi yayınlamak için belge gerekmez. Logo, fotoğraf ve sertifikalar, şirket yayınlandıktan sonra da eklenebilir.",
+    "لا يلزم أي مستند لنشر شركتك أو منتجاتك. يمكن إضافة الشعار والصور والشهادات لاحقًا، حتى بعد نشر الشركة.",
+    "कंपनी या उत्पाद प्रकाशित करने के लिए दस्तावेज़ ज़रूरी नहीं हैं। लोगो, फ़ोटो और प्रमाणपत्र बाद में, कंपनी प्रकाशित होने के बाद भी, जोड़ सकते हैं।",
+    "发布企业或产品无需任何必交文件。标志、照片和证书可稍后添加，企业发布后仍可补充。"
+  ],
+  "Skip this step": [
+    "Omitir este paso",
+    "Ignorar esta etapa",
+    "Diesen Schritt überspringen",
+    "Salta questo passaggio",
+    "Bu adımı atla",
+    "تخطي هذه الخطوة",
+    "यह चरण छोड़ें",
+    "跳过此步骤"
+  ],
+  "Attach a document or photo": [
+    "Adjuntar un documento o foto",
+    "Anexar um documento ou foto",
+    "Dokument oder Foto anhängen",
+    "Allega un documento o una foto",
+    "Belge veya fotoğraf ekle",
+    "إرفاق مستند أو صورة",
+    "दस्तावेज़ या फ़ोटो संलग्न करें",
+    "附加文件或照片"
+  ],
+  "Upload your own logo, real factory photos and readable documents. No personal identity documents. Files remain private.": [
+    "Suba su propio logotipo, fotos reales de fábrica y documentos legibles. No incluya documentos de identidad personales. Los archivos permanecen privados.",
+    "Envie o seu próprio logótipo, fotos reais da fábrica e documentos legíveis. Não envie documentos de identificação pessoal. Os ficheiros permanecem privados.",
+    "Laden Sie Ihr eigenes Logo, echte Fabrikfotos und lesbare Dokumente hoch. Keine persönlichen Ausweisdokumente. Die Dateien bleiben privat.",
+    "Carica il tuo logo, foto reali dello stabilimento e documenti leggibili. Nessun documento d'identità personale. I file restano privati.",
+    "Kendi logonuzu, gerçek fabrika fotoğraflarını ve okunabilir belgeleri yükleyin. Kişisel kimlik belgeleri yüklemeyin. Dosyalar gizli kalır.",
+    "ارفع شعارك الخاص وصورًا حقيقية للمصنع ومستندات مقروءة. لا ترفع وثائق هوية شخصية. تبقى الملفات خاصة.",
+    "अपना लोगो, कारखाने की वास्तविक फ़ोटो और पढ़ने योग्य दस्तावेज़ अपलोड करें। व्यक्तिगत पहचान दस्तावेज़ न दें। फ़ाइलें निजी रहती हैं।",
+    "请上传自己的标志、真实工厂照片和清晰文件。请勿上传个人身份证件。文件保持私密。"
+  ],
+  "Document type": [
+    "Tipo de documento",
+    "Tipo de documento",
+    "Dokumenttyp",
+    "Tipo di documento",
+    "Belge türü",
+    "نوع المستند",
+    "दस्तावेज़ का प्रकार",
+    "文件类型"
+  ],
+  "Caption / related product reference": [
+    "Descripción / referencia del producto relacionado",
+    "Legenda / referência do produto relacionado",
+    "Bildunterschrift / zugehörige Produktreferenz",
+    "Didascalia / riferimento del prodotto collegato",
+    "Açıklama / ilgili ürün referansı",
+    "التسمية / مرجع المنتج المرتبط",
+    "कैप्शन / संबंधित उत्पाद संदर्भ",
+    "说明／相关产品编号"
+  ],
+  "MB maximum": [
+    "MB máximo",
+    "MB no máximo",
+    "MB maximal",
+    "MB massimo",
+    "MB en fazla",
+    "ميغابايت كحد أقصى",
+    "MB अधिकतम",
+    "MB上限"
+  ],
+  "KB": [
+    "KB",
+    "KB",
+    "KB",
+    "KB",
+    "KB",
+    "كيلوبايت",
+    "KB",
+    "KB"
+  ],
+  "Cancel selection": [
+    "Cancelar selección",
+    "Cancelar seleção",
+    "Auswahl aufheben",
+    "Annulla selezione",
+    "Seçimi iptal et",
+    "إلغاء التحديد",
+    "चयन रद्द करें",
+    "取消选择"
+  ],
+  "I have permission to publish this image after review.": [
+    "Tengo permiso para publicar esta imagen después de la revisión.",
+    "Tenho autorização para publicar esta imagem após análise.",
+    "Ich darf dieses Bild nach der Prüfung veröffentlichen.",
+    "Ho l'autorizzazione a pubblicare questa immagine dopo la verifica.",
+    "Bu görseli inceleme sonrasında yayınlama iznim var.",
+    "لدي إذن بنشر هذه الصورة بعد المراجعة.",
+    "मुझे समीक्षा के बाद यह चित्र प्रकाशित करने की अनुमति है।",
+    "我有权在审核后发布此图片。"
+  ],
+  "Uploading…": [
+    "Subiendo…",
+    "A enviar…",
+    "Wird hochgeladen…",
+    "Caricamento…",
+    "Yükleniyor…",
+    "جارٍ الرفع…",
+    "अपलोड हो रहा है…",
+    "正在上传…"
+  ],
+  "Saving draft…": [
+    "Guardando borrador…",
+    "A guardar o rascunho…",
+    "Entwurf wird gespeichert…",
+    "Salvataggio della bozza…",
+    "Taslak kaydediliyor…",
+    "جارٍ حفظ المسودة…",
+    "ड्राफ़्ट सहेजा जा रहा है…",
+    "正在保存草稿…"
+  ],
+  "Attach selected file": [
+    "Adjuntar archivo seleccionado",
+    "Anexar ficheiro selecionado",
+    "Ausgewählte Datei anhängen",
+    "Allega il file selezionato",
+    "Seçilen dosyayı ekle",
+    "إرفاق الملف المحدد",
+    "चुनी हुई फ़ाइल संलग्न करें",
+    "附加所选文件"
+  ],
+  "Select the type, choose your file, then attach it. Uploaded documents are not automatically certified.": [
+    "Seleccione el tipo, elija el archivo y adjúntelo. Los documentos subidos no quedan certificados automáticamente.",
+    "Selecione o tipo, escolha o ficheiro e anexe-o. Os documentos enviados não são certificados automaticamente.",
+    "Wählen Sie den Typ und Ihre Datei, dann hängen Sie sie an. Hochgeladene Dokumente werden nicht automatisch zertifiziert.",
+    "Seleziona il tipo, scegli il file e allegalo. I documenti caricati non vengono certificati automaticamente.",
+    "Türü seçin, dosyanızı seçin ve ekleyin. Yüklenen belgeler otomatik olarak onaylanmaz.",
+    "حدد النوع واختر الملف ثم أرفقه. لا تُعتمد المستندات المرفوعة تلقائيًا.",
+    "प्रकार चुनें, फ़ाइल चुनें और संलग्न करें। अपलोड किए दस्तावेज़ अपने आप प्रमाणित नहीं होते।",
+    "选择类型和文件后再附加。上传文件不会自动获得认证。"
+  ],
+  "Attached · private document": [
+    "Adjunto · documento privado",
+    "Anexado · documento privado",
+    "Angehängt · privates Dokument",
+    "Allegato · documento privato",
+    "Eklendi · özel belge",
+    "مرفق · مستند خاص",
+    "संलग्न · निजी दस्तावेज़",
+    "已附加 · 私密文件"
+  ],
+  "Open / check": [
+    "Abrir / comprobar",
+    "Abrir / verificar",
+    "Öffnen / prüfen",
+    "Apri / verifica",
+    "Aç / kontrol et",
+    "فتح / فحص",
+    "खोलें / जाँचें",
+    "打开／检查"
+  ],
+  "Remove ": [
+    "Eliminar ",
+    "Remover ",
+    "Entfernen ",
+    "Rimuovi ",
+    "Kaldır ",
+    "إزالة ",
+    "हटाएँ ",
+    "移除 "
+  ],
+  "Certificate details (optional)": [
+    "Detalles de certificados (opcionales)",
+    "Detalhes dos certificados (opcional)",
+    "Zertifikatsdetails (optional)",
+    "Dettagli dei certificati (facoltativi)",
+    "Sertifika ayrıntıları (isteğe bağlı)",
+    "تفاصيل الشهادات (اختيارية)",
+    "प्रमाणपत्र विवरण (वैकल्पिक)",
+    "证书详情（选填）"
+  ],
+  "Keep unfinished details here. They do not block your company submission and are not displayed as verified claims.": [
+    "Guarde aquí los datos incompletos. No bloquean el envío de su empresa ni se muestran como afirmaciones verificadas.",
+    "Mantenha aqui os dados incompletos. Não bloqueiam a submissão da empresa nem são apresentados como alegações verificadas.",
+    "Bewahren Sie unvollständige Angaben hier auf. Sie blockieren die Einreichung nicht und werden nicht als geprüfte Angaben angezeigt.",
+    "Conserva qui i dati incompleti. Non bloccano l'invio dell'azienda e non vengono mostrati come dichiarazioni verificate.",
+    "Tamamlanmamış bilgileri burada tutun. Şirket başvurusunu engellemez ve doğrulanmış beyan olarak gösterilmezler.",
+    "احتفظ بالتفاصيل غير المكتملة هنا. لا تمنع تقديم شركتك ولا تُعرض باعتبارها ادعاءات متحققًا منها.",
+    "अधूरी जानकारी यहाँ रखें। इससे कंपनी का आवेदन नहीं रुकता और इसे सत्यापित दावे के रूप में नहीं दिखाया जाता।",
+    "可在此保留未填完的信息。它们不会阻止企业提交，也不会作为已验证的声明展示。"
+  ],
+  "Optional unless relevant to a product claim. Identify the issuer, scope and validity. An ISO management certificate does not certify all products.": [
+    "Opcional salvo que justifique una afirmación sobre un producto. Indique emisor, alcance y validez. Un certificado ISO de gestión no certifica todos los productos.",
+    "Opcional, exceto quando relevante para uma alegação sobre um produto. Indique emissor, âmbito e validade. Um certificado ISO de gestão não certifica todos os produtos.",
+    "Optional, sofern nicht für eine Produktaussage relevant. Nennen Sie Aussteller, Geltungsbereich und Gültigkeit. Ein ISO-Managementzertifikat zertifiziert nicht alle Produkte.",
+    "Facoltativo, salvo che giustifichi una dichiarazione sul prodotto. Indica ente emittente, ambito e validità. Un certificato ISO di gestione non certifica tutti i prodotti.",
+    "Ürün iddiasını desteklemiyorsa isteğe bağlıdır. Düzenleyeni, kapsamı ve geçerliliği belirtin. ISO yönetim sertifikası tüm ürünleri belgelendirmez.",
+    "اختياري ما لم يتعلق بادعاء عن منتج. حدد الجهة المصدرة والنطاق والصلاحية. شهادة إدارة ISO لا تعني اعتماد جميع المنتجات.",
+    "उत्पाद के किसी दावे से संबंधित न हो तो वैकल्पिक है। जारीकर्ता, दायरा और वैधता बताएँ। ISO प्रबंधन प्रमाणपत्र सभी उत्पादों को प्रमाणित नहीं करता।",
+    "除非用于支持产品声明，否则为选填项。请注明签发方、范围和有效期。ISO管理体系证书并不认证所有产品。"
+  ],
+  "Certificate ": [
+    "Certificado ",
+    "Certificado ",
+    "Zertifikat ",
+    "Certificato ",
+    "Sertifika ",
+    "شهادة ",
+    "प्रमाणपत्र ",
+    "证书 "
+  ],
+  "Remove certificate": [
+    "Eliminar certificado",
+    "Remover certificado",
+    "Zertifikat entfernen",
+    "Rimuovi certificato",
+    "Sertifikayı kaldır",
+    "إزالة الشهادة",
+    "प्रमाणपत्र हटाएँ",
+    "移除证书"
+  ],
+  "Scope type": [
+    "Tipo de alcance",
+    "Tipo de âmbito",
+    "Art des Geltungsbereichs",
+    "Tipo di ambito",
+    "Kapsam türü",
+    "نوع النطاق",
+    "दायरे का प्रकार",
+    "范围类型"
+  ],
+  "Management system": [
+    "Sistema de gestión",
+    "Sistema de gestão",
+    "Managementsystem",
+    "Sistema di gestione",
+    "Yönetim sistemi",
+    "نظام إدارة",
+    "प्रबंधन प्रणाली",
+    "管理体系"
+  ],
+  "Specific product": [
+    "Producto específico",
+    "Produto específico",
+    "Bestimmtes Produkt",
+    "Prodotto specifico",
+    "Belirli ürün",
+    "منتج محدد",
+    "विशिष्ट उत्पाद",
+    "特定产品"
+  ],
+  "Test report": [
+    "Informe de ensayo",
+    "Relatório de ensaio",
+    "Prüfbericht",
+    "Rapporto di prova",
+    "Test raporu",
+    "تقرير اختبار",
+    "परीक्षण रिपोर्ट",
+    "测试报告"
+  ],
+  "Standard / certificate title": [
+    "Norma / título del certificado",
+    "Norma / título do certificado",
+    "Norm / Zertifikatsbezeichnung",
+    "Norma / titolo del certificato",
+    "Standart / sertifika başlığı",
+    "المعيار / عنوان الشهادة",
+    "मानक / प्रमाणपत्र का शीर्षक",
+    "标准／证书名称"
+  ],
+  "Issuing body": [
+    "Organismo emisor",
+    "Entidade emissora",
+    "Ausstellende Stelle",
+    "Ente emittente",
+    "Düzenleyen kuruluş",
+    "الجهة المصدرة",
+    "जारी करने वाली संस्था",
+    "签发机构"
+  ],
+  "Certificate / report number": [
+    "Número de certificado / informe",
+    "Número do certificado / relatório",
+    "Zertifikats- / Berichtsnummer",
+    "Numero del certificato / rapporto",
+    "Sertifika / rapor numarası",
+    "رقم الشهادة / التقرير",
+    "प्रमाणपत्र / रिपोर्ट संख्या",
+    "证书／报告编号"
+  ],
+  "Covered product": [
+    "Producto cubierto",
+    "Produto abrangido",
+    "Abgedecktes Produkt",
+    "Prodotto coperto",
+    "Kapsanan ürün",
+    "المنتج المشمول",
+    "शामिल उत्पाद",
+    "涵盖产品"
+  ],
+  "Covered activities, site and models": [
+    "Actividades, centro y modelos cubiertos",
+    "Atividades, instalação e modelos abrangidos",
+    "Abgedeckte Tätigkeiten, Standorte und Modelle",
+    "Attività, sito e modelli coperti",
+    "Kapsanan faaliyetler, tesis ve modeller",
+    "الأنشطة والموقع والطرازات المشمولة",
+    "शामिल गतिविधियाँ, स्थल और मॉडल",
+    "涵盖的业务、场所和型号"
+  ],
+  "Issue date": [
+    "Fecha de emisión",
+    "Data de emissão",
+    "Ausstellungsdatum",
+    "Data di emissione",
+    "Düzenlenme tarihi",
+    "تاريخ الإصدار",
+    "जारी करने की तारीख",
+    "签发日期"
+  ],
+  "Expiry date, if stated": [
+    "Fecha de caducidad, si se indica",
+    "Data de validade, se indicada",
+    "Ablaufdatum, sofern angegeben",
+    "Data di scadenza, se indicata",
+    "Belirtilmişse son geçerlilik tarihi",
+    "تاريخ الانتهاء إن ذُكر",
+    "समाप्ति तिथि, यदि दी गई हो",
+    "有效期截止日期（如有）"
+  ],
+  "Notified body number, if applicable": [
+    "Número de organismo notificado, si procede",
+    "Número do organismo notificado, se aplicável",
+    "Nummer der notifizierten Stelle, falls zutreffend",
+    "Numero dell'organismo notificato, se applicabile",
+    "Varsa onaylanmış kuruluş numarası",
+    "رقم الجهة المُبلّغة، إن انطبق",
+    "अधिसूचित निकाय संख्या, यदि लागू हो",
+    "公告机构编号（如适用）"
+  ],
+  "4 digits. Leave blank when no notified body is involved.": [
+    "4 dígitos. Deje en blanco si no interviene un organismo notificado.",
+    "4 dígitos. Deixe em branco se não houver organismo notificado envolvido.",
+    "4 Ziffern. Leer lassen, wenn keine notifizierte Stelle beteiligt ist.",
+    "4 cifre. Lascia vuoto se non interviene un organismo notificato.",
+    "4 rakam. Onaylanmış kuruluş yoksa boş bırakın.",
+    "4 أرقام. اتركه فارغًا إذا لم تشارك جهة مُبلّغة.",
+    "4 अंक। अधिसूचित निकाय शामिल न हो तो खाली छोड़ें।",
+    "4位数字。无公告机构参与时请留空。"
+  ],
+  "Issuer verification page": [
+    "Página de verificación del emisor",
+    "Página de verificação do emissor",
+    "Prüfseite des Ausstellers",
+    "Pagina di verifica dell'emittente",
+    "Düzenleyenin doğrulama sayfası",
+    "صفحة التحقق لدى الجهة المصدرة",
+    "जारीकर्ता का सत्यापन पेज",
+    "签发方验证页面"
+  ],
+  "Supporting file": [
+    "Archivo justificativo",
+    "Ficheiro comprovativo",
+    "Nachweisdatei",
+    "File di supporto",
+    "Destekleyici dosya",
+    "ملف داعم",
+    "सहायक फ़ाइल",
+    "证明文件"
+  ],
+  "Open supporting document": [
+    "Abrir justificante",
+    "Abrir comprovativo",
+    "Nachweisdokument öffnen",
+    "Apri documento di supporto",
+    "Destekleyici belgeyi aç",
+    "فتح المستند الداعم",
+    "सहायक दस्तावेज़ खोलें",
+    "打开证明材料"
+  ],
+  "Check with the issuer": [
+    "Verificar con el emisor",
+    "Verificar junto do emissor",
+    "Beim Aussteller prüfen",
+    "Verifica presso l'emittente",
+    "Düzenleyen kuruluştan doğrula",
+    "التحقق لدى الجهة المصدرة",
+    "जारीकर्ता से जाँचें",
+    "向签发方核实"
+  ],
+  "Add a certificate or report": [
+    "Añadir certificado o informe",
+    "Adicionar certificado ou relatório",
+    "Zertifikat oder Bericht hinzufügen",
+    "Aggiungi un certificato o rapporto",
+    "Sertifika veya rapor ekle",
+    "إضافة شهادة أو تقرير",
+    "प्रमाणपत्र या रिपोर्ट जोड़ें",
+    "添加证书或报告"
+  ],
+  "NANDO lists notified bodies and their authorised scopes. It does not list certified manufacturers or authenticate a certificate on its own.": [
+    "NANDO enumera organismos notificados y sus ámbitos autorizados. No enumera fabricantes certificados ni autentica un certificado por sí solo.",
+    "A NANDO lista organismos notificados e os seus âmbitos autorizados. Não lista fabricantes certificados nem autentica, por si só, um certificado.",
+    "NANDO führt notifizierte Stellen und deren zugelassene Bereiche auf. Es listet keine zertifizierten Hersteller und bestätigt allein nicht die Echtheit eines Zertifikats.",
+    "NANDO elenca gli organismi notificati e i loro ambiti autorizzati. Non elenca produttori certificati e non autentica da solo un certificato.",
+    "NANDO, onaylanmış kuruluşları ve yetkili kapsamlarını listeler. Sertifikalı üreticileri listelemez veya tek başına bir sertifikayı doğrulamaz.",
+    "تسرد NANDO الجهات المُبلّغة ونطاقات تفويضها. لا تسرد المصنّعين المعتمدين ولا تثبت وحدها أصالة الشهادة.",
+    "NANDO अधिसूचित निकायों और उनके अधिकृत दायरों को सूचीबद्ध करता है। इसमें प्रमाणित निर्माताओं की सूची नहीं होती और इससे अकेले प्रमाणपत्र की प्रामाणिकता साबित नहीं होती।",
+    "NANDO列出公告机构及其授权范围，不列出获证制造商，也不能单独证明证书真实性。"
+  ],
+  "Consult NANDO": [
+    "Consultar NANDO",
+    "Consultar NANDO",
+    "NANDO aufrufen",
+    "Consulta NANDO",
+    "NANDO'ya bak",
+    "الاطلاع على NANDO",
+    "NANDO देखें",
+    "查询NANDO"
+  ],
+  "Reference contact": [
+    "Contacto de referencia",
+    "Contacto de referência",
+    "Ansprechpartner",
+    "Referente",
+    "İrtibat kişisi",
+    "جهة الاتصال المرجعية",
+    "संपर्क व्यक्ति",
+    "指定联系人"
+  ],
+  "Name, role, professional email and phone number. Choose below whether buyers can see this contact.": [
+    "Nombre, cargo, correo profesional y teléfono. Elija abajo si los compradores pueden ver este contacto.",
+    "Nome, cargo, email profissional e telefone. Escolha abaixo se os compradores podem ver este contacto.",
+    "Name, Funktion, geschäftliche E-Mail und Telefonnummer. Wählen Sie unten, ob Käufer diesen Kontakt sehen dürfen.",
+    "Nome, ruolo, email professionale e telefono. Scegli sotto se gli acquirenti possono vedere questo contatto.",
+    "Ad, görev, iş e-postası ve telefon numarası. Alıcıların bu kişiyi görüp göremeyeceğini aşağıdan seçin.",
+    "الاسم والمنصب والبريد المهني ورقم الهاتف. اختر أدناه ما إذا كان يمكن للمشترين رؤية جهة الاتصال.",
+    "नाम, पद, व्यावसायिक ईमेल और फ़ोन नंबर। नीचे चुनें कि खरीदार यह संपर्क देख सकते हैं या नहीं।",
+    "姓名、职务、工作邮箱及电话号码。请在下方选择是否向买家显示此联系人。"
+  ],
+  "Phone country (optional with international prefix)": [
+    "País del teléfono (opcional con prefijo internacional)",
+    "País do telefone (opcional com indicativo internacional)",
+    "Telefonland (bei internationaler Vorwahl optional)",
+    "Paese del telefono (facoltativo con prefisso internazionale)",
+    "Telefon ülkesi (uluslararası kod varsa isteğe bağlı)",
+    "بلد الهاتف (اختياري مع الرمز الدولي)",
+    "फ़ोन का देश (अंतरराष्ट्रीय कोड हो तो वैकल्पिक)",
+    "电话号码所属国家（含国际区号时选填）"
+  ],
+  "Job title": [
+    "Cargo",
+    "Cargo",
+    "Position",
+    "Ruolo",
+    "Görev",
+    "المسمى الوظيفي",
+    "पद",
+    "职务"
+  ],
+  "Professional email": [
+    "Correo profesional",
+    "Email profissional",
+    "Geschäftliche E-Mail",
+    "Email professionale",
+    "İş e-postası",
+    "البريد الإلكتروني المهني",
+    "व्यावसायिक ईमेल",
+    "工作邮箱"
+  ],
+  "Phone with country prefix": [
+    "Teléfono con prefijo de país",
+    "Telefone com indicativo do país",
+    "Telefon mit Landesvorwahl",
+    "Telefono con prefisso internazionale",
+    "Ülke koduyla telefon",
+    "الهاتف مع رمز البلد",
+    "देश कोड सहित फ़ोन",
+    "含国家区号的电话"
+  ],
+  "Spoken languages": [
+    "Idiomas hablados",
+    "Idiomas falados",
+    "Gesprochene Sprachen",
+    "Lingue parlate",
+    "Konuşulan diller",
+    "اللغات المتحدث بها",
+    "बोली जाने वाली भाषाएँ",
+    "使用语言"
+  ],
+  "Display this reference contact on the public company profile.": [
+    "Mostrar este contacto en el perfil público de la empresa.",
+    "Mostrar este contacto no perfil público da empresa.",
+    "Diesen Ansprechpartner im öffentlichen Unternehmensprofil anzeigen.",
+    "Mostra questo referente nel profilo aziendale pubblico.",
+    "Bu irtibat kişisini herkese açık şirket profilinde göster.",
+    "عرض جهة الاتصال هذه في ملف الشركة العام.",
+    "यह संपर्क सार्वजनिक कंपनी प्रोफ़ाइल में दिखाएँ।",
+    "在企业公开资料中显示此联系人。"
+  ],
+  "Export & commercial conditions": [
+    "Exportación y condiciones comerciales",
+    "Exportação e condições comerciais",
+    "Export und Geschäftsbedingungen",
+    "Esportazione e condizioni commerciali",
+    "İhracat ve ticari koşullar",
+    "التصدير والشروط التجارية",
+    "निर्यात और व्यापारिक शर्तें",
+    "出口及商务条件"
+  ],
+  "These are declared capabilities, not a binding quotation.": [
+    "Son capacidades declaradas, no un presupuesto vinculante.",
+    "São capacidades declaradas, não uma proposta vinculativa.",
+    "Dies sind selbst erklärte Möglichkeiten, kein verbindliches Angebot.",
+    "Sono capacità dichiarate, non un preventivo vincolante.",
+    "Bunlar beyan edilen yeteneklerdir; bağlayıcı teklif değildir.",
+    "هذه قدرات مُعلنة وليست عرض سعر ملزمًا.",
+    "ये घोषित क्षमताएँ हैं, बाध्यकारी कोटेशन नहीं।",
+    "这些为自行声明的能力，不构成有约束力的报价。"
+  ],
+  "Delivery markets": [
+    "Mercados de entrega",
+    "Mercados de entrega",
+    "Liefermärkte",
+    "Mercati di consegna",
+    "Teslimat pazarları",
+    "أسواق التسليم",
+    "डिलीवरी बाज़ार",
+    "供货市场"
+  ],
+  "Document languages": [
+    "Idiomas de los documentos",
+    "Idiomas dos documentos",
+    "Dokumentensprachen",
+    "Lingue dei documenti",
+    "Belge dilleri",
+    "لغات المستندات",
+    "दस्तावेज़ों की भाषाएँ",
+    "文件语言"
+  ],
+  "Accepted currencies": [
+    "Monedas aceptadas",
+    "Moedas aceites",
+    "Akzeptierte Währungen",
+    "Valute accettate",
+    "Kabul edilen para birimleri",
+    "العملات المقبولة",
+    "स्वीकार्य मुद्राएँ",
+    "接受币种"
+  ],
+  "Incoterms offered, with named place": [
+    "Incoterms ofrecidos, con lugar designado",
+    "Incoterms oferecidos, com local designado",
+    "Angebotene Incoterms mit benanntem Ort",
+    "Incoterms offerti, con luogo indicato",
+    "Sunulan Incoterms, belirlenmiş yerle",
+    "شروط Incoterms المقترحة مع المكان المحدد",
+    "प्रस्तावित Incoterms, निर्धारित स्थान सहित",
+    "提供的Incoterms及指定地点"
+  ],
+  "Shipping location / port": [
+    "Lugar / puerto de envío",
+    "Local / porto de expedição",
+    "Versandort / Hafen",
+    "Luogo / porto di spedizione",
+    "Sevkiyat yeri / limanı",
+    "موقع / ميناء الشحن",
+    "शिपिंग स्थान / बंदरगाह",
+    "发货地点／港口"
+  ],
+  "Target response time (business days)": [
+    "Plazo de respuesta previsto (días laborables)",
+    "Prazo de resposta previsto (dias úteis)",
+    "Angestrebte Antwortzeit (Werktage)",
+    "Tempo di risposta previsto (giorni lavorativi)",
+    "Hedef yanıt süresi (iş günü)",
+    "مدة الرد المستهدفة (أيام عمل)",
+    "लक्षित जवाब समय (कार्यदिवस)",
+    "目标回复时间（工作日）"
+  ],
+  "Example: FCA Bursa, Incoterms 2020.": [
+    "Ejemplo: FCA Bursa, Incoterms 2020.",
+    "Exemplo: FCA Bursa, Incoterms 2020.",
+    "Beispiel: FCA Bursa, Incoterms 2020.",
+    "Esempio: FCA Bursa, Incoterms 2020.",
+    "Örnek: FCA Bursa, Incoterms 2020.",
+    "مثال: FCA Bursa، Incoterms 2020.",
+    "उदाहरण: FCA Bursa, Incoterms 2020.",
+    "示例：FCA Bursa，Incoterms 2020。"
+  ],
+  "Samples / prototypes": [
+    "Muestras / prototipos",
+    "Amostras / protótipos",
+    "Muster / Prototypen",
+    "Campioni / prototipi",
+    "Numuneler / prototipler",
+    "عينات / نماذج أولية",
+    "नमूने / प्रोटोटाइप",
+    "样品／原型"
+  ],
+  "Available": [
+    "Disponibles",
+    "Disponíveis",
+    "Verfügbar",
+    "Disponibili",
+    "Mevcut",
+    "متاحة",
+    "उपलब्ध",
+    "可提供"
+  ],
+  "Not offered": [
+    "No se ofrecen",
+    "Não disponíveis",
+    "Nicht angeboten",
+    "Non offerti",
+    "Sunulmuyor",
+    "غير متاحة",
+    "प्रस्तावित नहीं",
+    "不提供"
+  ],
+  "After review": [
+    "Tras evaluación",
+    "Após análise",
+    "Nach Prüfung",
+    "Dopo valutazione",
+    "İnceleme sonrası",
+    "بعد المراجعة",
+    "समीक्षा के बाद",
+    "评估后确定"
+  ],
+  "Packaging & shipping information": [
+    "Información de embalaje y envío",
+    "Informações de embalagem e expedição",
+    "Verpackungs- und Versandinformationen",
+    "Informazioni su imballaggio e spedizione",
+    "Ambalaj ve sevkiyat bilgileri",
+    "معلومات التغليف والشحن",
+    "पैकेजिंग और शिपिंग जानकारी",
+    "包装及运输信息"
+  ],
+  "Profile preview": [
+    "Vista previa del perfil",
+    "Pré-visualização do perfil",
+    "Profilvorschau",
+    "Anteprima del profilo",
+    "Profil önizlemesi",
+    "معاينة الملف",
+    "प्रोफ़ाइल का पूर्वावलोकन",
+    "资料预览"
+  ],
+  "This preview is private. Company details and claims are declared and have not been independently verified.": [
+    "Esta vista previa es privada. Los datos y afirmaciones de la empresa son declaraciones y no han sido verificados de forma independiente.",
+    "Esta pré-visualização é privada. Os dados e alegações da empresa são declarados e não foram verificados de forma independente.",
+    "Diese Vorschau ist privat. Die Unternehmensangaben sind selbst erklärt und wurden nicht unabhängig geprüft.",
+    "Questa anteprima è privata. Le informazioni e le dichiarazioni aziendali non sono state verificate in modo indipendente.",
+    "Bu önizleme gizlidir. Şirket bilgileri ve iddiaları beyana dayanır; bağımsız olarak doğrulanmamıştır.",
+    "هذه المعاينة خاصة. معلومات الشركة وادعاءاتها مُعلنة ذاتيًا ولم تُتحقق منها جهة مستقلة.",
+    "यह पूर्वावलोकन निजी है। कंपनी के विवरण और दावे स्वयं घोषित हैं और स्वतंत्र रूप से सत्यापित नहीं किए गए हैं।",
+    "此预览为私密内容。企业信息和声明由企业自行提供，未经独立验证。"
+  ],
+  "Company name": [
+    "Nombre de la empresa",
+    "Nome da empresa",
+    "Unternehmensname",
+    "Nome dell'azienda",
+    "Şirket adı",
+    "اسم الشركة",
+    "कंपनी का नाम",
+    "企业名称"
+  ],
+  "View this location on Google Maps": [
+    "Ver esta ubicación en Google Maps",
+    "Ver esta localização no Google Maps",
+    "Diesen Standort auf Google Maps ansehen",
+    "Vedi questa posizione su Google Maps",
+    "Bu konumu Google Maps'te gör",
+    "عرض هذا الموقع على خرائط Google",
+    "यह स्थान Google Maps पर देखें",
+    "在Google地图中查看此位置"
+  ],
+  "production sites": [
+    "centros de producción",
+    "instalações de produção",
+    "Produktionsstandorte",
+    "siti produttivi",
+    "üretim tesisi",
+    "مواقع إنتاج",
+    "उत्पादन स्थल",
+    "个生产场所"
+  ],
+  "products & services": [
+    "productos y servicios",
+    "produtos e serviços",
+    "Produkte und Dienstleistungen",
+    "prodotti e servizi",
+    "ürün ve hizmet",
+    "منتجات وخدمات",
+    "उत्पाद और सेवाएँ",
+    "项产品与服务"
+  ],
+  "employees": [
+    "empleados",
+    "colaboradores",
+    "Beschäftigte",
+    "dipendenti",
+    "çalışan",
+    "موظفون",
+    "कर्मचारी",
+    "名员工"
+  ],
+  "Supplier-provided factory photo": [
+    "Foto de fábrica proporcionada por el proveedor",
+    "Foto da fábrica fornecida pelo fornecedor",
+    "Vom Lieferanten bereitgestelltes Fabrikfoto",
+    "Foto dello stabilimento fornita dal fornitore",
+    "Tedarikçinin sağladığı fabrika fotoğrafı",
+    "صورة المصنع المقدمة من المورد",
+    "आपूर्तिकर्ता द्वारा दी गई कारखाने की फ़ोटो",
+    "供应商提供的工厂照片"
+  ],
+  "Photo supplied by the company": [
+    "Foto proporcionada por la empresa",
+    "Foto fornecida pela empresa",
+    "Vom Unternehmen bereitgestelltes Foto",
+    "Foto fornita dall'azienda",
+    "Şirketin sağladığı fotoğraf",
+    "صورة مقدمة من الشركة",
+    "कंपनी द्वारा दी गई फ़ोटो",
+    "企业提供的照片"
+  ],
+  "Processes & materials": [
+    "Procesos y materiales",
+    "Processos e materiais",
+    "Verfahren und Materialien",
+    "Processi e materiali",
+    "Süreçler ve malzemeler",
+    "العمليات والمواد",
+    "प्रक्रियाएँ और सामग्री",
+    "工艺及材料"
+  ],
+  "Quotation after specification review": [
+    "Presupuesto tras revisar las especificaciones",
+    "Proposta após análise das especificações",
+    "Angebot nach Prüfung der Spezifikationen",
+    "Preventivo dopo l'esame delle specifiche",
+    "Teknik özellikler incelendikten sonra teklif",
+    "عرض سعر بعد مراجعة المواصفات",
+    "विशेषताओं की समीक्षा के बाद कोटेशन",
+    "审核规格后报价"
+  ],
+  "Minimum": [
+    "Mínimo",
+    "Mínimo",
+    "Minimum",
+    "Minimo",
+    "En az",
+    "الحد الأدنى",
+    "न्यूनतम",
+    "最低"
+  ],
+  "Registration numbers and supporting files are excluded from this preview.": [
+    "Los números de registro y justificantes no se incluyen en esta vista previa.",
+    "Os números de registo e comprovativos não são incluídos nesta pré-visualização.",
+    "Registrierungsnummern und Nachweisdokumente sind nicht Teil dieser Vorschau.",
+    "I numeri di registrazione e i documenti di supporto non sono inclusi in questa anteprima.",
+    "Tescil numaraları ve destekleyici dosyalar bu önizlemeye dahil değildir.",
+    "لا تتضمن هذه المعاينة أرقام التسجيل والملفات الداعمة.",
+    "पंजीकरण संख्याएँ और सहायक फ़ाइलें इस पूर्वावलोकन में शामिल नहीं हैं।",
+    "此预览不包含注册编号及证明文件。"
+  ],
+  "Optional verification by GSL": [
+    "Verificación opcional por GSL",
+    "Verificação opcional pela GSL",
+    "Optionale Prüfung durch GSL",
+    "Verifica facoltativa da parte di GSL",
+    "GSL tarafından isteğe bağlı doğrulama",
+    "تحقق اختياري من GSL",
+    "GSL द्वारा वैकल्पिक सत्यापन",
+    "GSL可选验证"
+  ],
+  "How your company is reviewed": [
+    "Cómo se revisa su empresa",
+    "Como a empresa é analisada",
+    "So wird Ihr Unternehmen geprüft",
+    "Come viene verificata la tua azienda",
+    "Şirketiniz nasıl incelenir",
+    "كيف تُراجع شركتك",
+    "आपकी कंपनी की समीक्षा कैसे होती है",
+    "企业审核方式"
+  ],
+  "GSL checks the consistency of the company profile before deciding whether to publish it. You may be asked to correct or complete your application.": [
+    "GSL comprueba la coherencia del perfil antes de decidir su publicación. Puede solicitarle correcciones o datos adicionales.",
+    "A GSL verifica a coerência do perfil antes de decidir a publicação. Podem ser pedidas correções ou informações adicionais.",
+    "GSL prüft die Schlüssigkeit des Unternehmensprofils vor der Entscheidung über die Veröffentlichung. Korrekturen oder Ergänzungen können angefordert werden.",
+    "GSL verifica la coerenza del profilo prima di deciderne la pubblicazione. Potrebbero essere richieste correzioni o integrazioni.",
+    "GSL, yayın kararından önce şirket profilinin tutarlılığını kontrol eder. Başvurunuzu düzeltmeniz veya tamamlamanız istenebilir.",
+    "تتحقق GSL من اتساق ملف الشركة قبل تقرير نشره. قد يُطلب منك تصحيح الطلب أو استكماله.",
+    "प्रकाशन का निर्णय लेने से पहले GSL कंपनी प्रोफ़ाइल की संगति जाँचता है। आपसे आवेदन सुधारने या पूरा करने को कहा जा सकता है।",
+    "GSL会在决定发布前检查企业资料的一致性，可能要求您修改或补充申请。"
+  ],
+  "Business identity": [
+    "Identidad empresarial",
+    "Identidade empresarial",
+    "Unternehmensidentität",
+    "Identità dell'impresa",
+    "İşletme kimliği",
+    "هوية النشاط التجاري",
+    "व्यवसाय की पहचान",
+    "企业身份"
+  ],
+  "Registered name, local registry evidence and registered office must match.": [
+    "La razón social, el justificante del registro y el domicilio social deben coincidir.",
+    "A denominação social, o comprovativo de registo e a sede devem corresponder.",
+    "Eingetragener Name, lokaler Registerbeleg und Sitz müssen übereinstimmen.",
+    "Ragione sociale, prova di registrazione locale e sede legale devono corrispondere.",
+    "Tescilli unvan, yerel sicil belgesi ve kayıtlı merkez birbiriyle uyuşmalıdır.",
+    "يجب أن يتطابق الاسم المسجل وإثبات السجل المحلي والمقر المسجل.",
+    "पंजीकृत नाम, स्थानीय पंजीकरण प्रमाण और पंजीकृत कार्यालय मेल खाने चाहिए।",
+    "注册名称、当地登记证明及注册地址必须一致。"
+  ],
+  "Professional presence & contact": [
+    "Presencia profesional y contacto",
+    "Presença profissional e contacto",
+    "Geschäftliche Präsenz und Kontakt",
+    "Presenza professionale e contatti",
+    "Profesyonel varlık ve iletişim",
+    "الحضور المهني وبيانات الاتصال",
+    "व्यावसायिक उपस्थिति और संपर्क",
+    "专业展示及联系信息"
+  ],
+  "Website or public business profile, activity description and reachable business contact.": [
+    "Sitio web o perfil empresarial público, descripción de actividad y contacto profesional localizable.",
+    "Site ou perfil empresarial público, descrição da atividade e contacto profissional acessível.",
+    "Website oder öffentliches Firmenprofil, Tätigkeitsbeschreibung und erreichbarer Geschäftskontakt.",
+    "Sito o profilo aziendale pubblico, descrizione dell'attività e contatto professionale raggiungibile.",
+    "Web sitesi veya herkese açık şirket profili, faaliyet açıklaması ve ulaşılabilir iş iletişim kişisi.",
+    "موقع أو ملف تجاري عام ووصف للنشاط وجهة اتصال مهنية يمكن الوصول إليها.",
+    "वेबसाइट या सार्वजनिक व्यावसायिक प्रोफ़ाइल, गतिविधि विवरण और संपर्क योग्य व्यावसायिक व्यक्ति।",
+    "网站或公开企业资料、业务描述及可联系的业务联系人。"
+  ],
+  "B2B relevance & duplicate profiles": [
+    "Pertinencia B2B y perfiles duplicados",
+    "Relevância B2B e perfis duplicados",
+    "B2B-Eignung und doppelte Profile",
+    "Pertinenza B2B e profili duplicati",
+    "B2B uygunluğu ve yinelenen profiller",
+    "الملاءمة بين الشركات والملفات المكررة",
+    "B2B प्रासंगिकता और दोहरी प्रोफ़ाइल",
+    "B2B相关性及重复资料"
+  ],
+  "Industrial offers suitable for professional buyers, with a check for an existing company listing.": [
+    "Ofertas industriales adecuadas para compradores profesionales y comprobación de una ficha empresarial existente.",
+    "Ofertas industriais adequadas a compradores profissionais e verificação de uma ficha empresarial existente.",
+    "Für gewerbliche Käufer geeignete Industrieangebote und Prüfung auf einen bestehenden Unternehmenseintrag.",
+    "Offerte industriali adatte agli acquirenti professionali e controllo di eventuali schede aziendali esistenti.",
+    "Profesyonel alıcılara uygun endüstriyel teklifler ve mevcut şirket kaydı kontrolü.",
+    "عروض صناعية مناسبة للمشترين المهنيين مع التحقق من وجود صفحة سابقة للشركة.",
+    "पेशेवर खरीदारों के लिए उपयुक्त औद्योगिक पेशकशें और कंपनी की पहले से मौजूद सूची की जाँच।",
+    "确认工业产品及服务适合专业买家，并检查是否已有企业资料。"
+  ],
+  "Supporting documents": [
+    "Documentos justificativos",
+    "Documentos comprovativos",
+    "Nachweisdokumente",
+    "Documenti di supporto",
+    "Destekleyici belgeler",
+    "المستندات الداعمة",
+    "सहायक दस्तावेज़",
+    "证明材料"
+  ],
+  "Document issuer, scope, dates and relation to the stated product reference.": [
+    "Emisor, alcance, fechas y relación con la referencia de producto declarada.",
+    "Emissor, âmbito, datas e relação com a referência do produto declarada.",
+    "Aussteller, Geltungsbereich, Daten und Bezug zur angegebenen Produktreferenz.",
+    "Emittente, ambito, date e rapporto con il riferimento del prodotto dichiarato.",
+    "Belgeyi düzenleyen, kapsam, tarihler ve beyan edilen ürün referansıyla ilişki.",
+    "الجهة المصدرة والنطاق والتواريخ والعلاقة بمرجع المنتج المُعلن.",
+    "जारीकर्ता, दायरा, तारीखें और घोषित उत्पाद संदर्भ से संबंध।",
+    "文件签发方、适用范围、日期及与所声明产品编号的关联。"
+  ],
+  "Manual review by GSL": [
+    "Revisión manual por GSL",
+    "Análise manual pela GSL",
+    "Manuelle Prüfung durch GSL",
+    "Verifica manuale di GSL",
+    "GSL tarafından manuel inceleme",
+    "مراجعة يدوية من GSL",
+    "GSL द्वारा मैन्युअल समीक्षा",
+    "GSL人工审核"
+  ],
+  "An approved company profile is not a product certification. Technical conformity is assessed separately for each reference.": [
+    "Un perfil de empresa aprobado no es una certificación de producto. La conformidad técnica se evalúa por separado para cada referencia.",
+    "Um perfil de empresa aprovado não é uma certificação de produto. A conformidade técnica é avaliada separadamente para cada referência.",
+    "Ein freigegebenes Unternehmensprofil ist keine Produktzertifizierung. Die technische Konformität wird für jede Referenz gesondert geprüft.",
+    "Un profilo aziendale approvato non è una certificazione del prodotto. La conformità tecnica viene valutata separatamente per ogni riferimento.",
+    "Onaylanan şirket profili, ürün sertifikası değildir. Teknik uygunluk her ürün referansı için ayrı değerlendirilir.",
+    "اعتماد ملف الشركة لا يعني اعتماد المنتج. تُقيّم المطابقة الفنية لكل مرجع على حدة.",
+    "स्वीकृत कंपनी प्रोफ़ाइल उत्पाद का प्रमाणन नहीं है। हर उत्पाद संदर्भ की तकनीकी अनुरूपता अलग जाँची जाती है।",
+    "企业资料获批不等于产品认证。每个产品编号的技术合规性须另行评估。"
+  ],
+  "Products to review": [
+    "Productos por revisar",
+    "Produtos a verificar",
+    "Zu prüfende Produkte",
+    "Prodotti da verificare",
+    "Kontrol edilecek ürünler",
+    "منتجات للمراجعة",
+    "समीक्षा के लिए उत्पाद",
+    "待检查产品"
+  ],
+  "Untitled product": [
+    "Producto sin título",
+    "Produto sem título",
+    "Unbenanntes Produkt",
+    "Prodotto senza titolo",
+    "Adsız ürün",
+    "منتج بلا عنوان",
+    "बिना शीर्षक वाला उत्पाद",
+    "未命名产品"
+  ],
+  "Private draft": [
+    "Borrador privado",
+    "Rascunho privado",
+    "Privater Entwurf",
+    "Bozza privata",
+    "Özel taslak",
+    "مسودة خاصة",
+    "निजी ड्राफ़्ट",
+    "私密草稿"
+  ],
+  "Included in the publication": [
+    "Incluido en la publicación",
+    "Incluído na publicação",
+    "Zur Veröffentlichung vorgesehen",
+    "Incluso nella pubblicazione",
+    "Yayına dahil",
+    "مُدرج في النشر",
+    "प्रकाशन में शामिल",
+    "包含在发布内容中"
+  ],
+  "Add your first product from the Products section.": [
+    "Añada su primer producto desde la sección Productos.",
+    "Adicione o primeiro produto na secção Produtos.",
+    "Fügen Sie Ihr erstes Produkt im Bereich Produkte hinzu.",
+    "Aggiungi il primo prodotto dalla sezione Prodotti.",
+    "İlk ürününüzü Ürünler bölümünden ekleyin.",
+    "أضف منتجك الأول من قسم المنتجات.",
+    "उत्पाद अनुभाग से अपना पहला उत्पाद जोड़ें।",
+    "在“产品”部分添加首个产品。"
+  ],
+  "Company profile": [
+    "Perfil de empresa",
+    "Perfil da empresa",
+    "Unternehmensprofil",
+    "Profilo aziendale",
+    "Şirket profili",
+    "ملف الشركة",
+    "कंपनी प्रोफ़ाइल",
+    "企业资料"
+  ],
+  "Before you submit": [
+    "Antes de enviar",
+    "Antes de submeter",
+    "Vor dem Einreichen",
+    "Prima dell'invio",
+    "Göndermeden önce",
+    "قبل الإرسال",
+    "जमा करने से पहले",
+    "提交前"
+  ],
+  "Products marked for publication appear immediately on the site, without verification. Photos, certificates and optional details can be added later. Your company must already be published.": [
+    "Los productos marcados para publicación aparecen de inmediato, sin verificación. Puede añadir fotos, certificados y detalles opcionales después. Su empresa debe estar ya publicada.",
+    "Os produtos marcados para publicação aparecem de imediato no site, sem verificação. Pode adicionar fotos, certificados e detalhes opcionais depois. A empresa já deve estar publicada.",
+    "Zur Veröffentlichung vorgesehene Produkte erscheinen sofort ungeprüft auf der Website. Fotos, Zertifikate und optionale Angaben können später ergänzt werden. Ihr Unternehmen muss bereits veröffentlicht sein.",
+    "I prodotti destinati alla pubblicazione appaiono subito sul sito, senza verifica. Foto, certificati e dettagli facoltativi si possono aggiungere dopo. L'azienda deve essere già pubblicata.",
+    "Yayınlanacak ürünler doğrulama olmadan hemen sitede görünür. Fotoğraflar, sertifikalar ve isteğe bağlı bilgiler sonra eklenebilir. Şirketiniz önceden yayınlanmış olmalıdır.",
+    "تظهر المنتجات المحددة للنشر فورًا على الموقع دون تحقق. يمكن إضافة الصور والشهادات والتفاصيل الاختيارية لاحقًا. يجب أن تكون شركتك منشورة بالفعل.",
+    "प्रकाशन के लिए चुने उत्पाद बिना सत्यापन के तुरंत साइट पर दिखते हैं। फ़ोटो, प्रमाणपत्र और वैकल्पिक विवरण बाद में जोड़ें। कंपनी पहले से प्रकाशित होनी चाहिए।",
+    "标记发布的产品会立即出现在网站上，不经验证。照片、证书及选填信息可稍后补充。企业必须已发布。"
+  ],
+  "Your company will appear immediately on the public site as Unverified. Its company details and completed manufacturing capabilities are public. Documents remain private. The reference contact is public only if you choose to display it.": [
+    "Su empresa aparecerá de inmediato como No verificada. Los datos de empresa y capacidades de fabricación completadas serán públicos. Los documentos seguirán privados. El contacto será público solo si elige mostrarlo.",
+    "A empresa aparecerá de imediato como Não verificada. Os dados da empresa e capacidades de fabrico preenchidas serão públicos. Os documentos continuam privados. O contacto só será público se escolher mostrá-lo.",
+    "Ihr Unternehmen erscheint sofort als ungeprüft auf der öffentlichen Website. Unternehmensdaten und ausgefüllte Fertigungsangaben sind öffentlich. Dokumente bleiben privat. Der Ansprechpartner ist nur sichtbar, wenn Sie dies auswählen.",
+    "L'azienda apparirà subito come Non verificata. I dati aziendali e le capacità produttive compilate saranno pubblici. I documenti resteranno privati. Il referente sarà pubblico solo se scegli di mostrarlo.",
+    "Şirketiniz hemen Doğrulanmamış olarak görünür. Şirket bilgileri ve doldurulan üretim yetenekleri herkese açıktır. Belgeler gizli kalır. İrtibat kişisi yalnızca göstermeyi seçerseniz yayınlanır.",
+    "ستظهر شركتك فورًا على الموقع بوصفها غير متحقق منها. تُنشر بياناتها وقدرات التصنيع المُدخلة. تبقى المستندات خاصة. لا تظهر جهة الاتصال إلا إذا اخترت عرضها.",
+    "आपकी कंपनी तुरंत सार्वजनिक साइट पर असत्यापित दिखेगी। कंपनी का विवरण और भरी हुई विनिर्माण क्षमताएँ सार्वजनिक होंगी। दस्तावेज़ निजी रहेंगे। संपर्क व्यक्ति तभी दिखेगा जब आप उसे दिखाने का विकल्प चुनें।",
+    "企业将立即以“未验证”状态公开上线。企业信息及已填写的制造能力会公开，文件保持私密。只有您选择展示时，指定联系人信息才会公开。"
+  ],
+  "Required before submission": [
+    "Requerido antes del envío",
+    "Necessário antes da submissão",
+    "Vor dem Einreichen erforderlich",
+    "Richiesto prima dell'invio",
+    "Gönderimden önce gerekli",
+    "مطلوب قبل الإرسال",
+    "जमा करने से पहले आवश्यक",
+    "提交前必填"
+  ],
+  "Optional — complete later": [
+    "Opcional: completar después",
+    "Opcional — completar mais tarde",
+    "Optional – später vervollständigen",
+    "Facoltativo — completa in seguito",
+    "İsteğe bağlı — sonra tamamlayın",
+    "اختياري — يُستكمل لاحقًا",
+    "वैकल्पिक — बाद में पूरा करें",
+    "选填——稍后完善"
+  ],
+  "I am authorised to represent this company. I confirm that these details are accurate to my knowledge and that I have the rights to share the uploaded photos and documents with GSL for review.": [
+    "Estoy autorizado para representar a esta empresa. Confirmo que estos datos son correctos según mi conocimiento y que tengo derecho a compartir las fotos y documentos con GSL para su revisión.",
+    "Estou autorizado a representar esta empresa. Confirmo que os dados são corretos tanto quanto sei e que tenho direito a partilhar as fotos e documentos com a GSL para análise.",
+    "Ich bin zur Vertretung dieses Unternehmens berechtigt. Ich bestätige die Richtigkeit der Angaben nach bestem Wissen und meine Berechtigung, die hochgeladenen Fotos und Dokumente zur Prüfung mit GSL zu teilen.",
+    "Sono autorizzato a rappresentare questa azienda. Confermo l'esattezza dei dati per quanto a mia conoscenza e di avere il diritto di condividere foto e documenti con GSL per la verifica.",
+    "Bu şirketi temsil etmeye yetkiliyim. Bilgilerin bildiğim kadarıyla doğru olduğunu ve yüklenen fotoğraf ve belgeleri inceleme için GSL ile paylaşma hakkım bulunduğunu onaylıyorum.",
+    "أنا مخوّل بتمثيل هذه الشركة. أؤكد صحة المعلومات حسب علمي وامتلاكي حقوق مشاركة الصور والمستندات المرفوعة مع GSL للمراجعة.",
+    "मैं इस कंपनी का प्रतिनिधित्व करने के लिए अधिकृत हूँ। मेरी जानकारी के अनुसार ये विवरण सही हैं और मुझे अपलोड की गई फ़ोटो व दस्तावेज़ समीक्षा के लिए GSL से साझा करने का अधिकार है।",
+    "我有权代表此企业。我确认这些信息据我所知准确无误，并有权将上传的照片和文件提供给GSL审核。"
+  ],
+  "Publish my products": [
+    "Publicar mis productos",
+    "Publicar os meus produtos",
+    "Meine Produkte veröffentlichen",
+    "Pubblica i miei prodotti",
+    "Ürünlerimi yayınla",
+    "نشر منتجاتي",
+    "मेरे उत्पाद प्रकाशित करें",
+    "发布我的产品"
+  ],
+  "Publish my changes": [
+    "Publicar mis cambios",
+    "Publicar as minhas alterações",
+    "Meine Änderungen veröffentlichen",
+    "Pubblica le mie modifiche",
+    "Değişikliklerimi yayınla",
+    "نشر تغييراتي",
+    "मेरे बदलाव प्रकाशित करें",
+    "发布我的更改"
+  ],
+  "Publish my company": [
+    "Publicar mi empresa",
+    "Publicar a minha empresa",
+    "Mein Unternehmen veröffentlichen",
+    "Pubblica la mia azienda",
+    "Şirketimi yayınla",
+    "نشر شركتي",
+    "मेरी कंपनी प्रकाशित करें",
+    "发布我的企业"
+  ],
+  "Previous": [
+    "Anterior",
+    "Anterior",
+    "Zurück",
+    "Precedente",
+    "Önceki",
+    "السابق",
+    "पिछला",
+    "上一步"
+  ],
+  "Save my products": [
+    "Guardar mis productos",
+    "Guardar os meus produtos",
+    "Meine Produkte speichern",
+    "Salva i miei prodotti",
+    "Ürünlerimi kaydet",
+    "حفظ منتجاتي",
+    "मेरे उत्पाद सहेजें",
+    "保存我的产品"
+  ],
+  "Save company profile": [
+    "Guardar perfil de empresa",
+    "Guardar perfil da empresa",
+    "Unternehmensprofil speichern",
+    "Salva il profilo aziendale",
+    "Şirket profilini kaydet",
+    "حفظ ملف الشركة",
+    "कंपनी प्रोफ़ाइल सहेजें",
+    "保存企业资料"
+  ],
+  "Application history": [
+    "Historial de la solicitud",
+    "Histórico da candidatura",
+    "Antragsverlauf",
+    "Cronologia della richiesta",
+    "Başvuru geçmişi",
+    "سجل الطلب",
+    "आवेदन का इतिहास",
+    "申请历史"
+  ],
+  "Maximum five cover photos.": [
+    "Máximo cinco fotos de portada.",
+    "No máximo cinco fotos de capa.",
+    "Höchstens fünf Titelbilder.",
+    "Massimo cinque foto di copertina.",
+    "En fazla beş kapak fotoğrafı.",
+    "خمس صور غلاف كحد أقصى.",
+    "अधिकतम पाँच कवर फ़ोटो।",
+    "最多五张封面照片。"
+  ],
+  "Each image must be under 3 MB.": [
+    "Cada imagen debe ser menor de 3 MB.",
+    "Cada imagem deve ter menos de 3 MB.",
+    "Jedes Bild muss kleiner als 3 MB sein.",
+    "Ogni immagine deve essere inferiore a 3 MB.",
+    "Her görsel 3 MB'den küçük olmalıdır.",
+    "يجب أن تكون كل صورة أقل من 3 ميغابايت.",
+    "हर चित्र 3 MB से छोटा होना चाहिए।",
+    "每张图片须小于3 MB。"
+  ],
+  "Image storage limit reached. Contact GSL to clear unused images.": [
+    "Se ha alcanzado el límite de imágenes almacenadas. Contacte con GSL para eliminar imágenes sin uso.",
+    "O limite de armazenamento de imagens foi atingido. Contacte a GSL para remover imagens não utilizadas.",
+    "Das Bildspeicherlimit wurde erreicht. Kontaktieren Sie GSL, um ungenutzte Bilder zu entfernen.",
+    "Limite di archiviazione immagini raggiunto. Contatta GSL per eliminare quelle inutilizzate.",
+    "Görsel depolama sınırına ulaşıldı. Kullanılmayan görselleri temizlemek için GSL ile iletişime geçin.",
+    "تم بلوغ حد تخزين الصور. تواصل مع GSL لإزالة الصور غير المستخدمة.",
+    "चित्र संग्रहण सीमा पूरी हो गई है। अप्रयुक्त चित्र हटाने के लिए GSL से संपर्क करें।",
+    "图片存储已达上限。请联系GSL清理未使用图片。"
+  ],
+  "The image could not be added. Photos already added are kept. Please retry.": [
+    "No se pudo añadir la imagen. Las fotos ya añadidas se conservan. Inténtelo de nuevo.",
+    "Não foi possível adicionar a imagem. As fotos já adicionadas são mantidas. Tente novamente.",
+    "Das Bild konnte nicht hinzugefügt werden. Bereits hinzugefügte Fotos bleiben erhalten. Versuchen Sie es erneut.",
+    "Impossibile aggiungere l'immagine. Le foto già aggiunte vengono conservate. Riprova.",
+    "Görsel eklenemedi. Daha önce eklenen fotoğraflar korunur. Yeniden deneyin.",
+    "تعذرت إضافة الصورة. تُحفظ الصور المضافة سابقًا. حاول مجددًا.",
+    "चित्र नहीं जोड़ा जा सका। पहले जोड़ी गई फ़ोटो सुरक्षित हैं। दोबारा प्रयास करें।",
+    "无法添加图片。已添加的照片会保留，请重试。"
+  ],
+  "Logo and cover photos": [
+    "Logotipo y fotos de portada",
+    "Logótipo e fotos de capa",
+    "Logo und Titelbilder",
+    "Logo e foto di copertina",
+    "Logo ve kapak fotoğrafları",
+    "الشعار وصور الغلاف",
+    "लोगो और कवर फ़ोटो",
+    "标志和封面照片"
+  ],
+  "Optional. Add one logo and up to five photos. The first photo is the cover. Publish your changes to display them on the public profile.": [
+    "Opcional. Añada un logotipo y hasta cinco fotos. La primera será la portada. Publique los cambios para mostrarlos en el perfil público.",
+    "Opcional. Adicione um logótipo e até cinco fotos. A primeira é a capa. Publique as alterações para as mostrar no perfil público.",
+    "Optional. Fügen Sie ein Logo und bis zu fünf Fotos hinzu. Das erste Foto ist das Titelbild. Veröffentlichen Sie die Änderungen, damit sie im öffentlichen Profil erscheinen.",
+    "Facoltativo. Aggiungi un logo e fino a cinque foto. La prima sarà la copertina. Pubblica le modifiche per mostrarle nel profilo pubblico.",
+    "İsteğe bağlı. Bir logo ve en fazla beş fotoğraf ekleyin. İlk fotoğraf kapaktır. Herkese açık profilde görünmeleri için değişiklikleri yayınlayın.",
+    "اختياري. أضف شعارًا وما يصل إلى خمس صور. الأولى هي الغلاف. انشر التغييرات لإظهارها في الملف العام.",
+    "वैकल्पिक। एक लोगो और अधिकतम पाँच फ़ोटो जोड़ें। पहली फ़ोटो कवर होगी। सार्वजनिक प्रोफ़ाइल में दिखाने के लिए बदलाव प्रकाशित करें।",
+    "选填。添加一个标志和最多五张照片，第一张作为封面。发布更改后将在公开资料中展示。"
+  ],
+  "Choose a logo": [
+    "Elegir un logotipo",
+    "Escolher um logótipo",
+    "Logo auswählen",
+    "Scegli un logo",
+    "Logo seç",
+    "اختيار شعار",
+    "लोगो चुनें",
+    "选择标志"
+  ],
+  "Remove logo": [
+    "Eliminar logotipo",
+    "Remover logótipo",
+    "Logo entfernen",
+    "Rimuovi logo",
+    "Logoyu kaldır",
+    "إزالة الشعار",
+    "लोगो हटाएँ",
+    "移除标志"
+  ],
+  "Cover photos": [
+    "Fotos de portada",
+    "Fotos de capa",
+    "Titelbilder",
+    "Foto di copertina",
+    "Kapak fotoğrafları",
+    "صور الغلاف",
+    "कवर फ़ोटो",
+    "封面照片"
+  ],
+  "Cover photo": [
+    "Foto de portada",
+    "Foto de capa",
+    "Titelbild",
+    "Foto di copertina",
+    "Kapak fotoğrafı",
+    "صورة الغلاف",
+    "कवर फ़ोटो",
+    "封面照片"
+  ],
+  "Use as cover": [
+    "Usar como portada",
+    "Usar como capa",
+    "Als Titelbild verwenden",
+    "Usa come copertina",
+    "Kapak olarak kullan",
+    "استخدام كغلاف",
+    "कवर के रूप में इस्तेमाल करें",
+    "设为封面"
+  ],
+  "JPEG, PNG or WebP · 3 MB per image": [
+    "JPEG, PNG o WebP · 3 MB por imagen",
+    "JPEG, PNG ou WebP · 3 MB por imagem",
+    "JPEG, PNG oder WebP · 3 MB pro Bild",
+    "JPEG, PNG o WebP · 3 MB per immagine",
+    "JPEG, PNG veya WebP · Görsel başına 3 MB",
+    "JPEG أو PNG أو WebP · 3 ميغابايت لكل صورة",
+    "JPEG, PNG या WebP · हर चित्र अधिकतम 3 MB",
+    "JPEG、PNG或WebP · 每张3 MB"
+  ],
+  "JPEG, PNG or WebP · 3 MB per image. Upload images you are authorised to publish.": [
+    "JPEG, PNG o WebP · 3 MB por imagen. Suba imágenes que tenga autorización para publicar.",
+    "JPEG, PNG ou WebP · 3 MB por imagem. Envie imagens que está autorizado a publicar.",
+    "JPEG, PNG oder WebP · 3 MB pro Bild. Laden Sie nur Bilder hoch, die Sie veröffentlichen dürfen.",
+    "JPEG, PNG o WebP · 3 MB per immagine. Carica immagini che sei autorizzato a pubblicare.",
+    "JPEG, PNG veya WebP · Görsel başına 3 MB. Yayınlama yetkiniz olan görseller yükleyin.",
+    "JPEG أو PNG أو WebP · 3 ميغابايت لكل صورة. ارفع صورًا مخوّلًا بنشرها.",
+    "JPEG, PNG या WebP · हर चित्र 3 MB। केवल वही चित्र अपलोड करें जिन्हें प्रकाशित करने की अनुमति है।",
+    "JPEG、PNG或WebP · 每张3 MB。请上传您有权发布的图片。"
+  ],
+  "Adding images…": [
+    "Añadiendo imágenes…",
+    "A adicionar imagens…",
+    "Bilder werden hinzugefügt…",
+    "Aggiunta delle immagini…",
+    "Görseller ekleniyor…",
+    "جارٍ إضافة الصور…",
+    "चित्र जोड़े जा रहे हैं…",
+    "正在添加图片…"
+  ],
+  "No pending applications.": [
+    "No hay solicitudes pendientes.",
+    "Não há candidaturas pendentes.",
+    "Keine ausstehenden Anträge.",
+    "Nessuna richiesta in attesa.",
+    "Bekleyen başvuru yok.",
+    "لا توجد طلبات معلقة.",
+    "कोई लंबित आवेदन नहीं।",
+    "暂无待处理申请。"
+  ],
+  "Submission version": [
+    "Versión enviada",
+    "Versão submetida",
+    "Eingereichte Version",
+    "Versione inviata",
+    "Gönderilen sürüm",
+    "النسخة المقدمة",
+    "जमा किया गया संस्करण",
+    "提交版本"
+  ],
+  "Take responsibility for this review": [
+    "Hacerse cargo de esta revisión",
+    "Assumir esta análise",
+    "Diese Prüfung übernehmen",
+    "Prendi in carico questa verifica",
+    "Bu incelemeyi üstlen",
+    "تولي مسؤولية هذه المراجعة",
+    "इस समीक्षा की ज़िम्मेदारी लें",
+    "接手此审核"
+  ],
+  "Private submitted information": [
+    "Información privada enviada",
+    "Informações privadas submetidas",
+    "Eingereichte private Angaben",
+    "Informazioni private inviate",
+    "Gönderilen özel bilgiler",
+    "المعلومات الخاصة المقدمة",
+    "जमा की गई निजी जानकारी",
+    "已提交的私密信息"
+  ],
+  "Check expiry dates explicitly. Retained historical documents are not evidence of current conformity.": [
+    "Compruebe expresamente las fechas de caducidad. Los documentos históricos conservados no demuestran la conformidad actual.",
+    "Verifique expressamente as datas de validade. Os documentos históricos guardados não provam a conformidade atual.",
+    "Prüfen Sie Ablaufdaten ausdrücklich. Aufbewahrte historische Dokumente belegen keine aktuelle Konformität.",
+    "Controlla esplicitamente le scadenze. I documenti storici conservati non provano la conformità attuale.",
+    "Geçerlilik tarihlerini özellikle kontrol edin. Saklanan eski belgeler güncel uygunluğu kanıtlamaz.",
+    "تحقق صراحةً من تواريخ الانتهاء. المستندات التاريخية المحفوظة لا تثبت المطابقة الحالية.",
+    "समाप्ति तिथियाँ स्पष्ट रूप से जाँचें। रखे हुए पुराने दस्तावेज़ वर्तमान अनुरूपता का प्रमाण नहीं हैं।",
+    "请明确核查有效期。留存的历史文件不能证明当前仍然合规。"
+  ],
+  "Restricted to the assigned reviewer. Files are untrusted unless a separate scan result is available; download only for the review. No document is made public by this action.": [
+    "Reservado al revisor asignado. Los archivos no se consideran seguros sin un análisis independiente; descárguelos solo para la revisión. Esta acción no publica ningún documento.",
+    "Restrito ao responsável atribuído. Os ficheiros não são considerados seguros sem análise separada; descarregue-os apenas para a revisão. Esta ação não torna públicos os documentos.",
+    "Nur für die zugewiesene prüfende Person. Dateien gelten ohne gesondertes Scanergebnis als nicht vertrauenswürdig; nur zur Prüfung herunterladen. Dabei wird kein Dokument veröffentlicht.",
+    "Riservato al revisore assegnato. I file non sono considerati sicuri senza una scansione separata; scaricali solo per la verifica. Questa azione non pubblica alcun documento.",
+    "Yalnızca atanmış incelemeciye açıktır. Ayrı tarama sonucu yoksa dosyalar güvenilir sayılmaz; yalnızca inceleme için indirin. Bu işlem hiçbir belgeyi yayınlamaz.",
+    "مقتصر على المراجع المعيّن. لا تُعد الملفات موثوقة دون نتيجة فحص منفصلة؛ نزّلها للمراجعة فقط. لا يُنشر أي مستند بهذا الإجراء.",
+    "केवल नियुक्त समीक्षक के लिए। अलग स्कैन परिणाम के बिना फ़ाइलें भरोसेमंद नहीं मानी जातीं; केवल समीक्षा के लिए डाउनलोड करें। इससे कोई दस्तावेज़ सार्वजनिक नहीं होता।",
+    "仅限指定审核员。无单独扫描结果时，文件不能视为可信；仅供审核下载。此操作不会公开任何文件。"
+  ],
+  "Internal review record": [
+    "Registro interno de revisión",
+    "Registo interno de análise",
+    "Interner Prüfvermerk",
+    "Registro interno della verifica",
+    "Dahili inceleme kaydı",
+    "سجل المراجعة الداخلي",
+    "आंतरिक समीक्षा रिकॉर्ड",
+    "内部审核记录"
+  ],
+  "Legal identity and representation checked against evidence": [
+    "Identidad jurídica y representación contrastadas con justificantes",
+    "Identidade jurídica e representação verificadas com comprovativos",
+    "Rechtliche Identität und Vertretung anhand von Nachweisen geprüft",
+    "Identità giuridica e rappresentanza verificate sui documenti",
+    "Yasal kimlik ve temsil yetkisi belgelerle kontrol edildi",
+    "تم التحقق من الهوية القانونية والتمثيل بالمستندات",
+    "कानूनी पहचान और प्रतिनिधित्व प्रमाणों से जाँचे गए",
+    "已依据证明材料核查法律身份及代表资格"
+  ],
+  "Manufacturing claims and document scopes reviewed": [
+    "Declaraciones de fabricación y alcances de documentos revisados",
+    "Alegações de fabrico e âmbitos dos documentos analisados",
+    "Fertigungsangaben und Dokumentengeltungsbereiche geprüft",
+    "Dichiarazioni produttive e ambiti dei documenti esaminati",
+    "Üretim beyanları ve belge kapsamları incelendi",
+    "تمت مراجعة ادعاءات التصنيع ونطاقات المستندات",
+    "विनिर्माण दावों और दस्तावेज़ों के दायरों की समीक्षा हुई",
+    "已审核制造声明及文件适用范围"
+  ],
+  "Public fields checked for confidential information": [
+    "Campos públicos revisados para evitar datos confidenciales",
+    "Campos públicos verificados quanto a informações confidenciais",
+    "Öffentliche Felder auf vertrauliche Angaben geprüft",
+    "Campi pubblici controllati per informazioni riservate",
+    "Herkese açık alanlar gizli bilgiler açısından kontrol edildi",
+    "تم فحص الحقول العامة بحثًا عن معلومات سرية",
+    "सार्वजनिक फ़ील्ड में गोपनीय जानकारी की जाँच हुई",
+    "已检查公开字段中的保密信息"
+  ],
+  "Sources, dates, observations — internal only": [
+    "Fuentes, fechas y observaciones: solo uso interno",
+    "Fontes, datas e observações — apenas uso interno",
+    "Quellen, Daten, Beobachtungen – nur intern",
+    "Fonti, date, osservazioni — solo uso interno",
+    "Kaynaklar, tarihler, gözlemler — yalnızca dahili kullanım",
+    "المصادر والتواريخ والملاحظات — للاستخدام الداخلي فقط",
+    "स्रोत, तारीखें, टिप्पणियाँ — केवल आंतरिक उपयोग",
+    "来源、日期、观察记录——仅供内部使用"
+  ],
+  "Save checks": [
+    "Guardar controles",
+    "Guardar verificações",
+    "Prüfungen speichern",
+    "Salva le verifiche",
+    "Kontrolleri kaydet",
+    "حفظ الفحوصات",
+    "जाँच सहेजें",
+    "保存核查记录"
+  ],
+  "Feedback visible to the supplier": [
+    "Comentarios visibles para el proveedor",
+    "Comentários visíveis ao fornecedor",
+    "Für den Lieferanten sichtbare Rückmeldung",
+    "Riscontro visibile al fornitore",
+    "Tedarikçinin görebildiği geri bildirim",
+    "ملاحظات ظاهرة للمورد",
+    "आपूर्तिकर्ता को दिखने वाली प्रतिक्रिया",
+    "供应商可见的反馈"
+  ],
+  "Decision": [
+    "Decisión",
+    "Decisão",
+    "Entscheidung",
+    "Decisione",
+    "Karar",
+    "القرار",
+    "निर्णय",
+    "决定"
+  ],
+  "Decline publication with an explanation": [
+    "Rechazar publicación con explicación",
+    "Recusar publicação com explicação",
+    "Veröffentlichung mit Begründung ablehnen",
+    "Rifiuta la pubblicazione con spiegazione",
+    "Yayını gerekçeyle reddet",
+    "رفض النشر مع توضيح السبب",
+    "कारण देकर प्रकाशन अस्वीकार करें",
+    "说明原因并拒绝发布"
+  ],
+  "Request corrections": [
+    "Solicitar correcciones",
+    "Pedir correções",
+    "Korrekturen anfordern",
+    "Richiedi correzioni",
+    "Düzeltme iste",
+    "طلب تصحيحات",
+    "सुधार का अनुरोध करें",
+    "要求修改"
+  ],
+  "Publish the approved public profile": [
+    "Publicar el perfil público aprobado",
+    "Publicar o perfil público aprovado",
+    "Freigegebenes öffentliches Profil veröffentlichen",
+    "Pubblica il profilo pubblico approvato",
+    "Onaylanan herkese açık profili yayınla",
+    "نشر الملف العام المعتمد",
+    "स्वीकृत सार्वजनिक प्रोफ़ाइल प्रकाशित करें",
+    "发布审核通过的公开资料"
+  ],
+  "Publication is not certification of the company or its products.": [
+    "La publicación no certifica la empresa ni sus productos.",
+    "A publicação não certifica a empresa nem os seus produtos.",
+    "Die Veröffentlichung ist keine Zertifizierung des Unternehmens oder seiner Produkte.",
+    "La pubblicazione non certifica l'azienda né i suoi prodotti.",
+    "Yayınlama, şirketin veya ürünlerinin sertifikalandırılması değildir.",
+    "النشر لا يُعد اعتمادًا للشركة أو منتجاتها.",
+    "प्रकाशन कंपनी या उसके उत्पादों का प्रमाणन नहीं है।",
+    "发布不构成对企业或产品的认证。"
+  ],
+  "Record decision": [
+    "Registrar decisión",
+    "Registar decisão",
+    "Entscheidung erfassen",
+    "Registra la decisione",
+    "Kararı kaydet",
+    "تسجيل القرار",
+    "निर्णय दर्ज करें",
+    "记录决定"
+  ],
+  "Remove this attachment from the draft?": [
+    "¿Eliminar este adjunto del borrador?",
+    "Remover este anexo do rascunho?",
+    "Diesen Anhang aus dem Entwurf entfernen?",
+    "Rimuovere questo allegato dalla bozza?",
+    "Bu ek taslaktan kaldırılsın mı?",
+    "هل تريد إزالة هذا المرفق من المسودة؟",
+    "यह संलग्नक ड्राफ़्ट से हटाएँ?",
+    "从草稿中移除此附件？"
+  ],
+  "Attachments and recipients": [
+    "Adjuntos y destinatarios",
+    "Anexos e destinatários",
+    "Anhänge und Empfänger",
+    "Allegati e destinatari",
+    "Ekler ve alıcılar",
+    "المرفقات والمستلمون",
+    "संलग्नक और प्राप्तकर्ता",
+    "附件及接收方"
+  ],
+  "The file operation was not confirmed. Retry; no deletion or upload success is assumed.": [
+    "La operación no se ha confirmado. Reintente; no se da por hecho que la eliminación o carga se haya realizado.",
+    "A operação não foi confirmada. Tente novamente; nenhuma remoção ou envio é considerado concluído.",
+    "Der Dateivorgang wurde nicht bestätigt. Versuchen Sie es erneut; Löschen oder Hochladen gelten nicht als erfolgreich.",
+    "L'operazione sul file non è confermata. Riprova; nessuna eliminazione o caricamento è considerato riuscito.",
+    "Dosya işlemi doğrulanmadı. Yeniden deneyin; silme veya yükleme başarılı kabul edilmez.",
+    "لم يتم تأكيد عملية الملف. حاول مجددًا؛ لا يُفترض نجاح الحذف أو الرفع.",
+    "फ़ाइल का कार्य पुष्ट नहीं हुआ। दोबारा प्रयास करें; हटाना या अपलोड सफल नहीं माना गया है।",
+    "文件操作尚未确认。请重试；当前不能认定删除或上传成功。"
+  ],
+  "Refresh": [
+    "Actualizar",
+    "Atualizar",
+    "Aktualisieren",
+    "Aggiorna",
+    "Yenile",
+    "تحديث",
+    "रीफ़्रेश करें",
+    "刷新"
+  ],
+  "One named recipient": [
+    "Un destinatario designado",
+    "Um destinatário designado",
+    "Ein benannter Empfänger",
+    "Un destinatario specifico",
+    "Belirlenmiş bir alıcı",
+    "مستلم محدد",
+    "एक निर्दिष्ट प्राप्तकर्ता",
+    "一个指定接收方"
+  ],
+  "All recipients you confirm for this request": [
+    "Todos los destinatarios que confirme para esta solicitud",
+    "Todos os destinatários que confirmar para este pedido",
+    "Alle von Ihnen bestätigten Empfänger dieser Anfrage",
+    "Tutti i destinatari confermati per questa richiesta",
+    "Bu talep için onayladığınız tüm alıcılar",
+    "جميع المستلمين الذين تؤكدهم لهذا الطلب",
+    "इस अनुरोध के लिए आपके पुष्ट किए सभी प्राप्तकर्ता",
+    "您为此请求确认的所有接收方"
+  ],
+  "Transfer incomplete — remove and upload again": [
+    "Transferencia incompleta: elimine el archivo y súbalo de nuevo",
+    "Transferência incompleta — remova e envie novamente",
+    "Übertragung unvollständig – entfernen und erneut hochladen",
+    "Trasferimento incompleto — rimuovi e carica di nuovo",
+    "Aktarım tamamlanmadı — kaldırıp yeniden yükleyin",
+    "النقل غير مكتمل — أزل الملف وارفعه مجددًا",
+    "अपलोड अधूरा — हटाकर दोबारा अपलोड करें",
+    "传输未完成——请移除后重新上传"
+  ],
+  "File scan completed; its content has not been certified.": [
+    "Análisis del archivo completado; su contenido no está certificado.",
+    "Análise do ficheiro concluída; o conteúdo não está certificado.",
+    "Dateiprüfung abgeschlossen; der Inhalt ist nicht zertifiziert.",
+    "Scansione del file completata; il contenuto non è certificato.",
+    "Dosya taraması tamamlandı; içeriği sertifikalandırılmamıştır.",
+    "اكتمل فحص الملف؛ محتواه غير معتمد.",
+    "फ़ाइल स्कैन पूरा हुआ; सामग्री प्रमाणित नहीं है।",
+    "文件扫描已完成，但内容未经认证。"
+  ],
+  "Rejected by the file scanner. Remove this file.": [
+    "Rechazado por el análisis de archivos. Elimine este archivo.",
+    "Rejeitado pela análise de ficheiros. Remova este ficheiro.",
+    "Von der Dateiprüfung abgelehnt. Entfernen Sie diese Datei.",
+    "Rifiutato dalla scansione. Rimuovi questo file.",
+    "Dosya taraması tarafından reddedildi. Dosyayı kaldırın.",
+    "رُفض في فحص الملفات. أزل هذا الملف.",
+    "फ़ाइल स्कैनर ने अस्वीकार किया। यह फ़ाइल हटाएँ।",
+    "文件扫描未通过。请移除此文件。"
+  ],
+  "Awaiting file scan. Not shared with suppliers.": [
+    "Pendiente de análisis. No compartido con proveedores.",
+    "A aguardar análise. Não partilhado com fornecedores.",
+    "Dateiprüfung ausstehend. Nicht mit Lieferanten geteilt.",
+    "In attesa di scansione. Non condiviso con i fornitori.",
+    "Dosya taraması bekleniyor. Tedarikçilerle paylaşılmadı.",
+    "بانتظار فحص الملف. غير مشارك مع الموردين.",
+    "फ़ाइल स्कैन लंबित है। आपूर्तिकर्ताओं से साझा नहीं किया गया।",
+    "等待文件扫描。尚未与供应商共享。"
+  ],
+  "Download": [
+    "Descargar",
+    "Descarregar",
+    "Herunterladen",
+    "Scarica",
+    "İndir",
+    "تنزيل",
+    "डाउनलोड करें",
+    "下载"
+  ],
+  "Remove": [
+    "Eliminar",
+    "Remover",
+    "Entfernen",
+    "Rimuovi",
+    "Kaldır",
+    "إزالة",
+    "हटाएँ",
+    "移除"
+  ],
+  "No attachments available.": [
+    "No hay adjuntos disponibles.",
+    "Não há anexos disponíveis.",
+    "Keine Anhänge vorhanden.",
+    "Nessun allegato disponibile.",
+    "Kullanılabilir ek yok.",
+    "لا توجد مرفقات متاحة.",
+    "कोई संलग्नक उपलब्ध नहीं।",
+    "暂无附件。"
+  ],
+  "PDF or image, up to 3 MiB": [
+    "PDF o imagen, hasta 3 MiB",
+    "PDF ou imagem, até 3 MiB",
+    "PDF oder Bild, bis zu 3 MiB",
+    "PDF o immagine, fino a 3 MiB",
+    "PDF veya görsel, en fazla 3 MiB",
+    "PDF أو صورة، حتى 3 ميبيبايت",
+    "PDF या चित्र, अधिकतम 3 MiB",
+    "PDF或图片，最大3 MiB"
+  ],
+  "Who may receive this file?": [
+    "¿Quién puede recibir este archivo?",
+    "Quem pode receber este ficheiro?",
+    "Wer darf diese Datei erhalten?",
+    "Chi può ricevere questo file?",
+    "Bu dosyayı kim alabilir?",
+    "من يمكنه استلام هذا الملف؟",
+    "यह फ़ाइल किसे मिल सकती है?",
+    "谁可以接收此文件？"
+  ],
+  "All confirmed recipients": [
+    "Todos los destinatarios confirmados",
+    "Todos os destinatários confirmados",
+    "Alle bestätigten Empfänger",
+    "Tutti i destinatari confermati",
+    "Onaylanmış tüm alıcılar",
+    "جميع المستلمين المؤكدين",
+    "सभी पुष्ट प्राप्तकर्ता",
+    "所有已确认接收方"
+  ],
+  "The file is analysed before sharing. Sending the request requires a completed scan.": [
+    "El archivo se analiza antes de compartirlo. Para enviar la solicitud, el análisis debe estar completo.",
+    "O ficheiro é analisado antes da partilha. O envio do pedido exige a análise concluída.",
+    "Die Datei wird vor dem Teilen geprüft. Zum Senden der Anfrage muss die Prüfung abgeschlossen sein.",
+    "Il file viene analizzato prima della condivisione. L'invio della richiesta richiede una scansione completata.",
+    "Dosya paylaşılmadan önce taranır. Talebi göndermek için tarama tamamlanmalıdır.",
+    "يُفحص الملف قبل مشاركته. يتطلب إرسال الطلب اكتمال الفحص.",
+    "साझा करने से पहले फ़ाइल स्कैन होती है। अनुरोध भेजने के लिए स्कैन पूरा होना ज़रूरी है।",
+    "文件共享前须扫描。扫描完成后才能发送请求。"
+  ],
+  "Add private attachment": [
+    "Añadir adjunto privado",
+    "Adicionar anexo privado",
+    "Privaten Anhang hinzufügen",
+    "Aggiungi allegato privato",
+    "Özel ek ekle",
+    "إضافة مرفق خاص",
+    "निजी संलग्नक जोड़ें",
+    "添加私密附件"
+  ],
+  "Attachments are unavailable until the file scanning service is configured. You can still prepare and send a text-only request.": [
+    "Los adjuntos no están disponibles hasta configurar el servicio de análisis. Puede preparar y enviar una solicitud solo de texto.",
+    "Os anexos estão indisponíveis até o serviço de análise estar configurado. Pode preparar e enviar um pedido apenas com texto.",
+    "Anhänge sind erst nach Einrichtung des Dateiprüfdienstes verfügbar. Sie können weiterhin eine reine Textanfrage vorbereiten und senden.",
+    "Gli allegati non sono disponibili finché il servizio di scansione non è configurato. Puoi comunque preparare e inviare una richiesta di solo testo.",
+    "Dosya tarama hizmeti yapılandırılana kadar ekler kullanılamaz. Yine de yalnızca metin içeren bir talep hazırlayıp gönderebilirsiniz.",
+    "المرفقات غير متاحة حتى تُهيأ خدمة فحص الملفات. لا يزال بإمكانك إعداد طلب نصي فقط وإرساله.",
+    "फ़ाइल स्कैन सेवा कॉन्फ़िगर होने तक संलग्नक उपलब्ध नहीं हैं। आप केवल टेक्स्ट वाला अनुरोध तैयार करके भेज सकते हैं।",
+    "文件扫描服务配置完成前无法使用附件。您仍可准备并发送纯文本请求。"
+  ],
+  "Capabilities": [
+    "Capacidades",
+    "Capacidades",
+    "Fertigungsmöglichkeiten",
+    "Capacità",
+    "Yetenekler",
+    "القدرات",
+    "क्षमताएँ",
+    "能力"
+  ],
+  "Documents": [
+    "Documentos",
+    "Documentos",
+    "Dokumente",
+    "Documenti",
+    "Belgeler",
+    "المستندات",
+    "दस्तावेज़",
+    "文件"
+  ],
+  "Validation": [
+    "Validación",
+    "Validação",
+    "Validierung",
+    "Validazione",
+    "Doğrulama",
+    "التحقق",
+    "पुष्टि",
+    "确认"
+  ],
+  "Choose your business activity.": [
+    "Elija su actividad empresarial.",
+    "Escolha a atividade da empresa.",
+    "Wählen Sie Ihre Geschäftstätigkeit.",
+    "Scegli l'attività dell'azienda.",
+    "İşletme faaliyetinizi seçin.",
+    "اختر نشاطك التجاري.",
+    "अपनी व्यावसायिक गतिविधि चुनें।",
+    "请选择业务类型。"
+  ],
+  "Enter the registered company name.": [
+    "Indique la razón social.",
+    "Indique a denominação social.",
+    "Geben Sie den eingetragenen Unternehmensnamen an.",
+    "Inserisci la ragione sociale.",
+    "Tescilli şirket unvanını girin.",
+    "أدخل اسم الشركة المسجل.",
+    "पंजीकृत कंपनी का नाम दर्ज करें।",
+    "请输入企业注册名称。"
+  ],
+  "Choose the registration country.": [
+    "Elija el país de registro.",
+    "Escolha o país de registo.",
+    "Wählen Sie das Registrierungsland.",
+    "Scegli il paese di registrazione.",
+    "Tescil ülkesini seçin.",
+    "اختر بلد التسجيل.",
+    "पंजीकरण का देश चुनें।",
+    "请选择注册国家。"
+  ],
+  "Enter the company city.": [
+    "Indique la ciudad de la empresa.",
+    "Indique a cidade da empresa.",
+    "Geben Sie den Unternehmensort an.",
+    "Inserisci la città dell'azienda.",
+    "Şirketin şehrini girin.",
+    "أدخل مدينة الشركة.",
+    "कंपनी का शहर दर्ज करें।",
+    "请输入企业所在城市。"
+  ],
+  "Describe the business in at least 30 characters.": [
+    "Describa la actividad con al menos 30 caracteres.",
+    "Descreva a atividade com pelo menos 30 caracteres.",
+    "Beschreiben Sie die Tätigkeit mit mindestens 30 Zeichen.",
+    "Descrivi l'attività con almeno 30 caratteri.",
+    "Faaliyeti en az 30 karakterle açıklayın.",
+    "صف النشاط في 30 حرفًا على الأقل.",
+    "व्यवसाय का वर्णन कम से कम 30 अक्षरों में करें।",
+    "请用至少30字符描述业务。"
+  ],
+  "Complete each production site address.": [
+    "Complete la dirección de cada centro de producción.",
+    "Complete a morada de cada instalação de produção.",
+    "Vervollständigen Sie die Adresse jedes Produktionsstandorts.",
+    "Completa l'indirizzo di ogni sito produttivo.",
+    "Her üretim tesisinin adresini tamamlayın.",
+    "أكمل عنوان كل موقع إنتاج.",
+    "हर उत्पादन स्थल का पता पूरा करें।",
+    "请补全各生产场所地址。"
+  ],
+  "Complete each offer: title, category, description (30 characters) and manufacturing country.": [
+    "Complete cada oferta: título, categoría, descripción (30 caracteres) y país de fabricación.",
+    "Complete cada oferta: título, categoria, descrição (30 caracteres) e país de fabrico.",
+    "Vervollständigen Sie jedes Angebot: Titel, Kategorie, Beschreibung (30 Zeichen) und Herstellungsland.",
+    "Completa ogni offerta: titolo, categoria, descrizione (30 caratteri) e paese di fabbricazione.",
+    "Her teklifi tamamlayın: başlık, kategori, açıklama (30 karakter) ve üretim ülkesi.",
+    "أكمل كل عرض: العنوان والفئة والوصف (30 حرفًا) وبلد التصنيع.",
+    "हर पेशकश में शीर्षक, श्रेणी, विवरण (30 अक्षर) और निर्माण देश भरें।",
+    "请补全每项产品或服务的标题、类别、描述（30字符）和制造国家。"
+  ],
+  "Specify the unit for your minimum order.": [
+    "Especifique la unidad del pedido mínimo.",
+    "Especifique a unidade da encomenda mínima.",
+    "Geben Sie die Einheit der Mindestbestellmenge an.",
+    "Specifica l'unità dell'ordine minimo.",
+    "Minimum sipariş birimini belirtin.",
+    "حدد وحدة الحد الأدنى للطلب.",
+    "न्यूनतम ऑर्डर की इकाई बताएँ।",
+    "请注明最小起订量单位。"
+  ],
+  "Explain why CE marking does not apply.": [
+    "Explique por qué no se aplica el marcado CE.",
+    "Explique por que não se aplica a marcação CE.",
+    "Begründen Sie, warum die CE-Kennzeichnung nicht zutrifft.",
+    "Spiega perché la marcatura CE non si applica.",
+    "CE işaretinin neden geçerli olmadığını açıklayın.",
+    "وضح سبب عدم انطباق علامة CE.",
+    "बताएँ कि CE चिह्नांकन लागू क्यों नहीं है।",
+    "请说明CE标志不适用的原因。"
+  ],
+  "For CE products, identify applicable legislation and attach the corresponding declaration.": [
+    "Para productos CE, indique la legislación aplicable y adjunte la declaración correspondiente.",
+    "Para produtos CE, indique a legislação aplicável e anexe a declaração correspondente.",
+    "Nennen Sie bei CE-Produkten die anwendbaren Vorschriften und fügen Sie die entsprechende Erklärung bei.",
+    "Per i prodotti CE, indica la normativa applicabile e allega la dichiarazione corrispondente.",
+    "CE ürünleri için geçerli mevzuatı belirtin ve ilgili beyanı ekleyin.",
+    "لمنتجات CE، حدد التشريعات المنطبقة وأرفق الإقرار المناسب.",
+    "CE उत्पादों के लिए लागू कानून बताएँ और संबंधित घोषणा संलग्न करें।",
+    "对于适用CE的产品，请注明相关法规并附上相应声明。"
+  ],
+  "Enter a contact name and email.": [
+    "Indique el nombre y correo de un contacto.",
+    "Indique o nome e email de um contacto.",
+    "Geben Sie Kontaktname und E-Mail an.",
+    "Inserisci nome ed email di un referente.",
+    "İletişim kişisinin adını ve e-postasını girin.",
+    "أدخل اسم جهة اتصال وبريدها الإلكتروني.",
+    "संपर्क व्यक्ति का नाम और ईमेल दर्ज करें।",
+    "请输入联系人姓名和邮箱。"
+  ],
+  "Confirm that you are authorised to submit this company profile.": [
+    "Confirme que está autorizado para enviar este perfil de empresa.",
+    "Confirme que está autorizado a submeter este perfil.",
+    "Bestätigen Sie Ihre Berechtigung, dieses Unternehmensprofil einzureichen.",
+    "Conferma di essere autorizzato a inviare questo profilo aziendale.",
+    "Bu şirket profilini göndermeye yetkili olduğunuzu onaylayın.",
+    "أكد أنك مخوّل بتقديم ملف هذه الشركة.",
+    "पुष्टि करें कि आप यह कंपनी प्रोफ़ाइल जमा करने के लिए अधिकृत हैं।",
+    "请确认您有权提交此企业资料。"
+  ],
+  "Complete each certificate and attach its evidence.": [
+    "Complete cada certificado y adjunte su justificante.",
+    "Complete cada certificado e anexe o comprovativo.",
+    "Vervollständigen Sie jedes Zertifikat und fügen Sie den Nachweis bei.",
+    "Completa ogni certificato e allega la relativa prova.",
+    "Her sertifikayı tamamlayın ve kanıtını ekleyin.",
+    "أكمل كل شهادة وأرفق إثباتها.",
+    "हर प्रमाणपत्र पूरा करें और उसका प्रमाण संलग्न करें।",
+    "请补全每份证书并附上证明。"
+  ],
+  "Link the certificate or test report to a listed product.": [
+    "Vincule el certificado o informe de ensayo a un producto listado.",
+    "Associe o certificado ou relatório de ensaio a um produto listado.",
+    "Verknüpfen Sie das Zertifikat oder den Prüfbericht mit einem gelisteten Produkt.",
+    "Collega il certificato o rapporto di prova a un prodotto elencato.",
+    "Sertifika veya test raporunu listelenen bir ürüne bağlayın.",
+    "اربط الشهادة أو تقرير الاختبار بمنتج مُدرج.",
+    "प्रमाणपत्र या परीक्षण रिपोर्ट को सूचीबद्ध उत्पाद से जोड़ें।",
+    "请将证书或测试报告关联到已列出的产品。"
+  ],
+  "Check the certificate issue date.": [
+    "Compruebe la fecha de emisión del certificado.",
+    "Verifique a data de emissão do certificado.",
+    "Prüfen Sie das Ausstellungsdatum des Zertifikats.",
+    "Controlla la data di emissione del certificato.",
+    "Sertifikanın düzenlenme tarihini kontrol edin.",
+    "تحقق من تاريخ إصدار الشهادة.",
+    "प्रमाणपत्र की जारी करने की तारीख जाँचें।",
+    "请检查证书签发日期。"
+  ],
+  "Check certificate dates.": [
+    "Compruebe las fechas del certificado.",
+    "Verifique as datas do certificado.",
+    "Prüfen Sie die Datumsangaben des Zertifikats.",
+    "Controlla le date del certificato.",
+    "Sertifika tarihlerini kontrol edin.",
+    "تحقق من تواريخ الشهادة.",
+    "प्रमाणपत्र की तारीखें जाँचें।",
+    "请检查证书日期。"
+  ],
+  "Website (https://…)": [
+    "Sitio web (https://…)",
+    "Site (https://…)",
+    "Website (https://…)",
+    "Sito web (https://…)",
+    "Web sitesi (https://…)",
+    "الموقع الإلكتروني (https://…)",
+    "वेबसाइट (https://…)",
+    "网站（https://…）"
+  ],
+  "Year founded": [
+    "Año de fundación",
+    "Ano de fundação",
+    "Gründungsjahr",
+    "Anno di fondazione",
+    "Kuruluş yılı",
+    "سنة التأسيس",
+    "स्थापना वर्ष",
+    "成立年份"
+  ],
+  "Phone country": [
+    "País del teléfono",
+    "País do telefone",
+    "Telefonland",
+    "Paese del telefono",
+    "Telefon ülkesi",
+    "بلد الهاتف",
+    "फ़ोन का देश",
+    "电话号码所属国家"
+  ],
+  "Surface area": [
+    "Superficie",
+    "Área",
+    "Fläche",
+    "Superficie",
+    "Yüzölçümü",
+    "المساحة",
+    "क्षेत्रफल",
+    "面积"
+  ],
+  "Response time": [
+    "Tiempo de respuesta",
+    "Tempo de resposta",
+    "Antwortzeit",
+    "Tempo di risposta",
+    "Yanıt süresi",
+    "مدة الرد",
+    "जवाब देने का समय",
+    "回复时间"
+  ],
+  "Expiry date": [
+    "Fecha de caducidad",
+    "Data de validade",
+    "Ablaufdatum",
+    "Data di scadenza",
+    "Son geçerlilik tarihi",
+    "تاريخ الانتهاء",
+    "समाप्ति तिथि",
+    "到期日期"
+  ],
+  "Verification URL": [
+    "URL de verificación",
+    "URL de verificação",
+    "Prüf-URL",
+    "URL di verifica",
+    "Doğrulama URL'si",
+    "رابط التحقق",
+    "सत्यापन URL",
+    "验证网址"
+  ],
+  "Notified body number": [
+    "Número de organismo notificado",
+    "Número do organismo notificado",
+    "Nummer der notifizierten Stelle",
+    "Numero dell'organismo notificato",
+    "Onaylanmış kuruluş numarası",
+    "رقم الجهة المُبلّغة",
+    "अधिसूचित निकाय संख्या",
+    "公告机构编号"
+  ],
+  "Country": [
+    "País",
+    "País",
+    "Land",
+    "Paese",
+    "Ülke",
+    "البلد",
+    "देश",
+    "国家"
+  ],
+  "Product": [
+    "Producto",
+    "Produto",
+    "Produkt",
+    "Prodotto",
+    "Ürün",
+    "منتج",
+    "उत्पाद",
+    "产品"
+  ],
+  "Certificate": [
+    "Certificado",
+    "Certificado",
+    "Zertifikat",
+    "Certificato",
+    "Sertifika",
+    "شهادة",
+    "प्रमाणपत्र",
+    "证书"
+  ],
+  "Legal form and full business address": [
+    "Forma jurídica y dirección comercial completa",
+    "Forma jurídica e morada comercial completa",
+    "Rechtsform und vollständige Geschäftsadresse",
+    "Forma giuridica e indirizzo aziendale completo",
+    "Hukuki yapı ve tam iş adresi",
+    "الشكل القانوني وعنوان العمل الكامل",
+    "कानूनी स्वरूप और पूरा व्यावसायिक पता",
+    "法律形式及完整营业地址"
+  ],
+  "Registration identifiers": [
+    "Identificadores de registro",
+    "Identificadores de registo",
+    "Registrierungskennungen",
+    "Identificativi di registrazione",
+    "Tescil kimlik numaraları",
+    "معرّفات التسجيل",
+    "पंजीकरण पहचान संख्याएँ",
+    "注册标识"
+  ],
+  "Processes, materials and quality control": [
+    "Procesos, materiales y control de calidad",
+    "Processos, materiais e controlo de qualidade",
+    "Verfahren, Materialien und Qualitätskontrolle",
+    "Processi, materiali e controllo qualità",
+    "Süreçler, malzemeler ve kalite kontrol",
+    "العمليات والمواد ومراقبة الجودة",
+    "प्रक्रियाएँ, सामग्री और गुणवत्ता नियंत्रण",
+    "工艺、材料及质量控制"
+  ],
+  "Products and manufacturing services": [
+    "Productos y servicios de fabricación",
+    "Produtos e serviços de fabrico",
+    "Produkte und Fertigungsleistungen",
+    "Prodotti e servizi di produzione",
+    "Ürünler ve üretim hizmetleri",
+    "المنتجات وخدمات التصنيع",
+    "उत्पाद और विनिर्माण सेवाएँ",
+    "产品与制造服务"
+  ],
+  "Delivery markets and contact languages": [
+    "Mercados de entrega e idiomas de contacto",
+    "Mercados de entrega e idiomas de contacto",
+    "Liefermärkte und Kontaktsprachen",
+    "Mercati di consegna e lingue di contatto",
+    "Teslimat pazarları ve iletişim dilleri",
+    "أسواق التسليم ولغات التواصل",
+    "डिलीवरी बाज़ार और संपर्क भाषाएँ",
+    "供货市场及联系人语言"
+  ],
+  "Complete the product name, category, description (30 characters) and manufacturing country.": [
+    "Complete el nombre, categoría, descripción (30 caracteres) y país de fabricación del producto.",
+    "Preencha o nome, categoria, descrição (30 caracteres) e país de fabrico do produto.",
+    "Vervollständigen Sie Produktname, Kategorie, Beschreibung (30 Zeichen) und Herstellungsland.",
+    "Completa nome, categoria, descrizione (30 caratteri) e paese di fabbricazione del prodotto.",
+    "Ürün adı, kategori, açıklama (30 karakter) ve üretim ülkesini tamamlayın.",
+    "أكمل اسم المنتج وفئته ووصفه (30 حرفًا) وبلد تصنيعه.",
+    "उत्पाद का नाम, श्रेणी, विवरण (30 अक्षर) और निर्माण देश भरें।",
+    "请补全产品名称、类别、描述（30字符）和制造国家。"
+  ],
+  "Confirm you are authorised to publish these products.": [
+    "Confirme que está autorizado para publicar estos productos.",
+    "Confirme que está autorizado a publicar estes produtos.",
+    "Bestätigen Sie Ihre Berechtigung zur Veröffentlichung dieser Produkte.",
+    "Conferma di essere autorizzato a pubblicare questi prodotti.",
+    "Bu ürünleri yayınlamaya yetkili olduğunuzu onaylayın.",
+    "أكد أنك مخوّل بنشر هذه المنتجات.",
+    "पुष्टि करें कि आप ये उत्पाद प्रकाशित करने के लिए अधिकृत हैं।",
+    "请确认您有权发布这些产品。"
+  ],
+  "Company photo {number}": [
+    "Foto de empresa {number}",
+    "Foto da empresa {number}",
+    "Unternehmensfoto {number}",
+    "Foto aziendale {number}",
+    "Şirket fotoğrafı {number}",
+    "صورة الشركة {number}",
+    "कंपनी की फ़ोटो {number}",
+    "企业照片 {number}"
+  ],
+  "Remove photo {number}": [
+    "Eliminar foto {number}",
+    "Remover foto {number}",
+    "Foto {number} entfernen",
+    "Rimuovi foto {number}",
+    "Fotoğraf {number} kaldır",
+    "إزالة الصورة {number}",
+    "फ़ोटो {number} हटाएँ",
+    "移除照片 {number}"
+  ],
+  "check the format or length.": [
+    "compruebe el formato o la longitud.",
+    "verifique o formato ou o comprimento.",
+    "Format oder Länge prüfen.",
+    "controlla il formato o la lunghezza.",
+    "biçimi veya uzunluğu kontrol edin.",
+    "تحقق من التنسيق أو الطول.",
+    "प्रारूप या लंबाई जाँचें।",
+    "请检查格式或长度。"
+  ]
+}

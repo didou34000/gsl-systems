@@ -4,7 +4,12 @@ import ts from 'typescript';
 import {pathToFileURL} from 'node:url';
 const compile=p=>ts.transpileModule(fs.readFileSync(p,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
 const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso-countries.ts')).toString('base64');
-const code=compile('lib/requirement.ts').replace("'./onboarding/iso-countries'",JSON.stringify(iso)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const dictionaries={};
+for(const name of fs.readdirSync('lib/i18n').filter(name=>name.endsWith('.json'))){dictionaries['./'+name]='data:text/javascript;base64,'+Buffer.from('export default '+fs.readFileSync('lib/i18n/'+name,'utf8')).toString('base64');}
+let translationSource=compile('lib/i18n/translations.ts');
+for(const [name,url] of Object.entries(dictionaries))translationSource=translationSource.replace(JSON.stringify(name),JSON.stringify(url)).replace("'"+name+"'",JSON.stringify(url));
+const translations='data:text/javascript;base64,'+Buffer.from(translationSource).toString('base64');
+const code=compile('lib/requirement.ts').replace("'./i18n/translations'",JSON.stringify(translations)).replace("'./onboarding/iso-countries'",JSON.stringify(iso)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
 const {emptyRequirement,requirementSchema,requirementIssues,requirementDetails,requirementExport,requirementFields}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const d=emptyRequirement();
 assert.deepEqual(requirementIssues(d,0,'2026-10-02'),['title','description']);
@@ -39,3 +44,11 @@ assert.equal(requirementSchema.parse({fields:d.fields,items:d.items,destination:
 custom.customFields[0].label='';assert.ok(requirementIssues(custom,0,'2026-10-02').includes('customFields'));
 custom.customFields=Array.from({length:6},()=>({id:crypto.randomUUID(),label:'Spécification',value:'x'.repeat(2000)}));assert.ok(requirementIssues(custom,2,'2026-10-02').includes('detailsLimit'));
 console.log('Custom enquiry: editable sections, exports, restore, legacy compatibility and payload length guard passed.');
+
+for(const language of ['en','fr','es','pt','de','it','tr','ar','hi','zh']){
+ const details=requirementDetails(d,language);
+ assert.ok(details.includes(d.fields.description),'User-authored specifications survive '+language+' export');
+ assert.ok(requirementExport(d,language).includes('250,5 kg'),'User-authored quantities survive '+language+' export');
+ assert.ok(requirementIssues(custom,2,'2026-10-02',language).includes('detailsLimit'),'Aggregate limit enforced in '+language);
+}
+console.log('Ten-language request exports preserve user content and enforce serialized length limits.');

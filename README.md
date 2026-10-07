@@ -8,6 +8,8 @@ Node.js >= 22.13. Installer avec `npm ci`. Copier les variables de [docs/environ
 
 - `npm run dev` : Next.js, port 5173.
 - `npm run test:operational` : règles et PostgreSQL embarqué ; refuse toute URL de base externe. Les fixtures sont synthétiques, sans réseau, détruites avec le processus.
+- `npm run test:admin` : droits administrateur, tâches, contacts, préférences, API et export CSV sur données isolées.
+- `npm run test:i18n` : traductions, langues des profils et contacts, connexion et formulaires.
 - `npx tsc --noEmit` : vérification TypeScript.
 - `npm run lint` : analyse statique.
 - `npm run build:vercel` : build Next.js destiné à Vercel.
@@ -19,7 +21,9 @@ La référence `ihugldueruspxdyooycc` est la production existante. Elle est refu
 
 `/fabricants` et `/catalogue` lisent les projections approuvées ; `/fabricants/[id]` et `/produits/[id]` affichent les fiches réelles. `/selection` conserve les identifiants publics choisis et propose une fusion explicite au compte. `/operations` regroupe entreprises, demandes privées, destinataires, conversations et offres. `/espace-fournisseur` contient le dossier en quatre étapes. `/administration/revue` est réservé aux reviewers désignés hors frontend. `/demo` isole les exemples.
 
-Langue : anglais par défaut, français avec `?lang=fr`, cookie de préférence et rendu serveur cohérents. Les noms et descriptions fournis restent dans leur langue d'origine.
+`/administration` contient le dashboard des administrateurs : indicateurs réels, annuaire, produits, contacts, tâches et modules réordonnables. Son onglet « Accès et données » explique les droits des quatre rôles (analyste, opérateur, administrateur, propriétaire) et permet au propriétaire de gérer les accès avec motif et historique. Les permissions et exports sont contrôlés dans la base. L’accès nécessite un rôle explicite et la double authentification. Voir [le contrat et les droits](docs/admin-backend.md).
+
+Langues : anglais, français, espagnol, portugais, allemand, italien, turc, arabe, hindi et chinois simplifié. Le choix est conservé dans les liens, le cookie et le profil ; l’arabe utilise un affichage de droite à gauche. Les contenus saisis par les membres restent dans leur langue d’origine. [Couverture et limites](docs/localization.md).
 
 ## Architecture
 

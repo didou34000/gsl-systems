@@ -1,3 +1,4 @@
+import {resolveLanguage} from '@/lib/i18n/languages';
 import {authClient} from '@/lib/supabase/server';
 import {allowedOrigin,safeNext,validPassword} from '@/lib/auth-policy';
 export const dynamic='force-dynamic';
@@ -8,7 +9,7 @@ export async function GET(){
   if(error||!user)return json({user:null});
   const {data:profile,error:profileError}=await db.from('profiles').select('display_name,language').eq('user_id',user.id).maybeSingle();
   if(profileError)return json({error:'PROFILE_UNAVAILABLE'},503);
-  return json({user:{email:user.email,name:profile?.display_name||user.user_metadata?.display_name||'',confirmed:!!user.email_confirmed_at,language:profile?.language||'en'}});
+  return json({user:{email:user.email,name:profile?.display_name||user.user_metadata?.display_name||'',confirmed:!!user.email_confirmed_at,language:resolveLanguage(profile?.language||user.user_metadata?.language)}});
  }catch{return json({error:'UNAVAILABLE'},503)}
 }
 export async function POST(request:Request){
@@ -26,11 +27,11 @@ export async function POST(request:Request){
   const db=await authClient();
   const callback=new URL('/auth/callback',origin);
   callback.searchParams.set('next',safeNext(body.next));
-  callback.searchParams.set('lang',body.language==='fr'?'fr':'en');
+  callback.searchParams.set('lang',resolveLanguage(body.language));
   let error:{code?:string;status?:number;message:string}|null=null;
   if(action==='signup'){
    if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
-   ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback.toString(),data:{display_name:body.name.trim(),language:body.language==='fr'?'fr':'en'}}}));
+   ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback.toString(),data:{display_name:body.name.trim(),language:resolveLanguage(body.language)}}}));
   }else if(action==='verify'){
    ({error}=await db.auth.verifyOtp({email,token:body.code,type:body.flow==='recovery'?'recovery':'email'}));
    if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe?next='+encodeURIComponent(safeNext(body.next)):safeNext(body.next)==='/compte'?'/compte?confirmed=1':safeNext(body.next)});
@@ -50,7 +51,7 @@ export async function POST(request:Request){
     if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
     const {data:existing,error:readError}=await db.from('profiles').select('user_id').eq('user_id',user.id).maybeSingle();
     if(readError)return json({error:'UNAVAILABLE'},503);
-    const profile={display_name:body.name.trim(),language:body.language==='fr'?'fr':'en'};
+    const profile={display_name:body.name.trim(),language:resolveLanguage(body.language)};
     ({error}=existing?await db.from('profiles').update(profile).eq('user_id',user.id):await db.from('profiles').insert({user_id:user.id,...profile}));
    }
   }else return json({error:'INVALID'},400);
