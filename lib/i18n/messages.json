@@ -1,0 +1,542 @@
+{
+  "Please wait a minute before sending again.": [
+    "Espera un minuto antes de volver a enviar.",
+    "Aguarde um minuto antes de enviar novamente.",
+    "Warten Sie eine Minute, bevor Sie erneut senden.",
+    "Attendi un minuto prima di inviare di nuovo.",
+    "Yeniden göndermeden önce bir dakika bekleyin.",
+    "انتظر دقيقة قبل الإرسال مجددًا.",
+    "दोबारा भेजने से पहले एक मिनट रुकें।",
+    "请等待一分钟后再发送。"
+  ],
+  "This listing is no longer published. Your existing conversations remain in the inbox.": [
+    "Este anuncio ya no está publicado. Tus conversaciones siguen en la bandeja de entrada.",
+    "Este anúncio já não está publicado. As conversas existentes continuam na caixa de entrada.",
+    "Dieser Eintrag ist nicht mehr veröffentlicht. Ihre bestehenden Gespräche bleiben im Posteingang.",
+    "Questo annuncio non è più pubblicato. Le conversazioni esistenti restano nei messaggi.",
+    "Bu ilan artık yayında değil. Mevcut konuşmalarınız gelen kutusunda kalır.",
+    "لم يعد هذا الإدراج منشورًا. تبقى محادثاتك الحالية في صندوق الرسائل.",
+    "यह सूची अब प्रकाशित नहीं है। आपकी मौजूदा बातचीत इनबॉक्स में रहेगी।",
+    "该信息已下架。现有对话仍保留在收件箱中。"
+  ],
+  "You no longer have access to this conversation.": [
+    "Ya no tienes acceso a esta conversación.",
+    "Já não tem acesso a esta conversa.",
+    "Sie haben keinen Zugriff mehr auf dieses Gespräch.",
+    "Non hai più accesso a questa conversazione.",
+    "Bu konuşmaya artık erişiminiz yok.",
+    "لم يعد لديك وصول إلى هذه المحادثة.",
+    "अब इस बातचीत तक आपकी पहुँच नहीं है।",
+    "您已无权访问此对话。"
+  ],
+  "This is your own company. Buyers can contact you from this page.": [
+    "Esta es tu empresa. Los compradores pueden contactarte desde esta página.",
+    "Esta é a sua empresa. Os compradores podem contactá-lo nesta página.",
+    "Dies ist Ihr eigenes Unternehmen. Käufer können Sie über diese Seite kontaktieren.",
+    "Questa è la tua azienda. Gli acquirenti possono contattarti da questa pagina.",
+    "Bu sizin şirketiniz. Alıcılar bu sayfadan size ulaşabilir.",
+    "هذه شركتك. يمكن للمشترين التواصل معك من هذه الصفحة.",
+    "यह आपकी अपनी कंपनी है। खरीदार इस पेज से आपसे संपर्क कर सकते हैं।",
+    "这是您自己的企业。买家可通过此页联系您。"
+  ],
+  "Sign in to continue.": [
+    "Inicia sesión para continuar.",
+    "Inicie sessão para continuar.",
+    "Melden Sie sich an, um fortzufahren.",
+    "Accedi per continuare.",
+    "Devam etmek için giriş yapın.",
+    "سجّل الدخول للمتابعة.",
+    "जारी रखने के लिए साइन इन करें।",
+    "请登录以继续。"
+  ],
+  "Your company already exists. Refresh the inbox to use it.": [
+    "Tu empresa ya existe. Actualiza la bandeja de entrada para usarla.",
+    "A sua empresa já existe. Atualize a caixa de entrada para a utilizar.",
+    "Ihr Unternehmen existiert bereits. Aktualisieren Sie den Posteingang.",
+    "La tua azienda esiste già. Aggiorna i messaggi per utilizzarla.",
+    "Şirketiniz zaten kayıtlı. Kullanmak için gelen kutusunu yenileyin.",
+    "شركتك موجودة بالفعل. حدّث صندوق الرسائل لاستخدامها.",
+    "आपकी कंपनी पहले से मौजूद है। उपयोग करने के लिए इनबॉक्स रीफ़्रेश करें।",
+    "您的企业已存在，请刷新收件箱后使用。"
+  ],
+  "Could not connect. Your message has not been cleared; please try again.": [
+    "No se pudo conectar. Tu mensaje se ha conservado; inténtalo de nuevo.",
+    "Não foi possível ligar. A mensagem foi mantida; tente novamente.",
+    "Verbindung fehlgeschlagen. Ihre Nachricht wurde nicht gelöscht; versuchen Sie es erneut.",
+    "Connessione non riuscita. Il messaggio è conservato; riprova.",
+    "Bağlantı kurulamadı. Mesajınız silinmedi; tekrar deneyin.",
+    "تعذّر الاتصال. لم تُحذف رسالتك؛ حاول مجددًا.",
+    "कनेक्ट नहीं हो सका। आपका संदेश सुरक्षित है; फिर कोशिश करें।",
+    "连接失败。您的消息未被清除，请重试。"
+  ],
+  "MESSAGES": [
+    "MENSAJES",
+    "MENSAGENS",
+    "NACHRICHTEN",
+    "MESSAGGI",
+    "MESAJLAR",
+    "الرسائل",
+    "संदेश",
+    "消息"
+  ],
+  "Your messages": [
+    "Tus mensajes",
+    "As suas mensagens",
+    "Ihre Nachrichten",
+    "I tuoi messaggi",
+    "Mesajlarınız",
+    "رسائلك",
+    "आपके संदेश",
+    "您的消息"
+  ],
+  "Contact a manufacturer, ask a question, get a reply.": [
+    "Contacta con un fabricante, pregunta y recibe una respuesta.",
+    "Contacte um fabricante, faça uma pergunta e receba uma resposta.",
+    "Kontaktieren Sie einen Hersteller, stellen Sie Fragen und erhalten Sie Antworten.",
+    "Contatta un produttore, fai una domanda e ricevi una risposta.",
+    "Üreticiye ulaşın, soru sorun, yanıt alın.",
+    "تواصل مع مصنّع واطرح سؤالًا واحصل على رد.",
+    "निर्माता से संपर्क करें, प्रश्न पूछें और उत्तर पाएँ।",
+    "联系制造商，提出问题并获得回复。"
+  ],
+  "Sign in to send your message": [
+    "Inicia sesión para enviar tu mensaje",
+    "Inicie sessão para enviar a mensagem",
+    "Anmelden, um Ihre Nachricht zu senden",
+    "Accedi per inviare il messaggio",
+    "Mesaj göndermek için giriş yapın",
+    "سجّل الدخول لإرسال رسالتك",
+    "संदेश भेजने के लिए साइन इन करें",
+    "登录以发送消息"
+  ],
+  "Your selected manufacturer or product will be kept.": [
+    "Se conservará el fabricante o producto seleccionado.",
+    "O fabricante ou produto selecionado será mantido.",
+    "Ihre Auswahl des Herstellers oder Produkts bleibt erhalten.",
+    "Il produttore o prodotto selezionato sarà conservato.",
+    "Seçtiğiniz üretici veya ürün korunacak.",
+    "سيُحتفظ بالمصنّع أو المنتج الذي اخترته.",
+    "चुना हुआ निर्माता या उत्पाद सुरक्षित रहेगा।",
+    "您选择的制造商或产品将会保留。"
+  ],
+  "Sign in / create an account": [
+    "Iniciar sesión / crear cuenta",
+    "Iniciar sessão / criar conta",
+    "Anmelden / Konto erstellen",
+    "Accedi / crea account",
+    "Giriş yap / hesap oluştur",
+    "تسجيل الدخول / إنشاء حساب",
+    "साइन इन करें / खाता बनाएँ",
+    "登录 / 创建账户"
+  ],
+  "Writing as": [
+    "Escribiendo como",
+    "A escrever em nome de",
+    "Schreiben als",
+    "Scrivi come",
+    "Şu adla yazılıyor",
+    "تكتب باسم",
+    "की ओर से लिख रहे हैं",
+    "发送身份"
+  ],
+  "Refresh inbox": [
+    "Actualizar mensajes",
+    "Atualizar mensagens",
+    "Posteingang aktualisieren",
+    "Aggiorna messaggi",
+    "Gelen kutusunu yenile",
+    "تحديث صندوق الرسائل",
+    "इनबॉक्स रीफ़्रेश करें",
+    "刷新收件箱"
+  ],
+  "Loading…": [
+    "Cargando…",
+    "A carregar…",
+    "Wird geladen…",
+    "Caricamento…",
+    "Yükleniyor…",
+    "جارٍ التحميل…",
+    "लोड हो रहा है…",
+    "正在加载…"
+  ],
+  "New message": [
+    "Nuevo mensaje",
+    "Nova mensagem",
+    "Neue Nachricht",
+    "Nuovo messaggio",
+    "Yeni mesaj",
+    "رسالة جديدة",
+    "नया संदेश",
+    "新消息"
+  ],
+  "Direct contact": [
+    "Contacto directo",
+    "Contacto direto",
+    "Direkter Kontakt",
+    "Contatto diretto",
+    "Doğrudan iletişim",
+    "تواصل مباشر",
+    "सीधा संपर्क",
+    "直接联系"
+  ],
+  "unread messages": [
+    "mensajes sin leer",
+    "mensagens não lidas",
+    "ungelesene Nachrichten",
+    "messaggi non letti",
+    "okunmamış mesaj",
+    "رسائل غير مقروءة",
+    "अपठित संदेश",
+    "条未读消息"
+  ],
+  "Your conversations will appear here after your first message.": [
+    "Tus conversaciones aparecerán aquí tras tu primer mensaje.",
+    "As suas conversas aparecerão aqui após a primeira mensagem.",
+    "Nach Ihrer ersten Nachricht werden Ihre Gespräche hier angezeigt.",
+    "Le conversazioni appariranno qui dopo il primo messaggio.",
+    "İlk mesajınızdan sonra konuşmalarınız burada görünür.",
+    "ستظهر محادثاتك هنا بعد رسالتك الأولى.",
+    "पहला संदेश भेजने के बाद आपकी बातचीत यहाँ दिखेगी।",
+    "发送第一条消息后，对话将显示在这里。"
+  ],
+  "Previous": [
+    "Anterior",
+    "Anterior",
+    "Zurück",
+    "Precedente",
+    "Önceki",
+    "السابق",
+    "पिछला",
+    "上一页"
+  ],
+  "Next": [
+    "Siguiente",
+    "Seguinte",
+    "Weiter",
+    "Successivo",
+    "Sonraki",
+    "التالي",
+    "अगला",
+    "下一页"
+  ],
+  "All conversations": [
+    "Todas las conversaciones",
+    "Todas as conversas",
+    "Alle Gespräche",
+    "Tutte le conversazioni",
+    "Tüm konuşmalar",
+    "كل المحادثات",
+    "सभी बातचीत",
+    "全部对话"
+  ],
+  "Conversation with": [
+    "Conversación con",
+    "Conversa com",
+    "Gespräch mit",
+    "Conversazione con",
+    "Görüşülen kişi",
+    "محادثة مع",
+    "के साथ बातचीत",
+    "对话对象"
+  ],
+  "View product": [
+    "Ver producto",
+    "Ver produto",
+    "Produkt ansehen",
+    "Vedi prodotto",
+    "Ürünü görüntüle",
+    "عرض المنتج",
+    "उत्पाद देखें",
+    "查看产品"
+  ],
+  "View company": [
+    "Ver empresa",
+    "Ver empresa",
+    "Unternehmen ansehen",
+    "Vedi azienda",
+    "Şirketi görüntüle",
+    "عرض الشركة",
+    "कंपनी देखें",
+    "查看企业"
+  ],
+  "Updating…": [
+    "Actualizando…",
+    "A atualizar…",
+    "Wird aktualisiert…",
+    "Aggiornamento…",
+    "Güncelleniyor…",
+    "جارٍ التحديث…",
+    "अपडेट हो रहा है…",
+    "正在更新…"
+  ],
+  "Older messages": [
+    "Mensajes anteriores",
+    "Mensagens anteriores",
+    "Ältere Nachrichten",
+    "Messaggi precedenti",
+    "Eski mesajlar",
+    "الرسائل الأقدم",
+    "पुराने संदेश",
+    "较早消息"
+  ],
+  "Latest messages": [
+    "Últimos mensajes",
+    "Últimas mensagens",
+    "Neueste Nachrichten",
+    "Ultimi messaggi",
+    "Son mesajlar",
+    "أحدث الرسائل",
+    "नवीनतम संदेश",
+    "最新消息"
+  ],
+  "What would you like to know?": [
+    "¿Qué te gustaría saber?",
+    "O que gostaria de saber?",
+    "Was möchten Sie wissen?",
+    "Cosa vorresti sapere?",
+    "Ne öğrenmek istersiniz?",
+    "ماذا تريد أن تعرف؟",
+    "आप क्या जानना चाहते हैं?",
+    "您想了解什么？"
+  ],
+  "Availability, pricing, lead times… Write directly to the manufacturer.": [
+    "Disponibilidad, precios, plazos… Escribe directamente al fabricante.",
+    "Disponibilidade, preços, prazos… Escreva diretamente ao fabricante.",
+    "Verfügbarkeit, Preise, Lieferzeiten… Schreiben Sie direkt dem Hersteller.",
+    "Disponibilità, prezzi, tempi… Scrivi direttamente al produttore.",
+    "Stok, fiyat, teslim süresi… Üreticiye doğrudan yazın.",
+    "التوفّر والأسعار والمواعيد… اكتب مباشرة إلى المصنّع.",
+    "उपलब्धता, मूल्य, समयसीमा… सीधे निर्माता को लिखें।",
+    "供货情况、价格、交期…直接向制造商咨询。"
+  ],
+  "Your company": [
+    "Tu empresa",
+    "A sua empresa",
+    "Ihr Unternehmen",
+    "La tua azienda",
+    "Şirketiniz",
+    "شركتك",
+    "आपकी कंपनी",
+    "您的企业"
+  ],
+  "For your first message, tell the manufacturer who you represent. No supplier profile is needed.": [
+    "Para tu primer mensaje, indica qué empresa representas. No necesitas un perfil de proveedor.",
+    "Na primeira mensagem, indique a empresa que representa. Não precisa de perfil de fornecedor.",
+    "Geben Sie für Ihre erste Nachricht an, welches Unternehmen Sie vertreten. Ein Lieferantenprofil ist nicht nötig.",
+    "Per il primo messaggio, indica l'azienda che rappresenti. Non serve un profilo fornitore.",
+    "İlk mesajda hangi şirketi temsil ettiğinizi belirtin. Tedarikçi profili gerekmez.",
+    "في رسالتك الأولى، عرّف بالشركة التي تمثّلها. لا يلزم ملف مورّد.",
+    "पहले संदेश में बताएँ कि आप किस कंपनी का प्रतिनिधित्व करते हैं। आपूर्तिकर्ता प्रोफ़ाइल आवश्यक नहीं है।",
+    "发送第一条消息时，请说明您代表的企业。无需创建供应商资料。"
+  ],
+  "Company name": [
+    "Nombre de la empresa",
+    "Nome da empresa",
+    "Unternehmensname",
+    "Nome dell'azienda",
+    "Şirket adı",
+    "اسم الشركة",
+    "कंपनी का नाम",
+    "企业名称"
+  ],
+  "Country": [
+    "País",
+    "País",
+    "Land",
+    "Paese",
+    "Ülke",
+    "الدولة",
+    "देश",
+    "国家"
+  ],
+  "Choose": [
+    "Elegir",
+    "Escolher",
+    "Auswählen",
+    "Scegli",
+    "Seç",
+    "اختر",
+    "चुनें",
+    "选择"
+  ],
+  "Choose a country": [
+    "Elegir un país",
+    "Escolher um país",
+    "Land auswählen",
+    "Scegli un paese",
+    "Ülke seç",
+    "اختر دولة",
+    "देश चुनें",
+    "选择国家"
+  ],
+  "Your message": [
+    "Tu mensaje",
+    "A sua mensagem",
+    "Ihre Nachricht",
+    "Il tuo messaggio",
+    "Mesajınız",
+    "رسالتك",
+    "आपका संदेश",
+    "您的消息"
+  ],
+  "Hello, I would like to know…": [
+    "Hola, me gustaría saber…",
+    "Olá, gostaria de saber…",
+    "Hallo, ich möchte wissen…",
+    "Salve, vorrei sapere…",
+    "Merhaba, öğrenmek istiyorum…",
+    "مرحبًا، أودّ أن أعرف…",
+    "नमस्ते, मैं जानना चाहता हूँ…",
+    "您好，我想了解…"
+  ],
+  "Ctrl / ⌘ + Enter to send": [
+    "Ctrl / ⌘ + Intro para enviar",
+    "Ctrl / ⌘ + Enter para enviar",
+    "Strg / ⌘ + Enter zum Senden",
+    "Ctrl / ⌘ + Invio per inviare",
+    "Göndermek için Ctrl / ⌘ + Enter",
+    "Ctrl / ⌘ + Enter للإرسال",
+    "भेजने के लिए Ctrl / ⌘ + Enter",
+    "按 Ctrl / ⌘ + Enter 发送"
+  ],
+  "Sending…": [
+    "Enviando…",
+    "A enviar…",
+    "Wird gesendet…",
+    "Invio…",
+    "Gönderiliyor…",
+    "جارٍ الإرسال…",
+    "भेजा जा रहा है…",
+    "正在发送…"
+  ],
+  "Send": [
+    "Enviar",
+    "Enviar",
+    "Senden",
+    "Invia",
+    "Gönder",
+    "إرسال",
+    "भेजें",
+    "发送"
+  ],
+  "Message sent": [
+    "Mensaje enviado",
+    "Mensagem enviada",
+    "Nachricht gesendet",
+    "Messaggio inviato",
+    "Mesaj gönderildi",
+    "تم إرسال الرسالة",
+    "संदेश भेजा गया",
+    "消息已发送"
+  ],
+  "Your role does not allow starting this conversation. Ask your company administrator.": [
+    "Tu rol no permite iniciar esta conversación. Contacta al administrador de tu empresa.",
+    "A sua função não permite iniciar a conversa. Contacte o administrador da empresa.",
+    "Ihre Rolle erlaubt es nicht, dieses Gespräch zu starten. Wenden Sie sich an Ihren Unternehmensadministrator.",
+    "Il tuo ruolo non consente di avviare la conversazione. Contatta l'amministratore aziendale.",
+    "Rolünüz bu konuşmayı başlatmaya izin vermiyor. Şirket yöneticisine başvurun.",
+    "دورك لا يسمح ببدء هذه المحادثة. تواصل مع مسؤول شركتك.",
+    "आपकी भूमिका में यह बातचीत शुरू करने की अनुमति नहीं है। कंपनी व्यवस्थापक से पूछें।",
+    "您的权限不允许发起此对话，请联系企业管理员。"
+  ],
+  "Private conversation · Replies appear automatically": [
+    "Conversación privada · Respuestas automáticas en pantalla",
+    "Conversa privada · Respostas aparecem automaticamente",
+    "Privates Gespräch · Antworten erscheinen automatisch",
+    "Conversazione privata · Risposte visualizzate automaticamente",
+    "Özel görüşme · Yanıtlar otomatik görünür",
+    "محادثة خاصة · تظهر الردود تلقائيًا",
+    "निजी बातचीत · उत्तर अपने-आप दिखते हैं",
+    "私密对话 · 回复自动更新"
+  ],
+  "Loading your messages…": [
+    "Cargando tus mensajes…",
+    "A carregar mensagens…",
+    "Ihre Nachrichten werden geladen…",
+    "Caricamento dei messaggi…",
+    "Mesajlarınız yükleniyor…",
+    "جارٍ تحميل رسائلك…",
+    "आपके संदेश लोड हो रहे हैं…",
+    "正在加载消息…"
+  ],
+  "Start a conversation": [
+    "Iniciar una conversación",
+    "Iniciar uma conversa",
+    "Gespräch beginnen",
+    "Avvia una conversazione",
+    "Konuşma başlat",
+    "بدء محادثة",
+    "बातचीत शुरू करें",
+    "开始对话"
+  ],
+  "Choose a conversation, or open a company or product and click “Contact”.": [
+    "Elige una conversación o abre una empresa o producto y pulsa «Contactar».",
+    "Escolha uma conversa ou abra uma empresa ou produto e clique em «Contactar».",
+    "Wählen Sie ein Gespräch oder öffnen Sie ein Unternehmen oder Produkt und klicken Sie auf „Kontakt“.",
+    "Scegli una conversazione oppure apri un'azienda o prodotto e clicca su «Contatta».",
+    "Bir konuşma seçin veya şirket ya da ürün açıp “İletişim”e tıklayın.",
+    "اختر محادثة أو افتح شركة أو منتجًا واضغط «تواصل».",
+    "बातचीत चुनें, या कंपनी अथवा उत्पाद खोलकर “संपर्क” पर क्लिक करें।",
+    "选择对话，或打开企业或产品页面并点击“联系”。"
+  ],
+  "Loading messages…": [
+    "Cargando mensajes…",
+    "A carregar mensagens…",
+    "Nachrichten werden geladen…",
+    "Caricamento messaggi…",
+    "Mesajlar yükleniyor…",
+    "جارٍ تحميل الرسائل…",
+    "संदेश लोड हो रहे हैं…",
+    "正在加载消息…"
+  ],
+  "Messages could not be loaded.": [
+    "No se pudieron cargar los mensajes.",
+    "Não foi possível carregar as mensagens.",
+    "Nachrichten konnten nicht geladen werden.",
+    "Impossibile caricare i messaggi.",
+    "Mesajlar yüklenemedi.",
+    "تعذّر تحميل الرسائل.",
+    "संदेश लोड नहीं हो सके।",
+    "无法加载消息。"
+  ],
+  "No messages yet.": [
+    "Aún no hay mensajes.",
+    "Ainda não há mensagens.",
+    "Noch keine Nachrichten.",
+    "Ancora nessun messaggio.",
+    "Henüz mesaj yok.",
+    "لا توجد رسائل بعد.",
+    "अभी कोई संदेश नहीं।",
+    "暂无消息。"
+  ],
+  "Contact": [
+    "Contacto",
+    "Contacto",
+    "Kontakt",
+    "Contatto",
+    "İletişim",
+    "التواصل",
+    "संपर्क",
+    "联系"
+  ],
+  "Conversation history": [
+    "Historial de conversación",
+    "Histórico da conversa",
+    "Gesprächsverlauf",
+    "Cronologia conversazione",
+    "Konuşma geçmişi",
+    "سجل المحادثة",
+    "बातचीत का इतिहास",
+    "对话记录"
+  ],
+  "Newer messages": [
+    "Mensajes más recientes",
+    "Mensagens mais recentes",
+    "Neuere Nachrichten",
+    "Messaggi più recenti",
+    "Daha yeni mesajlar",
+    "الرسائل الأحدث",
+    "नए संदेश",
+    "较新消息"
+  ]
+}

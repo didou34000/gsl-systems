@@ -1,0 +1,212 @@
+{
+  "Request review of your account deletion? Nothing will be erased immediately; shared records and retention obligations need to be assessed.": [
+    "¿Solicitar la revisión de la eliminación de tu cuenta? No se borrará nada inmediatamente; hay que revisar registros compartidos y obligaciones de conservación.",
+    "Pedir análise da eliminação da conta? Nada será apagado de imediato; é necessário avaliar registos partilhados e obrigações de conservação.",
+    "Prüfung Ihrer Kontolöschung anfordern? Es wird nichts sofort gelöscht; gemeinsame Daten und Aufbewahrungspflichten müssen geprüft werden.",
+    "Richiedere l'esame della cancellazione dell'account? Nulla sarà eliminato subito; vanno valutati dati condivisi e obblighi di conservazione.",
+    "Hesabınızın silinmesi için inceleme istensin mi? Hemen veri silinmez; ortak kayıtlar ve saklama yükümlülükleri değerlendirilmelidir.",
+    "هل تريد طلب مراجعة حذف حسابك؟ لن يُحذف شيء فورًا؛ يجب تقييم السجلات المشتركة والتزامات الاحتفاظ.",
+    "खाता हटाने की समीक्षा माँगें? तुरंत कुछ नहीं मिटेगा; साझा रिकॉर्ड और संरक्षण दायित्व जाँचे जाएँगे।",
+    "请求审核账户删除？不会立即删除任何数据，需先评估共享记录及保留义务。"
+  ],
+  "Your data": [
+    "Tus datos",
+    "Os seus dados",
+    "Ihre Daten",
+    "I tuoi dati",
+    "Verileriniz",
+    "بياناتك",
+    "आपका डेटा",
+    "您的数据"
+  ],
+  "Download the records currently accessible to your account. The export excludes authentication secrets and file contents.": [
+    "Descarga los registros accesibles para tu cuenta. La exportación excluye claves de autenticación y contenido de archivos.",
+    "Transfira os registos acessíveis à conta. A exportação exclui segredos de autenticação e conteúdo dos ficheiros.",
+    "Laden Sie die für Ihr Konto zugänglichen Daten herunter. Authentifizierungsgeheimnisse und Dateiinhalte sind ausgeschlossen.",
+    "Scarica i dati accessibili al tuo account. L'esportazione esclude segreti di autenticazione e contenuti dei file.",
+    "Hesabınızın erişebildiği kayıtları indirin. Kimlik doğrulama sırları ve dosya içerikleri dışa aktarılmaz.",
+    "نزّل السجلات المتاحة لحسابك. لا يتضمّن التصدير أسرار المصادقة أو محتوى الملفات.",
+    "खाते के लिए उपलब्ध रिकॉर्ड डाउनलोड करें। निर्यात में प्रमाणीकरण रहस्य या फ़ाइलों की सामग्री शामिल नहीं होती।",
+    "下载您账户当前可访问的记录。导出不包含身份验证机密和文件内容。"
+  ],
+  "Download my data": [
+    "Descargar mis datos",
+    "Transferir os meus dados",
+    "Meine Daten herunterladen",
+    "Scarica i miei dati",
+    "Verilerimi indir",
+    "تنزيل بياناتي",
+    "मेरा डेटा डाउनलोड करें",
+    "下载我的数据"
+  ],
+  "Request account deletion": [
+    "Solicitar eliminación de cuenta",
+    "Pedir eliminação da conta",
+    "Kontolöschung anfordern",
+    "Richiedi cancellazione account",
+    "Hesap silme talebi oluştur",
+    "طلب حذف الحساب",
+    "खाता हटाने का अनुरोध करें",
+    "请求删除账户"
+  ],
+  "The operation was not confirmed. Please retry or contact GSL.": [
+    "La operación no se confirmó. Reinténtalo o contacta con GSL.",
+    "A operação não foi confirmada. Tente novamente ou contacte a GSL.",
+    "Der Vorgang wurde nicht bestätigt. Versuchen Sie es erneut oder kontaktieren Sie GSL.",
+    "L'operazione non è stata confermata. Riprova o contatta GSL.",
+    "İşlem onaylanmadı. Tekrar deneyin veya GSL ile iletişime geçin.",
+    "لم تُؤكّد العملية. أعد المحاولة أو تواصل مع GSL.",
+    "कार्रवाई की पुष्टि नहीं हुई। फिर कोशिश करें या GSL से संपर्क करें।",
+    "操作未确认，请重试或联系 GSL。"
+  ],
+  "Request recorded for review. No data has been deleted. Reference:": [
+    "Solicitud registrada para revisión. No se ha eliminado ningún dato. Referencia:",
+    "Pedido registado para análise. Nenhum dado foi eliminado. Referência:",
+    "Anfrage zur Prüfung erfasst. Es wurden keine Daten gelöscht. Referenz:",
+    "Richiesta registrata per esame. Nessun dato è stato eliminato. Riferimento:",
+    "Talep inceleme için kaydedildi. Hiçbir veri silinmedi. Referans:",
+    "سُجّل الطلب للمراجعة. لم تُحذف أي بيانات. المرجع:",
+    "अनुरोध समीक्षा के लिए दर्ज हुआ। कोई डेटा नहीं हटाया गया। संदर्भ:",
+    "请求已登记待审核，未删除任何数据。参考编号："
+  ],
+  "Authenticator protection": [
+    "Protección con autenticador",
+    "Proteção por autenticador",
+    "Schutz mit Authenticator",
+    "Protezione con autenticatore",
+    "Kimlik doğrulayıcı koruması",
+    "الحماية بتطبيق المصادقة",
+    "प्रमाणक सुरक्षा",
+    "验证器保护"
+  ],
+  "Administrators and reviewers verify a second factor before opening their workspace. Access is assigned separately.": [
+    "Administradores y revisores verifican un segundo factor antes de abrir su espacio. Los permisos se asignan por separado.",
+    "Administradores e revisores verificam um segundo fator antes de abrir o espaço. O acesso é atribuído separadamente.",
+    "Administratoren und Prüfer bestätigen einen zweiten Faktor vor dem Zugang. Berechtigungen werden separat zugewiesen.",
+    "Amministratori e revisori verificano un secondo fattore prima dell'accesso. Le autorizzazioni sono assegnate separatamente.",
+    "Yöneticiler ve incelemeciler erişimden önce ikinci faktörü doğrular. Erişim yetkisi ayrı atanır.",
+    "يتحقّق المسؤولون والمراجعون بعامل ثانٍ قبل الدخول. تُمنح صلاحيات الوصول بشكل منفصل.",
+    "व्यवस्थापक और समीक्षक कार्यक्षेत्र खोलने से पहले दूसरा कारक सत्यापित करते हैं। पहुँच अलग से दी जाती है।",
+    "管理员和审核员须验证第二因素后才能进入工作区。访问权限另行分配。"
+  ],
+  "The code was not accepted. Enter the current code from your authenticator.": [
+    "Código no aceptado. Introduce el código actual de tu autenticador.",
+    "Código não aceite. Introduza o código atual do autenticador.",
+    "Der Code wurde nicht akzeptiert. Geben Sie den aktuellen Authenticator-Code ein.",
+    "Codice non accettato. Inserisci il codice attuale dell'autenticatore.",
+    "Kod kabul edilmedi. Doğrulayıcınızdaki güncel kodu girin.",
+    "لم يُقبل الرمز. أدخل الرمز الحالي من تطبيق المصادقة.",
+    "कोड स्वीकार नहीं हुआ। अपने प्रमाणक का वर्तमान कोड दर्ज करें।",
+    "验证码未通过。请输入验证器中的当前验证码。"
+  ],
+  "Authenticator setup is currently unavailable. Try again or contact GSL.": [
+    "La configuración no está disponible. Reinténtalo o contacta con GSL.",
+    "Configuração indisponível. Tente novamente ou contacte a GSL.",
+    "Authenticator-Einrichtung derzeit nicht verfügbar. Versuchen Sie es erneut oder kontaktieren Sie GSL.",
+    "Configurazione non disponibile. Riprova o contatta GSL.",
+    "Doğrulayıcı kurulumu şu anda kullanılamıyor. Tekrar deneyin veya GSL'ye ulaşın.",
+    "إعداد المصادقة غير متاح حاليًا. حاول مجددًا أو تواصل مع GSL.",
+    "प्रमाणक सेटअप अभी उपलब्ध नहीं है। फिर कोशिश करें या GSL से संपर्क करें।",
+    "验证器设置暂不可用，请重试或联系 GSL。"
+  ],
+  "Second factor verified for this session.": [
+    "Segundo factor verificado para esta sesión.",
+    "Segundo fator verificado para esta sessão.",
+    "Zweiter Faktor für diese Sitzung bestätigt.",
+    "Secondo fattore verificato per questa sessione.",
+    "Bu oturum için ikinci faktör doğrulandı.",
+    "تم التحقّق بالعامل الثاني لهذه الجلسة.",
+    "इस सत्र के लिए दूसरा कारक सत्यापित है।",
+    "本次会话的第二因素已验证。"
+  ],
+  "Open administration": [
+    "Abrir administración",
+    "Abrir administração",
+    "Verwaltung öffnen",
+    "Apri amministrazione",
+    "Yönetimi aç",
+    "فتح الإدارة",
+    "प्रशासन खोलें",
+    "打开管理后台"
+  ],
+  "Open authorised reviews": [
+    "Abrir revisiones autorizadas",
+    "Abrir revisões autorizadas",
+    "Autorisierte Prüfungen öffnen",
+    "Apri revisioni autorizzate",
+    "Yetkili incelemeleri aç",
+    "فتح المراجعات المصرّح بها",
+    "अधिकृत समीक्षाएँ खोलें",
+    "打开授权审核"
+  ],
+  "Set up an authenticator": [
+    "Configurar autenticador",
+    "Configurar autenticador",
+    "Authenticator einrichten",
+    "Configura un autenticatore",
+    "Doğrulayıcı kur",
+    "إعداد تطبيق المصادقة",
+    "प्रमाणक सेट करें",
+    "设置验证器"
+  ],
+  "In your authenticator, add an account using this setup key. Keep it private. Then enter the generated six-digit code.": [
+    "Añade una cuenta en tu autenticador con esta clave. Mantenla privada e introduce el código de seis dígitos generado.",
+    "Adicione uma conta no autenticador com esta chave. Mantenha-a privada e introduza o código de seis dígitos gerado.",
+    "Fügen Sie mit diesem Schlüssel ein Konto im Authenticator hinzu. Halten Sie ihn geheim und geben Sie den erzeugten sechsstelligen Code ein.",
+    "Aggiungi un account nell'autenticatore con questa chiave. Tienila privata, poi inserisci il codice generato di sei cifre.",
+    "Bu anahtarla doğrulayıcınızda hesap ekleyin. Anahtarı gizli tutun ve üretilen altı haneli kodu girin.",
+    "أضف حسابًا في تطبيق المصادقة بهذا المفتاح. احتفظ به سريًا ثم أدخل الرمز المكوّن من ستة أرقام.",
+    "इस सेटअप कुंजी से प्रमाणक में खाता जोड़ें। कुंजी गुप्त रखें, फिर बना छह अंकों का कोड दर्ज करें।",
+    "使用此密钥在验证器中添加账户。请妥善保密，然后输入生成的六位验证码。"
+  ],
+  "Scan with your authenticator app": [
+    "Escanea con tu aplicación autenticadora",
+    "Leia com a aplicação autenticadora",
+    "Mit Ihrer Authenticator-App scannen",
+    "Scansiona con l'app di autenticazione",
+    "Doğrulayıcı uygulamanızla tarayın",
+    "امسح باستخدام تطبيق المصادقة",
+    "अपने प्रमाणक ऐप से स्कैन करें",
+    "使用验证器应用扫描"
+  ],
+  "Discard incomplete setup": [
+    "Descartar configuración incompleta",
+    "Descartar configuração incompleta",
+    "Unvollständige Einrichtung verwerfen",
+    "Annulla configurazione incompleta",
+    "Eksik kurulumu iptal et",
+    "إلغاء الإعداد غير المكتمل",
+    "अधूरा सेटअप रद्द करें",
+    "放弃未完成的设置"
+  ],
+  "Authenticator": [
+    "Autenticador",
+    "Autenticador",
+    "Authenticator",
+    "Autenticatore",
+    "Doğrulayıcı",
+    "تطبيق المصادقة",
+    "प्रमाणक",
+    "验证器"
+  ],
+  "Authenticator code": [
+    "Código del autenticador",
+    "Código do autenticador",
+    "Authenticator-Code",
+    "Codice autenticatore",
+    "Doğrulayıcı kodu",
+    "رمز تطبيق المصادقة",
+    "प्रमाणक कोड",
+    "验证器验证码"
+  ],
+  "Verify second factor": [
+    "Verificar segundo factor",
+    "Verificar segundo fator",
+    "Zweiten Faktor bestätigen",
+    "Verifica secondo fattore",
+    "İkinci faktörü doğrula",
+    "التحقّق بالعامل الثاني",
+    "दूसरा कारक सत्यापित करें",
+    "验证第二因素"
+  ]
+}

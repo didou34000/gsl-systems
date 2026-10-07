@@ -1,0 +1,782 @@
+{
+  "Submit a quote": [
+    "Enviar presupuesto",
+    "Enviar proposta",
+    "Angebot abgeben",
+    "Invia preventivo",
+    "Teklif sun",
+    "تقديم عرض سعر",
+    "मूल्य प्रस्ताव भेजें",
+    "提交报价"
+  ],
+  "A new submission creates a new version. Earlier quotes remain available in the history.": [
+    "Cada envío crea una nueva versión. Los anteriores siguen disponibles en el historial.",
+    "Cada envio cria uma nova versão. As propostas anteriores continuam no histórico.",
+    "Jede Einreichung erstellt eine neue Version. Frühere Angebote bleiben im Verlauf.",
+    "Ogni invio crea una nuova versione. I preventivi precedenti restano nella cronologia.",
+    "Yeni gönderim yeni sürüm oluşturur. Önceki teklifler geçmişte kalır.",
+    "كل إرسال ينشئ نسخة جديدة. تبقى العروض السابقة في السجل.",
+    "नया सबमिशन नया संस्करण बनाता है। पुराने प्रस्ताव इतिहास में रहते हैं।",
+    "每次提交会创建新版本，旧报价仍保留在历史记录中。"
+  ],
+  "Currency": [
+    "Moneda",
+    "Moeda",
+    "Währung",
+    "Valuta",
+    "Para birimi",
+    "العملة",
+    "मुद्रा",
+    "币种"
+  ],
+  "Line": [
+    "Línea",
+    "Linha",
+    "Position",
+    "Riga",
+    "Kalem",
+    "البند",
+    "पंक्ति",
+    "项目"
+  ],
+  "Description": [
+    "Descripción",
+    "Descrição",
+    "Beschreibung",
+    "Descrizione",
+    "Açıklama",
+    "الوصف",
+    "विवरण",
+    "描述"
+  ],
+  "Quantity": [
+    "Cantidad",
+    "Quantidade",
+    "Menge",
+    "Quantità",
+    "Miktar",
+    "الكمية",
+    "मात्रा",
+    "数量"
+  ],
+  "Unit": [
+    "Unidad",
+    "Unidade",
+    "Einheit",
+    "Unità",
+    "Birim",
+    "الوحدة",
+    "इकाई",
+    "单位"
+  ],
+  "Unit price": [
+    "Precio unitario",
+    "Preço unitário",
+    "Stückpreis",
+    "Prezzo unitario",
+    "Birim fiyat",
+    "سعر الوحدة",
+    "इकाई मूल्य",
+    "单价"
+  ],
+  "Remove line": [
+    "Eliminar línea",
+    "Remover linha",
+    "Position entfernen",
+    "Rimuovi riga",
+    "Kalemi kaldır",
+    "حذف البند",
+    "पंक्ति हटाएँ",
+    "删除项目"
+  ],
+  "Add line": [
+    "Añadir línea",
+    "Adicionar linha",
+    "Position hinzufügen",
+    "Aggiungi riga",
+    "Kalem ekle",
+    "إضافة بند",
+    "पंक्ति जोड़ें",
+    "添加项目"
+  ],
+  "Fixed fees, in the same currency": [
+    "Gastos fijos, en la misma moneda",
+    "Custos fixos, na mesma moeda",
+    "Fixkosten in derselben Währung",
+    "Costi fissi, nella stessa valuta",
+    "Aynı para biriminde sabit ücretler",
+    "رسوم ثابتة بالعملة نفسها",
+    "उसी मुद्रा में निश्चित शुल्क",
+    "相同币种的固定费用"
+  ],
+  "Transport": [
+    "Transporte",
+    "Transporte",
+    "Transport",
+    "Trasporto",
+    "Nakliye",
+    "النقل",
+    "परिवहन",
+    "运输"
+  ],
+  "To confirm": [
+    "Por confirmar",
+    "A confirmar",
+    "Zu bestätigen",
+    "Da confermare",
+    "Teyit edilecek",
+    "للتأكيد",
+    "पुष्टि लंबित",
+    "待确认"
+  ],
+  "Included": [
+    "Incluido",
+    "Incluído",
+    "Enthalten",
+    "Incluso",
+    "Dahil",
+    "مشمول",
+    "शामिल",
+    "已包含"
+  ],
+  "Excluded": [
+    "Excluido",
+    "Excluído",
+    "Nicht enthalten",
+    "Escluso",
+    "Hariç",
+    "غير مشمول",
+    "शामिल नहीं",
+    "不包含"
+  ],
+  "Terms": [
+    "Condiciones",
+    "Condições",
+    "Bedingungen",
+    "Condizioni",
+    "Koşullar",
+    "الشروط",
+    "शर्तें",
+    "条款"
+  ],
+  "Exclusions and variants": [
+    "Exclusiones y variantes",
+    "Exclusões e variantes",
+    "Ausschlüsse und Varianten",
+    "Esclusioni e varianti",
+    "Hariç tutulanlar ve varyantlar",
+    "الاستثناءات والبدائل",
+    "अपवर्जन और विकल्प",
+    "除外项与变更"
+  ],
+  "Lead time and assumptions": [
+    "Plazo y supuestos",
+    "Prazo e pressupostos",
+    "Lieferzeit und Annahmen",
+    "Tempi e ipotesi",
+    "Teslim süresi ve varsayımlar",
+    "المهلة والافتراضات",
+    "समयसीमा और धारणाएँ",
+    "交期与前提条件"
+  ],
+  "Valid until": [
+    "Válido hasta",
+    "Válido até",
+    "Gültig bis",
+    "Valido fino al",
+    "Geçerlilik sonu",
+    "صالح حتى",
+    "तक मान्य",
+    "有效期至"
+  ],
+  "Submit quote": [
+    "Enviar oferta",
+    "Enviar proposta",
+    "Angebot senden",
+    "Invia preventivo",
+    "Teklifi gönder",
+    "إرسال العرض",
+    "प्रस्ताव भेजें",
+    "提交报价"
+  ],
+  "No quotes received yet.": [
+    "Aún no se han recibido ofertas.",
+    "Ainda não recebeu propostas.",
+    "Noch keine Angebote erhalten.",
+    "Nessun preventivo ricevuto.",
+    "Henüz teklif alınmadı.",
+    "لم تُستلم عروض بعد.",
+    "अभी कोई प्रस्ताव नहीं मिला।",
+    "尚未收到报价。"
+  ],
+  "Compare received quotes": [
+    "Comparar ofertas recibidas",
+    "Comparar propostas recebidas",
+    "Erhaltene Angebote vergleichen",
+    "Confronta preventivi ricevuti",
+    "Alınan teklifleri karşılaştır",
+    "مقارنة العروض المستلمة",
+    "मिले प्रस्तावों की तुलना करें",
+    "比较收到的报价"
+  ],
+  "Amounts remain in their original currencies. No currency conversion or automatic price ranking is applied. Check quantities, scope, transport and exclusions.": [
+    "Los importes mantienen sus monedas originales. No se convierten ni ordenan por precio automáticamente. Comprueba cantidades, alcance, transporte y exclusiones.",
+    "Os montantes mantêm as moedas originais. Não há conversão nem ordenação automática por preço. Verifique quantidades, âmbito, transporte e exclusões.",
+    "Beträge bleiben in Originalwährungen. Es gibt keine Umrechnung oder automatische Preisrangfolge. Prüfen Sie Mengen, Umfang, Transport und Ausschlüsse.",
+    "Gli importi restano nelle valute originali. Nessuna conversione o classifica automatica. Verifica quantità, ambito, trasporto ed esclusioni.",
+    "Tutarlar özgün para birimindedir. Kur dönüşümü veya otomatik fiyat sıralaması yoktur. Miktar, kapsam, nakliye ve istisnaları kontrol edin.",
+    "تبقى المبالغ بعملاتها الأصلية. لا تحويل عملات ولا ترتيب تلقائي للأسعار. راجع الكميات والنطاق والنقل والاستثناءات.",
+    "राशियाँ मूल मुद्राओं में रहती हैं। मुद्रा परिवर्तन या स्वतः मूल्य रैंकिंग नहीं होती। मात्रा, दायरा, परिवहन और अपवर्जन जाँचें।",
+    "金额保留原币种，不进行汇率换算或自动价格排名。请核对数量、范围、运输及除外项。"
+  ],
+  "Amount": [
+    "Importe",
+    "Montante",
+    "Betrag",
+    "Importo",
+    "Tutar",
+    "المبلغ",
+    "राशि",
+    "金额"
+  ],
+  "Scope": [
+    "Alcance",
+    "Âmbito",
+    "Umfang",
+    "Ambito",
+    "Kapsam",
+    "النطاق",
+    "दायरा",
+    "范围"
+  ],
+  "Transport and exclusions": [
+    "Transporte y exclusiones",
+    "Transporte e exclusões",
+    "Transport und Ausschlüsse",
+    "Trasporto ed esclusioni",
+    "Nakliye ve hariç tutulanlar",
+    "النقل والاستثناءات",
+    "परिवहन और अपवर्जन",
+    "运输与除外项"
+  ],
+  "Lead time and validity": [
+    "Plazo y validez",
+    "Prazo e validade",
+    "Lieferzeit und Gültigkeit",
+    "Tempi e validità",
+    "Teslim süresi ve geçerlilik",
+    "المهلة والصلاحية",
+    "समयसीमा और वैधता",
+    "交期与有效期"
+  ],
+  "Action": [
+    "Acción",
+    "Ação",
+    "Aktion",
+    "Azione",
+    "İşlem",
+    "الإجراء",
+    "कार्रवाई",
+    "操作"
+  ],
+  "Fixed fees": [
+    "Gastos fijos",
+    "Custos fixos",
+    "Fixkosten",
+    "Costi fissi",
+    "Sabit ücretler",
+    "الرسوم الثابتة",
+    "निश्चित शुल्क",
+    "固定费用"
+  ],
+  "No exclusions specified": [
+    "Sin exclusiones indicadas",
+    "Sem exclusões indicadas",
+    "Keine Ausschlüsse angegeben",
+    "Nessuna esclusione indicata",
+    "İstisna belirtilmedi",
+    "لا استثناءات محدّدة",
+    "कोई अपवर्जन नहीं बताया",
+    "未注明除外项"
+  ],
+  "Expired": [
+    "Caducado",
+    "Expirado",
+    "Abgelaufen",
+    "Scaduto",
+    "Süresi doldu",
+    "منتهي الصلاحية",
+    "समाप्त",
+    "已过期"
+  ],
+  "Select this quote": [
+    "Seleccionar esta oferta",
+    "Selecionar esta proposta",
+    "Dieses Angebot auswählen",
+    "Seleziona questo preventivo",
+    "Bu teklifi seç",
+    "اختيار هذا العرض",
+    "यह प्रस्ताव चुनें",
+    "选择此报价"
+  ],
+  "Confirm selection": [
+    "Confirmar selección",
+    "Confirmar seleção",
+    "Auswahl bestätigen",
+    "Conferma selezione",
+    "Seçimi onayla",
+    "تأكيد الاختيار",
+    "चयन की पुष्टि करें",
+    "确认选择"
+  ],
+  "You are recording your choice. This does not create a payment, signed purchase order or guaranteed booking. Confirm the contract directly with the supplier.": [
+    "Estás registrando tu elección. Esto no genera pago, pedido firmado ni reserva garantizada. Confirma el contrato directamente con el proveedor.",
+    "Está a registar a escolha. Isto não cria pagamento, encomenda assinada nem reserva garantida. Confirme o contrato com o fornecedor.",
+    "Sie erfassen Ihre Auswahl. Dies erstellt keine Zahlung, unterschriebene Bestellung oder garantierte Reservierung. Bestätigen Sie den Vertrag direkt mit dem Lieferanten.",
+    "Stai registrando la scelta. Non si crea un pagamento, ordine firmato o prenotazione garantita. Conferma il contratto con il fornitore.",
+    "Seçiminizi kaydediyorsunuz. Ödeme, imzalı sipariş veya garantili rezervasyon oluşmaz. Sözleşmeyi tedarikçiyle doğrudan onaylayın.",
+    "أنت تسجّل اختيارك. لا ينشئ ذلك دفعة أو أمر شراء موقّعًا أو حجزًا مضمونًا. أكّد العقد مباشرة مع المورّد.",
+    "आप अपना चयन दर्ज कर रहे हैं। इससे भुगतान, हस्ताक्षरित खरीद आदेश या सुनिश्चित बुकिंग नहीं बनती। अनुबंध सीधे आपूर्तिकर्ता से पक्का करें।",
+    "您正在记录选择。这不会产生付款、已签采购订单或保证预订。请直接与供应商确认合同。"
+  ],
+  "Confirm choice": [
+    "Confirmar elección",
+    "Confirmar escolha",
+    "Auswahl bestätigen",
+    "Conferma scelta",
+    "Tercihi onayla",
+    "تأكيد الخيار",
+    "चयन की पुष्टि करें",
+    "确认选择"
+  ],
+  "Back": [
+    "Atrás",
+    "Voltar",
+    "Zurück",
+    "Indietro",
+    "Geri",
+    "رجوع",
+    "वापस",
+    "返回"
+  ],
+  "Previous versions": [
+    "Versiones anteriores",
+    "Versões anteriores",
+    "Frühere Versionen",
+    "Versioni precedenti",
+    "Önceki sürümler",
+    "النسخ السابقة",
+    "पिछले संस्करण",
+    "历史版本"
+  ],
+  "Edit private draft": [
+    "Editar borrador privado",
+    "Editar rascunho privado",
+    "Privaten Entwurf bearbeiten",
+    "Modifica bozza privata",
+    "Özel taslağı düzenle",
+    "تعديل المسودة الخاصة",
+    "निजी प्रारूप संपादित करें",
+    "编辑私人草稿"
+  ],
+  "Prepare a private request": [
+    "Preparar solicitud privada",
+    "Preparar pedido privado",
+    "Private Anfrage vorbereiten",
+    "Prepara richiesta privata",
+    "Özel talep hazırla",
+    "إعداد طلب خاص",
+    "निजी अनुरोध तैयार करें",
+    "准备私人询价"
+  ],
+  "Your draft is saved automatically in your account. Nothing is sent until you review the content and confirm the named recipients.": [
+    "Tu borrador se guarda automáticamente. No se envía nada hasta que revises el contenido y confirmes los destinatarios.",
+    "O rascunho é guardado automaticamente na conta. Nada é enviado antes de rever o conteúdo e confirmar os destinatários.",
+    "Ihr Entwurf wird automatisch im Konto gespeichert. Nichts wird gesendet, bevor Sie Inhalt und benannte Empfänger bestätigen.",
+    "La bozza è salvata automaticamente nell'account. Nulla viene inviato finché non rivedi il contenuto e confermi i destinatari.",
+    "Taslağınız hesabınıza otomatik kaydedilir. İçeriği inceleyip alıcıları onaylayana kadar gönderilmez.",
+    "تُحفظ المسودة تلقائيًا في حسابك. لا يُرسل شيء حتى تراجع المحتوى وتؤكّد المستلمين.",
+    "प्रारूप खाते में अपने-आप सहेजता है। सामग्री की समीक्षा और प्राप्तकर्ता पुष्टि तक कुछ नहीं भेजा जाता।",
+    "草稿自动保存到账户。确认内容及指定收件人前，不会发送任何信息。"
+  ],
+  "Saving…": [
+    "Guardando…",
+    "A guardar…",
+    "Wird gespeichert…",
+    "Salvataggio…",
+    "Kaydediliyor…",
+    "جارٍ الحفظ…",
+    "सहेजा जा रहा है…",
+    "正在保存…"
+  ],
+  "Draft saved": [
+    "Borrador guardado",
+    "Rascunho guardado",
+    "Entwurf gespeichert",
+    "Bozza salvata",
+    "Taslak kaydedildi",
+    "تم حفظ المسودة",
+    "प्रारूप सहेजा गया",
+    "草稿已保存"
+  ],
+  "Not saved. Keep this page open and retry when your connection returns.": [
+    "No guardado. Mantén esta página abierta y reintenta al volver la conexión.",
+    "Não guardado. Mantenha a página aberta e tente quando a ligação voltar.",
+    "Nicht gespeichert. Lassen Sie die Seite offen und versuchen Sie es erneut, sobald die Verbindung wiederhergestellt ist.",
+    "Non salvato. Tieni aperta la pagina e riprova quando torna la connessione.",
+    "Kaydedilmedi. Sayfayı açık tutun ve bağlantı gelince tekrar deneyin.",
+    "لم يُحفظ. أبقِ الصفحة مفتوحة وأعد المحاولة عند عودة الاتصال.",
+    "सहेजा नहीं गया। पेज खुला रखें और कनेक्शन लौटने पर फिर कोशिश करें।",
+    "尚未保存。请保持页面打开，网络恢复后重试。"
+  ],
+  "This draft has changed in another window. Copy your latest changes before reloading it.": [
+    "Este borrador cambió en otra ventana. Copia tus últimos cambios antes de recargar.",
+    "O rascunho mudou noutra janela. Copie as alterações mais recentes antes de recarregar.",
+    "Dieser Entwurf wurde in einem anderen Fenster geändert. Kopieren Sie Ihre letzten Änderungen vor dem Neuladen.",
+    "La bozza è cambiata in un'altra finestra. Copia le ultime modifiche prima di ricaricare.",
+    "Taslak başka pencerede değişti. Yenilemeden önce son değişiklikleri kopyalayın.",
+    "تغيّرت المسودة في نافذة أخرى. انسخ تعديلاتك الأخيرة قبل إعادة التحميل.",
+    "यह प्रारूप दूसरी विंडो में बदला है। पुनः लोड करने से पहले अपने नवीनतम बदलाव कॉपी करें।",
+    "草稿已在其他窗口更改。重新加载前请复制最新修改。"
+  ],
+  "Title": [
+    "Título",
+    "Título",
+    "Titel",
+    "Titolo",
+    "Başlık",
+    "العنوان",
+    "शीर्षक",
+    "标题"
+  ],
+  "Specifications and delivery requirements": [
+    "Especificaciones y requisitos de entrega",
+    "Especificações e requisitos de entrega",
+    "Spezifikationen und Lieferanforderungen",
+    "Specifiche e requisiti di consegna",
+    "Özellikler ve teslimat gereklilikleri",
+    "المواصفات ومتطلبات التسليم",
+    "विनिर्देश और वितरण आवश्यकताएँ",
+    "规格与交付要求"
+  ],
+  "Delivery country": [
+    "País de entrega",
+    "País de entrega",
+    "Lieferland",
+    "Paese di consegna",
+    "Teslimat ülkesi",
+    "بلد التسليم",
+    "वितरण देश",
+    "交付国家"
+  ],
+  "Item": [
+    "Artículo",
+    "Artigo",
+    "Position",
+    "Articolo",
+    "Ürün",
+    "الصنف",
+    "मद",
+    "项目"
+  ],
+  "Remove": [
+    "Eliminar",
+    "Remover",
+    "Entfernen",
+    "Rimuovi",
+    "Kaldır",
+    "حذف",
+    "हटाएँ",
+    "移除"
+  ],
+  "Add item": [
+    "Añadir artículo",
+    "Adicionar artigo",
+    "Position hinzufügen",
+    "Aggiungi articolo",
+    "Ürün ekle",
+    "إضافة صنف",
+    "मद जोड़ें",
+    "添加项目"
+  ],
+  "Save and review request": [
+    "Guardar y revisar solicitud",
+    "Guardar e rever pedido",
+    "Anfrage speichern und prüfen",
+    "Salva e rivedi richiesta",
+    "Talebi kaydet ve incele",
+    "حفظ الطلب ومراجعته",
+    "अनुरोध सहेजें और समीक्षा करें",
+    "保存并检查询价"
+  ],
+  "Close without saving your latest changes?": [
+    "¿Cerrar sin guardar los últimos cambios?",
+    "Fechar sem guardar as últimas alterações?",
+    "Ohne Speichern der letzten Änderungen schließen?",
+    "Chiudere senza salvare le ultime modifiche?",
+    "Son değişiklikler kaydedilmeden kapatılsın mı?",
+    "هل تريد الإغلاق دون حفظ آخر التعديلات؟",
+    "नवीनतम बदलाव सहेजे बिना बंद करें?",
+    "不保存最新修改就关闭？"
+  ],
+  "Close editor": [
+    "Cerrar editor",
+    "Fechar editor",
+    "Editor schließen",
+    "Chiudi editor",
+    "Düzenleyiciyi kapat",
+    "إغلاق المحرّر",
+    "संपादक बंद करें",
+    "关闭编辑器"
+  ],
+  "Team access and invitations": [
+    "Acceso e invitaciones del equipo",
+    "Acesso e convites da equipa",
+    "Teamzugang und Einladungen",
+    "Accesso team e inviti",
+    "Ekip erişimi ve davetler",
+    "وصول الفريق والدعوات",
+    "टीम पहुँच और आमंत्रण",
+    "团队权限与邀请"
+  ],
+  "Only owners and administrators can invite. The recipient must sign in with the exact invited email. A shared email domain does not grant access.": [
+    "Solo propietarios y administradores pueden invitar. Hay que iniciar sesión con el correo exacto invitado. Compartir dominio no concede acceso.",
+    "Só proprietários e administradores podem convidar. O destinatário deve entrar com o email exato do convite. Um domínio comum não dá acesso.",
+    "Nur Inhaber und Administratoren können einladen. Der Empfänger muss sich mit der eingeladenen E-Mail anmelden. Eine gemeinsame Domain gewährt keinen Zugang.",
+    "Solo proprietari e amministratori possono invitare. Il destinatario deve accedere con l'email esatta invitata. Un dominio comune non concede accesso.",
+    "Yalnızca sahipler ve yöneticiler davet edebilir. Davet edilen e-postayla giriş gerekir. Ortak e-posta alan adı erişim vermez.",
+    "المالكون والمسؤولون فقط يمكنهم الدعوة. يجب الدخول بالبريد المدعو نفسه. نطاق البريد المشترك لا يمنح الوصول.",
+    "केवल स्वामी और व्यवस्थापक आमंत्रित कर सकते हैं। प्राप्तकर्ता को उसी आमंत्रित ईमेल से साइन इन करना होगा। समान डोमेन से पहुँच नहीं मिलती।",
+    "仅所有者和管理员可邀请。收件人须使用被邀请的确切邮箱登录，相同邮箱域名不会自动获得权限。"
+  ],
+  "Role": [
+    "Rol",
+    "Função",
+    "Rolle",
+    "Ruolo",
+    "Rol",
+    "الدور",
+    "भूमिका",
+    "角色"
+  ],
+  "Read only": [
+    "Solo lectura",
+    "Só leitura",
+    "Nur lesen",
+    "Sola lettura",
+    "Salt okunur",
+    "قراءة فقط",
+    "केवल पढ़ने हेतु",
+    "只读"
+  ],
+  "Purchasing": [
+    "Compras",
+    "Compras",
+    "Einkauf",
+    "Acquisti",
+    "Satın alma",
+    "المشتريات",
+    "खरीदारी",
+    "采购"
+  ],
+  "Sales": [
+    "Ventas",
+    "Vendas",
+    "Vertrieb",
+    "Vendite",
+    "Satış",
+    "المبيعات",
+    "बिक्री",
+    "销售"
+  ],
+  "Administrator (owner approval required)": [
+    "Administrador (requiere aprobación del propietario)",
+    "Administrador (requer aprovação do proprietário)",
+    "Administrator (Inhaberfreigabe nötig)",
+    "Amministratore (approvazione del proprietario richiesta)",
+    "Yönetici (sahip onayı gerekir)",
+    "مسؤول (تتطلّب موافقة المالك)",
+    "व्यवस्थापक (स्वामी की मंज़ूरी आवश्यक)",
+    "管理员（需所有者批准）"
+  ],
+  "Create invitation": [
+    "Crear invitación",
+    "Criar convite",
+    "Einladung erstellen",
+    "Crea invito",
+    "Davet oluştur",
+    "إنشاء دعوة",
+    "आमंत्रण बनाएँ",
+    "创建邀请"
+  ],
+  "Revoke this member’s access?": [
+    "¿Revocar el acceso de este miembro?",
+    "Revogar o acesso deste membro?",
+    "Zugang dieses Mitglieds entziehen?",
+    "Revocare l'accesso di questo membro?",
+    "Bu üyenin erişimi iptal edilsin mi?",
+    "هل تريد سحب وصول هذا العضو؟",
+    "इस सदस्य की पहुँच रद्द करें?",
+    "撤销该成员的访问权限？"
+  ],
+  "Revoke access": [
+    "Revocar acceso",
+    "Revogar acesso",
+    "Zugang entziehen",
+    "Revoca accesso",
+    "Erişimi iptal et",
+    "سحب الوصول",
+    "पहुँच रद्द करें",
+    "撤销访问权限"
+  ],
+  "Expires": [
+    "Caduca",
+    "Expira",
+    "Läuft ab",
+    "Scade",
+    "Sona erer",
+    "تنتهي في",
+    "समाप्ति",
+    "到期时间"
+  ],
+  "Accept for my signed-in account": [
+    "Aceptar con mi cuenta actual",
+    "Aceitar com a conta atual",
+    "Mit angemeldetem Konto annehmen",
+    "Accetta con l'account attuale",
+    "Oturum açtığım hesapla kabul et",
+    "القبول بحسابي الحالي",
+    "वर्तमान खाते से स्वीकार करें",
+    "以当前账户接受"
+  ],
+  "Revoke invitation": [
+    "Revocar invitación",
+    "Revogar convite",
+    "Einladung widerrufen",
+    "Revoca invito",
+    "Daveti iptal et",
+    "سحب الدعوة",
+    "आमंत्रण रद्द करें",
+    "撤销邀请"
+  ],
+  "Select one additional company. Review the recipient before sending.": [
+    "Selecciona una empresa adicional. Revisa el destinatario antes de enviar.",
+    "Selecione uma empresa adicional. Reveja o destinatário antes de enviar.",
+    "Wählen Sie ein weiteres Unternehmen. Prüfen Sie den Empfänger vor dem Senden.",
+    "Seleziona un'altra azienda. Verifica il destinatario prima di inviare.",
+    "Bir şirket daha seçin. Göndermeden önce alıcıyı kontrol edin.",
+    "اختر شركة إضافية. راجع المستلم قبل الإرسال.",
+    "एक और कंपनी चुनें। भेजने से पहले प्राप्तकर्ता जाँचें।",
+    "再选择一家企业，发送前请检查收件人。"
+  ],
+  "Select up to five named companies. Selection does not send your request.": [
+    "Selecciona hasta cinco empresas identificadas. Seleccionar no envía la solicitud.",
+    "Selecione até cinco empresas identificadas. A seleção não envia o pedido.",
+    "Wählen Sie bis zu fünf benannte Unternehmen. Die Auswahl sendet noch keine Anfrage.",
+    "Seleziona fino a cinque aziende. La selezione non invia la richiesta.",
+    "En fazla beş şirket seçin. Seçim talebinizi göndermez.",
+    "اختر حتى خمس شركات محدّدة. الاختيار لا يرسل الطلب.",
+    "अधिकतम पाँच नामित कंपनियाँ चुनें। चयन से अनुरोध नहीं भेजता।",
+    "最多选择五家指定企业。选择不会发送询价。"
+  ],
+  "Find a recipient": [
+    "Buscar destinatario",
+    "Encontrar destinatário",
+    "Empfänger finden",
+    "Trova destinatario",
+    "Alıcı bul",
+    "البحث عن مستلم",
+    "प्राप्तकर्ता खोजें",
+    "查找收件人"
+  ],
+  "Search companies": [
+    "Buscar empresas",
+    "Pesquisar empresas",
+    "Unternehmen suchen",
+    "Cerca aziende",
+    "Şirket ara",
+    "البحث عن شركات",
+    "कंपनियाँ खोजें",
+    "搜索企业"
+  ],
+  "Supplier search is unavailable. Existing selections have been kept.": [
+    "La búsqueda no está disponible. Se han conservado las selecciones.",
+    "Pesquisa indisponível. As seleções existentes foram mantidas.",
+    "Lieferantensuche nicht verfügbar. Ihre Auswahl wurde beibehalten.",
+    "Ricerca fornitori non disponibile. Le selezioni sono conservate.",
+    "Tedarikçi araması kullanılamıyor. Mevcut seçimler korundu.",
+    "البحث عن المورّدين غير متاح. حُفظت الاختيارات الحالية.",
+    "आपूर्तिकर्ता खोज उपलब्ध नहीं है। मौजूदा चयन सुरक्षित हैं।",
+    "供应商搜索暂不可用，已保留现有选择。"
+  ],
+  "Searching…": [
+    "Buscando…",
+    "A pesquisar…",
+    "Suche läuft…",
+    "Ricerca…",
+    "Aranıyor…",
+    "جارٍ البحث…",
+    "खोज जारी है…",
+    "正在搜索…"
+  ],
+  "Selected recipients": [
+    "Destinatarios seleccionados",
+    "Destinatários selecionados",
+    "Ausgewählte Empfänger",
+    "Destinatari selezionati",
+    "Seçilen alıcılar",
+    "المستلمون المحدّدون",
+    "चुने प्राप्तकर्ता",
+    "已选收件人"
+  ],
+  "Unavailable company — remove this selection": [
+    "Empresa no disponible — elimina esta selección",
+    "Empresa indisponível — remova esta seleção",
+    "Unternehmen nicht verfügbar — Auswahl entfernen",
+    "Azienda non disponibile — rimuovi la selezione",
+    "Şirket kullanılamıyor — seçimi kaldırın",
+    "شركة غير متاحة — أزل هذا الاختيار",
+    "कंपनी अनुपलब्ध — यह चयन हटाएँ",
+    "企业不可用 — 请移除此选择"
+  ],
+  "The limit of five recipients has been reached.": [
+    "Se ha alcanzado el límite de cinco destinatarios.",
+    "Atingiu o limite de cinco destinatários.",
+    "Das Limit von fünf Empfängern wurde erreicht.",
+    "Raggiunto il limite di cinque destinatari.",
+    "Beş alıcı sınırına ulaşıldı.",
+    "تم بلوغ حد خمسة مستلمين.",
+    "पाँच प्राप्तकर्ताओं की सीमा पूरी हो गई।",
+    "已达到五个收件人的上限。"
+  ],
+  "Send to another supplier": [
+    "Enviar a otro proveedor",
+    "Enviar a outro fornecedor",
+    "An weiteren Lieferanten senden",
+    "Invia a un altro fornitore",
+    "Başka tedarikçiye gönder",
+    "إرسال إلى مورّد آخر",
+    "दूसरे आपूर्तिकर्ता को भेजें",
+    "发送给其他供应商"
+  ],
+  "This company will receive the request already sent and attachments shared with all recipients. Existing private conversations and quotes are not shared.": [
+    "Esta empresa recibirá la solicitud y adjuntos compartidos con todos. No se comparten conversaciones privadas ni ofertas existentes.",
+    "Esta empresa receberá o pedido e anexos partilhados com todos. Conversas privadas e propostas existentes não são partilhadas.",
+    "Dieses Unternehmen erhält die bereits gesendete Anfrage und für alle freigegebene Anhänge. Private Gespräche und Angebote werden nicht geteilt.",
+    "L'azienda riceverà la richiesta già inviata e gli allegati comuni. Conversazioni private e preventivi esistenti non saranno condivisi.",
+    "Bu şirket gönderilmiş talebi ve herkese açık ekleri alır. Özel konuşmalar ve teklifler paylaşılmaz.",
+    "ستتلقى الشركة الطلب المرسل والمرفقات المشتركة مع الجميع. لا تُشارك المحادثات الخاصة والعروض الحالية.",
+    "इस कंपनी को पहले भेजा अनुरोध और सभी के साथ साझा संलग्नक मिलेंगे। निजी बातचीत और पुराने प्रस्ताव साझा नहीं होंगे।",
+    "该企业将收到已发送的询价及向所有收件人共享的附件。现有私人对话和报价不会共享。"
+  ],
+  "Confirm recipient and send": [
+    "Confirmar destinatario y enviar",
+    "Confirmar destinatário e enviar",
+    "Empfänger bestätigen und senden",
+    "Conferma destinatario e invia",
+    "Alıcıyı onayla ve gönder",
+    "تأكيد المستلم والإرسال",
+    "प्राप्तकर्ता की पुष्टि करें और भेजें",
+    "确认收件人并发送"
+  ]
+}

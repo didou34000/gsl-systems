@@ -1,0 +1,622 @@
+{
+  "MERSİS number": [
+    "Número MERSİS",
+    "Número MERSİS",
+    "MERSİS-Nummer",
+    "Numero MERSİS",
+    "MERSİS numarası",
+    "رقم MERSİS",
+    "MERSİS नंबर",
+    "MERSİS 编号"
+  ],
+  "Trade registry number": [
+    "Número del registro mercantil",
+    "Número do registro comercial",
+    "Handelsregisternummer",
+    "Numero del registro delle imprese",
+    "Ticaret sicil numarası",
+    "رقم السجل التجاري",
+    "व्यापार रजिस्ट्री नंबर",
+    "商业登记编号"
+  ],
+  "Trade registry office": [
+    "Oficina del registro mercantil",
+    "Conservatória do registro comercial",
+    "Handelsregisterstelle",
+    "Ufficio del registro delle imprese",
+    "Ticaret sicil müdürlüğü",
+    "مكتب السجل التجاري",
+    "व्यापार रजिस्ट्री कार्यालय",
+    "商业登记处"
+  ],
+  "Corporate tax number": [
+    "Número fiscal de la sociedad",
+    "Número fiscal da sociedade",
+    "Steuernummer der Gesellschaft",
+    "Numero fiscale della società",
+    "Şirket vergi numarası",
+    "الرقم الضريبي للشركة",
+    "कंपनी का कर नंबर",
+    "公司税号"
+  ],
+  "Tax office": [
+    "Oficina tributaria",
+    "Repartição fiscal",
+    "Finanzamt",
+    "Ufficio fiscale",
+    "Vergi dairesi",
+    "مكتب الضرائب",
+    "कर कार्यालय",
+    "税务机关"
+  ],
+  "Current trade registry extract or registration document; latest relevant registry gazette notice if needed.": [
+    "Extracto actualizado del registro mercantil o documento de inscripción; último anuncio pertinente del boletín del registro, si fuera necesario.",
+    "Certidão atualizada do registro comercial ou documento de inscrição; último anúncio relevante no boletim do registro, se necessário.",
+    "Aktueller Handelsregisterauszug oder Registrierungsnachweis; bei Bedarf die letzte relevante Bekanntmachung im Registerblatt.",
+    "Visura aggiornata del registro delle imprese o documento di iscrizione; ultimo avviso pertinente del bollettino del registro, se necessario.",
+    "Güncel ticaret sicil kaydı veya tescil belgesi; gerekirse ilgili en son sicil gazetesi ilanı.",
+    "مستخرج حديث من السجل التجاري أو وثيقة التسجيل؛ وآخر إعلان ذي صلة في جريدة السجل عند الحاجة.",
+    "व्यापार रजिस्ट्री का अद्यतन उद्धरण या पंजीकरण दस्तावेज़; आवश्यकता होने पर रजिस्ट्री राजपत्र की नवीनतम प्रासंगिक सूचना।",
+    "最新的商业登记摘录或登记文件；必要时提供最新相关登记公报公告。"
+  ],
+  "Sole traders and other legal forms need manual review. Do not upload a personal identity number into these company fields.": [
+    "Los autónomos y otras formas jurídicas requieren revisión manual. No introduzcas un número de identidad personal en estos campos de empresa.",
+    "Empresários individuais e outras formas jurídicas exigem análise manual. Não introduza um número de identidade pessoal nestes campos da empresa.",
+    "Einzelunternehmer und andere Rechtsformen müssen manuell geprüft werden. Tragen Sie in diese Unternehmensfelder keine persönliche Identitätsnummer ein.",
+    "Le imprese individuali e altre forme giuridiche richiedono una verifica manuale. Non inserire un numero di identità personale in questi campi aziendali.",
+    "Şahıs işletmeleri ve diğer hukuki yapılar manuel inceleme gerektirir. Bu şirket alanlarına kişisel kimlik numarası girmeyin.",
+    "تتطلب المؤسسات الفردية والأشكال القانونية الأخرى مراجعة يدوية. لا تُدخل رقم هوية شخصياً في حقول الشركة هذه.",
+    "एकल व्यवसायियों और अन्य कानूनी स्वरूपों की मैन्युअल समीक्षा आवश्यक है। कंपनी के इन फ़ील्ड में व्यक्तिगत पहचान नंबर न डालें।",
+    "个体经营者和其他法律形式需要人工审核。请勿在这些企业字段中填写个人身份号码。"
+  ],
+  "Company identification code": [
+    "Código de identificación de la empresa",
+    "Código de identificação da empresa",
+    "Unternehmensidentifikationscode",
+    "Codice identificativo dell’azienda",
+    "Şirket kimlik kodu",
+    "رمز تعريف الشركة",
+    "कंपनी पहचान कोड",
+    "企业识别代码"
+  ],
+  "Registration date shown on the extract": [
+    "Fecha de inscripción que figura en el extracto",
+    "Data de inscrição indicada na certidão",
+    "Registrierungsdatum laut Auszug",
+    "Data di iscrizione indicata nella visura",
+    "Sicil belgesinde yer alan tescil tarihi",
+    "تاريخ التسجيل الوارد في المستخرج",
+    "उद्धरण में दिखाई गई पंजीकरण तारीख",
+    "摘录上显示的登记日期"
+  ],
+  "Status shown on the extract": [
+    "Estado que figura en el extracto",
+    "Situação indicada na certidão",
+    "Status laut Auszug",
+    "Stato indicato nella visura",
+    "Sicil belgesinde yer alan durum",
+    "الحالة الواردة في المستخرج",
+    "उद्धरण में दिखाई गई स्थिति",
+    "摘录上显示的状态"
+  ],
+  "Current NAPR business registry extract identifying the entity, its registered address and representatives.": [
+    "Extracto actualizado del registro empresarial NAPR que identifique la entidad, su domicilio social y sus representantes.",
+    "Certidão atualizada do registro empresarial NAPR que identifique a entidade, a sede e os representantes.",
+    "Aktueller NAPR-Unternehmensregisterauszug mit Angaben zur Rechtsperson, ihrem Sitz und ihren Vertretern.",
+    "Visura aggiornata del registro delle imprese NAPR che identifichi l’entità, la sede legale e i rappresentanti.",
+    "Kuruluşu, kayıtlı adresini ve temsilcilerini belirten güncel NAPR işletme sicil belgesi.",
+    "مستخرج حديث من سجل الأعمال NAPR يحدد الكيان وعنوانه المسجل وممثليه.",
+    "NAPR व्यवसाय रजिस्ट्री का अद्यतन उद्धरण जिसमें संस्था, उसका पंजीकृत पता और प्रतिनिधि पहचाने गए हों।",
+    "最新的 NAPR 企业登记摘录，注明实体、注册地址及代表人。"
+  ],
+  "Keep the registered office separate from the factory. Economic activity registration is not universally mandatory. Sole traders require private manual review.": [
+    "Distingue el domicilio social de la fábrica. El registro de actividad económica no es obligatorio en todos los casos. Los autónomos requieren una revisión manual privada.",
+    "Separe a sede da fábrica. O registro de atividade econômica não é obrigatório em todos os casos. Empresários individuais exigem análise manual privada.",
+    "Trennen Sie den eingetragenen Sitz vom Produktionsstandort. Die Registrierung der wirtschaftlichen Tätigkeit ist nicht immer verpflichtend. Einzelunternehmer benötigen eine vertrauliche manuelle Prüfung.",
+    "Tieni distinta la sede legale dallo stabilimento. L’iscrizione dell’attività economica non è sempre obbligatoria. Le imprese individuali richiedono una verifica manuale riservata.",
+    "Şirket merkezini fabrikadan ayrı belirtin. Ekonomik faaliyet kaydı her durumda zorunlu değildir. Şahıs işletmeleri gizli manuel inceleme gerektirir.",
+    "افصل المقر المسجل عن المصنع. تسجيل النشاط الاقتصادي ليس إلزامياً في جميع الحالات. تتطلب المؤسسات الفردية مراجعة يدوية خاصة.",
+    "पंजीकृत कार्यालय और कारखाने को अलग रखें। आर्थिक गतिविधि का पंजीकरण हर स्थिति में अनिवार्य नहीं है। एकल व्यवसायियों की निजी मैन्युअल समीक्षा आवश्यक है।",
+    "请区分注册地址和工厂地址。经济活动登记并非在所有情况下都是强制要求。个体经营者需要进行非公开人工审核。"
+  ],
+  "Common company identifier (ICE)": [
+    "Identificador común de empresa (ICE)",
+    "Identificador comum da empresa (ICE)",
+    "Gemeinsame Unternehmenskennung (ICE)",
+    "Identificativo comune dell’azienda (ICE)",
+    "Ortak şirket tanımlayıcısı (ICE)",
+    "المعرّف الموحد للمقاولة (ICE)",
+    "सामान्य कंपनी पहचानकर्ता (ICE)",
+    "企业统一识别码（ICE）"
+  ],
+  "Trade register number (RC)": [
+    "Número del registro mercantil (RC)",
+    "Número do registro comercial (RC)",
+    "Handelsregisternummer (RC)",
+    "Numero del registro delle imprese (RC)",
+    "Ticaret sicil numarası (RC)",
+    "رقم السجل التجاري (RC)",
+    "व्यापार रजिस्टर नंबर (RC)",
+    "商业登记编号（RC）"
+  ],
+  "Registry court": [
+    "Tribunal del registro",
+    "Tribunal do registro",
+    "Registergericht",
+    "Tribunale del registro",
+    "Sicil mahkemesi",
+    "محكمة السجل",
+    "रजिस्ट्री न्यायालय",
+    "登记法院"
+  ],
+  "Company tax identifier": [
+    "Identificador fiscal de la empresa",
+    "Identificador fiscal da empresa",
+    "Steuerkennung des Unternehmens",
+    "Identificativo fiscale dell’azienda",
+    "Şirket vergi tanımlayıcısı",
+    "المعرّف الضريبي للشركة",
+    "कंपनी का कर पहचानकर्ता",
+    "企业税务识别号"
+  ],
+  "Registration certificate or current trade register extract; confirm RC together with its registry court.": [
+    "Certificado de inscripción o extracto actualizado del registro mercantil; comprueba el RC junto con el tribunal correspondiente.",
+    "Certificado de inscrição ou certidão atualizada do registro comercial; confira o RC juntamente com o tribunal responsável.",
+    "Registrierungsbescheinigung oder aktueller Handelsregisterauszug; prüfen Sie die RC-Nummer zusammen mit dem zuständigen Registergericht.",
+    "Certificato di iscrizione o visura aggiornata del registro delle imprese; verifica il RC insieme al tribunale competente.",
+    "Tescil belgesi veya güncel ticaret sicil kaydı; RC numarasını ilgili sicil mahkemesiyle birlikte doğrulayın.",
+    "شهادة تسجيل أو مستخرج حديث من السجل التجاري؛ تحقق من رقم RC مع محكمة السجل المختصة.",
+    "पंजीकरण प्रमाणपत्र या व्यापार रजिस्टर का अद्यतन उद्धरण; RC को उसके रजिस्ट्री न्यायालय के साथ सत्यापित करें।",
+    "登记证书或最新商业登记摘录；将 RC 编号与所属登记法院一并核实。"
+  ],
+  "A name reservation certificate is not proof that the company is registered. The requested documents follow GSL review policy.": [
+    "Un certificado de reserva de nombre no demuestra que la empresa esté inscrita. Los documentos solicitados siguen la política de revisión de GSL.",
+    "Um certificado de reserva de nome não comprova que a empresa esteja registrada. Os documentos solicitados seguem a política de análise da GSL.",
+    "Eine Bescheinigung zur Namensreservierung beweist keine Unternehmensregistrierung. Die angeforderten Dokumente richten sich nach der GSL-Prüfrichtlinie.",
+    "Un certificato di prenotazione del nome non prova l’iscrizione dell’azienda. I documenti richiesti seguono la politica di verifica GSL.",
+    "Unvan rezervasyon belgesi şirketin tescilli olduğunu kanıtlamaz. İstenen belgeler GSL inceleme politikasına dayanır.",
+    "شهادة حجز الاسم لا تثبت تسجيل الشركة. تخضع المستندات المطلوبة لسياسة المراجعة لدى GSL.",
+    "नाम आरक्षण का प्रमाणपत्र कंपनी के पंजीकृत होने का प्रमाण नहीं है। माँगे गए दस्तावेज़ GSL की समीक्षा नीति के अनुसार हैं।",
+    "名称预留证书不能证明企业已经注册。所需文件依据 GSL 的审核政策确定。"
+  ],
+  "Identifier shown on the RNE extract": [
+    "Identificador que figura en el extracto RNE",
+    "Identificador indicado na certidão RNE",
+    "Kennung laut RNE-Auszug",
+    "Identificativo indicato nella visura RNE",
+    "RNE belgesinde yer alan tanımlayıcı",
+    "المعرّف الوارد في مستخرج RNE",
+    "RNE उद्धरण में दिखाई गया पहचानकर्ता",
+    "RNE 摘录上显示的识别号"
+  ],
+  "Company tax identifier, if applicable": [
+    "Identificador fiscal de la empresa, si corresponde",
+    "Identificador fiscal da empresa, se aplicável",
+    "Steuerkennung des Unternehmens, falls zutreffend",
+    "Identificativo fiscale dell’azienda, se applicabile",
+    "Varsa şirket vergi tanımlayıcısı",
+    "المعرّف الضريبي للشركة، إن انطبق",
+    "कंपनी का कर पहचानकर्ता, यदि लागू हो",
+    "企业税务识别号（如适用）"
+  ],
+  "Current RNE extract; use the official extract authenticity verification service.": [
+    "Extracto RNE actualizado; utiliza el servicio oficial de verificación de autenticidad del extracto.",
+    "Certidão RNE atualizada; utilize o serviço oficial de verificação de autenticidade da certidão.",
+    "Aktueller RNE-Auszug; nutzen Sie den offiziellen Dienst zur Echtheitsprüfung des Auszugs.",
+    "Visura RNE aggiornata; utilizza il servizio ufficiale di verifica dell’autenticità della visura.",
+    "Güncel RNE belgesi; resmi belge doğrulama hizmetini kullanın.",
+    "مستخرج RNE حديث؛ استخدم الخدمة الرسمية للتحقق من صحة المستخرج.",
+    "अद्यतन RNE उद्धरण; उद्धरण की प्रामाणिकता जाँचने वाली आधिकारिक सेवा का उपयोग करें।",
+    "最新的 RNE 摘录；请使用官方摘录真实性验证服务。"
+  ],
+  "Preserve the identifier exactly as printed. Do not infer a tax or VAT status from registration alone.": [
+    "Conserva el identificador exactamente como está impreso. La inscripción por sí sola no permite deducir una situación fiscal o de IVA.",
+    "Mantenha o identificador exatamente como impresso. Não deduza a situação fiscal ou de IVA apenas pela inscrição.",
+    "Übernehmen Sie die Kennung genau wie gedruckt. Aus der Registrierung allein lässt sich kein Steuer- oder Umsatzsteuerstatus ableiten.",
+    "Mantieni l’identificativo esattamente come stampato. Non dedurre la situazione fiscale o IVA dalla sola iscrizione.",
+    "Tanımlayıcıyı basılı biçimiyle aynen koruyun. Yalnızca tescilden vergi veya KDV durumu çıkarmayın.",
+    "احتفظ بالمعرّف كما هو مطبوع تماماً. لا تستنتج الوضع الضريبي أو وضع ضريبة القيمة المضافة من التسجيل وحده.",
+    "पहचानकर्ता को ठीक मुद्रित रूप में रखें। केवल पंजीकरण से कर या VAT की स्थिति का अनुमान न लगाएँ।",
+    "请严格保留识别号的印刷形式。不能仅凭登记推断税务或增值税状态。"
+  ],
+  "SIREN — company identifier": [
+    "SIREN — identificador de empresa",
+    "SIREN — identificador da empresa",
+    "SIREN — Unternehmenskennung",
+    "SIREN — identificativo dell’azienda",
+    "SIREN — şirket tanımlayıcısı",
+    "SIREN — معرّف الشركة",
+    "SIREN — कंपनी पहचानकर्ता",
+    "SIREN — 企业识别号"
+  ],
+  "Registered office SIRET": [
+    "SIRET del domicilio social",
+    "SIRET da sede",
+    "SIRET des eingetragenen Sitzes",
+    "SIRET della sede legale",
+    "Kayıtlı merkezin SIRET numarası",
+    "رقم SIRET للمقر المسجل",
+    "पंजीकृत कार्यालय का SIRET",
+    "注册地址的 SIRET 编号"
+  ],
+  "VAT number, if applicable": [
+    "Número de IVA, si corresponde",
+    "Número de IVA, se aplicável",
+    "Umsatzsteuer-Identifikationsnummer, falls zutreffend",
+    "Partita IVA, se applicabile",
+    "Varsa KDV numarası",
+    "رقم ضريبة القيمة المضافة، إن انطبق",
+    "VAT नंबर, यदि लागू हो",
+    "增值税号（如适用）"
+  ],
+  "RNE registration attestation; a current Kbis may also be provided where applicable.": [
+    "Certificado de inscripción en el RNE; también puede aportarse un Kbis actualizado cuando corresponda.",
+    "Atestado de inscrição no RNE; uma certidão Kbis atualizada também pode ser apresentada, quando aplicável.",
+    "RNE-Registrierungsbescheinigung; gegebenenfalls kann auch ein aktueller Kbis-Auszug vorgelegt werden.",
+    "Attestazione di iscrizione al RNE; può essere fornita anche una visura Kbis aggiornata, ove applicabile.",
+    "RNE tescil belgesi; uygunsa güncel bir Kbis belgesi de sunulabilir.",
+    "شهادة تسجيل في RNE؛ ويمكن أيضاً تقديم مستخرج Kbis حديث حيثما ينطبق.",
+    "RNE पंजीकरण का प्रमाण; जहाँ लागू हो, अद्यतन Kbis उद्धरण भी दिया जा सकता है।",
+    "RNE 登记证明；适用时也可提供最新 Kbis 摘录。"
+  ],
+  "The SIREN identifies the entity; each establishment has its own SIRET. VAT eligibility needs a separate check.": [
+    "El SIREN identifica a la entidad; cada establecimiento tiene su propio SIRET. La situación de IVA requiere una comprobación independiente.",
+    "O SIREN identifica a entidade; cada estabelecimento tem seu próprio SIRET. A situação de IVA exige verificação separada.",
+    "Die SIREN identifiziert die Rechtsperson; jede Betriebsstätte hat eine eigene SIRET. Der Umsatzsteuerstatus muss separat geprüft werden.",
+    "Il SIREN identifica l’entità; ogni stabilimento ha il proprio SIRET. La situazione IVA richiede una verifica separata.",
+    "SIREN kuruluşu tanımlar; her işyerinin kendi SIRET numarası vardır. KDV durumu ayrı kontrol gerektirir.",
+    "يحدد SIREN الكيان؛ ولكل منشأة رقم SIRET خاص بها. يتطلب وضع ضريبة القيمة المضافة تحققاً منفصلاً.",
+    "SIREN संस्था की पहचान करता है; हर प्रतिष्ठान का अपना SIRET होता है। VAT की स्थिति की अलग जाँच आवश्यक है।",
+    "SIREN 用于识别实体；每个营业场所都有独立的 SIRET。增值税资格需要单独核查。"
+  ],
+  "Applicable register: KRS or CEIDG": [
+    "Registro aplicable: KRS o CEIDG",
+    "Registro aplicável: KRS ou CEIDG",
+    "Zuständiges Register: KRS oder CEIDG",
+    "Registro applicabile: KRS o CEIDG",
+    "Geçerli sicil: KRS veya CEIDG",
+    "السجل المعني: KRS أو CEIDG",
+    "लागू रजिस्टर: KRS या CEIDG",
+    "适用登记册：KRS 或 CEIDG"
+  ],
+  "KRS reference, if applicable": [
+    "Referencia KRS, si corresponde",
+    "Referência KRS, se aplicável",
+    "KRS-Referenz, falls zutreffend",
+    "Riferimento KRS, se applicabile",
+    "Varsa KRS referansı",
+    "مرجع KRS، إن انطبق",
+    "KRS संदर्भ, यदि लागू हो",
+    "KRS 编号（如适用）"
+  ],
+  "Reference to the CEIDG entry, if applicable": [
+    "Referencia de la inscripción CEIDG, si corresponde",
+    "Referência da inscrição CEIDG, se aplicável",
+    "Referenz des CEIDG-Eintrags, falls zutreffend",
+    "Riferimento dell’iscrizione CEIDG, se applicabile",
+    "Varsa CEIDG kayıt referansı",
+    "مرجع القيد في CEIDG، إن انطبق",
+    "CEIDG प्रविष्टि का संदर्भ, यदि लागू हो",
+    "CEIDG 登记条目编号（如适用）"
+  ],
+  "Business VAT number, if applicable": [
+    "Número de IVA profesional, si corresponde",
+    "Número de IVA profissional, se aplicável",
+    "Betriebliche Umsatzsteuer-Identifikationsnummer, falls zutreffend",
+    "Numero IVA dell’attività, se applicabile",
+    "Varsa işletme KDV numarası",
+    "رقم ضريبة القيمة المضافة للنشاط، إن انطبق",
+    "व्यवसाय का VAT नंबर, यदि लागू हो",
+    "企业增值税号（如适用）"
+  ],
+  "An extract from the applicable register or an explanation of the entity’s specific situation.": [
+    "Extracto del registro aplicable o explicación de la situación específica de la entidad.",
+    "Certidão do registro aplicável ou explicação da situação específica da entidade.",
+    "Auszug aus dem zuständigen Register oder Erläuterung der besonderen Situation der Rechtsperson.",
+    "Estratto del registro applicabile o spiegazione della situazione specifica dell’entità.",
+    "Geçerli sicilden alınmış belge veya kuruluşun özel durumuna ilişkin açıklama.",
+    "مستخرج من السجل المعني أو شرح للوضع الخاص بالكيان.",
+    "लागू रजिस्टर का उद्धरण या संस्था की विशेष परिस्थिति का स्पष्टीकरण।",
+    "适用登记册的摘录，或对实体特殊情况的说明。"
+  ],
+  "KRS and CEIDG cover different entity situations. A sole trader is not required to invent a KRS number. Registration evidence and VAT status are separate.": [
+    "KRS y CEIDG abarcan situaciones jurídicas diferentes. Un autónomo no tiene que inventarse un número KRS. La prueba de inscripción y la situación de IVA son independientes.",
+    "KRS e CEIDG abrangem situações jurídicas diferentes. Um empresário individual não precisa inventar um número KRS. Comprovação de inscrição e situação de IVA são distintas.",
+    "KRS und CEIDG betreffen unterschiedliche rechtliche Situationen. Einzelunternehmer müssen keine KRS-Nummer erfinden. Registrierungsnachweis und Umsatzsteuerstatus sind getrennt zu betrachten.",
+    "KRS e CEIDG coprono situazioni giuridiche diverse. Un imprenditore individuale non deve inventare un numero KRS. La prova di iscrizione e la situazione IVA sono distinte.",
+    "KRS ve CEIDG farklı hukuki durumları kapsar. Şahıs işletmesinin KRS numarası uydurması gerekmez. Tescil kanıtı ve KDV durumu ayrıdır.",
+    "يغطي KRS وCEIDG أوضاعاً قانونية مختلفة. لا يُطلب من صاحب المؤسسة الفردية اختلاق رقم KRS. إثبات التسجيل ووضع ضريبة القيمة المضافة أمران منفصلان.",
+    "KRS और CEIDG अलग-अलग कानूनी परिस्थितियों पर लागू होते हैं। एकल व्यवसायी को काल्पनिक KRS नंबर देने की आवश्यकता नहीं है। पंजीकरण का प्रमाण और VAT की स्थिति अलग हैं।",
+    "KRS 和 CEIDG 适用于不同的法律情形。个体经营者无需编造 KRS 编号。登记证明和增值税状态应分别核查。"
+  ],
+  "Issuing Mercantile Registry": [
+    "Registro Mercantil emisor",
+    "Registro Comercial emissor",
+    "Ausstellendes Handelsregister",
+    "Registro delle imprese emittente",
+    "Belgeyi düzenleyen ticaret sicili",
+    "السجل التجاري المُصدر",
+    "जारी करने वाली व्यापार रजिस्ट्री",
+    "签发文件的商业登记处"
+  ],
+  "Reference shown on the registry evidence": [
+    "Referencia que figura en el justificante del registro",
+    "Referência indicada no comprovante do registro",
+    "Referenz laut Registrierungsnachweis",
+    "Riferimento indicato nel documento del registro",
+    "Sicil belgesinde yer alan referans",
+    "المرجع الوارد في إثبات السجل",
+    "रजिस्ट्री प्रमाण पर दिया गया संदर्भ",
+    "登记证明上显示的编号"
+  ],
+  "Information note, certification or other evidence": [
+    "Nota informativa, certificación u otro justificante",
+    "Nota informativa, certificação ou outro comprovante",
+    "Informationsauskunft, Bescheinigung oder anderer Nachweis",
+    "Nota informativa, certificazione o altro documento",
+    "Bilgi notu, onaylı belge veya başka kanıt",
+    "مذكرة معلومات أو شهادة أو إثبات آخر",
+    "सूचना पत्र, प्रमाणीकरण या अन्य प्रमाण",
+    "信息说明、认证文件或其他证明"
+  ],
+  "Registry evidence identifying the issuing register, entity and date; explain when not applicable.": [
+    "Justificante registral que identifique el registro emisor, la entidad y la fecha; explica si no corresponde.",
+    "Comprovante de registro que identifique o órgão emissor, a entidade e a data; explique quando não aplicável.",
+    "Registrierungsnachweis mit ausstellendem Register, Rechtsperson und Datum; erläutern Sie, falls dies nicht zutrifft.",
+    "Documento del registro che identifichi l’ufficio emittente, l’entità e la data; spiega quando non applicabile.",
+    "Belgeyi düzenleyen sicili, kuruluşu ve tarihi belirten kayıt kanıtı; geçerli değilse açıklayın.",
+    "إثبات سجل يحدد الجهة المُصدرة والكيان والتاريخ؛ وضّح السبب عند عدم الانطباق.",
+    "रजिस्ट्री का प्रमाण जिसमें जारी करने वाला रजिस्टर, संस्था और तारीख हो; लागू न होने पर कारण बताएँ।",
+    "登记证明应注明签发登记处、实体和日期；不适用时请说明。"
+  ],
+  "An information note and an official registry certification are different documents. Neither certifies manufactured products.": [
+    "Una nota informativa y una certificación oficial del registro son documentos distintos. Ninguno certifica los productos fabricados.",
+    "Uma nota informativa e uma certificação oficial do registro são documentos diferentes. Nenhum deles certifica os produtos fabricados.",
+    "Eine Informationsauskunft und eine amtliche Registerbescheinigung sind unterschiedliche Dokumente. Keines davon zertifiziert die hergestellten Produkte.",
+    "Una nota informativa e una certificazione ufficiale del registro sono documenti diversi. Nessuno dei due certifica i prodotti fabbricati.",
+    "Bilgi notu ile resmi sicil onay belgesi farklı belgelerdir. Hiçbiri üretilen ürünleri belgelendirmez.",
+    "مذكرة المعلومات والشهادة الرسمية للسجل وثيقتان مختلفتان. لا تصادق أي منهما على المنتجات المصنّعة.",
+    "सूचना पत्र और रजिस्ट्री का आधिकारिक प्रमाणीकरण अलग दस्तावेज़ हैं। इनमें से कोई भी निर्मित उत्पादों को प्रमाणित नहीं करता।",
+    "信息说明和官方登记认证是不同文件。两者都不认证所生产的产品。"
+  ],
+  "Companies House number, if registered": [
+    "Número de Companies House, si está inscrita",
+    "Número Companies House, se registrada",
+    "Companies-House-Nummer, falls registriert",
+    "Numero Companies House, se iscritta",
+    "Kayıtlıysa Companies House numarası",
+    "رقم Companies House، إذا كانت الشركة مسجلة",
+    "Companies House नंबर, यदि पंजीकृत हो",
+    "Companies House 编号（如已登记）"
+  ],
+  "Registration jurisdiction": [
+    "Jurisdicción de inscripción",
+    "Jurisdição de inscrição",
+    "Registrierungszuständigkeit",
+    "Giurisdizione di iscrizione",
+    "Tescil yargı alanı",
+    "نطاق الاختصاص بالتسجيل",
+    "पंजीकरण का अधिकार क्षेत्र",
+    "登记管辖地区"
+  ],
+  "Registration extract or equivalent evidence appropriate to the entity; explain when Companies House registration does not apply.": [
+    "Extracto de inscripción o prueba equivalente adecuada a la entidad; explica cuándo no procede la inscripción en Companies House.",
+    "Certidão de inscrição ou comprovante equivalente adequado à entidade; explique quando a inscrição na Companies House não se aplicar.",
+    "Registerauszug oder gleichwertiger, zur Rechtsperson passender Nachweis; erläutern Sie, wenn keine Companies-House-Registrierung erforderlich ist.",
+    "Estratto di iscrizione o prova equivalente adatta all’entità; spiega quando l’iscrizione a Companies House non si applica.",
+    "Kuruluşa uygun sicil belgesi veya eşdeğer kanıt; Companies House kaydı geçerli değilse açıklayın.",
+    "مستخرج تسجيل أو إثبات معادل يناسب الكيان؛ وضّح متى لا ينطبق التسجيل في Companies House.",
+    "संस्था के अनुकूल पंजीकरण उद्धरण या समान प्रमाण; Companies House पंजीकरण लागू न होने पर कारण बताएँ।",
+    "适合该实体的登记摘录或同等证明；如不适用 Companies House 登记，请说明。"
+  ],
+  "Registration and a filed document do not certify the factory or the accuracy of all declarations. Tax identifiers are separate.": [
+    "La inscripción y los documentos depositados no certifican la fábrica ni la exactitud de todas las declaraciones. Los identificadores fiscales son independientes.",
+    "A inscrição e os documentos depositados não certificam a fábrica nem a exatidão de todas as declarações. Os identificadores fiscais são separados.",
+    "Die Registrierung und eingereichte Dokumente bestätigen weder die Fabrik noch die Richtigkeit sämtlicher Angaben. Steuerkennungen sind davon getrennt.",
+    "L’iscrizione e i documenti depositati non certificano lo stabilimento né l’esattezza di tutte le dichiarazioni. Gli identificativi fiscali sono separati.",
+    "Tescil ve dosyalanan belgeler fabrikayı veya tüm beyanların doğruluğunu onaylamaz. Vergi tanımlayıcıları ayrıdır.",
+    "التسجيل والمستندات المودعة لا يصادقان على المصنع أو دقة جميع التصريحات. المعرّفات الضريبية منفصلة.",
+    "पंजीकरण और जमा दस्तावेज़ कारखाने या सभी घोषणाओं की सटीकता को प्रमाणित नहीं करते। कर पहचानकर्ता अलग हैं।",
+    "登记和已提交文件不证明工厂情况，也不保证所有声明的准确性。税务识别号需另行核查。"
+  ],
+  "Register authority / court": [
+    "Autoridad o tribunal del registro",
+    "Autoridade ou tribunal do registro",
+    "Registerbehörde oder Registergericht",
+    "Autorità o tribunale del registro",
+    "Sicil makamı veya mahkemesi",
+    "جهة السجل أو محكمته",
+    "रजिस्टर प्राधिकरण या न्यायालय",
+    "登记机关或法院"
+  ],
+  "Register type shown on the extract": [
+    "Tipo de registro que figura en el extracto",
+    "Tipo de registro indicado na certidão",
+    "Registerart laut Auszug",
+    "Tipo di registro indicato nella visura",
+    "Belgede yer alan sicil türü",
+    "نوع السجل الوارد في المستخرج",
+    "उद्धरण में दिखाई गई रजिस्टर की श्रेणी",
+    "摘录上显示的登记册类型"
+  ],
+  "Registration reference, if applicable": [
+    "Referencia de inscripción, si corresponde",
+    "Referência de inscrição, se aplicável",
+    "Registrierungsreferenz, falls zutreffend",
+    "Riferimento di iscrizione, se applicabile",
+    "Varsa tescil referansı",
+    "مرجع التسجيل، إن انطبق",
+    "पंजीकरण संदर्भ, यदि लागू हो",
+    "登记编号（如适用）"
+  ],
+  "A current extract or alternative evidence appropriate to the register and legal form.": [
+    "Extracto actualizado o prueba alternativa adecuada al registro y a la forma jurídica.",
+    "Certidão atualizada ou comprovante alternativo adequado ao registro e à forma jurídica.",
+    "Aktueller Auszug oder alternativer Nachweis passend zum Register und zur Rechtsform.",
+    "Visura aggiornata o prova alternativa adatta al registro e alla forma giuridica.",
+    "Sicile ve hukuki yapıya uygun güncel belge veya alternatif kanıt.",
+    "مستخرج حديث أو إثبات بديل يناسب السجل والشكل القانوني.",
+    "रजिस्टर और कानूनी स्वरूप के अनुकूल अद्यतन उद्धरण या वैकल्पिक प्रमाण।",
+    "适合登记册及法律形式的最新摘录或替代证明。"
+  ],
+  "A register reference needs its issuing authority. VAT alone is not registration evidence. The reviewer determines the applicable register.": [
+    "Una referencia registral necesita su autoridad emisora. El IVA por sí solo no acredita la inscripción. El revisor determina el registro aplicable.",
+    "Uma referência de registro precisa identificar a autoridade emissora. O IVA isoladamente não comprova a inscrição. O revisor determina o registro aplicável.",
+    "Eine Registerreferenz benötigt die zugehörige ausstellende Behörde. Eine Umsatzsteuerkennung allein ist kein Registrierungsnachweis. Die prüfende Person bestimmt das zuständige Register.",
+    "Un riferimento del registro richiede l’indicazione dell’autorità emittente. L’IVA da sola non prova l’iscrizione. Il revisore determina il registro applicabile.",
+    "Sicil referansıyla birlikte belgeyi düzenleyen makam da belirtilmelidir. KDV bilgisi tek başına tescil kanıtı değildir. Geçerli sicili incelemeci belirler.",
+    "يجب أن يقترن مرجع السجل بالجهة المُصدرة. ضريبة القيمة المضافة وحدها ليست إثباتاً للتسجيل. يحدد المراجع السجل المعني.",
+    "रजिस्टर संदर्भ के साथ जारी करने वाला प्राधिकरण आवश्यक है। VAT अकेले पंजीकरण का प्रमाण नहीं है। समीक्षक लागू रजिस्टर तय करता है।",
+    "登记编号须同时注明签发机关。仅有增值税号不能证明已登记。适用登记册由审核员确定。"
+  ],
+  "Registration authority / Chamber of Commerce": [
+    "Autoridad de inscripción o Cámara de Comercio",
+    "Autoridade de inscrição ou Câmara de Comércio",
+    "Registrierungsbehörde oder Handelskammer",
+    "Autorità di iscrizione o Camera di Commercio",
+    "Tescil makamı veya Ticaret Odası",
+    "جهة التسجيل أو غرفة التجارة",
+    "पंजीकरण प्राधिकरण या वाणिज्य मंडल",
+    "登记机关或商会"
+  ],
+  "Reference shown on the business extract": [
+    "Referencia que figura en el extracto empresarial",
+    "Referência indicada na certidão empresarial",
+    "Referenz laut Unternehmensregisterauszug",
+    "Riferimento indicato nella visura aziendale",
+    "İşletme sicil belgesinde yer alan referans",
+    "المرجع الوارد في مستخرج سجل الأعمال",
+    "व्यवसाय उद्धरण में दिया गया संदर्भ",
+    "企业摘录上显示的编号"
+  ],
+  "Company fiscal code, if applicable": [
+    "Código fiscal de la sociedad, si corresponde",
+    "Código fiscal da sociedade, se aplicável",
+    "Steuercode der Gesellschaft, falls zutreffend",
+    "Codice fiscale della società, se applicabile",
+    "Varsa şirket mali kodu",
+    "الرمز الضريبي للشركة، إن انطبق",
+    "कंपनी का कर कोड, यदि लागू हो",
+    "公司税务代码（如适用）"
+  ],
+  "Business register extract appropriate to the entity. Keep references as printed and identify the issuing authority.": [
+    "Extracto del registro empresarial adecuado a la entidad. Conserva las referencias impresas e identifica la autoridad emisora.",
+    "Certidão do registro empresarial adequada à entidade. Mantenha as referências impressas e identifique a autoridade emissora.",
+    "Passender Unternehmensregisterauszug für die Rechtsperson. Übernehmen Sie die gedruckten Referenzen und benennen Sie die ausstellende Behörde.",
+    "Visura del registro delle imprese adatta all’entità. Mantieni i riferimenti stampati e identifica l’autorità emittente.",
+    "Kuruluşa uygun işletme sicil belgesi. Referansları basılı biçimiyle koruyun ve belgeyi düzenleyen makamı belirtin.",
+    "مستخرج سجل أعمال يناسب الكيان. احتفظ بالمراجع كما طُبعت وحدد الجهة المُصدرة.",
+    "संस्था के अनुकूल व्यवसाय रजिस्टर का उद्धरण। मुद्रित संदर्भ बनाए रखें और जारी करने वाले प्राधिकरण की पहचान दें।",
+    "适合该实体的企业登记摘录。保留印刷编号，并注明签发机关。"
+  ],
+  "Register information, fiscal code and VAT are separate fields. Availability or cost of an official extract is not guaranteed.": [
+    "Los datos registrales, el código fiscal y el IVA son campos distintos. No se garantiza la disponibilidad ni la gratuidad de un extracto oficial.",
+    "Dados de registro, código fiscal e IVA são campos separados. A disponibilidade ou gratuidade de uma certidão oficial não é garantida.",
+    "Registerangaben, Steuercode und Umsatzsteuer sind separate Felder. Verfügbarkeit oder Kostenfreiheit eines amtlichen Auszugs sind nicht garantiert.",
+    "Dati del registro, codice fiscale e IVA sono campi separati. La disponibilità o gratuità di una visura ufficiale non è garantita.",
+    "Sicil bilgileri, mali kod ve KDV ayrı alanlardır. Resmi belgenin erişilebilir veya ücretsiz olması garanti edilmez.",
+    "بيانات السجل والرمز الضريبي وضريبة القيمة المضافة حقول منفصلة. لا يُضمن توفر المستخرج الرسمي أو الحصول عليه مجاناً.",
+    "रजिस्टर की जानकारी, कर कोड और VAT अलग फ़ील्ड हैं। आधिकारिक उद्धरण की उपलब्धता या निःशुल्क प्राप्ति की गारंटी नहीं है।",
+    "登记信息、税务代码和增值税号是独立字段。不保证官方摘录能够获得或免费提供。"
+  ],
+  "State / jurisdiction of formation": [
+    "Estado o jurisdicción de constitución",
+    "Estado ou jurisdição de constituição",
+    "Staat oder Zuständigkeitsgebiet der Gründung",
+    "Stato o giurisdizione di costituzione",
+    "Kuruluş eyaleti veya yargı alanı",
+    "ولاية التأسيس أو نطاق اختصاصه",
+    "स्थापना का राज्य या अधिकार क्षेत्र",
+    "成立所在州或管辖地区"
+  ],
+  "Registration authority, if applicable": [
+    "Autoridad de inscripción, si corresponde",
+    "Autoridade de inscrição, se aplicável",
+    "Registrierungsbehörde, falls zutreffend",
+    "Autorità di iscrizione, se applicabile",
+    "Varsa tescil makamı",
+    "جهة التسجيل، إن انطبق",
+    "पंजीकरण प्राधिकरण, यदि लागू हो",
+    "登记机关（如适用）"
+  ],
+  "Entity registration number, if applicable": [
+    "Número de inscripción de la entidad, si corresponde",
+    "Número de inscrição da entidade, se aplicável",
+    "Registrierungsnummer der Rechtsperson, falls zutreffend",
+    "Numero di iscrizione dell’entità, se applicabile",
+    "Varsa kuruluş tescil numarası",
+    "رقم تسجيل الكيان، إن انطبق",
+    "संस्था का पंजीकरण नंबर, यदि लागू हो",
+    "实体登记编号（如适用）"
+  ],
+  "Formation or registration evidence from the appropriate jurisdiction, or an explanation if registration does not apply.": [
+    "Prueba de constitución o inscripción de la jurisdicción correspondiente, o una explicación si no procede la inscripción.",
+    "Comprovante de constituição ou inscrição da jurisdição adequada, ou explicação se a inscrição não se aplicar.",
+    "Gründungs- oder Registrierungsnachweis aus dem zuständigen Gebiet oder eine Erklärung, wenn keine Registrierung erforderlich ist.",
+    "Prova di costituzione o iscrizione della giurisdizione appropriata, oppure una spiegazione se l’iscrizione non è applicabile.",
+    "Uygun yargı alanından kuruluş veya tescil kanıtı ya da tescil geçerli değilse açıklama.",
+    "إثبات تأسيس أو تسجيل من جهة الاختصاص المناسبة، أو شرح إذا لم ينطبق التسجيل.",
+    "उपयुक्त अधिकार क्षेत्र से स्थापना या पंजीकरण का प्रमाण, या पंजीकरण लागू न होने पर स्पष्टीकरण।",
+    "由相应管辖地区签发的成立或登记证明；如不适用登记，请说明。"
+  ],
+  "There is no single universal company registration number for this form. GSL does not require an EIN or personal tax identifier by default.": [
+    "Este formulario no exige un número universal de inscripción empresarial. GSL no solicita un EIN ni un identificador fiscal personal por defecto.",
+    "Este formulário não exige um número universal de registro empresarial. A GSL não solicita EIN nem identificador fiscal pessoal por padrão.",
+    "Dieses Formular setzt keine universelle Unternehmensregisternummer voraus. GSL verlangt standardmäßig weder eine EIN noch eine persönliche Steuerkennung.",
+    "Questo modulo non richiede un numero universale di iscrizione aziendale. GSL non richiede per impostazione predefinita un EIN o un identificativo fiscale personale.",
+    "Bu form tek bir evrensel şirket tescil numarası gerektirmez. GSL varsayılan olarak EIN veya kişisel vergi tanımlayıcısı istemez.",
+    "لا يتطلب هذا النموذج رقماً عالمياً موحداً لتسجيل الشركات. لا تطلب GSL رقم EIN أو معرّفاً ضريبياً شخصياً افتراضياً.",
+    "इस फ़ॉर्म में एक सार्वभौमिक कंपनी पंजीकरण नंबर आवश्यक नहीं है। GSL सामान्यतः EIN या व्यक्तिगत कर पहचानकर्ता नहीं माँगता।",
+    "本表格不要求统一通用的企业登记号码。GSL 默认不要求提供 EIN 或个人税务识别号。"
+  ],
+  "Business registry authority": [
+    "Autoridad del registro empresarial",
+    "Autoridade do registro empresarial",
+    "Unternehmensregisterbehörde",
+    "Autorità del registro delle imprese",
+    "İşletme sicil makamı",
+    "جهة سجل الأعمال",
+    "व्यवसाय रजिस्ट्री प्राधिकरण",
+    "企业登记机关"
+  ],
+  "Business registry identifier": [
+    "Identificador del registro empresarial",
+    "Identificador do registro empresarial",
+    "Kennung im Unternehmensregister",
+    "Identificativo del registro delle imprese",
+    "İşletme sicil tanımlayıcısı",
+    "المعرّف في سجل الأعمال",
+    "व्यवसाय रजिस्ट्री पहचानकर्ता",
+    "企业登记识别号"
+  ],
+  "Official business registration evidence, reviewed for the country and legal form.": [
+    "Justificante oficial de inscripción empresarial, revisado según el país y la forma jurídica.",
+    "Comprovante oficial de registro empresarial, analisado conforme o país e a forma jurídica.",
+    "Amtlicher Nachweis der Unternehmensregistrierung, geprüft nach Land und Rechtsform.",
+    "Prova ufficiale di iscrizione aziendale, verificata in base al paese e alla forma giuridica.",
+    "Ülkeye ve hukuki yapıya göre incelenen resmi işletme tescil kanıtı.",
+    "إثبات رسمي لتسجيل النشاط، يُراجع وفقاً للبلد والشكل القانوني.",
+    "देश और कानूनी स्वरूप के अनुसार समीक्षा किया जाने वाला आधिकारिक व्यवसाय पंजीकरण प्रमाण।",
+    "正式的企业登记证明，根据国家和法律形式进行审核。"
+  ],
+  "This country has no researched template yet. A reviewer must establish the appropriate requirements before approving the profile.": [
+    "Este país aún no dispone de una plantilla documentada. Un revisor debe determinar los requisitos adecuados antes de aprobar el perfil.",
+    "Este país ainda não tem um modelo documentado. Um revisor deve definir os requisitos adequados antes de aprovar o perfil.",
+    "Für dieses Land liegt noch keine recherchierte Vorlage vor. Vor Freigabe des Profils muss eine prüfende Person die passenden Anforderungen festlegen.",
+    "Questo paese non dispone ancora di un modello documentato. Un revisore deve definire i requisiti adeguati prima di approvare il profilo.",
+    "Bu ülke için henüz araştırılmış bir şablon yok. İncelemeci, profili onaylamadan önce uygun gereklilikleri belirlemelidir.",
+    "لا يتوفر لهذا البلد نموذج موثق بعد. يجب أن يحدد المراجع المتطلبات المناسبة قبل اعتماد الملف.",
+    "इस देश के लिए अभी शोध किया हुआ प्रारूप उपलब्ध नहीं है। प्रोफ़ाइल स्वीकृत करने से पहले समीक्षक को उचित आवश्यकताएँ तय करनी होंगी।",
+    "该国家尚无经过研究的模板。审核员须先确定适当要求，再批准资料。"
+  ],
+  "If registration evidence or an identifier does not apply, explain why": [
+    "Si no corresponde un justificante de inscripción o un identificador, explica el motivo",
+    "Se um comprovante de inscrição ou identificador não se aplicar, explique o motivo",
+    "Wenn ein Registrierungsnachweis oder eine Kennung nicht zutrifft, erläutern Sie den Grund",
+    "Se un documento di iscrizione o un identificativo non è applicabile, spiega il motivo",
+    "Tescil kanıtı veya tanımlayıcı geçerli değilse nedenini açıklayın",
+    "إذا لم ينطبق إثبات التسجيل أو المعرّف، فاشرح السبب",
+    "यदि पंजीकरण प्रमाण या पहचानकर्ता लागू नहीं होता, तो कारण बताएँ",
+    "如登记证明或识别号不适用，请说明原因"
+  ]
+}

@@ -1,7 +1,9 @@
 import assert from 'node:assert/strict';
 import {randomUUID} from 'node:crypto';
 export async function testRepublication(db){
- const users=Array.from({length:3},()=>randomUUID());await db.exec('reset role');for(const u of users)await db.query('insert into auth.users(id,email) values($1,$2)',[u,u+'@example.invalid']);await db.query('insert into private.platform_reviewers(user_id) values($1)',[users[2]]);
+ const users=Array.from({length:3},()=>randomUUID());await db.exec('reset role');for(const u of users)await db.query('insert into auth.users(id,email) values($1,$2)',[u,u+'@example.invalid']);
+ await db.query('update auth.users set email_confirmed_at=now() where id=$1',[users[2]]);
+ await db.query('insert into private.platform_reviewers(user_id) values($1)',[users[2]]);
  async function as(u){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[u]);await db.exec('set role authenticated')}
  const cmd=async(action,args)=>(await db.query('select public.workflow($1,$2,$3) value',[action,JSON.stringify(args),randomUUID()])).rows[0].value;
  const payload={legalName:'Synthetic republication',country:'FR',entityKind:'company',description:'Synthetic revised capabilities, for isolated tests only.',attestation:true,identifiers:{siren:'synthetic-'+randomUUID()},headquarters:{line:'Test',city:'Test'},capabilities:{processes:'CNC',materials:'Aluminium'},sites:[],products:[{id:randomUUID(),name:'Example CNC part',category:'metal',description:'Example on plan',unit:'pcs',moq:'10',processes:'CNC',materials:'Aluminium',origin:'FR'}]};

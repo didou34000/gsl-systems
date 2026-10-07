@@ -1,5 +1,5 @@
 import type {Product} from './catalog';
-import {countries,products,suppliers,getSupplier,getSector} from './catalog';
+import {products,suppliers,getSupplier,getSector} from './catalog';
 export const english:Record<string,string>={
 'Turquie':'Türkiye','Maroc':'Morocco','Tunisie':'Tunisia','Géorgie':'Georgia','Tbilissi':'Tbilisi',
 'Métal & usinage':'Metal & machining','Électricité':'Electrical','Emballage':'Packaging','Textile professionnel':'Workwear & textiles','Plasturgie':'Plastics','Machines & équipements':'Machinery & equipment','Mobilier professionnel':'Commercial furniture',
@@ -25,10 +25,10 @@ const descriptions=[
 'Custom desks for commercial projects, with specified dimensions and finishes.'
 ];
 const ids=['pieces-usinees-cnc','coffrets-electriques','cartons-personnalises','vetements-professionnels','profiles-aluminium','pieces-plastiques','tolerie-laser','faisceaux-electriques','linge-professionnel','tables-atelier','structures-metalliques','bureaux-professionnels'];
-export function localText(value:string,language:string){return language==='en'?english[value]||value:value}
+export function localText(value:string,language:string){return language==='fr'?value:english[value]||value}
 export function localProduct(p:Product,language:string):Product{if(language==='fr')return p;const index=ids.indexOf(p.id);return {...p,name:names[index]||p.name,description:descriptions[index]||p.description,country:localText(p.country,language),material:localText(p.material,language),process:localText(p.process,language),specs:p.specs.map(([k,v])=>[localText(k,language),localText(v,language)])}}
 export function normalizeSearch(value:string){return value.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().trim()}
 export function matchesSearch(values:string[],query:string){const haystack=normalizeSearch(values.join(' '));return normalizeSearch(query).split(/\s+/).every(term=>haystack.includes(term))}
 export type DiscoveryFilters={query?:string;country?:string;category?:string;process?:string;maxQuantity?:string;sort?:string;language?:string};
-export function findDemoProducts({query='',country='',category='',process='',maxQuantity='',sort='',language='en'}:DiscoveryFilters){return products.filter(p=>(!country||p.country===country)&&(!category||p.category===category)&&(!process||p.process===process)&&(!maxQuantity||p.moq<=Number(maxQuantity))&&matchesSearch([p.name,localProduct(p,'en').name,p.process,localText(p.process,'en'),p.material,localText(p.material,'en'),getSupplier(p.supplierId).name,getSector(p.category).name,localText(getSector(p.category).name,'en')],query)).sort((a,b)=>sort==='quantity'?a.moq-b.moq:sort==='name'?localProduct(a,language).name.localeCompare(localProduct(b,language).name):0)}
+export function findDemoProducts({query='',country='',category='',process='',maxQuantity='',sort='',language='en'}:DiscoveryFilters){return products.filter(p=>(!country||p.country===country)&&(!category||p.category===category)&&(!process||p.process===process)&&(!maxQuantity||p.moq<=Number(maxQuantity))&&matchesSearch([p.name,localProduct(p,'en').name,p.process,localText(p.process,'en'),p.material,localText(p.material,'en'),getSupplier(p.supplierId).name,getSector(p.category).name,localText(getSector(p.category).name,'en')],query)).sort((a,b)=>sort==='quantity'?a.moq-b.moq:sort==='name'?localProduct(a,language).name.localeCompare(localProduct(b,language).name,language):0)}
 export function findDemoSuppliers({query='',country='',category='',process='',sort=''}:DiscoveryFilters){return suppliers.filter(s=>(!country||s.country===country)&&(!category||s.sector===category)&&(!process||s.processes.includes(process))&&matchesSearch([s.name,s.city,s.country,localText(s.country,'en'),getSector(s.sector).name,localText(getSector(s.sector).name,'en'),...s.processes,...s.processes.map(p=>localText(p,'en'))],query)).sort((a,b)=>sort==='name'?a.name.localeCompare(b.name):0)}

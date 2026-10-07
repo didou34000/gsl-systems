@@ -1,0 +1,882 @@
+{
+  "Enter your company name and country.": [
+    "Introduce el nombre y el país de tu empresa.",
+    "Introduza o nome e país da empresa.",
+    "Geben Sie Unternehmensname und Land ein.",
+    "Inserisci nome e paese dell'azienda.",
+    "Şirket adı ve ülkesini girin.",
+    "أدخل اسم شركتك وبلدها.",
+    "कंपनी का नाम और देश दर्ज करें।",
+    "请输入企业名称和国家。"
+  ],
+  "Sign in with a confirmed email, then return to your draft.": [
+    "Inicia sesión con un correo confirmado y vuelve a tu borrador.",
+    "Inicie sessão com email confirmado e volte ao rascunho.",
+    "Melden Sie sich mit bestätigter E-Mail an und kehren Sie zum Entwurf zurück.",
+    "Accedi con email confermata, poi torna alla bozza.",
+    "Doğrulanmış e-postayla giriş yapıp taslağa dönün.",
+    "سجّل الدخول ببريد مؤكّد ثم عد إلى مسودتك.",
+    "सत्यापित ईमेल से साइन इन करें, फिर प्रारूप पर लौटें।",
+    "使用已验证邮箱登录，然后返回草稿。"
+  ],
+  "Your request could not be saved. Keep this page open, export your draft or try again.": [
+    "No se pudo guardar la solicitud. Mantén la página abierta, exporta el borrador o reintenta.",
+    "Não foi possível guardar o pedido. Mantenha a página aberta, exporte o rascunho ou tente novamente.",
+    "Ihre Anfrage konnte nicht gespeichert werden. Lassen Sie die Seite offen, exportieren Sie den Entwurf oder versuchen Sie es erneut.",
+    "Impossibile salvare la richiesta. Tieni aperta la pagina, esporta la bozza o riprova.",
+    "Talep kaydedilemedi. Sayfayı açık tutun, taslağı dışa aktarın veya tekrar deneyin.",
+    "تعذّر حفظ الطلب. أبقِ الصفحة مفتوحة أو صدّر المسودة أو أعد المحاولة.",
+    "अनुरोध सहेजा नहीं जा सका। पेज खुला रखें, प्रारूप निर्यात करें या फिर कोशिश करें।",
+    "无法保存询价。请保持页面打开，导出草稿或重试。"
+  ],
+  "Your additional requirements": [
+    "Tus requisitos adicionales",
+    "Os seus requisitos adicionais",
+    "Ihre zusätzlichen Anforderungen",
+    "Le tue esigenze aggiuntive",
+    "Ek gereklilikleriniz",
+    "متطلباتك الإضافية",
+    "आपकी अतिरिक्त आवश्यकताएँ",
+    "您的补充要求"
+  ],
+  "Add any information that matters: an existing reference, a specific constraint, acceptance criteria or a question for the manufacturer.": [
+    "Añade información relevante: una referencia, una limitación, criterios de aceptación o preguntas al fabricante.",
+    "Adicione informação relevante: referência, restrição, critérios de aceitação ou pergunta ao fabricante.",
+    "Ergänzen Sie wichtige Angaben: bestehende Referenz, Einschränkungen, Abnahmekriterien oder Fragen an den Hersteller.",
+    "Aggiungi informazioni importanti: riferimenti, vincoli, criteri di accettazione o domande al produttore.",
+    "Önemli bilgileri ekleyin: mevcut referans, kısıtlama, kabul kriterleri veya üreticiye soru.",
+    "أضف المعلومات المهمة: مرجعًا أو قيدًا أو معايير قبول أو سؤالًا للمصنّع.",
+    "महत्वपूर्ण जानकारी जोड़ें: संदर्भ, विशेष बाधा, स्वीकृति मानदंड या निर्माता से प्रश्न।",
+    "补充重要信息：现有型号、特殊限制、验收标准或向制造商提出的问题。"
+  ],
+  "Custom section": [
+    "Sección personalizada",
+    "Secção personalizada",
+    "Eigener Abschnitt",
+    "Sezione personalizzata",
+    "Özel bölüm",
+    "قسم مخصّص",
+    "कस्टम अनुभाग",
+    "自定义章节"
+  ],
+  "Section title": [
+    "Título de sección",
+    "Título da secção",
+    "Abschnittstitel",
+    "Titolo sezione",
+    "Bölüm başlığı",
+    "عنوان القسم",
+    "अनुभाग शीर्षक",
+    "章节标题"
+  ],
+  "Example: compatibility with our machine": [
+    "Ejemplo: compatibilidad con nuestra máquina",
+    "Exemplo: compatibilidade com a nossa máquina",
+    "Beispiel: Kompatibilität mit unserer Maschine",
+    "Esempio: compatibilità con la nostra macchina",
+    "Örnek: makinemizle uyumluluk",
+    "مثال: التوافق مع آلتنا",
+    "उदाहरण: हमारी मशीन से अनुकूलता",
+    "例如：与现有设备的兼容性"
+  ],
+  "Information or question": [
+    "Información o pregunta",
+    "Informação ou pergunta",
+    "Information oder Frage",
+    "Informazioni o domanda",
+    "Bilgi veya soru",
+    "معلومات أو سؤال",
+    "जानकारी या प्रश्न",
+    "信息或问题"
+  ],
+  "Remove custom section ": [
+    "Eliminar sección personalizada ",
+    "Remover secção personalizada ",
+    "Eigenen Abschnitt entfernen ",
+    "Rimuovi sezione personalizzata ",
+    "Özel bölümü kaldır ",
+    "حذف القسم المخصّص ",
+    "कस्टम अनुभाग हटाएँ ",
+    "移除自定义章节 "
+  ],
+  "Remove section": [
+    "Eliminar sección",
+    "Remover secção",
+    "Abschnitt entfernen",
+    "Rimuovi sezione",
+    "Bölümü kaldır",
+    "حذف القسم",
+    "अनुभाग हटाएँ",
+    "移除章节"
+  ],
+  "Add a custom section": [
+    "Añadir sección personalizada",
+    "Adicionar secção personalizada",
+    "Eigenen Abschnitt hinzufügen",
+    "Aggiungi sezione personalizzata",
+    "Özel bölüm ekle",
+    "إضافة قسم مخصّص",
+    "कस्टम अनुभाग जोड़ें",
+    "添加自定义章节"
+  ],
+  "Loading your draft…": [
+    "Cargando tu borrador…",
+    "A carregar o rascunho…",
+    "Entwurf wird geladen…",
+    "Caricamento della bozza…",
+    "Taslağınız yükleniyor…",
+    "جارٍ تحميل مسودتك…",
+    "आपका प्रारूप लोड हो रहा है…",
+    "正在加载草稿…"
+  ],
+  "FROM IDEA TO PRODUCTION": [
+    "DE LA IDEA A LA PRODUCCIÓN",
+    "DA IDEIA À PRODUÇÃO",
+    "VON DER IDEE ZUR PRODUKTION",
+    "DALL'IDEA ALLA PRODUZIONE",
+    "FİKİRDEN ÜRETİME",
+    "من الفكرة إلى الإنتاج",
+    "विचार से उत्पादन तक",
+    "从创意到生产"
+  ],
+  "Describe your requirement.": [
+    "Describe tu necesidad.",
+    "Descreva a sua necessidade.",
+    "Beschreiben Sie Ihren Bedarf.",
+    "Descrivi la tua esigenza.",
+    "İhtiyacınızı açıklayın.",
+    "صِف احتياجك.",
+    "अपनी आवश्यकता बताएँ।",
+    "描述您的需求。"
+  ],
+  "Give it a clear direction.": [
+    "Dale una dirección clara.",
+    "Dê-lhe uma direção clara.",
+    "Geben Sie ihm eine klare Richtung.",
+    "Dagli una direzione chiara.",
+    "Net bir yön verin.",
+    "امنحه اتجاهًا واضحًا.",
+    "उसे स्पष्ट दिशा दें।",
+    "明确项目方向。"
+  ],
+  "A clear brief helps manufacturers answer with a relevant quote. Start with what you know; optional details can follow.": [
+    "Una descripción clara ayuda a recibir ofertas pertinentes. Empieza con lo que sabes; los detalles opcionales pueden añadirse después.",
+    "Uma descrição clara ajuda os fabricantes a responder com propostas relevantes. Comece pelo que sabe; os detalhes opcionais podem vir depois.",
+    "Eine klare Beschreibung hilft Herstellern, passende Angebote zu erstellen. Beginnen Sie mit Bekanntem; optionale Details können folgen.",
+    "Un brief chiaro aiuta a ricevere preventivi pertinenti. Inizia da ciò che sai; i dettagli facoltativi possono seguire.",
+    "Açık bir brief uygun teklif almayı kolaylaştırır. Bildiklerinizle başlayın, isteğe bağlı detaylar sonra eklenebilir.",
+    "يساعد الوصف الواضح المصنّعين على تقديم عروض مناسبة. ابدأ بما تعرفه وأضف التفاصيل الاختيارية لاحقًا.",
+    "स्पष्ट विवरण से निर्माता उपयुक्त प्रस्ताव दे सकते हैं। जो जानते हैं उससे शुरू करें; वैकल्पिक विवरण बाद में जोड़ें।",
+    "清晰的需求有助于制造商给出合适报价。先填写已知信息，选填内容可稍后补充。"
+  ],
+  "Export my brief": [
+    "Exportar mi dossier",
+    "Exportar o meu dossier",
+    "Meine Beschreibung exportieren",
+    "Esporta il mio brief",
+    "Briefimi dışa aktar",
+    "تصدير ملف احتياجي",
+    "मेरा विवरण निर्यात करें",
+    "导出需求文件"
+  ],
+  "Draft kept in this tab. Export it before closing.": [
+    "Borrador guardado en esta pestaña. Expórtalo antes de cerrar.",
+    "Rascunho guardado neste separador. Exporte antes de fechar.",
+    "Entwurf in diesem Tab gespeichert. Vor dem Schließen exportieren.",
+    "Bozza conservata in questa scheda. Esportala prima di chiudere.",
+    "Taslak bu sekmede tutulur. Kapatmadan önce dışa aktarın.",
+    "المسودة محفوظة في هذا التبويب. صدّرها قبل الإغلاق.",
+    "प्रारूप इस टैब में रखा है। बंद करने से पहले निर्यात करें।",
+    "草稿保存在此标签页中，关闭前请导出。"
+  ],
+  "Browser storage is unavailable. Export your brief before leaving.": [
+    "El almacenamiento no está disponible. Exporta tu dossier antes de salir.",
+    "Armazenamento indisponível. Exporte o dossier antes de sair.",
+    "Browserspeicher nicht verfügbar. Exportieren Sie Ihre Beschreibung vor dem Verlassen.",
+    "Archiviazione browser non disponibile. Esporta il brief prima di uscire.",
+    "Tarayıcı depolaması kullanılamıyor. Çıkmadan önce briefi dışa aktarın.",
+    "تخزين المتصفح غير متاح. صدّر الملف قبل المغادرة.",
+    "ब्राउज़र संग्रहण उपलब्ध नहीं है। जाने से पहले विवरण निर्यात करें।",
+    "浏览器存储不可用，离开前请导出需求文件。"
+  ],
+  "Your brief, at your pace.": [
+    "Tu proyecto, a tu ritmo.",
+    "O seu projeto, ao seu ritmo.",
+    "Ihre Anfrage, in Ihrem Tempo.",
+    "Il tuo progetto, ai tuoi ritmi.",
+    "Briefiniz, kendi hızınızda.",
+    "ملفك حسب وتيرتك.",
+    "आपका विवरण, आपकी गति से।",
+    "按您的节奏完善需求。"
+  ],
+  "Your draft is kept in this browser tab until it is closed.": [
+    "Tu borrador se conserva hasta cerrar esta pestaña.",
+    "O rascunho fica neste separador até o fechar.",
+    "Ihr Entwurf bleibt in diesem Browser-Tab bis zum Schließen.",
+    "La bozza resta in questa scheda fino alla chiusura.",
+    "Taslak sekme kapatılana kadar burada tutulur.",
+    "تبقى المسودة في هذا التبويب حتى إغلاقه.",
+    "प्रारूप टैब बंद होने तक इसी टैब में रहता है।",
+    "草稿保留在此浏览器标签页中，直到标签页关闭。"
+  ],
+  "Nothing is sent to suppliers at this stage.": [
+    "En esta etapa no se envía nada a proveedores.",
+    "Nada é enviado aos fornecedores nesta fase.",
+    "In diesem Schritt wird nichts an Lieferanten gesendet.",
+    "In questa fase nulla viene inviato ai fornitori.",
+    "Bu aşamada tedarikçilere hiçbir şey gönderilmez.",
+    "لا يُرسل شيء للمورّدين في هذه المرحلة.",
+    "इस चरण में आपूर्तिकर्ताओं को कुछ नहीं भेजा जाता।",
+    "此阶段不会向供应商发送任何内容。"
+  ],
+  "Your private draft is saved.": [
+    "Tu borrador privado está guardado.",
+    "O rascunho privado está guardado.",
+    "Ihr privater Entwurf ist gespeichert.",
+    "La bozza privata è salvata.",
+    "Özel taslağınız kaydedildi.",
+    "تم حفظ مسودتك الخاصة.",
+    "आपका निजी प्रारूप सहेज दिया गया।",
+    "私人草稿已保存。"
+  ],
+  "You can now add documents and select the suppliers who will receive your request.": [
+    "Ahora puedes añadir documentos y elegir los proveedores destinatarios.",
+    "Pode agora adicionar documentos e escolher os fornecedores destinatários.",
+    "Sie können jetzt Dokumente hinzufügen und die Empfänger auswählen.",
+    "Ora puoi aggiungere documenti e scegliere i fornitori destinatari.",
+    "Artık belge ekleyip talebi alacak tedarikçileri seçebilirsiniz.",
+    "يمكنك الآن إضافة المستندات واختيار المورّدين المستلمين.",
+    "अब दस्तावेज़ जोड़ें और अनुरोध पाने वाले आपूर्तिकर्ता चुनें।",
+    "现在可以添加文件并选择接收询价的供应商。"
+  ],
+  "Documents & recipients": [
+    "Documentos y destinatarios",
+    "Documentos e destinatários",
+    "Dokumente und Empfänger",
+    "Documenti e destinatari",
+    "Belgeler ve alıcılar",
+    "المستندات والمستلمون",
+    "दस्तावेज़ और प्राप्तकर्ता",
+    "文件与收件人"
+  ],
+  "What would you like to manufacture or source?": [
+    "¿Qué deseas fabricar o comprar?",
+    "O que pretende fabricar ou comprar?",
+    "Was möchten Sie herstellen lassen oder beschaffen?",
+    "Cosa vorresti produrre o acquistare?",
+    "Ne üretmek veya tedarik etmek istersiniz?",
+    "ماذا تريد تصنيعَه أو توريدَه؟",
+    "आप क्या बनवाना या खरीदना चाहते हैं?",
+    "您想制造或采购什么？"
+  ],
+  "Detail each item and its quantity.": [
+    "Detalla cada artículo y cantidad.",
+    "Descreva cada artigo e quantidade.",
+    "Beschreiben Sie jede Position und ihre Menge.",
+    "Descrivi ogni articolo e quantità.",
+    "Her kalemi ve miktarını belirtin.",
+    "فصّل كل صنف وكميته.",
+    "हर मद और उसकी मात्रा बताएँ।",
+    "请填写每个项目及数量。"
+  ],
+  "Where, when and under which conditions?": [
+    "¿Dónde, cuándo y en qué condiciones?",
+    "Onde, quando e em que condições?",
+    "Wo, wann und unter welchen Bedingungen?",
+    "Dove, quando e a quali condizioni?",
+    "Nerede, ne zaman, hangi koşullarda?",
+    "أين ومتى وبأي شروط؟",
+    "कहाँ, कब और किन शर्तों पर?",
+    "在哪里、何时、按什么条件交付？"
+  ],
+  "Review your brief before saving it to your company.": [
+    "Revisa el dossier antes de guardarlo en tu empresa.",
+    "Reveja o dossier antes de o guardar na empresa.",
+    "Prüfen Sie die Beschreibung vor dem Speichern im Unternehmen.",
+    "Rivedi il brief prima di salvarlo nell'azienda.",
+    "Şirketinize kaydetmeden önce briefi inceleyin.",
+    "راجع الملف قبل حفظه في شركتك.",
+    "कंपनी में सहेजने से पहले विवरण की समीक्षा करें।",
+    "保存到企业前，请检查需求文件。"
+  ],
+  "Request format": [
+    "Formato de solicitud",
+    "Formato do pedido",
+    "Anfrageformat",
+    "Formato richiesta",
+    "Talep formatı",
+    "صيغة الطلب",
+    "अनुरोध प्रारूप",
+    "询价格式"
+  ],
+  "Guided questionnaire": [
+    "Cuestionario guiado",
+    "Questionário guiado",
+    "Geführter Fragebogen",
+    "Questionario guidato",
+    "Rehberli anket",
+    "استبيان إرشادي",
+    "निर्देशित प्रश्नावली",
+    "引导问卷"
+  ],
+  "Custom request": [
+    "Solicitud personalizada",
+    "Pedido personalizado",
+    "Individuelle Anfrage",
+    "Richiesta personalizzata",
+    "Özel talep",
+    "طلب مخصّص",
+    "कस्टम अनुरोध",
+    "自定义询价"
+  ],
+  "Questions to structure your brief": [
+    "Preguntas para estructurar tu necesidad",
+    "Perguntas para estruturar o pedido",
+    "Fragen zur Strukturierung Ihres Bedarfs",
+    "Domande per strutturare il brief",
+    "Briefi yapılandıran sorular",
+    "أسئلة لتنظيم احتياجك",
+    "विवरण व्यवस्थित करने के प्रश्न",
+    "通过问题梳理需求"
+  ],
+  "Write freely and add your own sections": [
+    "Escribe libremente y añade tus secciones",
+    "Escreva livremente e adicione secções",
+    "Frei schreiben und eigene Abschnitte ergänzen",
+    "Scrivi liberamente e aggiungi sezioni",
+    "Serbestçe yazın ve bölümler ekleyin",
+    "اكتب بحرية وأضف أقسامك",
+    "स्वतंत्र रूप से लिखें और अपने अनुभाग जोड़ें",
+    "自由填写并添加章节"
+  ],
+  "Your brief exceeds 10,000 characters. Shorten a description or a custom section.": [
+    "El dossier supera 10.000 caracteres. Acorta una descripción o sección.",
+    "O dossier excede 10.000 caracteres. Encurte uma descrição ou secção.",
+    "Ihre Beschreibung überschreitet 10.000 Zeichen. Kürzen Sie eine Beschreibung oder einen Abschnitt.",
+    "Il brief supera 10.000 caratteri. Accorcia una descrizione o sezione.",
+    "Brief 10.000 karakteri aşıyor. Bir açıklamayı veya bölümü kısaltın.",
+    "يتجاوز الملف 10,000 حرف. اختصر وصفًا أو قسمًا.",
+    "विवरण 10,000 वर्ण से अधिक है। वर्णन या कस्टम अनुभाग छोटा करें।",
+    "需求超过10,000字符，请缩短描述或自定义章节。"
+  ],
+  "Give each custom section a title and content, or remove it.": [
+    "Añade título y contenido a cada sección o elimínala.",
+    "Dê título e conteúdo a cada secção ou remova-a.",
+    "Geben Sie jedem eigenen Abschnitt Titel und Inhalt oder entfernen Sie ihn.",
+    "Dai titolo e contenuto a ogni sezione oppure rimuovila.",
+    "Her özel bölüme başlık ve içerik ekleyin ya da kaldırın.",
+    "أضف عنوانًا ومحتوى لكل قسم أو احذفه.",
+    "हर कस्टम अनुभाग को शीर्षक और सामग्री दें, या हटा दें।",
+    "请为每个自定义章节填写标题和内容，或将其删除。"
+  ],
+  "Enter a title (at least 3 characters) and a description (at least 20 characters).": [
+    "Introduce un título (mínimo 3 caracteres) y una descripción (mínimo 20).",
+    "Introduza título (mínimo 3 caracteres) e descrição (mínimo 20).",
+    "Geben Sie einen Titel (mindestens 3 Zeichen) und eine Beschreibung (mindestens 20) ein.",
+    "Inserisci un titolo (almeno 3 caratteri) e una descrizione (almeno 20).",
+    "Başlık (en az 3 karakter) ve açıklama (en az 20) girin.",
+    "أدخل عنوانًا (3 أحرف على الأقل) ووصفًا (20 حرفًا على الأقل).",
+    "शीर्षक (कम से कम 3 वर्ण) और विवरण (कम से कम 20 वर्ण) भरें।",
+    "请输入标题（至少3字符）和描述（至少20字符）。"
+  ],
+  "Each item needs a description and a positive quantity (up to 1,000 billion).": [
+    "Cada artículo requiere descripción y cantidad positiva (hasta un billón).",
+    "Cada artigo precisa de descrição e quantidade positiva (até um bilião).",
+    "Jede Position benötigt Beschreibung und positive Menge (bis zu einer Billion).",
+    "Ogni articolo richiede descrizione e quantità positiva (fino a mille miliardi).",
+    "Her kalemin açıklaması ve pozitif miktarı olmalı (en fazla 1 trilyon).",
+    "يحتاج كل صنف إلى وصف وكمية موجبة (حتى تريليون).",
+    "हर मद में विवरण और सकारात्मक मात्रा चाहिए (अधिकतम 1,000 अरब)।",
+    "每项须填写描述及正数数量（最多一万亿）。"
+  ],
+  "Choose a delivery country. Dates must not be in the past, and the response must precede delivery.": [
+    "Elige el país de entrega. Las fechas no pueden ser pasadas y la respuesta debe preceder a la entrega.",
+    "Escolha o país de entrega. As datas não podem ser passadas e a resposta deve preceder a entrega.",
+    "Wählen Sie ein Lieferland. Daten dürfen nicht vergangen sein; die Antwort muss vor der Lieferung liegen.",
+    "Scegli il paese di consegna. Le date non possono essere passate e la risposta deve precedere la consegna.",
+    "Teslimat ülkesi seçin. Tarihler geçmiş olamaz; yanıt teslimattan önce olmalıdır.",
+    "اختر بلد التسليم. يجب ألا تكون التواريخ ماضية، وأن يسبق الردّ التسليم.",
+    "वितरण देश चुनें। तिथियाँ पिछली नहीं होनी चाहिए और उत्तर वितरण से पहले होना चाहिए।",
+    "请选择交付国家。日期不能为过去，回复期限须早于交付日期。"
+  ],
+  "* Required · other fields are optional": [
+    "* Obligatorio · otros campos opcionales",
+    "* Obrigatório · outros campos opcionais",
+    "* Pflichtfeld · andere Felder optional",
+    "* Obbligatorio · altri campi facoltativi",
+    "* Zorunlu · diğer alanlar isteğe bağlı",
+    "* مطلوب · الحقول الأخرى اختيارية",
+    "* आवश्यक · अन्य फ़ील्ड वैकल्पिक",
+    "* 必填 · 其他字段选填"
+  ],
+  "Reference / description": [
+    "Referencia / descripción",
+    "Referência / descrição",
+    "Referenz / Beschreibung",
+    "Riferimento / descrizione",
+    "Referans / açıklama",
+    "المرجع / الوصف",
+    "संदर्भ / विवरण",
+    "型号 / 描述"
+  ],
+  "pieces": [
+    "piezas",
+    "peças",
+    "Stück",
+    "pezzi",
+    "adet",
+    "قطع",
+    "नग",
+    "件"
+  ],
+  "sets": [
+    "conjuntos",
+    "conjuntos",
+    "Sets",
+    "set",
+    "takım",
+    "مجموعات",
+    "सेट",
+    "套"
+  ],
+  "Remove item ": [
+    "Eliminar artículo ",
+    "Remover artigo ",
+    "Position entfernen ",
+    "Rimuovi articolo ",
+    "Kalemi kaldır ",
+    "حذف الصنف ",
+    "मद हटाएँ ",
+    "删除项目 "
+  ],
+  "Add an item": [
+    "Añadir un artículo",
+    "Adicionar um artigo",
+    "Position hinzufügen",
+    "Aggiungi un articolo",
+    "Kalem ekle",
+    "إضافة صنف",
+    "मद जोड़ें",
+    "添加项目"
+  ],
+  "Describe your request in your own words": [
+    "Describe tu solicitud con tus palabras",
+    "Descreva o pedido pelas suas palavras",
+    "Beschreiben Sie Ihre Anfrage in eigenen Worten",
+    "Descrivi la richiesta con parole tue",
+    "Talebinizi kendi sözlerinizle anlatın",
+    "صِف طلبك بكلماتك",
+    "अपना अनुरोध अपने शब्दों में बताएँ",
+    "用自己的话描述需求"
+  ],
+  "Select": [
+    "Seleccionar",
+    "Selecionar",
+    "Auswählen",
+    "Seleziona",
+    "Seç",
+    "اختر",
+    "चुनें",
+    "选择"
+  ],
+  "You can attach drawings and documents after saving the request to your account.": [
+    "Puedes adjuntar planos y documentos tras guardar la solicitud.",
+    "Pode anexar desenhos e documentos após guardar o pedido.",
+    "Sie können nach dem Speichern Zeichnungen und Dokumente anhängen.",
+    "Puoi allegare disegni e documenti dopo aver salvato la richiesta.",
+    "Talebi kaydettikten sonra çizim ve belgeler ekleyebilirsiniz.",
+    "يمكنك إرفاق الرسومات والمستندات بعد حفظ الطلب.",
+    "अनुरोध सहेजने के बाद चित्र और दस्तावेज़ संलग्न कर सकते हैं।",
+    "询价保存到账户后，可添加图纸和文件。"
+  ],
+  "Review my requirement": [
+    "Revisar mi necesidad",
+    "Rever a minha necessidade",
+    "Meinen Bedarf prüfen",
+    "Rivedi la mia esigenza",
+    "İhtiyacımı incele",
+    "مراجعة احتياجي",
+    "मेरी आवश्यकता की समीक्षा करें",
+    "检查我的需求"
+  ],
+  "Requested items": [
+    "Artículos solicitados",
+    "Artigos pedidos",
+    "Angefragte Positionen",
+    "Articoli richiesti",
+    "İstenen kalemler",
+    "الأصناف المطلوبة",
+    "माँगी गई मदें",
+    "询价项目"
+  ],
+  "Edit my brief": [
+    "Editar mi dossier",
+    "Editar o meu dossier",
+    "Meine Beschreibung bearbeiten",
+    "Modifica il mio brief",
+    "Briefimi düzenle",
+    "تعديل ملفّي",
+    "मेरा विवरण संपादित करें",
+    "编辑需求文件"
+  ],
+  "Save to": [
+    "Guardar en",
+    "Guardar em",
+    "Speichern unter",
+    "Salva in",
+    "Şuraya kaydet",
+    "الحفظ في",
+    "यहाँ सहेजें",
+    "保存到"
+  ],
+  "Create your buyer company to keep this request in your workspace.": [
+    "Crea tu empresa compradora para guardar esta solicitud.",
+    "Crie a empresa compradora para guardar este pedido.",
+    "Erstellen Sie Ihr Einkaufsunternehmen, um die Anfrage zu speichern.",
+    "Crea l'azienda acquirente per conservare questa richiesta.",
+    "Talebi saklamak için alıcı şirketinizi oluşturun.",
+    "أنشئ شركتك المشترية لحفظ هذا الطلب.",
+    "अनुरोध सहेजने के लिए अपनी खरीदार कंपनी बनाएँ।",
+    "创建采购企业，以在工作区保存此询价。"
+  ],
+  "Legal company name": [
+    "Razón social",
+    "Denominação social",
+    "Rechtlicher Unternehmensname",
+    "Ragione sociale",
+    "Şirketin resmî adı",
+    "الاسم القانوني للشركة",
+    "कंपनी का कानूनी नाम",
+    "企业法定名称"
+  ],
+  "Company country": [
+    "País de la empresa",
+    "País da empresa",
+    "Unternehmensland",
+    "Paese dell'azienda",
+    "Şirket ülkesi",
+    "بلد الشركة",
+    "कंपनी का देश",
+    "企业所在国家"
+  ],
+  "Continue with my account": [
+    "Continuar con mi cuenta",
+    "Continuar com a minha conta",
+    "Mit meinem Konto fortfahren",
+    "Continua con il mio account",
+    "Hesabımla devam et",
+    "المتابعة بحسابي",
+    "अपने खाते से जारी रखें",
+    "使用我的账户继续"
+  ],
+  "Save my private request": [
+    "Guardar mi solicitud privada",
+    "Guardar o meu pedido privado",
+    "Meine private Anfrage speichern",
+    "Salva la mia richiesta privata",
+    "Özel talebimi kaydet",
+    "حفظ طلبي الخاص",
+    "मेरा निजी अनुरोध सहेजें",
+    "保存私人询价"
+  ],
+  "Create company & save": [
+    "Crear empresa y guardar",
+    "Criar empresa e guardar",
+    "Unternehmen erstellen und speichern",
+    "Crea azienda e salva",
+    "Şirket oluştur ve kaydet",
+    "إنشاء الشركة والحفظ",
+    "कंपनी बनाएँ और सहेजें",
+    "创建企业并保存"
+  ],
+  "You will choose recipients and confirm sending in a separate step.": [
+    "Elegirás destinatarios y confirmarás el envío en otro paso.",
+    "Escolherá destinatários e confirmará o envio noutra etapa.",
+    "Sie wählen die Empfänger und bestätigen den Versand in einem separaten Schritt.",
+    "Sceglierai i destinatari e confermerai l'invio in un passaggio separato.",
+    "Alıcıları seçip gönderimi ayrı adımda onaylayacaksınız.",
+    "ستختار المستلمين وتؤكّد الإرسال في خطوة منفصلة.",
+    "अगले अलग चरण में प्राप्तकर्ता चुनकर भेजने की पुष्टि करेंगे।",
+    "您将在后续步骤选择收件人并确认发送。"
+  ],
+  "Product": [
+    "Producto",
+    "Produto",
+    "Produkt",
+    "Prodotto",
+    "Ürün",
+    "المنتج",
+    "उत्पाद",
+    "产品"
+  ],
+  "Volumes": [
+    "Volúmenes",
+    "Volumes",
+    "Mengen",
+    "Volumi",
+    "Miktarlar",
+    "الكميات",
+    "मात्राएँ",
+    "数量"
+  ],
+  "Delivery": [
+    "Entrega",
+    "Entrega",
+    "Lieferung",
+    "Consegna",
+    "Teslimat",
+    "التسليم",
+    "वितरण",
+    "交付"
+  ],
+  "Review": [
+    "Revisión",
+    "Revisão",
+    "Prüfung",
+    "Revisione",
+    "İnceleme",
+    "المراجعة",
+    "समीक्षा",
+    "检查"
+  ],
+  "Project title": [
+    "Título del proyecto",
+    "Título do projeto",
+    "Projekttitel",
+    "Titolo progetto",
+    "Proje başlığı",
+    "عنوان المشروع",
+    "परियोजना शीर्षक",
+    "项目名称"
+  ],
+  "Product, use and specifications": [
+    "Producto, uso y especificaciones",
+    "Produto, uso e especificações",
+    "Produkt, Verwendung und Spezifikationen",
+    "Prodotto, uso e specifiche",
+    "Ürün, kullanım ve özellikler",
+    "المنتج والاستخدام والمواصفات",
+    "उत्पाद, उपयोग और विनिर्देश",
+    "产品、用途与规格"
+  ],
+  "Materials and grades": [
+    "Materiales y calidades",
+    "Materiais e graus",
+    "Materialien und Güten",
+    "Materiali e qualità",
+    "Malzemeler ve kaliteler",
+    "المواد والدرجات",
+    "सामग्री और ग्रेड",
+    "材料与牌号"
+  ],
+  "Manufacturing processes": [
+    "Procesos de fabricación",
+    "Processos de fabrico",
+    "Fertigungsverfahren",
+    "Processi produttivi",
+    "Üretim süreçleri",
+    "عمليات التصنيع",
+    "विनिर्माण प्रक्रियाएँ",
+    "制造工艺"
+  ],
+  "Dimensions, weight and tolerances": [
+    "Dimensiones, peso y tolerancias",
+    "Dimensões, peso e tolerâncias",
+    "Abmessungen, Gewicht und Toleranzen",
+    "Dimensioni, peso e tolleranze",
+    "Boyutlar, ağırlık ve toleranslar",
+    "الأبعاد والوزن والتفاوتات",
+    "आयाम, वज़न और सहनशीलता",
+    "尺寸、重量与公差"
+  ],
+  "Finish, colour and customisation": [
+    "Acabado, color y personalización",
+    "Acabamento, cor e personalização",
+    "Oberfläche, Farbe und Anpassung",
+    "Finitura, colore e personalizzazione",
+    "Yüzey, renk ve özelleştirme",
+    "التشطيب واللون والتخصيص",
+    "फ़िनिश, रंग और अनुकूलन",
+    "表面处理、颜色与定制"
+  ],
+  "Order frequency": [
+    "Frecuencia de pedidos",
+    "Frequência de encomendas",
+    "Bestellhäufigkeit",
+    "Frequenza ordini",
+    "Sipariş sıklığı",
+    "تكرار الطلبات",
+    "ऑर्डर आवृत्ति",
+    "订购频率"
+  ],
+  "Estimated annual volume (including unit)": [
+    "Volumen anual previsto (con unidad)",
+    "Volume anual previsto (com unidade)",
+    "Geschätzte Jahresmenge (mit Einheit)",
+    "Volume annuo stimato (con unità)",
+    "Tahmini yıllık hacim (birim dahil)",
+    "الحجم السنوي المتوقع (مع الوحدة)",
+    "अनुमानित वार्षिक मात्रा (इकाई सहित)",
+    "预计年需求量（含单位）"
+  ],
+  "Prototypes or samples required": [
+    "Prototipos o muestras deseados",
+    "Protótipos ou amostras pretendidos",
+    "Gewünschte Prototypen oder Muster",
+    "Prototipi o campioni richiesti",
+    "İstenen prototip veya numuneler",
+    "النماذج أو العينات المطلوبة",
+    "आवश्यक प्रोटोटाइप या नमूने",
+    "所需原型或样品"
+  ],
+  "Target budget": [
+    "Presupuesto objetivo",
+    "Orçamento alvo",
+    "Zielbudget",
+    "Budget obiettivo",
+    "Hedef bütçe",
+    "الميزانية المستهدفة",
+    "लक्ष्य बजट",
+    "目标预算"
+  ],
+  "Quote response by": [
+    "Respuesta al presupuesto antes del",
+    "Resposta à proposta até",
+    "Angebotsantwort bis",
+    "Risposta al preventivo entro",
+    "Teklif yanıt tarihi",
+    "موعد الردّ على العرض",
+    "प्रस्ताव उत्तर की अंतिम तिथि",
+    "报价回复截止日期"
+  ],
+  "Requested delivery date": [
+    "Fecha de entrega deseada",
+    "Data de entrega pretendida",
+    "Gewünschtes Lieferdatum",
+    "Data di consegna richiesta",
+    "İstenen teslimat tarihi",
+    "تاريخ التسليم المطلوب",
+    "वांछित वितरण तिथि",
+    "期望交付日期"
+  ],
+  "Deadline flexibility / split deliveries": [
+    "Flexibilidad de plazos / entregas parciales",
+    "Flexibilidade de prazos / entregas parciais",
+    "Terminflexibilität / Teillieferungen",
+    "Flessibilità scadenze / consegne parziali",
+    "Tarih esnekliği / kısmi teslimat",
+    "مرونة المواعيد / التسليم الجزئي",
+    "समयसीमा लचीलापन / आंशिक वितरण",
+    "交期灵活性 / 分批交付"
+  ],
+  "Delivery city and postal code": [
+    "Ciudad y código postal de entrega",
+    "Cidade e código postal de entrega",
+    "Lieferort und Postleitzahl",
+    "Città e CAP di consegna",
+    "Teslimat şehri ve posta kodu",
+    "مدينة التسليم والرمز البريدي",
+    "वितरण शहर और डाक कोड",
+    "交付城市与邮编"
+  ],
+  "Transport and delivery terms": [
+    "Transporte y condiciones de entrega",
+    "Transporte e condições de entrega",
+    "Transport und Lieferbedingungen",
+    "Trasporto e condizioni di consegna",
+    "Nakliye ve teslimat koşulları",
+    "النقل وشروط التسليم",
+    "परिवहन और वितरण शर्तें",
+    "运输与交货条款"
+  ],
+  "Packaging and shipment volume": [
+    "Embalaje y volumen de envío",
+    "Embalagem e volume de expedição",
+    "Verpackung und Versandvolumen",
+    "Imballaggio e volume di spedizione",
+    "Ambalaj ve sevkiyat hacmi",
+    "التغليف وحجم الشحنة",
+    "पैकेजिंग और शिपमेंट मात्रा",
+    "包装与运输体积"
+  ],
+  "Standards, certifications and quality checks": [
+    "Normas, certificaciones y controles de calidad",
+    "Normas, certificações e controlos de qualidade",
+    "Normen, Zertifizierungen und Qualitätskontrollen",
+    "Norme, certificazioni e controlli qualità",
+    "Standartlar, sertifikalar ve kalite kontrolleri",
+    "المعايير والشهادات وفحوص الجودة",
+    "मानक, प्रमाणन और गुणवत्ता जाँच",
+    "标准、认证与质量检查"
+  ],
+  "Drawings, files and other information to provide": [
+    "Planos, archivos y otra información a aportar",
+    "Desenhos, ficheiros e outras informações a fornecer",
+    "Zeichnungen, Dateien und weitere Angaben",
+    "Disegni, file e altre informazioni da fornire",
+    "Sağlanacak çizimler, dosyalar ve diğer bilgiler",
+    "الرسومات والملفات والمعلومات المطلوبة",
+    "देने योग्य चित्र, फ़ाइलें और अन्य जानकारी",
+    "需提供的图纸、文件及其他信息"
+  ],
+  "To be confirmed": [
+    "Por confirmar",
+    "A confirmar",
+    "Noch zu bestätigen",
+    "Da confermare",
+    "Teyit edilecek",
+    "سيُؤكّد لاحقًا",
+    "पुष्टि होनी है",
+    "待确认"
+  ],
+  "One-off order": [
+    "Pedido único",
+    "Encomenda pontual",
+    "Einmalige Bestellung",
+    "Ordine singolo",
+    "Tek seferlik sipariş",
+    "طلب لمرة واحدة",
+    "एक बार का ऑर्डर",
+    "一次性订单"
+  ],
+  "Monthly": [
+    "Mensual",
+    "Mensal",
+    "Monatlich",
+    "Mensile",
+    "Aylık",
+    "شهري",
+    "मासिक",
+    "每月"
+  ],
+  "Quarterly": [
+    "Trimestral",
+    "Trimestral",
+    "Vierteljährlich",
+    "Trimestrale",
+    "Üç aylık",
+    "ربع سنوي",
+    "त्रैमासिक",
+    "每季度"
+  ],
+  "Annual": [
+    "Anual",
+    "Anual",
+    "Jährlich",
+    "Annuale",
+    "Yıllık",
+    "سنوي",
+    "वार्षिक",
+    "每年"
+  ],
+  "Private draft — not sent to suppliers.": [
+    "Borrador privado — no enviado a proveedores.",
+    "Rascunho privado — não enviado a fornecedores.",
+    "Privater Entwurf — nicht an Lieferanten gesendet.",
+    "Bozza privata — non inviata ai fornitori.",
+    "Özel taslak — tedarikçilere gönderilmedi.",
+    "مسودة خاصة — لم تُرسل للمورّدين.",
+    "निजी प्रारूप — आपूर्तिकर्ताओं को नहीं भेजा गया।",
+    "私人草稿 — 尚未发送给供应商。"
+  ]
+}

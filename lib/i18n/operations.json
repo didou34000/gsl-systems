@@ -1,0 +1,692 @@
+{
+  "Saved in the platform. Email delivery is not confirmed.": [
+    "Guardado en la plataforma. El envío del correo no está confirmado.",
+    "Guardado na plataforma. A entrega do email não está confirmada.",
+    "Auf der Plattform gespeichert. Die E-Mail-Zustellung ist nicht bestätigt.",
+    "Salvato nella piattaforma. La consegna dell'email non è confermata.",
+    "Platforma kaydedildi. E-posta teslimi doğrulanmadı.",
+    "تم الحفظ في المنصة. لم يُؤكّد تسليم البريد.",
+    "प्लेटफ़ॉर्म में सहेजा गया। ईमेल पहुँचने की पुष्टि नहीं हुई।",
+    "已保存到平台，邮件送达尚未确认。"
+  ],
+  "Finish file scans or remove pending attachments before sending.": [
+    "Completa el análisis de archivos o elimina los adjuntos pendientes antes de enviar.",
+    "Conclua as análises de ficheiros ou remova anexos pendentes antes de enviar.",
+    "Schließen Sie Dateiprüfungen ab oder entfernen Sie ausstehende Anhänge vor dem Senden.",
+    "Completa le scansioni o rimuovi gli allegati in attesa prima di inviare.",
+    "Göndermeden önce dosya taramalarını tamamlayın veya bekleyen ekleri kaldırın.",
+    "أكمل فحص الملفات أو احذف المرفقات المعلّقة قبل الإرسال.",
+    "भेजने से पहले फ़ाइल स्कैन पूरा करें या लंबित संलग्नक हटाएँ।",
+    "发送前请完成文件扫描或移除待处理附件。"
+  ],
+  "This registration is already associated with a company. Ask GSL to review the ownership request. No membership was granted.": [
+    "Este registro ya está asociado a una empresa. Pide a GSL que revise la titularidad. No se ha concedido acceso.",
+    "Este registo já está associado a uma empresa. Peça à GSL para analisar a titularidade. Não foi concedido acesso.",
+    "Diese Registrierung gehört bereits zu einem Unternehmen. Bitten Sie GSL um Prüfung der Inhaberschaft. Es wurde kein Zugang gewährt.",
+    "La registrazione è già associata a un'azienda. Chiedi a GSL di verificarne la titolarità. Nessun accesso è stato concesso.",
+    "Bu kayıt zaten bir şirkete bağlı. Sahiplik talebini GSL'ye inceletin. Üyelik verilmedi.",
+    "هذا التسجيل مرتبط بشركة بالفعل. اطلب من GSL مراجعة الملكية. لم تُمنح عضوية.",
+    "यह पंजीकरण पहले से कंपनी से जुड़ा है। स्वामित्व की समीक्षा के लिए GSL से कहें। सदस्यता नहीं दी गई।",
+    "该注册信息已关联企业。请联系 GSL 审核归属，尚未授予成员权限。"
+  ],
+  "Your role does not allow this action. Ask a company administrator.": [
+    "Tu rol no permite esta acción. Contacta al administrador de la empresa.",
+    "A sua função não permite esta ação. Contacte o administrador da empresa.",
+    "Ihre Rolle erlaubt diese Aktion nicht. Fragen Sie einen Unternehmensadministrator.",
+    "Il tuo ruolo non consente questa azione. Contatta l'amministratore aziendale.",
+    "Rolünüz bu işleme izin vermiyor. Şirket yöneticisine danışın.",
+    "دورك لا يسمح بهذا الإجراء. تواصل مع مسؤول الشركة.",
+    "आपकी भूमिका इस कार्रवाई की अनुमति नहीं देती। कंपनी व्यवस्थापक से पूछें।",
+    "您的角色无权执行此操作，请联系企业管理员。"
+  ],
+  "Complete the request title, specifications and each item before sending.": [
+    "Completa el título, las especificaciones y cada artículo antes de enviar.",
+    "Preencha o título, as especificações e cada artigo antes de enviar.",
+    "Vervollständigen Sie Titel, Spezifikationen und jede Position vor dem Senden.",
+    "Completa titolo, specifiche e ogni articolo prima dell'invio.",
+    "Göndermeden önce başlığı, özellikleri ve her kalemi tamamlayın.",
+    "أكمل عنوان الطلب والمواصفات وكل بند قبل الإرسال.",
+    "भेजने से पहले अनुरोध का शीर्षक, विवरण और हर मद भरें।",
+    "发送前请完善询价标题、规格和每个项目。"
+  ],
+  "A selected supplier or product is no longer published. Review your recipients.": [
+    "Un proveedor o producto seleccionado ya no está publicado. Revisa los destinatarios.",
+    "Um fornecedor ou produto selecionado já não está publicado. Reveja os destinatários.",
+    "Ein gewählter Lieferant oder ein Produkt ist nicht mehr veröffentlicht. Prüfen Sie die Empfänger.",
+    "Un fornitore o prodotto selezionato non è più pubblicato. Verifica i destinatari.",
+    "Seçilen tedarikçi veya ürün yayında değil. Alıcıları kontrol edin.",
+    "لم يعد أحد المورّدين أو المنتجات المحدّدة منشورًا. راجع المستلمين.",
+    "चुना आपूर्तिकर्ता या उत्पाद अब प्रकाशित नहीं है। प्राप्तकर्ताओं की समीक्षा करें।",
+    "所选供应商或产品已下架，请检查收件人。"
+  ],
+  "Check the quote amounts, validity and latest version.": [
+    "Comprueba los importes, la validez y la versión más reciente del presupuesto.",
+    "Verifique os montantes, a validade e a versão mais recente da proposta.",
+    "Prüfen Sie Angebotsbeträge, Gültigkeit und neueste Version.",
+    "Controlla importi, validità e ultima versione del preventivo.",
+    "Teklif tutarlarını, geçerliliğini ve son sürümünü kontrol edin.",
+    "تحقّق من مبالغ العرض وصلاحيته وأحدث نسخة.",
+    "प्रस्ताव की राशि, वैधता और नवीनतम संस्करण जाँचें।",
+    "请检查报价金额、有效期和最新版本。"
+  ],
+  "This person already belongs to the company.": [
+    "Esta persona ya pertenece a la empresa.",
+    "Esta pessoa já pertence à empresa.",
+    "Diese Person gehört bereits zum Unternehmen.",
+    "Questa persona fa già parte dell'azienda.",
+    "Bu kişi zaten şirketin üyesi.",
+    "هذا الشخص عضو في الشركة بالفعل.",
+    "यह व्यक्ति पहले से कंपनी का सदस्य है।",
+    "此人已是企业成员。"
+  ],
+  "Too many attempts. Wait before retrying.": [
+    "Demasiados intentos. Espera antes de reintentar.",
+    "Demasiadas tentativas. Aguarde antes de tentar novamente.",
+    "Zu viele Versuche. Warten Sie vor dem nächsten Versuch.",
+    "Troppi tentativi. Attendi prima di riprovare.",
+    "Çok fazla deneme. Tekrar denemeden önce bekleyin.",
+    "محاولات كثيرة. انتظر قبل إعادة المحاولة.",
+    "बहुत अधिक प्रयास। दोबारा कोशिश करने से पहले रुकें।",
+    "尝试过多，请稍候再试。"
+  ],
+  "This application is assigned to another reviewer.": [
+    "Esta solicitud está asignada a otro revisor.",
+    "Este pedido está atribuído a outro revisor.",
+    "Dieser Antrag ist einem anderen Prüfer zugewiesen.",
+    "Questa domanda è assegnata a un altro revisore.",
+    "Bu başvuru başka incelemeciye atanmış.",
+    "هذا الطلب مسند إلى مراجع آخر.",
+    "यह आवेदन दूसरे समीक्षक को सौंपा गया है।",
+    "此申请已分配给其他审核员。"
+  ],
+  "Sign in to access your private workspace.": [
+    "Inicia sesión para acceder a tu espacio privado.",
+    "Inicie sessão para aceder ao espaço privado.",
+    "Melden Sie sich für Ihren privaten Arbeitsbereich an.",
+    "Accedi al tuo spazio privato.",
+    "Özel çalışma alanınız için giriş yapın.",
+    "سجّل الدخول للوصول إلى مساحة عملك الخاصة.",
+    "निजी कार्यक्षेत्र में प्रवेश करने के लिए साइन इन करें।",
+    "请登录以访问私人工作区。"
+  ],
+  "This area requires reviewer authorisation and a verified second factor in your account.": [
+    "Esta área requiere autorización de revisor y un segundo factor verificado.",
+    "Esta área exige autorização de revisor e segundo fator verificado.",
+    "Dieser Bereich erfordert Prüferberechtigung und einen bestätigten zweiten Faktor.",
+    "Quest'area richiede autorizzazione di revisore e un secondo fattore verificato.",
+    "Bu alan incelemeci yetkisi ve doğrulanmış ikinci faktör gerektirir.",
+    "يتطلّب هذا القسم صلاحية مراجع وعامل مصادقة ثانٍ موثّق.",
+    "इस क्षेत्र के लिए समीक्षक अनुमति और सत्यापित दूसरा कारक चाहिए।",
+    "此区域需审核员权限及已验证的第二因素。"
+  ],
+  "This record has changed. Refresh before continuing.": [
+    "Este registro ha cambiado. Actualiza antes de continuar.",
+    "Este registo mudou. Atualize antes de continuar.",
+    "Dieser Datensatz wurde geändert. Aktualisieren Sie vor dem Fortfahren.",
+    "Questo record è cambiato. Aggiorna prima di continuare.",
+    "Bu kayıt değişti. Devam etmeden önce yenileyin.",
+    "تغيّر هذا السجل. حدّث الصفحة قبل المتابعة.",
+    "यह रिकॉर्ड बदल गया है। जारी रखने से पहले रीफ़्रेश करें।",
+    "此记录已更改，请刷新后继续。"
+  ],
+  "This operation is unavailable. No success has been confirmed. Please retry.": [
+    "Esta operación no está disponible. No se ha confirmado el éxito. Reinténtalo.",
+    "Operação indisponível. O sucesso não foi confirmado. Tente novamente.",
+    "Dieser Vorgang ist nicht verfügbar. Es wurde kein Erfolg bestätigt. Versuchen Sie es erneut.",
+    "Operazione non disponibile. L'esito positivo non è confermato. Riprova.",
+    "İşlem kullanılamıyor. Başarı doğrulanmadı. Tekrar deneyin.",
+    "العملية غير متاحة. لم يُؤكّد نجاحها. أعد المحاولة.",
+    "कार्रवाई उपलब्ध नहीं है। सफलता की पुष्टि नहीं हुई। फिर कोशिश करें।",
+    "此操作暂不可用，尚未确认成功。请重试。"
+  ],
+  "Supplier review": [
+    "Revisión de proveedores",
+    "Revisão de fornecedores",
+    "Lieferantenprüfung",
+    "Revisione fornitori",
+    "Tedarikçi incelemesi",
+    "مراجعة المورّدين",
+    "आपूर्तिकर्ता समीक्षा",
+    "供应商审核"
+  ],
+  "Requests and conversations": [
+    "Solicitudes y conversaciones",
+    "Pedidos e conversas",
+    "Anfragen und Gespräche",
+    "Richieste e conversazioni",
+    "Talepler ve konuşmalar",
+    "الطلبات والمحادثات",
+    "अनुरोध और बातचीत",
+    "询价与对话"
+  ],
+  "Verify my account security": [
+    "Verificar seguridad de mi cuenta",
+    "Verificar segurança da conta",
+    "Meine Kontosicherheit bestätigen",
+    "Verifica sicurezza account",
+    "Hesap güvenliğimi doğrula",
+    "التحقّق من أمان حسابي",
+    "खाते की सुरक्षा सत्यापित करें",
+    "验证账户安全"
+  ],
+  "My supplier profile": [
+    "Mi perfil de proveedor",
+    "O meu perfil de fornecedor",
+    "Mein Lieferantenprofil",
+    "Il mio profilo fornitore",
+    "Tedarikçi profilim",
+    "ملفّي كمورّد",
+    "मेरी आपूर्तिकर्ता प्रोफ़ाइल",
+    "我的供应商资料"
+  ],
+  "Active company": [
+    "Empresa activa",
+    "Empresa ativa",
+    "Aktives Unternehmen",
+    "Azienda attiva",
+    "Aktif şirket",
+    "الشركة النشطة",
+    "सक्रिय कंपनी",
+    "当前企业"
+  ],
+  "Switch company? Make sure your current draft is saved first.": [
+    "¿Cambiar de empresa? Guarda antes tu borrador actual.",
+    "Mudar de empresa? Guarde primeiro o rascunho atual.",
+    "Unternehmen wechseln? Speichern Sie zuerst Ihren aktuellen Entwurf.",
+    "Cambiare azienda? Salva prima la bozza attuale.",
+    "Şirket değiştirilsin mi? Önce mevcut taslağı kaydedin.",
+    "هل تريد تبديل الشركة؟ احفظ المسودة الحالية أولًا.",
+    "कंपनी बदलें? पहले वर्तमान प्रारूप सहेज लें।",
+    "切换企业？请先保存当前草稿。"
+  ],
+  "Choose a company": [
+    "Elegir empresa",
+    "Escolher empresa",
+    "Unternehmen auswählen",
+    "Scegli azienda",
+    "Şirket seç",
+    "اختر شركة",
+    "कंपनी चुनें",
+    "选择企业"
+  ],
+  "Your purchasing company": [
+    "Tu empresa compradora",
+    "A sua empresa compradora",
+    "Ihr einkaufendes Unternehmen",
+    "La tua azienda acquirente",
+    "Satın alan şirketiniz",
+    "شركتك المشترية",
+    "आपकी खरीदार कंपनी",
+    "您的采购企业"
+  ],
+  "Registration country (ISO code)": [
+    "País de registro (código ISO)",
+    "País de registo (código ISO)",
+    "Registrierungsland (ISO-Code)",
+    "Paese di registrazione (codice ISO)",
+    "Kayıt ülkesi (ISO kodu)",
+    "بلد التسجيل (رمز ISO)",
+    "पंजीकरण देश (ISO कोड)",
+    "注册国家（ISO代码）"
+  ],
+  "Create company": [
+    "Crear empresa",
+    "Criar empresa",
+    "Unternehmen erstellen",
+    "Crea azienda",
+    "Şirket oluştur",
+    "إنشاء شركة",
+    "कंपनी बनाएँ",
+    "创建企业"
+  ],
+  "Use this company to purchase": [
+    "Usar esta empresa para comprar",
+    "Usar esta empresa para comprar",
+    "Mit diesem Unternehmen einkaufen",
+    "Acquista con questa azienda",
+    "Bu şirketle satın al",
+    "استخدام هذه الشركة للشراء",
+    "इस कंपनी से खरीदें",
+    "使用此企业采购"
+  ],
+  "Private draft": [
+    "Borrador privado",
+    "Rascunho privado",
+    "Privater Entwurf",
+    "Bozza privata",
+    "Özel taslak",
+    "مسودة خاصة",
+    "निजी प्रारूप",
+    "私人草稿"
+  ],
+  "Quote selected — no payment made": [
+    "Oferta seleccionada — sin pago",
+    "Proposta selecionada — sem pagamento",
+    "Angebot ausgewählt — keine Zahlung erfolgt",
+    "Preventivo selezionato — nessun pagamento",
+    "Teklif seçildi — ödeme yapılmadı",
+    "تم اختيار العرض — لم يتم الدفع",
+    "प्रस्ताव चुना गया — भुगतान नहीं हुआ",
+    "已选报价 — 未付款"
+  ],
+  "Transmitted in the platform": [
+    "Transmitido en la plataforma",
+    "Transmitido na plataforma",
+    "In der Plattform übermittelt",
+    "Trasmesso nella piattaforma",
+    "Platformda iletildi",
+    "تم الإرسال في المنصة",
+    "प्लेटफ़ॉर्म में भेजा गया",
+    "已在平台内发送"
+  ],
+  "Edit draft": [
+    "Editar borrador",
+    "Editar rascunho",
+    "Entwurf bearbeiten",
+    "Modifica bozza",
+    "Taslağı düzenle",
+    "تعديل المسودة",
+    "प्रारूप संपादित करें",
+    "编辑草稿"
+  ],
+  "Choose recipients": [
+    "Elegir destinatarios",
+    "Escolher destinatários",
+    "Empfänger auswählen",
+    "Scegli destinatari",
+    "Alıcı seç",
+    "اختيار المستلمين",
+    "प्राप्तकर्ता चुनें",
+    "选择收件人"
+  ],
+  "Supplier conversation": [
+    "Conversación con proveedor",
+    "Conversa com fornecedor",
+    "Lieferantengespräch",
+    "Conversazione fornitore",
+    "Tedarikçi görüşmesi",
+    "محادثة المورّد",
+    "आपूर्तिकर्ता बातचीत",
+    "供应商对话"
+  ],
+  "Message": [
+    "Mensaje",
+    "Mensagem",
+    "Nachricht",
+    "Messaggio",
+    "Mesaj",
+    "رسالة",
+    "संदेश",
+    "消息"
+  ],
+  "Send message": [
+    "Enviar mensaje",
+    "Enviar mensagem",
+    "Nachricht senden",
+    "Invia messaggio",
+    "Mesaj gönder",
+    "إرسال رسالة",
+    "संदेश भेजें",
+    "发送消息"
+  ],
+  "Supplier": [
+    "Proveedor",
+    "Fornecedor",
+    "Lieferant",
+    "Fornitore",
+    "Tedarikçi",
+    "المورّد",
+    "आपूर्तिकर्ता",
+    "供应商"
+  ],
+  "Cancel this request": [
+    "Cancelar solicitud",
+    "Cancelar pedido",
+    "Anfrage stornieren",
+    "Annulla richiesta",
+    "Talebi iptal et",
+    "إلغاء هذا الطلب",
+    "अनुरोध रद्द करें",
+    "取消此询价"
+  ],
+  "The history remains available. Recipients may already have read the request.": [
+    "El historial seguirá disponible. Los destinatarios pueden haber leído ya la solicitud.",
+    "O histórico permanece disponível. Os destinatários podem já ter lido o pedido.",
+    "Der Verlauf bleibt verfügbar. Empfänger haben die Anfrage möglicherweise bereits gelesen.",
+    "La cronologia resta disponibile. I destinatari potrebbero aver già letto la richiesta.",
+    "Geçmiş korunur. Alıcılar talebi zaten okumuş olabilir.",
+    "يبقى السجل متاحًا. قد يكون المستلمون قرؤوا الطلب بالفعل.",
+    "इतिहास उपलब्ध रहेगा। प्राप्तकर्ता अनुरोध पहले पढ़ चुके हो सकते हैं।",
+    "历史记录仍可查看。收件人可能已阅读此询价。"
+  ],
+  "Confirm cancellation": [
+    "Confirmar cancelación",
+    "Confirmar cancelamento",
+    "Stornierung bestätigen",
+    "Conferma annullamento",
+    "İptali onayla",
+    "تأكيد الإلغاء",
+    "रद्द करने की पुष्टि करें",
+    "确认取消"
+  ],
+  "Request pages": [
+    "Páginas de solicitudes",
+    "Páginas de pedidos",
+    "Anfrageseiten",
+    "Pagine richieste",
+    "Talep sayfaları",
+    "صفحات الطلبات",
+    "अनुरोध पृष्ठ",
+    "询价页面"
+  ],
+  "requests": [
+    "solicitudes",
+    "pedidos",
+    "Anfragen",
+    "richieste",
+    "talep",
+    "طلبات",
+    "अनुरोध",
+    "条询价"
+  ],
+  "Page": [
+    "Página",
+    "Página",
+    "Seite",
+    "Pagina",
+    "Sayfa",
+    "صفحة",
+    "पृष्ठ",
+    "页"
+  ],
+  "Previous requests": [
+    "Solicitudes anteriores",
+    "Pedidos anteriores",
+    "Vorherige Anfragen",
+    "Richieste precedenti",
+    "Önceki talepler",
+    "الطلبات السابقة",
+    "पिछले अनुरोध",
+    "上一页询价"
+  ],
+  "Older requests": [
+    "Solicitudes más antiguas",
+    "Pedidos mais antigos",
+    "Ältere Anfragen",
+    "Richieste meno recenti",
+    "Daha eski talepler",
+    "الطلبات الأقدم",
+    "पुराने अनुरोध",
+    "更早询价"
+  ],
+  "Review before sending": [
+    "Revisar antes de enviar",
+    "Rever antes de enviar",
+    "Vor dem Senden prüfen",
+    "Rivedi prima dell'invio",
+    "Göndermeden önce incele",
+    "المراجعة قبل الإرسال",
+    "भेजने से पहले समीक्षा करें",
+    "发送前确认"
+  ],
+  "Only the manufacturers you select below will receive this request. File-specific restrictions remain in effect.": [
+    "Solo recibirán esta solicitud los fabricantes seleccionados. Se mantienen las restricciones de cada archivo.",
+    "Apenas os fabricantes selecionados receberão este pedido. Mantêm-se as restrições por ficheiro.",
+    "Nur die unten gewählten Hersteller erhalten diese Anfrage. Dateispezifische Einschränkungen bleiben bestehen.",
+    "Solo i produttori selezionati riceveranno la richiesta. Restano valide le restrizioni dei singoli file.",
+    "Yalnızca seçtiğiniz üreticiler bu talebi alır. Dosyaya özel kısıtlamalar geçerlidir.",
+    "سيستلم الطلب فقط المصنّعون المحدّدون أدناه. تبقى قيود الملفات سارية.",
+    "केवल नीचे चुने निर्माता यह अनुरोध पाएँगे। फ़ाइल संबंधी प्रतिबंध लागू रहेंगे।",
+    "仅下方所选制造商会收到此询价。文件专属限制仍然有效。"
+  ],
+  "Confirm and send": [
+    "Confirmar y enviar",
+    "Confirmar e enviar",
+    "Bestätigen und senden",
+    "Conferma e invia",
+    "Onayla ve gönder",
+    "تأكيد وإرسال",
+    "पुष्टि करें और भेजें",
+    "确认并发送"
+  ],
+  "Cancel": [
+    "Cancelar",
+    "Cancelar",
+    "Abbrechen",
+    "Annulla",
+    "İptal",
+    "إلغاء",
+    "रद्द करें",
+    "取消"
+  ],
+  "Operations": [
+    "Operaciones",
+    "Operações",
+    "Vorgänge",
+    "Operazioni",
+    "İşlemler",
+    "العمليات",
+    "संचालन",
+    "运营"
+  ],
+  "Operations data is unavailable or access is denied.": [
+    "Los datos no están disponibles o el acceso está denegado.",
+    "Dados indisponíveis ou acesso negado.",
+    "Betriebsdaten nicht verfügbar oder Zugriff verweigert.",
+    "Dati non disponibili o accesso negato.",
+    "İşlem verileri kullanılamıyor veya erişim reddedildi.",
+    "بيانات العمليات غير متاحة أو الوصول مرفوض.",
+    "संचालन डेटा उपलब्ध नहीं है या पहुँच अस्वीकृत है।",
+    "运营数据不可用或无访问权限。"
+  ],
+  "applications awaiting review": [
+    "solicitudes pendientes de revisión",
+    "pedidos a aguardar revisão",
+    "Anträge warten auf Prüfung",
+    "domande in attesa di revisione",
+    "inceleme bekleyen başvuru",
+    "طلبات بانتظار المراجعة",
+    "समीक्षा की प्रतीक्षा में आवेदन",
+    "份申请待审核"
+  ],
+  "queued emails": [
+    "correos en cola",
+    "emails em fila",
+    "E-Mails in Warteschlange",
+    "email in coda",
+    "kuyruktaki e-posta",
+    "رسائل بريد في الانتظار",
+    "कतार में ईमेल",
+    "封邮件排队中"
+  ],
+  "Oldest queued email": [
+    "Correo más antiguo en cola",
+    "Email mais antigo em fila",
+    "Älteste E-Mail in Warteschlange",
+    "Email più vecchia in coda",
+    "Kuyruktaki en eski e-posta",
+    "أقدم بريد في الانتظار",
+    "कतार में सबसे पुराना ईमेल",
+    "最早排队邮件"
+  ],
+  "Recorded activity, all time": [
+    "Actividad registrada, todo el periodo",
+    "Atividade registada, todo o período",
+    "Erfasste Aktivität, gesamter Zeitraum",
+    "Attività registrata, intero periodo",
+    "Tüm zamanların kayıtlı etkinliği",
+    "النشاط المسجّل طوال الوقت",
+    "अब तक दर्ज गतिविधि",
+    "全部已记录活动"
+  ],
+  "Requests transmitted": [
+    "Solicitudes transmitidas",
+    "Pedidos transmitidos",
+    "Übermittelte Anfragen",
+    "Richieste trasmesse",
+    "İletilen talepler",
+    "الطلبات المرسلة",
+    "भेजे गए अनुरोध",
+    "已发送询价"
+  ],
+  "Company recipients across requests": [
+    "Empresas destinatarias de solicitudes",
+    "Empresas destinatárias dos pedidos",
+    "Unternehmensempfänger aller Anfragen",
+    "Aziende destinatarie delle richieste",
+    "Taleplerdeki şirket alıcıları",
+    "الشركات المستلمة عبر الطلبات",
+    "अनुरोधों में कंपनी प्राप्तकर्ता",
+    "询价中的企业收件人"
+  ],
+  "Conversations with a supplier response": [
+    "Conversaciones con respuesta del proveedor",
+    "Conversas com resposta do fornecedor",
+    "Gespräche mit Lieferantenantwort",
+    "Conversazioni con risposta del fornitore",
+    "Tedarikçi yanıtlı konuşmalar",
+    "محادثات بردّ من المورّد",
+    "आपूर्तिकर्ता के उत्तर वाली बातचीत",
+    "供应商已回复的对话"
+  ],
+  "Conversations with at least one quote": [
+    "Conversaciones con al menos una oferta",
+    "Conversas com pelo menos uma proposta",
+    "Gespräche mit mindestens einem Angebot",
+    "Conversazioni con almeno un preventivo",
+    "En az bir teklifli konuşmalar",
+    "محادثات بعرض سعر واحد على الأقل",
+    "कम से कम एक प्रस्ताव वाली बातचीत",
+    "至少有一份报价的对话"
+  ],
+  "Quotes selected, not payments": [
+    "Ofertas seleccionadas, no pagos",
+    "Propostas selecionadas, não pagamentos",
+    "Ausgewählte Angebote, keine Zahlungen",
+    "Preventivi selezionati, non pagamenti",
+    "Seçilen teklifler, ödemeler değil",
+    "عروض مختارة، وليست مدفوعات",
+    "चुने प्रस्ताव, भुगतान नहीं",
+    "已选报价，非付款"
+  ],
+  "Median time to first supplier message": [
+    "Mediana hasta el primer mensaje del proveedor",
+    "Mediana até à primeira mensagem do fornecedor",
+    "Median bis zur ersten Lieferantennachricht",
+    "Tempo mediano al primo messaggio del fornitore",
+    "İlk tedarikçi mesajına kadar medyan süre",
+    "المدة الوسيطة حتى أول رسالة من المورّد",
+    "पहले आपूर्तिकर्ता संदेश तक का मध्य समय",
+    "供应商首次回复时间中位数"
+  ],
+  "No responses recorded": [
+    "Sin respuestas registradas",
+    "Sem respostas registadas",
+    "Keine Antworten erfasst",
+    "Nessuna risposta registrata",
+    "Kayıtlı yanıt yok",
+    "لا توجد ردود مسجّلة",
+    "कोई उत्तर दर्ज नहीं",
+    "暂无回复记录"
+  ],
+  "Visits and qualified leads are not measured here. A response or selected quote is not proof of an order or revenue.": [
+    "Aquí no se miden visitas ni contactos cualificados. Una respuesta u oferta elegida no acredita pedidos ni ingresos.",
+    "Visitas e contactos qualificados não são medidos aqui. Uma resposta ou proposta selecionada não comprova encomendas ou receita.",
+    "Besuche und qualifizierte Kontakte werden hier nicht gemessen. Eine Antwort oder Angebotsauswahl belegt keinen Auftrag oder Umsatz.",
+    "Visite e contatti qualificati non sono misurati qui. Una risposta o un preventivo selezionato non provano un ordine o ricavi.",
+    "Ziyaretler ve nitelikli potansiyel müşteriler burada ölçülmez. Yanıt veya seçilen teklif sipariş ya da gelir kanıtı değildir.",
+    "لا تُقاس الزيارات أو العملاء المحتملون المؤهّلون هنا. الردّ أو اختيار العرض لا يثبت طلبًا أو إيرادًا.",
+    "यहाँ विज़िट और योग्य संभावित ग्राहक नहीं मापे जाते। उत्तर या चुना प्रस्ताव आदेश या राजस्व का प्रमाण नहीं है।",
+    "此处不统计访问量及合格线索。回复或选定报价不代表订单或收入。"
+  ],
+  "Contact enquiries": [
+    "Consultas de contacto",
+    "Pedidos de contacto",
+    "Kontaktanfragen",
+    "Richieste di contatto",
+    "İletişim talepleri",
+    "استفسارات التواصل",
+    "संपर्क पूछताछ",
+    "联系咨询"
+  ],
+  "No unresolved enquiries.": [
+    "No hay consultas pendientes.",
+    "Sem pedidos pendentes.",
+    "Keine offenen Anfragen.",
+    "Nessuna richiesta irrisolta.",
+    "Çözülmemiş talep yok.",
+    "لا توجد استفسارات غير معالجة.",
+    "कोई अनसुलझी पूछताछ नहीं।",
+    "没有待处理咨询。"
+  ],
+  "Mark handled (does not send an email)": [
+    "Marcar gestionado (no envía correo)",
+    "Marcar tratado (não envia email)",
+    "Als bearbeitet markieren (sendet keine E-Mail)",
+    "Segna gestito (non invia email)",
+    "İşlendi olarak işaretle (e-posta göndermez)",
+    "وضع علامة تمت المعالجة (لا يرسل بريدًا)",
+    "निपटाया चिह्नित करें (ईमेल नहीं भेजता)",
+    "标记已处理（不发送邮件）"
+  ],
+  "Data requests": [
+    "Solicitudes de datos",
+    "Pedidos de dados",
+    "Datenanfragen",
+    "Richieste sui dati",
+    "Veri talepleri",
+    "طلبات البيانات",
+    "डेटा अनुरोध",
+    "数据请求"
+  ],
+  "Account deletion to assess": [
+    "Eliminación de cuenta por evaluar",
+    "Eliminação de conta a avaliar",
+    "Kontolöschung zu prüfen",
+    "Cancellazione account da valutare",
+    "Değerlendirilecek hesap silme",
+    "حذف حساب يحتاج لتقييم",
+    "खाता हटाने का मूल्यांकन लंबित",
+    "待评估账户删除"
+  ],
+  "Check identity, shared records and retention requirements before any deletion.": [
+    "Verifica identidad, registros compartidos y requisitos de conservación antes de eliminar.",
+    "Verifique identidade, registos partilhados e requisitos de conservação antes de eliminar.",
+    "Prüfen Sie vor jeder Löschung Identität, gemeinsame Daten und Aufbewahrungspflichten.",
+    "Verifica identità, dati condivisi e obblighi di conservazione prima di eliminare.",
+    "Silmeden önce kimlik, ortak kayıtlar ve saklama şartlarını kontrol edin.",
+    "تحقّق من الهوية والسجلات المشتركة ومتطلبات الاحتفاظ قبل الحذف.",
+    "हटाने से पहले पहचान, साझा रिकॉर्ड और संरक्षण आवश्यकताएँ जाँचें।",
+    "删除前请检查身份、共享记录和保留要求。"
+  ],
+  "Email failures": [
+    "Fallos de correo",
+    "Falhas de email",
+    "E-Mail-Fehler",
+    "Errori email",
+    "E-posta hataları",
+    "أخطاء البريد",
+    "ईमेल विफलताएँ",
+    "邮件失败"
+  ],
+  "Provider acceptance does not prove receipt. An interrupted delivery needs investigation before retrying to avoid duplicates.": [
+    "La aceptación del proveedor no acredita la recepción. Investiga los envíos interrumpidos antes de reintentar para evitar duplicados.",
+    "A aceitação do fornecedor não prova receção. Investigue entregas interrompidas antes de repetir para evitar duplicados.",
+    "Annahme durch den Anbieter belegt keinen Empfang. Unterbrochene Zustellungen müssen vor erneutem Versand geprüft werden, um Duplikate zu vermeiden.",
+    "L'accettazione del servizio non prova la ricezione. Verifica le consegne interrotte prima di riprovare per evitare duplicati.",
+    "Sağlayıcı kabulü alındığını kanıtlamaz. Yinelenmeyi önlemek için kesilen teslimi yeniden denemeden önce inceleyin.",
+    "قبول المزوّد لا يثبت الاستلام. افحص الإرسال المنقطع قبل إعادة المحاولة لتجنّب التكرار.",
+    "प्रदाता की स्वीकृति प्राप्ति का प्रमाण नहीं है। दोहराव से बचने के लिए बाधित वितरण को दोबारा भेजने से पहले जाँचें।",
+    "服务商接收不代表邮件送达。重试前需调查中断的投递，以免重复发送。"
+  ],
+  "attempts": [
+    "intentos",
+    "tentativas",
+    "Versuche",
+    "tentativi",
+    "deneme",
+    "محاولات",
+    "प्रयास",
+    "次尝试"
+  ]
+}
