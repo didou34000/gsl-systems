@@ -3,6 +3,7 @@ import {randomUUID} from 'node:crypto';
 export async function testWorkflows(db){
  const [buyer,other,supplier,reviewer]=Array.from({length:4},()=>randomUUID());
  for(const [i,id] of [buyer,other,supplier,reviewer].entries())await db.query('insert into auth.users(id,email) values($1,$2)',[id,`synthetic-${i}@example.invalid`]);
+ await db.query('update auth.users set email_confirmed_at=now() where id=$1',[reviewer]);
  await db.query('insert into private.platform_reviewers(user_id) values($1)',[reviewer]);
  async function as(id){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[id]);await db.exec('set role authenticated')}
  async function command(action,args,key=randomUUID()){return (await db.query('select public.workflow($1,$2,$3) result',[action,JSON.stringify(args),key])).rows[0].result}

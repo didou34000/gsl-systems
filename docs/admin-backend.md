@@ -8,6 +8,8 @@ Administration is an explicit UUID grant in `private.platform_admins`, separate 
 
 The migrations create no administrators or owners. Existing grants become `admin`, which cannot manage access. Bootstrapping the first owner requires an independently authorized, controlled database operation binding the exact existing, confirmed, active `auth.users.id`. If the requested account does not exist or is not confirmed, registration/confirmation must happen first. Do not substitute a similar email, create a password on the user's behalf, or automatically grant a future account based on its email. The initial owner grant is an operational prerequisite; the application never promotes itself.
 
+The controlled operation is `supabase/operations/grant-platform-owner.sql`, kept outside the migration history. Its caller supplies the exact UUID, matching email and reason in transaction-local settings, then executes it in the same transaction. It grants `owner` plus the independent reviewer capability, records the server operation distinctly from a signed-in user, and is idempotent. The [activation runbook](admin-owner-activation.md) documents the pending production activation. Reviewer authorization now also checks live account confirmation, suspension and soft deletion, including previously issued AAL2 tokens.
+
 The four fixed permission sets are defined in SQL and mirrored by `lib/admin/permissions.ts` for display:
 
 | Permission | Analyst | Operator | Admin | Owner |

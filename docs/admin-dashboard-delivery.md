@@ -38,7 +38,9 @@ Les tests SQL utilisent PGlite isolé. Les essais visuels passent par des fixtur
 
 ## Activation restante
 
-Les trois nouvelles migrations ne sont pas appliquées à la production et aucun rôle n’a été attribué pendant cette tâche. L’adresse demandée ne correspond pas à un compte existant ; l’utilisateur doit confirmer l’identité exacte avant attribution. Après cette confirmation : appliquer les migrations dans l’environnement prévu, attribuer explicitement le rôle propriétaire au UUID confirmé, déployer le code puis vérifier une connexion réelle AAL2 et les sauvegardes hébergées. Aucune migration ne crée automatiquement un propriétaire.
+Le 7 octobre, l’utilisateur a confirmé `dorian.vuattoux@gmail.com` comme compte à habiliter au niveau maximal. La lecture ciblée de la production a confirmé que ce compte existe, que son email est confirmé, qu’il est actif et qu’il n’a pas encore de facteur MFA vérifié ni d’habilitation reviewer. Aucun rôle réel n’a encore été attribué.
+
+Les tables d’administration sont absentes de la production. La validation automatique a refusé la première migration, en demandant un accord explicite pour les changements de schéma et de droits en production. La procédure exacte, prête à exécuter après cet accord, est décrite dans [admin-owner-activation.md](admin-owner-activation.md). Elle applique les quatre migrations nécessaires puis attribue `owner` et reviewer au compte existant, avec audit. Aucune migration ne promeut automatiquement une adresse email. La connexion réelle AAL2, le déploiement du code et les sauvegardes hébergées restent à vérifier séparément.
 
 La portée linguistique et les exceptions des anciens contenus et emails sont décrites dans [localization.md](localization.md). Les droits, limites de collections et commandes sont détaillés dans [admin-backend.md](admin-backend.md).
 

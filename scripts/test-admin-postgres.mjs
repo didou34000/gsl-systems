@@ -129,6 +129,7 @@ try {
   await assert.rejects(snapshot(), /ADMIN_REQUIRED/, 'revocation is checked against database, not cached JWT metadata');
   console.log('Admin PostgreSQL checks passed: real counts, public-field whitelist, role/MFA/confirmation gates, direct-table denial, task isolation, CRUD, reorder, preferences, contact reopen, validation, rollback, stale revisions and revocation.');
   await (await import('./test-admin-roles.mjs')).testAdminRoles(db);
+  await (await import('./test-admin-owner-operation.mjs')).testAdminOwnerOperation(db);
 } finally {
   await db.close();
 }
