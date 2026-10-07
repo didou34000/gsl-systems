@@ -2,7 +2,7 @@
 
 ## Habilitation
 
-Un opérateur doit confirmer l'identité du responsable, l'UUID de son compte Supabase confirmé et son périmètre. Un administrateur autorisé inscrit ce compte dans `private.platform_reviewers` via un accès serveur contrôlé. Ne jamais utiliser une métadonnée utilisateur, un domaine email ou un nom comme autorisation. Aucun reviewer n'a été créé dans la production pendant cette reprise.
+Un opérateur doit confirmer l'identité du responsable, l'UUID de son compte Supabase confirmé et son périmètre. Un administrateur autorisé inscrit ce compte dans `private.platform_reviewers` via un accès serveur contrôlé. Ne jamais utiliser une métadonnée utilisateur, un domaine email ou un nom comme autorisation. Les deux comptes explicitement autorisés ont été habilités en production le 7 octobre 2026 ; l’attribution et ses vérifications sont consignées dans [admin-owner-activation.md](admin-owner-activation.md).
 
 Le code exige un JWT `aal2` dans `private.is_reviewer()` : une simple session `aal1` est refusée, même avec l'habilitation privée. La migration `reviewer_active_account` ajoute le contrôle en direct du compte confirmé, non suspendu et non supprimé, y compris avec un ancien jeton. L'écran Compte permet l'enrôlement et la vérification TOTP via Supabase. Les refus sont testés en PostgreSQL local ; l'enrôlement réel et le renouvellement des cookies AAL2 restent à valider sur Supabase hébergé. En perte du facteur, un opérateur doit vérifier l'identité avant toute récupération dans l'administration Supabase ; aucun contournement n'est codé dans le frontend.
 
