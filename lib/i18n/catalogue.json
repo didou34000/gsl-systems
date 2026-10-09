@@ -1,0 +1,262 @@
+{
+  "Metal & machining": [
+    "Metal y mecanizado",
+    "Metal e maquinação",
+    "Metall und Zerspanung",
+    "Metallo e lavorazioni",
+    "Metal ve işleme",
+    "المعادن والتشغيل",
+    "धातु और मशीनिंग",
+    "金属与机械加工"
+  ],
+  "Electrical": [
+    "Electricidad",
+    "Eletricidade",
+    "Elektrotechnik",
+    "Elettricità",
+    "Elektrik",
+    "الكهرباء",
+    "विद्युत",
+    "电气"
+  ],
+  "Plastics": [
+    "Plásticos",
+    "Plásticos",
+    "Kunststoffe",
+    "Materie plastiche",
+    "Plastik",
+    "البلاستيك",
+    "प्लास्टिक",
+    "塑料"
+  ],
+  "Construction": [
+    "Construcción",
+    "Construção",
+    "Bauwesen",
+    "Edilizia",
+    "İnşaat",
+    "البناء",
+    "निर्माण",
+    "建筑"
+  ],
+  "Furniture": [
+    "Mobiliario",
+    "Mobiliário",
+    "Möbel",
+    "Arredamento",
+    "Mobilya",
+    "الأثاث",
+    "फर्नीचर",
+    "家具"
+  ],
+  "Manufacturing country to confirm": [
+    "País de fabricación por confirmar",
+    "País de fabrico a confirmar",
+    "Herstellungsland zu bestätigen",
+    "Paese di produzione da confermare",
+    "Üretim ülkesi teyit edilecek",
+    "بلد التصنيع بحاجة إلى تأكيد",
+    "निर्माण देश की पुष्टि बाकी है",
+    "生产国家待确认"
+  ],
+  "On request": [
+    "Bajo presupuesto",
+    "Sob orçamento",
+    "Auf Anfrage",
+    "Su preventivo",
+    "Teklif üzerine",
+    "حسب عرض السعر",
+    "कोटेशन पर",
+    "询价"
+  ],
+  "Products & capabilities": [
+    "Productos y capacidades",
+    "Produtos e capacidades",
+    "Produkte und Fähigkeiten",
+    "Prodotti e capacità",
+    "Ürünler ve yetenekler",
+    "المنتجات والقدرات",
+    "उत्पाद और क्षमताएँ",
+    "产品与生产能力"
+  ],
+  "Check your filters. Enter a positive quantity and select its unit.": [
+    "Revisa los filtros. Introduce una cantidad positiva y selecciona su unidad.",
+    "Verifique os filtros. Introduza uma quantidade positiva e selecione a unidade.",
+    "Prüfen Sie die Filter. Geben Sie eine positive Menge ein und wählen Sie die Einheit.",
+    "Controlla i filtri. Inserisci una quantità positiva e seleziona l’unità.",
+    "Filtreleri kontrol edin. Pozitif bir miktar girin ve birimini seçin.",
+    "راجع المرشحات. أدخل كمية موجبة واختر وحدتها.",
+    "फ़िल्टर जाँचें। शून्य से अधिक मात्रा दर्ज करें और उसकी इकाई चुनें।",
+    "请检查筛选条件，输入正数数量并选择单位。"
+  ],
+  "Explore products, compare specifications and contact the right manufacturer.": [
+    "Explora productos, compara especificaciones y contacta con el fabricante adecuado.",
+    "Explore produtos, compare especificações e contacte o fabricante certo.",
+    "Entdecken Sie Produkte, vergleichen Sie technische Daten und kontaktieren Sie den passenden Hersteller.",
+    "Esplora i prodotti, confronta le specifiche e contatta il produttore adatto.",
+    "Ürünleri keşfedin, özellikleri karşılaştırın ve doğru üreticiyle iletişime geçin.",
+    "استكشف المنتجات وقارن المواصفات وتواصل مع المصنّع المناسب.",
+    "उत्पाद खोजें, विनिर्देशों की तुलना करें और सही निर्माता से संपर्क करें।",
+    "探索产品、比较规格，并联系合适的制造商。"
+  ],
+  "All sectors": [
+    "Todos los sectores",
+    "Todos os setores",
+    "Alle Branchen",
+    "Tutti i settori",
+    "Tüm sektörler",
+    "جميع القطاعات",
+    "सभी क्षेत्र",
+    "所有行业"
+  ],
+  "Remove filter": [
+    "Quitar filtro",
+    "Remover filtro",
+    "Filter entfernen",
+    "Rimuovi filtro",
+    "Filtreyi kaldır",
+    "إزالة المرشح",
+    "फ़िल्टर हटाएँ",
+    "移除筛选"
+  ],
+  "Products on this page": [
+    "Productos en esta página",
+    "Produtos nesta página",
+    "Produkte auf dieser Seite",
+    "Prodotti in questa pagina",
+    "Bu sayfadaki ürünler",
+    "المنتجات في هذه الصفحة",
+    "इस पृष्ठ पर उत्पाद",
+    "本页产品"
+  ],
+  "Grid view": [
+    "Vista de cuadrícula",
+    "Vista em grelha",
+    "Rasteransicht",
+    "Vista griglia",
+    "Izgara görünümü",
+    "عرض الشبكة",
+    "ग्रिड दृश्य",
+    "网格视图"
+  ],
+  "List view": [
+    "Vista de lista",
+    "Vista em lista",
+    "Listenansicht",
+    "Vista elenco",
+    "Liste görünümü",
+    "عرض القائمة",
+    "सूची दृश्य",
+    "列表视图"
+  ],
+  "About the company": [
+    "Acerca de la empresa",
+    "Sobre a empresa",
+    "Über das Unternehmen",
+    "Informazioni sull’azienda",
+    "Şirket hakkında",
+    "عن الشركة",
+    "कंपनी के बारे में",
+    "公司简介"
+  ],
+  "No products published yet. Contact the company to discuss your requirement.": [
+    "Todavía no hay productos publicados. Contacta con la empresa para explicar tus necesidades.",
+    "Ainda não existem produtos publicados. Contacte a empresa para discutir as suas necessidades.",
+    "Noch keine Produkte veröffentlicht. Kontaktieren Sie das Unternehmen, um Ihren Bedarf zu besprechen.",
+    "Nessun prodotto ancora pubblicato. Contatta l’azienda per discutere le tue esigenze.",
+    "Henüz ürün yayınlanmadı. İhtiyacınızı görüşmek için şirketle iletişime geçin.",
+    "لم تُنشر منتجات بعد. تواصل مع الشركة لمناقشة احتياجك.",
+    "अभी कोई उत्पाद प्रकाशित नहीं हुआ है। अपनी आवश्यकता पर चर्चा करने के लिए कंपनी से संपर्क करें।",
+    "尚未发布产品。请联系公司讨论您的需求。"
+  ],
+  "Discuss your project": [
+    "Hablemos de tu proyecto",
+    "Vamos falar do seu projeto",
+    "Besprechen Sie Ihr Projekt",
+    "Parliamo del tuo progetto",
+    "Projenizi görüşelim",
+    "لنتحدث عن مشروعك",
+    "अपने प्रोजेक्ट पर चर्चा करें",
+    "洽谈您的项目"
+  ],
+  "Confirm quantity, lead time and technical requirements directly with the manufacturer.": [
+    "Confirma la cantidad, los plazos y los requisitos técnicos directamente con el fabricante.",
+    "Confirme a quantidade, os prazos e os requisitos técnicos diretamente com o fabricante.",
+    "Bestätigen Sie Menge, Lieferzeit und technische Anforderungen direkt mit dem Hersteller.",
+    "Conferma quantità, tempi e requisiti tecnici direttamente con il produttore.",
+    "Miktarı, teslim süresini ve teknik gereksinimleri doğrudan üreticiyle teyit edin.",
+    "أكد الكمية والمهلة والمتطلبات الفنية مباشرة مع المصنّع.",
+    "मात्रा, समय और तकनीकी आवश्यकताओं की पुष्टि सीधे निर्माता से करें।",
+    "直接与制造商确认数量、交期和技术要求。"
+  ],
+  "Product details": [
+    "Detalles del producto",
+    "Detalhes do produto",
+    "Produktdetails",
+    "Dettagli del prodotto",
+    "Ürün detayları",
+    "تفاصيل المنتج",
+    "उत्पाद विवरण",
+    "产品详情"
+  ],
+  "Technical specifications": [
+    "Especificaciones técnicas",
+    "Especificações técnicas",
+    "Technische Daten",
+    "Specifiche tecniche",
+    "Teknik özellikler",
+    "المواصفات الفنية",
+    "तकनीकी विनिर्देश",
+    "技术规格"
+  ],
+  "Lead time": [
+    "Plazo",
+    "Prazo",
+    "Lieferzeit",
+    "Tempi di consegna",
+    "Teslim süresi",
+    "المهلة",
+    "समय सीमा",
+    "交期"
+  ],
+  "Company photo": [
+    "Foto de la empresa",
+    "Fotografia da empresa",
+    "Unternehmensfoto",
+    "Foto dell’azienda",
+    "Şirket fotoğrafı",
+    "صورة الشركة",
+    "कंपनी की फ़ोटो",
+    "公司照片"
+  ],
+  "Choose products to compare": [
+    "Elige productos para comparar",
+    "Escolha produtos para comparar",
+    "Produkte zum Vergleichen auswählen",
+    "Scegli i prodotti da confrontare",
+    "Karşılaştırılacak ürünleri seçin",
+    "اختر المنتجات للمقارنة",
+    "तुलना करने के लिए उत्पाद चुनें",
+    "选择要比较的产品"
+  ],
+  "Select Compare on a product card to see its specifications side by side.": [
+    "Marca Comparar en una ficha para ver sus especificaciones lado a lado.",
+    "Selecione Comparar num cartão para ver as especificações lado a lado.",
+    "Wählen Sie Vergleichen auf einer Produktkarte, um die technischen Daten nebeneinander zu sehen.",
+    "Seleziona Confronta su una scheda per vedere le specifiche affiancate.",
+    "Özellikleri yan yana görmek için ürün kartında Karşılaştır’ı seçin.",
+    "اختر مقارنة على بطاقة المنتج لعرض المواصفات جنبًا إلى جنب.",
+    "विनिर्देश साथ-साथ देखने के लिए उत्पाद कार्ड पर तुलना चुनें।",
+    "在产品卡片上选择比较，即可并排查看规格。"
+  ],
+  "Some products are no longer available. Remove them to update your comparison.": [
+    "Algunos productos ya no están disponibles. Quítalos para actualizar la comparación.",
+    "Alguns produtos já não estão disponíveis. Remova-os para atualizar a comparação.",
+    "Einige Produkte sind nicht mehr verfügbar. Entfernen Sie sie, um den Vergleich zu aktualisieren.",
+    "Alcuni prodotti non sono più disponibili. Rimuovili per aggiornare il confronto.",
+    "Bazı ürünler artık mevcut değil. Karşılaştırmayı güncellemek için bunları kaldırın.",
+    "بعض المنتجات لم تعد متاحة. أزلها لتحديث المقارنة.",
+    "कुछ उत्पाद अब उपलब्ध नहीं हैं। तुलना अपडेट करने के लिए उन्हें हटाएँ।",
+    "部分产品已下架，请移除后更新比较。"
+  ]
+}

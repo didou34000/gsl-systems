@@ -11,7 +11,7 @@ export async function GET(request:Request){try{
  }
  if(view==='selection'){
   const ids=(url.searchParams.get('ids')||'').split(',').filter(Boolean);if(ids.length>100||ids.some(id=>!z.string().uuid().safeParse(id).success))return json({error:'INVALID'},400);
-  if(!ids.length)return json({products:[]});const {data,error}=await db.from('published_products').select('product_id,organization_id,name,description').in('product_id',ids).is('withdrawn_at',null);if(error)throw error;return json({products:data});
+  if(!ids.length)return json({products:[]});const {data,error}=await db.from('published_products').select('product_id,organization_id,name,description,category,specifications').in('product_id',ids).is('withdrawn_at',null);if(error)throw error;return json({products:data});
  }
  if(view==='catalogue'){
   const values=Object.fromEntries([...url.searchParams].filter(([k])=>k!=='view'&&k!=='lang'));

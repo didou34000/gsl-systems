@@ -9,6 +9,7 @@ import account from './account.json';
 import messages from './messages.json';
 import auth from './auth.json';
 import core from './core.json';
+import catalogue from './catalogue.json';
 import type {Language} from './languages';
 // English keys keep existing l(English, French) call sites compatible.
 // Untranslated technical/editorial copy explicitly falls back to English.
@@ -16,7 +17,7 @@ import type {Language} from './languages';
 type AdditionalLanguage=Exclude<Language,'en'|'fr'>;
 export type TranslationRow = readonly [string,string,string,string,string,string,string,string];
 export const translationLanguages=['es','pt','de','it','tr','ar','hi','zh'] as const;
-export const translations:Record<string,readonly string[]>={...core,...auth,...messages,...account,...operations,...offers,...publicCopy,...requirements,...supplier,...extra,...countryRequirements};
+export const translations:Record<string,readonly string[]>={...core,...catalogue,...auth,...messages,...account,...operations,...offers,...publicCopy,...requirements,...supplier,...extra,...countryRequirements};
 export function translate(language:Language,english:string,french:string=english){
  if(language==='fr')return french;
  if(language==='en')return english;
