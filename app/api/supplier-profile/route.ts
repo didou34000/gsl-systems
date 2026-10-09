@@ -52,5 +52,5 @@ export async function POST(request:Request){
  const query=current?db.from('supplier_applications').update(values).eq('owner_id',user.id).eq('revision',body.revision):db.from('supplier_applications').insert({owner_id:user.id,...values});
  const {data,error}=await query.select('revision,status,updated_at').maybeSingle();if(error?.code==='23505')return json({error:'CONFLICT'},409);if(error)throw error;if(!data)return json({error:'CONFLICT'},409);
  return json({application:data});
- }catch(e){const code=e&&typeof e==='object'&&'message' in e?String(e.message):'';for(const known of ['IMAGE_NOT_READY','IMAGE_LIMIT','COMPANY_REQUIRED','CONFLICT','LOCKED','INCOMPLETE','FORBIDDEN'])if(code.includes(known))return json({error:known},409);if(e&&typeof e==='object'&&'message' in e&&String(e.message).includes('FILES_PENDING'))return json({error:'FILES_PENDING'},409);return json({error:'UNAVAILABLE'},503)}
+ }catch(e){const code=e&&typeof e==='object'&&'message' in e?String(e.message):'';for(const known of ['COUNTRY_OUTSIDE_SCOPE','IMAGE_NOT_READY','IMAGE_LIMIT','COMPANY_REQUIRED','CONFLICT','LOCKED','INCOMPLETE','FORBIDDEN'])if(code.includes(known))return json({error:known},409);if(e&&typeof e==='object'&&'message' in e&&String(e.message).includes('FILES_PENDING'))return json({error:'FILES_PENDING'},409);return json({error:'UNAVAILABLE'},503)}
 }

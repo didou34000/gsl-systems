@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {availableCountries} from './country-options';
+import {isSourcingCountry} from '../sourcing-coverage';
 import {assessCountryDetails} from './country-requirements';
 const text=z.string().trim().max(250).default('');
 const long=z.string().trim().max(5000).default('');
@@ -33,7 +33,7 @@ export function profileIssues(p:SupplierProfile,files:SupplierFile[]):ProfileIss
  const out:ProfileIssue[]=[];const need=(ok:unknown,step:number,path:string,en:string,fr:string)=>{if(!ok)out.push({step,path,en,fr})};
  need(p.activity,0,'activity','Choose your business activity.','Choisissez votre type d’activité.');
  need(p.legalName.length>=2,0,'legalName','Enter the registered company name.','Renseignez la raison sociale.');
- need(p.country&&availableCountries.includes(p.country),0,'country','Choose the registration country.','Choisissez le pays d’immatriculation.');
+
 
 
  need(p.headquarters.city,0,'headquarters','Enter the company city.','Indiquez la ville de l’entreprise.');
@@ -44,6 +44,7 @@ export function profileIssues(p:SupplierProfile,files:SupplierFile[]):ProfileIss
 
  need(p.contact.name&&p.contact.email,4,'contact','Enter a contact name and email.','Indiquez le nom et l’email du contact.');
  need(p.attestation,5,'attestation','Confirm that you are authorised to submit this company profile.','Confirmez que vous êtes habilité à soumettre ce dossier.');
+ out.push(...sourcingIssues(p));
  return out.map(issue=>({...issue,step:Math.min(issue.step,4)}));
 }
 
@@ -101,10 +102,20 @@ export function companyIssues(p:SupplierProfile):ProfileIssue[]{
 }
 
 export function productPublicationIssues(p:SupplierProfile):ProfileIssue[]{
- const out:ProfileIssue[]=[];
+ const out:ProfileIssue[]=[...sourcingIssues(p)];
  p.products.forEach((v,i)=>{if(v.listingStatus==='draft')return;
  if(!v.name.trim()||!['metal','machines','electricite','construction','plasturgie','textile','emballage','mobilier','other'].includes(normalizeProductCategory(v.category))||v.description.trim().length<30||!countryCodes.includes(v.origin))out.push({step:2,path:`products.${i}`,en:'Complete the product name, category, description (30 characters) and manufacturing country.',fr:'Renseignez le nom, la catégorie, la description (30 caractères) et le pays de fabrication du produit.'});
  });
  if(!p.attestation)out.push({step:4,path:'attestation',en:'Confirm you are authorised to publish these products.',fr:'Confirmez que vous êtes habilité à publier ces produits.'});
+ return out;
+}
+
+/** Legacy countries remain editable in drafts; publication and submission enforce the commercial scope. */
+export function sourcingIssues(p:SupplierProfile):ProfileIssue[]{
+ const out:ProfileIssue[]=[];
+ const add=(country:string,step:number,path:string)=>{if(!isSourcingCountry(country))out.push({step,path,en:'Choose one of the 10 GSL sourcing countries.',fr:'Choisissez l’un des 10 pays de sourcing GSL.'})};
+ add(p.country,0,'country');
+ p.sites.forEach((s,i)=>add(s.address.country,1,`sites.${i}.address.country`));
+ p.products.forEach((p,i)=>{if(p.listingStatus!=='draft')add(p.origin,2,`products.${i}.origin`)});
  return out;
 }

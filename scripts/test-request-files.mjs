@@ -5,8 +5,8 @@ export async function testRequestFiles(db){
  async function as(u,role='authenticated'){await db.exec('reset role');await db.query("select set_config('request.jwt.claim.sub',$1,false)",[u]);await db.exec('set role '+role)}
  const command=async(action,args)=>(await db.query('select public.workflow($1,$2,$3) value',[action,JSON.stringify(args),randomUUID()])).rows[0].value;
  const file=async(action,args)=>(await db.query('select public.manage_rfq_file($1,$2) value',[action,JSON.stringify(args)])).rows[0].value;
- const orgs=[];for(const [i,u] of users.entries()){await as(u);orgs.push((await command('buyer_company',{name:'Attachment synthetic '+i,country:'FR'})).organizationId)}
- await db.exec('reset role');for(const org of orgs.slice(1))await db.query("insert into public.published_supplier_profiles(organization_id,source_revision,display_name,country_code,city,description) values($1,1,'Synthetic supplier','FR','Test','Test')",[org]);
+ const orgs=[];for(const [i,u] of users.entries()){await as(u);orgs.push((await command('buyer_company',{name:'Attachment synthetic '+i,country:i===0?'FR':'TR'})).organizationId)}
+ await db.exec('reset role');for(const org of orgs.slice(1))await db.query("insert into public.published_supplier_profiles(organization_id,source_revision,display_name,country_code,city,description) values($1,1,'Synthetic supplier','TR','Test','Test')",[org]);
  await as(users[0]);const draft=await command('save_rfq',{organization:orgs[0],title:'Attachment test',destination:'FR',details:'An isolated file sharing test.',items:[{description:'Test',quantity:'10',unit:'pcs'}]});
  const reserved=await file('reserve',{rfq:draft.id,name:'private.pdf',size:10,mime:'application/pdf',recipient:orgs[1]});
  await assert.rejects(command('send_rfq',{id:draft.id,revision:draft.revision,recipients:orgs.slice(1)}),/FILES_PENDING/);
