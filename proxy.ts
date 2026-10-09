@@ -1,8 +1,11 @@
 import {createServerClient} from '@supabase/ssr';
 import {NextResponse,type NextRequest} from 'next/server';
 import {isLanguage} from './lib/i18n/languages';
+import {isSourcingCountry} from './lib/sourcing-coverage';
 import {runtimeConfig} from './lib/runtime-config';
 export async function proxy(request:NextRequest){
+ const countryRoute=request.nextUrl.pathname.match(/^\/pays\/([^/]+)\/?$/);
+ if(countryRoute){const code=countryRoute[1].toUpperCase();const path=isSourcingCountry(code)?'/pays/'+code.toLowerCase():'/pays';if(request.nextUrl.pathname!==path){const target=request.nextUrl.clone();target.pathname=path;return NextResponse.redirect(target,308);}}
  const language=request.nextUrl.searchParams.get('lang');if(isLanguage(language))request.cookies.set('gsl-language',language);
  const requestHeaders=new Headers(request.headers);requestHeaders.set('cookie',request.cookies.toString());requestHeaders.set('x-gsl-path',request.nextUrl.pathname);requestHeaders.set('x-gsl-filtered',[...request.nextUrl.searchParams.keys()].some(k=>k!=='lang')?'true':'false');
  let response=NextResponse.next({request:{headers:requestHeaders}});

@@ -5,9 +5,9 @@ import {pathToFileURL} from 'node:url';
 const compile=p=>ts.transpileModule(fs.readFileSync(p,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
 const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso-countries.ts')).toString('base64');
 const country='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-requirements.ts')).toString('base64');
-const options='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso))).toString('base64');
-const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
-const {productPublicationIssues,documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const scope='data:text/javascript;base64,'+Buffer.from(compile('lib/sourcing-coverage.ts')).toString('base64');
+const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'../sourcing-coverage'",JSON.stringify(scope)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const {sourcingIssues,productPublicationIssues,documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const p=emptyProfile();
 assert.ok(profileIssues(p,[]).length>5);
 Object.assign(p,{activity:'manufacturer',website:'https://example.com',legalName:'Test company',country:'TR',legalForm:'Ltd',description:'A'.repeat(120),identifiers:{mersis:'test',trade_registry_number:'test',trade_registry_office:'test'},attestation:true});
@@ -18,7 +18,7 @@ p.sites=[{id:crypto.randomUUID(),name:'Factory',address:{...p.headquarters,count
 p.products=[productSchema.parse({id:crypto.randomUUID(),name:'CNC part',reference:'P1',category:'machining',description:'A'.repeat(70),origin:'TR'})];
 const files=[{id:'reg',kind:'registration',name:'r.pdf',size:10,caption:''},{id:'logo',kind:'logo',name:'l.png',size:10,caption:''}];
 assert.deepEqual(profileIssues(p,files),[]);
-const previous=p.country;p.country='JP';assert.ok(!profileIssues(p,files).some(x=>x.path==='country'));p.country=previous;
+const previous=p.country;p.country='JP';assert.ok(profileIssues(p,files).some(x=>x.path==='country'));p.country=previous;
 p.products[0].ce='required';assert.ok(profileIssues(p,files).some(x=>x.path.endsWith('.ce')));
 p.products[0].legislation='Applicable legislation';p.products[0].documentId='declaration';assert.ok(profileIssues(p,files).length);
 files.push({id:'declaration',kind:'technical',name:'d.pdf',size:10,caption:''});assert.deepEqual(profileIssues(p,files),[]);
@@ -67,3 +67,8 @@ const directProduct={...minimal,contact:{...minimal.contact,email:'unfinished'},
 assert.deepEqual(productPublicationIssues(directProduct),[],'documents and partial company contact do not block products');
 assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],origin:''}]}).some(x=>x.path==='products.0'));
 console.log('Product essentials validated without optional certificates, CE documents or company draft fields.');
+
+for(const country of ['TR','MA','TN','RS','MK','BA','MD','GE','AL','EG'])assert.deepEqual(sourcingIssues({...emptyProfile(),country}),[]);
+assert.equal(supplierDraftSchema.safeParse({...emptyProfile(),country:'BE'}).success,true);
+assert.ok(sourcingIssues({...emptyProfile(),country:'TR',sites:[{address:{country:'FR'}}]}).some(x=>x.path==='sites.0.address.country'));
+console.log('All ten sourcing countries accepted; out-of-scope production site blocked; legacy private draft preserved.');
