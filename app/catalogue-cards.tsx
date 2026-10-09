@@ -74,7 +74,7 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
       {p.description && <p className="catalogue-card-description">{p.description}</p>}
       <dl className="catalogue-card-facts">
         <div><dt>{l('Material', 'Matière')}</dt><dd>{material || l('Not disclosed', 'Non communiqué')}</dd></div>
-        <div><dt>{l('Process', 'Procédé')}</dt><dd>{process || l('Not disclosed', 'Non communiqué')}</dd></div>
+        {(!research || Boolean(process)) && <div><dt>{l('Process', 'Procédé')}</dt><dd>{process || l('Not disclosed', 'Non communiqué')}</dd></div>}
       </dl>
       <div className="catalogue-card-meta"><span>{country ? <><CountryFlag code={country}/>{countryName(country, language)}</> : l('Manufacturing country to confirm', 'Pays de fabrication à confirmer')}</span><span>{minimum ? `${l('Min.', 'Min.')} ${minimum}${!research && p.specifications.unit ? ' ' + p.specifications.unit : ''}` : l('MOQ not disclosed', 'MOQ non communiqué')}</span></div>
       {research && <div className="catalogue-card-research-meta"><span>{price || l('Price not disclosed', 'Prix non communiqué')}</span><span><BookOpen size={12} aria-hidden/>{research.sources.length} {l('sources', 'sources')}</span></div>}
