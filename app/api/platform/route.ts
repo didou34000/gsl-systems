@@ -47,7 +47,7 @@ export async function POST(request:Request){
  try{const raw=await request.text();if(raw.length>180000)return json({error:'INVALID'},413);const parsed=commandSchema.safeParse(JSON.parse(raw));if(!parsed.success)return json({error:'INVALID'},400);
  const db=await authClient();const {data:{user}}=await db.auth.getUser();if(!user?.email_confirmed_at)return json({error:'LOGIN_REQUIRED'},401);
  const {data,error}=await db.rpc(['invite_member','accept_invitation','remove_member','revoke_invitation'].includes(parsed.data.action)?'manage_members':'workflow',parsed.data);
- if(error){const known=['COMPANY_ALREADY_PRESENT','IDEMPOTENCY_CONFLICT','FILES_PENDING','CONFLICT','FORBIDDEN','INCOMPLETE','NOT_PUBLISHED','RECIPIENTS_REQUIRED','INVALID_OFFER','INVALID_LINE','FEEDBACK_REQUIRED','REPUBLICATION_REQUIRES_REVIEW','CONSENT_REQUIRED','REVIEW_CHECKS_REQUIRED','ASSIGNED_TO_ANOTHER_REVIEWER','RATE_LIMITED','ALREADY_MEMBER'];const code=known.find(c=>error.message.includes(c));return json({error:code||'PLATFORM_UNAVAILABLE'},code==='FORBIDDEN'?403:code==='CONFLICT'?409:code?422:503)}
+ if(error){const known=['COUNTRY_OUTSIDE_SCOPE','COMPANY_ALREADY_PRESENT','IDEMPOTENCY_CONFLICT','FILES_PENDING','CONFLICT','FORBIDDEN','INCOMPLETE','NOT_PUBLISHED','RECIPIENTS_REQUIRED','INVALID_OFFER','INVALID_LINE','FEEDBACK_REQUIRED','REPUBLICATION_REQUIRES_REVIEW','CONSENT_REQUIRED','REVIEW_CHECKS_REQUIRED','ASSIGNED_TO_ANOTHER_REVIEWER','RATE_LIMITED','ALREADY_MEMBER'];const code=known.find(c=>error.message.includes(c));return json({error:code||'PLATFORM_UNAVAILABLE'},code==='FORBIDDEN'?403:code==='CONFLICT'?409:code?422:503)}
  return json({ok:true,result:data});
  }catch{return json({error:'INVALID'},400)}
 }
