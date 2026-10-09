@@ -39,7 +39,7 @@ assert.equal(translate('de','An untranslated technical term','Terme non traduit'
 
 // A newly added label on a critical workflow must ship in all ten languages.
 // The AST checks the actual interface rather than a hand-maintained sample list.
-const critical=['member-dashboard','auth-form','account-security','account-data','messaging','thread-messages','operational-platform','operations-overview','offer-tools','rfq-composer','organization-members','recipient-picker','add-recipient','requirement-builder','marketplace','saved-selection','contact-form','industrial-home','catalogue-live','home-catalogue','network-marketplace','sourcing-network','public-profiles','supplier-workspace','company-branding','request-files','review-tools'];
+const critical=['site-header','member-dashboard','auth-form','account-security','account-data','messaging','thread-messages','operational-platform','operations-overview','offer-tools','rfq-composer','organization-members','recipient-picker','add-recipient','requirement-builder','marketplace','saved-selection','contact-form','industrial-home','catalogue-live','home-catalogue','network-marketplace','sourcing-network','public-profiles','supplier-workspace','company-branding','request-files','review-tools'];
 let checked=0;
 for(const file of critical){
  const ast=ts.createSourceFile(file,fs.readFileSync('app/'+file+'.tsx','utf8'),ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
