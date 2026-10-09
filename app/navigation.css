@@ -1,0 +1,32 @@
+/* A single account entry; discovery and member actions share clear destinations. */
+.site-header .mobile-navigation[hidden]{display:none}
+.header-quote{gap:10px;white-space:nowrap}
+.account-loading{color:#6B7075;background:#F6F2EC;min-width:138px}
+.header-nav a[aria-current=page],.mobile-navigation a[aria-current=page]{color:var(--primary);font-weight:600}
+.header-nav .secondary-navigation a:not([aria-current=page]){font-weight:400;color:var(--foreground)}
+.site-header a:focus-visible,.menu-toggle:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
+.mobile-member-links{display:flex;flex-direction:column;border-top:1px solid var(--border);margin-top:10px;padding-top:10px}
+@media(max-width:1100px){
+ .header-tools .header-quote{display:none}
+ /* Saved items remain reachable on tablet when the wide header shortcut is hidden. */
+ .site-header .header-tools>.header-icon{display:flex}
+ .header-tools>.header-icon>span{display:none}
+}
+@media(max-width:760px){
+ .site-header .header-tools>.header-message-link,.site-header .header-tools>.header-icon{display:none}
+ .header-account-actions{grid-template-columns:1fr}
+ .mobile-navigation a.active{border-inline-start:2px solid var(--primary);padding-inline-start:12px}
+}
+@media(min-width:761px){.site-header .mobile-navigation{display:none}}
+
+@media(min-width:1101px){.header-nav .header-request-nav{display:none}}
+@media(max-width:420px){
+ .site-header .language-selector svg{display:none}
+ .site-header .language-selector select{width:84px}
+}
+@media(max-width:360px){
+ .site-header .gsl-wordmark{gap:8px}
+ .site-header .gsl-wordmark>svg{width:26px;height:26px}
+ .site-header .gsl-wordmark strong{font-size:18px}
+ .site-header .gsl-wordmark small{font-size:7px}
+}
