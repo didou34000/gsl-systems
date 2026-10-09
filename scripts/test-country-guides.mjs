@@ -14,4 +14,5 @@ for(const country of countries){
  }
 }
 const invalid=await fetch(base+'/pays/fr?lang=fr',{redirect:'manual'});assert.equal(invalid.status,308,'out-of-scope country redirects to the supported directory');assert.ok(invalid.headers.get('location').endsWith('/pays?lang=fr'));
+const staleFilter=await fetch(base+'/fabricants?country=FR&lang=fr',{redirect:'manual'});assert.equal(staleFilter.status,307);assert.ok(!new URL(staleFilter.headers.get('location'),base).searchParams.has('country'));
 console.log('100 country/locale pages render server-side with canonical, hreflang, structured data, documentary sections and official sources; out-of-scope country redirects to the supported directory.');

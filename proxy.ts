@@ -6,6 +6,8 @@ import {runtimeConfig} from './lib/runtime-config';
 export async function proxy(request:NextRequest){
  const countryRoute=request.nextUrl.pathname.match(/^\/pays\/([^/]+)\/?$/);
  if(countryRoute){const code=countryRoute[1].toUpperCase();const path=isSourcingCountry(code)?'/pays/'+code.toLowerCase():'/pays';if(request.nextUrl.pathname!==path){const target=request.nextUrl.clone();target.pathname=path;return NextResponse.redirect(target,308);}}
+ const filter=request.nextUrl.searchParams.get('country');
+ if(['/catalogue','/fabricants'].includes(request.nextUrl.pathname)&&filter&&(!isSourcingCountry(filter)||filter!==filter.toUpperCase())){const target=request.nextUrl.clone();if(isSourcingCountry(filter.toUpperCase()))target.searchParams.set('country',filter.toUpperCase());else target.searchParams.delete('country');return NextResponse.redirect(target,307);}
  const language=request.nextUrl.searchParams.get('lang');if(isLanguage(language))request.cookies.set('gsl-language',language);
  const requestHeaders=new Headers(request.headers);requestHeaders.set('cookie',request.cookies.toString());requestHeaders.set('x-gsl-path',request.nextUrl.pathname);requestHeaders.set('x-gsl-filtered',[...request.nextUrl.searchParams.keys()].some(k=>k!=='lang')?'true':'false');
  let response=NextResponse.next({request:{headers:requestHeaders}});
