@@ -258,5 +258,1255 @@
     "بعض المنتجات لم تعد متاحة. أزلها لتحديث المقارنة.",
     "कुछ उत्पाद अब उपलब्ध नहीं हैं। तुलना अपडेट करने के लिए उन्हें हटाएँ।",
     "部分产品已下架，请移除后更新比较。"
+  ],
+  "Documented by GSL": [
+    "Ficha documentada por GSL",
+    "Ficha documentada pela GSL",
+    "Von GSL dokumentiert",
+    "Scheda documentata da GSL",
+    "GSL tarafından kaynaklarla hazırlanmış profil",
+    "ملف أعدّته GSL بالاستناد إلى مصادر",
+    "GSL द्वारा स्रोतों सहित तैयार प्रोफ़ाइल",
+    "GSL 编制的资料档案"
+  ],
+  "Not disclosed": [
+    "No comunicado",
+    "Não divulgado",
+    "Nicht angegeben",
+    "Non comunicato",
+    "Belirtilmemiş",
+    "غير مُعلن",
+    "जानकारी नहीं दी गई",
+    "未提供"
+  ],
+  "MOQ not disclosed": [
+    "Cantidad mínima no indicada",
+    "Quantidade mínima não indicada",
+    "Mindestbestellmenge nicht angegeben",
+    "Quantità minima non indicata",
+    "Minimum sipariş miktarı belirtilmemiş",
+    "الحد الأدنى للطلب غير مُعلن",
+    "न्यूनतम ऑर्डर मात्रा नहीं बताई गई",
+    "未公布最低订购量"
+  ],
+  "Price not disclosed": [
+    "Precio no comunicado",
+    "Preço não divulgado",
+    "Preis nicht angegeben",
+    "Prezzo non comunicato",
+    "Fiyat belirtilmemiş",
+    "السعر غير مُعلن",
+    "मूल्य नहीं बताया गया",
+    "未公布价格"
+  ],
+  "sources": [
+    "fuentes",
+    "fontes",
+    "Quellen",
+    "fonti",
+    "kaynak",
+    "مصادر",
+    "स्रोत",
+    "个来源"
+  ],
+  "Activities, documents and trade framework sourced by GSL.": [
+    "Actividades, documentos y marco comercial documentados por GSL a partir de fuentes.",
+    "Atividades, documentos e enquadramento comercial documentados pela GSL a partir de fontes.",
+    "GSL hat Tätigkeiten, Dokumente und den Handelsrahmen anhand von Quellen dokumentiert.",
+    "Attività, documenti e quadro commerciale documentati da GSL sulla base di fonti.",
+    "Faaliyetler, belgeler ve ticaret çerçevesi GSL tarafından kaynaklara dayanılarak derlenmiştir.",
+    "أنشطة ووثائق وإطار تجاري جمعتها GSL من مصادر.",
+    "GSL द्वारा स्रोतों के आधार पर संकलित गतिविधियाँ, दस्तावेज़ और व्यापार ढाँचा।",
+    "GSL 根据来源整理的业务、文件及贸易框架。"
+  ],
+  "Contact GSL": [
+    "Contactar con GSL",
+    "Contactar a GSL",
+    "GSL kontaktieren",
+    "Contatta GSL",
+    "GSL ile iletişime geçin",
+    "تواصل مع GSL",
+    "GSL से संपर्क करें",
+    "联系 GSL"
+  ],
+  "INDUSTRIAL KNOW-HOW": [
+    "SABER HACER INDUSTRIAL",
+    "SABER-FAZER INDUSTRIAL",
+    "INDUSTRIELLES KNOW-HOW",
+    "COMPETENZE INDUSTRIALI",
+    "ENDÜSTRİYEL UZMANLIK",
+    "الخبرات الصناعية",
+    "औद्योगिक विशेषज्ञता",
+    "工业专长"
+  ],
+  "Find a manufacturing speciality, explore documented product families and examine the sources behind each profile.": [
+    "Elige una especialidad de fabricación, explora familias de productos documentadas y consulta las fuentes de cada ficha.",
+    "Escolha uma especialidade de fabrico, explore famílias de produtos documentadas e consulte as fontes de cada ficha.",
+    "Wählen Sie ein Fertigungsgebiet, erkunden Sie dokumentierte Produktfamilien und prüfen Sie die Quellen zu jedem Profil.",
+    "Scegli una specializzazione produttiva, esplora le famiglie di prodotti documentate e consulta le fonti di ogni scheda.",
+    "Bir üretim uzmanlığı seçin, kaynaklarla belgelenen ürün ailelerini inceleyin ve her profilin kaynaklarına bakın.",
+    "اختر تخصّصًا تصنيعيًا، واستكشف عائلات المنتجات الموثّقة، واطّلع على مصادر كل ملف.",
+    "निर्माण की विशेषज्ञता चुनें, स्रोतों सहित दर्ज उत्पाद परिवार देखें और हर प्रोफ़ाइल के स्रोत जाँचें।",
+    "选择制造专业领域，浏览有资料依据的产品系列，并查阅各档案的来源。"
+  ],
+  "Industrial specialities": [
+    "Especialidades industriales",
+    "Especialidades industriais",
+    "Industrielle Fachgebiete",
+    "Specializzazioni industriali",
+    "Endüstriyel uzmanlık alanları",
+    "التخصّصات الصناعية",
+    "औद्योगिक विशेषज्ञताएँ",
+    "工业专业领域"
+  ],
+  "Explore manufacturers": [
+    "Explorar fabricantes",
+    "Explorar fabricantes",
+    "Hersteller erkunden",
+    "Esplora i produttori",
+    "Üreticileri keşfedin",
+    "استكشف المصنّعين",
+    "निर्माताओं को देखें",
+    "浏览制造商"
+  ],
+  "Browse all broad sectors": [
+    "Explorar todos los grandes sectores",
+    "Explorar todos os grandes setores",
+    "Alle übergeordneten Branchen ansehen",
+    "Esplora tutti i settori principali",
+    "Tüm ana sektörleri inceleyin",
+    "تصفّح جميع القطاعات الرئيسية",
+    "सभी प्रमुख क्षेत्र देखें",
+    "浏览所有大类行业"
+  ],
+  "Explore products and manufacturing families, compare sourced specifications and prepare your enquiry.": [
+    "Explora productos y familias de fabricación, compara las especificaciones documentadas y prepara tu consulta.",
+    "Explore produtos e famílias de fabrico, compare especificações documentadas e prepare o seu pedido.",
+    "Entdecken Sie Produkte und Fertigungsfamilien, vergleichen Sie quellenbasierte Spezifikationen und bereiten Sie Ihre Anfrage vor.",
+    "Esplora prodotti e famiglie di produzione, confronta le specifiche documentate e prepara la tua richiesta.",
+    "Ürünleri ve üretim ailelerini keşfedin, kaynaklara dayalı özellikleri karşılaştırın ve talebinizi hazırlayın.",
+    "استكشف المنتجات وعائلات التصنيع، وقارن المواصفات المستندة إلى مصادر، وجهّز طلبك.",
+    "उत्पाद और निर्माण श्रेणियाँ देखें, स्रोतों पर आधारित विनिर्देशों की तुलना करें और अपना अनुरोध तैयार करें।",
+    "浏览产品及制造系列，比较有来源依据的规格，并准备询价。"
+  ],
+  "Browse industrial specialities": [
+    "Explorar especialidades industriales",
+    "Explorar especialidades industriais",
+    "Industrielle Fachgebiete ansehen",
+    "Esplora le specializzazioni industriali",
+    "Endüstriyel uzmanlık alanlarını inceleyin",
+    "تصفّح التخصّصات الصناعية",
+    "औद्योगिक विशेषज्ञताएँ देखें",
+    "浏览工业专业领域"
+  ],
+  "Broad sectors": [
+    "Grandes sectores",
+    "Grandes setores",
+    "Übergeordnete Branchen",
+    "Settori principali",
+    "Ana sektörler",
+    "القطاعات الرئيسية",
+    "प्रमुख क्षेत्र",
+    "大类行业"
+  ],
+  "Specify your requirements to request a priced offer.": [
+    "Especifica tus necesidades para solicitar una oferta con precio.",
+    "Especifique o que precisa para solicitar uma proposta com preço.",
+    "Beschreiben Sie Ihren Bedarf, um ein Angebot mit Preisangabe anzufordern.",
+    "Specifica le tue esigenze per richiedere un'offerta con prezzo.",
+    "Fiyatlı bir teklif almak için ihtiyacınızı belirtin.",
+    "حدّد احتياجاتك لطلب عرض يتضمّن الأسعار.",
+    "कीमत सहित प्रस्ताव माँगने के लिए अपनी आवश्यकताएँ बताएँ।",
+    "请说明具体需求，以申请附价格的报价。"
+  ],
+  "Precision machining": [
+    "Mecanizado de precisión",
+    "Maquinação de precisão",
+    "Präzisionszerspanung",
+    "Lavorazioni meccaniche di precisione",
+    "Hassas işleme",
+    "التشغيل الدقيق",
+    "परिशुद्ध मशीनिंग",
+    "精密加工"
+  ],
+  "Sheet metal & welding": [
+    "Chapa y soldadura",
+    "Chapa e soldadura",
+    "Blechbearbeitung und Schweißen",
+    "Lavorazione della lamiera e saldatura",
+    "Sac işleme ve kaynak",
+    "تشكيل الصفائح المعدنية واللحام",
+    "शीट धातु और वेल्डिंग",
+    "钣金与焊接"
+  ],
+  "Casting & forging": [
+    "Fundición y forja",
+    "Fundição e forjamento",
+    "Gießen und Schmieden",
+    "Fusione e forgiatura",
+    "Döküm ve dövme",
+    "السباكة والطرق",
+    "ढलाई और फोर्जिंग",
+    "铸造与锻造"
+  ],
+  "Aluminium & extrusion": [
+    "Aluminio y extrusión",
+    "Alumínio e extrusão",
+    "Aluminium und Strangpressen",
+    "Alluminio ed estrusione",
+    "Alüminyum ve ekstrüzyon",
+    "الألمنيوم والبثق",
+    "एल्युमिनियम और एक्सट्रूज़न",
+    "铝材与挤压"
+  ],
+  "Bearings & transmission": [
+    "Rodamientos y transmisión",
+    "Rolamentos e transmissão",
+    "Lager und Antriebstechnik",
+    "Cuscinetti e trasmissione",
+    "Rulmanlar ve güç aktarımı",
+    "المحامل ونقل الحركة",
+    "बेयरिंग और संचरण",
+    "轴承与传动"
+  ],
+  "Pumps & hydraulics": [
+    "Bombas e hidráulica",
+    "Bombas e hidráulica",
+    "Pumpen und Hydraulik",
+    "Pompe e idraulica",
+    "Pompalar ve hidrolik",
+    "المضخّات والهيدروليك",
+    "पंप और हाइड्रॉलिक्स",
+    "泵与液压"
+  ],
+  "Springs & fasteners": [
+    "Muelles y elementos de fijación",
+    "Molas e elementos de fixação",
+    "Federn und Befestigungselemente",
+    "Molle ed elementi di fissaggio",
+    "Yaylar ve bağlantı elemanları",
+    "النوابض وعناصر التثبيت",
+    "स्प्रिंग और फास्टनर",
+    "弹簧与紧固件"
+  ],
+  "Moulds, tooling & injection": [
+    "Moldes, utillaje e inyección",
+    "Moldes, ferramentas e injeção",
+    "Formen, Werkzeuge und Spritzguss",
+    "Stampi, attrezzature e stampaggio a iniezione",
+    "Kalıplar, takımlar ve enjeksiyon",
+    "القوالب والعدد والحقن",
+    "साँचे, टूलिंग और इंजेक्शन मोल्डिंग",
+    "模具、工装与注塑"
+  ],
+  "Industrial handling": [
+    "Manipulación industrial de materiales",
+    "Movimentação industrial de materiais",
+    "Industrielle Fördertechnik",
+    "Movimentazione industriale",
+    "Endüstriyel malzeme taşıma",
+    "المناولة الصناعية",
+    "औद्योगिक सामग्री हैंडलिंग",
+    "工业物料搬运"
+  ],
+  "Electrical cables": [
+    "Cables eléctricos",
+    "Cabos elétricos",
+    "Elektrische Kabel",
+    "Cavi elettrici",
+    "Elektrik kabloları",
+    "الكابلات الكهربائية",
+    "विद्युत केबल",
+    "电缆"
+  ],
+  "Harnesses & cable assemblies": [
+    "Mazos de cables y conjuntos de cableado",
+    "Cablagens e conjuntos de cabos",
+    "Kabelbäume und Kabelkonfektionen",
+    "Cablaggi e assemblaggi di cavi",
+    "Kablo demetleri ve kablo grupları",
+    "ضفائر الأسلاك وتجميعات الكابلات",
+    "वायर हार्नेस और केबल असेंबली",
+    "线束与线缆组件"
+  ],
+  "Electronics & sensors": [
+    "Electrónica y sensores",
+    "Eletrónica e sensores",
+    "Elektronik und Sensoren",
+    "Elettronica e sensori",
+    "Elektronik ve sensörler",
+    "الإلكترونيات والمستشعرات",
+    "इलेक्ट्रॉनिक्स और सेंसर",
+    "电子元件与传感器"
+  ],
+  "Energy & transformers": [
+    "Energía y transformadores",
+    "Energia e transformadores",
+    "Energie und Transformatoren",
+    "Energia e trasformatori",
+    "Enerji ve transformatörler",
+    "الطاقة والمحوّلات",
+    "ऊर्जा और ट्रांसफ़ॉर्मर",
+    "能源与变压器"
+  ],
+  "Controls & switchgear": [
+    "Automatización y aparamenta eléctrica",
+    "Automatização e aparelhagem elétrica",
+    "Automatisierung und Schaltgeräte",
+    "Automazione e apparecchiature di manovra",
+    "Otomasyon ve şalt ekipmanları",
+    "التحكّم ومعدّات الفصل والتوصيل",
+    "नियंत्रण और स्विचगियर",
+    "控制与开关设备"
+  ],
+  "Steel & construction": [
+    "Acero y construcción",
+    "Aço e construção",
+    "Stahl und Bauwesen",
+    "Acciaio e costruzioni",
+    "Çelik ve inşaat",
+    "الفولاذ والبناء",
+    "इस्पात और निर्माण",
+    "钢材与建筑"
+  ],
+  "Elastomers & sealing": [
+    "Elastómeros y estanqueidad",
+    "Elastómeros e vedação",
+    "Elastomere und Dichtungstechnik",
+    "Elastomeri e tenuta",
+    "Elastomerler ve sızdırmazlık",
+    "الإلاستومرات وإحكام الإغلاق",
+    "इलास्टोमर और सीलिंग",
+    "弹性体与密封"
+  ],
+  "No public source linked.": [
+    "No hay ninguna fuente pública enlazada.",
+    "Nenhuma fonte pública associada.",
+    "Keine öffentliche Quelle verlinkt.",
+    "Nessuna fonte pubblica collegata.",
+    "Bağlantısı verilen herkese açık bir kaynak yok.",
+    "لا يوجد رابط لمصدر عام.",
+    "किसी सार्वजनिक स्रोत का लिंक नहीं दिया गया है।",
+    "未关联任何公开来源。"
+  ],
+  "Consult the sources": [
+    "Consultar las fuentes",
+    "Consultar as fontes",
+    "Quellen einsehen",
+    "Consulta le fonti",
+    "Kaynakları inceleyin",
+    "الاطلاع على المصادر",
+    "स्रोत देखें",
+    "查阅来源"
+  ],
+  "Documentation checked on": [
+    "Documentación consultada el",
+    "Documentação consultada em",
+    "Dokumentation eingesehen am",
+    "Documentazione consultata il",
+    "Belgelerin incelenme tarihi",
+    "تاريخ الاطلاع على الوثائق",
+    "दस्तावेज़ देखने की तारीख",
+    "资料查阅日期"
+  ],
+  "GSL reference": [
+    "Referencia GSL",
+    "Referência GSL",
+    "GSL-Referenz",
+    "Riferimento GSL",
+    "GSL referansı",
+    "مرجع GSL",
+    "GSL संदर्भ",
+    "GSL 编号"
+  ],
+  "Document inspected": [
+    "Documento consultado",
+    "Documento consultado",
+    "Dokument eingesehen",
+    "Documento consultato",
+    "Belge incelendi",
+    "تم الاطلاع على الوثيقة",
+    "दस्तावेज़ देखा गया",
+    "已查阅文件"
+  ],
+  "Official third-party register inspected": [
+    "Registro oficial de un tercero consultado",
+    "Registo oficial de terceiros consultado",
+    "Offizielles Register eines Dritten eingesehen",
+    "Registro ufficiale di terzi consultato",
+    "Resmî üçüncü taraf sicili incelendi",
+    "تم الاطلاع على سجل رسمي لجهة خارجية",
+    "तीसरे पक्ष का आधिकारिक रजिस्टर देखा गया",
+    "已查阅第三方官方名录"
+  ],
+  "Manufacturer statement": [
+    "Declaración del fabricante",
+    "Declaração do fabricante",
+    "Herstellerangabe",
+    "Dichiarazione del produttore",
+    "Üretici beyanı",
+    "تصريح المصنّع",
+    "निर्माता का कथन",
+    "制造商声明"
+  ],
+  "Historical or expired evidence": [
+    "Pruebas históricas o caducadas",
+    "Evidências históricas ou expiradas",
+    "Historische oder abgelaufene Nachweise",
+    "Evidenze storiche o scadute",
+    "Geçmişe ait veya süresi dolmuş kanıtlar",
+    "أدلة تاريخية أو منتهية الصلاحية",
+    "पुराने या अवधि समाप्त हो चुके प्रमाण",
+    "历史或已过期的证明材料"
+  ],
+  "No public evidence found": [
+    "No se han encontrado pruebas públicas",
+    "Não foram encontradas evidências públicas",
+    "Keine öffentlich zugänglichen Nachweise gefunden",
+    "Nessuna evidenza pubblica trovata",
+    "Herkese açık bir kanıt bulunamadı",
+    "لم يُعثر على أدلة متاحة للعامة",
+    "कोई सार्वजनिक प्रमाण नहीं मिला",
+    "未找到公开证明材料"
+  ],
+  "Documentary evidence": [
+    "Pruebas documentales",
+    "Evidências documentais",
+    "Dokumentarische Nachweise",
+    "Evidenze documentali",
+    "Belgeye dayalı kanıtlar",
+    "الأدلة الوثائقية",
+    "दस्तावेज़ी प्रमाण",
+    "文件依据"
+  ],
+  "Certifications, labels and scope": [
+    "Certificaciones, sellos y alcance",
+    "Certificações, selos e âmbito",
+    "Zertifizierungen, Kennzeichnungen und Geltungsbereich",
+    "Certificazioni, marchi e ambito",
+    "Sertifikalar, kalite işaretleri ve kapsam",
+    "الشهادات وعلامات الجودة ونطاقها",
+    "प्रमाणन, गुणवत्ता चिह्न और दायरा",
+    "认证、标志及适用范围"
+  ],
+  "Status not disclosed": [
+    "Estado no comunicado",
+    "Estado não divulgado",
+    "Status nicht angegeben",
+    "Stato non comunicato",
+    "Durum açıklanmamış",
+    "الحالة غير معلنة",
+    "स्थिति नहीं बताई गई",
+    "状态未披露"
+  ],
+  "Documents and precise scope": [
+    "Documentos y alcance preciso",
+    "Documentos e âmbito preciso",
+    "Dokumente und genauer Geltungsbereich",
+    "Documenti e ambito preciso",
+    "Belgeler ve kesin kapsam",
+    "الوثائق والنطاق الدقيق",
+    "दस्तावेज़ और सटीक दायरा",
+    "文件及确切适用范围"
+  ],
+  "Dates and validity shown": [
+    "Fechas y validez indicadas",
+    "Datas e validade indicadas",
+    "Angegebene Daten und Gültigkeit",
+    "Date e validità indicate",
+    "Belirtilen tarihler ve geçerlilik",
+    "التواريخ والصلاحية المبيّنة",
+    "बताई गई तारीखें और वैधता",
+    "列明的日期和有效期"
+  ],
+  "The statement above distinguishes inspected documents from manufacturer claims. It does not certify every product or confirm that a document has never been suspended.": [
+    "La indicación anterior distingue los documentos consultados de las declaraciones del fabricante. No certifica todos los productos ni confirma que nunca se haya suspendido la validez de un documento.",
+    "A indicação acima distingue os documentos consultados das declarações do fabricante. Não certifica todos os produtos nem confirma que a validade de um documento nunca tenha sido suspensa.",
+    "Die obige Angabe unterscheidet eingesehene Dokumente von Herstellerangaben. Sie zertifiziert nicht jedes Produkt und bestätigt nicht, dass die Gültigkeit eines Dokuments nie ausgesetzt wurde.",
+    "L’indicazione sopra distingue i documenti consultati dalle dichiarazioni del produttore. Non certifica tutti i prodotti né conferma che la validità di un documento non sia mai stata sospesa.",
+    "Yukarıdaki açıklama, incelenen belgeler ile üretici beyanlarını birbirinden ayırır. Her ürünü sertifikalandırmaz ve bir belgenin geçerliliğinin hiçbir zaman askıya alınmadığını doğrulamaz.",
+    "يميّز البيان أعلاه بين الوثائق التي تم الاطلاع عليها وادعاءات المصنّع. وهو لا يمنح شهادة لكل منتج ولا يؤكد أن سريان أي وثيقة لم يُعلّق قط.",
+    "ऊपर दिया गया विवरण देखे गए दस्तावेज़ों और निर्माता के दावों में अंतर करता है। यह हर उत्पाद को प्रमाणित नहीं करता, न ही यह पुष्टि करता है कि किसी दस्तावेज़ की वैधता कभी निलंबित नहीं हुई है।",
+    "上述说明区分了已查阅的文件与制造商的声明，并不构成对所有产品的认证，也不能确认某份文件的效力从未被暂停。"
+  ],
+  "View the company’s sources": [
+    "Ver las fuentes de la ficha de empresa",
+    "Ver as fontes da ficha da empresa",
+    "Quellen zum Unternehmensprofil ansehen",
+    "Vedi le fonti della scheda aziendale",
+    "Şirket profilinin kaynaklarını görüntüleyin",
+    "عرض مصادر ملف الشركة",
+    "कंपनी प्रोफ़ाइल के स्रोत देखें",
+    "查看企业资料来源"
+  ],
+  "Trade with the European Union": [
+    "Comercio con la Unión Europea",
+    "Comércio com a União Europeia",
+    "Handel mit der Europäischen Union",
+    "Commercio con l’Unione europea",
+    "Avrupa Birliği ile ticaret",
+    "التجارة مع الاتحاد الأوروبي",
+    "यूरोपीय संघ के साथ व्यापार",
+    "与欧盟的贸易"
+  ],
+  "Customs and trade framework": [
+    "Marco aduanero y comercial",
+    "Enquadramento aduaneiro e comercial",
+    "Zoll- und Handelsrahmen",
+    "Quadro doganale e commerciale",
+    "Gümrük ve ticaret çerçevesi",
+    "الإطار الجمركي والتجاري",
+    "सीमा शुल्क और व्यापार ढाँचा",
+    "海关与贸易框架"
+  ],
+  "Country-level context inherited from the manufacturer’s profile. Applicability to this product, its origin and tariff code must be confirmed.": [
+    "Contexto del país tomado de la ficha del fabricante. Debe confirmarse su aplicabilidad a este producto, su origen y su clasificación arancelaria.",
+    "Contexto do país retirado da ficha do fabricante. A aplicabilidade a este produto, à sua origem e à sua classificação pautal deve ser confirmada.",
+    "Länderbezogener Kontext aus dem Herstellerprofil. Die Anwendbarkeit auf dieses Produkt, seinen Ursprung und seine Zolltarifnummer muss bestätigt werden.",
+    "Contesto del paese ripreso dalla scheda del produttore. L’applicabilità a questo prodotto, alla sua origine e alla sua classificazione doganale deve essere confermata.",
+    "Üretici profilinden alınan ülke düzeyindeki bilgiler. Bu ürüne, menşeine ve gümrük tarife koduna uygulanabilirliği teyit edilmelidir.",
+    "سياق البلد مأخوذ من ملف المصنّع. يجب تأكيد انطباقه على هذا المنتج ومنشئه وتصنيفه الجمركي.",
+    "देश से जुड़ी जानकारी निर्माता की प्रोफ़ाइल से ली गई है। इस उत्पाद, उसके मूल देश और सीमा शुल्क वर्गीकरण पर इसकी प्रयोज्यता की पुष्टि आवश्यक है।",
+    "国家层面的背景信息来自制造商资料。其对本产品、原产地及税则号的适用性仍须确认。"
+  ],
+  "Framework reference": [
+    "Referencia del marco",
+    "Referência do enquadramento",
+    "Referenz des Regelungsrahmens",
+    "Riferimento del quadro",
+    "Çerçeve referansı",
+    "مرجع الإطار",
+    "ढाँचे का संदर्भ",
+    "框架依据"
+  ],
+  "Dates and milestones": [
+    "Fechas e hitos",
+    "Datas e marcos",
+    "Daten und Meilensteine",
+    "Date e tappe principali",
+    "Tarihler ve dönüm noktaları",
+    "التواريخ والمحطات الرئيسية",
+    "तारीखें और प्रमुख पड़ाव",
+    "日期与重要节点"
+  ],
+  "Potential benefit": [
+    "Posible ventaja",
+    "Vantagem possível",
+    "Möglicher Vorteil",
+    "Possibile vantaggio",
+    "Olası avantaj",
+    "الميزة المحتملة",
+    "संभावित लाभ",
+    "潜在优惠"
+  ],
+  "Required evidence": [
+    "Justificantes necesarios",
+    "Comprovativos necessários",
+    "Erforderliche Nachweise",
+    "Documentazione probatoria necessaria",
+    "Gerekli kanıtlayıcı belgeler",
+    "المستندات الإثباتية المطلوبة",
+    "आवश्यक प्रमाण",
+    "所需证明材料"
+  ],
+  "Conditions and exclusions": [
+    "Condiciones y exclusiones",
+    "Condições e exclusões",
+    "Bedingungen und Ausschlüsse",
+    "Condizioni ed esclusioni",
+    "Koşullar ve istisnalar",
+    "الشروط والاستثناءات",
+    "शर्तें और अपवर्जन",
+    "条件与排除情形"
+  ],
+  "Requirements by use": [
+    "Requisitos según el uso",
+    "Requisitos consoante a utilização",
+    "Anforderungen je nach Verwendung",
+    "Requisiti in base all’uso",
+    "Kullanıma göre gereklilikler",
+    "المتطلبات بحسب الاستخدام",
+    "उपयोग के अनुसार आवश्यकताएँ",
+    "按用途确定的要求"
+  ],
+  "Rules to assess for your project": [
+    "Normas que debes examinar para tu proyecto",
+    "Regras a analisar para o seu projeto",
+    "Für Ihr Projekt zu prüfende Vorschriften",
+    "Norme da esaminare per il tuo progetto",
+    "Projeniz için değerlendirilmesi gereken kurallar",
+    "القواعد الواجب دراستها لمشروعك",
+    "आपके प्रोजेक्ट के लिए जाँचे जाने वाले नियम",
+    "项目需评估的规则"
+  ],
+  "These rules are conditional on the product, its intended use and the destination market. Listing them does not establish this manufacturer’s or this product’s compliance.": [
+    "Estas normas dependen del producto, de su uso previsto y del mercado de destino. Su inclusión no demuestra la conformidad de este fabricante ni de este producto.",
+    "Estas regras dependem do produto, da sua utilização prevista e do mercado de destino. A sua inclusão não comprova a conformidade deste fabricante nem deste produto.",
+    "Diese Vorschriften gelten abhängig vom Produkt, seinem vorgesehenen Verwendungszweck und dem Zielmarkt. Ihre Auflistung belegt weder die Konformität dieses Herstellers noch die dieses Produkts.",
+    "Queste norme dipendono dal prodotto, dall’uso previsto e dal mercato di destinazione. La loro inclusione non dimostra la conformità di questo produttore o di questo prodotto.",
+    "Bu kurallar ürüne, amaçlanan kullanımına ve hedef pazara bağlıdır. Burada listelenmeleri, bu üreticinin veya bu ürünün uygunluğunu kanıtlamaz.",
+    "يتوقف انطباق هذه القواعد على المنتج واستخدامه المقصود وسوق الوجهة. إدراجها لا يثبت امتثال هذا المصنّع أو هذا المنتج.",
+    "इन नियमों की प्रयोज्यता उत्पाद, उसके अपेक्षित उपयोग और गंतव्य बाज़ार पर निर्भर करती है। इन्हें सूचीबद्ध करने से इस निर्माता या उत्पाद का अनुपालन सिद्ध नहीं होता।",
+    "这些规则是否适用取决于产品、预定用途和目标市场。将其列出并不能证明该制造商或产品合规。"
+  ],
+  "When it applies": [
+    "Ámbito de aplicación",
+    "Âmbito de aplicação",
+    "Anwendungsbereich",
+    "Ambito di applicazione",
+    "Uygulama kapsamı",
+    "نطاق التطبيق",
+    "लागू होने का दायरा",
+    "适用范围"
+  ],
+  "Requirements and evidence": [
+    "Requisitos y pruebas",
+    "Requisitos e evidências",
+    "Anforderungen und Nachweise",
+    "Requisiti ed evidenze",
+    "Gereklilikler ve kanıtlar",
+    "المتطلبات والأدلة",
+    "आवश्यकताएँ और प्रमाण",
+    "要求与证明材料"
+  ],
+  "Limits and points to confirm": [
+    "Límites y aspectos por confirmar",
+    "Limites e pontos a confirmar",
+    "Grenzen und zu bestätigende Punkte",
+    "Limiti e punti da confermare",
+    "Sınırlar ve teyit edilmesi gereken noktalar",
+    "الحدود والنقاط التي تحتاج إلى تأكيد",
+    "सीमाएँ और पुष्टि किए जाने वाले बिंदु",
+    "限制与待确认事项"
+  ],
+  "Discuss your requirement": [
+    "Hablemos de tus necesidades",
+    "Vamos falar das suas necessidades",
+    "Besprechen Sie Ihren Bedarf",
+    "Parliamo delle tue esigenze",
+    "İhtiyacınızı görüşelim",
+    "لنتحدث عن احتياجك",
+    "अपनी आवश्यकता पर चर्चा करें",
+    "洽谈您的需求"
+  ],
+  "Your enquiry is handled by the GSL team. Specify the product, quantities, drawings and delivery destination so the team can help qualify the requirement.": [
+    "El equipo GSL tramita tu consulta. Indica el producto, las cantidades, los planos y el destino de entrega para que el equipo pueda ayudarte a evaluar tus necesidades.",
+    "A sua consulta é tratada pela equipa GSL. Indique o produto, as quantidades, os desenhos técnicos e o destino de entrega para que a equipa possa ajudar a avaliar as suas necessidades.",
+    "Ihre Anfrage wird vom GSL-Team bearbeitet. Geben Sie Produkt, Mengen, technische Zeichnungen und Lieferziel an, damit das Team Ihren Bedarf besser einordnen kann.",
+    "La tua richiesta è gestita dal team GSL. Specifica il prodotto, le quantità, i disegni tecnici e la destinazione di consegna per consentire al team di aiutarti a valutare le esigenze.",
+    "Talebiniz GSL ekibi tarafından ele alınır. Ekibin ihtiyacı değerlendirmeye yardımcı olabilmesi için ürünü, miktarları, teknik çizimleri ve teslimat yerini belirtin.",
+    "يتولى فريق GSL معالجة طلبك. حدّد المنتج والكميات والرسومات الفنية ووجهة التسليم ليتمكن الفريق من مساعدتك على تقييم الاحتياج.",
+    "आपके अनुरोध को GSL टीम संभालती है। उत्पाद, मात्रा, तकनीकी ड्रॉइंग और डिलीवरी का गंतव्य बताएँ, ताकि टीम आपकी आवश्यकता का आकलन करने में मदद कर सके।",
+    "您的询问由 GSL 团队处理。请说明产品、数量、技术图纸及交货地点，以便团队协助评估您的需求。"
+  ],
+  "Contact GSL about this product": [
+    "Contactar con GSL sobre este producto",
+    "Contactar a GSL sobre este produto",
+    "GSL zu diesem Produkt kontaktieren",
+    "Contatta GSL per questo prodotto",
+    "Bu ürün hakkında GSL ile iletişime geçin",
+    "تواصل مع GSL بشأن هذا المنتج",
+    "इस उत्पाद के बारे में GSL से संपर्क करें",
+    "就此产品联系 GSL"
+  ],
+  "Contact GSL about this manufacturer": [
+    "Contactar con GSL sobre este fabricante",
+    "Contactar a GSL sobre este fabricante",
+    "GSL zu diesem Hersteller kontaktieren",
+    "Contatta GSL per questo produttore",
+    "Bu üretici hakkında GSL ile iletişime geçin",
+    "تواصل مع GSL بشأن هذا المصنّع",
+    "इस निर्माता के बारे में GSL से संपर्क करें",
+    "就此制造商联系 GSL"
+  ],
+  "Prepare my enquiry": [
+    "Preparar mi consulta",
+    "Preparar a minha consulta",
+    "Meine Anfrage vorbereiten",
+    "Prepara la mia richiesta",
+    "Talebimi hazırlayın",
+    "إعداد طلبي",
+    "अपना अनुरोध तैयार करें",
+    "准备询问"
+  ],
+  "Published location": [
+    "Ubicación indicada",
+    "Localização indicada",
+    "Angegebener Standort",
+    "Sede indicata",
+    "Belirtilen konum",
+    "الموقع المعلن",
+    "बताया गया स्थान",
+    "公布的所在地"
+  ],
+  "GSL compiled this profile from public sources. The manufacturer has not necessarily registered on the platform or approved this profile. No partnership is implied.": [
+    "GSL ha elaborado esta ficha a partir de fuentes públicas. El fabricante no necesariamente se ha registrado en la plataforma ni ha aprobado esta ficha. No se presupone ninguna colaboración.",
+    "A GSL elaborou esta ficha a partir de fontes públicas. O fabricante não está necessariamente registado na plataforma nem aprovou necessariamente esta ficha. Não se presume qualquer parceria.",
+    "GSL hat dieses Profil aus öffentlichen Quellen zusammengestellt. Der Hersteller ist nicht unbedingt auf der Plattform registriert und hat dieses Profil nicht unbedingt freigegeben. Daraus wird keine Partnerschaft abgeleitet.",
+    "GSL ha compilato questa scheda da fonti pubbliche. Il produttore non è necessariamente registrato sulla piattaforma e non ha necessariamente approvato questa scheda. Non si presume alcuna partnership.",
+    "GSL bu profili herkese açık kaynaklardan derlemiştir. Üreticinin platforma kayıtlı olduğu veya bu profili onayladığı varsayılamaz. Herhangi bir ortaklık ima edilmez.",
+    "أعدّت GSL هذا الملف من مصادر عامة. ليس بالضرورة أن يكون المصنّع مسجّلًا على المنصة أو قد وافق على هذا الملف. ولا يُفهم من ذلك وجود أي شراكة.",
+    "GSL ने यह प्रोफ़ाइल सार्वजनिक स्रोतों से तैयार की है। यह ज़रूरी नहीं कि निर्माता ने प्लेटफ़ॉर्म पर पंजीकरण किया हो या इस प्रोफ़ाइल को मंज़ूरी दी हो। इससे किसी साझेदारी का संकेत नहीं मिलता।",
+    "GSL 根据公开来源编制了此资料。制造商不一定已在平台注册，也不一定已批准此资料。此资料不表示双方存在合作关系。"
+  ],
+  "Our documentation method": [
+    "Nuestro método de documentación",
+    "O nosso método de documentação",
+    "Unsere Dokumentationsmethode",
+    "Il nostro metodo di documentazione",
+    "Kaynakları derleme yöntemimiz",
+    "منهجنا في جمع الوثائق والمصادر",
+    "दस्तावेज़ी जानकारी जुटाने की हमारी विधि",
+    "我们的资料整理方法"
+  ],
+  "Industrial manufacturer · Research profile": [
+    "Fabricante industrial · Ficha documental",
+    "Fabricante industrial · Ficha documental",
+    "Industriehersteller · Recherchiertes Profil",
+    "Produttore industriale · Scheda documentale",
+    "Endüstriyel üretici · Araştırma profili",
+    "مصنّع صناعي · ملف بحثي",
+    "औद्योगिक निर्माता · शोध आधारित प्रोफ़ाइल",
+    "工业制造商 · 调研资料"
+  ],
+  "Contact the GSL team": [
+    "Contactar con el equipo GSL",
+    "Contactar a equipa GSL",
+    "Das GSL-Team kontaktieren",
+    "Contatta il team GSL",
+    "GSL ekibiyle iletişime geçin",
+    "تواصل مع فريق GSL",
+    "GSL टीम से संपर्क करें",
+    "联系 GSL 团队"
+  ],
+  "Manufacturing specialities": [
+    "Especialidades de fabricación",
+    "Especialidades de fabrico",
+    "Fertigungsspezialitäten",
+    "Specializzazioni produttive",
+    "Üretim uzmanlıkları",
+    "تخصصات التصنيع",
+    "विनिर्माण विशेषज्ञताएँ",
+    "制造专长"
+  ],
+  "Activities": [
+    "Actividades",
+    "Atividades",
+    "Tätigkeitsbereiche",
+    "Attività",
+    "Faaliyetler",
+    "الأنشطة",
+    "गतिविधियाँ",
+    "业务活动"
+  ],
+  "Certifications": [
+    "Certificaciones",
+    "Certificações",
+    "Zertifizierungen",
+    "Certificazioni",
+    "Sertifikalar",
+    "الشهادات",
+    "प्रमाणन",
+    "认证"
+  ],
+  "Requirements": [
+    "Requisitos",
+    "Requisitos",
+    "Anforderungen",
+    "Requisiti",
+    "Gereklilikler",
+    "المتطلبات",
+    "आवश्यकताएँ",
+    "要求"
+  ],
+  "Sources": [
+    "Fuentes",
+    "Fontes",
+    "Quellen",
+    "Fonti",
+    "Kaynaklar",
+    "المصادر",
+    "स्रोत",
+    "来源"
+  ],
+  "Activities and know-how": [
+    "Actividades y conocimientos técnicos",
+    "Atividades e saber-fazer",
+    "Tätigkeitsbereiche und Fachwissen",
+    "Attività e competenze tecniche",
+    "Faaliyetler ve teknik uzmanlık",
+    "الأنشطة والخبرات الفنية",
+    "गतिविधियाँ और तकनीकी विशेषज्ञता",
+    "业务活动与专业技术"
+  ],
+  "What the manufacturer offers": [
+    "Qué ofrece el fabricante",
+    "O que o fabricante oferece",
+    "Was der Hersteller anbietet",
+    "Cosa offre il produttore",
+    "Üreticinin sundukları",
+    "ما يقدمه المصنّع",
+    "निर्माता क्या प्रदान करता है",
+    "制造商提供的产品与服务"
+  ],
+  "Industry": [
+    "Sector de actividad",
+    "Setor de atividade",
+    "Branche",
+    "Settore di attività",
+    "Faaliyet alanı",
+    "قطاع النشاط",
+    "उद्योग क्षेत्र",
+    "所属行业"
+  ],
+  "Product families": [
+    "Familias de productos",
+    "Famílias de produtos",
+    "Produktfamilien",
+    "Famiglie di prodotti",
+    "Ürün aileleri",
+    "عائلات المنتجات",
+    "उत्पाद समूह",
+    "产品系列"
+  ],
+  "Published materials": [
+    "Materiales indicados en las fuentes",
+    "Materiais indicados nas fontes",
+    "In den Quellen angegebene Werkstoffe",
+    "Materiali indicati nelle fonti",
+    "Kaynaklarda belirtilen malzemeler",
+    "المواد المبيّنة في المصادر",
+    "स्रोतों में बताई गई सामग्रियाँ",
+    "来源中列明的材料"
+  ],
+  "Evidence of European market activity": [
+    "Pruebas de actividad en el mercado europeo",
+    "Evidências de atividade no mercado europeu",
+    "Nachweise für Aktivitäten auf dem europäischen Markt",
+    "Evidenze di attività sul mercato europeo",
+    "Avrupa pazarındaki faaliyetlere ilişkin kanıtlar",
+    "أدلة على النشاط في السوق الأوروبية",
+    "यूरोपीय बाज़ार में गतिविधि के प्रमाण",
+    "欧洲市场业务活动的证明材料"
+  ],
+  "No product family has been documented yet. The GSL team can help clarify your requirement.": [
+    "Todavía no se ha documentado ninguna familia de productos. El equipo GSL puede ayudarte a precisar tus necesidades.",
+    "Ainda não foi documentada nenhuma família de produtos. A equipa GSL pode ajudar a clarificar as suas necessidades.",
+    "Es wurde noch keine Produktfamilie dokumentiert. Das GSL-Team kann Ihnen helfen, Ihren Bedarf zu präzisieren.",
+    "Non è ancora stata documentata alcuna famiglia di prodotti. Il team GSL può aiutarti a precisare le tue esigenze.",
+    "Henüz herhangi bir ürün ailesi için kaynaklara dayalı bilgi derlenmedi. GSL ekibi ihtiyacınızı netleştirmenize yardımcı olabilir.",
+    "لم تُجمع بعد معلومات موثقة عن أي عائلة منتجات. يمكن لفريق GSL مساعدتك على توضيح احتياجك.",
+    "अभी किसी उत्पाद समूह की दस्तावेज़ी जानकारी नहीं जुटाई गई है। GSL टीम आपकी आवश्यकता स्पष्ट करने में मदद कर सकती है।",
+    "尚未整理任何产品系列的资料。GSL 团队可协助明确您的需求。"
+  ],
+  "Traceable information": [
+    "Información trazable",
+    "Informação rastreável",
+    "Nachvollziehbare Informationen",
+    "Informazioni tracciabili",
+    "Kaynağı izlenebilir bilgiler",
+    "معلومات يمكن تتبّع مصادرها",
+    "स्रोत तक जाँची जा सकने वाली जानकारी",
+    "可追溯的信息"
+  ],
+  "Company sources": [
+    "Fuentes de la ficha de empresa",
+    "Fontes da ficha da empresa",
+    "Quellen zum Unternehmensprofil",
+    "Fonti della scheda aziendale",
+    "Şirket profilinin kaynakları",
+    "مصادر ملف الشركة",
+    "कंपनी प्रोफ़ाइल के स्रोत",
+    "企业资料来源"
+  ],
+  "Published information": [
+    "Información publicada",
+    "Informação publicada",
+    "Veröffentlichte Informationen",
+    "Informazioni pubblicate",
+    "Yayımlanan bilgiler",
+    "المعلومات المنشورة",
+    "प्रकाशित जानकारी",
+    "公开信息"
+  ],
+  "Price, quantities and delivery": [
+    "Precio, cantidades y entrega",
+    "Preço, quantidades e entrega",
+    "Preis, Mengen und Lieferung",
+    "Prezzo, quantità e consegna",
+    "Fiyat, miktarlar ve teslimat",
+    "السعر والكميات والتسليم",
+    "मूल्य, मात्रा और डिलीवरी",
+    "价格、数量与交付"
+  ],
+  "Some commercial conditions are public; no priced offer is published in the sources below.": [
+    "Algunas condiciones comerciales son públicas; las fuentes siguientes no publican ninguna oferta con precio.",
+    "Algumas condições comerciais são públicas; não é publicada qualquer oferta com preço nas fontes abaixo.",
+    "Einige Handelskonditionen sind öffentlich zugänglich; in den folgenden Quellen ist kein Angebot mit Preisangabe veröffentlicht.",
+    "Alcune condizioni commerciali sono pubbliche; le fonti seguenti non pubblicano alcuna offerta con un prezzo.",
+    "Bazı ticari koşullar herkese açıktır; aşağıdaki kaynaklarda fiyat içeren bir teklif yayımlanmamıştır.",
+    "بعض الشروط التجارية متاحة للعامة؛ ولا تتضمن المصادر أدناه أي عرض منشور بسعر محدد.",
+    "कुछ वाणिज्यिक शर्तें सार्वजनिक हैं; नीचे दिए गए स्रोतों में मूल्य सहित कोई प्रस्ताव प्रकाशित नहीं है।",
+    "部分商务条件已公开，但以下来源中未发布带有价格的报价。"
+  ],
+  "The sources consulted do not publish commercial terms for this offer. The GSL team can help you specify the quantity and delivery requirement.": [
+    "Las fuentes consultadas no publican condiciones comerciales para esta oferta. El equipo GSL puede ayudarte a precisar la cantidad y los requisitos de entrega.",
+    "As fontes consultadas não publicam condições comerciais para esta oferta. A equipa GSL pode ajudar a definir a quantidade e os requisitos de entrega.",
+    "Die eingesehenen Quellen veröffentlichen keine Handelskonditionen für dieses Angebot. Das GSL-Team kann Ihnen helfen, Menge und Lieferanforderungen zu präzisieren.",
+    "Le fonti consultate non pubblicano condizioni commerciali per questa offerta. Il team GSL può aiutarti a definire la quantità e le esigenze di consegna.",
+    "İncelenen kaynaklarda bu teklifin ticari koşulları yayımlanmamıştır. GSL ekibi miktarı ve teslimat ihtiyacını netleştirmenize yardımcı olabilir.",
+    "لا تنشر المصادر التي تم الاطلاع عليها شروطًا تجارية لهذا العرض. يمكن لفريق GSL مساعدتك على تحديد الكمية ومتطلبات التسليم.",
+    "देखे गए स्रोतों में इस प्रस्ताव की वाणिज्यिक शर्तें प्रकाशित नहीं हैं। GSL टीम मात्रा और डिलीवरी की आवश्यकताएँ स्पष्ट करने में मदद कर सकती है।",
+    "已查阅的来源未公布此供应项目的商务条款。GSL 团队可协助明确所需数量和交付要求。"
+  ],
+  "Published price": [
+    "Precio publicado",
+    "Preço publicado",
+    "Veröffentlichter Preis",
+    "Prezzo pubblicato",
+    "Yayımlanan fiyat",
+    "السعر المنشور",
+    "प्रकाशित मूल्य",
+    "公开价格"
+  ],
+  "Price unit": [
+    "Unidad de precio",
+    "Unidade de preço",
+    "Preiseinheit",
+    "Unità di prezzo",
+    "Fiyat birimi",
+    "وحدة التسعير",
+    "मूल्य की इकाई",
+    "计价单位"
+  ],
+  "Published lead time": [
+    "Plazo publicado",
+    "Prazo publicado",
+    "Veröffentlichte Lieferzeit",
+    "Tempi di consegna pubblicati",
+    "Yayımlanan teslim süresi",
+    "مهلة التسليم المنشورة",
+    "प्रकाशित डिलीवरी समय सीमा",
+    "公开交期"
+  ],
+  "Commercial conditions": [
+    "Condiciones comerciales",
+    "Condições comerciais",
+    "Handelskonditionen",
+    "Condizioni commerciali",
+    "Ticari koşullar",
+    "الشروط التجارية",
+    "वाणिज्यिक शर्तें",
+    "商务条件"
+  ],
+  "Published price tiers": [
+    "Tramos de precios publicados",
+    "Escalões de preços publicados",
+    "Veröffentlichte Preisstaffeln",
+    "Fasce di prezzo pubblicate",
+    "Yayımlanan fiyat kademeleri",
+    "شرائح الأسعار المنشورة",
+    "प्रकाशित मात्रा-आधारित मूल्य स्तर",
+    "公开阶梯价格"
+  ],
+  "Tier quantity": [
+    "Cantidad del tramo",
+    "Quantidade do escalão",
+    "Menge der Preisstufe",
+    "Quantità della fascia",
+    "Kademe miktarı",
+    "كمية الشريحة",
+    "मूल्य स्तर की मात्रा",
+    "阶梯对应数量"
+  ],
+  "Consult the product sources": [
+    "Consultar las fuentes del producto",
+    "Consultar as fontes do produto",
+    "Produktquellen einsehen",
+    "Consulta le fonti del prodotto",
+    "Ürün kaynaklarını inceleyin",
+    "الاطلاع على مصادر المنتج",
+    "उत्पाद के स्रोत देखें",
+    "查阅产品来源"
+  ],
+  "Additional published conditions": [
+    "Condiciones adicionales publicadas",
+    "Condições adicionais publicadas",
+    "Weitere veröffentlichte Bedingungen",
+    "Ulteriori condizioni pubblicate",
+    "Yayımlanan ek koşullar",
+    "الشروط الإضافية المنشورة",
+    "प्रकाशित अतिरिक्त शर्तें",
+    "公开的附加条件"
+  ],
+  "Published availability": [
+    "Disponibilidad publicada",
+    "Disponibilidade publicada",
+    "Veröffentlichte Verfügbarkeit",
+    "Disponibilità pubblicata",
+    "Yayımlanan temin durumu",
+    "التوافر المعلن",
+    "प्रकाशित उपलब्धता",
+    "公开供货状态"
+  ],
+  "Published tiers": [
+    "Tramos publicados",
+    "Escalões publicados",
+    "Veröffentlichte Preisstufen",
+    "Fasce pubblicate",
+    "Yayımlanan kademeler",
+    "الشرائح المنشورة",
+    "प्रकाशित मूल्य स्तर",
+    "公开价格阶梯"
+  ],
+  "Published Incoterm": [
+    "Incoterm publicado",
+    "Incoterm publicado",
+    "Veröffentlichter Incoterm",
+    "Incoterm pubblicato",
+    "Yayımlanan Incoterm",
+    "شرط Incoterm المنشور",
+    "प्रकाशित Incoterm",
+    "公开的 Incoterm 贸易术语"
+  ],
+  "Published Incoterms": [
+    "Incoterms publicados",
+    "Incoterms publicados",
+    "Veröffentlichte Incoterms",
+    "Incoterms pubblicati",
+    "Yayımlanan Incoterms",
+    "شروط Incoterms المنشورة",
+    "प्रकाशित Incoterms",
+    "公开的 Incoterms 贸易术语"
+  ],
+  "Payment terms": [
+    "Condiciones de pago",
+    "Condições de pagamento",
+    "Zahlungsbedingungen",
+    "Condizioni di pagamento",
+    "Ödeme koşulları",
+    "شروط الدفع",
+    "भुगतान की शर्तें",
+    "付款条件"
+  ],
+  "Price basis": [
+    "Base del precio",
+    "Base do preço",
+    "Preisgrundlage",
+    "Base del prezzo",
+    "Fiyatın dayanağı",
+    "أساس السعر",
+    "मूल्य का आधार",
+    "价格依据"
+  ],
+  "Price details": [
+    "Detalles del precio",
+    "Detalhes do preço",
+    "Preisdetails",
+    "Dettagli del prezzo",
+    "Fiyat ayrıntıları",
+    "تفاصيل السعر",
+    "मूल्य का विवरण",
+    "价格说明"
+  ],
+  "Offer validity": [
+    "Validez de la oferta",
+    "Validade da oferta",
+    "Gültigkeit des Angebots",
+    "Validità dell’offerta",
+    "Teklifin geçerliliği",
+    "صلاحية العرض",
+    "प्रस्ताव की वैधता",
+    "报价有效期"
+  ],
+  "Quantity for the lowest published price": [
+    "Cantidad para el precio mínimo publicado",
+    "Quantidade para o preço mínimo publicado",
+    "Menge für den niedrigsten veröffentlichten Preis",
+    "Quantità per il prezzo minimo pubblicato",
+    "Yayımlanan en düşük fiyat için gereken miktar",
+    "الكمية اللازمة للحصول على أدنى سعر منشور",
+    "प्रकाशित न्यूनतम मूल्य के लिए आवश्यक मात्रा",
+    "获得公开最低价所需的数量"
+  ],
+  "Manufacturer profile": [
+    "Ficha del fabricante",
+    "Ficha do fabricante",
+    "Herstellerprofil",
+    "Scheda del produttore",
+    "Üretici profili",
+    "ملف المصنّع",
+    "निर्माता की प्रोफ़ाइल",
+    "制造商资料"
+  ],
+  "Product sections": [
+    "Secciones del producto",
+    "Secções do produto",
+    "Produktabschnitte",
+    "Sezioni del prodotto",
+    "Ürün bölümleri",
+    "أقسام المنتج",
+    "उत्पाद के अनुभाग",
+    "产品栏目"
+  ],
+  "Specifications": [
+    "Especificaciones",
+    "Especificações",
+    "Technische Daten",
+    "Specifiche",
+    "Teknik özellikler",
+    "المواصفات",
+    "विनिर्देश",
+    "规格参数"
+  ],
+  "Applications": [
+    "Aplicaciones",
+    "Aplicações",
+    "Anwendungen",
+    "Applicazioni",
+    "Kullanım alanları",
+    "الاستخدامات",
+    "उपयोग",
+    "应用领域"
+  ],
+  "Commercial details": [
+    "Detalles comerciales",
+    "Detalhes comerciais",
+    "Geschäftliche Konditionen",
+    "Dettagli commerciali",
+    "Ticari ayrıntılar",
+    "التفاصيل التجارية",
+    "वाणिज्यिक विवरण",
+    "商务详情"
+  ],
+  "Product or manufacturing family": [
+    "Producto o familia de fabricación",
+    "Produto ou família de fabrico",
+    "Produkt oder Fertigungsfamilie",
+    "Prodotto o famiglia di lavorazioni",
+    "Ürün veya üretim ailesi",
+    "منتج أو عائلة تصنيع",
+    "उत्पाद या विनिर्माण समूह",
+    "产品或制造类别"
+  ],
+  "Product overview": [
+    "Presentación del producto",
+    "Apresentação do produto",
+    "Produktübersicht",
+    "Presentazione del prodotto",
+    "Ürüne genel bakış",
+    "نظرة عامة على المنتج",
+    "उत्पाद का परिचय",
+    "产品概述"
+  ],
+  "Technical data": [
+    "Datos técnicos",
+    "Dados técnicos",
+    "Technische Daten",
+    "Dati tecnici",
+    "Teknik veriler",
+    "البيانات الفنية",
+    "तकनीकी आँकड़े",
+    "技术数据"
+  ],
+  "Detailed specifications": [
+    "Especificaciones detalladas",
+    "Especificações detalhadas",
+    "Detaillierte technische Daten",
+    "Specifiche dettagliate",
+    "Ayrıntılı teknik özellikler",
+    "المواصفات التفصيلية",
+    "विस्तृत विनिर्देश",
+    "详细规格"
+  ],
+  "Technical specifications not disclosed in the sources consulted.": [
+    "Las fuentes consultadas no comunican las especificaciones técnicas.",
+    "As especificações técnicas não são divulgadas nas fontes consultadas.",
+    "In den eingesehenen Quellen sind keine technischen Daten angegeben.",
+    "Le specifiche tecniche non sono comunicate nelle fonti consultate.",
+    "İncelenen kaynaklarda teknik özellikler açıklanmamıştır.",
+    "لم تُذكر المواصفات الفنية في المصادر التي تم الاطلاع عليها.",
+    "देखे गए स्रोतों में तकनीकी विनिर्देश नहीं बताए गए हैं।",
+    "已查阅的来源未披露技术规格。"
+  ],
+  "Applications, materials and customization": [
+    "Aplicaciones, materiales y personalización",
+    "Aplicações, materiais e personalização",
+    "Anwendungen, Werkstoffe und kundenspezifische Anpassung",
+    "Applicazioni, materiali e personalizzazione",
+    "Kullanım alanları, malzemeler ve özelleştirme",
+    "الاستخدامات والمواد والتخصيص",
+    "उपयोग, सामग्रियाँ और अनुकूलन",
+    "应用、材料与定制"
+  ],
+  "Published applications": [
+    "Aplicaciones publicadas",
+    "Aplicações publicadas",
+    "Veröffentlichte Anwendungsbereiche",
+    "Applicazioni pubblicate",
+    "Yayımlanan kullanım alanları",
+    "الاستخدامات المعلنة",
+    "प्रकाशित उपयोग",
+    "公开的应用领域"
+  ],
+  "Customization described by the manufacturer": [
+    "Personalización descrita por el fabricante",
+    "Personalização descrita pelo fabricante",
+    "Vom Hersteller beschriebene kundenspezifische Anpassung",
+    "Personalizzazione descritta dal produttore",
+    "Üreticinin açıkladığı özelleştirme olanakları",
+    "التخصيص كما يصفه المصنّع",
+    "निर्माता द्वारा बताया गया अनुकूलन",
+    "制造商说明的定制选项"
+  ],
+  "Product sources": [
+    "Fuentes del producto",
+    "Fontes do produto",
+    "Quellen zum Produkt",
+    "Fonti del prodotto",
+    "Ürün kaynakları",
+    "مصادر المنتج",
+    "उत्पाद के स्रोत",
+    "产品来源"
+  ],
+  "Product characteristics are attributed to the sources above. Company certifications have their own scope and do not automatically certify this offer.": [
+    "Las características del producto se atribuyen a las fuentes anteriores. Las certificaciones de la empresa tienen su propio alcance y no certifican automáticamente esta oferta.",
+    "As características do produto são atribuídas às fontes acima. As certificações da empresa têm o seu próprio âmbito e não certificam automaticamente esta oferta.",
+    "Die Produktmerkmale werden den obigen Quellen zugeschrieben. Unternehmenszertifizierungen haben einen eigenen Geltungsbereich und zertifizieren dieses Angebot nicht automatisch.",
+    "Le caratteristiche del prodotto sono attribuite alle fonti sopra indicate. Le certificazioni dell’azienda hanno un proprio ambito e non certificano automaticamente questa offerta.",
+    "Ürün özellikleri yukarıdaki kaynaklara dayandırılmıştır. Şirket sertifikalarının kendi kapsamları vardır ve bu teklifi otomatik olarak sertifikalandırmazlar.",
+    "تُنسب خصائص المنتج إلى المصادر أعلاه. لشهادات الشركة نطاقها الخاص، وهي لا تمنح هذا العرض شهادة تلقائيًا.",
+    "उत्पाद की विशेषताओं का आधार ऊपर दिए गए स्रोत हैं। कंपनी के प्रमाणनों का अपना दायरा होता है और वे इस प्रस्ताव को स्वतः प्रमाणित नहीं करते।",
+    "产品特性信息归于上述来源。企业认证各有其适用范围，并不自动构成对此供应项目的认证。"
+  ],
+  "Manufacturer’s documents": [
+    "Documentos del fabricante",
+    "Documentos do fabricante",
+    "Dokumente des Herstellers",
+    "Documenti del produttore",
+    "Üreticinin belgeleri",
+    "وثائق المصنّع",
+    "निर्माता के दस्तावेज़",
+    "制造商文件"
+  ],
+  "Quantity for the lowest price": [
+    "Cantidad para el precio mínimo",
+    "Quantidade para o preço mínimo",
+    "Menge für den niedrigsten Preis",
+    "Quantità per il prezzo minimo",
+    "En düşük fiyat için gereken miktar",
+    "الكمية اللازمة للحصول على أدنى سعر",
+    "न्यूनतम मूल्य के लिए आवश्यक मात्रा",
+    "获得最低价所需的数量"
+  ],
+  "All commercial details": [
+    "Todos los detalles comerciales",
+    "Todos os detalhes comerciais",
+    "Alle geschäftlichen Konditionen",
+    "Tutti i dettagli commerciali",
+    "Tüm ticari ayrıntılar",
+    "جميع التفاصيل التجارية",
+    "सभी वाणिज्यिक विवरण",
+    "全部商务详情"
   ]
 }

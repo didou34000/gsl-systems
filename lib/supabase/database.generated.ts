@@ -134,6 +134,7 @@ export interface DatabaseRows {
     failure_code: string | null;
     template_version: string;
     recipient_email: string | null;
+    recipient_organization_id: string | null;
   };
   offer_selections: {
     rfq_id: string;
@@ -290,7 +291,7 @@ export interface DatabaseRows {
     model_reference: string;
     category: string;
     description: string;
-    made_to_order: boolean;
+    made_to_order: boolean | null;
     specifications: unknown;
     revision: number | string;
     created_at: string;

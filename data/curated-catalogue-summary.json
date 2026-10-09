@@ -1,0 +1,39 @@
+{
+  "batchId": "gsl-research-2026-10-09",
+  "companies": 50,
+  "products": 78,
+  "by_country": {
+    "TR": 5,
+    "MA": 5,
+    "TN": 5,
+    "RS": 5,
+    "MK": 5,
+    "BA": 5,
+    "MD": 5,
+    "GE": 5,
+    "AL": 5,
+    "EG": 5
+  },
+  "by_category": {
+    "usinage-precision": 17,
+    "ressorts-fixations": 3,
+    "cables-electriques": 12,
+    "tolerie-soudage": 6,
+    "manutention-industrielle": 3,
+    "roulements-transmission": 5,
+    "faisceaux-cablage": 7,
+    "automatismes-appareillage": 3,
+    "moules-injection": 4,
+    "electronique-capteurs": 6,
+    "fonderie-forge": 1,
+    "pompes-hydraulique": 2,
+    "energie-transformateurs": 3,
+    "acier-construction": 3,
+    "aluminium-extrusion": 2,
+    "elastomeres-etancheite": 1
+  },
+  "source_urls": 234,
+  "published_prices": 1,
+  "published_moq": 3,
+  "sha256": "eb232cafed84dfd01bc4a467eee995950330db66525e4c6d4b110d7603bef7f4"
+}

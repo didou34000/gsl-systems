@@ -31,15 +31,23 @@ export async function GET(request:Request){try{
  }
  const company=z.string().uuid().safeParse(url.searchParams.get('organization'));const page=z.coerce.number().int().min(0).max(100000).safeParse(url.searchParams.get('page')||0);
  if(url.searchParams.has('organization')&&!company.success||!page.success)return json({error:'INVALID'},400);
+ let focusedRequest=url.searchParams.get('request');const focusedThread=url.searchParams.get('thread');
+ if((focusedRequest&&!z.string().uuid().safeParse(focusedRequest).success)||(focusedThread&&(!z.string().uuid().safeParse(focusedThread).success||focusedRequest)))return json({error:'INVALID'},400);
+ const access=await db.rpc('messaging_access');if(access.error)throw access.error;
+ const context=access.data as {mfaRequired:boolean;managedOrganizationIds:string[]};
+ const managedIds=new Set(context.managedOrganizationIds);
+ if(focusedThread){const thread=await db.from('threads').select('rfq_id').eq('id',focusedThread).maybeSingle();if(thread.error)throw thread.error;if(!thread.data)return json({error:context.mfaRequired?'MFA_REQUIRED':'FORBIDDEN'},403);focusedRequest=thread.data.rfq_id;}
  const [organizations,invitations,members]=await Promise.all([
   db.from('organizations').select('id,legal_name,country_code,buyer,supplier').order('legal_name'),
   db.from('organization_invitations').select('id,organization_id,email,role,state,expires_at').eq('state','pending').limit(100),
   db.from('memberships').select('organization_id,user_id,role,active').eq('active',true).limit(1000),
  ]);
  if([organizations,invitations,members].some(r=>r.error))throw Error('READ');
- let workspace:{rfqs:Record<string,unknown>[];threads:unknown[];items:Record<string,unknown>[];offers:unknown[];page:number;hasMore:boolean;total:number}={rfqs:[],threads:[],items:[],offers:[],page:0,hasMore:false,total:0};
- if(company.success){const result=await db.rpc('workspace_requests',{company:company.data,page_number:page.data});if(result.error){if(result.error.message.includes('FORBIDDEN'))return json({error:'FORBIDDEN'},403);throw result.error}workspace=result.data}
- return json({currentUser:{id:user.id,email:user.email},organizations:organizations.data,rfqs:workspace.rfqs.map(r=>({...r,items:r.state==='draft'?((r.draft_items||[]) as Record<string,unknown>[]).map(i=>({...i,selected_product_id:i.product})):workspace.items.filter(i=>i.rfq_id===r.id)})),threads:workspace.threads,offers:workspace.offers,invitations:invitations.data,members:members.data,pagination:{page:workspace.page,hasMore:workspace.hasMore,total:workspace.total}});
+ const result=await db.rpc('workspace_requests',{company:company.success?company.data:null,page_number:page.data,request_id:focusedRequest});
+ if(result.error){if(result.error.message.includes('FORBIDDEN'))return json({error:context.mfaRequired?'MFA_REQUIRED':'FORBIDDEN'},403);throw result.error}
+ const workspace=result.data as {rfqs:Record<string,unknown>[];threads:unknown[];items:Record<string,unknown>[];offers:unknown[];page:number;hasMore:boolean;total:number};
+ if(focusedRequest&&!workspace.rfqs.length)return json({error:context.mfaRequired?'MFA_REQUIRED':'FORBIDDEN'},403);
+ return json({currentUser:{id:user.id,email:user.email},mfaRequired:context.mfaRequired,organizations:(organizations.data||[]).map(o=>({...o,managed_by_gsl:managedIds.has(o.id)})),rfqs:workspace.rfqs.map(r=>({...r,items:r.state==='draft'?((r.draft_items||[]) as Record<string,unknown>[]).map(i=>({...i,selected_product_id:i.product})):workspace.items.filter(i=>i.rfq_id===r.id)})),threads:workspace.threads,offers:workspace.offers,invitations:invitations.data,members:members.data,pagination:{page:workspace.page,hasMore:workspace.hasMore,total:workspace.total}});
 }catch{return json({error:'PLATFORM_UNAVAILABLE'},503)}}
 const commandSchema=z.object({action:z.enum(['buyer_company','enable_buyer','review','withdraw','save_rfq','send_rfq','message','offer','select_offer','cancel_rfq','share_assistance','add_recipient','claim_review','review_checks','invite_member','accept_invitation','remove_member','revoke_invitation']),command:z.string().uuid(),args:z.record(z.unknown())}).strict();
 export async function POST(request:Request){

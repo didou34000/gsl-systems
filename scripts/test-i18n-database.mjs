@@ -20,6 +20,12 @@ grant usage on schema public,auth,storage to anon,authenticated;
 grant select,insert,update,delete on storage.objects to authenticated;grant select on storage.objects to anon;`);
 try{
  for(const name of (await readdir('supabase/migrations')).filter(name=>name.endsWith('.sql')).sort())await db.exec(await readFile('supabase/migrations/'+name,'utf8'));
+ const owners=[{id:randomUUID(),language:'fr'},{id:randomUUID(),language:'en'}];
+ for(const owner of owners){
+  await db.query('insert into auth.users(id,email,email_confirmed_at) values($1,$2,now())',[owner.id,owner.id+'@example.invalid']);
+  await db.query("insert into private.platform_admins(user_id,role) values($1,'owner')",[owner.id]);
+  await db.query("insert into public.profiles(user_id,display_name,language) values($1,'Synthetic owner',$2) on conflict(user_id) do update set language=excluded.language",[owner.id,owner.language]);
+ }
  const user=randomUUID();
  await db.query("insert into auth.users(id,email,email_confirmed_at) values($1,'locale-test@example.invalid',now())",[user]);
  await db.query("select set_config('request.jwt.claim.sub',$1,false)",[user]);
@@ -41,10 +47,10 @@ try{
  await db.exec('reset role');
  for(const [id,language] of contacts){
   assert.equal((await db.query('select language from public.contact_requests where id=$1',[id])).rows[0].language,language,'Contact retains the selected interface language');
-  const notifications=(await db.query('select language,template from public.notification_outbox where resource_id=$1 order by template',[id])).rows;
+  const notifications=(await db.query('select recipient_id,language,template from public.notification_outbox where resource_id=$1 order by template',[id])).rows;
   assert.equal(notifications.find(row=>row.template==='contact_received').language,language==='fr'?'fr':'en','Acknowledgement uses an existing mail template');
-  assert.equal(notifications.find(row=>row.template==='contact_operator').language,'fr');
-  assert.equal(notifications.length,2,'Idempotent retry did not duplicate notifications');
+  for(const owner of owners)assert.equal(notifications.find(row=>row.template==='contact_operator'&&row.recipient_id===owner.id).language,owner.language,'Owner notifications follow each recipient’s language');
+  assert.equal(notifications.length,3,'One acknowledgement and two owner notifications remain idempotent');
  }
  await assert.rejects(db.query("update public.contact_requests set language='xx' where id=$1",[contacts[0][0]]),/contact_requests_language_check/);
 }finally{await db.close();}

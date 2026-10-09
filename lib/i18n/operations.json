@@ -688,5 +688,125 @@
     "محاولات",
     "प्रयास",
     "次尝试"
+  ],
+  "Verify your identity to access the requests managed by GSL.": [
+    "Verifica tu identidad para acceder a las solicitudes gestionadas por GSL.",
+    "Verifique a sua identidade para aceder aos pedidos geridos pela GSL.",
+    "Bestätigen Sie Ihre Identität, um auf die von GSL betreuten Anfragen zuzugreifen.",
+    "Verifica la tua identità per accedere alle richieste gestite da GSL.",
+    "GSL tarafından yönetilen taleplere erişmek için kimliğinizi doğrulayın.",
+    "تحقّق من هويتك للوصول إلى الطلبات التي تديرها GSL.",
+    "GSL द्वारा प्रबंधित अनुरोधों तक पहुँचने के लिए अपनी पहचान सत्यापित करें।",
+    "请验证身份，以访问由 GSL 管理的询价。"
+  ],
+  "Request sent": [
+    "Solicitud enviada",
+    "Pedido enviado",
+    "Anfrage gesendet",
+    "Richiesta inviata",
+    "Talep gönderildi",
+    "تم إرسال الطلب",
+    "अनुरोध भेजा गया",
+    "询价已发送"
+  ],
+  "Company messages": [
+    "Mensajes a empresas",
+    "Mensagens às empresas",
+    "Nachrichten an Unternehmen",
+    "Messaggi alle aziende",
+    "Şirketlere mesajlar",
+    "رسائل إلى الشركات",
+    "कंपनियों को संदेश",
+    "发给企业的消息"
+  ],
+  "Request inbox": [
+    "Bandeja de solicitudes",
+    "Caixa de entrada de pedidos",
+    "Anfrageneingang",
+    "Richieste in arrivo",
+    "Talep gelen kutusu",
+    "صندوق الطلبات الواردة",
+    "अनुरोध इनबॉक्स",
+    "询价收件箱"
+  ],
+  "GSL requests require two-factor verification.": [
+    "Las solicitudes gestionadas por GSL requieren verificación en dos pasos.",
+    "Os pedidos geridos pela GSL exigem verificação em dois passos.",
+    "Von GSL betreute Anfragen erfordern eine Zwei-Faktor-Verifizierung.",
+    "Le richieste gestite da GSL richiedono la verifica a due fattori.",
+    "GSL tarafından yönetilen talepler için iki faktörlü doğrulama gerekir.",
+    "تتطلّب الطلبات التي تديرها GSL التحقّق بخطوتين.",
+    "GSL द्वारा प्रबंधित अनुरोधों के लिए दो-कारक सत्यापन आवश्यक है।",
+    "由 GSL 管理的询价需要双重身份验证。"
+  ],
+  "Responding for": [
+    "Respondiendo en nombre de",
+    "A responder em nome de",
+    "Antwort im Namen von",
+    "Risposta per conto di",
+    "Yanıt verilen şirket:",
+    "الردّ باسم",
+    "इनकी ओर से उत्तर:",
+    "当前回复身份"
+  ],
+  "All requests": [
+    "Todas las solicitudes",
+    "Todos os pedidos",
+    "Alle Anfragen",
+    "Tutte le richieste",
+    "Tüm talepler",
+    "جميع الطلبات",
+    "सभी अनुरोध",
+    "所有询价"
+  ],
+  "Requests across all companies": [
+    "Solicitudes de todas las empresas",
+    "Pedidos de todas as empresas",
+    "Anfragen aller Unternehmen",
+    "Richieste di tutte le aziende",
+    "Tüm şirketlerdeki talepler",
+    "طلبات جميع الشركات",
+    "सभी कंपनियों के अनुरोध",
+    "所有企业的询价"
+  ],
+  "Requests from all your companies appear here. Open the company concerned to reply or prepare a quote.": [
+    "Aquí aparecen las solicitudes de todas tus empresas. Abre la empresa correspondiente para responder o preparar un presupuesto.",
+    "Os pedidos de todas as suas empresas aparecem aqui. Abra a empresa em causa para responder ou preparar um orçamento.",
+    "Hier erscheinen die Anfragen aller Ihrer Unternehmen. Öffnen Sie das betreffende Unternehmen, um zu antworten oder ein Angebot zu erstellen.",
+    "Qui compaiono le richieste di tutte le tue aziende. Apri l'azienda interessata per rispondere o preparare un preventivo.",
+    "Tüm şirketlerinizin talepleri burada görünür. Yanıt vermek veya teklif hazırlamak için ilgili şirketi açın.",
+    "تظهر هنا طلبات جميع شركاتك. افتح الشركة المعنية للردّ أو لإعداد عرض سعر.",
+    "आपकी सभी कंपनियों के अनुरोध यहाँ दिखते हैं। उत्तर देने या मूल्य प्रस्ताव तैयार करने के लिए संबंधित कंपनी खोलें।",
+    "此处显示您所有企业的询价。打开相应企业，即可回复或准备报价。"
+  ],
+  "Manage for": [
+    "Gestionar para",
+    "Gerir para",
+    "Verwalten für",
+    "Gestisci per",
+    "Şu şirket için yönet:",
+    "الإدارة لصالح",
+    "इनके लिए प्रबंधित करें:",
+    "管理对象"
+  ],
+  "Reply for": [
+    "Responder en nombre de",
+    "Responder em nome de",
+    "Antworten im Namen von",
+    "Rispondi per conto di",
+    "Şu şirket adına yanıtla:",
+    "الردّ باسم",
+    "इनकी ओर से उत्तर दें:",
+    "代表以下企业回复"
+  ],
+  "No request is currently visible in this inbox.": [
+    "No hay ninguna solicitud visible en esta bandeja de entrada.",
+    "Não existe atualmente nenhum pedido visível nesta caixa de entrada.",
+    "In diesem Posteingang sind derzeit keine Anfragen sichtbar.",
+    "Al momento non ci sono richieste visibili in questa casella.",
+    "Bu gelen kutusunda şu anda görünür bir talep yok.",
+    "لا تظهر حاليًا أي طلبات في هذا الصندوق.",
+    "इस इनबॉक्स में अभी कोई अनुरोध दिखाई नहीं दे रहा है।",
+    "此收件箱中目前没有可见的询价。"
   ]
 }

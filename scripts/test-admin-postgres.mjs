@@ -30,10 +30,12 @@ try {
   await db.query('insert into private.platform_reviewers(user_id) values($1)', [reviewer]);
   const company = randomUUID(), product = randomUUID(), contact = randomUUID();
   await db.query("select set_config('request.jwt.claim.sub',$1,false)", [member]);
-  await db.query("insert into public.organizations(id,created_by,legal_name,country_code,entity_kind,supplier) values($1,$2,'Private legal name','FR','company',true)", [company, member]);
+  // Published fixture follows the ten-country sourcing scope; access assertions
+  // below remain independent from the selected supplier's country.
+  await db.query("insert into public.organizations(id,created_by,legal_name,country_code,entity_kind,supplier) values($1,$2,'Private legal name','TR','company',true)", [company, member]);
   await db.query("insert into public.products(id,organization_id,name,model_reference,category,specifications) values($1,$2,'Private specification name','REF','metal',$3)", [product, company, JSON.stringify({privateCost: 1000})]);
-  await db.query("insert into public.published_supplier_profiles(organization_id,source_revision,display_name,country_code,city,description,public_details) values($1,1,'Public company','FR','Paris','Public description',$2)", [company, JSON.stringify({verification: 'unverified', privateTestMarker: 'must not appear'})]);
-  await db.query("insert into public.published_products(product_id,organization_id,source_revision,name,category,description,specifications) values($1,$2,1,'Public product','metal','Public description',$3)", [product, company, JSON.stringify({verification: 'unverified'})]);
+  await db.query("insert into public.published_supplier_profiles(organization_id,source_revision,display_name,country_code,city,description,public_details) values($1,1,'Public company','TR','Istanbul','Public description',$2)", [company, JSON.stringify({verification: 'unverified', privateTestMarker: 'must not appear'})]);
+  await db.query("insert into public.published_products(product_id,organization_id,source_revision,name,category,description,specifications) values($1,$2,1,'Public product','metal','Public description',$3)", [product, company, JSON.stringify({verification: 'unverified', manufacturing_country:'TR'})]);
   await db.query("insert into public.contact_requests(id,email,name,subject,body,language) values($1,'contact@example.invalid','A contact','An inquiry','A synthetic inquiry body for this test.','fr')", [contact]);
   const as = async (id, aal = 'aal2', role = 'authenticated') => {
     await db.exec('reset role');

@@ -11,7 +11,8 @@ for(const c of sourcingAgreements){assert.ok(Number.isFinite(Date.parse(c.effect
 for(const name of Object.values(agreementNames))assert.equal(dictionary[name[0]].length,8);
 assert.equal(sourcingAgreements.find(c=>c.code==='TN').effective,'1998-03-01');
 const languages=data(compile('lib/i18n/languages.ts'));
-const {indexable,publicMetadata,privatePaths}=await import(data(compile('lib/seo.ts').replace("'./i18n/languages'",JSON.stringify(languages))));
+const brand=data(compile('lib/brand.ts'));
+const {indexable,publicMetadata,privatePaths}=await import(data(compile('lib/seo.ts').replace("'./i18n/languages'",JSON.stringify(languages)).replace("'./brand'",JSON.stringify(brand))));
 process.env.GSL_ENVIRONMENT='production';process.env.GSL_PUBLIC_INDEXING_ENABLED='true';
 for(const country of sourcingCountries){assert.ok(indexable('/pays/'+country.toLowerCase()));const metadata=publicMetadata('/pays/'+country.toLowerCase(),'Test','Test','fr');assert.equal(Object.keys(metadata.alternates.languages).length,11);}
 for(const path of privatePaths){assert.equal(indexable(path),false);assert.equal(indexable(path+'/test'),false);}

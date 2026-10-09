@@ -538,5 +538,125 @@
     "الرسائل الأحدث",
     "नए संदेश",
     "较新消息"
+  ],
+  "Verify your identity to open conversations managed by GSL.": [
+    "Verifica tu identidad para abrir las conversaciones gestionadas por GSL.",
+    "Verifique a sua identidade para abrir as conversas geridas pela GSL.",
+    "Bestätigen Sie Ihre Identität, um von GSL betreute Gespräche zu öffnen.",
+    "Verifica la tua identità per aprire le conversazioni gestite da GSL.",
+    "GSL tarafından yönetilen konuşmaları açmak için kimliğinizi doğrulayın.",
+    "تحقّق من هويتك لفتح المحادثات التي تديرها GSL.",
+    "GSL द्वारा प्रबंधित बातचीत खोलने के लिए अपनी पहचान सत्यापित करें।",
+    "请验证身份，以打开由 GSL 管理的对话。"
+  ],
+  "Requests and quotes": [
+    "Solicitudes y presupuestos",
+    "Pedidos e orçamentos",
+    "Anfragen und Angebote",
+    "Richieste e preventivi",
+    "Talepler ve teklifler",
+    "الطلبات وعروض الأسعار",
+    "अनुरोध और मूल्य प्रस्ताव",
+    "询价与报价"
+  ],
+  "GSL managed conversations require two-factor verification.": [
+    "Las conversaciones gestionadas por GSL requieren verificación en dos pasos.",
+    "As conversas geridas pela GSL exigem verificação em dois passos.",
+    "Von GSL betreute Gespräche erfordern eine Zwei-Faktor-Verifizierung.",
+    "Le conversazioni gestite da GSL richiedono la verifica a due fattori.",
+    "GSL tarafından yönetilen konuşmalar için iki faktörlü doğrulama gerekir.",
+    "تتطلّب المحادثات التي تديرها GSL التحقّق بخطوتين.",
+    "GSL द्वारा प्रबंधित बातचीत के लिए दो-कारक सत्यापन आवश्यक है।",
+    "由 GSL 管理的对话需要双重身份验证。"
+  ],
+  "Verify my identity": [
+    "Verificar mi identidad",
+    "Verificar a minha identidade",
+    "Meine Identität bestätigen",
+    "Verifica la mia identità",
+    "Kimliğimi doğrula",
+    "التحقّق من هويتي",
+    "मेरी पहचान सत्यापित करें",
+    "验证我的身份"
+  ],
+  "Inbox": [
+    "Bandeja de entrada",
+    "Caixa de entrada",
+    "Posteingang",
+    "Posta in arrivo",
+    "Gelen kutusu",
+    "صندوق الوارد",
+    "इनबॉक्स",
+    "收件箱"
+  ],
+  "All my companies": [
+    "Todas mis empresas",
+    "Todas as minhas empresas",
+    "Alle meine Unternehmen",
+    "Tutte le mie aziende",
+    "Tüm şirketlerim",
+    "جميع شركاتي",
+    "मेरी सभी कंपनियाँ",
+    "我的所有企业"
+  ],
+  "Inbox for": [
+    "Bandeja de entrada de",
+    "Caixa de entrada de",
+    "Posteingang für",
+    "Posta in arrivo di",
+    "Gelen kutusu:",
+    "صندوق وارد",
+    "इनका इनबॉक्स:",
+    "收件箱所属企业"
+  ],
+  "Company researched and managed by the GSL team. Messages are handled by GSL.": [
+    "Ficha documentada y gestionada por el equipo GSL. GSL se encarga de los mensajes.",
+    "Ficha documentada e gerida pela equipa GSL. As mensagens são tratadas pela GSL.",
+    "Das Unternehmensprofil wurde vom GSL-Team recherchiert und wird von ihm betreut. GSL bearbeitet die Nachrichten.",
+    "Scheda documentata e gestita dal team GSL. I messaggi sono trattati da GSL.",
+    "Şirket profili GSL ekibi tarafından araştırılmıştır ve yönetilmektedir. Mesajları GSL ele alır.",
+    "ملف أعدّه فريق GSL استنادًا إلى مصادر ويتولّى إدارته. تعالج GSL الرسائل.",
+    "यह प्रोफ़ाइल GSL टीम ने स्रोतों के आधार पर तैयार की है और वही इसका प्रबंधन करती है। संदेश GSL द्वारा संभाले जाते हैं।",
+    "该企业档案由 GSL 团队调研并管理，消息由 GSL 处理。"
+  ],
+  "Describe your requirements. The GSL team will review your request for this manufacturer.": [
+    "Describe lo que necesitas. El equipo GSL estudiará tu solicitud sobre este fabricante.",
+    "Descreva o que precisa. A equipa GSL analisará o seu pedido relativo a este fabricante.",
+    "Beschreiben Sie Ihren Bedarf. Das GSL-Team prüft Ihre Anfrage zu diesem Hersteller.",
+    "Descrivi le tue esigenze. Il team GSL esaminerà la tua richiesta relativa a questo produttore.",
+    "İhtiyacınızı açıklayın. GSL ekibi bu üreticiyle ilgili talebinizi inceleyecektir.",
+    "صِف احتياجاتك. سيدرس فريق GSL طلبك المتعلّق بهذا المصنّع.",
+    "अपनी आवश्यकताएँ बताएँ। GSL टीम इस निर्माता के संबंध में आपके अनुरोध की समीक्षा करेगी।",
+    "请描述您的需求，GSL 团队将审核您针对该制造商的询价。"
+  ],
+  "Send as": [
+    "Enviar en nombre de",
+    "Enviar em nome de",
+    "Senden im Namen von",
+    "Invia per conto di",
+    "Şu şirket adına gönder:",
+    "الإرسال باسم",
+    "इनकी ओर से भेजें:",
+    "发送身份"
+  ],
+  "Choose the company you represent": [
+    "Elige la empresa a la que representas",
+    "Escolha a empresa que representa",
+    "Wählen Sie das Unternehmen, das Sie vertreten",
+    "Scegli l'azienda che rappresenti",
+    "Temsil ettiğiniz şirketi seçin",
+    "اختر الشركة التي تمثّلها",
+    "जिस कंपनी का आप प्रतिनिधित्व करते हैं, उसे चुनें",
+    "选择您代表的企业"
+  ],
+  "Sending as": [
+    "Enviando en nombre de",
+    "A enviar em nome de",
+    "Versand im Namen von",
+    "Invio per conto di",
+    "Gönderim yapılan şirket:",
+    "جارٍ الإرسال باسم",
+    "इनकी ओर से भेजा जा रहा है:",
+    "当前发送身份"
   ]
 }
