@@ -4,6 +4,7 @@ import {useEffect, useRef, useState, type FormEvent} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {ArrowLeft, ArrowRight, Check, CheckCircle2, ChevronDown, Copy, KeyRound, LoaderCircle, LockKeyhole, LogOut, MailCheck, RefreshCw, ShieldCheck, Smartphone, Trash2} from 'lucide-react';
 import Link from '@/components/site-link';
+import BrandLogo from '@/components/brand-logo';
 import {localizedHref} from '@/lib/i18n/languages';
 import {normalizeAuthenticatorCode} from '@/lib/security/code';
 import {securityTranslate, type SecurityKey} from '@/lib/security/translations';
@@ -135,7 +136,7 @@ export default function SecurityCenter() {
 
   return <div className="security-shell">
     <header className="security-topbar">
-      <Link href="/" className="security-brand" aria-label="GSL systems"><svg viewBox="0 0 32 32" fill="none" aria-hidden="true"><path d="m13 20-2 2a6 6 0 0 1-8-8l6-6a6 6 0 0 1 8 0M19 12l2-2a6 6 0 0 1 8 8l-6 6a6 6 0 0 1-8 0M11 21l10-10" stroke="currentColor" strokeWidth="3.3" strokeLinecap="round"/></svg><span>GSL <b>systems</b></span></Link>
+      <Link href="/" className="security-brand" aria-label="GSL systems"><BrandLogo eager/></Link>
       <div><LanguageSelector/><Link className="security-back" href="/compte"><ArrowLeft size={16} aria-hidden/>{t('back')}</Link></div>
     </header>
     <main className="security-main">

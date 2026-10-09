@@ -9,7 +9,7 @@
 
 /* Homepage-only exploration. Other pages keep their existing brand. */
 body:has(.gsl-home){--is-blue:#a33b32;--is-blue-hover:#832e27;--is-ink:#242424;--is-slate:#625c57;--is-paper:#f5f3ef;--is-line:#d8d3cc;--primary:#a33b32;--ring:#a33b32;--accent:#f2e8e3;background:#f5f3ef}
-body:has(.gsl-home) .account-register{background:#a33b32;border-color:#a33b32}body:has(.gsl-home) .account-register:hover{background:#832e27}body:has(.gsl-home) .site-header{background:#fdfcf9}body:has(.gsl-home) .brand-logo img{filter:hue-rotate(132deg) saturate(.47)}
+body:has(.gsl-home) .account-register{background:#a33b32;border-color:#a33b32}body:has(.gsl-home) .account-register:hover{background:#832e27}body:has(.gsl-home) .site-header{background:#fdfcf9}
 .gsl-home{--gsl-ink:#242424}.gsl-home .film-hero h1{font-weight:550}.gsl-home .gsl-kicker{color:#625c57}.gsl-home .discovery-tags>span{background:#f5f3ef;border-color:#d8d3cc;color:#625c57}.gsl-home .gsl-sector-grid strong{font-weight:500}.gsl-home .gsl-method .gsl-kicker{color:#e7c6bf}.gsl-home .gsl-method a{color:#fff}.gsl-home .gsl-method a:hover{color:#e7c6bf}.gsl-home .gsl-join{padding-block:64px}.gsl-home .discovery-supplier-photo{height:210px}.gsl-home .discovery-supplier-photo>img{transition:none}.gsl-home .discovery-product-image img{transition:none}.gsl-home .discovery-product:hover .discovery-product-image img{transform:none}
 
 /* Editorial hero: quiet typography, open film composition, one search action. */

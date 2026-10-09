@@ -1,0 +1,77 @@
+/* Keep the supplied artwork complete, in its original proportions and colors. */
+.brand-logo {
+  display: block;
+  width: 140px;
+  height: auto;
+  max-width: 100%;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.site-header .header-main {
+  min-height: 88px;
+  height: auto;
+  padding-block: 10px;
+}
+
+.site-header .header-main > a {
+  flex-shrink: 0;
+}
+
+.footer-brand {
+  display: inline-block;
+  max-width: 100%;
+  padding: 12px 14px;
+  background: #fffefa;
+  border-radius: 6px;
+}
+
+.site-footer .brand-logo {
+  width: 170px;
+}
+
+.gsl-admin .admin-brand {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+  padding: 10px 13px;
+  margin: 0 0 26px;
+  margin-inline-start: 8px;
+  background: #fffefa;
+  border-radius: 6px;
+}
+
+.admin-brand .brand-logo {
+  width: 144px;
+}
+
+.security-brand {
+  display: block;
+  flex-shrink: 0;
+}
+
+.security-topbar {
+  padding-block: 10px;
+}
+
+@media (max-width: 760px) {
+  .site-header .header-main {
+    min-height: 76px;
+    padding-block: 8px;
+  }
+
+  .site-header .brand-logo,
+  .security-brand .brand-logo {
+    width: 120px;
+  }
+
+  .security-topbar {
+    padding-block: 8px;
+  }
+}
+
+@media (max-width: 360px) {
+  .site-header .brand-logo {
+    width: 106px;
+  }
+}

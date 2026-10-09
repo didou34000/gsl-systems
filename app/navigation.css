@@ -24,9 +24,3 @@
  .site-header .language-selector svg{display:none}
  .site-header .language-selector select{width:84px}
 }
-@media(max-width:360px){
- .site-header .gsl-wordmark{gap:8px}
- .site-header .gsl-wordmark>svg{width:26px;height:26px}
- .site-header .gsl-wordmark strong{font-size:18px}
- .site-header .gsl-wordmark small{font-size:7px}
-}
