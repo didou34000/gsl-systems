@@ -18,3 +18,6 @@ Images publiques Pexels, utilisées pour illustrer les secteurs ; aucune ne repr
 - Menuiserie : Quintin Gellar / Pexels https://www.pexels.com/photo/full-length-of-worker-working-313773/
 - Granulés : Teemeah / Wikimedia Commons https://commons.wikimedia.org/wiki/File:Plastic_pellets_for_injection_molding.jpg — CC BY-SA 3.0 https://creativecommons.org/licenses/by-sa/3.0/. Fichier original non modifié, cadrage d’affichage variable via CSS. L’image reste sous cette licence. Attribution et licence présentes sur /credits, accessible dans le pied de page.
 Les images Pexels relèvent de https://www.pexels.com/license/. Tous les médias sont des illustrations sans rattachement aux entreprises fictives ou inscrites.
+
+## Film du hero — 2026-10-12
+- Le film du hero redevient « Industrial machine cutting » (Edgar Fernandez / Mixkit, Free License, voir plus haut). Le film du terminal à conteneurs (Pexels) est retiré du dépôt.

@@ -1,5 +1,5 @@
 /* Scoped owner catalogue workspace. Public catalogue styles remain independent. */
-.gsl-catalogue-admin{--cat-ink:#20313a;--cat-muted:#6f7c82;--cat-line:#e3e8e4;--cat-paper:#f6f7f4;--cat-navy:#172c38;--cat-rust:#a85e47;--cat-green:#43735e;min-height:100dvh;background:var(--cat-paper);color:var(--cat-ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-size:14px;line-height:1.5;text-align:start;isolation:isolate}
+.gsl-catalogue-admin{--cat-ink:#20313a;--cat-muted:#6f7c82;--cat-line:#e3e8e4;--cat-paper:#f6f7f4;--cat-navy:#172c38;--cat-rust:#a85e47;--cat-green:#43735e;min-height:100dvh;background:var(--cat-paper);color:var(--cat-ink);font-family:var(--gsl-sans);font-size:14px;line-height:1.5;text-align:start;isolation:isolate}
 .gsl-catalogue-admin *{box-sizing:border-box}
 .gsl-catalogue-admin :is(h1,h2,h3,p){margin:0}
 .gsl-catalogue-admin button,.gsl-catalogue-admin input,.gsl-catalogue-admin select,.gsl-catalogue-admin textarea{font:inherit;color:inherit}

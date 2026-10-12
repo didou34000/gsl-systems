@@ -1,14 +1,4 @@
 {
-  "Aerial view of a container terminal — illustration": [
-    "Vista aérea de una terminal de contenedores — ilustración",
-    "Vista aérea de um terminal de contentores — ilustração",
-    "Luftaufnahme eines Containerterminals – Illustration",
-    "Vista aerea di un terminal container — illustrazione",
-    "Konteyner terminalinin havadan görünümü — görsel",
-    "منظر جوي لمحطة حاويات — صورة توضيحية",
-    "कंटेनर टर्मिनल का हवाई दृश्य — चित्रण",
-    "集装箱码头鸟瞰图—示意图"
-  ],
   "The right manufacturer for your next project.": [
     "El fabricante adecuado para tu próximo proyecto.",
     "O fabricante certo para o seu próximo projeto.",
@@ -98,16 +88,6 @@
     "بحث",
     "खोजें",
     "搜索"
-  ],
-  "Global trade · illustrative film": [
-    "Comercio mundial · vídeo ilustrativo",
-    "Comércio global · vídeo ilustrativo",
-    "Welthandel · Illustrationsfilm",
-    "Commercio globale · filmato illustrativo",
-    "Küresel ticaret · tanıtım videosu",
-    "التجارة العالمية · فيديو توضيحي",
-    "वैश्विक व्यापार · उदाहरण वीडियो",
-    "全球贸易 · 示意视频"
   ],
   "Pause film": [
     "Pausar vídeo",
@@ -2318,5 +2298,15 @@
     "لا مصنّع منشور يطابق الاختيار. الملفات الخيالية لا تستقبل الطلبات.",
     "कोई प्रकाशित निर्माता मेल नहीं खाता। काल्पनिक प्रोफ़ाइल अनुरोध प्राप्त नहीं कर सकतीं।",
     "没有匹配的已发布制造商。虚构资料无法接收询价。"
+  ],
+  "Close-up of a CNC lathe machining a metal part — illustration": [
+    "Primer plano de un torno CNC mecanizando una pieza metálica — ilustración",
+    "Grande plano de um torno CNC a maquinar uma peça metálica — ilustração",
+    "Nahaufnahme einer CNC-Drehmaschine bei der Bearbeitung eines Metallteils – Illustration",
+    "Primo piano di un tornio CNC che lavora un pezzo metallico — illustrazione",
+    "Metal parça işleyen bir CNC torna tezgâhının yakın çekimi — illüstrasyon",
+    "لقطة مقرّبة لمخرطة CNC أثناء تشغيل قطعة معدنية — صورة توضيحية",
+    "धातु के पुर्ज़े की मशीनिंग करती CNC लेथ का क्लोज़-अप — चित्रण",
+    "CNC 车床加工金属零件特写 — 示意图"
   ]
 }

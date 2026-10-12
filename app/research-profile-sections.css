@@ -5,7 +5,7 @@
 .research-company-title{display:flex;gap:24px;align-items:center;min-width:0}
 .research-company-title>div{min-width:0}
 .research-company-title>.catalogue-company-monogram,.research-company-title>.catalogue-company-logo{width:88px;height:88px;font-size:32px;background:#f3f2e9;color:#49614f;border-color:#e6e9db}
-.research-company-title h1{font:500 clamp(29px,3.1vw,44px)/1.18 Georgia,serif;letter-spacing:-.65px;margin:10px 0 15px}
+.research-company-title h1{font:500 clamp(29px,3.1vw,44px)/1.18 var(--gsl-sans);letter-spacing:-.65px;margin:10px 0 15px}
 .research-company-title .eyebrow{color:#c3ceb9;font-size:10px;letter-spacing:1.5px}
 .research-company-title .catalogue-location{color:#d2dccb;font-size:14px}
 .research-hero-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:14px;border-top:1px solid #ffffff24;padding-top:22px;margin-top:27px}
@@ -70,7 +70,7 @@
 .research-contact .catalogue-primary{white-space:normal}
 .research-editorial-note>svg{color:#8b966f;margin-bottom:10px}
 .research-editorial-note h3{color:#586b4c}
-.research-product-heading h1{font:500 clamp(31px,3.2vw,45px)/1.17 Georgia,serif;letter-spacing:-.8px;max-width:920px;margin:13px 0 20px}
+.research-product-heading h1{font:500 clamp(31px,3.2vw,45px)/1.17 var(--gsl-sans);letter-spacing:-.8px;max-width:920px;margin:13px 0 20px}
 .research-product-heading>.eyebrow{display:flex;align-items:center;gap:10px;color:#786e54}
 .research-product-byline{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;margin-bottom:27px}
 .research-product-byline .catalogue-research-label{margin:0}
@@ -92,7 +92,7 @@
 .research-product-sidebar>.product-manufacturer-link{margin:0 0 24px;padding-top:0}
 .research-price-summary{padding:24px;border-radius:10px;border:1px solid #dbe1d0;background:#eff3e8;margin-bottom:22px}
 .research-price-summary>span{font-size:11px;color:#77876a}
-.research-price-summary>strong{display:block;font:500 27px/1.25 Georgia,serif;color:#3a5132;margin:10px 0 20px}
+.research-price-summary>strong{display:block;font:500 27px/1.25 var(--gsl-sans);color:#3a5132;margin:10px 0 20px}
 .research-price-summary .catalogue-spec-table>div{font-size:12px;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;border-color:#dae2cf}
 .research-price-summary .research-missing{font-size:12px}
 .research-availability{font-size:12px;line-height:1.7;color:#856841;padding:11px 13px;background:#fff8e9;border:1px solid #e6dcc4;border-radius:5px;margin:-5px 0 19px}

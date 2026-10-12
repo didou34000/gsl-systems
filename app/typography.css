@@ -1,0 +1,6 @@
+/* Site-wide typeface: Inter, self-hosted (no remote font request). */
+:root{--gsl-sans:'Inter Variable',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif}
+body{font-family:var(--gsl-sans);font-feature-settings:'cv11','ss01';-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+input,button,select,textarea{font-family:inherit}
+h1,h2{font-weight:600;letter-spacing:-.025em}
+h3{letter-spacing:-.01em}
