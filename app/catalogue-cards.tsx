@@ -1,4 +1,5 @@
 'use client';
+import {trackJourney} from '@/lib/journey-analytics';
 import {useState} from 'react';
 import Image from 'next/image';
 import {ArrowRight, ArrowUpRight, Armchair, BookOpen, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Droplets, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
@@ -8,6 +9,7 @@ import {countryName} from '@/lib/country-names';
 import {companyResearch, productResearch, researchCategories, type CompanyResearch} from '@/lib/catalogue-research';
 import {categoryGroup, gslContactHref, publishedPrice, researchValue} from '@/lib/catalogue-display';
 import {useLanguage} from './language';
+import {roboticsFamilies,technicalRows} from '@/lib/robotics';
 import {SaveProduct} from './saved-selection';
 import {CompareProduct} from './compare-product';
 
@@ -17,11 +19,12 @@ export type CardSupplier = {organization_id: string; display_name: string; count
 export function useCategoryLabel() {
   const {l} = useLanguage();
   const labels: Record<string, string> = {metal: l('Metal & machining', 'Métal et usinage'), electricite: l('Electrical', 'Électricité'), emballage: l('Packaging', 'Emballage'), textile: l('Textiles', 'Textile'), plasturgie: l('Plastics', 'Plasturgie'), machines: l('Machinery', 'Machines'), construction: l('Construction', 'Construction'), mobilier: l('Furniture', 'Mobilier')};
-  for (const category of researchCategories) labels[category.id] = l(category.en, category.fr);
+  for (const category of [...researchCategories,...roboticsFamilies]) labels[category.id] = l(category.en, category.fr);
   return (category: string) => labels[category] || category || l('Manufacturing capabilities', 'Capacités de fabrication');
 }
 
 const categoryIcons: Record<string, LucideIcon> = {
+  'robots-plateformes': Factory, 'actionnement-transmission': Cog, prehension: Wrench, 'capteurs-vision': ScanLine, 'commande-electronique': Cpu, 'mecanique-cablage': Cable,
   metal: Cog, electricite: Zap, emballage: Package, textile: Shirt, plasturgie: Boxes, machines: Factory, construction: Building2, mobilier: Armchair,
   'usinage-precision': ScanLine, 'tolerie-soudage': Hammer, 'fonderie-forge': Flame, 'aluminium-extrusion': Layers,
   'roulements-transmission': Cog, 'pompes-hydraulique': Droplets, 'ressorts-fixations': Wrench, 'moules-injection': Boxes,
@@ -66,13 +69,14 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
   const material = research ? research.materials.filter(Boolean).join(', ') : p.specifications.materials;
   const process = p.specifications.processes || (research ? Object.entries(research.specifications).find(([key]) => /proc[eé]d[eé]|process|fabrication/i.test(key))?.[1] : null);
   return <article className="catalogue-product-card">
-    <div className="catalogue-card-media"><Link href={'/produits/' + p.product_id} aria-label={p.name}><ProductVisual product={p}/></Link><SaveProduct id={p.product_id} compact/></div>
+    <div className="catalogue-card-media"><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id} aria-label={p.name}><ProductVisual product={p}/></Link><SaveProduct id={p.product_id} compact/></div>
     <div className="catalogue-card-body">
       {supplier && <Link className="catalogue-byline" href={'/fabricants/' + supplier.organization_id}><Factory size={14} aria-hidden/>{supplier.display_name}</Link>}
-      <h3><Link href={'/produits/' + p.product_id}>{p.name}</Link></h3>
+      <h3><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id}>{p.name}</Link></h3>
       {research && <ResearchLabel/>}
       {p.description && <p className="catalogue-card-description">{p.description}</p>}
       <dl className="catalogue-card-facts">
+        {technicalRows(p.category,p.specifications).slice(0,2).map(m=><div key={m.key}><dt>{l(m.en,m.fr)}</dt><dd>{m.value} {m.unit}</dd></div>)}
         <div><dt>{l('Material', 'Matière')}</dt><dd>{material || l('Not disclosed', 'Non communiqué')}</dd></div>
         {(!research || Boolean(process)) && <div><dt>{l('Process', 'Procédé')}</dt><dd>{process || l('Not disclosed', 'Non communiqué')}</dd></div>}
       </dl>
@@ -80,7 +84,7 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
       {research && <div className="catalogue-card-research-meta"><span>{price || l('Price not disclosed', 'Prix non communiqué')}</span><span><BookOpen size={12} aria-hidden/>{research.sources.length} {l('sources', 'sources')}</span></div>}
       {research && researchValue(research.commercial.availability) && <p className="catalogue-card-availability">{researchValue(research.commercial.availability)}</p>}
       {!research && p.specifications.verification === 'unverified' && <span className="catalogue-status">{l('Unverified product', 'Produit non vérifié')}</span>}
-      <div className="catalogue-card-action"><CompareProduct id={p.product_id}/><Link href={'/produits/' + p.product_id}>{l('View product', 'Voir le produit')}<ArrowRight size={17} aria-hidden/></Link></div>
+      <div className="catalogue-card-action"><CompareProduct id={p.product_id}/><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id}>{l('View product', 'Voir le produit')}<ArrowRight size={17} aria-hidden/></Link></div>
     </div>
   </article>;
 }

@@ -1,6 +1,7 @@
 import type {Language} from './i18n/languages';
 import {translate} from './i18n/translations';
 import {z} from 'zod';
+import {roboticsMetrics,roboticsFamilies} from './robotics';
 import {countryCodes} from './onboarding/iso-countries';
 export const requirementFields=[
  {key:'title',step:0,fr:'Nom de votre projet',en:'Project title',required:true,max:160,placeholder:'Ex. Fabrication de boîtiers aluminium'},
@@ -24,9 +25,9 @@ export const requirementFields=[
 ] as const;
 export type RequirementKey=typeof requirementFields[number]['key'];
 const textShape=Object.fromEntries(requirementFields.map(f=>[f.key,z.string().max('max'in f?f.max:100)])) as Record<RequirementKey,z.ZodString>;
-export const requirementSchema=z.object({mode:z.enum(['guided','custom']).default('guided'),customFields:z.array(z.object({id:z.string().uuid(),label:z.string().max(100),value:z.string().max(2000)})).max(12).default([]),fields:z.object(textShape),destination:z.string().refine(c=>c===''||countryCodes.includes(c)),items:z.array(z.object({description:z.string().max(1000),quantity:z.string().max(20),unit:z.enum(['pcs','kg','m','m2','set'])})).min(1).max(50)});
+export const requirementSchema=z.object({robotics:z.object({kind:z.enum(['robot','component','custom']).default('component'),family:z.string().refine(v=>!v||roboticsFamilies.some(f=>f.id===v)).default(''),technical:z.record(z.string().max(250)).default({}),interface:z.string().max(250).default(''),environment:z.string().max(500).default('')}).default({kind:'component',family:'',technical:{},interface:'',environment:''}),mode:z.enum(['guided','custom']).default('guided'),customFields:z.array(z.object({id:z.string().uuid(),label:z.string().max(100),value:z.string().max(2000)})).max(12).default([]),fields:z.object(textShape),destination:z.string().refine(c=>c===''||countryCodes.includes(c)),items:z.array(z.object({product:z.string().uuid().optional(),description:z.string().max(1000),quantity:z.string().max(20),unit:z.enum(['pcs','kg','m','m2','set'])})).min(1).max(50)});
 export type Requirement=z.infer<typeof requirementSchema>;
-export function emptyRequirement():Requirement{return {mode:'guided',customFields:[],fields:Object.fromEntries(requirementFields.map(f=>[f.key,''])) as Record<RequirementKey,string>,destination:'',items:[{description:'',quantity:'',unit:'pcs'}]};}
+export function emptyRequirement():Requirement{return {robotics:{kind:'component',family:'',technical:{},interface:'',environment:''},mode:'guided',customFields:[],fields:Object.fromEntries(requirementFields.map(f=>[f.key,''])) as Record<RequirementKey,string>,destination:'',items:[{description:'',quantity:'',unit:'pcs'}]};}
 export function requirementIssues(d:Requirement,step:number,today:string,language:Language='en'):string[]{
  const issues:string[]=[];
  if((step===0&&d.mode==='custom'||step===2)&&d.customFields.some(f=>Boolean(f.label.trim())!==Boolean(f.value.trim())))issues.push('customFields');
@@ -38,6 +39,7 @@ export function requirementIssues(d:Requirement,step:number,today:string,languag
 }
 export function requirementDetails(d:Requirement,language:Language){
  const names=new Intl.DisplayNames([language],{type:'region'});
- return requirementFields.filter(f=>f.key!=='title'&&d.fields[f.key].trim()).map(f=>{let value=d.fields[f.key];if('options'in f&&language!=='fr'){const n=f.options.indexOf(value as never);if(n>=0)value=translate(language,f.english[n],value);}return `${translate(language,f.en,f.fr)}\n${value}`}).join('\n\n')+'\n\n'+translate(language,'Delivery country','Pays de livraison')+'\n'+(d.destination?names.of(d.destination):'—')+d.customFields.filter(f=>f.label.trim()&&f.value.trim()).map(f=>'\n\n'+f.label.trim()+'\n'+f.value.trim()).join('');
+ const robotics=d.robotics;const family=roboticsFamilies.find(f=>f.id===robotics.family);const roboticsText=[translate(language,'Robotics requirement','Besoin robotique'),translate(language,robotics.kind==='robot'?'Complete robot':robotics.kind==='custom'?'Custom manufacturing':'Standard component',robotics.kind==='robot'?'Robot complet':robotics.kind==='custom'?'Fabrication sur mesure':'Composant standard'),family?translate(language,family.en,family.fr):'',...(roboticsMetrics[robotics.family]||[]).filter(m=>robotics.technical[m.key]).map(m=>`${translate(language,m.en,m.fr)} (${m.unit}) : ${robotics.technical[m.key]}`),robotics.interface?`${translate(language,'Interfaces / compatibility','Interfaces / compatibilité')} : ${robotics.interface}`:'',robotics.environment?`${translate(language,'Environment / constraints','Environnement / contraintes')} : ${robotics.environment}`:''].filter(Boolean).join('\n');
+ return roboticsText+'\n\n'+requirementFields.filter(f=>f.key!=='title'&&d.fields[f.key].trim()).map(f=>{let value=d.fields[f.key];if('options'in f&&language!=='fr'){const n=f.options.indexOf(value as never);if(n>=0)value=translate(language,f.english[n],value);}return `${translate(language,f.en,f.fr)}\n${value}`}).join('\n\n')+'\n\n'+translate(language,'Delivery country','Pays de livraison')+'\n'+(d.destination?names.of(d.destination):'—')+d.customFields.filter(f=>f.label.trim()&&f.value.trim()).map(f=>'\n\n'+f.label.trim()+'\n'+f.value.trim()).join('');
 }
 export function requirementExport(d:Requirement,language:Language){return `${d.fields.title||'GSL Systems'}\n\n${requirementDetails(d,language)}\n\n${translate(language,'Requested items','Articles demandés')}\n${d.items.map((i,n)=>`${n+1}. ${i.description} — ${i.quantity} ${i.unit}`).join('\n')}\n\n${translate(language,'Private draft — not sent to suppliers.','Brouillon privé — aucun envoi à un fournisseur.')}`;}

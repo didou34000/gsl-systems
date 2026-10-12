@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "products": [
+    {
+      "id": "018d8d2c-80fb-4fdc-9f55-96c054802712",
+      "companyId": "e80142b0-eca4-56c7-919e-f689f5b4ff8f",
+      "name": "Robots IML et systèmes robotisés d’étiquetage",
+      "reference": "Gamme IML · exemple R928",
+      "category": "manutention-industrielle",
+      "description": "Robots d’étiquetage dans le moule, conçus et fabriqués par INMOLD en Serbie. Configuration et intégration à préciser selon la machine d’injection et le projet.",
+      "specifications": {
+        "manufacturing_country": "RS",
+        "processes": "Conception, fabrication et assemblage de robots IML",
+        "research_data": "{\"kind\":\"gsl_research\",\"schemaVersion\":1,\"sourceId\":\"inmold-robots-iml\",\"companySourceId\":\"F019\",\"checkedAt\":\"2026-10-12\",\"specifications\":{\"Application\":\"Étiquetage dans le moule (IML)\",\"Référence publiée à confirmer\":\"R928 — exemple de livraison de 2022\",\"Empreintes de l’exemple R928\":\"12, en trois rangées\",\"Contenant de l’exemple R928\":\"200 ml\"},\"applications\":[\"Automatisation robotique de l’étiquetage dans le moule\"],\"materials\":[],\"customization\":\"Systèmes IML adaptés au projet ; configuration à définir avec le fabricant.\",\"commercial\":{\"price_min\":null,\"price_max\":null,\"currency\":null,\"unit\":null,\"moq\":null,\"lead_time\":null,\"terms\":null,\"status\":\"non_publie\"},\"sources\":[{\"url\":\"https://inmold-ltd.com/en/\",\"title\":\"INMOLD — fabrication de robots IML en Serbie\",\"supports\":\"Fabrication, conception et assemblage en Serbie.\"},{\"url\":\"https://inmold-ltd.com/en/new-delivery-iml-robot-with-12-cavities/\",\"title\":\"INMOLD — robot IML R928, livraison documentée en 2022\",\"supports\":\"Exemple publié : R928, 12 empreintes en trois rangées, contenants de 200 ml. Disponibilité actuelle à confirmer.\"},{\"url\":\"https://inmold-ltd.com/en/packaging/\",\"title\":\"INMOLD — fabrication interne des robots IML\",\"supports\":\"Le fabricant décrit une fabrication des robots IML dans ses propres installations.\"}],\"scopeNote\":\"Offre documentaire, fabricant non inscrit : échange initial avec GSL. Charge utile, portée, interfaces, cadence et disponibilité doivent être confirmées. Aucune inspection physique ni conformité produit attestée.\"}"
+      },
+      "admission": {
+        "family": "robots-plateformes",
+        "production_country": "RS",
+        "production_site": "Požega, Serbie — installations de fabrication décrites par INMOLD",
+        "robotics_offer": "Conception, fabrication et assemblage internes de robots IML destinés à l’étiquetage dans le moule.",
+        "checked_at": "2026-10-12",
+        "sources": [
+          {
+            "url": "https://inmold-ltd.com/en/",
+            "title": "INMOLD — fabrication de robots IML en Serbie",
+            "supports": "Fabrication, conception et assemblage en Serbie."
+          },
+          {
+            "url": "https://inmold-ltd.com/en/new-delivery-iml-robot-with-12-cavities/",
+            "title": "INMOLD — robot IML R928, livraison documentée en 2022",
+            "supports": "Exemple publié : R928, 12 empreintes en trois rangées, contenants de 200 ml. Disponibilité actuelle à confirmer."
+          },
+          {
+            "url": "https://inmold-ltd.com/en/packaging/",
+            "title": "INMOLD — fabrication interne des robots IML",
+            "supports": "Le fabricant décrit une fabrication des robots IML dans ses propres installations."
+          }
+        ],
+        "technical": {}
+      }
+    }
+  ]
+}
