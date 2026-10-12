@@ -53,6 +53,8 @@ export async function POST(request:Request){
     if(readError)return json({error:'UNAVAILABLE'},503);
     const profile={display_name:body.name.trim(),language:resolveLanguage(body.language)};
     ({error}=existing?await db.from('profiles').update(profile).eq('user_id',user.id):await db.from('profiles').insert({user_id:user.id,...profile}));
+    // Keep the sign-up metadata in step so every screen shows the same name.
+    if(!error)({error}=await db.auth.updateUser({data:{display_name:profile.display_name,language:profile.language}}));
    }
   }else return json({error:'INVALID'},400);
   if(error){

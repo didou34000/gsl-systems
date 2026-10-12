@@ -67,6 +67,7 @@ globalThis.__gslLocaleAuthFixture={auth:{
  resetPasswordForEmail:async(...args)=>{calls.push(['reset',...args]);return {error:null}},
  getUser:async()=>({data:{user:{id:'fixture',email_confirmed_at:'2026-10-06'}}}),
  exchangeCodeForSession:async()=>({error:null}),
+ updateUser:async args=>{calls.push(['metadata',args]);return {error:null}},
 },from:()=>({
  select:()=>({eq:()=>({maybeSingle:async()=>({data:{user_id:'fixture'},error:null})})}),
  update:profile=>({eq:async()=>{calls.push(['profile',profile]);return {error:null}}}),
@@ -80,7 +81,7 @@ for(const language of locales){
   const call=calls.at(-1);
   if(action==='signup'){assert.equal(call[1].options.data.language,language);assert.equal(new URL(call[1].options.emailRedirectTo).searchParams.get('lang'),language);}
   if(action==='reset')assert.equal(new URL(call[2].redirectTo).searchParams.get('lang'),language);
-  if(action==='profile')assert.equal(call[1].language,language);
+  if(action==='profile'){const saved=calls.at(-2);assert.equal(saved[0],'profile');assert.equal(saved[1].language,language);assert.deepEqual(call,['metadata',{data:{display_name:'Locale tester',language}}]);}
  }
 }
 const nextUrl=dataUrl(`export const NextResponse={redirect:url=>{const response=new Response(null,{status:307,headers:{location:url.toString()}});response.cookies={set:(name,value)=>response.headers.append('Set-Cookie',name+'='+value)};return response}};`);
