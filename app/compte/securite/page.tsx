@@ -1,4 +1,5 @@
 import SecurityCenter from '@/app/security-center';
+import {privatePageMetadata} from '@/lib/page-metadata';
 
-export const metadata = {title: 'Sécurité du compte | GSL systems', robots: {index: false, follow: false}};
+export async function generateMetadata(){return privatePageMetadata('Account security','Sécurité du compte')}
 export default function Page() { return <SecurityCenter/>; }
