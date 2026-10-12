@@ -1,0 +1,54 @@
+/* Shared interface system — October 2026. Loaded last: one button family, one set of tokens.
+   Same direction as the home page (Inter, neutral greys, rust as the single action colour). */
+:root{--ui-ink:#17191c;--ui-text:#3d4247;--ui-muted:#5f656b;--ui-faint:#8b9096;--ui-line:#e4e1dc;--ui-line-strong:#d4cfc8;--ui-soft:#f7f6f4;--ui-hover:#f1efec;--ui-rust:#A84C35;--ui-rust-dark:#8c3d2a;--ui-rust-soft:#f8ede9;--ui-danger:#b42318;--ui-success:#1f7a4d;--ui-radius:8px;--ui-focus:0 0 0 3px rgba(168,76,53,.28)}
+
+/* Buttons */
+.ui-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid transparent;border-radius:var(--ui-radius);font-size:14px;font-weight:600;line-height:1.2;white-space:nowrap;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s,color .15s,box-shadow .15s}
+.ui-btn:focus-visible{outline:2px solid var(--ui-rust);outline-offset:2px}
+.ui-btn:disabled,.ui-btn[aria-disabled=true]{opacity:.5;cursor:not-allowed}
+.ui-btn-primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff}
+.ui-btn-primary:hover:not(:disabled){background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#fff}
+.ui-btn-secondary{background:#fff;border-color:var(--ui-line-strong);color:var(--ui-ink)}
+.ui-btn-secondary:hover:not(:disabled){background:var(--ui-hover);color:var(--ui-ink)}
+.ui-btn-ghost{background:transparent;color:var(--ui-text)}
+.ui-btn-ghost:hover:not(:disabled){background:var(--ui-hover);color:var(--ui-ink)}
+.ui-btn-danger-ghost{background:#fff;border-color:#efd3ce;color:var(--ui-danger)}
+.ui-btn-danger-ghost:hover:not(:disabled){background:#fdf3f1;color:var(--ui-danger)}
+.ui-btn-sm{min-height:34px;padding:0 12px;font-size:13px}
+[dir=rtl] .ui-btn svg.lucide-arrow-right{transform:scaleX(-1)}
+
+/* Existing public buttons follow the same family */
+.button-link,button[data-slot=button]{border-radius:var(--ui-radius)!important;font-weight:600;letter-spacing:0}
+.button-link{background:var(--ui-rust);border:1px solid var(--ui-rust);color:#fff;transition:background .15s,border-color .15s}
+.button-link:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#fff}
+.button-link:disabled,.button-link[aria-disabled=true]{background:var(--ui-rust);opacity:.5}
+
+/* Header: one primary action (quote), the account link is secondary */
+.site-header .account-signin{min-height:42px;border:1px solid var(--ui-line-strong)!important;background:#fff!important;color:var(--ui-ink)!important;border-radius:var(--ui-radius);font-size:14px;font-weight:600}
+.site-header .account-signin:hover{background:var(--ui-hover)!important}
+.site-header .account-signin svg{color:var(--ui-ink)}
+.site-header .header-quote{min-height:42px;border-radius:var(--ui-radius);font-size:14px}
+.site-header .header-message-link,.site-header .header-icon{border-radius:var(--ui-radius)}
+
+/* Administration: same palette, readable controls, no decorative uppercase labels */
+.gsl-admin{--admin-ink:#17191c;--admin-muted:#5f656b;--admin-line:#e4e1dc;--admin-paper:#f7f6f4;--admin-navy:#17191c;--admin-rust:#A84C35;font-size:14px}
+.gsl-admin .admin-eyebrow,.gsl-admin .admin-nav-label,.gsl-admin .admin-priorities .admin-eyebrow,.gsl-admin .admin-gate .admin-eyebrow{text-transform:none;letter-spacing:0;font-size:13px;font-weight:500}
+.gsl-admin .admin-nav-label{color:#8b9096}
+.gsl-admin .admin-priorities{background:#fff;border-color:var(--admin-line)}
+.gsl-admin .admin-priorities:before,.gsl-admin .admin-priorities-symbol{display:none}
+.gsl-admin .admin-button{min-height:38px;padding:0 14px;border-radius:var(--ui-radius);border-color:var(--ui-line-strong);color:var(--ui-ink);font-size:13.5px;font-weight:600}
+.gsl-admin .admin-button:hover{background:var(--ui-hover);border-color:var(--ui-line-strong);color:var(--ui-ink)}
+.gsl-admin .admin-button-primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff;box-shadow:none}
+.gsl-admin .admin-button-primary:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#fff}
+.gsl-admin .admin-button-danger{background:var(--ui-danger);border-color:var(--ui-danger);color:#fff}
+.gsl-admin .admin-button.admin-refresh{padding:0;min-width:38px}
+
+/* Account security: rust primary like the rest of the site */
+.security-shell .security-button{border-radius:var(--ui-radius);font-size:14px;border-color:var(--ui-line-strong)}
+.security-shell .security-button.primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff}
+.security-shell .security-button.primary:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark)}
+.security-eyebrow{display:none!important}
+.security-help{background:#fff;border:1px solid var(--ui-line);color:var(--ui-text)}
+.security-shell{--security-ink:#17191c;--security-muted:#5f656b;--security-line:#e4e1dc;background:#f7f6f4}
+.security-shell .security-help :is(h2,h3,summary,button){color:var(--ui-ink)}
+.security-shell :is(.security-link,.security-text-button){color:var(--ui-rust)}
