@@ -1,0 +1,135 @@
+/* Registration and onboarding — October 2026. Same direction as the signed-in workspace:
+   neutral surfaces, Inter, one button family (.ui-btn), rust as the only action colour. Loaded last. */
+
+/* Authentication shell (sign in, sign up, code, password) */
+.ob-auth{padding-top:48px;padding-bottom:80px}
+.ob-auth .auth-layout{grid-template-columns:minmax(0,.85fr) minmax(0,1fr);max-width:1040px;gap:56px}
+.ob-auth .auth-intro{background:transparent;color:var(--ui-ink);border-radius:0;padding:40px 0 0}
+.ob-auth .auth-intro h2{font-size:clamp(28px,3vw,36px);font-weight:600;line-height:1.15;letter-spacing:-.03em;color:var(--ui-ink);margin:0 0 16px}
+.ob-auth .auth-intro>p,.ob-auth .auth-intro p{color:var(--ui-muted);font-size:16px;line-height:1.65}
+.ob-auth .auth-intro a{color:var(--ui-rust)}
+.ob-auth .auth-trust{color:var(--ui-text);margin:28px 0}
+.ob-auth .auth-trust svg{color:var(--ui-success)}
+.ob-auth .auth-phase{border-top:1px solid var(--ui-line);color:var(--ui-muted)}
+.ob-auth .auth-phase strong{color:var(--ui-ink);font-weight:600}
+.ob-auth .auth-phase p{font-size:14px}
+.ob-auth .auth-panel{border:1px solid var(--ui-line);border-radius:12px;box-shadow:0 1px 2px rgba(23,25,28,.04);padding:32px}
+.ob-auth .auth-panel h1{font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--ui-ink)}
+.ob-auth .auth-panel>p{color:var(--ui-muted)}
+.ob-auth .auth-entry-tabs{border-bottom-color:var(--ui-line)}
+.ob-auth .auth-switch{border-top-color:var(--ui-line)}
+.ob-auth .auth-form input{border-color:var(--ui-line-strong);border-radius:var(--ui-radius);height:44px}
+.ob-auth .auth-form input:focus{outline:none;border-color:var(--ui-rust);box-shadow:var(--ui-focus)}
+.ob-auth .auth-form input[aria-invalid=true]{border-color:var(--ui-danger)}
+.ob-auth .auth-form input[aria-invalid=true]:focus{box-shadow:0 0 0 3px rgba(180,35,24,.2)}
+.ob-auth .auth-submit{border-radius:var(--ui-radius);min-height:44px}
+.ob-auth .auth-secondary{border-color:var(--ui-line-strong);border-radius:var(--ui-radius);color:var(--ui-ink)}
+.ob-auth .auth-form .auth-otp{background:var(--ui-soft);color:var(--ui-ink)}
+
+/* Journey progress */
+.ob-progress{margin:0 0 24px}
+.ob-progress-label{display:flex;justify-content:space-between;gap:12px;margin:0 0 8px;font-size:13px;color:var(--ui-muted)}
+.ob-progress-label strong{color:var(--ui-ink);font-weight:600}
+.ob-progress-bar{height:6px;border-radius:999px;background:var(--ui-hover);overflow:hidden}
+.ob-progress-bar span{display:block;height:100%;border-radius:inherit;background:var(--ui-rust);transition:width .3s}
+.ob-steps{display:flex;flex-wrap:wrap;gap:6px 18px;list-style:none;margin:12px 0 0;padding:0;font-size:12px;color:var(--ui-faint)}
+.ob-steps li{display:flex;align-items:center;gap:6px}
+.ob-steps li.current{color:var(--ui-ink);font-weight:600}
+.ob-steps li.done{color:var(--ui-muted)}
+.ob-step-mark{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;border:1.5px solid var(--ui-line-strong);flex-shrink:0}
+.ob-steps li.current .ob-step-mark{border-color:var(--ui-rust);background:var(--ui-rust-soft)}
+.ob-steps li.done .ob-step-mark{border-color:var(--ui-success);background:var(--ui-success);color:#fff}
+@media(prefers-reduced-motion:reduce){.ob-progress-bar span{transition:none}}
+
+/* Profile choice */
+.ob-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ob-choice{display:grid;gap:16px;margin-top:8px}
+.ob-roles{border:0;margin:0;padding:0;display:grid;gap:12px;min-width:0}
+.ob-role{position:relative;display:flex;gap:14px;align-items:flex-start;padding:18px;border:1px solid var(--ui-line-strong);border-radius:12px;background:#fff;cursor:pointer;transition:border-color .15s,background .15s,box-shadow .15s}
+.ob-role:hover{border-color:var(--ui-faint)}
+.ob-role input{position:absolute;opacity:0;inset:0;width:100%;height:100%;margin:0;cursor:pointer}
+.ob-role:has(input:focus-visible){box-shadow:var(--ui-focus);border-color:var(--ui-rust)}
+.ob-role.selected{border-color:var(--ui-rust);background:var(--ui-rust-soft)}
+.ob-role-icon{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:var(--ui-soft);color:var(--ui-ink);flex-shrink:0}
+.ob-role.selected .ob-role-icon{background:#fff;color:var(--ui-rust)}
+.ob-role-text{display:grid;gap:4px;min-width:0;padding-inline-end:24px}
+.ob-role-text strong{font-size:16px;font-weight:600;color:var(--ui-ink)}
+.ob-role-text span{font-size:14px;line-height:1.5;color:var(--ui-text)}
+.ob-role-text small{font-size:13px;line-height:1.5;color:var(--ui-muted)}
+.ob-role-check{position:absolute;top:16px;inset-inline-end:16px;display:grid;place-items:center;width:20px;height:20px;border-radius:50%;border:1.5px solid var(--ui-line-strong);color:transparent}
+.ob-role.selected .ob-role-check{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff}
+.ob-submit{width:100%;min-height:44px}
+.ob-note{font-size:13px;line-height:1.6;color:var(--ui-muted);margin:0}
+.ob-note a{color:var(--ui-rust);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.ob-chosen{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border:1px solid var(--ui-line);border-radius:var(--ui-radius);background:var(--ui-soft);font-size:14px;color:var(--ui-text)}
+.ob-chosen>span{display:flex;align-items:center;gap:10px;min-width:0}
+.ob-chosen strong{color:var(--ui-ink)}
+.ob-link{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--ui-rust);padding:6px 4px;border-radius:6px}
+.ob-link:hover{text-decoration:underline}
+.ob-link:focus-visible{outline:2px solid var(--ui-rust);outline-offset:2px}
+[dir=rtl] .ob-link svg,[dir=rtl] .ob-actions svg.lucide-arrow-right,[dir=rtl] .ob-next svg.lucide-arrow-right,[dir=rtl] .ob-submit svg{transform:scaleX(-1)}
+
+/* Field feedback */
+.ob-field-error{display:block;font-size:13px;font-weight:500;line-height:1.5;color:var(--ui-danger)}
+.ob-hint{display:flex;align-items:center;gap:6px;font-size:12px;font-weight:400;line-height:1.5;color:var(--ui-muted)}
+.ob-hint.ok{color:var(--ui-success)}
+.ob-alert{padding:12px 14px;border-radius:var(--ui-radius);background:#fdf3f1;border:1px solid #efd3ce;color:var(--ui-danger);font-size:14px;line-height:1.55;margin-bottom:16px}
+
+/* Onboarding pages */
+.ob-page{max-width:680px;padding-top:48px;padding-bottom:80px}
+.ob-card{background:#fff;border:1px solid var(--ui-line);border-radius:12px;padding:32px}
+.ob-card h1{font-size:26px;font-weight:600;letter-spacing:-.02em;line-height:1.2;color:var(--ui-ink);margin:0 0 8px}
+.ob-card h1:focus{outline:none}
+.ob-card h2{font-size:16px;font-weight:600;color:var(--ui-ink);margin:28px 0 12px}
+.ob-lead{font-size:15px;line-height:1.6;color:var(--ui-muted);margin:0 0 24px}
+.ob-form{display:grid;gap:20px}
+.ob-field{display:grid;gap:6px;min-width:0}
+.ob-field .sw-field input,.ob-field .sw-field select{border-color:var(--ui-line-strong);border-radius:var(--ui-radius);min-height:44px;padding:10px 12px}
+.ob-field .sw-field input:focus,.ob-field .sw-field select:focus{outline:none;border-color:var(--ui-rust);box-shadow:var(--ui-focus)}
+.ob-field.invalid .sw-field input,.ob-field.invalid .sw-field select{border-color:var(--ui-danger)}
+.ob-actions{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:4px}
+.ob-existing p{display:flex;gap:10px;align-items:flex-start;font-size:15px;line-height:1.6;color:var(--ui-text);margin:0 0 16px}
+.ob-existing svg{flex-shrink:0;margin-top:3px}
+.ob-done{text-align:start}
+.ob-done-mark{display:grid;place-items:center;width:48px;height:48px;border-radius:50%;background:#e8f4ee;color:var(--ui-success);margin-bottom:16px;flex-shrink:0}
+.ob-done>p{font-size:15px;line-height:1.6;color:var(--ui-text);margin:0 0 8px}
+.ob-done .ob-lead{margin-bottom:8px}
+.ob-done .ob-lead strong{color:var(--ui-ink)}
+.ob-resume{margin-top:16px}
+.ob-next{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px}
+.ob-next a{display:flex;align-items:center;gap:14px;padding:14px 16px;border:1px solid var(--ui-line);border-radius:10px;color:var(--ui-ink);transition:background .15s,border-color .15s}
+.ob-next a:hover{background:var(--ui-soft);border-color:var(--ui-line-strong)}
+.ob-next a:focus-visible{outline:2px solid var(--ui-rust);outline-offset:2px}
+.ob-next a>svg:first-child{color:var(--ui-rust);flex-shrink:0}
+.ob-next a>span{display:grid;gap:2px;flex:1;min-width:0}
+.ob-next strong{font-size:15px;font-weight:600}
+.ob-next small{font-size:13px;line-height:1.5;color:var(--ui-muted)}
+.ob-next a>svg:last-child{color:var(--ui-faint);flex-shrink:0}
+.ob-inline{background:#fff;border:1px solid var(--ui-line);border-radius:12px;padding:24px;margin:16px 0}
+.ob-inline h2{font-size:18px;font-weight:600;margin:0 0 16px}
+
+/* Supplier workspace: welcome and confirmation */
+.ob-welcome,.ob-confirm{background:#fff;border:1px solid var(--ui-line);border-radius:12px;padding:24px;margin-bottom:16px}
+.ob-welcome h2{font-size:20px;font-weight:600;letter-spacing:-.01em;color:var(--ui-ink);margin:0 0 12px}
+.ob-welcome ul{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px}
+.ob-welcome li{display:flex;gap:10px;align-items:flex-start;font-size:14px;line-height:1.55;color:var(--ui-text)}
+.ob-welcome li svg{color:var(--ui-success);flex-shrink:0;margin-top:3px}
+.ob-confirm{display:flex;gap:16px;align-items:flex-start;border-color:#cfe6da;background:#f6fbf8}
+.ob-confirm h2{font-size:20px;font-weight:600;color:var(--ui-ink);margin:0 0 6px}
+.ob-confirm h3{font-size:14px;font-weight:600;color:var(--ui-ink);margin:16px 0 8px}
+.ob-confirm p{font-size:14px;line-height:1.6;color:var(--ui-text);margin:0}
+.ob-confirm .ob-done-mark{width:40px;height:40px;margin:0}
+
+@media(max-width:760px){
+ .ob-auth{padding-top:20px;padding-bottom:48px}
+ .ob-auth .auth-layout{grid-template-columns:1fr;gap:20px}
+ .ob-auth .auth-intro{padding:0;order:2}
+ .ob-auth .auth-panel{order:1;padding:22px 18px}
+ .ob-auth .auth-intro h2{font-size:22px}
+ .ob-page{padding-top:20px;padding-bottom:48px}
+ .ob-card{padding:22px 18px}
+ .ob-role{padding:16px}
+ .ob-steps{display:none}
+ .ob-confirm{flex-direction:column}
+ .ob-actions .ui-btn{flex:1 1 auto}
+}
