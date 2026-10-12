@@ -29,6 +29,8 @@
 .site-header .account-signin svg{color:var(--ui-ink)}
 .site-header .header-quote{min-height:42px;border-radius:var(--ui-radius);font-size:14px}
 .site-header .header-message-link,.site-header .header-icon{border-radius:var(--ui-radius)}
+/* Messages sits beside Saved products in the header: same type size, weight and spacing. */
+.site-header .header-message-link{font-size:15px;font-weight:500;gap:8px}
 
 /* Administration: same palette, readable controls, no decorative uppercase labels */
 .gsl-admin{--admin-ink:#17191c;--admin-muted:#5f656b;--admin-line:#e4e1dc;--admin-paper:#f7f6f4;--admin-navy:#17191c;--admin-rust:#A84C35;font-size:14px}

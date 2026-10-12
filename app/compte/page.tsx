@@ -1,3 +1,4 @@
 import MemberDashboard from '@/app/member-dashboard';
-export const metadata={title:'Mon espace | GSL Systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('My account','Mon espace')}
 export default function Page(){return <MemberDashboard/>}

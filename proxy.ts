@@ -3,9 +3,14 @@ import {NextResponse,type NextRequest} from 'next/server';
 import {isLanguage} from './lib/i18n/languages';
 import {isSourcingCountry} from './lib/sourcing-coverage';
 import {runtimeConfig} from './lib/runtime-config';
+import {publicDeployment} from './lib/hosting';
+// Pages whose server redirect never reaches the browser: the client shell renders these paths itself.
+const movedPages:Record<string,string>={'/professionnel':'/operations','/espace':'/compte'};
 export async function proxy(request:NextRequest){
  const countryRoute=request.nextUrl.pathname.match(/^\/pays\/([^/]+)\/?$/);
  if(countryRoute){const code=countryRoute[1].toUpperCase();const path=isSourcingCountry(code)?'/pays/'+code.toLowerCase():'/pays';if(request.nextUrl.pathname!==path){const target=request.nextUrl.clone();target.pathname=path;return NextResponse.redirect(target,308);}}
+ const moved=publicDeployment&&movedPages[request.nextUrl.pathname];
+ if(moved){const target=request.nextUrl.clone();target.pathname=moved;return NextResponse.redirect(target,307);}
  const filter=request.nextUrl.searchParams.get('country');
  if(['/catalogue','/fabricants'].includes(request.nextUrl.pathname)&&filter&&(!isSourcingCountry(filter)||filter!==filter.toUpperCase())){const target=request.nextUrl.clone();if(isSourcingCountry(filter.toUpperCase()))target.searchParams.set('country',filter.toUpperCase());else target.searchParams.delete('country');return NextResponse.redirect(target,307);}
  const language=request.nextUrl.searchParams.get('lang');if(isLanguage(language))request.cookies.set('gsl-language',language);

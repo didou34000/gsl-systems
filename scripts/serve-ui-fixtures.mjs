@@ -8,10 +8,10 @@ if(process.env.SUPABASE_URL||process.env.DATABASE_URL)throw Error('External data
 const compile=p=>ts.transpileModule(fs.readFileSync(p,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
 const encoded=s=>'data:text/javascript;base64,'+Buffer.from(s).toString('base64');
 const iso=encoded(compile('lib/onboarding/iso-countries.ts'));
-const countries=encoded(compile('lib/onboarding/country-requirements.ts'));
-const options=encoded(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)));
 const coverage=encoded(compile('lib/sourcing-coverage.ts'));
-const code=compile('lib/onboarding/supplier-profile.ts').replace("'../sourcing-coverage'",JSON.stringify(coverage)).replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(countries)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const countries=encoded(compile('lib/onboarding/country-requirements.ts'));
+const options=encoded(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'../sourcing-coverage'",JSON.stringify(coverage)));
+const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'../sourcing-coverage'",JSON.stringify(coverage)).replace("'./country-requirements'",JSON.stringify(countries)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
 const {emptyProfile,supplierDraftSchema,supplierSchema,productPublicationIssues,companyIssues,profileIssues,supplierValidationIssues}=await import(encoded(code));
 const org=randomUUID(),product=randomUUID(),user=randomUUID();
 let favorites=[product];let buyerCompany=null;let requests=[];let profile=emptyProfile();
@@ -62,7 +62,7 @@ http.createServer(async(req,res)=>{try{
    if(req.method==='POST'&&body.action==='save_rfq'){const r={...body.args,id:randomUUID(),revision:1,state:'draft',organization_id:org};requests.push(r);return json(res,{result:r,ok:true})}
    return json(res,{currentUser:{id:user},organizations:ownOrganizations,members:[{user_id:user,organization_id:org,active:true,role:'owner'}],rfqs:requests,threads:[],offers:[],invitations:[],pagination:{page:0,total:requests.length,hasMore:false}});
   }
-  if(url.pathname==='/api/messaging')return json(res,{organizations:[{id:org,legal_name:'Atelier de test local',can_buy:true}],organization:org,conversations:[],messages:[],selected:null,moreMessages:false,moreConversations:false});
+  if(url.pathname==='/api/messaging')return json(res,{organizations:[{id:org,legal_name:'Atelier de test local',can_buy:true}],replyOrganizations:[{id:org,legal_name:'Atelier de test local',can_buy:true}],organization:org,conversations:[],messages:[],selected:null,moreMessages:false,moreConversations:false});
   return json(res,{error:'Fixture route not implemented'},404);
  }
  const upstream=http.request({hostname:'127.0.0.1',port:5173,path:req.url,method:req.method,headers:{...req.headers,host:'localhost:5188'}},r=>{const own=res.getHeader('Set-Cookie');const headers={...r.headers};if(own)headers['set-cookie']=[...[].concat(own),...[].concat(r.headers['set-cookie']||[])];res.removeHeader('Set-Cookie');res.writeHead(r.statusCode,headers);r.pipe(res)});upstream.on('error',()=>{res.writeHead(502);res.end('Start Next on port 5173 first')});req.pipe(upstream);

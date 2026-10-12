@@ -1,3 +1,4 @@
 import Messaging from '../messaging';
-export const metadata={title:'Messagerie | GSL Systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('Messages','Messagerie')}
 export default function Page(){return <Messaging/>}

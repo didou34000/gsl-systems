@@ -1,3 +1,4 @@
 import AuthForm from '@/app/auth-form';
-export const metadata={title:'Confirmer mon email | GSL systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('Confirm my email','Confirmer mon email')}
 export default function Page(){return <AuthForm mode="verify"/>}
