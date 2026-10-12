@@ -1,4 +1,5 @@
 import {Suspense} from 'react';
 import BuyerOnboarding from '@/app/buyer-onboarding';
-export const metadata={title:'Votre entreprise | GSL Systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('Your company','Votre entreprise')}
 export default function Page(){return <Suspense><BuyerOnboarding/></Suspense>}
