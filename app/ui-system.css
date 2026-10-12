@@ -31,6 +31,8 @@
 .site-header .account-signin svg{color:var(--ui-ink)}
 .site-header .header-quote{min-height:42px;border-radius:var(--ui-radius);font-size:14px}
 .site-header .header-message-link,.site-header .header-icon{border-radius:var(--ui-radius)}
+/* Messages sits beside Saved products in the header: same type size, weight and spacing. */
+.site-header .header-message-link{font-size:15px;font-weight:500;gap:8px}
 
 /* Account security: rust primary like the rest of the site */
 .security-shell .security-button{border-radius:var(--ui-radius);font-size:14px;border-color:var(--ui-line-strong)}
