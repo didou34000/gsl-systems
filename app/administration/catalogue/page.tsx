@@ -1,4 +1,5 @@
 import AdminCatalogue from '@/app/admin-catalogue';
+import {AdminFrame} from '@/app/admin-shell';
 import '@/app/admin-catalogue.css';
 
 export const metadata = {
@@ -7,5 +8,5 @@ export const metadata = {
 };
 
 export default function CatalogueAdministrationPage() {
-  return <AdminCatalogue />;
+  return <AdminFrame current="catalogue"><AdminCatalogue /></AdminFrame>;
 }

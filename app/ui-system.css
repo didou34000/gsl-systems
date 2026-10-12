@@ -12,6 +12,8 @@
 .ui-btn-secondary:hover:not(:disabled){background:var(--ui-hover);color:var(--ui-ink)}
 .ui-btn-ghost{background:transparent;color:var(--ui-text)}
 .ui-btn-ghost:hover:not(:disabled){background:var(--ui-hover);color:var(--ui-ink)}
+.ui-btn-danger{background:var(--ui-danger);border-color:var(--ui-danger);color:#fff}
+.ui-btn-danger:hover:not(:disabled){background:#912018;border-color:#912018;color:#fff}
 .ui-btn-danger-ghost{background:#fff;border-color:#efd3ce;color:var(--ui-danger)}
 .ui-btn-danger-ghost:hover:not(:disabled){background:#fdf3f1;color:var(--ui-danger)}
 .ui-btn-sm{min-height:34px;padding:0 12px;font-size:13px}
@@ -29,19 +31,6 @@
 .site-header .account-signin svg{color:var(--ui-ink)}
 .site-header .header-quote{min-height:42px;border-radius:var(--ui-radius);font-size:14px}
 .site-header .header-message-link,.site-header .header-icon{border-radius:var(--ui-radius)}
-
-/* Administration: same palette, readable controls, no decorative uppercase labels */
-.gsl-admin{--admin-ink:#17191c;--admin-muted:#5f656b;--admin-line:#e4e1dc;--admin-paper:#f7f6f4;--admin-navy:#17191c;--admin-rust:#A84C35;font-size:14px}
-.gsl-admin .admin-eyebrow,.gsl-admin .admin-nav-label,.gsl-admin .admin-priorities .admin-eyebrow,.gsl-admin .admin-gate .admin-eyebrow{text-transform:none;letter-spacing:0;font-size:13px;font-weight:500}
-.gsl-admin .admin-nav-label{color:#8b9096}
-.gsl-admin .admin-priorities{background:#fff;border-color:var(--admin-line)}
-.gsl-admin .admin-priorities:before,.gsl-admin .admin-priorities-symbol{display:none}
-.gsl-admin .admin-button{min-height:38px;padding:0 14px;border-radius:var(--ui-radius);border-color:var(--ui-line-strong);color:var(--ui-ink);font-size:13.5px;font-weight:600}
-.gsl-admin .admin-button:hover{background:var(--ui-hover);border-color:var(--ui-line-strong);color:var(--ui-ink)}
-.gsl-admin .admin-button-primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff;box-shadow:none}
-.gsl-admin .admin-button-primary:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#fff}
-.gsl-admin .admin-button-danger{background:var(--ui-danger);border-color:var(--ui-danger);color:#fff}
-.gsl-admin .admin-button.admin-refresh{padding:0;min-width:38px}
 
 /* Account security: rust primary like the rest of the site */
 .security-shell .security-button{border-radius:var(--ui-radius);font-size:14px;border-color:var(--ui-line-strong)}
