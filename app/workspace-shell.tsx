@@ -1,0 +1,57 @@
+'use client';
+import {useState,type ReactNode} from 'react';
+import {useSearchParams} from 'next/navigation';
+import {LayoutDashboard,MessageSquare,FileText,Heart,Factory,Package,Settings,ShieldCheck,LogOut,Plus} from 'lucide-react';
+import Link from '@/components/site-link';
+import {useLanguage} from './language';
+import {useUnreadMessages} from './message-link';
+
+/** Routes that belong to the signed-in workspace and share its navigation. */
+export const workspaceRoutes=['/compte','/messagerie','/operations','/espace-fournisseur','/mes-produits','/selection'];
+
+type Item={href:string;label:string;Icon:typeof LayoutDashboard;count?:number;current:boolean};
+
+export default function WorkspaceShell({path,user,favorites,children}:{path:string;user:{name:string;email:string}|null;favorites:number;children:ReactNode}){
+ const {l}=useLanguage();const query=useSearchParams();const unread=useUnreadMessages();const [leaving,setLeaving]=useState(false);
+ const settings=path==='/compte'&&query.get('vue')==='parametres';
+ const groups:{label:string;items:Item[]}[]=[
+  {label:l('Purchasing','Achats'),items:[
+   {href:'/compte',label:l('Overview','Vue d’ensemble'),Icon:LayoutDashboard,current:path==='/compte'&&!settings},
+   {href:'/messagerie',label:l('Messages','Messagerie'),Icon:MessageSquare,count:unread,current:path==='/messagerie'},
+   {href:'/operations',label:l('Requests and quotes','Demandes et devis'),Icon:FileText,current:path==='/operations'},
+   {href:'/selection',label:l('Saved products','Ma sélection'),Icon:Heart,count:favorites,current:path==='/selection'},
+  ]},
+  {label:l('My company','Mon entreprise'),items:[
+   {href:'/espace-fournisseur',label:l('Company profile','Profil entreprise'),Icon:Factory,current:path==='/espace-fournisseur'},
+   {href:'/mes-produits',label:l('My products','Mes produits'),Icon:Package,current:path==='/mes-produits'},
+  ]},
+  {label:l('Account','Compte'),items:[
+   {href:'/compte?vue=parametres',label:l('Account settings','Paramètres du compte'),Icon:Settings,current:settings},
+   {href:'/compte/securite',label:l('Security','Sécurité'),Icon:ShieldCheck,current:false},
+  ]},
+ ];
+ async function signOut(){setLeaving(true);try{await fetch('/api/auth',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout'})})}finally{window.location.assign('/connexion')}}
+ const initials=(user?.name||user?.email||'?').split(/[\s@.]+/).filter(Boolean).slice(0,2).map(part=>part[0]?.toUpperCase()).join('');
+ return <div className="ws-shell">
+  <aside className="ws-sidebar" aria-label={l('Workspace navigation','Navigation de l’espace')}><div className="ws-sidebar-inner">
+   <div className="ws-identity">
+    <span className="ws-avatar" aria-hidden>{initials}</span>
+    <div><strong>{user?.name||l('My workspace','Mon espace')}</strong>{user?.email&&<span>{user.email}</span>}</div>
+   </div>
+   <Link className="ws-new" href="/decrire-mon-besoin"><Plus size={16} aria-hidden/>{l('New request','Nouvelle demande')}</Link>
+   <nav>
+    {groups.map(group=><div className="ws-group" key={group.label}>
+     <p>{group.label}</p>
+     {group.items.map(({href,label,Icon,count,current})=><Link key={href} href={href} aria-current={current?'page':undefined}><Icon size={17} aria-hidden/><span>{label}</span>{!!count&&count>0&&<b>{count>99?'99+':count}</b>}</Link>)}
+    </div>)}
+   </nav>
+   <button type="button" className="ws-signout" disabled={leaving} onClick={()=>void signOut()}><LogOut size={17} aria-hidden/>{l('Sign out','Se déconnecter')}</button>
+  </div></aside>
+  <div className="ws-main">{children}</div>
+ </div>;
+}
+
+/** Renders the workspace navigation around signed-in pages and leaves every other page untouched. */
+export function WorkspaceFrame({active,children,...props}:{active:boolean;path:string;user:{name:string;email:string}|null;favorites:number;children:ReactNode}){
+ return active?<WorkspaceShell {...props}>{children}</WorkspaceShell>:<>{children}</>;
+}
