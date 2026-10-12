@@ -1,3 +1,4 @@
 import AuthForm from '@/app/auth-form';
-export const metadata={title:'Mot de passe oublié | GSL Systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('Forgot password','Mot de passe oublié')}
 export default function Page(){return <AuthForm mode="reset"/>}

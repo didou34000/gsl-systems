@@ -1,3 +1,4 @@
 import AuthForm from '@/app/auth-form';
-export const metadata={title:'Créer un compte | GSL Systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('Create an account','Créer un compte')}
 export default function Page(){return <AuthForm mode="signup"/>}

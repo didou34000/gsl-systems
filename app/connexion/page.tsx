@@ -1,3 +1,4 @@
 import AuthForm from '@/app/auth-form';
-export const metadata={title:'Se connecter | GSL Systems',robots:{index:false,follow:false}};
+import {privatePageMetadata} from '@/lib/page-metadata';
+export async function generateMetadata(){return privatePageMetadata('Sign in','Se connecter')}
 export default function Page(){return <AuthForm mode="login"/>}
