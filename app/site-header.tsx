@@ -24,9 +24,9 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
  const primary=[
   [l('Products','Produits'),'/catalogue'],
   [l('Manufacturers','Fabricants'),'/fabricants'],
-  [l('Describe my requirement','Décrire mon besoin'),'/decrire-mon-besoin'],
+  [l('My robotics project','Mon projet robotique'),'/decrire-mon-besoin'],
  ];
- const discovery=[[l('Industries','Secteurs'),'/secteurs'],[l('Countries','Pays'),'/pays']];
+ const discovery=[[l('Robotics families','Familles robotiques'),'/secteurs'],[l('Countries','Pays'),'/pays']];
  const company=[signedIn?l('My company','Mon entreprise'):l('Join as a supplier','Devenir fournisseur'),'/espace-fournisseur'];
  function active(href:string){
   if(href==='/catalogue')return path==='/catalogue'||path.startsWith('/produits/');

@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import ts from 'typescript';
+import {pathToFileURL} from 'node:url';
+const compile=p=>ts.transpileModule(fs.readFileSync(p,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
+const data=s=>'data:text/javascript;base64,'+Buffer.from(s).toString('base64');
+const robotics=data(compile('lib/robotics.ts')),coverage=data(compile('lib/sourcing-coverage.ts'));
+const code=compile('lib/search-criteria.ts').replace("'./robotics'",JSON.stringify(robotics)).replace("'./sourcing-coverage'",JSON.stringify(coverage)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const {searchSchema}=await import(data(code));
+assert.equal(searchSchema.safeParse({category:'prehension',metric:'force_n',minimum:'20.5',maximum:'120',connection:'EtherCAT'}).success,true);
+for(const criteria of [{category:'prehension',metric:'torque_nm',minimum:'5'},{metric:'payload_kg',minimum:'2'},{category:'robots-plateformes',metric:'payload_kg',minimum:'20',maximum:'10'},{category:'robots-plateformes',metric:'payload_kg',minimum:'NaN'},{minimum:'-1'},{metric:'unknown'},{country:'FR'},{quantity:'5',unit:''}])assert.equal(searchSchema.safeParse(criteria).success,false);
+const {roboticsQuery}=await import(robotics);for(const word of ['pince','préhenseur','gripper'])assert.equal(roboticsQuery(word),'gripper');assert.equal(roboticsQuery('12,5 N·m'),'12.5 nm');
+console.log('Family-specific criteria, numerical bounds, units, scope and robotics vocabulary passed.');

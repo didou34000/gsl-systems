@@ -1,10 +1,11 @@
+import {roboticsFamilies} from './robotics';
 import {researchCategories, type ProductCommercial} from './catalogue-research';
 
 export const legacyCategoryIds = ['metal', 'electricite', 'emballage', 'textile', 'plasturgie', 'machines', 'construction', 'mobilier'] as const;
-export const catalogueCategoryIds: readonly string[] = [...legacyCategoryIds, ...researchCategories.map(category => category.id)];
+export const catalogueCategoryIds: readonly string[] = [...roboticsFamilies.map(category => category.id)];
 
 export function categoryGroup(category: string) {
-  return researchCategories.find(item => item.id === category)?.group || category;
+  return roboticsFamilies.find(item => item.id === category)?.group || researchCategories.find(item => item.id === category)?.group || category;
 }
 
 export function researchDate(value: string, locale = 'fr') {

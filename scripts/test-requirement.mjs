@@ -9,7 +9,8 @@ for(const name of fs.readdirSync('lib/i18n').filter(name=>name.endsWith('.json')
 let translationSource=compile('lib/i18n/translations.ts');
 for(const [name,url] of Object.entries(dictionaries))translationSource=translationSource.replace(JSON.stringify(name),JSON.stringify(url)).replace("'"+name+"'",JSON.stringify(url));
 const translations='data:text/javascript;base64,'+Buffer.from(translationSource).toString('base64');
-const code=compile('lib/requirement.ts').replace("'./i18n/translations'",JSON.stringify(translations)).replace("'./onboarding/iso-countries'",JSON.stringify(iso)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const robotics='data:text/javascript;base64,'+Buffer.from(compile('lib/robotics.ts')).toString('base64');
+const code=compile('lib/requirement.ts').replace("'./i18n/translations'",JSON.stringify(translations)).replace("'./onboarding/iso-countries'",JSON.stringify(iso)).replace("'./robotics'",JSON.stringify(robotics)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
 const {emptyRequirement,requirementSchema,requirementIssues,requirementDetails,requirementExport,requirementFields}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const d=emptyRequirement();
 assert.deepEqual(requirementIssues(d,0,'2026-10-02'),['title','description']);
@@ -52,3 +53,11 @@ for(const language of ['en','fr','es','pt','de','it','tr','ar','hi','zh']){
  assert.ok(requirementIssues(custom,2,'2026-10-02',language).includes('detailsLimit'),'Aggregate limit enforced in '+language);
 }
 console.log('Ten-language request exports preserve user content and enforce serialized length limits.');
+
+const robotic=emptyRequirement();robotic.robotics={kind:'robot',family:'robots-plateformes',technical:{payload_kg:'12',reach_mm:'800'},interface:'EtherCAT',environment:'Atelier sec'};
+assert.ok(requirementExport(robotic,'fr').includes('Charge utile (kg) : 12'));
+assert.ok(requirementDetails(robotic,'en').includes('Reach (mm) : 800'));
+assert.deepEqual(requirementSchema.parse(JSON.parse(JSON.stringify(robotic))).robotics,robotic.robotics);
+const legacy={...robotic};delete legacy.robotics;assert.equal(requirementSchema.parse(legacy).robotics.kind,'component');
+assert.equal(requirementSchema.safeParse({...robotic,robotics:{...robotic.robotics,family:'textile'}}).success,false);
+console.log('Robotics requests retain family, units, requirements and legacy drafts.');
