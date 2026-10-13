@@ -1,22 +1,60 @@
 'use client';
-import {useEffect,useState} from 'react';
-import {ArrowUpRight,ArrowRight,MapPin,Maximize2,RotateCcw} from 'lucide-react';
+import {useEffect,useRef,useState} from 'react';
+import {ArrowRight,ArrowUpRight} from 'lucide-react';
 import Link from '@/components/site-link';
-import world from '@/lib/maps/world.json';
+import europe from '@/lib/maps/europe.json';
 import {countryAgreement,agreementNames} from '@/lib/sourcing-agreements';
-import {sourcingCountries,isSourcingCountry} from '@/lib/sourcing-coverage';
-import {countryName} from '@/lib/country-names';
+import {isSourcingCountry} from '@/lib/sourcing-coverage';
+import {europeCountry,europeStatusText} from '@/lib/europe-trade';
+import {countryOptions,countryName} from '@/lib/country-names';
 import {useLanguage} from './language';
 import type {Hit} from './catalogue-live';
-const positions:Record<string,{x:number;y:number;dx:number;dy:number}>={MA:{x:519,y:160,dx:-90,dy:22},TN:{x:570,y:150,dx:-12,dy:38},TR:{x:645,y:138,dx:-10,dy:30},GE:{x:670,y:128,dx:15,dy:-18},RS:{x:610,y:115,dx:0,dy:-30},MK:{x:614,y:126,dx:10,dy:30},BA:{x:602,y:116,dx:-50,dy:-25},MD:{x:634,y:106,dx:20,dy:-30},AL:{x:606,y:129,dx:-45,dy:25},EG:{x:636,y:174,dx:20,dy:30}};
+type Group='sourcing'|'eu'|'europe';
+const groupOf=(code:string):Group|null=>isSourcingCountry(code)?'sourcing':europeCountry(code)?.status==='eu'?'eu':europeCountry(code)?'europe':null;
+const kosovo={fr:'Kosovo',en:'Kosovo',es:'Kosovo',pt:'Kosovo',de:'Kosovo',it:'Kosovo',tr:'Kosova',ar:'كوسوفو',hi:'कोसोवो',zh:'科索沃'} as const;
 export default function SourcingNetwork(){
- const {l,language}=useLanguage();const [selected,setSelected]=useState<string>('TR'),[close,setClose]=useState(false),[attempt,setAttempt]=useState(0);
+ const {l,language}=useLanguage();const [selected,setSelected]=useState('TR'),[attempt,setAttempt]=useState(0);
  const [result,setResult]=useState<{country:string;hits:Hit[];count:number;error:boolean}|null>(null);
- useEffect(()=>{const c=new AbortController();fetch('/api/platform?view=catalogue&country='+selected,{signal:c.signal,cache:'no-store'}).then(async r=>{if(!r.ok)throw Error();return r.json() as Promise<{suppliers:Hit[];count:number}>}).then(d=>setResult({country:selected,hits:d.suppliers,count:d.count,error:false})).catch(e=>{if(e.name!=='AbortError')setResult({country:selected,hits:[],count:0,error:true})});return()=>c.abort()},[selected,attempt]);
- const pending=!result||result.country!==selected;const agreement=countryAgreement(selected)!;
- return <section className="coverage container"><header className="coverage-heading"><div><p className="eyebrow">{l('OUR SOURCING NETWORK','NOTRE PÉRIMÈTRE DE SOURCING')}</p><h1>{l('Ten countries.','Dix pays.')}<br/>{l('A clear industrial focus.','Un cap industriel précis.')}</h1></div><p>{l('Industrial sourcing in 10 countries with EU trade agreements. Find manufacturers and understand the conditions for importing.','Le sourcing industriel dans 10 pays liés à l’UE par des accords commerciaux. Trouvez vos fabricants et comprenez les conditions d’importation.')}</p></header>
- <div className="coverage-map"><div className="coverage-map-bar"><span>GSL SYSTEMS / {l('SOURCING COVERAGE','PAYS PRIS EN CHARGE')}</span><button onClick={()=>setClose(v=>!v)}>{close?<RotateCcw size={15}/>:<Maximize2 size={15}/>} {close?l('World view','Vue mondiale'):l('Closer view','Vue rapprochée')}</button></div><svg viewBox="0 0 1080 420" role="group" aria-label={l('Map of the 10 GSL sourcing countries. Use the country buttons below to explore.','Carte des 10 pays de sourcing GSL. Utilisez les boutons pays ci-dessous pour explorer.')}><g className="coverage-geography" style={{transform:close?'translate(-1180px,-220px) scale(2.85)':'translate(0px,-4px) scale(1)'}}>{world.map((c,i)=><path key={c.code+i} d={c.path} className={isSourcingCountry(c.code)?'covered '+(selected===c.code?'selected':''):'outside'} vectorEffect="non-scaling-stroke" onClick={isSourcingCountry(c.code)?()=>setSelected(c.code):undefined}><title>{(name=>name===c.code?c.name:name)(countryName(c.code,language))}</title></path>)}{sourcingCountries.filter(code=>code===selected).map(code=>{const p=positions[code];return <g key={code} className={'coverage-marker '+(selected===code?'active':'')} onClick={()=>setSelected(code)}><circle cx={p.x} cy={p.y} r={close?2:4}/><path d={`M${p.x} ${p.y}l${p.dx*(close?.5:1)} ${p.dy*(close?.5:1)}`} vectorEffect="non-scaling-stroke"/><text x={p.x+p.dx*(close?.5:1)} y={p.y+p.dy*(close?.5:1)+(p.dy>0?11:-4)} textAnchor={p.dx<0?'end':'start'} style={{fontSize:close?5:11}}>{countryName(code,language)}</text></g>})}</g></svg><div className="coverage-legend"><span><i/>{l('GSL sourcing countries','Pays de sourcing GSL')}</span><span><i/>{l('Outside our current scope','Hors périmètre actuel')}</span></div></div>
- <nav className="coverage-tabs" aria-label={l('Covered countries','Pays pris en charge')}>{sourcingCountries.map((code,i)=><button key={code} aria-pressed={selected===code} onClick={()=>setSelected(code)}><span>{String(i+1).padStart(2,'0')} / {code}</span><strong>{countryName(code,language)}</strong><ArrowUpRight size={19}/></button>)}</nav>
- <div className="coverage-detail"><div><p className="eyebrow">{l('EXPLORE THE NETWORK','EXPLORER LE RÉSEAU')}</p><h2><MapPin size={24}/>{countryName(selected,language)}</h2><p>{l(agreementNames[agreement.kind][0],agreementNames[agreement.kind][1])} · {new Intl.DateTimeFormat(language,{dateStyle:'long',timeZone:'UTC'}).format(new Date(agreement.effective+'T00:00:00Z'))}</p><p>{l(...agreement.note)}</p><Link className="catalogue-help-link" href={'/pays/'+selected.toLowerCase()}>{l('Read the country guide','Lire le guide pays')}<ArrowRight size={16}/></Link><Link className="button-link" href={'/fabricants?country='+selected}>{l('View manufacturers','Voir les fabricants')}<ArrowRight size={16}/></Link></div><div className="coverage-results" aria-live="polite">{pending?<p role="status">{l('Loading profiles…','Chargement des fiches…')}</p>:result.error?<><h3>{l('Catalogue temporarily unavailable','Catalogue momentanément indisponible')}</h3><button onClick={()=>setAttempt(n=>n+1)}>{l('Try again','Réessayer')}</button></>:result.count===0?<><span className="coverage-empty-number">—</span><h3>{l('Profiles coming soon','Fiches à venir')}</h3><p>{l('This country is in our sourcing scope. No manufacturer profile is published yet.','Ce pays fait partie de notre périmètre de sourcing. Aucune fiche fabricant n’y est encore publiée.')}</p></>:<><p>{result.count} {l('published profiles','fiches publiées')}</p>{result.hits.slice(0,3).map(h=><Link key={h.organization_id} href={'/fabricants/'+h.organization_id}>{h.display_name}<ArrowUpRight size={16}/></Link>)}</>}</div></div><p className="coverage-footnote">{l('Highlighted countries show our commercial scope, not verified factory locations. Cartography:','Les pays en couleur indiquent notre périmètre commercial, pas des implantations d’usines vérifiées. Cartographie :')} <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a>.</p>
- <nav className="country-all-guides" aria-label={l('Country guides','Guides pays')}>{sourcingCountries.map(code=><Link key={code} href={'/pays/'+code.toLowerCase()}>{countryName(code,language)}<ArrowUpRight size={15}/></Link>)}</nav></section>;
+ const panel=useRef<HTMLDivElement>(null);
+ const sourcing=isSourcingCountry(selected);
+ useEffect(()=>{if(!sourcing)return;const c=new AbortController();fetch('/api/platform?view=catalogue&country='+selected,{signal:c.signal,cache:'no-store'}).then(async r=>{if(!r.ok)throw Error();return r.json() as Promise<{suppliers:Hit[];count:number}>}).then(d=>setResult({country:selected,hits:d.suppliers,count:d.count,error:false})).catch(e=>{if(e.name!=='AbortError')setResult({country:selected,hits:[],count:0,error:true})});return()=>c.abort()},[selected,sourcing,attempt]);
+ const name=(code:string)=>code==='XK'?kosovo[language]:countryName(code,language);
+ const date=(value:string)=>new Intl.DateTimeFormat(language,{dateStyle:'long',timeZone:'UTC'}).format(new Date(value+'T00:00:00Z'));
+ const choose=(code:string,fromList=false)=>{setSelected(code);if(fromList&&panel.current&&panel.current.getBoundingClientRect().top<0)panel.current.scrollIntoView({behavior:'smooth',block:'start'});};
+ // Kosovo is absent from the shared country labels (no ISO code): slot it in alphabetically here only.
+ const ordered=countryOptions(language).map(c=>c.code);ordered.splice(Math.max(0,ordered.findIndex(code=>countryName(code,language).localeCompare(kosovo[language],language)>0)),0,'XK');
+ const list=(group:Group)=>ordered.filter(code=>groupOf(code)===group);
+ const agreement=countryAgreement(selected),other=europeCountry(selected),text=other&&europeStatusText[other.status];
+ const pending=!result||result.country!==selected;
+ const groups:[Group,string][]=[['sourcing',l('GSL sourcing countries','Pays de sourcing GSL')],['eu',l('European Union','Union européenne')],['europe',l('Other European countries','Autres pays d’Europe')]];
+ return <section className="countries container">
+  <header className="countries-intro"><h1>{l('Countries and their trade with the EU','Les pays et leurs échanges avec l’UE')}</h1><p>{l('GSL looks for manufacturers in ten countries outside the EU that have a trade agreement with it. The map also shows how every European country trades with the European Union.','GSL recherche des fabricants dans dix pays hors UE liés à elle par un accord commercial. La carte indique aussi comment chaque pays d’Europe commerce avec l’Union européenne.')}</p></header>
+  <div className="countries-explorer">
+   <figure className="countries-map">
+    <svg viewBox={`0 0 ${europe.width} ${europe.height}`} role="img" aria-label={l('Map of Europe and the GSL sourcing countries. The country lists below the map give the same information.','Carte de l’Europe et des pays de sourcing GSL. Les listes de pays sous la carte donnent les mêmes informations.')}>
+     <path className="countries-context" d={europe.context}/>
+     {europe.countries.filter(c=>c.path).map(c=><path key={c.code} data-code={c.code} d={c.path} className={'is-'+groupOf(c.code)+(selected===c.code?' is-selected':'')} onClick={()=>choose(c.code)}><title>{name(c.code)}</title></path>)}
+     {europe.countries.filter(c=>c.point).map(c=><circle key={c.code} data-code={c.code} cx={c.center[0]} cy={c.center[1]} r={selected===c.code?6:4.5} className={'countries-point is-'+groupOf(c.code)+(selected===c.code?' is-selected':'')} onClick={()=>choose(c.code)}><title>{name(c.code)}</title></circle>)}
+     {europe.countries.filter(c=>c.code===selected).map(c=><text key={c.code} x={c.center[0]} y={c.center[1]-(c.point?12:0)} className="countries-label" textAnchor="middle" dominantBaseline="middle">{name(c.code)}</text>)}
+    </svg>
+    <figcaption className="countries-legend"><span><i className="is-sourcing"/>{l('GSL sourcing countries','Pays de sourcing GSL')}</span><span><i className="is-eu"/>{l('European Union','Union européenne')}</span><span><i className="is-europe"/>{l('Other European countries','Autres pays d’Europe')}</span></figcaption>
+   </figure>
+   <div className="countries-panel" ref={panel} aria-live="polite">
+    <p className="countries-kind">{sourcing?l('GSL sourcing country','Pays de sourcing GSL'):other?.status==='eu'?l('European Union','Union européenne'):l('European country','Pays d’Europe')}</p>
+    <h2>{name(selected)}</h2>
+    {agreement?<>
+     <dl><div><dt>{l('Agreement with the EU','Accord avec l’UE')}</dt><dd>{l(agreementNames[agreement.kind][0],agreementNames[agreement.kind][1])}</dd></div><div><dt>{l('Entry into force','Entrée en vigueur')}</dt><dd><time dateTime={agreement.effective}>{date(agreement.effective)}</time></dd></div></dl>
+     <p>{l(...agreement.note)}</p>
+     <div className="countries-actions"><Link className="button-link" href={'/fabricants?country='+selected}>{l('View manufacturers','Voir les fabricants')}<ArrowRight size={16}/></Link><Link className="catalogue-help-link" href={'/pays/'+selected.toLowerCase()}>{l('Read the country guide','Lire le guide pays')}<ArrowRight size={16}/></Link></div>
+     <div className="countries-results">{pending?<p role="status">{l('Loading profiles…','Chargement des fiches…')}</p>:result.error?<p>{l('Catalogue temporarily unavailable','Catalogue momentanément indisponible')} <button onClick={()=>setAttempt(n=>n+1)}>{l('Try again','Réessayer')}</button></p>:result.count===0?<p>{l('This country is in our sourcing scope. No manufacturer profile is published yet.','Ce pays fait partie de notre périmètre de sourcing. Aucune fiche fabricant n’y est encore publiée.')}</p>:<><p>{result.count} {l('published profiles','fiches publiées')}</p>{result.hits.slice(0,3).map(h=><Link key={h.organization_id} href={'/fabricants/'+h.organization_id}>{h.display_name}<ArrowUpRight size={16}/></Link>)}</>}</div>
+    </>:other&&text?<>
+     <dl><div><dt>{l('Trade with the EU','Échanges avec l’UE')}</dt><dd>{l(...text.title)}</dd></div>{other.since&&text.since&&<div><dt>{l(...text.since)}</dt><dd><time dateTime={other.since}>{date(other.since)}</time></dd></div>}{other.provisional&&<div><dt>{l('Provisionally applied since','Appliqué à titre provisoire depuis')}</dt><dd><time dateTime={other.provisional}>{date(other.provisional)}</time></dd></div>}</dl>
+     <p>{l(...text.note)}</p>
+     <p className="countries-scope">{l('This country is outside the GSL supplier scope. No manufacturer profile is published for it.','Ce pays est hors du périmètre fournisseurs de GSL. Aucune fiche fabricant n’y est publiée.')}</p>
+    </>:null}
+   </div>
+  </div>
+  <div className="countries-lists">{groups.map(([group,title])=><div key={group}><h2>{title} <span>{list(group).length}</span></h2><ul>{list(group).map(code=><li key={code}><button type="button" aria-pressed={selected===code} onClick={()=>choose(code,true)}><i className={'is-'+group}/>{name(code)}</button></li>)}</ul></div>)}</div>
+  <footer className="countries-footer"><p>{l('Country guides','Guides pays')}: {list('sourcing').map((code,i)=><span key={code}>{i>0&&', '}<Link href={'/pays/'+code.toLowerCase()}>{name(code)}</Link></span>)}.</p><p>{l('Coloured countries show our commercial scope and each country’s trade framework with the EU, not verified factory locations. Cartography:','Les couleurs indiquent notre périmètre commercial et le cadre des échanges de chaque pays avec l’UE, pas des implantations d’usines vérifiées. Cartographie :')} <a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a>.</p></footer>
+ </section>;
 }
