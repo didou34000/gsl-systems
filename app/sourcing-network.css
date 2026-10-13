@@ -1,20 +1,20 @@
-.countries{--c-ink:#1f2a2c;--c-muted:#5f6a66;--c-line:#dcd8cf;--c-sourcing:#a44830;--c-sourcing-hover:#8b3a25;--c-selected:#5e2416;--c-eu:#b9c3c8;--c-eu-hover:#9eabb2;--c-europe:#d9d1c1;--c-europe-hover:#c4baa6;--c-land:#ebe8e1;padding-block:56px 72px;color:var(--c-ink)}
+.countries{--c-ink:#1f2a2c;--c-muted:#5f656a;--c-line:#dcd8cf;--c-sourcing:#256daf;--c-sourcing-hover:#1c5b94;--c-selected:#0f3c65;--c-eu:#b9c3c8;--c-eu-hover:#9eabb2;--c-europe:#d9d1c1;--c-europe-hover:#c4baa6;--c-land:#e1e6eb;padding-block:56px 72px;color:var(--c-ink)}
 .countries-intro{max-width:760px;margin-bottom:36px}.countries-intro h1{font:600 clamp(32px,3.6vw,46px)/1.15 var(--gsl-sans);letter-spacing:-.02em;margin:0;text-wrap:balance}.countries-intro p{margin:16px 0 0;font-size:16px;line-height:1.7;color:var(--c-muted)}
 .countries-explorer{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:40px;align-items:start}
-.countries-map{margin:0;border:1px solid var(--c-line);border-radius:8px;background:#fbfaf7;overflow:hidden}.countries-map svg{display:block;width:100%;height:auto}
-.countries-context{fill:var(--c-land);stroke:#fbfaf7;stroke-width:.8;pointer-events:none}
-.countries-map svg>path:not(.countries-context){stroke:#fbfaf7;stroke-width:.8;stroke-linejoin:round;cursor:pointer;transition:fill .15s}
+.countries-map{margin:0;border:1px solid var(--c-line);border-radius:8px;background:#F7F8FA;overflow:hidden}.countries-map svg{display:block;width:100%;height:auto}
+.countries-context{fill:var(--c-land);stroke:#F7F8FA;stroke-width:.8;pointer-events:none}
+.countries-map svg>path:not(.countries-context){stroke:#F7F8FA;stroke-width:.8;stroke-linejoin:round;cursor:pointer;transition:fill .15s}
 .countries-map svg .is-sourcing{fill:var(--c-sourcing)}.countries-map svg .is-sourcing:hover{fill:var(--c-sourcing-hover)}
 .countries-map svg .is-eu{fill:var(--c-eu)}.countries-map svg .is-eu:hover{fill:var(--c-eu-hover)}
 .countries-map svg .is-europe{fill:var(--c-europe)}.countries-map svg .is-europe:hover{fill:var(--c-europe-hover)}
 .countries-map svg .is-selected,.countries-map svg .is-selected:hover{fill:var(--c-selected)}
-.countries-point{stroke:#fbfaf7;stroke-width:1.5;cursor:pointer}
-.countries-label{font:600 15px var(--gsl-sans);fill:var(--c-ink);paint-order:stroke;stroke:#fbfaf7;stroke-width:4px;stroke-linejoin:round;pointer-events:none}
+.countries-point{stroke:#F7F8FA;stroke-width:1.5;cursor:pointer}
+.countries-label{font:600 15px var(--gsl-sans);fill:var(--c-ink);paint-order:stroke;stroke:#F7F8FA;stroke-width:4px;stroke-linejoin:round;pointer-events:none}
 .countries-legend{display:flex;flex-wrap:wrap;gap:8px 24px;padding:14px 18px;border-top:1px solid var(--c-line);font-size:13px;color:var(--c-muted)}.countries-legend span{display:flex;align-items:center;gap:8px}
 .countries i{display:inline-block;width:10px;height:10px;border-radius:2px;flex-shrink:0}.countries i.is-sourcing{background:var(--c-sourcing)}.countries i.is-eu{background:var(--c-eu)}.countries i.is-europe{background:var(--c-europe)}
 .countries-panel{position:sticky;top:24px;scroll-margin-top:24px}.countries-kind{margin:0;font-size:14px;color:var(--c-muted)}.countries-panel h2{font:600 30px/1.2 var(--gsl-sans);letter-spacing:-.01em;margin:6px 0 20px}
 .countries-panel dl{margin:0 0 18px}.countries-panel dl>div{padding:12px 0;border-top:1px solid var(--c-line)}.countries-panel dl>div:last-child{border-bottom:1px solid var(--c-line)}.countries-panel dt{font-size:13px;color:var(--c-muted)}.countries-panel dd{margin:4px 0 0;font-size:15px;line-height:1.5}
-.countries-panel>p{font-size:14px;line-height:1.75;color:var(--c-muted);margin:0 0 14px}.countries-panel .countries-scope{font-size:13px;padding:12px 14px;background:#f3f1ec;border-radius:6px}
+.countries-panel>p{font-size:14px;line-height:1.75;color:var(--c-muted);margin:0 0 14px}.countries-panel .countries-scope{font-size:13px;padding:12px 14px;background:#ecf0f3;border-radius:6px}
 .countries-actions{display:flex;flex-wrap:wrap;align-items:center;gap:6px 20px;margin:20px 0}.countries-actions .catalogue-help-link{max-width:none}
 .countries-results{border-top:1px solid var(--c-line);padding-top:14px}.countries-results p{font-size:13px;line-height:1.7;color:var(--c-muted);margin:0 0 6px}.countries-results button{text-decoration:underline;font-size:13px}.countries-results>a{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--c-line);font-size:14px}
 .countries-lists{display:grid;grid-template-columns:1fr 2fr 1.4fr;gap:40px;margin-top:56px;padding-top:36px;border-top:1px solid var(--c-line)}

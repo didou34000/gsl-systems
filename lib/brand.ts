@@ -4,9 +4,9 @@ export const brandAssets = {
   logo: '/brand/gsl-systems-logo.png',
   width: 620,
   height: 302,
-  icon: '/favicon.svg?v=gsl-20261009',
-  iconPng: '/favicon-32.png?v=gsl-20261009',
-  shortcut: '/favicon.ico?v=gsl-20261009',
-  apple: '/apple-touch-icon.png?v=gsl-20261009',
+  icon: '/favicon.svg?v=gsl-20261013',
+  iconPng: '/favicon-32.png?v=gsl-20261013',
+  shortcut: '/favicon.ico?v=gsl-20261013',
+  apple: '/apple-touch-icon.png?v=gsl-20261013',
   social: '/brand/gsl-systems-social.png',
 } as const;

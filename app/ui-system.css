@@ -1,14 +1,14 @@
 /* Shared interface system — October 2026. Loaded last: one button family, one set of tokens.
    Same direction as the home page (Inter, neutral greys, rust as the single action colour). */
-:root{--ui-ink:#17191c;--ui-text:#3d4247;--ui-muted:#5f656b;--ui-faint:#8b9096;--ui-line:#e4e1dc;--ui-line-strong:#d4cfc8;--ui-soft:#f7f6f4;--ui-hover:#f1efec;--ui-rust:#A84C35;--ui-rust-dark:#8c3d2a;--ui-rust-soft:#f8ede9;--ui-danger:#b42318;--ui-success:#1f7a4d;--ui-radius:8px;--ui-focus:0 0 0 3px rgba(168,76,53,.28)}
+:root{--ui-ink:#0F1B26;--ui-text:#3d4247;--ui-muted:#5A6571;--ui-faint:#8b9096;--ui-line:#D9DEE3;--ui-line-strong:#d4cfc8;--ui-soft:#F7F8FA;--ui-hover:#F7F8FA;--ui-rust:#1F4E79;--ui-rust-dark:#173B5C;--ui-rust-soft:#f8ede9;--ui-danger:#b42318;--ui-success:#1f7a4d;--ui-radius:8px;--ui-focus:0 0 0 3px rgba(168,76,53,.28)}
 
 /* Buttons */
 .ui-btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border:1px solid transparent;border-radius:var(--ui-radius);font-size:14px;font-weight:600;line-height:1.2;white-space:nowrap;text-decoration:none;cursor:pointer;transition:background .15s,border-color .15s,color .15s,box-shadow .15s}
 .ui-btn:focus-visible{outline:2px solid var(--ui-rust);outline-offset:2px}
 .ui-btn:disabled,.ui-btn[aria-disabled=true]{opacity:.5;cursor:not-allowed}
-.ui-btn-primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff}
-.ui-btn-primary:hover:not(:disabled){background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#fff}
-.ui-btn-secondary{background:#fff;border-color:var(--ui-line-strong);color:var(--ui-ink)}
+.ui-btn-primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#ffffff}
+.ui-btn-primary:hover:not(:disabled){background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#ffffff}
+.ui-btn-secondary{background:#ffffff;border-color:var(--ui-line-strong);color:var(--ui-ink)}
 .ui-btn-secondary:hover:not(:disabled){background:var(--ui-hover);color:var(--ui-ink)}
 .ui-btn-ghost{background:transparent;color:var(--ui-text)}
 .ui-btn-ghost:hover:not(:disabled){background:var(--ui-hover);color:var(--ui-ink)}
@@ -21,12 +21,12 @@
 
 /* Existing public buttons follow the same family */
 .button-link,button[data-slot=button]{border-radius:var(--ui-radius)!important;font-weight:600;letter-spacing:0}
-.button-link{background:var(--ui-rust);border:1px solid var(--ui-rust);color:#fff;transition:background .15s,border-color .15s}
-.button-link:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#fff}
+.button-link{background:var(--ui-rust);border:1px solid var(--ui-rust);color:#ffffff;transition:background .15s,border-color .15s}
+.button-link:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark);color:#ffffff}
 .button-link:disabled,.button-link[aria-disabled=true]{background:var(--ui-rust);opacity:.5}
 
 /* Header: one primary action (quote), the account link is secondary */
-.site-header .account-signin{min-height:42px;border:1px solid var(--ui-line-strong)!important;background:#fff!important;color:var(--ui-ink)!important;border-radius:var(--ui-radius);font-size:14px;font-weight:600}
+.site-header .account-signin{min-height:42px;border:1px solid var(--ui-line-strong)!important;background:#ffffff!important;color:var(--ui-ink)!important;border-radius:var(--ui-radius);font-size:14px;font-weight:600}
 .site-header .account-signin:hover{background:var(--ui-hover)!important}
 .site-header .account-signin svg{color:var(--ui-ink)}
 .site-header .header-quote{min-height:42px;border-radius:var(--ui-radius);font-size:14px}
@@ -36,10 +36,10 @@
 
 /* Account security: rust primary like the rest of the site */
 .security-shell .security-button{border-radius:var(--ui-radius);font-size:14px;border-color:var(--ui-line-strong)}
-.security-shell .security-button.primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#fff}
+.security-shell .security-button.primary{background:var(--ui-rust);border-color:var(--ui-rust);color:#ffffff}
 .security-shell .security-button.primary:hover{background:var(--ui-rust-dark);border-color:var(--ui-rust-dark)}
 .security-eyebrow{display:none!important}
-.security-help{background:#fff;border:1px solid var(--ui-line);color:var(--ui-text)}
-.security-shell{--security-ink:#17191c;--security-muted:#5f656b;--security-line:#e4e1dc;background:#f7f6f4}
+.security-help{background:#ffffff;border:1px solid var(--ui-line);color:var(--ui-text)}
+.security-shell{--security-ink:#0F1B26;--security-muted:#5A6571;--security-line:#D9DEE3;background:#F7F8FA}
 .security-shell .security-help :is(h2,h3,summary,button){color:var(--ui-ink)}
 .security-shell :is(.security-link,.security-text-button){color:var(--ui-rust)}

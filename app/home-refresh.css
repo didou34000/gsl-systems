@@ -1,11 +1,11 @@
 /* Home page — October 2026. Scoped to the home page and loaded last. */
-.gsl-home{--hx-night:#111315;--hx-ink:#17191c;--hx-rust:#A84C35;--hx-rust-dark:#8c3d2a;--hx-line:#e4e1dc;--hx-muted:#5f656b;--hx-soft:#f7f6f4}
+.gsl-home{--hx-night:#0F1B26;--hx-ink:#0F1B26;--hx-rust:#1F4E79;--hx-rust-dark:#173B5C;--hx-line:#D9DEE3;--hx-muted:#5A6571;--hx-soft:#F7F8FA}
 
 /* Hero: no stock film of robotics was available, so the hero relies on type and the component list. */
-.gsl-home .hx-hero{position:relative;background:var(--hx-night);color:#fff}
+.gsl-home .hx-hero{position:relative;background:var(--hx-night);color:#ffffff}
 .gsl-home .hx-content{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:clamp(40px,6vw,96px);align-items:center;padding-block:clamp(64px,9vw,112px)}
 .gsl-home .hx-intro{min-width:0}
-.gsl-home .hx-hero h1{font-weight:650;font-size:clamp(40px,4.6vw,68px);line-height:1.04;letter-spacing:-.035em;color:#fff;max-width:11em;margin:0;text-wrap:balance}
+.gsl-home .hx-hero h1{font-weight:650;font-size:clamp(40px,4.6vw,68px);line-height:1.04;letter-spacing:-.035em;color:#ffffff;max-width:11em;margin:0;text-wrap:balance}
 .gsl-home .hx-lead{margin:22px 0 0;max-width:34em;font-size:18px;line-height:1.6;color:rgba(255,255,255,.74);text-wrap:pretty}
 
 /* Component list */
@@ -13,41 +13,41 @@
 .gsl-home .hx-anatomy h2{margin:0;padding:18px 0 14px;font-size:15px;font-weight:600;letter-spacing:0;color:rgba(255,255,255,.62)}
 .gsl-home .hx-anatomy ul{margin:0;padding:0;list-style:none}
 .gsl-home .hx-anatomy li{border-top:1px solid rgba(255,255,255,.1)}
-.gsl-home .hx-anatomy a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 2px;color:#fff;transition:color .15s}
+.gsl-home .hx-anatomy a{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:15px 2px;color:#ffffff;transition:color .15s}
 .gsl-home .hx-anatomy a>span{display:flex;flex-direction:column;gap:4px;min-width:0}
 .gsl-home .hx-anatomy strong{font-size:17px;font-weight:600;line-height:1.3}
 .gsl-home .hx-anatomy small{font-size:14px;line-height:1.45;color:rgba(255,255,255,.56)}
 .gsl-home .hx-anatomy a>svg{flex-shrink:0;color:rgba(255,255,255,.4);transition:color .15s,transform .15s}
-.gsl-home .hx-anatomy a:hover strong{color:#f0b9a8}
-.gsl-home .hx-anatomy a:hover>svg{color:#fff}
+.gsl-home .hx-anatomy a:hover strong{color:#a1cef7}
+.gsl-home .hx-anatomy a:hover>svg{color:#ffffff}
 [dir=rtl] .gsl-home .hx-anatomy a>svg{transform:scaleX(-1)}
 
 /* Search */
 .gsl-home .hx-search{width:min(760px,100%);margin-top:36px}
 .gsl-home .hx-modes{display:flex;gap:2px;margin-bottom:12px}
 .gsl-home .hx-modes button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:0;border-radius:8px;background:transparent;color:rgba(255,255,255,.7);font-size:15px;font-weight:550;cursor:pointer;transition:background .15s,color .15s}
-.gsl-home .hx-modes button:hover{color:#fff}
-.gsl-home .hx-modes button[aria-pressed=true]{background:rgba(255,255,255,.14);color:#fff}
-.gsl-home .hx-form{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:6px;padding:6px;border-radius:12px;background:#fff;color:var(--hx-ink)}
+.gsl-home .hx-modes button:hover{color:#ffffff}
+.gsl-home .hx-modes button[aria-pressed=true]{background:rgba(255,255,255,.14);color:#ffffff}
+.gsl-home .hx-form{display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:6px;padding:6px;border-radius:12px;background:#ffffff;color:var(--hx-ink)}
 .gsl-home .hx-field{display:flex;align-items:center;gap:12px;min-width:0;padding-inline:14px 6px;color:var(--hx-muted)}
 .gsl-home .hx-field input{flex:1;min-width:0;height:50px;border:0;outline:0;background:transparent;font-size:16px;color:var(--hx-ink)}
 .gsl-home .hx-field input::placeholder{color:#8b9096}
 .gsl-home .hx-form select{height:50px;max-width:200px;padding-inline:14px 30px;border:0;border-inline-start:1px solid var(--hx-line);border-radius:0;background-color:transparent;font-size:15px;color:var(--hx-ink);cursor:pointer}
-.gsl-home .hx-form button[type=submit]{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 22px;border:0;border-radius:8px;background:var(--hx-rust);color:#fff;font-size:16px;font-weight:600;cursor:pointer;transition:background .15s}
+.gsl-home .hx-form button[type=submit]{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 22px;border:0;border-radius:8px;background:var(--hx-rust);color:#ffffff;font-size:16px;font-weight:600;cursor:pointer;transition:background .15s}
 .gsl-home .hx-form button[type=submit]:hover{background:var(--hx-rust-dark)}
 .gsl-home .hx-form:focus-within{box-shadow:0 0 0 3px rgba(168,76,53,.5)}
 [dir=rtl] .gsl-home :is(.hx-form button[type=submit],.hx-countries,.hx-guides,.gsl-section-head>a,.hx-join .button-link) svg{transform:scaleX(-1)}
 
-.gsl-home .hx-hero :is(button,a,input,select):focus-visible{outline:2px solid #fff;outline-offset:3px}
+.gsl-home .hx-hero :is(button,a,input,select):focus-visible{outline:2px solid #ffffff;outline-offset:3px}
 
 /* Sourcing countries */
-.gsl-home .hx-countries{border-bottom:1px solid var(--hx-line);background:#fff}
+.gsl-home .hx-countries{border-bottom:1px solid var(--hx-line);background:#ffffff}
 .gsl-home .hx-countries>div{display:flex;align-items:center;gap:24px;padding-block:20px}
 .gsl-home .hx-countries p{flex-shrink:0;margin:0;font-size:15px;font-weight:600;color:var(--hx-ink)}
 .gsl-home .hx-countries nav{display:flex;flex-wrap:wrap;gap:6px}
 .gsl-home .hx-countries a{display:inline-flex;align-items:center;gap:6px;min-height:36px;padding:0 12px;border-radius:8px;background:var(--hx-soft);font-size:14px;color:var(--hx-ink);transition:background .15s,color .15s}
 .gsl-home .hx-countries a svg{color:#9aa0a6}
-.gsl-home .hx-countries a:hover{background:#efece8;color:var(--hx-rust)}
+.gsl-home .hx-countries a:hover{background:#e8ecef;color:var(--hx-rust)}
 .gsl-home .hx-countries a:focus-visible{outline:2px solid var(--hx-rust);outline-offset:2px}
 
 /* Section headings */
@@ -57,7 +57,7 @@
 
 /* Guides */
 .gsl-home .hx-guides{gap:16px}
-.gsl-home .hx-guides a{position:relative;display:flex;flex-direction:column;gap:10px;padding:28px;border:1px solid var(--hx-line);border-radius:12px;background:#fff;transition:border-color .15s}
+.gsl-home .hx-guides a{position:relative;display:flex;flex-direction:column;gap:10px;padding:28px;border:1px solid var(--hx-line);border-radius:12px;background:#ffffff;transition:border-color .15s}
 .gsl-home .hx-guides a:hover{border-color:#c9c4bd}
 .gsl-home .hx-guides a>svg{position:absolute;top:28px;inset-inline-end:24px;color:#9aa0a6}
 .gsl-home .hx-guides a:hover>svg{color:var(--hx-rust)}
@@ -66,12 +66,12 @@
 .gsl-home .hx-guides a:focus-visible{outline:2px solid var(--hx-rust);outline-offset:3px}
 
 /* Supplier call to action */
-.gsl-home .hx-join{display:flex;align-items:center;justify-content:space-between;gap:40px;max-width:none;margin-block:16px 80px;padding:clamp(32px,5vw,56px);border-radius:16px;background:var(--hx-night);color:#fff}
+.gsl-home .hx-join{display:flex;align-items:center;justify-content:space-between;gap:40px;max-width:none;margin-block:16px 80px;padding:clamp(32px,5vw,56px);border-radius:16px;background:var(--hx-night);color:#ffffff}
 .gsl-home .hx-join>div:first-child{max-width:680px}
-.gsl-home .hx-join h2{font-weight:650;font-size:clamp(28px,3vw,40px);line-height:1.12;letter-spacing:-.03em;color:#fff}
+.gsl-home .hx-join h2{font-weight:650;font-size:clamp(28px,3vw,40px);line-height:1.12;letter-spacing:-.03em;color:#ffffff}
 .gsl-home .hx-join p{margin:16px 0 28px;font-size:17px;line-height:1.6;color:rgba(255,255,255,.7)}
-.gsl-home .hx-join .button-link{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:8px;background:#fff;color:var(--hx-ink);font-weight:600}
-.gsl-home .hx-join .button-link:hover{background:#ece9e4}
+.gsl-home .hx-join .button-link{display:inline-flex;align-items:center;gap:8px;min-height:48px;padding:0 22px;border-radius:8px;background:#ffffff;color:var(--hx-ink);font-weight:600}
+.gsl-home .hx-join .button-link:hover{background:#e4e8ec}
 .gsl-home .hx-join .gsl-join-mark{display:none}
 
 @media(max-width:1100px){

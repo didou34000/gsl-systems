@@ -1,38 +1,34 @@
-# IS systems — Charte graphique v1
+# GSL systems — Charte graphique v2 « Acier » (octobre 2026)
 
 ## Nom et logo
-Écrire **IS systems** : IS en capitales, systems en minuscules. Logo typographique sans pictogramme décoratif : monogramme IS blanc dans un carré bleu nuit, suivi de systems. Aucun symbole de certification.
+Écrire **GSL systems** : GSL en capitales, systems en minuscules. Logo : bloc « GSL » bleu acier et anthracite, suivi de systems. Aucun symbole de certification.
 
-- Logo principal : `public/brand/is-systems.svg`.
-- Version blanche : `public/brand/is-systems-white.svg`, réservée aux fonds sombres.
-- Favicon : `public/favicon.svg`.
-- Zone de protection : au moins un quart de la hauteur du carré sur chaque côté.
-- Largeur minimale du logo complet : 150 px. En dessous, utiliser uniquement le monogramme.
-- Ne pas étirer, incliner, recolorer ni ajouter d’ombre au logo.
+- Logo principal : `public/brand/gsl-systems-logo.png` (version source : `gsl-systems-original.png`).
+- Favicons : `public/favicon.svg`, `favicon-32.png`, `favicon.ico`, `apple-touch-icon.png`.
+- Le logo a été recoloré du rouille vers le bleu acier en octobre 2026. Un fichier vectoriel refait proprement reste à prévoir.
+- Ne pas étirer, incliner ni ajouter d’ombre au logo.
 
 ## Palette
 | Usage | Couleur |
 |---|---|
-| Identité, titres, logo | Bleu nuit `#142B3C` |
-| Action principale, liens, focus | Bleu `#2357D9` |
-| Survol action | Bleu foncé `#1B43A8` |
-| Texte secondaire | Ardoise `#52616B` |
-| Surfaces secondaires | Gris clair `#F3F6F8` |
-| Bordures | Gris `#D6DFE5` |
+| Action principale, liens, focus, logo | Bleu acier `#1F4E79` |
+| Survol action | Bleu acier foncé `#173B5C` |
+| Texte | Encre `#14191F` |
+| Fonds sombres (accueil, encarts, pied de page) | Nuit acier `#0F1B26` |
+| Texte secondaire | Ardoise `#5A6571` |
+| Bordures | Gris `#D9DEE3` |
+| Surfaces secondaires | Gris clair `#F3F5F7` |
 | Fond principal | Blanc `#FFFFFF` |
 
-Le bleu est réservé aux actions et repères. Les couleurs de succès, erreur et avertissement conservent un sens fonctionnel. Aucun statut positif pour suggérer une vérification non réalisée.
+Le bleu est réservé aux actions et repères. Succès (vert), erreur (rouge) et avertissement (ambre) gardent leur sens fonctionnel et ne prennent jamais le bleu. Aucun statut positif pour suggérer une vérification non réalisée.
 
 ## Typographie
-Arial, Helvetica, sans-serif : pas de police distante à charger. Titres sobres, graisse 500–600 ; paragraphes 400. Corps 16–18 px, informations secondaires au moins 14 px. Navigation 15–16 px, boutons 16 px, titres de fiches 18–20 px. Interligne du texte : 1,55–1,7. Capitales espacées uniquement pour les petits repères de section.
+Inter, auto-hébergée (`@fontsource-variable/inter`). Titres sobres, graisse 500–650 ; paragraphes 400. Pas de petits titres en capitales espacées, pas de numérotation décorative.
 
 ## Interface
-Grille d’espacement de 4 px : 8, 12, 16, 24, 32, 48, 64. Angles de 4 px ; bordures fines ; pas d’ombre décorative sur les cartes. Boutons principaux bleus, secondaires blancs avec bordure. Hauteur cible : 46–48 px. Focus visible à 2 px. Une action principale par groupe.
+Grille d’espacement de 4 px : 8, 12, 16, 24, 32, 48, 64. Angles de 4 à 8 px ; bordures fines ; pas d’ombre décorative, de grille ni de lueur décorative. Boutons principaux bleus, secondaires blancs avec bordure. Focus visible à 2 px. Une action principale par groupe.
 
 ## Images et ton
-Photographies industrielles naturelles et précises, sans filtre de couleur excessif. Vidéo calme, silencieuse, avec pause et image de remplacement. Toujours distinguer illustration, exemple fictif et contenu d’un fabricant réel.
+Photographies et vidéos réelles de composants ou d’ateliers, sans filtre excessif ; jamais d’animation inventée. Vidéo calme, silencieuse, avec pause et image de remplacement. Toujours distinguer illustration, exemple fictif et contenu d’un fabricant réel.
 
-Textes concrets : pièce, procédé, matière, quantité, destinataire, prochaine étape. Aucun slogan abstrait, prix garanti, audit ou certification sans preuve.
-
-## Application
-Les variables et composants de marque sont définis dans `app/brand.css`. Cette feuille complète les mises en page existantes sans changer les données, autorisations ou demandes.
+Textes concrets : pièce, caractéristique, quantité, destinataire, prochaine étape. Aucun slogan abstrait, prix garanti, audit ou certification sans preuve.

@@ -1,4 +1,4 @@
-.robotics-scope{color:var(--muted-foreground,#515763);font-size:.95rem;line-height:1.6;margin-top:1.5rem;max-width:78ch}.robotics-families .gsl-sector-grid a{flex-wrap:wrap}.robotics-families .gsl-sector-grid span{font-size:.85rem;width:100%}.hx-project-cta{display:inline-flex;align-items:center;gap:.6rem;background:#fff;color:#1b2836;padding:12px 18px;border-radius:5px;margin-top:16px;font-weight:600}.robotics-brief{padding:20px;border:1px solid #dce1e5;border-radius:10px;background:#f8fafb;margin:20px 0}.robotics-brief select,.robotics-brief input{width:100%;padding:10px;border:1px solid #cbd3da;border-radius:5px;background:#fff}.robotics-brief label{display:block;margin-bottom:12px}.robotics-evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.robotics-evidence>div{padding:15px;background:#f5f7f9;border-radius:8px}.robotics-evidence p{font-size:.9rem;line-height:1.5;margin-top:6px}.robotics-technical dl{display:flex;flex-wrap:wrap;gap:20px}.robotics-technical dd{font-weight:600}.robotics-technical dt{font-size:.9rem;color:#515763}@media(max-width:760px){.robotics-evidence{grid-template-columns:1fr}.catalogue-category-discovery{margin-bottom:8px}.catalogue-lead{padding-bottom:12px}.hx-hero .hx-content h1{font-size:clamp(2rem,7vw,3rem)}}
+.robotics-scope{color:var(--muted-foreground,#515763);font-size:.95rem;line-height:1.6;margin-top:1.5rem;max-width:78ch}.robotics-families .gsl-sector-grid a{flex-wrap:wrap}.robotics-families .gsl-sector-grid span{font-size:.85rem;width:100%}.hx-project-cta{display:inline-flex;align-items:center;gap:.6rem;background:#ffffff;color:#1b2836;padding:12px 18px;border-radius:5px;margin-top:16px;font-weight:600}.robotics-brief{padding:20px;border:1px solid #dce1e5;border-radius:10px;background:#f8fafb;margin:20px 0}.robotics-brief select,.robotics-brief input{width:100%;padding:10px;border:1px solid #cbd3da;border-radius:5px;background:#ffffff}.robotics-brief label{display:block;margin-bottom:12px}.robotics-evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:20px 0}.robotics-evidence>div{padding:15px;background:#f5f7f9;border-radius:8px}.robotics-evidence p{font-size:.9rem;line-height:1.5;margin-top:6px}.robotics-technical dl{display:flex;flex-wrap:wrap;gap:20px}.robotics-technical dd{font-weight:600}.robotics-technical dt{font-size:.9rem;color:#515763}@media(max-width:760px){.robotics-evidence{grid-template-columns:1fr}.catalogue-category-discovery{margin-bottom:8px}.catalogue-lead{padding-bottom:12px}.hx-hero .hx-content h1{font-size:clamp(2rem,7vw,3rem)}}
 
 /* Robotics redesign, October 2026: sober product visuals without decorative halos. */
 .catalogue-product-visual,.catalogue-product-visual[class*=visual-]{background:#eceef0;color:#2b3036}
@@ -10,32 +10,32 @@
 
 /* Family tabs above catalogue results */
 .catalogue-family-tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
-.catalogue-family-tabs a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:1px solid #dcdfe3;border-radius:999px;background:#fff;font-size:14px;color:#17191c;transition:border-color .15s,background .15s}
+.catalogue-family-tabs a{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 14px;border:1px solid #dcdfe3;border-radius:999px;background:#ffffff;font-size:14px;color:#0F1B26;transition:border-color .15s,background .15s}
 .catalogue-family-tabs a:hover{border-color:#a9aeb4}
-.catalogue-family-tabs a[aria-current=page]{background:#17191c;border-color:#17191c;color:#fff}
-.catalogue-family-tabs a>span{font-size:12px;color:#6b7075}
+.catalogue-family-tabs a[aria-current=page]{background:#0F1B26;border-color:#0F1B26;color:#ffffff}
+.catalogue-family-tabs a>span{font-size:12px;color:#5A6571}
 .catalogue-family-tabs a[aria-current=page]>span{color:rgba(255,255,255,.7)}
-.catalogue-family-tabs a:focus-visible{outline:2px solid #A84C35;outline-offset:2px}
+.catalogue-family-tabs a:focus-visible{outline:2px solid #1F4E79;outline-offset:2px}
 
 /* Component families page */
 .robotics-families-head{max-width:760px;margin-bottom:32px}
-.robotics-families-head h1{font-weight:650;font-size:clamp(34px,3.6vw,52px);line-height:1.08;letter-spacing:-.035em;color:#17191c;margin:0}
-.robotics-families-head p{margin:16px 0 0;font-size:18px;line-height:1.6;color:#5f656b}
-.robotics-family-list{margin:0;padding:0;list-style:none;border-top:1px solid #e4e1dc}
-.robotics-family-list li{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:26px 0;border-bottom:1px solid #e4e1dc}
-.robotics-family-list h2{margin:0;font-size:22px;font-weight:650;letter-spacing:-.015em;line-height:1.25;color:#17191c}
-.robotics-family-list h2 a:hover{color:#A84C35}
+.robotics-families-head h1{font-weight:650;font-size:clamp(34px,3.6vw,52px);line-height:1.08;letter-spacing:-.035em;color:#0F1B26;margin:0}
+.robotics-families-head p{margin:16px 0 0;font-size:18px;line-height:1.6;color:#5A6571}
+.robotics-family-list{margin:0;padding:0;list-style:none;border-top:1px solid #D9DEE3}
+.robotics-family-list li{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:26px 0;border-bottom:1px solid #D9DEE3}
+.robotics-family-list h2{margin:0;font-size:22px;font-weight:650;letter-spacing:-.015em;line-height:1.25;color:#0F1B26}
+.robotics-family-list h2 a:hover{color:#1F4E79}
 .robotics-family-list p{margin:8px 0 0;max-width:62ch;font-size:16px;line-height:1.55;color:#3f444a}
-.robotics-family-list .robotics-family-criteria{font-size:14px;color:#6b7075}
-.robotics-family-count{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;min-height:40px;font-size:15px;font-weight:600;color:#17191c;white-space:nowrap}
-a.robotics-family-count:hover{color:#A84C35}
+.robotics-family-list .robotics-family-criteria{font-size:14px;color:#5A6571}
+.robotics-family-count{flex-shrink:0;display:inline-flex;align-items:center;gap:8px;min-height:40px;font-size:15px;font-weight:600;color:#0F1B26;white-space:nowrap}
+a.robotics-family-count:hover{color:#1F4E79}
 .robotics-family-count.is-empty{font-weight:400;color:#8b9096}
-.robotics-family-project{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:600;color:#A84C35}
+.robotics-family-project{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-weight:600;color:#1F4E79}
 [dir=rtl] :is(.robotics-family-count,.robotics-family-project) svg{transform:scaleX(-1)}
 
 /* Hero secondary action is a quiet text link, the search stays primary. */
-.gsl-home .hx-project-cta{background:transparent;color:#fff;padding:0 0 3px;margin-top:24px;border-radius:0;border-bottom:1px solid rgba(255,255,255,.4);font-weight:600}
-.gsl-home .hx-project-cta:hover{border-color:#fff}
+.gsl-home .hx-project-cta{background:transparent;color:#ffffff;padding:0 0 3px;margin-top:24px;border-radius:0;border-bottom:1px solid rgba(255,255,255,.4);font-weight:600}
+.gsl-home .hx-project-cta:hover{border-color:#ffffff}
 [dir=rtl] .gsl-home .hx-project-cta svg{transform:scaleX(-1)}
 
 @media(max-width:760px){
@@ -45,3 +45,4 @@ a.robotics-family-count:hover{color:#A84C35}
 }
 .catalogue-company-products>span{text-transform:none;letter-spacing:0;font-size:13px}
 .gsl-home .hx-form select{max-width:170px}
+.robotics-family-status{margin:0 0 16px;font-size:14px;color:#5A6571}

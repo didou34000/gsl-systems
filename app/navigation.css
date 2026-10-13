@@ -1,7 +1,7 @@
 /* A single account entry; discovery and member actions share clear destinations. */
 .site-header .mobile-navigation[hidden]{display:none}
 .header-quote{gap:10px;white-space:nowrap}
-.account-loading{color:#6B7075;background:#F6F2EC;min-width:138px}
+.account-loading{color:#5A6571;background:#F3F5F7;min-width:138px}
 .header-nav a[aria-current=page],.mobile-navigation a[aria-current=page]{color:var(--primary);font-weight:600}
 .header-nav .secondary-navigation a:not([aria-current=page]){font-weight:400;color:var(--foreground)}
 .site-header a:focus-visible,.menu-toggle:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
@@ -27,5 +27,5 @@
 
 /* Brand descriptor: states the platform's scope next to the logo. */
 .header-brand{display:flex;align-items:center;gap:16px;min-width:0;margin-inline-end:auto}
-.header-tagline{padding-inline-start:16px;border-inline-start:1px solid var(--border);font-size:13px;line-height:1.3;color:#5f656b;max-width:13em}
+.header-tagline{padding-inline-start:16px;border-inline-start:1px solid var(--border);font-size:13px;line-height:1.3;color:#5A6571;max-width:13em}
 @media(max-width:1180px){.header-tagline{display:none}}

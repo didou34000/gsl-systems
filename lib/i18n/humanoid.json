@@ -668,5 +668,45 @@
     "روبوتات بشرية كاملة وأذرع روبوتية ومنصات تطوير",
     "पूर्ण ह्यूमनॉइड, रोबोटिक भुजाएँ और डेवलपमेंट प्लेटफ़ॉर्म",
     "整机人形机器人、机械臂和开发平台"
+  ],
+  "See offers": [
+    "Ver las ofertas",
+    "Ver as ofertas",
+    "Angebote ansehen",
+    "Vedi le offerte",
+    "Teklifleri gör",
+    "عرض العروض",
+    "ऑफ़र देखें",
+    "查看报价"
+  ],
+  "Offer counts are temporarily unavailable.": [
+    "El número de ofertas no está disponible temporalmente.",
+    "O número de ofertas está temporariamente indisponível.",
+    "Die Anzahl der Angebote ist vorübergehend nicht verfügbar.",
+    "Il numero di offerte è temporaneamente non disponibile.",
+    "Teklif sayıları geçici olarak kullanılamıyor.",
+    "عدد العروض غير متاح مؤقتًا.",
+    "ऑफ़र की संख्या अस्थायी रूप से उपलब्ध नहीं है।",
+    "报价数量暂时无法显示。"
+  ],
+  "e.g. gear grinding": [
+    "Ej. rectificado de engranajes",
+    "Ex. retificação de engrenagens",
+    "z. B. Zahnradschleifen",
+    "Es. rettifica di ingranaggi",
+    "Örn. dişli taşlama",
+    "مثال: تجليخ التروس",
+    "उदा. गियर ग्राइंडिंग",
+    "例如：齿轮磨削"
+  ],
+  "e.g. 7075 aluminium": [
+    "Ej. aluminio 7075",
+    "Ex. alumínio 7075",
+    "z. B. Aluminium 7075",
+    "Es. alluminio 7075",
+    "Örn. 7075 alüminyum",
+    "مثال: ألومنيوم 7075",
+    "उदा. 7075 एल्युमिनियम",
+    "例如：7075 铝"
   ]
 }
