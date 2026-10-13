@@ -24,3 +24,8 @@
  .site-header .language-selector svg{display:none}
  .site-header .language-selector select{width:84px}
 }
+
+/* Brand descriptor: states the platform's scope next to the logo. */
+.header-brand{display:flex;align-items:center;gap:16px;min-width:0;margin-inline-end:auto}
+.header-tagline{padding-inline-start:16px;border-inline-start:1px solid var(--border);font-size:13px;line-height:1.3;color:#5f656b;max-width:13em}
+@media(max-width:1180px){.header-tagline{display:none}}

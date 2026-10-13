@@ -22,11 +22,12 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
   return()=>{document.removeEventListener('keydown',dismiss);document.removeEventListener('pointerdown',outside);window.removeEventListener('resize',resize);};
  },[open]);
  const primary=[
-  [l('Products','Produits'),'/catalogue'],
+  [l('Components','Composants'),'/catalogue'],
+  [l('Component families','Familles de composants'),'/secteurs'],
   [l('Manufacturers','Fabricants'),'/fabricants'],
   [l('My robotics project','Mon projet robotique'),'/decrire-mon-besoin'],
  ];
- const discovery=[[l('Robotics families','Familles robotiques'),'/secteurs'],[l('Countries','Pays'),'/pays']];
+ const discovery=[[l('Countries','Pays'),'/pays']];
  const company=[signedIn?l('My company','Mon entreprise'):l('Join as a supplier','Devenir fournisseur'),'/espace-fournisseur'];
  function active(href:string){
   if(href==='/catalogue')return path==='/catalogue'||path.startsWith('/produits/');
@@ -36,7 +37,7 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
  function navLink([label,href]:string[],icon=false){return <Link key={href} href={href} className={[active(href)?'active':'',href==='/decrire-mon-besoin'?'header-request-nav':''].filter(Boolean).join(' ')||undefined} aria-current={active(href)?'page':undefined} onClick={()=>setOpen(false)}>{icon&&<LayoutGrid size={15} aria-hidden/>}{label}</Link>;}
  return <header className="site-header" ref={header}>
   <div className="header-main container">
-   <Link href="/" aria-label="GSL systems">{children}</Link>
+   <div className="header-brand"><Link href="/" aria-label="GSL systems">{children}</Link><span className="header-tagline">{l('Components for humanoid robotics','Composants pour la robotique humanoïde')}</span></div>
    <div className="header-tools">
     <LanguageSelector/>
     {signedIn&&<MessageLink/>}

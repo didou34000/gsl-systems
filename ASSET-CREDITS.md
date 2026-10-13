@@ -21,3 +21,7 @@ Les images Pexels relèvent de https://www.pexels.com/license/. Tous les médias
 
 ## Film du hero — 2026-10-12
 - Le film du hero redevient « Industrial machine cutting » (Edgar Fernandez / Mixkit, Free License, voir plus haut). Le film du terminal à conteneurs (Pexels) est retiré du dépôt.
+
+## Refonte robotique humanoïde — 2026-10-13
+- Le film « Industrial machine cutting » (tour CNC) et son poster sont retirés de l’accueil et du dépôt : ils présentaient le site comme généraliste industriel.
+- Aucun film ni photo de robotique n’a pu être téléchargé depuis l’environnement de travail (sites de stock inaccessibles). L’accueil n’utilise donc aucun média : pas d’image inventée ni d’animation maison. Un film réel de robotique pourra être ajouté ici avec sa source et sa licence.

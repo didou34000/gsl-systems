@@ -1,11 +1,11 @@
 /** Product taxonomy and explicit, reviewed admission; general industrial capability is insufficient. */
 export const roboticsFamilies = [
- {id:'robots-plateformes',en:'Robots & platforms',fr:'Robots et plateformes',group:'machines',criteria:'Charge utile, portée, répétabilité, environnement'},
- {id:'actionnement-transmission',en:'Actuation & transmission',fr:'Actionnement et transmission',group:'metal',criteria:'Couple, vitesse, tension, jeu mécanique'},
- {id:'prehension',en:'Grippers & tooling',fr:'Préhension',group:'machines',criteria:'Charge, course, force, interface'},
- {id:'capteurs-vision',en:'Sensors & vision',fr:'Capteurs et vision',group:'electricite',criteria:'Plage, précision, fréquence, connexion'},
- {id:'commande-electronique',en:'Control & electronics',fr:'Commande et électronique',group:'electricite',criteria:'Interfaces, alimentation, compatibilité'},
- {id:'mecanique-cablage',en:'Mechanical parts & cabling',fr:'Composants mécaniques et câblage',group:'metal',criteria:'Dimensions, matières, tolérances, contraintes d’usage'},
+ {id:'actionnement-transmission',en:'Actuators, reducers & screws',fr:'Actionneurs, réducteurs et vis',group:'metal',criteria:'Couple nominal et crête, vitesse, jeu, rigidité, tension',examplesEn:'Rotary and linear joint actuators, harmonic and planetary reducers, roller and ball screws',examplesFr:'Actionneurs articulaires rotatifs et linéaires, réducteurs harmoniques et planétaires, vis à rouleaux et à billes'},
+ {id:'capteurs-vision',en:'Sensors & vision',fr:'Capteurs et vision',group:'electricite',criteria:'Plage, précision, fréquence, connexion',examplesEn:'Six-axis force/torque sensors, encoders, IMUs and depth cameras',examplesFr:'Capteurs d’effort et de couple 6 axes, codeurs, centrales inertielles, caméras de profondeur'},
+ {id:'prehension',en:'Hands & grippers',fr:'Mains et préhension',group:'machines',criteria:'Charge, course, force, interface',examplesEn:'Dexterous hands, electric grippers and end effectors',examplesFr:'Mains dextres, pinces électriques et effecteurs'},
+ {id:'commande-electronique',en:'Control electronics',fr:'Électronique de commande',group:'electricite',criteria:'Interfaces, alimentation, compatibilité',examplesEn:'Motor drivers, controllers, EtherCAT and CAN interfaces, power management',examplesFr:'Drivers moteur, contrôleurs, interfaces EtherCAT et CAN, gestion de l’énergie'},
+ {id:'mecanique-cablage',en:'Structure, bearings & cabling',fr:'Structure, roulements et câblage',group:'metal',criteria:'Dimensions, matières, tolérances, contraintes d’usage',examplesEn:'Crossed-roller bearings, structural parts, harnesses and connectors',examplesFr:'Roulements à rouleaux croisés, pièces de structure, faisceaux et connecteurs'},
+ {id:'robots-plateformes',en:'Humanoids & robot platforms',fr:'Humanoïdes et plateformes',group:'machines',criteria:'Charge utile, portée, répétabilité, environnement',examplesEn:'Complete humanoids, robot arms and development platforms',examplesFr:'Humanoïdes complets, bras robotisés et plateformes de développement'},
 ] as const;
 export const roboticsMetrics:Record<string,{key:string;en:string;fr:string;unit:string}[]>={
  'robots-plateformes':[{key:'payload_kg',en:'Payload',fr:'Charge utile',unit:'kg'},{key:'reach_mm',en:'Reach',fr:'Portée',unit:'mm'},{key:'repeatability_mm',en:'Repeatability',fr:'Répétabilité',unit:'mm'}],

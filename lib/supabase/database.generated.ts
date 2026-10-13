@@ -385,6 +385,31 @@ export interface DatabaseRows {
     sent_snapshot: unknown | null;
     draft_items: unknown;
   };
+  robotics_admissions: {
+    product_id: string;
+    product_revision: number | string;
+    company_revision: number | string;
+    family: string;
+    production_country: string;
+    production_site: string;
+    robotics_offer: string;
+    sources: unknown;
+    checked_at: string;
+    technical: unknown;
+    reviewed_by: string;
+    created_at: string;
+  };
+  robotics_products: {
+    product_id: string | null;
+    organization_id: string | null;
+    source_revision: number | string | null;
+    name: string | null;
+    category: string | null;
+    description: string | null;
+    published_at: string | null;
+    withdrawn_at: string | null;
+    specifications: unknown | null;
+  };
   saved_selections: {
     owner_id: string;
     product_id: string;

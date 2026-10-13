@@ -2,7 +2,7 @@
 import {trackJourney} from '@/lib/journey-analytics';
 import {useState} from 'react';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight, Armchair, BookOpen, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Droplets, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
+import {ArrowRight, ArrowUpRight, Armchair, BookOpen, Bot, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Hand, Droplets, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import {countryName} from '@/lib/country-names';
@@ -24,7 +24,7 @@ export function useCategoryLabel() {
 }
 
 const categoryIcons: Record<string, LucideIcon> = {
-  'robots-plateformes': Factory, 'actionnement-transmission': Cog, prehension: Wrench, 'capteurs-vision': ScanLine, 'commande-electronique': Cpu, 'mecanique-cablage': Cable,
+  'robots-plateformes': Bot, 'actionnement-transmission': Cog, prehension: Hand, 'capteurs-vision': ScanLine, 'commande-electronique': Cpu, 'mecanique-cablage': Cable,
   metal: Cog, electricite: Zap, emballage: Package, textile: Shirt, plasturgie: Boxes, machines: Factory, construction: Building2, mobilier: Armchair,
   'usinage-precision': ScanLine, 'tolerie-soudage': Hammer, 'fonderie-forge': Flame, 'aluminium-extrusion': Layers,
   'roulements-transmission': Cog, 'pompes-hydraulique': Droplets, 'ressorts-fixations': Wrench, 'moules-injection': Boxes,
@@ -67,6 +67,7 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
   const price = research ? publishedPrice(research.commercial, language) : null;
   const minimum = research ? researchValue(research.commercial.moq) : p.specifications.minimum_quantity;
   const material = research ? research.materials.filter(Boolean).join(', ') : p.specifications.materials;
+  const technical = technicalRows(p.category, p.specifications).slice(0, 4);
   const process = p.specifications.processes || (research ? Object.entries(research.specifications).find(([key]) => /proc[eé]d[eé]|process|fabrication/i.test(key))?.[1] : null);
   return <article className="catalogue-product-card">
     <div className="catalogue-card-media"><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id} aria-label={p.name}><ProductVisual product={p}/></Link><SaveProduct id={p.product_id} compact/></div>
@@ -76,9 +77,9 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
       {research && <ResearchLabel/>}
       {p.description && <p className="catalogue-card-description">{p.description}</p>}
       <dl className="catalogue-card-facts">
-        {technicalRows(p.category,p.specifications).slice(0,2).map(m=><div key={m.key}><dt>{l(m.en,m.fr)}</dt><dd>{m.value} {m.unit}</dd></div>)}
-        <div><dt>{l('Material', 'Matière')}</dt><dd>{material || l('Not disclosed', 'Non communiqué')}</dd></div>
-        {(!research || Boolean(process)) && <div><dt>{l('Process', 'Procédé')}</dt><dd>{process || l('Not disclosed', 'Non communiqué')}</dd></div>}
+        {technical.map(m=><div key={m.key}><dt>{l(m.en,m.fr)}</dt><dd>{m.value} {m.unit}</dd></div>)}
+        {technical.length < 2 && <div><dt>{l('Material', 'Matière')}</dt><dd>{material || l('Not disclosed', 'Non communiqué')}</dd></div>}
+        {technical.length < 2 && (!research || Boolean(process)) && <div><dt>{l('Process', 'Procédé')}</dt><dd>{process || l('Not disclosed', 'Non communiqué')}</dd></div>}
       </dl>
       <div className="catalogue-card-meta"><span>{country ? <><CountryFlag code={country}/>{countryName(country, language)}</> : l('Manufacturing country to confirm', 'Pays de fabrication à confirmer')}</span><span>{minimum ? `${l('Min.', 'Min.')} ${minimum}${!research && p.specifications.unit ? ' ' + p.specifications.unit : ''}` : l('MOQ not disclosed', 'MOQ non communiqué')}</span></div>
       {research && <div className="catalogue-card-research-meta"><span>{price || l('Price not disclosed', 'Prix non communiqué')}</span><span><BookOpen size={12} aria-hidden/>{research.sources.length} {l('sources', 'sources')}</span></div>}
@@ -95,7 +96,7 @@ export function SupplierCard({supplier: s, products = []}: {supplier: CardSuppli
   const research = companyResearch(s.public_details);
   const categories = [...new Set([...(research?.categories || []), ...products.map(p => p.category)].filter(Boolean))];
   return <article className="catalogue-supplier-card">
-    <div className="catalogue-company-heading"><CompanyMark supplier={s}/><div><p className="catalogue-byline">{l('Industrial company', 'Entreprise industrielle')}</p><h3><Link href={'/fabricants/' + s.organization_id}>{s.display_name}</Link></h3><p className="catalogue-location"><CountryFlag code={s.country_code}/>{[s.city, countryName(s.country_code, language)].filter(Boolean).join(' · ')}</p></div></div>
+    <div className="catalogue-company-heading"><CompanyMark supplier={s}/><div><p className="catalogue-byline">{l('Manufacturer', 'Fabricant')}</p><h3><Link href={'/fabricants/' + s.organization_id}>{s.display_name}</Link></h3><p className="catalogue-location"><CountryFlag code={s.country_code}/>{[s.city, countryName(s.country_code, language)].filter(Boolean).join(' · ')}</p></div></div>
     {research && <ResearchLabel/>}
     <p className="catalogue-card-description">{s.description}</p>
     {categories.length > 0 && <div className="catalogue-tags">{categories.slice(0, 4).map(category => <span key={category}><CategoryIcon category={category} size={13}/>{categoryLabel(category)}</span>)}</div>}
