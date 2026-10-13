@@ -1,0 +1,62 @@
+{
+ "Manufacturers identified from public sources": [
+  "Fabricantes identificados en fuentes públicas",
+  "Fabricantes identificados em fontes públicas",
+  "Hersteller aus öffentlichen Quellen",
+  "Produttori individuati da fonti pubbliche",
+  "Kamuya açık kaynaklarda belirlenen üreticiler",
+  "مصنّعون تم تحديدهم من مصادر عامة",
+  "सार्वजनिक स्रोतों से पहचाने गए निर्माता",
+  "从公开来源识别的制造商"
+ ],
+ "These manufacturers are not registered on GSL and have not been verified by GSL. The information comes from their published documents; enquiries go through GSL.": [
+  "Estos fabricantes no están registrados en GSL y GSL no los ha verificado. La información procede de sus documentos publicados; las solicitudes pasan por GSL.",
+  "Estes fabricantes não estão registados na GSL e não foram verificados pela GSL. As informações vêm dos seus documentos publicados; os pedidos passam pela GSL.",
+  "Diese Hersteller sind nicht bei GSL registriert und wurden nicht von GSL geprüft. Die Angaben stammen aus ihren veröffentlichten Unterlagen; Anfragen laufen über GSL.",
+  "Questi produttori non sono registrati su GSL e non sono stati verificati da GSL. Le informazioni provengono dai loro documenti pubblicati; le richieste passano da GSL.",
+  "Bu üreticiler GSL'e kayıtlı değildir ve GSL tarafından doğrulanmamıştır. Bilgiler yayımladıkları belgelerden alınmıştır; talepler GSL üzerinden iletilir.",
+  "هؤلاء المصنّعون غير مسجّلين في GSL ولم تتحقق منهم GSL. المعلومات مأخوذة من وثائقهم المنشورة؛ وتمر الطلبات عبر GSL.",
+  "ये निर्माता GSL पर पंजीकृत नहीं हैं और GSL ने इनका सत्यापन नहीं किया है। जानकारी उनके प्रकाशित दस्तावेज़ों से ली गई है; अनुरोध GSL के माध्यम से जाते हैं।",
+  "这些制造商未在 GSL 注册，也未经 GSL 核实。信息来自其公开发布的文件；询价通过 GSL 进行。"
+ ],
+ "Not registered, unverified": [
+  "No registrado, no verificado",
+  "Não registado, não verificado",
+  "Nicht registriert, ungeprüft",
+  "Non registrato, non verificato",
+  "Kayıtlı değil, doğrulanmamış",
+  "غير مسجّل، غير موثّق",
+  "अपंजीकृत, असत्यापित",
+  "未注册，未核实"
+ ],
+ "No specifications published by the manufacturer.": [
+  "El fabricante no publica especificaciones.",
+  "O fabricante não publica especificações.",
+  "Der Hersteller veröffentlicht keine technischen Daten.",
+  "Il produttore non pubblica specifiche.",
+  "Üretici herhangi bir teknik özellik yayımlamıyor.",
+  "لا ينشر المصنّع أي مواصفات.",
+  "निर्माता ने कोई विनिर्देश प्रकाशित नहीं किए हैं।",
+  "制造商未公布任何技术参数。"
+ ],
+ "Checked on": [
+  "Consultado el",
+  "Consultado em",
+  "Abgerufen am",
+  "Consultato il",
+  "Erişim tarihi",
+  "تاريخ الاطلاع",
+  "देखा गया",
+  "查阅日期"
+ ],
+ "Ask GSL": [
+  "Consultar a GSL",
+  "Perguntar à GSL",
+  "GSL anfragen",
+  "Chiedi a GSL",
+  "GSL'e sor",
+  "اسأل GSL",
+  "GSL से पूछें",
+  "咨询 GSL"
+ ]
+}

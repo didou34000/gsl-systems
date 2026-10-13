@@ -11,6 +11,7 @@ import {roboticsFamilies as researchCategories,roboticsMetrics} from '@/lib/robo
 import {catalogueCategoryIds} from '@/lib/catalogue-display';
 import CountryFlag from '@/components/country-flag';
 import {useLanguage} from './language';
+import {ReferencedMakers} from './referenced-makers';
 import {ArrowRight,ArrowLeft,Factory,LayoutGrid,List,Search,SlidersHorizontal,X} from 'lucide-react';
 import {CategoryIcon,ProductCard,SupplierCard,useCategoryLabel,type CardProduct,type CardSupplier} from './catalogue-cards';
 export type Hit=CardSupplier&{published_at:string;match_group:string;matched_products:CardProduct[]};
@@ -50,7 +51,7 @@ export default function CatalogueLive({compact=false,initialCountry='',initialCa
  {!data.suppliers.length&&<div className="catalogue-empty"><Search size={34}/><h2>{l('No published match','Aucun résultat publié')}</h2><p>{l('Your criteria have been kept. Change your filters or prepare a private request.','Vos critères ont été conservés. Modifiez les filtres ou préparez une demande privée.')}</p><div><Link className="catalogue-secondary" href={base}>{l('Reset filters','Effacer les filtres')}</Link><Link className="catalogue-primary" href="/decrire-mon-besoin">{l('Describe my requirement','Décrire mon besoin')}</Link></div></div>}
  {['confirmed','unknown','preferred_unmatched'].map(group=>{const hits=data.suppliers.filter(s=>s.match_group===group);return hits.length>0&&<section className="catalogue-result-group" key={group}>{group!=='confirmed'&&<h2>{group==='unknown'?l('Information to confirm','Informations à confirmer'):l('Outside your preferences','Hors de vos préférences')}</h2>}<div className={'catalogue-grid '+(productMode?'product-grid-mode':'company-grid-mode')+(layout==='list'?' catalogue-list':'')}>{productMode?hits.flatMap(s=>s.matched_products.map(p=><ProductCard key={p.product_id} product={p} supplier={s}/>)):hits.slice(0,compact?3:12).map(s=><SupplierCard key={s.organization_id} supplier={s} products={s.matched_products}/>)}</div></section>})}
  {!compact&&data.count>12&&<nav className="catalogue-pagination" aria-label={l('Results pages','Pages de résultats')}>{data.page>1?<Link className="catalogue-secondary" href={href({page:String(data.page-1)})}><ArrowLeft size={16}/>{l('Previous','Précédent')}</Link>:<span/>}<span>{data.page} / {Math.ceil(data.count/12)}</span>{data.page*12<data.count?<Link className="catalogue-secondary" href={href({page:String(data.page+1)})}>{l('Next','Suivant')}<ArrowRight size={16}/></Link>:<span/>}</nav>}
- </>}{compact&&<Link className="catalogue-help-link" href="/fabricants">{l('Explore all manufacturers','Explorer tous les fabricants')}<ArrowRight size={17}/></Link>}</div></div>
+ </>}{!compact&&!state.loading&&<ReferencedMakers category={params.get('category')||''} country={params.get('country')||''}/>}{compact&&<Link className="catalogue-help-link" href="/fabricants">{l('Explore all manufacturers','Explorer tous les fabricants')}<ArrowRight size={17}/></Link>}</div></div>
  </section>;
 }
 function ArrowUpRightIcon(){return <ArrowRight size={17} aria-hidden/>}
