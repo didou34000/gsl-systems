@@ -818,5 +818,35 @@
     "مكوّنات مشابهة",
     "समान घटक",
     "类似零部件"
+  ],
+  "product to compare": [
+    "producto para comparar",
+    "produto para comparar",
+    "Produkt zum Vergleichen",
+    "prodotto da confrontare",
+    "karşılaştırılacak ürün",
+    "منتج للمقارنة",
+    "तुलना के लिए उत्पाद",
+    "个待比较产品"
+  ],
+  "Clear comparison": [
+    "Vaciar la comparación",
+    "Limpar a comparação",
+    "Vergleich leeren",
+    "Svuota il confronto",
+    "Karşılaştırmayı temizle",
+    "مسح المقارنة",
+    "तुलना साफ़ करें",
+    "清空比较"
+  ],
+  "Products included in your request": [
+    "Productos incluidos en su solicitud",
+    "Produtos incluídos na sua solicitação",
+    "In Ihre Anfrage übernommene Produkte",
+    "Prodotti inclusi nella sua richiesta",
+    "Talebinize eklenen ürünler",
+    "المنتجات المضمّنة في طلبك",
+    "आपके अनुरोध में शामिल उत्पाद",
+    "已纳入您需求的产品"
   ]
 }
