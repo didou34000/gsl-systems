@@ -1,0 +1,672 @@
+{
+  "Loading component families…": [
+    "Cargando las familias de componentes…",
+    "Carregando as famílias de componentes…",
+    "Komponentenfamilien werden geladen…",
+    "Caricamento delle famiglie di componenti…",
+    "Bileşen aileleri yükleniyor…",
+    "جارٍ تحميل عائلات المكوّنات…",
+    "घटक श्रेणियाँ लोड हो रही हैं…",
+    "正在加载零部件类别…"
+  ],
+  "Components": [
+    "Componentes",
+    "Componentes",
+    "Komponenten",
+    "Componenti",
+    "Bileşenler",
+    "المكوّنات",
+    "घटक",
+    "零部件"
+  ],
+  "Component families": [
+    "Familias de componentes",
+    "Famílias de componentes",
+    "Komponentenfamilien",
+    "Famiglie di componenti",
+    "Bileşen aileleri",
+    "عائلات المكوّنات",
+    "घटक श्रेणियाँ",
+    "零部件类别"
+  ],
+  "Components for humanoid robotics": [
+    "Componentes para robótica humanoide",
+    "Componentes para robótica humanoide",
+    "Komponenten für humanoide Robotik",
+    "Componenti per la robotica umanoide",
+    "İnsansı robotik için bileşenler",
+    "مكوّنات للروبوتات البشرية",
+    "ह्यूमनॉइड रोबोटिक्स के लिए घटक",
+    "人形机器人零部件"
+  ],
+  "Components for humanoid robotics.": [
+    "Componentes para robótica humanoide.",
+    "Componentes para robótica humanoide.",
+    "Komponenten für humanoide Robotik.",
+    "Componenti per la robotica umanoide.",
+    "İnsansı robotik için bileşenler.",
+    "مكوّنات للروبوتات البشرية.",
+    "ह्यूमनॉइड रोबोटिक्स के लिए घटक।",
+    "人形机器人零部件。"
+  ],
+  "Components for humanoid robots.": [
+    "Componentes para robots humanoides.",
+    "Componentes para robôs humanoides.",
+    "Komponenten für humanoide Roboter.",
+    "Componenti per robot umanoidi.",
+    "İnsansı robotlar için bileşenler.",
+    "مكوّنات للروبوتات البشرية.",
+    "ह्यूमनॉइड रोबोट के लिए घटक।",
+    "人形机器人零部件。"
+  ],
+  "Actuators, reducers, sensors, hands and control electronics. Compare documented manufacturers outside the EU and send a precise technical enquiry.": [
+    "Actuadores, reductores, sensores, manos y electrónica de control. Compare fabricantes documentados fuera de la UE y envíe una solicitud técnica precisa.",
+    "Atuadores, redutores, sensores, mãos e eletrônica de controle. Compare fabricantes documentados fora da UE e envie um pedido técnico preciso.",
+    "Aktuatoren, Getriebe, Sensoren, Hände und Steuerelektronik. Vergleichen Sie dokumentierte Hersteller außerhalb der EU und senden Sie eine präzise technische Anfrage.",
+    "Attuatori, riduttori, sensori, mani ed elettronica di controllo. Confronta produttori documentati fuori dall’UE e invia una richiesta tecnica precisa.",
+    "Aktüatörler, redüktörler, sensörler, eller ve kontrol elektroniği. AB dışındaki belgelenmiş üreticileri karşılaştırın ve net bir teknik talep gönderin.",
+    "مشغّلات ومخفّضات وحساسات وأيدٍ وإلكترونيات تحكّم. قارن مصنّعين موثّقين خارج الاتحاد الأوروبي وأرسل طلبًا تقنيًا دقيقًا.",
+    "एक्चुएटर, रिड्यूसर, सेंसर, हाथ और कंट्रोल इलेक्ट्रॉनिक्स। EU के बाहर के प्रलेखित निर्माताओं की तुलना करें और सटीक तकनीकी अनुरोध भेजें।",
+    "执行器、减速器、传感器、灵巧手和控制电子。比较欧盟以外有据可查的制造商，并发送明确的技术询价。"
+  ],
+  "Harmonic reducer, joint actuator, torque sensor…": [
+    "Reductor armónico, actuador articular, sensor de par…",
+    "Redutor harmônico, atuador articular, sensor de torque…",
+    "Wellgetriebe, Gelenkaktuator, Drehmomentsensor…",
+    "Riduttore armonico, attuatore articolare, sensore di coppia…",
+    "Harmonik redüktör, eklem aktüatörü, tork sensörü…",
+    "مخفّض توافقي، مشغّل مفصلي، حساس عزم…",
+    "हार्मोनिक रिड्यूसर, जॉइंट एक्चुएटर, टॉर्क सेंसर…",
+    "谐波减速器、关节执行器、扭矩传感器…"
+  ],
+  "What a humanoid robot is built from": [
+    "De qué está hecho un robot humanoide",
+    "Do que é feito um robô humanoide",
+    "Woraus ein humanoider Roboter besteht",
+    "Di cosa è fatto un robot umanoide",
+    "İnsansı bir robot nelerden oluşur",
+    "ممَّ يتكوّن الروبوت البشري",
+    "ह्यूमनॉइड रोबोट किन चीज़ों से बनता है",
+    "人形机器人由哪些部分组成"
+  ],
+  "Sourcing robotics components": [
+    "Abastecerse de componentes robóticos",
+    "Adquirir componentes robóticos",
+    "Robotikkomponenten beschaffen",
+    "Approvvigionare componenti robotici",
+    "Robotik bileşen tedariki",
+    "توريد المكوّنات الروبوتية",
+    "रोबोटिक्स घटकों की सोर्सिंग",
+    "采购机器人零部件"
+  ],
+  "How an offer is admitted": [
+    "Cómo se admite una oferta",
+    "Como uma oferta é admitida",
+    "Wie ein Angebot aufgenommen wird",
+    "Come viene ammessa un’offerta",
+    "Bir teklif nasıl kabul edilir",
+    "كيف يتم قبول العرض",
+    "किसी प्रस्ताव को कैसे स्वीकार किया जाता है",
+    "报价如何被收录"
+  ],
+  "A robotics product actually manufactured, an identified production site outside the EU and dated sources.": [
+    "Un producto robótico realmente fabricado, un centro de producción identificado fuera de la UE y fuentes fechadas.",
+    "Um produto robótico realmente fabricado, um local de produção identificado fora da UE e fontes datadas.",
+    "Ein tatsächlich hergestelltes Robotikprodukt, ein identifizierter Produktionsstandort außerhalb der EU und datierte Quellen.",
+    "Un prodotto robotico realmente fabbricato, un sito produttivo identificato fuori dall’UE e fonti datate.",
+    "Gerçekten üretilen bir robotik ürün, AB dışında belirlenmiş bir üretim tesisi ve tarihli kaynaklar.",
+    "منتج روبوتي مُصنَّع فعلًا، وموقع إنتاج محدَّد خارج الاتحاد الأوروبي، ومصادر مؤرَّخة.",
+    "वास्तव में निर्मित रोबोटिक्स उत्पाद, EU के बाहर पहचाना गया उत्पादन स्थल और दिनांकित स्रोत।",
+    "实际生产的机器人产品、欧盟以外已确认的生产基地以及注明日期的来源。"
+  ],
+  "Specify a joint or a component": [
+    "Especificar una articulación o un componente",
+    "Especificar uma articulação ou um componente",
+    "Ein Gelenk oder eine Komponente spezifizieren",
+    "Specificare un’articolazione o un componente",
+    "Bir eklem veya bileşen tanımlayın",
+    "تحديد مفصل أو مكوّن",
+    "किसी जॉइंट या घटक को निर्दिष्ट करें",
+    "定义关节或零部件"
+  ],
+  "Torque, speed, backlash, interfaces, quantities and delivery date.": [
+    "Par, velocidad, juego, interfaces, cantidades y fecha de entrega.",
+    "Torque, velocidade, folga, interfaces, quantidades e data de entrega.",
+    "Drehmoment, Drehzahl, Spiel, Schnittstellen, Mengen und Liefertermin.",
+    "Coppia, velocità, gioco, interfacce, quantità e data di consegna.",
+    "Tork, hız, boşluk, arayüzler, miktarlar ve teslim tarihi.",
+    "العزم والسرعة والخلوص والواجهات والكميات وتاريخ التسليم.",
+    "टॉर्क, गति, बैकलैश, इंटरफ़ेस, मात्रा और डिलीवरी तिथि।",
+    "扭矩、转速、背隙、接口、数量和交付日期。"
+  ],
+  "EU rules for robot components": [
+    "Normas de la UE para componentes de robots",
+    "Regras da UE para componentes de robôs",
+    "EU-Regeln für Roboterkomponenten",
+    "Norme UE per i componenti dei robot",
+    "Robot bileşenleri için AB kuralları",
+    "قواعد الاتحاد الأوروبي لمكوّنات الروبوتات",
+    "रोबोट घटकों के लिए EU नियम",
+    "欧盟机器人零部件规则"
+  ],
+  "The Machinery Regulation (EU) 2023/1230 applies from 20 January 2027. Identify the evidence to request.": [
+    "El Reglamento de Máquinas (UE) 2023/1230 se aplica a partir del 20 de enero de 2027. Identifique las pruebas que debe solicitar.",
+    "O Regulamento Máquinas (UE) 2023/1230 aplica-se a partir de 20 de janeiro de 2027. Identifique as evidências a solicitar.",
+    "Die Maschinenverordnung (EU) 2023/1230 gilt ab dem 20. Januar 2027. Ermitteln Sie die anzufordernden Nachweise.",
+    "Il Regolamento Macchine (UE) 2023/1230 si applica dal 20 gennaio 2027. Individua le prove da richiedere.",
+    "Makine Yönetmeliği (AB) 2023/1230, 20 Ocak 2027’den itibaren uygulanır. Talep edilecek kanıtları belirleyin.",
+    "تُطبَّق لائحة الآلات (الاتحاد الأوروبي) 2023/1230 اعتبارًا من 20 يناير 2027. حدّد الأدلة الواجب طلبها.",
+    "मशीनरी विनियमन (EU) 2023/1230 20 जनवरी 2027 से लागू होता है। माँगे जाने वाले प्रमाण पहचानें।",
+    "欧盟《机械法规》(EU) 2023/1230 自 2027 年 1 月 20 日起适用。请确定需要索取的证明材料。"
+  ],
+  "Do you manufacture robotics components?": [
+    "¿Fabrica componentes robóticos?",
+    "Fabrica componentes robóticos?",
+    "Stellen Sie Robotikkomponenten her?",
+    "Produci componenti robotici?",
+    "Robotik bileşen mi üretiyorsunuz?",
+    "هل تصنّع مكوّنات روبوتية؟",
+    "क्या आप रोबोटिक्स घटक बनाते हैं?",
+    "您生产机器人零部件吗？"
+  ],
+  "Robotics components": [
+    "Componentes robóticos",
+    "Componentes robóticos",
+    "Robotikkomponenten",
+    "Componenti robotici",
+    "Robotik bileşenler",
+    "مكوّنات روبوتية",
+    "रोबोटिक्स घटक",
+    "机器人零部件"
+  ],
+  "Actuators, reducers, sensors, hands and electronics for humanoid and robotic systems. Compare the technical data and confirm the exact configuration before requesting a quote.": [
+    "Actuadores, reductores, sensores, manos y electrónica para robots humanoides y sistemas robóticos. Compare los datos técnicos y confirme la configuración exacta antes de pedir un presupuesto.",
+    "Atuadores, redutores, sensores, mãos e eletrônica para robôs humanoides e sistemas robóticos. Compare os dados técnicos e confirme a configuração exata antes de pedir um orçamento.",
+    "Aktuatoren, Getriebe, Sensoren, Hände und Elektronik für humanoide und robotische Systeme. Vergleichen Sie die technischen Daten und bestätigen Sie die genaue Konfiguration vor der Angebotsanfrage.",
+    "Attuatori, riduttori, sensori, mani ed elettronica per robot umanoidi e sistemi robotici. Confronta i dati tecnici e conferma la configurazione esatta prima di chiedere un preventivo.",
+    "İnsansı robotlar ve robotik sistemler için aktüatörler, redüktörler, sensörler, eller ve elektronik. Teklif istemeden önce teknik verileri karşılaştırın ve tam yapılandırmayı teyit edin.",
+    "مشغّلات ومخفّضات وحساسات وأيدٍ وإلكترونيات للروبوتات البشرية والأنظمة الروبوتية. قارن البيانات التقنية وأكّد التهيئة الدقيقة قبل طلب عرض السعر.",
+    "ह्यूमनॉइड और रोबोटिक प्रणालियों के लिए एक्चुएटर, रिड्यूसर, सेंसर, हाथ और इलेक्ट्रॉनिक्स। कोटेशन माँगने से पहले तकनीकी डेटा की तुलना करें और सटीक कॉन्फ़िगरेशन की पुष्टि करें।",
+    "面向人形机器人和机器人系统的执行器、减速器、传感器、灵巧手和电子部件。请先比较技术数据并确认具体配置，再申请报价。"
+  ],
+  "Harmonic reducer, joint actuator, manufacturer reference…": [
+    "Reductor armónico, actuador articular, referencia del fabricante…",
+    "Redutor harmônico, atuador articular, referência do fabricante…",
+    "Wellgetriebe, Gelenkaktuator, Herstellerreferenz…",
+    "Riduttore armonico, attuatore articolare, riferimento produttore…",
+    "Harmonik redüktör, eklem aktüatörü, üretici referansı…",
+    "مخفّض توافقي، مشغّل مفصلي، مرجع المصنّع…",
+    "हार्मोनिक रिड्यूसर, जॉइंट एक्चुएटर, निर्माता संदर्भ…",
+    "谐波减速器、关节执行器、制造商型号…"
+  ],
+  "All families": [
+    "Todas las familias",
+    "Todas as famílias",
+    "Alle Familien",
+    "Tutte le famiglie",
+    "Tüm aileler",
+    "كل العائلات",
+    "सभी श्रेणियाँ",
+    "全部类别"
+  ],
+  "Latest documented offers": [
+    "Últimas ofertas documentadas",
+    "Últimas ofertas documentadas",
+    "Neueste dokumentierte Angebote",
+    "Ultime offerte documentate",
+    "Son belgelenmiş teklifler",
+    "أحدث العروض الموثّقة",
+    "नवीनतम प्रलेखित प्रस्ताव",
+    "最新有据可查的报价"
+  ],
+  "All components": [
+    "Todos los componentes",
+    "Todos os componentes",
+    "Alle Komponenten",
+    "Tutti i componenti",
+    "Tüm bileşenler",
+    "كل المكوّنات",
+    "सभी घटक",
+    "全部零部件"
+  ],
+  "The companies behind the components, with their production sites.": [
+    "Las empresas detrás de los componentes, con sus centros de producción.",
+    "As empresas por trás dos componentes, com os seus locais de produção.",
+    "Die Unternehmen hinter den Komponenten, mit ihren Produktionsstandorten.",
+    "Le aziende dietro i componenti, con i loro siti produttivi.",
+    "Bileşenlerin arkasındaki şirketler ve üretim tesisleri.",
+    "الشركات التي تقف وراء المكوّنات، مع مواقع إنتاجها.",
+    "घटकों के पीछे की कंपनियाँ, उनके उत्पादन स्थलों के साथ।",
+    "零部件背后的企业及其生产基地。"
+  ],
+  "Each family groups the parts a humanoid robot or a robotic system needs, with the criteria buyers compare.": [
+    "Cada familia agrupa las piezas que necesita un robot humanoide o un sistema robótico, con los criterios que comparan los compradores.",
+    "Cada família reúne as peças de que um robô humanoide ou um sistema robótico precisa, com os critérios que os compradores comparam.",
+    "Jede Familie fasst die Teile zusammen, die ein humanoider Roboter oder ein Robotersystem braucht, mit den Kriterien, die Einkäufer vergleichen.",
+    "Ogni famiglia raggruppa le parti di cui ha bisogno un robot umanoide o un sistema robotico, con i criteri che gli acquirenti confrontano.",
+    "Her aile, insansı bir robotun veya robotik sistemin ihtiyaç duyduğu parçaları ve alıcıların karşılaştırdığı kriterleri bir araya getirir.",
+    "تجمع كل عائلة القطع التي يحتاجها الروبوت البشري أو النظام الروبوتي، مع المعايير التي يقارنها المشترون.",
+    "हर श्रेणी में वे पुर्ज़े हैं जिनकी ह्यूमनॉइड रोबोट या रोबोटिक प्रणाली को ज़रूरत होती है, साथ में वे मानदंड जिनकी खरीदार तुलना करते हैं।",
+    "每个类别汇集了人形机器人或机器人系统所需的部件，以及采购方比较的指标。"
+  ],
+  "Compared on": [
+    "Criterios comparados",
+    "Critérios comparados",
+    "Verglichene Kriterien",
+    "Criteri confrontati",
+    "Karşılaştırılan kriterler",
+    "معايير المقارنة",
+    "तुलना के मानदंड",
+    "比较指标"
+  ],
+  "documented offers": [
+    "ofertas documentadas",
+    "ofertas documentadas",
+    "dokumentierte Angebote",
+    "offerte documentate",
+    "belgelenmiş teklif",
+    "عروض موثّقة",
+    "प्रलेखित प्रस्ताव",
+    "条有据可查的报价"
+  ],
+  "No offer published yet": [
+    "Aún no hay ofertas publicadas",
+    "Ainda não há ofertas publicadas",
+    "Noch kein Angebot veröffentlicht",
+    "Nessuna offerta ancora pubblicata",
+    "Henüz yayımlanmış teklif yok",
+    "لا توجد عروض منشورة بعد",
+    "अभी कोई प्रस्ताव प्रकाशित नहीं",
+    "暂无已发布的报价"
+  ],
+  "Admission requires an established robotics offer, a production site in the GSL non-EU scope, and dated supporting sources. A trade agreement does not certify a company or product.": [
+    "La admisión exige una oferta robótica establecida, un centro de producción dentro del ámbito de GSL fuera de la UE y fuentes fechadas. Un acuerdo comercial no certifica ni a la empresa ni al producto.",
+    "A admissão exige uma oferta robótica estabelecida, um local de produção no âmbito GSL fora da UE e fontes datadas. Um acordo comercial não certifica a empresa nem o produto.",
+    "Die Aufnahme erfordert ein etabliertes Robotikangebot, einen Produktionsstandort im Nicht-EU-Bereich von GSL und datierte Quellen. Ein Handelsabkommen zertifiziert weder Unternehmen noch Produkt.",
+    "L’ammissione richiede un’offerta robotica consolidata, un sito produttivo nell’ambito extra UE di GSL e fonti datate. Un accordo commerciale non certifica né l’azienda né il prodotto.",
+    "Kabul için yerleşik bir robotik teklif, GSL’nin AB dışı kapsamında bir üretim tesisi ve tarihli kaynaklar gerekir. Bir ticaret anlaşması şirketi veya ürünü belgelendirmez.",
+    "يتطلّب القبول عرضًا روبوتيًا قائمًا، وموقع إنتاج ضمن نطاق GSL خارج الاتحاد الأوروبي، ومصادر مؤرَّخة. الاتفاق التجاري لا يعتمد الشركة ولا المنتج.",
+    "स्वीकृति के लिए स्थापित रोबोटिक्स प्रस्ताव, GSL के गैर-EU दायरे में उत्पादन स्थल और दिनांकित स्रोत आवश्यक हैं। व्यापार समझौता किसी कंपनी या उत्पाद को प्रमाणित नहीं करता।",
+    "收录要求：已有成熟的机器人产品、位于 GSL 欧盟以外范围内的生产基地以及注明日期的来源。贸易协定并不能认证企业或产品。"
+  ],
+  "Not listed? Describe your robotics project": [
+    "¿No aparece? Describa su proyecto robótico",
+    "Não encontrou? Descreva o seu projeto robótico",
+    "Nicht dabei? Beschreiben Sie Ihr Robotikprojekt",
+    "Non è in elenco? Descrivi il tuo progetto robotico",
+    "Listede yok mu? Robotik projenizi tanımlayın",
+    "غير مُدرَج؟ صِف مشروعك الروبوتي",
+    "सूची में नहीं? अपनी रोबोटिक्स परियोजना बताएँ",
+    "没有找到？描述您的机器人项目"
+  ],
+  "This historical industrial profile has not been admitted to the robotics shortlist. Its suitability for robotics needs evidence.": [
+    "Esta ficha industrial histórica no ha sido admitida en la preselección robótica. Su idoneidad para la robótica debe demostrarse.",
+    "Esta ficha industrial histórica não foi admitida na pré-seleção robótica. A sua adequação à robótica precisa de ser comprovada.",
+    "Dieses historische Industrieprofil ist nicht in die Robotik-Vorauswahl aufgenommen. Seine Eignung für die Robotik muss belegt werden.",
+    "Questa scheda industriale storica non è ammessa alla preselezione robotica. La sua idoneità alla robotica va dimostrata.",
+    "Bu eski endüstriyel profil robotik ön seçime kabul edilmedi. Robotiğe uygunluğu kanıtlanmalıdır.",
+    "لم يُقبل هذا الملف الصناعي القديم في القائمة الروبوتية المختصرة. يجب إثبات ملاءمته للروبوتات.",
+    "यह पुराना औद्योगिक प्रोफ़ाइल रोबोटिक्स शॉर्टलिस्ट में स्वीकार नहीं किया गया है। रोबोटिक्स के लिए इसकी उपयुक्तता का प्रमाण चाहिए।",
+    "该历史工业档案未被收录到机器人候选名单。其是否适用于机器人领域仍需证明。"
+  ],
+  "For your technical shortlist": [
+    "Para su preselección técnica",
+    "Para a sua pré-seleção técnica",
+    "Für Ihre technische Vorauswahl",
+    "Per la tua preselezione tecnica",
+    "Teknik ön seçiminiz için",
+    "لقائمتك التقنية المختصرة",
+    "आपकी तकनीकी शॉर्टलिस्ट के लिए",
+    "用于您的技术候选名单"
+  ],
+  "Production site": [
+    "Centro de producción",
+    "Local de produção",
+    "Produktionsstandort",
+    "Sito produttivo",
+    "Üretim tesisi",
+    "موقع الإنتاج",
+    "उत्पादन स्थल",
+    "生产基地"
+  ],
+  "Published sources establish the offer and production location. No factory inspection is implied.": [
+    "Las fuentes publicadas acreditan la oferta y el lugar de producción. No implica ninguna inspección de fábrica.",
+    "As fontes publicadas comprovam a oferta e o local de produção. Não implica nenhuma inspeção de fábrica.",
+    "Veröffentlichte Quellen belegen das Angebot und den Produktionsort. Eine Werksinspektion ist damit nicht verbunden.",
+    "Le fonti pubblicate attestano l’offerta e il luogo di produzione. Non implica alcuna ispezione in fabbrica.",
+    "Yayımlanmış kaynaklar teklifi ve üretim yerini ortaya koyar. Fabrika denetimi anlamına gelmez.",
+    "تُثبت المصادر المنشورة العرض وموقع الإنتاج. ولا يعني ذلك أي تفتيش للمصنع.",
+    "प्रकाशित स्रोत प्रस्ताव और उत्पादन स्थान स्थापित करते हैं। इसका अर्थ कोई फ़ैक्टरी निरीक्षण नहीं है।",
+    "公开来源证明了该产品及生产地点，并不代表进行过工厂检查。"
+  ],
+  "Manufacturer declarations": [
+    "Declaraciones del fabricante",
+    "Declarações do fabricante",
+    "Herstellerangaben",
+    "Dichiarazioni del produttore",
+    "Üretici beyanları",
+    "تصريحات المصنّع",
+    "निर्माता की घोषणाएँ",
+    "制造商声明"
+  ],
+  "Specifications and performance remain attributed to their sources. Confirm the exact configuration.": [
+    "Las especificaciones y prestaciones se atribuyen a sus fuentes. Confirme la configuración exacta.",
+    "As especificações e o desempenho continuam atribuídos às suas fontes. Confirme a configuração exata.",
+    "Daten und Leistungswerte bleiben ihren Quellen zugeordnet. Bestätigen Sie die genaue Konfiguration.",
+    "Specifiche e prestazioni restano attribuite alle loro fonti. Conferma la configurazione esatta.",
+    "Özellikler ve performans kaynaklarına atfedilir. Tam yapılandırmayı teyit edin.",
+    "تبقى المواصفات والأداء منسوبة إلى مصادرها. أكّد التهيئة الدقيقة.",
+    "विनिर्देश और प्रदर्शन उनके स्रोतों के नाम रहते हैं। सटीक कॉन्फ़िगरेशन की पुष्टि करें।",
+    "规格和性能均以其来源为准。请确认具体配置。"
+  ],
+  "Supporting documents: review to confirm": [
+    "Justificantes: revisión por confirmar",
+    "Comprovativos: revisão a confirmar",
+    "Nachweise: Prüfung zu bestätigen",
+    "Documenti giustificativi: verifica da confermare",
+    "Destekleyici belgeler: inceleme teyit edilecek",
+    "المستندات الداعمة: مراجعة بانتظار التأكيد",
+    "सहायक दस्तावेज़: समीक्षा की पुष्टि बाकी",
+    "证明文件：待审核确认"
+  ],
+  "A document review must identify the reference, issuer, validity and scope. No product compliance is asserted by admission.": [
+    "Una revisión documental debe indicar la referencia, el emisor, la validez y el alcance. La admisión no acredita la conformidad del producto.",
+    "Uma revisão documental deve indicar a referência, o emissor, a validade e o âmbito. A admissão não atesta a conformidade do produto.",
+    "Eine Dokumentenprüfung muss Referenz, Aussteller, Gültigkeit und Umfang angeben. Die Aufnahme bestätigt keine Produktkonformität.",
+    "Una revisione documentale deve indicare riferimento, emittente, validità e ambito. L’ammissione non attesta la conformità del prodotto.",
+    "Belge incelemesi referansı, düzenleyeni, geçerliliği ve kapsamı belirtmelidir. Kabul, ürün uygunluğunu kanıtlamaz.",
+    "يجب أن تحدّد مراجعة المستند المرجع والجهة المُصدِرة والصلاحية والنطاق. القبول لا يُثبت مطابقة المنتج.",
+    "दस्तावेज़ समीक्षा में संदर्भ, जारीकर्ता, वैधता और दायरा बताया जाना चाहिए। स्वीकृति उत्पाद अनुपालन का दावा नहीं करती।",
+    "文件审核须注明编号、签发方、有效期和适用范围。收录并不代表产品合规。"
+  ],
+  "Before selecting: confirm missing performance data, interfaces, operating environment, availability and delivery. Country trade terms are separate from product evidence.": [
+    "Antes de elegir: confirme los datos de rendimiento que faltan, interfaces, entorno de uso, disponibilidad y entrega. El marco comercial del país es independiente de las pruebas del producto.",
+    "Antes de escolher: confirme os dados de desempenho em falta, interfaces, ambiente de uso, disponibilidade e entrega. O enquadramento comercial do país é separado das evidências do produto.",
+    "Vor der Auswahl: fehlende Leistungsdaten, Schnittstellen, Einsatzumgebung, Verfügbarkeit und Lieferung bestätigen. Handelsbedingungen des Landes sind von Produktnachweisen getrennt.",
+    "Prima di scegliere: conferma i dati prestazionali mancanti, interfacce, ambiente d’uso, disponibilità e consegna. Il quadro commerciale del paese è separato dalle prove sul prodotto.",
+    "Seçmeden önce: eksik performans verilerini, arayüzleri, kullanım ortamını, stok durumunu ve teslimatı teyit edin. Ülkenin ticari koşulları ürün kanıtlarından ayrıdır.",
+    "قبل الاختيار: أكّد بيانات الأداء الناقصة والواجهات وبيئة التشغيل والتوفر والتسليم. الإطار التجاري للبلد منفصل عن أدلة المنتج.",
+    "चयन से पहले: अनुपलब्ध प्रदर्शन डेटा, इंटरफ़ेस, संचालन वातावरण, उपलब्धता और डिलीवरी की पुष्टि करें। देश की व्यापार शर्तें उत्पाद प्रमाण से अलग हैं।",
+    "选择前：请确认缺失的性能数据、接口、使用环境、供货情况和交付。国家贸易条件与产品证明相互独立。"
+  ],
+  "Robotics requirement": [
+    "Necesidad robótica",
+    "Necessidade robótica",
+    "Robotikbedarf",
+    "Esigenza robotica",
+    "Robotik ihtiyaç",
+    "احتياج روبوتي",
+    "रोबोटिक्स आवश्यकता",
+    "机器人需求"
+  ],
+  "Environment / constraints": [
+    "Entorno / restricciones",
+    "Ambiente / restrições",
+    "Umgebung / Einschränkungen",
+    "Ambiente / vincoli",
+    "Ortam / kısıtlar",
+    "البيئة / القيود",
+    "वातावरण / सीमाएँ",
+    "环境 / 约束"
+  ],
+  "Actuators, reducers & screws": [
+    "Actuadores, reductores y husillos",
+    "Atuadores, redutores e fusos",
+    "Aktuatoren, Getriebe und Gewindetriebe",
+    "Attuatori, riduttori e viti",
+    "Aktüatörler, redüktörler ve vidalar",
+    "المشغّلات والمخفّضات واللوالب",
+    "एक्चुएटर, रिड्यूसर और स्क्रू",
+    "执行器、减速器与丝杠"
+  ],
+  "Sensors & vision": [
+    "Sensores y visión",
+    "Sensores e visão",
+    "Sensorik und Bildverarbeitung",
+    "Sensori e visione",
+    "Sensörler ve görüntü",
+    "الحساسات والرؤية",
+    "सेंसर और विज़न",
+    "传感器与视觉"
+  ],
+  "Hands & grippers": [
+    "Manos y pinzas",
+    "Mãos e garras",
+    "Hände und Greifer",
+    "Mani e pinze",
+    "Eller ve tutucular",
+    "الأيدي والقوابض",
+    "हाथ और ग्रिपर",
+    "灵巧手与夹爪"
+  ],
+  "Control electronics": [
+    "Electrónica de control",
+    "Eletrônica de controle",
+    "Steuerelektronik",
+    "Elettronica di controllo",
+    "Kontrol elektroniği",
+    "إلكترونيات التحكّم",
+    "कंट्रोल इलेक्ट्रॉनिक्स",
+    "控制电子"
+  ],
+  "Structure, bearings & cabling": [
+    "Estructura, rodamientos y cableado",
+    "Estrutura, rolamentos e cablagem",
+    "Struktur, Lager und Verkabelung",
+    "Struttura, cuscinetti e cablaggio",
+    "Yapı, rulmanlar ve kablolama",
+    "الهيكل والمحامل والكابلات",
+    "संरचना, बेयरिंग और केबलिंग",
+    "结构件、轴承与线缆"
+  ],
+  "Humanoids & robot platforms": [
+    "Humanoides y plataformas robóticas",
+    "Humanoides e plataformas robóticas",
+    "Humanoide und Roboterplattformen",
+    "Umanoidi e piattaforme robotiche",
+    "İnsansılar ve robot platformları",
+    "الروبوتات البشرية والمنصات الروبوتية",
+    "ह्यूमनॉइड और रोबोट प्लेटफ़ॉर्म",
+    "人形机器人与机器人平台"
+  ],
+  "Payload": [
+    "Carga útil",
+    "Carga útil",
+    "Traglast",
+    "Carico utile",
+    "Taşıma kapasitesi",
+    "الحمولة",
+    "पेलोड",
+    "有效载荷"
+  ],
+  "Reach": [
+    "Alcance",
+    "Alcance",
+    "Reichweite",
+    "Sbraccio",
+    "Erişim",
+    "مدى الوصول",
+    "पहुँच",
+    "工作半径"
+  ],
+  "Repeatability": [
+    "Repetibilidad",
+    "Repetibilidade",
+    "Wiederholgenauigkeit",
+    "Ripetibilità",
+    "Tekrarlanabilirlik",
+    "قابلية التكرار",
+    "पुनरावृत्ति सटीकता",
+    "重复定位精度"
+  ],
+  "Torque": [
+    "Par",
+    "Torque",
+    "Drehmoment",
+    "Coppia",
+    "Tork",
+    "العزم",
+    "टॉर्क",
+    "扭矩"
+  ],
+  "Speed": [
+    "Velocidad",
+    "Velocidade",
+    "Drehzahl",
+    "Velocità",
+    "Hız",
+    "السرعة",
+    "गति",
+    "转速"
+  ],
+  "Backlash": [
+    "Juego",
+    "Folga",
+    "Spiel",
+    "Gioco",
+    "Boşluk",
+    "الخلوص",
+    "बैकलैश",
+    "背隙"
+  ],
+  "Voltage": [
+    "Tensión",
+    "Tensão",
+    "Spannung",
+    "Tensione",
+    "Gerilim",
+    "الجهد",
+    "वोल्टेज",
+    "电压"
+  ],
+  "Gripping force": [
+    "Fuerza de agarre",
+    "Força de preensão",
+    "Greifkraft",
+    "Forza di presa",
+    "Kavrama kuvveti",
+    "قوة القبض",
+    "पकड़ बल",
+    "夹持力"
+  ],
+  "Stroke": [
+    "Carrera",
+    "Curso",
+    "Hub",
+    "Corsa",
+    "Strok",
+    "الشوط",
+    "स्ट्रोक",
+    "行程"
+  ],
+  "Frequency": [
+    "Frecuencia",
+    "Frequência",
+    "Frequenz",
+    "Frequenza",
+    "Frekans",
+    "التردد",
+    "आवृत्ति",
+    "频率"
+  ],
+  "Force range": [
+    "Rango de fuerza",
+    "Faixa de força",
+    "Kraftbereich",
+    "Campo di forza",
+    "Kuvvet aralığı",
+    "نطاق القوة",
+    "बल सीमा",
+    "力量程"
+  ],
+  "Supply voltage": [
+    "Tensión de alimentación",
+    "Tensão de alimentação",
+    "Versorgungsspannung",
+    "Tensione di alimentazione",
+    "Besleme gerilimi",
+    "جهد التغذية",
+    "आपूर्ति वोल्टेज",
+    "供电电压"
+  ],
+  "Tolerance": [
+    "Tolerancia",
+    "Tolerância",
+    "Toleranz",
+    "Tolleranza",
+    "Tolerans",
+    "التفاوت",
+    "टॉलरेंस",
+    "公差"
+  ],
+  "Length": [
+    "Longitud",
+    "Comprimento",
+    "Länge",
+    "Lunghezza",
+    "Uzunluk",
+    "الطول",
+    "लंबाई",
+    "长度"
+  ],
+  "Rotary and linear joint actuators, harmonic and planetary reducers, roller and ball screws": [
+    "Actuadores articulares rotativos y lineales, reductores armónicos y planetarios, husillos de rodillos y de bolas",
+    "Atuadores articulares rotativos e lineares, redutores harmônicos e planetários, fusos de rolos e de esferas",
+    "Rotatorische und lineare Gelenkaktuatoren, Wellen- und Planetengetriebe, Rollen- und Kugelgewindetriebe",
+    "Attuatori articolari rotativi e lineari, riduttori armonici ed epicicloidali, viti a rulli e a ricircolo di sfere",
+    "Döner ve doğrusal eklem aktüatörleri, harmonik ve planet redüktörler, makaralı ve bilyalı vidalar",
+    "مشغّلات مفصلية دوّارة وخطية، مخفّضات توافقية وكوكبية، لوالب بكرات ولوالب كروية",
+    "रोटरी और लीनियर जॉइंट एक्चुएटर, हार्मोनिक और प्लैनेटरी रिड्यूसर, रोलर और बॉल स्क्रू",
+    "旋转与直线关节执行器、谐波与行星减速器、滚柱丝杠与滚珠丝杠"
+  ],
+  "Six-axis force/torque sensors, encoders, IMUs and depth cameras": [
+    "Sensores de fuerza/par de seis ejes, codificadores, IMU y cámaras de profundidad",
+    "Sensores de força/torque de seis eixos, encoders, IMU e câmeras de profundidade",
+    "Sechsachsige Kraft-/Momentsensoren, Encoder, IMUs und Tiefenkameras",
+    "Sensori forza/coppia a sei assi, encoder, IMU e telecamere di profondità",
+    "Altı eksenli kuvvet/tork sensörleri, enkoderler, IMU’lar ve derinlik kameraları",
+    "حساسات قوة/عزم سداسية المحاور، مشفّرات، وحدات قياس بالقصور الذاتي وكاميرات عمق",
+    "छह-अक्षीय बल/टॉर्क सेंसर, एनकोडर, IMU और डेप्थ कैमरे",
+    "六维力/力矩传感器、编码器、惯性测量单元和深度相机"
+  ],
+  "Dexterous hands, electric grippers and end effectors": [
+    "Manos diestras, pinzas eléctricas y efectores finales",
+    "Mãos destras, garras elétricas e efetuadores finais",
+    "Geschickte Hände, elektrische Greifer und Endeffektoren",
+    "Mani destre, pinze elettriche ed end effector",
+    "Becerikli eller, elektrikli tutucular ve uç işlevciler",
+    "أيدٍ بارعة وقوابض كهربائية ومؤثّرات طرفية",
+    "कुशल हाथ, इलेक्ट्रिक ग्रिपर और एंड इफ़ेक्टर",
+    "灵巧手、电动夹爪和末端执行器"
+  ],
+  "Motor drivers, controllers, EtherCAT and CAN interfaces, power management": [
+    "Drivers de motor, controladores, interfaces EtherCAT y CAN, gestión de energía",
+    "Drivers de motor, controladores, interfaces EtherCAT e CAN, gestão de energia",
+    "Motortreiber, Steuerungen, EtherCAT- und CAN-Schnittstellen, Energiemanagement",
+    "Driver motore, controllori, interfacce EtherCAT e CAN, gestione dell’energia",
+    "Motor sürücüleri, kontrolcüler, EtherCAT ve CAN arayüzleri, güç yönetimi",
+    "مشغّلات المحركات ووحدات التحكّم وواجهات EtherCAT وCAN وإدارة الطاقة",
+    "मोटर ड्राइवर, कंट्रोलर, EtherCAT और CAN इंटरफ़ेस, पावर प्रबंधन",
+    "电机驱动器、控制器、EtherCAT 与 CAN 接口、电源管理"
+  ],
+  "Crossed-roller bearings, structural parts, harnesses and connectors": [
+    "Rodamientos de rodillos cruzados, piezas estructurales, mazos de cables y conectores",
+    "Rolamentos de rolos cruzados, peças estruturais, chicotes e conectores",
+    "Kreuzrollenlager, Strukturteile, Kabelbäume und Steckverbinder",
+    "Cuscinetti a rulli incrociati, parti strutturali, cablaggi e connettori",
+    "Çapraz makaralı rulmanlar, yapısal parçalar, kablo demetleri ve konnektörler",
+    "محامل بكرات متقاطعة، قطع هيكلية، حزم أسلاك وموصلات",
+    "क्रॉस्ड-रोलर बेयरिंग, संरचनात्मक पुर्ज़े, हार्नेस और कनेक्टर",
+    "交叉滚子轴承、结构件、线束和连接器"
+  ],
+  "Complete humanoids, robot arms and development platforms": [
+    "Humanoides completos, brazos robóticos y plataformas de desarrollo",
+    "Humanoides completos, braços robóticos e plataformas de desenvolvimento",
+    "Komplette Humanoide, Roboterarme und Entwicklungsplattformen",
+    "Umanoidi completi, bracci robotici e piattaforme di sviluppo",
+    "Komple insansılar, robot kollar ve geliştirme platformları",
+    "روبوتات بشرية كاملة وأذرع روبوتية ومنصات تطوير",
+    "पूर्ण ह्यूमनॉइड, रोबोटिक भुजाएँ और डेवलपमेंट प्लेटफ़ॉर्म",
+    "整机人形机器人、机械臂和开发平台"
+  ]
+}
