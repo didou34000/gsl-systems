@@ -31,12 +31,13 @@ import './workspace.css';
 import './admin-console.css';
 import './onboarding.css';
 import './robotics.css';
+import './sourcing-flow.css';
 import './industrial-sheets.css';
 export async function generateMetadata():Promise<Metadata>{
  const language=resolveLanguage((await cookies()).get('gsl-language')?.value),h=await headers(),path=h.get('x-gsl-path')||'/';
- const titles:Record<string,[string,string]>={'/':['Composants pour robots humanoïdes','Humanoid robot components'],'/catalogue':['Composants robotiques — actionneurs, réducteurs, capteurs','Robotics components — actuators, reducers, sensors'],'/fabricants':['Fabricants de composants robotiques hors UE','Non-EU robotics component manufacturers'],'/secteurs':['Familles de composants robotiques','Robotics component families']};
+ const titles:Record<string,[string,string]>={'/':['Composants robotiques et devis avec livraison','Robotics components & delivery enquiries'],'/catalogue':['Composants robotiques — actionneurs, réducteurs, capteurs','Robotics components — actuators, reducers, sensors'],'/fabricants':['Fabricants de composants robotiques hors Union européenne','Non-EU robotics component manufacturers'],'/secteurs':['Familles de composants robotiques','Robotics component families']};
  const title=(titles[path]||titles['/'])[language==='fr'?0:1]+' | GSL systems';
- const description=language==='fr'?'Actionneurs, réducteurs, capteurs, mains et électronique pour robots humanoïdes : comparez des fabricants hors UE documentés et leurs caractéristiques techniques.':'Actuators, reducers, sensors, hands and electronics for humanoid robots: compare documented non-EU manufacturers and their technical data.';
+ const description=language==='fr'?'Trouvez des fabricants de composants robotiques hors Union européenne et préparez vos devis avec livraison : qualification, prix détaillés et suivi.':'Find robotics component manufacturers outside the European Union and prepare delivery enquiries with qualification, transparent quotes and tracking.';
  return {...publicMetadata(path,title,description,language),...(h.get('x-gsl-filtered')==='true'?{robots:{index:false,follow:true}}:{}),icons:{icon:[{url:brandAssets.iconPng,type:'image/png',sizes:'32x32'},{url:brandAssets.icon,type:'image/svg+xml',sizes:'any'}],shortcut:brandAssets.shortcut,apple:{url:brandAssets.apple,type:'image/png',sizes:'180x180'}}};
 }
 export default async function RootLayout({children}:{children:React.ReactNode}){const language=resolveLanguage((await cookies()).get('gsl-language')?.value);return <html lang={language} dir={languageDirection(language)}><body><Suspense fallback={<div className="loading-page">GSL systems · Loading…</div>}><LanguageProvider initialLanguage={language}><Marketplace>{children}</Marketplace></LanguageProvider></Suspense></body></html>}

@@ -14,7 +14,7 @@ import {SaveProduct} from './saved-selection';
 import {CompareProduct} from './compare-product';
 
 export type CardProduct = {product_id: string; organization_id?: string; name: string; category: string; description?: string; specifications: Record<string, string>};
-export type CardSupplier = {organization_id: string; display_name: string; country_code: string; city?: string; description?: string; public_details?: {verification?: string; branding?: {logoId?: string; coverIds?: string[]}; research?: CompanyResearch}};
+export type CardSupplier = {organization_id: string; display_name: string; country_code: string; city?: string; description?: string; public_details?: {qualification?:string;delivery_status?:string;verification?: string; branding?: {logoId?: string; coverIds?: string[]}; research?: CompanyResearch}};
 
 export function useCategoryLabel() {
   const {l} = useLanguage();
@@ -85,6 +85,8 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
     <h3><Link onClick={open} href={'/produits/' + p.product_id}>{p.name}</Link></h3>
     {supplier && <Link className="ind-card-maker" href={'/fabricants/' + supplier.organization_id}><Factory size={14} aria-hidden/>{supplier.display_name}</Link>}
     {research && <ResearchLabel/>}
+    {p.specifications.qualification&&<span className={'source-badge'+(p.specifications.qualification==='potential'?' source-badge-potential':'')}>{p.specifications.qualification==='explicit'?l('Explicit robotics offer','Offre robotique explicite'):l('Component to qualify','Composant à qualifier')}</span>}
+
     {specs.length > 0 ? <dl className="ind-specs">{specs.map(s => <div key={s.key}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl> : p.description && <p className="ind-card-description">{p.description}</p>}
     <dl className="ind-card-facts">
       <div><dt>{l('Made in', 'Fabrication')}</dt><dd>{country ? <><CountryFlag code={country}/>{countryName(country, language)}</> : l('To confirm', 'À confirmer')}</dd></div>
@@ -104,6 +106,7 @@ export function SupplierCard({supplier: s, products = []}: {supplier: CardSuppli
   return <article className="ind-card ind-supplier-card">
     <div className="ind-company-head"><CompanyMark supplier={s}/><div><h3><Link href={'/fabricants/' + s.organization_id}>{s.display_name}</Link></h3><p className="ind-location"><CountryFlag code={s.country_code}/>{[s.city, countryName(s.country_code, language)].filter(Boolean).join(' · ')}</p></div></div>
     {research && <ResearchLabel/>}
+    {s.public_details?.qualification&&<span className="source-badge">{s.public_details.qualification==='explicit'?l('Explicit robotics offer','Offre robotique explicite'):l('Components to qualify','Composants à qualifier')}</span>}
     {s.description && <p className="ind-card-description">{s.description}</p>}
     {categories.length > 0 && <ul className="ind-tags">{categories.slice(0, 4).map(category => <li key={category}><CategoryIcon category={category} size={13}/>{categoryLabel(category)}</li>)}</ul>}
     {products.length > 0 && <div className="ind-company-products"><p>{products.length} {products.length > 1 ? l('published offers', 'offres publiées') : l('published offer', 'offre publiée')}</p><ul>{products.slice(0, 3).map(p => <li key={p.product_id}><Link href={'/produits/' + p.product_id}>{p.name}<ArrowUpRight size={14} aria-hidden/></Link></li>)}</ul></div>}

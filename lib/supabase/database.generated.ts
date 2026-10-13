@@ -28,6 +28,29 @@ export interface DatabaseRows {
     quantity_unit: string | null;
     retired_at: string | null;
   };
+  component_products: {
+    product_id: string | null;
+    organization_id: string | null;
+    source_revision: number | string | null;
+    name: string | null;
+    category: string | null;
+    description: string | null;
+    published_at: string | null;
+    withdrawn_at: string | null;
+    specifications: unknown | null;
+  };
+  component_supplier_profiles: {
+    organization_id: string | null;
+    display_name: string | null;
+    country_code: string | null;
+    city: string | null;
+    description: string | null;
+    processes: string[] | null;
+    materials: string[] | null;
+    published_at: string | null;
+    public_details: unknown | null;
+    withdrawn_at: string | null;
+  };
   contact_requests: {
     id: string;
     email: string;
@@ -51,6 +74,47 @@ export interface DatabaseRows {
     reference: string;
     note: string;
     declared_at: string;
+  };
+  delivery_cases: {
+    id: string;
+    rfq_id: string;
+    organization_id: string;
+    reference: string;
+    contact: unknown;
+    delivery: unknown;
+    preferred_manufacturer: string | null;
+    preferred_manufacturer_name: string | null;
+    stage: string;
+    revision: number | string;
+    submitted_at: string | null;
+    accepted_proposal_id: string | null;
+    created_at: string;
+    updated_at: string;
+  };
+  delivery_events: {
+    id: string;
+    case_id: string;
+    stage: string;
+    note: string;
+    created_at: string;
+  };
+  delivery_proposals: {
+    id: string;
+    case_id: string;
+    version: number | string;
+    currency: string;
+    data: unknown;
+    known_minor: number | string;
+    firm_minor: number | string | null;
+    valid_until: string;
+    created_at: string;
+  };
+  delivery_shipments: {
+    id: string;
+    case_id: string;
+    partner_id: string | null;
+    data: unknown;
+    updated_at: string;
   };
   evidence_documents: {
     id: string;
@@ -414,6 +478,32 @@ export interface DatabaseRows {
     owner_id: string;
     product_id: string;
     created_at: string;
+  };
+  sourcing_manufacturers: {
+    id: string;
+    name: string;
+    country_code: string;
+    component_scope: boolean;
+    certifications: unknown;
+    site: string;
+    description: string;
+    source_family: string;
+    family: string | null;
+    source_level: string;
+    qualification: string;
+    production_evidence: string;
+    robotics_application: string;
+    points_to_confirm: string;
+    sources: unknown;
+    checked_at: string;
+    production_checked: boolean;
+    public_enabled: boolean;
+    delivery_status: string;
+    delivery_evidence: string;
+    revision: number | string;
+    review_note: string;
+    reviewed_by: string | null;
+    reviewed_at: string | null;
   };
   supplier_application_events: {
     id: string;

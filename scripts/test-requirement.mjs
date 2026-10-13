@@ -61,3 +61,7 @@ assert.deepEqual(requirementSchema.parse(JSON.parse(JSON.stringify(robotic))).ro
 const legacy={...robotic};delete legacy.robotics;assert.equal(requirementSchema.parse(legacy).robotics.kind,'component');
 assert.equal(requirementSchema.safeParse({...robotic,robotics:{...robotic.robotics,family:'textile'}}).success,false);
 console.log('Robotics requests retain family, units, requirements and legacy drafts.');
+
+const delivery=emptyRequirement();delivery.contact={name:'Contact test',email:'buyer@example.invalid',phone:'123'};delivery.logistics={postalCode:'34000',address:'Adresse privée',transport:true,customs:true};delivery.items=[{candidate:crypto.randomUUID(),description:'Capacité documentée',quantity:'2',unit:'pcs'}];
+const restoredDelivery=requirementSchema.parse(JSON.parse(JSON.stringify(delivery)));assert.deepEqual(restoredDelivery.contact,delivery.contact);assert.deepEqual(restoredDelivery.logistics,delivery.logistics);assert.equal(restoredDelivery.items[0].candidate,delivery.items[0].candidate);
+console.log('Private contact, delivery requirements and candidate references survive draft restoration.');
