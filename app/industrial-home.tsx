@@ -1,10 +1,7 @@
 'use client';
-import {sourcingCountries} from '@/lib/sourcing-coverage';
-import {countryName} from '@/lib/country-names';
 import HomeCatalogue from './home-catalogue';
-import {useState} from 'react';
 import {roboticsFamilies} from '@/lib/robotics';
-import {ArrowRight,ArrowUpRight,Search,Factory,Package,Layers,ClipboardList,Cog} from 'lucide-react';
+import {ArrowRight,ArrowUpRight,Factory,Package,Layers,ClipboardList} from 'lucide-react';
 import {ProductTile,SupplierTile,type Actions} from './discovery';
 import {useLanguage} from './language';
 import Link from '@/components/site-link';
@@ -12,30 +9,25 @@ import {products,suppliers,sectors} from '@/lib/catalog';
 import {localText} from '@/lib/catalog-languages';
 export default function IndustrialHome({actions,live=false}:{actions:Actions;live?:boolean}){
  const {l,language}=useLanguage();
- const [searchMode,setSearchMode]=useState('products');
  return <main className="industrial-home gsl-home">
  <section className="hx-hero" aria-labelledby="hx-title">
   <div className="hx-content container">
    <div className="hx-intro">
-    <h1 id="hx-title">{l('Robotics components, from selection to delivery.','Vos composants robotiques, de la sélection à la livraison.')}</h1>
-    <p className="hx-lead">{l('Find robotics component manufacturers outside the European Union and prepare a request with delivery to Europe. GSL accompanies selection and delivery planning, subject to technical and logistics qualification.','Trouvez vos fabricants de composants robotiques hors Union européenne et préparez votre demande avec livraison en Europe. GSL vous accompagne de la sélection à la préparation de la livraison, sous réserve de qualification technique et logistique.')}</p>
-    <div className="hx-search">
-     <div className="hx-modes" role="group" aria-label={l('Search type','Type de recherche')}>{[['products',l('Components','Composants')],['suppliers',l('Manufacturers','Fabricants')]].map(([value,label])=><button key={value} type="button" aria-pressed={searchMode===value} onClick={()=>setSearchMode(value)}>{value==='suppliers'?<Factory size={17} aria-hidden="true"/>:<Cog size={17} aria-hidden="true"/>}{label}</button>)}</div>
-     <form className="hx-form" action={(live?'':'/demo')+(searchMode==='products'?'/catalogue':'/fabricants')}><input type="hidden" name="lang" value={language}/>
-      <label className="hx-field"><Search size={20} aria-hidden="true"/><input name="q" aria-label={l('Your search','Votre recherche')} placeholder={searchMode==='products'?l('Harmonic reducer, joint actuator, torque sensor…','Réducteur harmonique, actionneur articulaire, capteur de couple…'):l('Company, process or city…','Entreprise, procédé ou ville…')}/></label>
-      <select name="country" aria-label={l('Manufacturing country','Pays de fabrication')}><option value="">{l('All countries','Tous les pays')}</option>{sourcingCountries.map(c=><option value={c} key={c}>{countryName(c,language)}</option>)}</select>
-      <button type="submit">{l('Find a manufacturer','Trouver un fabricant')}<ArrowRight size={18} aria-hidden="true"/></button>
-     </form>
+    <p className="hx-eyebrow">{l('B2B sourcing · Robotics','Sourcing B2B · Robotique')}</p>
+    <h1 id="hx-title">{l('Find the right manufacturers for your robotics components.','Les bons fabricants pour vos composants robotiques.')}</h1>
+    <p className="hx-lead">{l('GSL supports you from manufacturer selection to a quote with delivery to Europe.','GSL vous accompagne du choix du fabricant au devis avec livraison en Europe.')}</p>
+    <div className="hx-actions">
+     <Link className="hx-primary" href={(live?'':'/demo')+'/fabricants'}>{l('Find a manufacturer','Trouver un fabricant')}<ArrowRight size={18} aria-hidden="true"/></Link>
+     <Link className="hx-secondary" href="/decrire-mon-besoin">{l('Get a quote with delivery','Obtenir un devis avec livraison')}<ArrowRight size={18} aria-hidden="true"/></Link>
     </div>
-    <Link className="hx-project-cta" href="/decrire-mon-besoin">{l('Get a quote with delivery','Obtenir un devis avec livraison')}<ArrowRight size={18} aria-hidden="true"/></Link>
-    <p className="robotics-scope">{sourcingCountries.map(c=>countryName(c,language)).join(' · ')}</p><p>{l('Transport is coordinated on study. Online payment is not activated.','Transport coordonné sur étude. Paiement en ligne non activé.')}</p>
+    <div className="hx-context"><Link href="/pays">{l('10 countries outside the European Union','10 pays hors Union européenne')}</Link><span aria-hidden="true">·</span><Link href="/transport-importation">{l('Transport subject to review','Transport sur étude')}</Link></div>
    </div>
-   <nav className="hx-anatomy" aria-labelledby="hx-anatomy-title">
-    <h2 id="hx-anatomy-title">{l('Components for your robotics projects','Les composants de vos projets robotiques')}</h2>
-    <ul>{roboticsFamilies.map(f=><li key={f.id}><Link href={(live?'':'/demo')+'/catalogue?category='+f.id}><span><strong>{l(f.en,f.fr)}</strong><small>{l(f.examplesEn,f.examplesFr)}</small></span><ArrowUpRight size={18} aria-hidden="true"/></Link></li>)}</ul>
-   </nav>
   </div>
  </section>
+ <nav className="hx-components container" aria-labelledby="hx-components-title">
+  <h2 id="hx-components-title">{l('Which component do you need?','Quel composant recherchez-vous ?')}</h2>
+  <ul>{roboticsFamilies.map(f=><li key={f.id}><Link href={(live?'':'/demo')+'/catalogue?category='+f.id}><span>{l(f.en,f.fr)}</span><ArrowUpRight size={17} aria-hidden="true"/></Link></li>)}</ul>
+ </nav>
 
  {live?<><HomeCatalogue/><section className="container gsl-section"><div className="gsl-section-head"><h2>{l('Sourcing robotics components','Sourcer des composants robotiques')}</h2><Link href="/guides">{l('Guides and resources','Guides et ressources')} <ArrowRight size={18}/></Link></div><div className="gsl-guide-grid hx-guides">{[['/notre-methode',l('How an offer is admitted','Comment une offre est admise'),l('A robotics product actually manufactured, an identified production site outside the EU and dated sources.','Un produit robotique réellement fabriqué, un site de production identifié hors UE et des sources datées.')],['/decrire-mon-besoin',l('Specify a joint or a component','Spécifier une articulation ou un composant'),l('Torque, speed, backlash, interfaces, quantities and delivery date.','Couple, vitesse, jeu, interfaces, quantités et date de livraison.')],['/guides',l('EU rules for robot components','Règles UE pour les composants de robots'),l('The Machinery Regulation (EU) 2023/1230 applies from 20 January 2027. Identify the evidence to request.','Le règlement Machines (UE) 2023/1230 s’applique dès le 20 janvier 2027. Identifiez les preuves à demander.')]].map(([href,title,body])=><Link key={href} href={href}><h3>{title}</h3><p>{body}</p><ArrowUpRight size={20}/></Link>)}</div></section></>:<>
  <section className="container gsl-section" id="products"><div className="gsl-section-head"><div><h2 className="gsl-icon-heading"><Package size={25} strokeWidth={1.6} aria-hidden="true"/>{l('Product catalogue','Catalogue produits')}</h2><p>{l('Open a product to explore its materials, manufacturing process and example quantities.','Ouvrez une fiche pour consulter les matières, le procédé et les volumes de l’exemple.')}</p></div><Link href="/catalogue">{l('All products','Tous les produits')}<ArrowRight size={18}/></Link></div><p className="gsl-demo-note">{l('Catalogue preview: fictional products and companies, illustrative photographs.','Aperçu du catalogue : produits et entreprises fictifs, photographies d’illustration.')}</p><div className="discovery-grid">{[products[0],products[6],products[5]].map(p=><ProductTile key={p.id} product={p} actions={actions}/>)}</div></section>
