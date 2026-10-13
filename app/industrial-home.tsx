@@ -17,20 +17,21 @@ export default function IndustrialHome({actions,live=false}:{actions:Actions;liv
  <section className="hx-hero" aria-labelledby="hx-title">
   <div className="hx-content container">
    <div className="hx-intro">
-    <h1 id="hx-title">{l('Components for humanoid robots.','Les composants de vos robots humanoïdes.')}</h1>
-    <p className="hx-lead">{l('Actuators, reducers, sensors, hands and control electronics. Compare documented manufacturers outside the EU and send a precise technical enquiry.','Actionneurs, réducteurs, capteurs, mains et électronique de commande. Comparez des fabricants hors UE documentés et envoyez une demande technique précise.')}</p>
+    <h1 id="hx-title">{l('Robotics components, from selection to delivery.','Vos composants robotiques, de la sélection à la livraison.')}</h1>
+    <p className="hx-lead">{l('Find robotics component manufacturers outside the European Union and prepare a request with delivery to Europe. GSL accompanies selection and delivery planning, subject to technical and logistics qualification.','Trouvez vos fabricants de composants robotiques hors Union européenne et préparez votre demande avec livraison en Europe. GSL vous accompagne de la sélection à la préparation de la livraison, sous réserve de qualification technique et logistique.')}</p>
     <div className="hx-search">
      <div className="hx-modes" role="group" aria-label={l('Search type','Type de recherche')}>{[['products',l('Components','Composants')],['suppliers',l('Manufacturers','Fabricants')]].map(([value,label])=><button key={value} type="button" aria-pressed={searchMode===value} onClick={()=>setSearchMode(value)}>{value==='suppliers'?<Factory size={17} aria-hidden="true"/>:<Cog size={17} aria-hidden="true"/>}{label}</button>)}</div>
      <form className="hx-form" action={(live?'':'/demo')+(searchMode==='products'?'/catalogue':'/fabricants')}><input type="hidden" name="lang" value={language}/>
       <label className="hx-field"><Search size={20} aria-hidden="true"/><input name="q" aria-label={l('Your search','Votre recherche')} placeholder={searchMode==='products'?l('Harmonic reducer, joint actuator, torque sensor…','Réducteur harmonique, actionneur articulaire, capteur de couple…'):l('Company, process or city…','Entreprise, procédé ou ville…')}/></label>
       <select name="country" aria-label={l('Manufacturing country','Pays de fabrication')}><option value="">{l('All countries','Tous les pays')}</option>{sourcingCountries.map(c=><option value={c} key={c}>{countryName(c,language)}</option>)}</select>
-      <button type="submit">{l('Search','Rechercher')}<ArrowRight size={18} aria-hidden="true"/></button>
+      <button type="submit">{l('Find a manufacturer','Trouver un fabricant')}<ArrowRight size={18} aria-hidden="true"/></button>
      </form>
     </div>
-    <Link className="hx-project-cta" href="/decrire-mon-besoin">{l('Describe my robotics project','Décrire mon projet robotique')}<ArrowRight size={18} aria-hidden="true"/></Link>
+    <Link className="hx-project-cta" href="/decrire-mon-besoin">{l('Get a quote with delivery','Obtenir un devis avec livraison')}<ArrowRight size={18} aria-hidden="true"/></Link>
+    <p className="robotics-scope">{sourcingCountries.map(c=>countryName(c,language)).join(' · ')}</p><p>{l('Transport is coordinated on study. Online payment is not activated.','Transport coordonné sur étude. Paiement en ligne non activé.')}</p>
    </div>
    <nav className="hx-anatomy" aria-labelledby="hx-anatomy-title">
-    <h2 id="hx-anatomy-title">{l('What a humanoid robot is built from','Ce qui compose un robot humanoïde')}</h2>
+    <h2 id="hx-anatomy-title">{l('Components for your robotics projects','Les composants de vos projets robotiques')}</h2>
     <ul>{roboticsFamilies.map(f=><li key={f.id}><Link href={(live?'':'/demo')+'/catalogue?category='+f.id}><span><strong>{l(f.en,f.fr)}</strong><small>{l(f.examplesEn,f.examplesFr)}</small></span><ArrowUpRight size={18} aria-hidden="true"/></Link></li>)}</ul>
    </nav>
   </div>

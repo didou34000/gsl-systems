@@ -11,12 +11,12 @@ export async function GET(request:Request){try{
  }
  if(view==='selection'){
   const ids=(url.searchParams.get('ids')||'').split(',').filter(Boolean);if(ids.length>100||ids.some(id=>!z.string().uuid().safeParse(id).success))return json({error:'INVALID'},400);
-  if(!ids.length)return json({products:[]});const {data,error}=await db.from('robotics_products').select('product_id,organization_id,name,description,category,specifications').in('product_id',ids).is('withdrawn_at',null);if(error)throw error;const orgs=[...new Set((data||[]).map(p=>p.organization_id).filter(Boolean))];const makers=orgs.length?await db.from('published_supplier_profiles').select('organization_id,display_name').in('organization_id',orgs).is('withdrawn_at',null):{data:[]};return json({products:data,suppliers:makers.data||[]});
+  if(!ids.length)return json({products:[]});const {data,error}=await db.from('component_products').select('product_id,organization_id,name,description,category,specifications').in('product_id',ids).is('withdrawn_at',null);if(error)throw error;const orgs=[...new Set((data||[]).map(p=>p.organization_id).filter(Boolean))];const makers=orgs.length?await db.from('component_supplier_profiles').select('organization_id,display_name').in('organization_id',orgs).is('withdrawn_at',null):{data:[]};return json({products:data,suppliers:makers.data||[]});
  }
  if(view==='catalogue'){
   const values=Object.fromEntries([...url.searchParams].filter(([k])=>k!=='view'&&k!=='lang'));
   const parsed=searchSchema.safeParse(values);if(!parsed.success)return json({error:'INVALID_CRITERIA'},422);
-  const {data,error}=await db.rpc('search_robotics_catalogue',{criteria:parsed.data});if(error)throw error;return json(data);
+  const {data,error}=await db.rpc('search_components_catalogue',{criteria:parsed.data});if(error)throw error;return json(data);
  }
  const {data:{user}}=await db.auth.getUser();if(!user?.email_confirmed_at)return json({error:'LOGIN_REQUIRED'},401);
  if(view==='messages'){

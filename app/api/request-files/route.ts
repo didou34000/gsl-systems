@@ -8,7 +8,7 @@ const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache
 export async function GET(request:Request){try{
  const db=await authClient();const {data:{user}}=await db.auth.getUser();if(!user?.email_confirmed_at)return json({error:'LOGIN_REQUIRED'},401);
  const q=new URL(request.url).searchParams,id=q.get('download'),rfq=q.get('rfq');
- if(id){if(!z.string().uuid().safeParse(id).success)return json({error:'INVALID'},400);const {data:file,error}=await db.from('files').select('object_path,original_name,upload_state').eq('id',id).maybeSingle();if(error)throw error;if(!file||file.upload_state!=='ready')return json({error:'NOT_FOUND'},404);
+ if(id){if(!z.string().uuid().safeParse(id).success)return json({error:'INVALID'},400);const {data:file,error}=await db.from('files').select('object_path,original_name,upload_state,purpose,scan_status').eq('id',id).maybeSingle();if(error)throw error;if(!file||file.upload_state!=='ready'||file.purpose==='quote'&&file.scan_status!=='clean')return json({error:'NOT_FOUND'},404);
  const result=await db.storage.from('gsl-private').download(file.object_path);if(result.error)return json({error:'NOT_FOUND'},404);return new Response(result.data,{headers:{'Content-Type':'application/octet-stream','Content-Disposition':`attachment; filename="${safeFilename(file.original_name)}"`,'X-Content-Type-Options':'nosniff','Cache-Control':'private, no-store','Content-Security-Policy':"sandbox"}});}
  if(!z.string().uuid().safeParse(rfq).success)return json({error:'INVALID'},400);
  const {data:links,error}=await db.from('rfq_files').select('file_id,recipient_organization_id').eq('rfq_id',rfq!);if(error)throw error;

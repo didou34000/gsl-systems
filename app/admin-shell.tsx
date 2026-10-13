@@ -8,11 +8,11 @@ import {adminLanguages,adminTranslate,type AdminKey} from '@/lib/admin/translati
 import {accessTranslate} from '@/lib/admin/access-translations';
 import {adminRoles,adminPermissions,type AdminPermission,type AdminRole} from '@/lib/admin/permissions';
 
-export type AdminSection='overview'|'companies'|'products'|'review'|'catalogue'|'inbox'|'tasks'|'activity'|'access'|'settings';
+export type AdminSection='sourcing'|'overview'|'companies'|'products'|'review'|'catalogue'|'inbox'|'tasks'|'activity'|'access'|'settings';
 export type AdminShellViewer={email:string;role:AdminRole;permissions:readonly AdminPermission[];reviewer:boolean};
 
-const icons:Record<AdminSection,typeof LayoutDashboard>={overview:LayoutDashboard,companies:Building2,products:Package,review:UserCheck,catalogue:BookOpen,inbox:Inbox,tasks:ListTodo,activity:Activity,access:ShieldCheck,settings:Settings2};
-const pages:Partial<Record<AdminSection,string>>={review:'/administration/revue',catalogue:'/administration/catalogue'};
+const icons:Record<AdminSection,typeof LayoutDashboard>={sourcing:Package,overview:LayoutDashboard,companies:Building2,products:Package,review:UserCheck,catalogue:BookOpen,inbox:Inbox,tasks:ListTodo,activity:Activity,access:ShieldCheck,settings:Settings2};
+const pages:Partial<Record<AdminSection,string>>={sourcing:'/administration/sourcing',review:'/administration/revue',catalogue:'/administration/catalogue'};
 const roleKeys={owner:'roleOwner',admin:'roleAdmin',operator:'roleOperator',analyst:'roleAnalyst'} as const;
 
 /** UI guidance only: the API and PostgreSQL enforce every permission independently. */
@@ -21,6 +21,7 @@ export function adminSectionAllowed(viewer:AdminShellViewer|null,id:AdminSection
  const can=(permission:AdminPermission)=>viewer.permissions.includes(permission);
  if(id==='overview')return can('overview.read');
  if(id==='companies'||id==='products')return can('catalog.read');
+ if(id==='sourcing')return can('contacts.read');
  if(id==='inbox')return can('contacts.read');
  if(id==='activity')return can('activity.read');
  if(id==='review')return viewer.reviewer;
@@ -43,10 +44,10 @@ export default function AdminShell({current,viewer,counts={},onSelect,title,tool
  const {language}=useLanguage();
  const t=(key:AdminKey)=>adminTranslate(language,key);
  const [leaving,setLeaving]=useState(false);
- const label=(id:AdminSection)=>id==='access'?accessTranslate(language,'access'):id==='review'?t('reviewWorkspace'):id==='catalogue'?t('catalogueAdmin'):t(id);
+ const label=(id:AdminSection)=>id==='sourcing'?'Sourcing, devis et livraison':id==='access'?accessTranslate(language,'access'):id==='review'?t('reviewWorkspace'):id==='catalogue'?t('catalogueAdmin'):t(id);
  const sections:{label:string;items:AdminSection[]}[]=[
   {label:t('navPlatform'),items:['overview','companies','products','review','catalogue']},
-  {label:t('navFollowUp'),items:['inbox','tasks','activity']},
+  {label:t('navFollowUp'),items:['sourcing','inbox','tasks','activity']},
   {label:t('admin'),items:['access','settings']},
  ];
  const groups=sections.map(group=>({...group,items:group.items.filter(id=>adminSectionAllowed(viewer,id))})).filter(group=>group.items.length);

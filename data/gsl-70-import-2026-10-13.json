@@ -1,0 +1,2098 @@
+{
+  "schemaVersion": 1,
+  "batchId": "gsl-70-2026-10-13",
+  "source": "Tableau GSL — 70 fabricants et composants pour la robotique, onglet Entreprises, B7:O77",
+  "sourceDigest": "756b03d1db958ebc4c1b87778c4d2b9f64e62249a04ae39065088bf493d08cf9",
+  "rows": [
+    {
+      "id": "0d9d23dc-36e4-57ee-8000-4749600d6e1f",
+      "rowNumber": 8,
+      "sourceId": "1",
+      "name": "Milvus Robotics",
+      "country": "TR",
+      "site": "Ankara",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AMR SEIT et plateformes de transport autonome",
+      "group": "Milvus",
+      "productionEvidence": "Conception mécanique, électronique et assemblage internes en Turquie documentés par KOSGEB.",
+      "roboticsApplication": "Robots mobiles industriels explicitement commercialisés.",
+      "pointsToConfirm": "Modèle, disponibilité, capacité et conditions export.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://milvusrobotics.com/blog/4-5-million-in-funding-to-accelerate-global-expansion",
+          "title": "Source du tableau GSL — Milvus Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.kosgeb.gov.tr/site/tr/genel/detay/7984/yuk-tasima-robotu-seit",
+          "title": "Source du tableau GSL — Milvus Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "c50e3354-3ea8-53a0-b951-782cf88dbfe9",
+      "rowNumber": 9,
+      "sourceId": "2",
+      "name": "AKINROBOTICS",
+      "country": "TR",
+      "site": "Konya / Turquie",
+      "sourceFamily": "Robots complets",
+      "sourceLevel": "A",
+      "description": "Robots de service, bras, AMR et robots humanoïdes",
+      "group": "AKINSOFT",
+      "productionEvidence": "L'entreprise déclare produire les robots développés dans ses propres installations.",
+      "roboticsApplication": "Catalogue de robots commercialisés.",
+      "pointsToConfirm": "Adresse de production du modèle retenu et maturité de chaque gamme.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.akinrobotics.com/en/about-us",
+          "title": "Source du tableau GSL — AKINROBOTICS",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.akinrobotics.com/en/",
+          "title": "Source du tableau GSL — AKINROBOTICS",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "91f8eae3-7dd9-5298-80ec-a5c4a742f3b7",
+      "rowNumber": 10,
+      "sourceId": "3",
+      "name": "Bluepath Robotics",
+      "country": "TR",
+      "site": "Gölcük, Kocaeli",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AMR de manutention et modules de transport",
+      "group": "Bluepath",
+      "productionEvidence": "Fabrication interne du matériel et usine à Gölcük indiquées sur le site officiel.",
+      "roboticsApplication": "Plateformes AMR propriétaires.",
+      "pointsToConfirm": "Modèle, charge, sécurité et interfaces.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://bluepathrobotics.com/",
+          "title": "Source du tableau GSL — Bluepath Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://bluepathrobotics.com/contact/",
+          "title": "Source du tableau GSL — Bluepath Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "9144e6ae-d6dd-5ece-8536-e6fa5a84216e",
+      "rowNumber": 11,
+      "sourceId": "4",
+      "name": "FADA Engineering",
+      "country": "TR",
+      "site": "Arifiye, Sakarya",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AGV et véhicules de transfert de charges lourdes",
+      "group": "FADA",
+      "productionEvidence": "Conception et fabrication de véhicules autonomes déclarées.",
+      "roboticsApplication": "Gamme AGV propre. Certains véhicules du catalogue sont manuels.",
+      "pointsToConfirm": "Retenir uniquement les références autonomes adaptées au projet.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.fada.com.tr/",
+          "title": "Source du tableau GSL — FADA Engineering",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.fadexim.com.tr/news/en-fada-and-remmert-partnership.html",
+          "title": "Source du tableau GSL — FADA Engineering",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "de467f7d-54f8-5ea6-b6e2-deda62edaf51",
+      "rowNumber": 12,
+      "sourceId": "5",
+      "name": "Lars Robot",
+      "country": "TR",
+      "site": "Turquie ; site de production à préciser",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AGV, AMR et solutions de transfert avec robots cartésiens",
+      "group": "Arsanmak / Lars",
+      "productionEvidence": "L'entreprise décrit une activité de fabrication démarrée en 2022 avec Arsanmak.",
+      "roboticsApplication": "Robots mobiles et solutions robotisées propres.",
+      "pointsToConfirm": "Adresse exacte de l'usine et références fabriquées localement.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://larsrobot.com/en/about-us",
+          "title": "Source du tableau GSL — Lars Robot",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.larsrobot.com/",
+          "title": "Source du tableau GSL — Lars Robot",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "b62f5d82-86b9-512e-8db7-d4c193af6280",
+      "rowNumber": 13,
+      "sourceId": "6",
+      "name": "ROBOS",
+      "country": "TR",
+      "site": "Ankara",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AGV et AMR tracteurs, convoyeurs, élévateurs et chariots",
+      "group": "ROBOS",
+      "productionEvidence": "Gamme de véhicules conçus par ROBOS et implantation turque déclarées.",
+      "roboticsApplication": "AGV et AMR industriels.",
+      "pointsToConfirm": "Périmètre de fabrication, modèles et capacités export.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://robos.com.tr/urunler/",
+          "title": "Source du tableau GSL — ROBOS",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://robos.com.tr/en/",
+          "title": "Source du tableau GSL — ROBOS",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "4307849b-de35-5a8d-b7de-54c28054443b",
+      "rowNumber": 14,
+      "sourceId": "7",
+      "name": "iROB",
+      "country": "TR",
+      "site": "Bursa, Nilüfer",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AGV à navigation laser et véhicules avec convoyeurs",
+      "group": "RMK Mekatronik",
+      "productionEvidence": "Le profil officiel indique conception, développement et production d'AGV.",
+      "roboticsApplication": "Plateformes iCARRY et AGV propres.",
+      "pointsToConfirm": "Dénomination juridique, gamme actuelle et lieu de fabrication du modèle.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://tr.linkedin.com/company/irobagv",
+          "title": "Source du tableau GSL — iROB",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.irobagv.com/yeni-tumlesik-konveyor-modullu-agv-modelimiz-icarry/",
+          "title": "Source du tableau GSL — iROB",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "c82fc0a8-8dd8-5db6-8a62-35acc1d9150d",
+      "rowNumber": 15,
+      "sourceId": "8",
+      "name": "MODOYA",
+      "country": "TR",
+      "site": "Eskişehir",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "C",
+      "description": "AGV et solutions autonomes de manutention",
+      "group": "MODOYA",
+      "productionEvidence": "Profil officiel et annuaire spécialisé disponibles ; preuve récente d'usine non obtenue.",
+      "roboticsApplication": "Activité AGV référencée.",
+      "pointsToConfirm": "Activité actuelle, production effective, site et catalogue avant publication.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://tr.linkedin.com/company/modoya",
+          "title": "Source du tableau GSL — MODOYA",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.mobile-robots.com/manufacturer/modoya/",
+          "title": "Source du tableau GSL — MODOYA",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "194151e6-e678-5b6c-b01e-cbb7e10f06d3",
+      "rowNumber": 16,
+      "sourceId": "9",
+      "name": "Bottobo Robotics / Ottobo",
+      "country": "TR",
+      "site": "Pendik, Istanbul",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "AMR collaboratifs de logistique",
+      "group": "Ottobo Robotik Ve Yapay Zeka Teknolojileri",
+      "productionEvidence": "La société décrit ses robots et la construction de son premier prototype ; produits propres.",
+      "roboticsApplication": "AMR développés par Ottobo, commercialisés sous Bottobo.",
+      "pointsToConfirm": "Usine, cadence actuelle et disponibilité des modèles ; éviter le doublon de marques.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.bottobo.com/company?lang=tr",
+          "title": "Source du tableau GSL — Bottobo Robotics / Ottobo",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.bottobo.com/contact?lang=tr",
+          "title": "Source du tableau GSL — Bottobo Robotics / Ottobo",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "5967e3d2-72ad-5e79-9b92-6a85409f20c7",
+      "rowNumber": 17,
+      "sourceId": "10",
+      "name": "Robutel Automation",
+      "country": "TR",
+      "site": "Turquie ; site à préciser",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "Plateformes ROAGV et AGV sur mesure",
+      "group": "Robutel",
+      "productionEvidence": "Fabrication et conception d'AGV personnalisés indiquées sur le site.",
+      "roboticsApplication": "Gamme ROAGV propriétaire.",
+      "pointsToConfirm": "Adresse de production, identification juridique et disponibilité.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://robutel.com/en/",
+          "title": "Source du tableau GSL — Robutel Automation",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.robutel.com/en/products.php",
+          "title": "Source du tableau GSL — Robutel Automation",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "e2700d19-6ded-5e05-b0cf-4312f20ceec2",
+      "rowNumber": 18,
+      "sourceId": "11",
+      "name": "OPLOG",
+      "country": "TR",
+      "site": "Turquie ; usine à préciser",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "Robot de fulfillment TARQAN",
+      "group": "OPLOG",
+      "productionEvidence": "OPLOG présente TARQAN comme un robot entièrement produit par OPLOG.",
+      "roboticsApplication": "Robot de manutention de rayonnages et préparation de commandes.",
+      "pointsToConfirm": "Vente de robots à des tiers ou offre limitée au service logistique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.oplog.io/tr/tarqan",
+          "title": "Source du tableau GSL — OPLOG",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.aa.com.tr/tr/teknofest/yerli-lojistik-robot-tarqan-teknofestte-vitrine-cikti/2979838",
+          "title": "Source du tableau GSL — OPLOG",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "bfc25047-c868-507c-8231-8e21bbad9243",
+      "rowNumber": 19,
+      "sourceId": "12",
+      "name": "Altınay Robot Technologies",
+      "country": "TR",
+      "site": "Istanbul",
+      "sourceFamily": "Systèmes robotisés",
+      "sourceLevel": "A",
+      "description": "Cellules et lignes robotisées sur mesure",
+      "group": "Altınay",
+      "productionEvidence": "Réalisation de systèmes robotisés et installations turques documentées.",
+      "roboticsApplication": "Constructeur de systèmes et intégrateur. Ne pas présenter tous les bras intégrés comme produits Altınay.",
+      "pointsToConfirm": "Équipements fabriqués en propre versus bras achetés.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.altinay-robot.com/en/homepage/",
+          "title": "Source du tableau GSL — Altınay Robot Technologies",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.altinay-robot.com/isimiz/",
+          "title": "Source du tableau GSL — Altınay Robot Technologies",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "7b26a744-cd29-511c-b34d-431300d02e34",
+      "rowNumber": 20,
+      "sourceId": "13",
+      "name": "GRASS Robotics",
+      "country": "TR",
+      "site": "Turquie ; implantation industrielle à confirmer",
+      "sourceFamily": "Bras et actionnement",
+      "sourceLevel": "C",
+      "description": "Bras industriels, servomoteurs, réducteurs et variateurs",
+      "group": "Altınay",
+      "productionEvidence": "Le groupe décrit un programme de production locale et un investissement industriel prévu.",
+      "roboticsApplication": "Développement explicite de bras et composants robotiques.",
+      "pointsToConfirm": "Passage en série, usine opérationnelle et références réellement disponibles.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://altinay.com/en/robotics-group",
+          "title": "Source du tableau GSL — GRASS Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://altinay.com/tr/robot-grubu",
+          "title": "Source du tableau GSL — GRASS Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "94dc31e7-4e37-5b38-9cff-705c5ac0d0ab",
+      "rowNumber": 21,
+      "sourceId": "14",
+      "name": "Intecro Robotics",
+      "country": "TR",
+      "site": "Ankara",
+      "sourceFamily": "Systèmes robotisés",
+      "sourceLevel": "A",
+      "description": "Systèmes de soudage, assemblage et automatisation robotisés",
+      "group": "Intecro",
+      "productionEvidence": "Infrastructure de fabrication en Turquie et systèmes livrés documentés.",
+      "roboticsApplication": "Réalisation de lignes et systèmes robotisés.",
+      "pointsToConfirm": "Périmètre propre de fabrication et équipements intégrés provenant de tiers.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://intecro.com.tr/tr/",
+          "title": "Source du tableau GSL — Intecro Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://intecro.com.tr/tr/our-companies/",
+          "title": "Source du tableau GSL — Intecro Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "c2f71e6f-8a96-5951-b75f-c31d62a90f5b",
+      "rowNumber": 22,
+      "sourceId": "15",
+      "name": "Robital Robotics",
+      "country": "TR",
+      "site": "Kahramankazan, Ankara",
+      "sourceFamily": "Périphériques robotiques",
+      "sourceLevel": "A",
+      "description": "Positionneurs, axes linéaires, sliders et portiques",
+      "group": "Intecro",
+      "productionEvidence": "Usine et fabrication de périphériques pour robots six axes explicitement indiquées.",
+      "roboticsApplication": "Produits spécifiquement destinés aux robots industriels.",
+      "pointsToConfirm": "Charge, précision, interfaces et compatibilité avec le robot retenu.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://robital.com/contact/",
+          "title": "Source du tableau GSL — Robital Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://robital.com/robot-manufacturers/",
+          "title": "Source du tableau GSL — Robital Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "392cf6c4-4b8a-5537-8960-8266573935ad",
+      "rowNumber": 23,
+      "sourceId": "16",
+      "name": "MetalG Robotics",
+      "country": "TR",
+      "site": "Turquie ; usine à préciser",
+      "sourceFamily": "Systèmes robotisés",
+      "sourceLevel": "A",
+      "description": "Cellules de pliage robotisé MG-BendCell",
+      "group": "Intecro",
+      "productionEvidence": "Conception de cellules propres et appartenance à un groupe de fabrication turc documentées.",
+      "roboticsApplication": "Cellules robotisées de chargement de presses plieuses.",
+      "pointsToConfirm": "Part fabriquée localement et bras intégré fourni par un tiers.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.metalgrobotics.com/en/mg-bendcell-2/",
+          "title": "Source du tableau GSL — MetalG Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://intecro.com.tr/tr/our-companies/",
+          "title": "Source du tableau GSL — MetalG Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "004d52e7-6994-5dfc-af93-74fb2f2d6835",
+      "rowNumber": 24,
+      "sourceId": "17",
+      "name": "MetalWorm",
+      "country": "TR",
+      "site": "Ankara",
+      "sourceFamily": "Systèmes robotisés",
+      "sourceLevel": "A",
+      "description": "Machines robotisées WAAM de fabrication additive métallique",
+      "group": "Intecro",
+      "productionEvidence": "Systèmes développés par une société de fabrication additive basée à Ankara.",
+      "roboticsApplication": "Machines WAAM construites autour de robots.",
+      "pointsToConfirm": "Cellule livrée, robot intégré et performances qualifiées.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.metalworm.com/metalworm-introduces-its-range-of-robotic-wire-arc-additive-manufacturing-machines-2/",
+          "title": "Source du tableau GSL — MetalWorm",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.metalworm.com/",
+          "title": "Source du tableau GSL — MetalWorm",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "9d30e50d-8d8a-5cf9-805a-d4435da4250b",
+      "rowNumber": 25,
+      "sourceId": "18",
+      "name": "Bilko Automation",
+      "country": "TR",
+      "site": "Istanbul",
+      "sourceFamily": "Commande et électronique",
+      "sourceLevel": "A",
+      "description": "Contrôleurs LYNCA, modules I/O et RTU, commande multiaxe",
+      "group": "Bilko",
+      "productionEvidence": "Le site distingue ses systèmes LYNCA et modules développés/fabriqués de ses marques représentées.",
+      "roboticsApplication": "Commande et intégration de robots explicitement documentées.",
+      "pointsToConfirm": "Retenir les références Bilko fabriquées en propre ; exclure les produits simplement distribués.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.bilko.tr/en/engineering/",
+          "title": "Source du tableau GSL — Bilko Automation",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.bilko.tr/en/about/",
+          "title": "Source du tableau GSL — Bilko Automation",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "f9b1dacc-cf5a-5bb0-b61d-58c67b5f10e0",
+      "rowNumber": 26,
+      "sourceId": "19",
+      "name": "YMTM Teknoloji",
+      "country": "TR",
+      "site": "Başiskele, Kocaeli",
+      "sourceFamily": "Actionnement",
+      "sourceLevel": "A",
+      "description": "Servomoteurs BLDC, moteurs frameless, actionneurs et resolvers",
+      "group": "YMTM",
+      "productionEvidence": "Conception et production locale de moteurs déclarées.",
+      "roboticsApplication": "Le fabricant cite explicitement la robotique parmi ses marchés.",
+      "pointsToConfirm": "Couple, dimensions, retour de position et modèle destiné à la robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.ymtm.com.tr/en/",
+          "title": "Source du tableau GSL — YMTM Teknoloji",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.ymtm.com.tr/katalog/",
+          "title": "Source du tableau GSL — YMTM Teknoloji",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "5ca71273-5e96-5120-b8ee-dc9551dca808",
+      "rowNumber": 27,
+      "sourceId": "20",
+      "name": "OPKON",
+      "country": "TR",
+      "site": "Istanbul",
+      "sourceFamily": "Capteurs et position",
+      "sourceLevel": "B",
+      "description": "Encodeurs, capteurs linéaires, capteurs magnétostrictifs et potentiométriques",
+      "group": "OPKON",
+      "productionEvidence": "Installations R&D et fabrication à Istanbul explicitement documentées.",
+      "roboticsApplication": "Usage pour retour de position d'un robot plausible ; application robotique non établie dans la source retenue.",
+      "pointsToConfirm": "Usage robotique de la référence, précision, cycle et interface.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.opkon.com.tr/en/about",
+          "title": "Source du tableau GSL — OPKON",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.opkon.com.tr/Hakkimizda",
+          "title": "Source du tableau GSL — OPKON",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "accbd8e0-5119-533b-bf05-5f8ddefb29c2",
+      "rowNumber": 28,
+      "sourceId": "21",
+      "name": "FENAC",
+      "country": "TR",
+      "site": "Ataşehir, Istanbul",
+      "sourceFamily": "Capteurs et position",
+      "sourceLevel": "A",
+      "description": "Encodeurs de retour moteur, encodeurs absolus et incrémentaux",
+      "group": "FENAC",
+      "productionEvidence": "L'entreprise annonce une nouvelle installation de production à Istanbul.",
+      "roboticsApplication": "FNC SCK 2048-R7 explicitement destiné aux articulations de robots et cobots.",
+      "pointsToConfirm": "Fabrication locale de la référence et interface requise.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.fenac.com.tr/tr/tr/urun/fnc-sck-2048---r7-sincos-serisi-enkoder",
+          "title": "Source du tableau GSL — FENAC",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.fenac.com.tr/tr/yayin/tr/yayin/biz-tasIndIk",
+          "title": "Source du tableau GSL — FENAC",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "36d5b77e-8817-541d-88ce-eaae5a8c687d",
+      "rowNumber": 29,
+      "sourceId": "22",
+      "name": "2M Kablo",
+      "country": "TR",
+      "site": "Çerkezköy, Tekirdağ",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Câbles de servomoteurs, de commande et de communication industrielle",
+      "group": "2M Kablo",
+      "productionEvidence": "Usine turque et catalogue de câbles de servomoteurs identifiés.",
+      "roboticsApplication": "Composants de câblage utilisables selon la référence ; aptitude à la torsion robotique à confirmer.",
+      "pointsToConfirm": "Rayon de courbure, torsion, durée de vie dynamique et référence exacte.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.2mkablo.com/en/products",
+          "title": "Source du tableau GSL — 2M Kablo",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.2mkablo.com/en/catalogs",
+          "title": "Source du tableau GSL — 2M Kablo",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "cd6e09e7-9abe-5bb9-9b23-4251912cdb46",
+      "rowNumber": 30,
+      "sourceId": "23",
+      "name": "Ünal Kablo",
+      "country": "TR",
+      "site": "Çorlu / Ergene et Silivri",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "A",
+      "description": "Câbles flexibles PUR UniFlex pour applications robotiques",
+      "group": "Ünal Kablo",
+      "productionEvidence": "Deux installations turques de fabrication documentées.",
+      "roboticsApplication": "Le catalogue cite expressément la robotique pour certaines références UniFlex.",
+      "pointsToConfirm": "Référence, qualification dynamique et caractéristiques de torsion.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.unalkablo.com/Content/pdf/Unal-Cable-Full-Products-Catalog.pdf",
+          "title": "Source du tableau GSL — Ünal Kablo",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://unalkablo.com/en-us/Corporate",
+          "title": "Source du tableau GSL — Ünal Kablo",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "14f2435b-ce23-5f7c-acaa-906e8ed398bf",
+      "rowNumber": 31,
+      "sourceId": "24",
+      "name": "Ermaksan",
+      "country": "TR",
+      "site": "Nilüfer, Bursa",
+      "sourceFamily": "Systèmes robotisés",
+      "sourceLevel": "A",
+      "description": "Lignes ERMAUTOMATION et systèmes RoboMaster",
+      "group": "Ermaksan",
+      "productionEvidence": "Fabricant de machines implanté à Bursa.",
+      "roboticsApplication": "Offre explicite de lignes de découpe et pliage robotisées.",
+      "pointsToConfirm": "Rôle fabricant de cellule, origine du bras et gamme réellement livrable.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.ermaksan.com.tr/tr-TR/Details/6858/ermautomation-robotik-otomasyon-hatti",
+          "title": "Source du tableau GSL — Ermaksan",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.ermaksan.com.tr/en-US/about/who-we-are",
+          "title": "Source du tableau GSL — Ermaksan",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "2e23a1e2-b73b-5506-84da-e9dfddb61893",
+      "rowNumber": 32,
+      "sourceId": "25",
+      "name": "EMS Elektronik",
+      "country": "TR",
+      "site": "Dudullu, Istanbul",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Assemblage PCBA SMT/THT et électronique sur mesure",
+      "group": "EMS Elektronik",
+      "productionEvidence": "Site de 3 000 m² à Istanbul et lignes de fabrication de cartes décrits.",
+      "roboticsApplication": "Sous-traitance électronique potentielle pour contrôleurs robotiques ; références clients robotiques non établies.",
+      "pointsToConfirm": "Acceptation du projet robotique, capacité, validation et propriété des fichiers.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.emselektronik.com/en/",
+          "title": "Source du tableau GSL — EMS Elektronik",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.emselektronik.com/en/production/",
+          "title": "Source du tableau GSL — EMS Elektronik",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "3471e9c3-cc29-5281-9bf1-fdd7620008a6",
+      "rowNumber": 33,
+      "sourceId": "26",
+      "name": "IML Robot",
+      "country": "TR",
+      "site": "Turquie ; usine à préciser",
+      "sourceFamily": "Robots industriels",
+      "sourceLevel": "A",
+      "description": "Robots IML latéraux, supérieurs et haute vitesse",
+      "group": "IML Robot",
+      "productionEvidence": "Le fabricant décrit la conception et la production de ses robots et équipements.",
+      "roboticsApplication": "Robots industriels pour injection et étiquetage dans le moule.",
+      "pointsToConfirm": "Raison sociale, usine, cadence et intégration machine.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.imlmold.com/en/services.php",
+          "title": "Source du tableau GSL — IML Robot",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.imlmold.com/tr/robotlar.php",
+          "title": "Source du tableau GSL — IML Robot",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "b1d5101b-c3c8-5eec-8383-6fbebc83eded",
+      "rowNumber": 34,
+      "sourceId": "27",
+      "name": "Crouzet Maroc",
+      "country": "MA",
+      "site": "Casablanca, Sidi Maarouf",
+      "sourceFamily": "Actionnement et capteurs",
+      "sourceLevel": "A",
+      "description": "Produits mécatroniques, moteurs, motoréducteurs et détecteurs",
+      "group": "Crouzet",
+      "productionEvidence": "Sites marocains de fabrication identifiés par Crouzet et la fédération FENELEC.",
+      "roboticsApplication": "Moteurs SQ75/DCmind explicitement proposés pour robotique de service.",
+      "pointsToConfirm": "Pays de fabrication de chaque référence robotique ; le portefeuille groupe ne prouve pas sa fabrication au Maroc.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.crouzet.com/products/dc-brushless-motors/sq75-smart-motors/",
+          "title": "Source du tableau GSL — Crouzet Maroc",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://fenelec.com/associations-internes/asel-fenelec/membres-asel-fenelec/",
+          "title": "Source du tableau GSL — Crouzet Maroc",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "65555cac-8250-533c-af13-b4e843ccdc28",
+      "rowNumber": 35,
+      "sourceId": "28",
+      "name": "TRONICO ATLAS",
+      "country": "MA",
+      "site": "Tanger Free Zone",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Cartes électroniques, faisceaux et intégration de sous-ensembles",
+      "group": "Agôn Electronics / TRONICO",
+      "productionEvidence": "Site marocain avec lignes CMS et ateliers de câblage explicitement décrit.",
+      "roboticsApplication": "EMS haute fiabilité potentiellement pertinent pour robots ; application robotique non établie.",
+      "pointsToConfirm": "Projet robotique accepté, capacités et exigences de fiabilité.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.tronico-agon.com/fr/tronico/tronico-maroc/",
+          "title": "Source du tableau GSL — TRONICO ATLAS",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://fenelec.com/associations-internes/asel-fenelec/membres-asel-fenelec/",
+          "title": "Source du tableau GSL — TRONICO ATLAS",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "9ac8f4c8-7d33-5b20-8c36-3a55cc10126c",
+      "rowNumber": 36,
+      "sourceId": "29",
+      "name": "Cicor Maroc — ex-éolane / Valtronic",
+      "country": "MA",
+      "site": "Berrechid / Témara",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Sous-traitance électronique et intégration d'assemblages",
+      "group": "Cicor",
+      "productionEvidence": "Cicor confirme la concentration de la production nord-africaine sur ses sites marocains en 2026.",
+      "roboticsApplication": "EMS industriel potentiel ; références robotiques à établir.",
+      "pointsToConfirm": "Raison sociale après intégration et site du projet. Ne pas compter éolane et Valtronic comme fournisseurs indépendants sans vérification.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.cicor.com/en/news/article/cicor-reports-strong-h1-order-intake-with-a-book-to-bill-ratio-of-12-and-returns-to-organic-growth-in-q2/",
+          "title": "Source du tableau GSL — Cicor Maroc — ex-éolane / Valtronic",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.cicor.com/en/news/article/cicor-announces-divestiture-of-tunisia-and-implements-an-integration-and-productivity-programme-with-above-chf-10-million-ebitda-improvements/",
+          "title": "Source du tableau GSL — Cicor Maroc — ex-éolane / Valtronic",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "b21469c4-205e-5e2c-9623-7c0a3c49b6df",
+      "rowNumber": 37,
+      "sourceId": "30",
+      "name": "STMicroelectronics Bouskoura",
+      "country": "MA",
+      "site": "Bouskoura",
+      "sourceFamily": "Semi-conducteurs",
+      "sourceLevel": "B",
+      "description": "Assemblage, encapsulation et test de semi-conducteurs",
+      "group": "STMicroelectronics",
+      "productionEvidence": "Site officiel de packaging et test au Maroc documenté.",
+      "roboticsApplication": "Composants électroniques potentiels ; aucune carte mère robotique locale démontrée.",
+      "pointsToConfirm": "Références traitées à Bouskoura, traçabilité du lot et adéquation robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.st.com/content/st_com/en/about/manufacturing-at-st/our-facilities/bouskoura-st-site.html",
+          "title": "Source du tableau GSL — STMicroelectronics Bouskoura",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.st.com/web/en/resource/quality_and_reliability/quality_certificate/certification_document/ISO9001.pdf",
+          "title": "Source du tableau GSL — STMicroelectronics Bouskoura",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "a9e9dca6-f8cc-5808-a72c-ab9a252c683e",
+      "rowNumber": 38,
+      "sourceId": "31",
+      "name": "MTA Automotive Solutions Maroc",
+      "country": "MA",
+      "site": "Kénitra, Atlantic Free Zone",
+      "sourceFamily": "Connectique et distribution électrique",
+      "sourceLevel": "B",
+      "description": "Connecteurs, porte-fusibles et unités de distribution de puissance",
+      "group": "MTA",
+      "productionEvidence": "Périmètre de fabrication au site marocain décrit dans le document officiel.",
+      "roboticsApplication": "Composants de distribution électrique transposables ; marché automobile prédominant.",
+      "pointsToConfirm": "Offre pour robotique, références et accès à des projets hors automobile.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.mta.it/flex/cm/pages/ServeAttachment.php/L/EN/D/1%252Fa%252F6%252FD.d5dc9bb8bc19f634c6cd/P/BLOB%3AID%3D338/E/pdf?mode=download",
+          "title": "Source du tableau GSL — MTA Automotive Solutions Maroc",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.mta.it/flex/files/1/8/6/D.41916cdb980cf3c4c59a/MTA_Journal_20_EN_CN_2pag.pdf",
+          "title": "Source du tableau GSL — MTA Automotive Solutions Maroc",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "adf17ffd-a902-58f5-8bde-7283da727bbf",
+      "rowNumber": 39,
+      "sourceId": "32",
+      "name": "OneTech M&A",
+      "country": "MA",
+      "site": "Tanger Free Zone",
+      "sourceFamily": "Sous-ensembles et câblage",
+      "sourceLevel": "B",
+      "description": "Assemblages électromécaniques et faisceaux ; références locales à préciser",
+      "group": "OneTech",
+      "productionEvidence": "OneTech présente ses sites de production marocains et l'entité OneTech M&A à Tanger.",
+      "roboticsApplication": "Assemblages potentiels pour robotique ; gamme robotique non établie.",
+      "pointsToConfirm": "Périmètre exact de l'entité marocaine, référence et projet accepté.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://onetech-group.com/mechatronics-cluster/",
+          "title": "Source du tableau GSL — OneTech M&A",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://onetech-group.com/contact-us/",
+          "title": "Source du tableau GSL — OneTech M&A",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "759b0a1b-13cb-56be-9e2a-fab80ec7dddd",
+      "rowNumber": 40,
+      "sourceId": "33",
+      "name": "Enova Robotics",
+      "country": "TN",
+      "site": "Sousse, Novation City",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "A",
+      "description": "Robots mobiles autonomes de surveillance et applications de service",
+      "group": "Enova",
+      "productionEvidence": "Conception, fabrication et commercialisation documentées dans le catalogue officiel de l'industrie tunisienne.",
+      "roboticsApplication": "Fabricant direct de robots mobiles.",
+      "pointsToConfirm": "Gamme actuelle, configuration, lieu de production et disponibilité.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.enovarobotics.eu/fr/notre-agence/",
+          "title": "Source du tableau GSL — Enova Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.tunisieindustrie.nat.tn/fr/download/STARTUPSTECH.pdf",
+          "title": "Source du tableau GSL — Enova Robotics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "bef48ddc-a2b7-5eda-8dfc-3cc7cbce4dc9",
+      "rowNumber": 41,
+      "sourceId": "34",
+      "name": "Bionic Soul",
+      "country": "TN",
+      "site": "Ariana, El Ghazala",
+      "sourceFamily": "Bionique et actionnement",
+      "sourceLevel": "C",
+      "description": "Prothèses bioniques et commande par capteurs EMG/EEG",
+      "group": "Bionic Soul",
+      "productionEvidence": "Produits et adresse tunisienne déclarés ; preuve de fabrication industrielle locale non obtenue.",
+      "roboticsApplication": "Bionique motorisée ; domaine médical, distinct de la robotique industrielle.",
+      "pointsToConfirm": "Production locale, maturité, disponibilité et adéquation au périmètre GSL.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.bionicsoul.net/about",
+          "title": "Source du tableau GSL — Bionic Soul",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.bionicsoul.net/contact",
+          "title": "Source du tableau GSL — Bionic Soul",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "379814e2-ee43-5fb5-8fcd-df004d8a0f76",
+      "rowNumber": 42,
+      "sourceId": "35",
+      "name": "FUBA Printed Circuits Tunisie",
+      "country": "TN",
+      "site": "El Azib, Menzel Jemil, Bizerte",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Circuits imprimés PCB multicouches",
+      "group": "OneTech",
+      "productionEvidence": "Fabrication de circuits imprimés en Tunisie documentée par le centre technique CETIME.",
+      "roboticsApplication": "Fabrication de PCB pour un projet robotique possible selon cahier des charges ; clients robotiques non établis.",
+      "pointsToConfirm": "Capacités HDI, couches, volumes, matériaux et projet robotique accepté.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.cetime.tn/fr/annuaire-des-entreprises/fuba-printed-circuit-tunisie",
+          "title": "Source du tableau GSL — FUBA Printed Circuits Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.linkedin.com/company/fuba-printed-circuits",
+          "title": "Source du tableau GSL — FUBA Printed Circuits Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "e95c7a4a-f92b-5675-951c-f03f0cdf524e",
+      "rowNumber": 43,
+      "sourceId": "36",
+      "name": "Eleonetech",
+      "country": "TN",
+      "site": "El Azib, Menzel Jemil, Bizerte",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "PCBA et ensembles/sous-ensembles électroniques",
+      "group": "OneTech",
+      "productionEvidence": "Production locale et périmètre d'industrialisation d'assemblages électroniques documentés.",
+      "roboticsApplication": "Sous-traitance potentielle de cartes de robots ; référence robotique non établie.",
+      "pointsToConfirm": "Carte sur mesure, test fonctionnel, capacités et références robotiques.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://onetech-group.com/electronics-manufacturing-services-ems/",
+          "title": "Source du tableau GSL — Eleonetech",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://onetech-group.com/download/ems/EMS-AFAQ-9001-2015.pdf",
+          "title": "Source du tableau GSL — Eleonetech",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "b95ca1db-833d-580c-a790-9a97badf62ea",
+      "rowNumber": 44,
+      "sourceId": "37",
+      "name": "TTE International / TTEI",
+      "country": "TN",
+      "site": "El Azib, Menzel Jemil, Bizerte",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Faisceaux et assemblages électromécaniques sur mesure",
+      "group": "OneTech",
+      "productionEvidence": "Sites de production tunisiens et fabrication de faisceaux explicitement présentés.",
+      "roboticsApplication": "Automatisation industrielle documentée ; usage robotique à préciser par référence.",
+      "pointsToConfirm": "Flexion/torsion, connecteurs, protocole, qualification dynamique et site du contrat.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://onetech-group.com/wire-harnesses-electromechanical-assemblies/",
+          "title": "Source du tableau GSL — TTE International / TTEI",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://onetech-group.com/contact-us/",
+          "title": "Source du tableau GSL — TTE International / TTEI",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "7a9348c2-e1ef-591f-8481-95a8203f7111",
+      "rowNumber": 45,
+      "sourceId": "38",
+      "name": "LACROIX Electronics Tunisie",
+      "country": "TN",
+      "site": "Hammam Zriba",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Cartes SMT, assemblages électroniques et intégration finale",
+      "group": "LACROIX",
+      "productionEvidence": "Usine de Zriba produisant des assemblages électroniques documentée sur le site officiel.",
+      "roboticsApplication": "EMS industriel adapté à qualification ; références robotique non établies.",
+      "pointsToConfirm": "Acceptation d'un projet robotique, tests et volume minimal.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.lacroix-electronics.com/locations/zriba-tunisia/",
+          "title": "Source du tableau GSL — LACROIX Electronics Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.lacroix-electronics.com/fr/production-electronique/empreinte-industrielle/",
+          "title": "Source du tableau GSL — LACROIX Electronics Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "4036b109-b86f-503a-96ed-474156847b94",
+      "rowNumber": 46,
+      "sourceId": "39",
+      "name": "Asteelflash Tunisie",
+      "country": "TN",
+      "site": "La Soukra",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "PCBA logique/puissance et sous-traitance électronique",
+      "group": "Asteelflash",
+      "productionEvidence": "Site de production de La Soukra et fabrication de cartes documentés.",
+      "roboticsApplication": "Fabrication potentielle de cartes pour robots ; références publiques robotiques non établies.",
+      "pointsToConfirm": "Gamme industrielle, projet accepté, test et volume.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://asteelflash.com/fr/newsroom/more-than-2-5m-investment-in-cutting-edge-equipment-at-la-soukra-tunisia/",
+          "title": "Source du tableau GSL — Asteelflash Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://asteelflash.com/fr/jobs/responsable-lean/",
+          "title": "Source du tableau GSL — Asteelflash Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "98af6a26-aa43-5597-b69b-dcf0231a7c6f",
+      "rowNumber": 47,
+      "sourceId": "40",
+      "name": "PEC Tunisie",
+      "country": "TN",
+      "site": "Tunisie ; implantation exacte à confirmer",
+      "sourceFamily": "Sous-ensembles et câblage",
+      "sourceLevel": "B",
+      "description": "Faisceaux, assemblages électriques et plastiques techniques",
+      "group": "PEC",
+      "productionEvidence": "Le site officiel décrit les moyens de production de PEC Tunisie.",
+      "roboticsApplication": "Sous-ensembles potentiels pour robot ; domaine robotique non documenté.",
+      "pointsToConfirm": "Référence robotique, site, capacité et disponibilité pour projet hors automobile.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://groupepec.com/pec-tunisie/",
+          "title": "Source du tableau GSL — PEC Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://groupepec.com/",
+          "title": "Source du tableau GSL — PEC Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "699617b1-754b-5a85-afc6-6d65328cc653",
+      "rowNumber": 48,
+      "sourceId": "41",
+      "name": "PSZ Tunisie",
+      "country": "TN",
+      "site": "Ksar Hellal / Bouhjar / Ghezala",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Assemblages câblés et composants surmoulés",
+      "group": "PSZ",
+      "productionEvidence": "Trois implantations tunisiennes et production d'assemblages/surmoulages documentées.",
+      "roboticsApplication": "Câblage potentiel de robots ; qualification robotique non établie.",
+      "pointsToConfirm": "Choisir l'entité du site retenu et confirmer contraintes dynamiques.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://psz-electronic.com/en/standorte",
+          "title": "Source du tableau GSL — PSZ Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://psz-electronic.com/de/kontakt",
+          "title": "Source du tableau GSL — PSZ Tunisie",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "9fbe4d26-cd15-58cc-864f-f701233820e9",
+      "rowNumber": 49,
+      "sourceId": "42",
+      "name": "Minth Serbia — activité robotique",
+      "country": "RS",
+      "site": "Šabac",
+      "sourceFamily": "Robots humanoïdes",
+      "sourceLevel": "A",
+      "description": "Assemblage local de robots humanoïdes avec AGIBOT",
+      "group": "Minth / partenaire AGIBOT",
+      "productionEvidence": "Ouverture de l'installation annoncée le 29 août 2026 par Minth et le gouvernement serbe.",
+      "roboticsApplication": "Assemblage local de robots humanoïdes. Composants importés possibles.",
+      "pointsToConfirm": "Distinguer assemblage et fabrication intégrée ; disponibilité commerciale et entité contractante.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.minthgroup.com/ENG/contents/113/1287.html",
+          "title": "Source du tableau GSL — Minth Serbia — activité robotique",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.srbija.gov.rs/vest/en/285880/opening-of-humanoid-robot-factory-in-sabac-marks-serbias-leap-into-future.php",
+          "title": "Source du tableau GSL — Minth Serbia — activité robotique",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "373806b6-9339-5c73-942b-822822aada3e",
+      "rowNumber": 50,
+      "sourceId": "43",
+      "name": "Inmold Group",
+      "country": "RS",
+      "site": "Požega",
+      "sourceFamily": "Robots industriels",
+      "sourceLevel": "A",
+      "description": "Robots et systèmes IML sur mesure",
+      "group": "Inmold",
+      "productionEvidence": "Conception, fabrication et assemblage complets de robots en Serbie explicitement indiqués.",
+      "roboticsApplication": "Robots IML propres, associés aux moules et presses d'injection.",
+      "pointsToConfirm": "Modèle, cadence et interface de presse.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://inmold-ltd.com/en/",
+          "title": "Source du tableau GSL — Inmold Group",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://inmold-ltd.com/en/iml-system/",
+          "title": "Source du tableau GSL — Inmold Group",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "813f81a7-0722-55f2-941a-36994f50f282",
+      "rowNumber": 51,
+      "sourceId": "44",
+      "name": "COMING — AgAR",
+      "country": "RS",
+      "site": "Niš ; coopération Boljevac",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "C",
+      "description": "Robot agricole électrique multifonction AgAR",
+      "group": "COMING / coopération FPM Agromehanika",
+      "productionEvidence": "Prototype et développement local documentés ; démarrage de série annoncé dans les sources de 2024.",
+      "roboticsApplication": "Plateforme autonome agricole développée en Serbie.",
+      "pointsToConfirm": "Production en série actuelle, usine, constructeur contractant et disponibilité.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://agarrobot.com/news/the-serbian-robot-can-mow-spray-plow-and-irrigate/",
+          "title": "Source du tableau GSL — COMING — AgAR",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://agarrobot.com/news/agar-robot-operates-independently-mowing-sowing-and-spraying-without-a-person-or-fuel/",
+          "title": "Source du tableau GSL — COMING — AgAR",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "a369e198-0725-5db0-bb18-e9fc261194fb",
+      "rowNumber": 52,
+      "sourceId": "45",
+      "name": "MIKROE / MikroElektronika",
+      "country": "RS",
+      "site": "Belgrade",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "A",
+      "description": "Cartes embarquées, drivers de moteurs, modules de capteurs",
+      "group": "MIKROE",
+      "productionEvidence": "L'entreprise décrit sa production dans ses locaux à Belgrade.",
+      "roboticsApplication": "Cartes DC Motor Click et H-Bridge explicitement destinées à la robotique.",
+      "pointsToConfirm": "Module de prototypage ou composant industrialisable, disponibilité et exigences du projet.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.mikroe.com/dc-motor-28-click-fng",
+          "title": "Source du tableau GSL — MIKROE / MikroElektronika",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.mikroe.com/internship",
+          "title": "Source du tableau GSL — MIKROE / MikroElektronika",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "476d5232-3e2a-5f5c-a550-7d66cb96a1eb",
+      "rowNumber": 53,
+      "sourceId": "46",
+      "name": "Dunkermotoren / AMETEK Subotica",
+      "country": "RS",
+      "site": "Subotica",
+      "sourceFamily": "Actionnement",
+      "sourceLevel": "A",
+      "description": "Moteurs BLDC et solutions d'entraînement",
+      "group": "AMETEK",
+      "productionEvidence": "Subotica figure parmi les sites de production ; document fabricant identifiant des moteurs BLDC locaux.",
+      "roboticsApplication": "Le groupe documente des motorisations d'AGV et robots agricoles.",
+      "pointsToConfirm": "Vérifier que le modèle robotique demandé est produit à Subotica.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.dunkermotoren.com/en/industries/agriculture",
+          "title": "Source du tableau GSL — Dunkermotoren / AMETEK Subotica",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.dunkermotoren.com/en/about-us",
+          "title": "Source du tableau GSL — Dunkermotoren / AMETEK Subotica",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "94965c96-7efb-5a35-a679-e84a34d361c3",
+      "rowNumber": 54,
+      "sourceId": "47",
+      "name": "ELRAD Serbia",
+      "country": "RS",
+      "site": "Vlasotince",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "A",
+      "description": "Cartes de commande, contrôle moteur et sous-ensembles électroniques",
+      "group": "ELRAD",
+      "productionEvidence": "Fabrication locale d'électronique identifiée par le groupe et son document de périmètre.",
+      "roboticsApplication": "Le groupe fabrique des commandes pour robots tondeuses.",
+      "pointsToConfirm": "Localiser la production de la référence robotique au sein du groupe.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.elrad-group.com/",
+          "title": "Source du tableau GSL — ELRAD Serbia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.elrad-group.com/contact/",
+          "title": "Source du tableau GSL — ELRAD Serbia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "9139828d-2f09-59d2-abda-d13dee09182a",
+      "rowNumber": 55,
+      "sourceId": "48",
+      "name": "Nidec Electric Motor Serbia",
+      "country": "RS",
+      "site": "Novi Sad",
+      "sourceFamily": "Actionnement",
+      "sourceLevel": "B",
+      "description": "Moteurs brushless DC et produits associés",
+      "group": "Nidec",
+      "productionEvidence": "Le groupe identifie la fabrication de moteurs automobiles à Novi Sad.",
+      "roboticsApplication": "Motorisation transposable à qualifier ; application robotique du site non prouvée.",
+      "pointsToConfirm": "Accès à une offre pour robotique, dimensions et alimentation ; ne pas assimiler moteur automobile à servomoteur robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.nidec.com/en/corporate/network/group/nidec-electric-motor-serbia/",
+          "title": "Source du tableau GSL — Nidec Electric Motor Serbia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "93e217c1-1506-5d6e-8c6d-3f9df62fb66b",
+      "rowNumber": 56,
+      "sourceId": "49",
+      "name": "Johnson Electric d.o.o. Niš",
+      "country": "RS",
+      "site": "Niš",
+      "sourceFamily": "Actionnement",
+      "sourceLevel": "B",
+      "description": "Fabrication de moteurs électriques ; gamme locale à préciser",
+      "group": "Johnson Electric",
+      "productionEvidence": "Filiale serbe de fabrication et implantation de production de moteurs documentées dans les rapports du groupe.",
+      "roboticsApplication": "Fournisseur de motorisation potentiel ; programme robotique local non établi.",
+      "pointsToConfirm": "Production actuelle, référence locale, marché robotique et vente à des tiers.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.johnsonelectric.com/pub/media/sigma/annual/AR2024_en.pdf",
+          "title": "Source du tableau GSL — Johnson Electric d.o.o. Niš",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.johnsonelectric.com/pub/media/sigma/annual/2018-19_AR_en_1.pdf",
+          "title": "Source du tableau GSL — Johnson Electric d.o.o. Niš",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "5ec9166d-aa78-52ac-9c92-27f57cc24220",
+      "rowNumber": 57,
+      "sourceId": "50",
+      "name": "Mikrosam",
+      "country": "MK",
+      "site": "Prilep",
+      "sourceFamily": "Systèmes robotisés",
+      "sourceLevel": "A",
+      "description": "Machines robotisées de placement de fibres et fabrication de composites",
+      "group": "Mikrosam",
+      "productionEvidence": "Campus local regroupant conception, fabrication et assemblage explicitement décrit.",
+      "roboticsApplication": "Cellules multi-robots et machines automatisées propriétaires.",
+      "pointsToConfirm": "Application et configuration ; fabricant de systèmes, pas nécessairement du bras intégré.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://mikrosam.com/about-us/",
+          "title": "Source du tableau GSL — Mikrosam",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://mikrosam.com/wp-content/uploads/2025/07/MONOGRAFIJA-02.06-2025-final-version.pdf",
+          "title": "Source du tableau GSL — Mikrosam",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "2c9f6553-46ee-5f2d-b31a-9c96a2a30219",
+      "rowNumber": 58,
+      "sourceId": "51",
+      "name": "KESSLER Macedonia",
+      "country": "MK",
+      "site": "Ilinden, Skopje",
+      "sourceFamily": "Actionnement",
+      "sourceLevel": "C",
+      "description": "Moteurs et composants d'entraînement ; gamme locale à préciser",
+      "group": "Franz Kessler",
+      "productionEvidence": "Implantation locale identifiée ; document public présentant une seconde phase de production de moteurs.",
+      "roboticsApplication": "Motion control transposable ; production locale actuelle et usage robotique non établis.",
+      "pointsToConfirm": "Usine opérationnelle actuelle, références et programme robotique avant publication.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://investnorthmacedonia.gov.mk/wp-content/uploads/2021/04/Technological-Industrial-Development-Zones.pdf",
+          "title": "Source du tableau GSL — KESSLER Macedonia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://energy.kessler-group.biz/files/Files/BRO_PK1004_Kessler_energy_A4_en_V2-6_WEB.pdf",
+          "title": "Source du tableau GSL — KESSLER Macedonia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "aa08401d-09f8-5741-bb56-5adec7937bea",
+      "rowNumber": 59,
+      "sourceId": "52",
+      "name": "KOSTAL Makedonija",
+      "country": "MK",
+      "site": "Ohrid, Kosel",
+      "sourceFamily": "Commande et électronique",
+      "sourceLevel": "B",
+      "description": "Systèmes électriques, électroniques et mécatroniques automobiles",
+      "group": "KOSTAL",
+      "productionEvidence": "Fabrication de systèmes mécatroniques à Ohrid documentée par le groupe.",
+      "roboticsApplication": "Capacités de fabrication transférables ; offre robotique locale non établie.",
+      "pointsToConfirm": "Acceptation de clients robotique et référence produite localement.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.kostal.com/fileadmin/user_upload/kostal/Downloads/Qualitaetszertifikate/067055-028_Kostal_Makedonija_DOOEL_IATF_WA_24_ay_EN_24-10-21.pdf",
+          "title": "Source du tableau GSL — KOSTAL Makedonija",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.kostal.com/en/company/locations/",
+          "title": "Source du tableau GSL — KOSTAL Makedonija",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "75c268ef-44bb-594f-8660-706a83315b4e",
+      "rowNumber": 60,
+      "sourceId": "53",
+      "name": "Marquardt Macedonia",
+      "country": "MK",
+      "site": "Dolno Karaslari, Veles",
+      "sourceFamily": "Commande et interfaces",
+      "sourceLevel": "B",
+      "description": "Panneaux de commande HMI et systèmes électroniques automobiles",
+      "group": "Marquardt",
+      "productionEvidence": "Le groupe décrit la production locale de panneaux de commande.",
+      "roboticsApplication": "Interfaces et électronique potentiellement transférables ; produits robotiques locaux non établis.",
+      "pointsToConfirm": "Référence, offre pour robotique et conditions d'un projet hors automobile.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.marquardt.com/careers/locations/north-macedonia",
+          "title": "Source du tableau GSL — Marquardt Macedonia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.marquardt.com/company/history",
+          "title": "Source du tableau GSL — Marquardt Macedonia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "f2b2dd44-8c6d-5364-9f79-9902f98ebff9",
+      "rowNumber": 61,
+      "sourceId": "54",
+      "name": "Rade Končar — Kontaktori i Relei",
+      "country": "MK",
+      "site": "Skopje / Macédoine du Nord",
+      "sourceFamily": "Commande électrique",
+      "sourceLevel": "B",
+      "description": "Contacteurs AC/DC, relais et appareillage basse tension",
+      "group": "Rade Končar Kontaktori i Relei",
+      "productionEvidence": "Le site indique sa propre production de contacteurs.",
+      "roboticsApplication": "Composants possibles de coffrets de commande de robots ; non spécialiste robotique.",
+      "pointsToConfirm": "Choisir références adaptées au coffret ; aucune fonction de sécurité présumée.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://radekoncar.com.mk/",
+          "title": "Source du tableau GSL — Rade Končar — Kontaktori i Relei",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://radekoncar.com.mk/mk/contact/",
+          "title": "Source du tableau GSL — Rade Končar — Kontaktori i Relei",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "5c44ca5c-cbdf-56f1-8e8e-1d3d7fa96425",
+      "rowNumber": 62,
+      "sourceId": "55",
+      "name": "Kolektor CCL",
+      "country": "BA",
+      "site": "Laktaši / Prijedor / Srbac",
+      "sourceFamily": "Composants moteur et électronique",
+      "sourceLevel": "B",
+      "description": "Collecteurs, ferrites, composants inductifs et hybrides",
+      "group": "Kolektor",
+      "productionEvidence": "Périmètres de production de chacun des sites bosniens documentés.",
+      "roboticsApplication": "Composants possibles de moteurs et d'électronique de robots ; référence robotique non établie.",
+      "pointsToConfirm": "Modèle, application et capacité de fournir un projet robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.kolektor.com/en/about-us/global-presence/kolektor-ccl",
+          "title": "Source du tableau GSL — Kolektor CCL",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.kolektor.com/uploads/certifikati/ccl_9001_25.2.27.pdf",
+          "title": "Source du tableau GSL — Kolektor CCL",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "aa37fdbc-7516-5da4-8004-d5704c22a1f7",
+      "rowNumber": 63,
+      "sourceId": "56",
+      "name": "MAHLE Electric Drives Bosnia",
+      "country": "BA",
+      "site": "Laktaši / Aleksandrovac",
+      "sourceFamily": "Actionnement",
+      "sourceLevel": "B",
+      "description": "Rotors, stators, bobines, porte-balais et moteurs EPS",
+      "group": "MAHLE",
+      "productionEvidence": "MAHLE décrit la fabrication locale de rotors, stators, bobines, porte-balais et moteurs EPS ; nouvelle usine documentée par FIPA.",
+      "roboticsApplication": "Fournisseur potentiel de composants de motorisation ; références robotique locales non démontrées.",
+      "pointsToConfirm": "Référence pour robotique, caractéristiques et disponibilité hors programmes automobiles.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.jobs.mahle.com/bosnia_and_herzegovina/en/warum-zu-mahle/our-locations/",
+          "title": "Source du tableau GSL — MAHLE Electric Drives Bosnia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://fipa.vijeceministara.gov.ba/en/portal/post/a-new-facility-of-a-german-company-worth-20-million-eur-was-opened-in-laktasi-638495520680000000",
+          "title": "Source du tableau GSL — MAHLE Electric Drives Bosnia",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "5bbcd17b-4357-5841-b9ed-97c71fb4a95f",
+      "rowNumber": 64,
+      "sourceId": "57",
+      "name": "Iskra — site de Laktaši",
+      "country": "BA",
+      "site": "Laktaši",
+      "sourceFamily": "Composants électriques",
+      "sourceLevel": "B",
+      "description": "Composants électriques ; portefeuille local à préciser",
+      "group": "Iskra",
+      "productionEvidence": "Laktaši figure parmi les usines de production dans un catalogue officiel ; visite de production en février 2026 également annoncée.",
+      "roboticsApplication": "Fournisseur potentiel d'appareillage pour robotique ; aucune gamme robotique locale établie.",
+      "pointsToConfirm": "Raison sociale locale et références réellement produites à Laktaši.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://b2bshop.iskra.eu/en_US/news/POWER%20CONNECT%202026",
+          "title": "Source du tableau GSL — Iskra — site de Laktaši",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.iskra.eu/f/docs/13381/httpswww.iskra.eufdocs13381Capacitors_for_Automotive_Applications_Ver_2_web_2..pdf",
+          "title": "Source du tableau GSL — Iskra — site de Laktaši",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "17b24bf2-f8b3-5e49-ab37-6b3aa24043c7",
+      "rowNumber": 65,
+      "sourceId": "58",
+      "name": "TT Kabeli / TT Cables",
+      "country": "BA",
+      "site": "Široki Brijeg, Knešpolje",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Câbles basse tension jusqu'à 1 kV",
+      "group": "TTC",
+      "productionEvidence": "Usine bosnienne et production de câbles documentées.",
+      "roboticsApplication": "Câblage possible de cellules fixes ; aptitude aux mouvements de robots non démontrée.",
+      "pointsToConfirm": "Usage fixe versus câble dynamique, référence et essais.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.ttcables.com/about-us/",
+          "title": "Source du tableau GSL — TT Kabeli / TT Cables",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.ttcables.com/quality-beyond-borders-iso-certificates/",
+          "title": "Source du tableau GSL — TT Kabeli / TT Cables",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "d59990f5-6cfc-528a-bfba-a7b88d1cfdd4",
+      "rowNumber": 66,
+      "sourceId": "59",
+      "name": "Informbusiness",
+      "country": "MD",
+      "site": "Chișinău / Moldavie",
+      "sourceFamily": "Électronique de puissance",
+      "sourceLevel": "B",
+      "description": "Onduleurs, convertisseurs DC/DC, BMS et chargeurs",
+      "group": "Informbusiness",
+      "productionEvidence": "Départements R&D, installations de production et essais propres décrits.",
+      "roboticsApplication": "Technologies potentiellement pertinentes pour robots mobiles ; offre publique orientée transport électrique.",
+      "pointsToConfirm": "Puissance et dimensions adaptées, projet robotique accepté et référence disponible.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://informbusiness.md/about",
+          "title": "Source du tableau GSL — Informbusiness",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.informbusiness.md/catalog",
+          "title": "Source du tableau GSL — Informbusiness",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "8c5203df-e268-5e6a-98d3-5c0b99355576",
+      "rowNumber": 67,
+      "sourceId": "60",
+      "name": "GG Cables & Wires EE",
+      "country": "MD",
+      "site": "Bălți",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Faisceaux batterie, puissance, masse et haute tension",
+      "group": "GG Group / Gebauer & Griller",
+      "productionEvidence": "Deux installations de câbles et faisceaux identifiées à Bălți.",
+      "roboticsApplication": "Câblage transposable à qualifier ; production locale principalement automobile.",
+      "pointsToConfirm": "Offre robotique, contraintes dynamiques et vente hors programmes automobiles.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.gg-group.com/en/company/locations/emea",
+          "title": "Source du tableau GSL — GG Cables & Wires EE",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.gg-group.com/en/company/history/",
+          "title": "Source du tableau GSL — GG Cables & Wires EE",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "faf57480-7875-53a1-8851-12b60a9917dc",
+      "rowNumber": 68,
+      "sourceId": "61",
+      "name": "SEBN MD",
+      "country": "MD",
+      "site": "Orhei / Strășeni",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Faisceaux électriques et systèmes électroniques automobiles",
+      "group": "Sumitomo Electric Bordnetze",
+      "productionEvidence": "Usines locales et fabrication de faisceaux documentées.",
+      "roboticsApplication": "Capacités de câblage potentielles ; référence robotique non démontrée.",
+      "pointsToConfirm": "Acceptation de projets robotiques et disponibilité hors contrats automobiles.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.sebn.com/en/locations/sebn-md/",
+          "title": "Source du tableau GSL — SEBN MD",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.sebn.com/ro/sebn-md/",
+          "title": "Source du tableau GSL — SEBN MD",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "9b1a6e37-1e79-53b7-8aeb-f0e496ee3be5",
+      "rowNumber": 69,
+      "sourceId": "62",
+      "name": "Edison Tech Solutions",
+      "country": "GE",
+      "site": "Tbilissi",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Électronique embarquée, PCB, prototypes et dispositifs sur mesure",
+      "group": "Edison Tech Solutions",
+      "productionEvidence": "Le site décrit fabrication et prototypage internes ainsi qu'un dispositif fabriqué en Géorgie.",
+      "roboticsApplication": "Partenaire potentiel de prototypes électroniques robotiques ; fabrication en série non établie.",
+      "pointsToConfirm": "Fabrication interne versus sous-traitance, séries, essais et exemple robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://edison.ge/en",
+          "title": "Source du tableau GSL — Edison Tech Solutions",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://ge.linkedin.com/company/edisongeorgia",
+          "title": "Source du tableau GSL — Edison Tech Solutions",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "ff26655e-4b4c-5ef8-aecc-788bbc6f1c64",
+      "rowNumber": 70,
+      "sourceId": "63",
+      "name": "AzRy — Custom Electronics",
+      "country": "GE",
+      "site": "Géorgie ; atelier à préciser",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "PCB, firmware et équipements électroniques sur mesure",
+      "group": "AzRy",
+      "productionEvidence": "Le site présente conception et fabrication matérielle internes ouvertes aux clients externes.",
+      "roboticsApplication": "Fabrication électronique potentielle pour robots ; application robotique non démontrée.",
+      "pointsToConfirm": "Localisation physique de l'atelier et sous-traitants, volume, test et référence robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.azry.com/solutions",
+          "title": "Source du tableau GSL — AzRy — Custom Electronics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.azry.com/",
+          "title": "Source du tableau GSL — AzRy — Custom Electronics",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "2cec7d8c-7141-5ccd-ac18-94ae4dd6a425",
+      "rowNumber": 71,
+      "sourceId": "64",
+      "name": "JSC Sakcable",
+      "country": "GE",
+      "site": "Zestafoni",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Câbles électriques cuivre et aluminium, câbles souples",
+      "group": "Sakcable",
+      "productionEvidence": "Usine de Zestafoni et fabrication de câbles documentées.",
+      "roboticsApplication": "Câblage électrique potentiel ; câble de torsion robotique non démontré.",
+      "pointsToConfirm": "Choisir une référence adaptée, usage fixe/dynamique et essais.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.sakcable.ge/en/",
+          "title": "Source du tableau GSL — JSC Sakcable",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.sakcable.ge/wp-content/uploads/2022/08/catalog-eng.pdf",
+          "title": "Source du tableau GSL — JSC Sakcable",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "ad831f69-8191-5bc1-88cf-967fe06f01b0",
+      "rowNumber": 72,
+      "sourceId": "65",
+      "name": "PSZ Albania",
+      "country": "AL",
+      "site": "Vorë, Tirana",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Assemblages câblés ; gammes locales à préciser",
+      "group": "PSZ",
+      "productionEvidence": "Surface de production et installation albanaise documentées sur le site officiel.",
+      "roboticsApplication": "Capacité potentielle de câblage ; clients locaux principalement chauffage, climatisation et médical.",
+      "pointsToConfirm": "Projet robotique accepté, gamme locale et contraintes de mouvement.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://psz-electronic.com/en/standorte",
+          "title": "Source du tableau GSL — PSZ Albania",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://psz-electronic.com/de/kontakt",
+          "title": "Source du tableau GSL — PSZ Albania",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "35488af8-1c5e-5861-8498-093860128edd",
+      "rowNumber": 73,
+      "sourceId": "66",
+      "name": "Forschner Albania",
+      "country": "AL",
+      "site": "Tirana / Durrës",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Systèmes de câbles et faisceaux",
+      "group": "Forschner",
+      "productionEvidence": "Production de systèmes câblés dans les sites albanais documentée.",
+      "roboticsApplication": "Câblage sur mesure potentiel ; programme robotique local non établi.",
+      "pointsToConfirm": "Site exact, capacité de fournir robotique et qualification dynamique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.forschner.com/downloadfile/610a64993c4af7ac33a054c8bcbf7eff9/iso_9001_-_forschner_group_en_-_2024-03-25.pdf",
+          "title": "Source du tableau GSL — Forschner Albania",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.forschner.com/downloadfile/67bd9ad69d854af95d7a98b653aa7db39/62978ms_en08.pdf",
+          "title": "Source du tableau GSL — Forschner Albania",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "a876a284-aaad-584d-b495-0ff5d1be2b37",
+      "rowNumber": 74,
+      "sourceId": "67",
+      "name": "SEWS-CABIND Albania",
+      "country": "AL",
+      "site": "Kamëz, Tirana",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Fabrication et vente de faisceaux électriques",
+      "group": "Sumitomo Wiring Systems",
+      "productionEvidence": "Fiche officielle identifiant fabrication et vente de faisceaux en Albanie.",
+      "roboticsApplication": "Composants potentiels ; usage robotique non établi.",
+      "pointsToConfirm": "Disponibilité de références robotiques hors programmes automobiles.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.sws.co.jp/en/corporation/outline/office/detail/sews-cabind_albania_shpk_albania_sews-ca.html",
+          "title": "Source du tableau GSL — SEWS-CABIND Albania",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.sws.co.jp/en/corporation/outline/office/group.html",
+          "title": "Source du tableau GSL — SEWS-CABIND Albania",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "34396a26-9e35-5ea3-b59a-26656b3d6870",
+      "rowNumber": 75,
+      "sourceId": "68",
+      "name": "Egrobots",
+      "country": "EG",
+      "site": "Égypte ; usine à confirmer",
+      "sourceFamily": "Robots mobiles",
+      "sourceLevel": "C",
+      "description": "Plateforme mobile Bennu et robotique agricole",
+      "group": "Egrobots",
+      "productionEvidence": "Développement matériel interne revendiqué. Adresse d'usine et cadence non établies dans les sources retenues.",
+      "roboticsApplication": "Plateforme robotique propre documentée.",
+      "pointsToConfirm": "Lieu réel de fabrication, maturité, références livrées et disponibilité commerciale.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.egrobots.com/en",
+          "title": "Source du tableau GSL — Egrobots",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.egrobots.com/en/bennu",
+          "title": "Source du tableau GSL — Egrobots",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": false
+    },
+    {
+      "id": "3422a64b-2593-54d0-bd00-bff03c2d3c80",
+      "rowNumber": 76,
+      "sourceId": "69",
+      "name": "Elsewedy Special Cables",
+      "country": "EG",
+      "site": "10th of Ramadan City, Sharkia",
+      "sourceFamily": "Câbles et connectique",
+      "sourceLevel": "B",
+      "description": "Câbles de commande, instrumentation, données et fibres optiques",
+      "group": "Elsewedy Electric",
+      "productionEvidence": "Installation égyptienne de fabrication de câbles spéciaux explicitement identifiée.",
+      "roboticsApplication": "Câblage industriel potentiel pour robots/cellules ; contraintes robotiques dynamiques non établies.",
+      "pointsToConfirm": "Références flexibles et qualification de torsion ; ne pas confondre câble fixe et câble robotique.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.elsewedyelectric.com/facility?id=3",
+          "title": "Source du tableau GSL — Elsewedy Special Cables",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        },
+        {
+          "url": "https://www.elsewedyelectric.com/our-journey",
+          "title": "Source du tableau GSL — Elsewedy Special Cables",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    },
+    {
+      "id": "dfd3ef1f-c13b-5f46-946f-499de3c4c85d",
+      "rowNumber": 77,
+      "sourceId": "70",
+      "name": "AOI — Electronics Factory",
+      "country": "EG",
+      "site": "Égypte ; adresse d'atelier à confirmer",
+      "sourceFamily": "Cartes et électronique",
+      "sourceLevel": "B",
+      "description": "Assemblage de cartes électroniques, caméras et équipements électroniques",
+      "group": "Arab Organization for Industrialization",
+      "productionEvidence": "Usine officielle avec lignes d'assemblage de composants traversants et CMS décrites.",
+      "roboticsApplication": "Capacités électroniques potentielles ; aucune caméra de vision robotique locale démontrée.",
+      "pointsToConfirm": "Accès commercial au projet, gamme civile, cadence et caractéristiques de la référence.",
+      "checkedAt": "2026-10-13",
+      "dateBasis": "Date du tableau source",
+      "sources": [
+        {
+          "url": "https://www.aoi.org.eg/units/%D9%85%D8%B5%D9%86%D8%B9_%D8%A7%D9%84%D8%A7%D9%84%D9%83%D8%AA%D8%B1%D9%88%D9%86%D9%8A%D8%A7%D8%AA",
+          "title": "Source du tableau GSL — AOI — Electronics Factory",
+          "supports": "Éléments et réserves reproduits du tableau ; source à examiner avant publication."
+        }
+      ],
+      "componentScope": true
+    }
+  ]
+}
