@@ -1,5 +1,6 @@
 'use client';
 import HomeCatalogue from './home-catalogue';
+import HeroVideo from './hero-video';
 import {roboticsFamilies} from '@/lib/robotics';
 import {ArrowRight,ArrowUpRight,Factory,Package,Layers,ClipboardList} from 'lucide-react';
 import {ProductTile,SupplierTile,type Actions} from './discovery';
@@ -11,6 +12,7 @@ export default function IndustrialHome({actions,live=false}:{actions:Actions;liv
  const {l,language}=useLanguage();
  return <main className="industrial-home gsl-home">
  <section className="hx-hero" aria-labelledby="hx-title">
+  <HeroVideo/>
   <div className="hx-content container">
    <div className="hx-intro">
     <p className="hx-eyebrow">{l('B2B sourcing · Robotics','Sourcing B2B · Robotique')}</p>
