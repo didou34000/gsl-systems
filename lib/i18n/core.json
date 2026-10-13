@@ -868,5 +868,35 @@
     "اختر صورة صالحة بتنسيق JPEG أو PNG أو WebP.",
     "मान्य JPEG, PNG या WebP चित्र चुनें।",
     "请选择有效的 JPEG、PNG 或 WebP 图片。"
+  ],
+  "Legal notice": [
+    "Aviso legal",
+    "Aviso legal",
+    "Impressum",
+    "Note legali",
+    "Yasal bildirim",
+    "الإشعار القانوني",
+    "कानूनी सूचना",
+    "法律声明"
+  ],
+  "Terms of use": [
+    "Condiciones de uso",
+    "Termos de utilização",
+    "Nutzungsbedingungen",
+    "Condizioni d'uso",
+    "Kullanım koşulları",
+    "شروط الاستخدام",
+    "उपयोग की शर्तें",
+    "使用条款"
+  ],
+  "Cookies": [
+    "Cookies",
+    "Cookies",
+    "Cookies",
+    "Cookie",
+    "Çerezler",
+    "ملفات تعريف الارتباط",
+    "कुकीज़",
+    "Cookie"
   ]
 }

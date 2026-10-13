@@ -43,3 +43,9 @@
 .security-shell{--security-ink:#0F1B26;--security-muted:#5A6571;--security-line:#D9DEE3;background:#F7F8FA}
 .security-shell .security-help :is(h2,h3,summary,button){color:var(--ui-ink)}
 .security-shell :is(.security-link,.security-text-button){color:var(--ui-rust)}
+/* Legal pages */
+.legal-page .prose section{margin-top:28px}.legal-page .prose h2{font-size:21px;letter-spacing:-.4px;margin-bottom:10px}.legal-page .prose p,.legal-page .prose li,.legal-page .prose dd{line-height:1.65;color:#2B333C}.legal-page .prose ul{padding-left:20px;display:grid;gap:6px}
+.legal-list{display:grid;grid-template-columns:minmax(150px,220px) 1fr;gap:8px 18px;margin:0}.legal-list dt{color:#5A6571}.legal-list dd{margin:0}
+.legal-missing{color:#8A4B12;font-style:normal;background:#FBF3E6;padding:1px 6px;border-radius:4px}
+.legal-updated{margin-top:32px;color:#5A6571;font-size:13px}.legal-nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;padding-top:14px;border-top:1px solid #D9DEE3}.legal-nav a{color:#1F4E79;font-weight:550}
+@media(max-width:640px){.legal-list{grid-template-columns:1fr;gap:2px}.legal-list dd{margin-bottom:10px}}
