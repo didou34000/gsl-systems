@@ -708,5 +708,115 @@
     "مثال: ألومنيوم 7075",
     "उदा. 7075 एल्युमिनियम",
     "例如：7075 铝"
+  ],
+  "Made in": [
+    "Fabricación",
+    "Fabricação",
+    "Herstellung",
+    "Produzione",
+    "Üretim",
+    "التصنيع",
+    "निर्माण",
+    "产地"
+  ],
+  "Price": [
+    "Precio",
+    "Preço",
+    "Preis",
+    "Prezzo",
+    "Fiyat",
+    "السعر",
+    "मूल्य",
+    "价格"
+  ],
+  "View datasheet": [
+    "Ver la ficha",
+    "Ver a ficha",
+    "Datenblatt ansehen",
+    "Vedi la scheda",
+    "Teknik sayfayı gör",
+    "عرض الورقة الفنية",
+    "डेटाशीट देखें",
+    "查看技术参数"
+  ],
+  "published offer": [
+    "oferta publicada",
+    "oferta publicada",
+    "veröffentlichtes Angebot",
+    "offerta pubblicata",
+    "yayınlanmış teklif",
+    "عرض منشور",
+    "प्रकाशित ऑफ़र",
+    "项已发布报价"
+  ],
+  "Published offers": [
+    "Ofertas publicadas",
+    "Ofertas publicadas",
+    "Veröffentlichte Angebote",
+    "Offerte pubblicate",
+    "Yayınlanan teklifler",
+    "العروض المنشورة",
+    "प्रकाशित ऑफ़र",
+    "已发布报价"
+  ],
+  "None yet": [
+    "Ninguna por ahora",
+    "Nenhuma por enquanto",
+    "Noch keine",
+    "Nessuna per ora",
+    "Henüz yok",
+    "لا شيء حتى الآن",
+    "अभी कोई नहीं",
+    "暂无"
+  ],
+  "Family": [
+    "Familia",
+    "Família",
+    "Familie",
+    "Famiglia",
+    "Aile",
+    "العائلة",
+    "श्रेणी",
+    "类别"
+  ],
+  "Key specifications": [
+    "Características clave",
+    "Características principais",
+    "Wichtigste Kennwerte",
+    "Caratteristiche principali",
+    "Temel özellikler",
+    "المواصفات الرئيسية",
+    "मुख्य विनिर्देश",
+    "关键参数"
+  ],
+  "Values as published by the manufacturer. Confirm the exact configuration, interfaces and operating conditions before selecting.": [
+    "Valores publicados por el fabricante. Confirme la configuración exacta, las interfaces y las condiciones de uso antes de elegir.",
+    "Valores publicados pelo fabricante. Confirme a configuração exata, as interfaces e as condições de uso antes de escolher.",
+    "Vom Hersteller veröffentlichte Werte. Bestätigen Sie vor der Auswahl die genaue Konfiguration, die Schnittstellen und die Einsatzbedingungen.",
+    "Valori pubblicati dal produttore. Confermare configurazione esatta, interfacce e condizioni d’uso prima della scelta.",
+    "Üretici tarafından yayınlanan değerler. Seçmeden önce tam yapılandırmayı, arayüzleri ve çalışma koşullarını doğrulayın.",
+    "قيم منشورة من الشركة المصنّعة. أكّد التكوين الدقيق والواجهات وظروف التشغيل قبل الاختيار.",
+    "निर्माता द्वारा प्रकाशित मान। चुनने से पहले सटीक कॉन्फ़िगरेशन, इंटरफ़ेस और संचालन की स्थितियाँ पुष्टि करें।",
+    "数值由制造商公布。选择前请确认具体配置、接口和工况。"
+  ],
+  "Origin and evidence": [
+    "Origen y pruebas",
+    "Origem e evidências",
+    "Herkunft und Nachweise",
+    "Origine e prove",
+    "Menşe ve kanıtlar",
+    "المنشأ والأدلة",
+    "उत्पत्ति और प्रमाण",
+    "来源与证据"
+  ],
+  "Similar components": [
+    "Componentes similares",
+    "Componentes semelhantes",
+    "Ähnliche Komponenten",
+    "Componenti simili",
+    "Benzer bileşenler",
+    "مكوّنات مشابهة",
+    "समान घटक",
+    "类似零部件"
   ]
 }

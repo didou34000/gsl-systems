@@ -31,6 +31,7 @@ import './workspace.css';
 import './admin-console.css';
 import './onboarding.css';
 import './robotics.css';
+import './industrial-sheets.css';
 export async function generateMetadata():Promise<Metadata>{
  const language=resolveLanguage((await cookies()).get('gsl-language')?.value),h=await headers(),path=h.get('x-gsl-path')||'/';
  const titles:Record<string,[string,string]>={'/':['Composants pour robots humanoïdes','Humanoid robot components'],'/catalogue':['Composants robotiques — actionneurs, réducteurs, capteurs','Robotics components — actuators, reducers, sensors'],'/fabricants':['Fabricants de composants robotiques hors UE','Non-EU robotics component manufacturers'],'/secteurs':['Familles de composants robotiques','Robotics component families']};

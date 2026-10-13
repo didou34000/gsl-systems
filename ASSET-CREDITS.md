@@ -25,3 +25,7 @@ Les images Pexels relèvent de https://www.pexels.com/license/. Tous les médias
 ## Refonte robotique humanoïde — 2026-10-13
 - Le film « Industrial machine cutting » (tour CNC) et son poster sont retirés de l’accueil et du dépôt : ils présentaient le site comme généraliste industriel.
 - Aucun film ni photo de robotique n’a pu être téléchargé depuis l’environnement de travail (sites de stock inaccessibles). L’accueil n’utilise donc aucun média : pas d’image inventée ni d’animation maison. Un film réel de robotique pourra être ajouté ici avec sa source et sa licence.
+
+## Drapeaux — 2026-10-13
+- Drapeaux AL, BA, EG, MD, MK ajoutés depuis flag-icons 7.2.3 (MIT, Panayiotis Lipiridis, voir `public/flags/LICENSE.txt`), comme les drapeaux existants.
+- RS : drapeau national tricolore (sans les armoiries du drapeau d’État), redessiné en trois bandes pour éviter un fichier de 180 Ko affiché en 24 px.

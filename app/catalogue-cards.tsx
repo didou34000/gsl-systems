@@ -60,33 +60,39 @@ export function CompanyMark({supplier}: {supplier: CardSupplier}) {
     : <span className="catalogue-company-monogram" aria-hidden>{supplier.display_name.trim().split(/\s+/).slice(0, 2).map(word => word[0]).join('').toUpperCase() || <Factory size={26}/>}</span>;
 }
 
+/** Key figures shown on cards and sheets: robotics metrics first, then declared basics. */
+export function keySpecs(p: CardProduct, l: (en: string, fr: string) => string, limit = 4) {
+  const research = productResearch(p.specifications);
+  const rows = technicalRows(p.category, p.specifications).map(m => ({key: m.key, label: l(m.en, m.fr), value: `${m.value} ${m.unit}`}));
+  const material = research ? research.materials.filter(Boolean).join(', ') : p.specifications.materials;
+  const process = p.specifications.processes || (research ? Object.entries(research.specifications).find(([key]) => /proc[eé]d[eé]|process|fabrication/i.test(key))?.[1] : null);
+  if (rows.length < 2 && material) rows.push({key: 'material', label: l('Material', 'Matière'), value: material});
+  if (rows.length < 2 && process) rows.push({key: 'process', label: l('Process', 'Procédé'), value: process});
+  return rows.slice(0, limit);
+}
+
 export function ProductCard({product: p, supplier}: {product: CardProduct; supplier?: CardSupplier}) {
   const {l, language} = useLanguage();
+  const categoryLabel = useCategoryLabel();
   const research = productResearch(p.specifications);
   const country = p.specifications.manufacturing_country;
   const price = research ? publishedPrice(research.commercial, language) : null;
   const minimum = research ? researchValue(research.commercial.moq) : p.specifications.minimum_quantity;
-  const material = research ? research.materials.filter(Boolean).join(', ') : p.specifications.materials;
-  const technical = technicalRows(p.category, p.specifications).slice(0, 4);
-  const process = p.specifications.processes || (research ? Object.entries(research.specifications).find(([key]) => /proc[eé]d[eé]|process|fabrication/i.test(key))?.[1] : null);
-  return <article className="catalogue-product-card">
-    <div className="catalogue-card-media"><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id} aria-label={p.name}><ProductVisual product={p}/></Link><SaveProduct id={p.product_id} compact/></div>
-    <div className="catalogue-card-body">
-      {supplier && <Link className="catalogue-byline" href={'/fabricants/' + supplier.organization_id}><Factory size={14} aria-hidden/>{supplier.display_name}</Link>}
-      <h3><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id}>{p.name}</Link></h3>
-      {research && <ResearchLabel/>}
-      {p.description && <p className="catalogue-card-description">{p.description}</p>}
-      <dl className="catalogue-card-facts">
-        {technical.map(m=><div key={m.key}><dt>{l(m.en,m.fr)}</dt><dd>{m.value} {m.unit}</dd></div>)}
-        {technical.length < 2 && <div><dt>{l('Material', 'Matière')}</dt><dd>{material || l('Not disclosed', 'Non communiqué')}</dd></div>}
-        {technical.length < 2 && (!research || Boolean(process)) && <div><dt>{l('Process', 'Procédé')}</dt><dd>{process || l('Not disclosed', 'Non communiqué')}</dd></div>}
-      </dl>
-      <div className="catalogue-card-meta"><span>{country ? <><CountryFlag code={country}/>{countryName(country, language)}</> : l('Manufacturing country to confirm', 'Pays de fabrication à confirmer')}</span><span>{minimum ? `${l('Min.', 'Min.')} ${minimum}${!research && p.specifications.unit ? ' ' + p.specifications.unit : ''}` : l('MOQ not disclosed', 'MOQ non communiqué')}</span></div>
-      {research && <div className="catalogue-card-research-meta"><span>{price || l('Price not disclosed', 'Prix non communiqué')}</span><span><BookOpen size={12} aria-hidden/>{research.sources.length} {l('sources', 'sources')}</span></div>}
-      {research && researchValue(research.commercial.availability) && <p className="catalogue-card-availability">{researchValue(research.commercial.availability)}</p>}
-      {!research && p.specifications.verification === 'unverified' && <span className="catalogue-status">{l('Unverified product', 'Produit non vérifié')}</span>}
-      <div className="catalogue-card-action"><CompareProduct id={p.product_id}/><Link onClick={()=>trackJourney('product_opened',{family:p.category})} href={'/produits/' + p.product_id}>{l('View product', 'Voir le produit')}<ArrowRight size={17} aria-hidden/></Link></div>
-    </div>
+  const specs = keySpecs(p, l);
+  const open = () => trackJourney('product_opened', {family: p.category});
+  return <article className="ind-card">
+    <div className="ind-card-top"><span className="ind-card-family"><CategoryIcon category={p.category} size={15}/>{categoryLabel(p.category)}</span><SaveProduct id={p.product_id} compact/></div>
+    <h3><Link onClick={open} href={'/produits/' + p.product_id}>{p.name}</Link></h3>
+    {supplier && <Link className="ind-card-maker" href={'/fabricants/' + supplier.organization_id}><Factory size={14} aria-hidden/>{supplier.display_name}</Link>}
+    {research && <ResearchLabel/>}
+    {specs.length > 0 ? <dl className="ind-specs">{specs.map(s => <div key={s.key}><dt>{s.label}</dt><dd>{s.value}</dd></div>)}</dl> : p.description && <p className="ind-card-description">{p.description}</p>}
+    <dl className="ind-card-facts">
+      <div><dt>{l('Made in', 'Fabrication')}</dt><dd>{country ? <><CountryFlag code={country}/>{countryName(country, language)}</> : l('To confirm', 'À confirmer')}</dd></div>
+      <div><dt>{l('Minimum order', 'Qté minimale')}</dt><dd>{minimum ? `${minimum}${!research && p.specifications.unit ? ' ' + p.specifications.unit : ''}` : l('Not disclosed', 'Non communiquée')}</dd></div>
+      {research && <div><dt>{l('Price', 'Prix')}</dt><dd>{price || l('Not disclosed', 'Non communiqué')}</dd></div>}
+    </dl>
+    {!research && p.specifications.verification === 'unverified' && <span className="catalogue-status">{l('Unverified product', 'Produit non vérifié')}</span>}
+    <div className="ind-card-actions"><CompareProduct id={p.product_id}/><Link onClick={open} href={'/produits/' + p.product_id}>{l('View datasheet', 'Voir la fiche')}<ArrowRight size={16} aria-hidden/></Link></div>
   </article>;
 }
 
@@ -95,14 +101,13 @@ export function SupplierCard({supplier: s, products = []}: {supplier: CardSuppli
   const categoryLabel = useCategoryLabel();
   const research = companyResearch(s.public_details);
   const categories = [...new Set([...(research?.categories || []), ...products.map(p => p.category)].filter(Boolean))];
-  return <article className="catalogue-supplier-card">
-    <div className="catalogue-company-heading"><CompanyMark supplier={s}/><div><p className="catalogue-byline">{l('Manufacturer', 'Fabricant')}</p><h3><Link href={'/fabricants/' + s.organization_id}>{s.display_name}</Link></h3><p className="catalogue-location"><CountryFlag code={s.country_code}/>{[s.city, countryName(s.country_code, language)].filter(Boolean).join(' · ')}</p></div></div>
+  return <article className="ind-card ind-supplier-card">
+    <div className="ind-company-head"><CompanyMark supplier={s}/><div><h3><Link href={'/fabricants/' + s.organization_id}>{s.display_name}</Link></h3><p className="ind-location"><CountryFlag code={s.country_code}/>{[s.city, countryName(s.country_code, language)].filter(Boolean).join(' · ')}</p></div></div>
     {research && <ResearchLabel/>}
-    <p className="catalogue-card-description">{s.description}</p>
-    {categories.length > 0 && <div className="catalogue-tags">{categories.slice(0, 4).map(category => <span key={category}><CategoryIcon category={category} size={13}/>{categoryLabel(category)}</span>)}</div>}
-    {products.length > 0 && <div className="catalogue-company-products"><span>{l('Products & capabilities', 'Produits et capacités')}</span>{products.slice(0, 3).map(p => <Link key={p.product_id} href={'/produits/' + p.product_id}><Package size={16} aria-hidden/>{p.name}<ArrowUpRight size={14} aria-hidden/></Link>)}</div>}
-    {research && <p className="catalogue-card-evidence"><BookOpen size={14} aria-hidden/>{l('Activities, documents and trade framework sourced by GSL.', 'Activités, documents et cadre commercial sourcés par GSL.')}</p>}
+    {s.description && <p className="ind-card-description">{s.description}</p>}
+    {categories.length > 0 && <ul className="ind-tags">{categories.slice(0, 4).map(category => <li key={category}><CategoryIcon category={category} size={13}/>{categoryLabel(category)}</li>)}</ul>}
+    {products.length > 0 && <div className="ind-company-products"><p>{products.length} {products.length > 1 ? l('published offers', 'offres publiées') : l('published offer', 'offre publiée')}</p><ul>{products.slice(0, 3).map(p => <li key={p.product_id}><Link href={'/produits/' + p.product_id}>{p.name}<ArrowUpRight size={14} aria-hidden/></Link></li>)}</ul></div>}
     {!research && s.public_details?.verification === 'unverified' && <span className="catalogue-status">{l('Unverified company', 'Entreprise non vérifiée')}</span>}
-    <div className="catalogue-company-actions"><Link className="catalogue-primary" href={'/fabricants/' + s.organization_id}>{l('View manufacturer', 'Voir le fabricant')}<ArrowRight size={16} aria-hidden/></Link><Link className="catalogue-secondary" href={gslContactHref(s.organization_id)}>{research ? l('Contact GSL', 'Contacter GSL') : l('Contact', 'Contacter')}</Link></div>
+    <div className="ind-card-actions"><Link className="ind-button" href={'/fabricants/' + s.organization_id}>{l('View manufacturer', 'Voir le fabricant')}<ArrowRight size={16} aria-hidden/></Link><Link className="ind-button-secondary" href={gslContactHref(s.organization_id)}>{research ? l('Contact GSL', 'Contacter GSL') : l('Contact', 'Contacter')}</Link></div>
   </article>;
 }
