@@ -6,9 +6,11 @@ const draft=z.object({action:z.literal('draft'),id:z.string().uuid(),revision:z.
 const favorite=z.object({action:z.literal('favorite'),productId:z.string().uuid(),selected:z.boolean()}).strict();
 export async function readWorkspace(){try{
  const db=await authClient();const {data:{user}}=await db.auth.getUser();if(!user?.email_confirmed_at)return json({error:'LOGIN_REQUIRED'},401);
- const [drafts,favorites,profile]=await Promise.all([db.from('workspace_drafts').select('id,kind,title,payload,revision,created_at,updated_at').eq('owner_id',user.id).order('updated_at',{ascending:false}).limit(100),db.from('saved_selections').select('product_id').eq('owner_id',user.id).limit(100),db.from('profiles').select('display_name').eq('user_id',user.id).maybeSingle()]);
+ const [drafts,favorites,profile,organizations]=await Promise.all([db.from('workspace_drafts').select('id,kind,title,payload,revision,created_at,updated_at').eq('owner_id',user.id).order('updated_at',{ascending:false}).limit(100),db.from('saved_selections').select('product_id').eq('owner_id',user.id).limit(100),db.from('profiles').select('display_name').eq('user_id',user.id).maybeSingle(),db.from('organizations').select('legal_name,trading_name,buyer,supplier').order('created_at').limit(20)]);
  if(drafts.error||favorites.error)return json({error:'WORKSPACE_UNAVAILABLE'},503);
- return json({user:{name:profile.data?.display_name||user.user_metadata?.display_name||'',email:user.email},drafts:drafts.data,favorites:favorites.data.map(f=>f.product_id)});
+ // The header shows the company, not the person: the first supplier organization, else the first buyer one.
+ const orgs=organizations.error?[]:organizations.data||[];const company=orgs.find(o=>o.supplier)||orgs[0];
+ return json({user:{name:profile.data?.display_name||user.user_metadata?.display_name||'',email:user.email},company:company?{name:company.trading_name?.trim()||company.legal_name,buyer:orgs.some(o=>o.buyer),supplier:orgs.some(o=>o.supplier)}:null,drafts:drafts.data,favorites:favorites.data.map(f=>f.product_id)});
 }catch{return json({error:'WORKSPACE_UNAVAILABLE'},503)}}
 export async function writeWorkspace(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);

@@ -29,3 +29,6 @@
 .header-brand{display:flex;align-items:center;gap:16px;min-width:0;margin-inline-end:auto}
 .header-tagline{padding-inline-start:16px;border-inline-start:1px solid var(--border);font-size:13px;line-height:1.3;color:#5A6571;max-width:13em}
 @media(max-width:1180px){.header-tagline{display:none}}
+.header-nav .nav-soon,.mobile-navigation .nav-soon{display:inline-flex;align-items:center;gap:8px;color:#8A949E;cursor:default}.nav-soon small{font-size:11px;font-weight:600;line-height:1;padding:4px 6px;border-radius:4px;background:#F3F5F7;color:#5A6571}
+.site-footer .footer-soon{color:inherit;opacity:.55;cursor:default}
+.in-development{display:grid;justify-items:start;gap:16px;max-width:640px;padding-block:96px}.in-development svg{color:#5A6571}.in-development p{color:#5A6571;font-size:16px;line-height:1.6}

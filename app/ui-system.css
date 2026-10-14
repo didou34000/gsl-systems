@@ -49,3 +49,6 @@
 .legal-missing{color:#8A4B12;font-style:normal;background:#FBF3E6;padding:1px 6px;border-radius:4px}
 .legal-updated{margin-top:32px;color:#5A6571;font-size:13px}.legal-nav{display:flex;flex-wrap:wrap;gap:8px 20px;margin-top:14px;padding-top:14px;border-top:1px solid #D9DEE3}.legal-nav a{color:#1F4E79;font-weight:550}
 @media(max-width:640px){.legal-list{grid-template-columns:1fr;gap:2px}.legal-list dd{margin-bottom:10px}}
+.site-header .account-company span{max-width:200px;overflow:hidden;text-overflow:ellipsis}.site-header .account-company svg{color:var(--ui-accent,#1F4E79);flex-shrink:0}
+@media(max-width:760px){.site-header .account-company span{max-width:120px}}
+.ws-avatar svg{display:block}

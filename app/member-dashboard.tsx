@@ -5,7 +5,7 @@ import {MessageSquare,FileText,Factory,ArrowRight,Package,Plus,ShieldCheck,Check
 import Link from '@/components/site-link';
 import {useLanguage} from './language';
 import AuthForm from './auth-form';
-type Data={administration?:boolean;user:{name:string;email:string};favorites:number;requests:{id:string;title:string;state:string;organization_id:string;updated_at?:string}[];conversations:{id:string;product_name:string;buyer_organization_id:string;supplier_organization_id:string;updated_at?:string}[];organizations:{id:string;legal_name:string;buyer?:boolean}[];application:{status:string;name:string;products:number;updated_at?:string}|null};
+type Data={administration?:boolean;user:{name:string;email:string};favorites:number;requests:{id:string;title:string;state:string;organization_id:string;updated_at?:string}[];conversations:{id:string;product_name:string;buyer_organization_id:string;supplier_organization_id:string;updated_at?:string}[];organizations:{id:string;legal_name:string;buyer?:boolean;supplier?:boolean}[];application:{status:string;name:string;products:number;updated_at?:string}|null};
 type Tone='neutral'|'info'|'success'|'warning'|'danger';
 const tones:Record<string,Tone>={draft:'neutral',sent:'info',closed:'success',cancelled:'neutral',outside_scope:'neutral',published_unverified:'info',submitted:'warning',in_review:'warning',changes_requested:'warning',reviewed:'success',rejected:'danger'};
 export default function MemberDashboard(){
@@ -21,19 +21,25 @@ export default function MemberDashboard(){
  const firstName=data.user.name.trim().split(/\s+/)[0]||'';
  const sentRequest=data.requests.some(r=>r.state!=='draft');
  const companyReady=!!data.application&&data.application.status!=='draft';
- const steps=[
+ // A manufacturer-only company does not buy through GSL: no purchase requests, a supplier checklist instead.
+ const supplierOnly=data.organizations.some(o=>o.supplier)&&!data.organizations.some(o=>o.buyer);
+ const steps=supplierOnly?[
+  {done:true,title:l('Create your account','Créer votre compte'),text:l('Your email address is confirmed.','Votre adresse email est confirmée.'),href:'',action:''},
+  {done:companyReady,title:l('Present your company','Présenter votre entreprise'),text:l('Buyers see your company profile before contacting you.','Les acheteurs voient votre fiche avant de vous contacter.'),href:'/espace-fournisseur',action:l('Open my company profile','Ouvrir mon profil entreprise')},
+  {done:(data.application?.products||0)>0,title:l('Add your products','Ajouter vos produits'),text:l('Each product gets its own page in the catalogue.','Chaque produit a sa propre fiche dans le catalogue.'),href:'/mes-produits',action:l('Manage my products','Gérer mes produits')},
+ ]:[
   {done:true,title:l('Create your account','Créer votre compte'),text:l('Your email address is confirmed.','Votre adresse email est confirmée.'),href:'',action:''},
   {done:data.organizations.some(o=>o.buyer),title:l('Add your company','Renseigner votre entreprise'),text:l('Manufacturers see your company name and country with your requests.','Les fabricants voient le nom et le pays de votre entreprise avec vos demandes.'),href:'/bienvenue',action:l('Add my company','Ajouter mon entreprise')},
   {done:data.favorites>0,title:l('Save products you are interested in','Enregistrer des produits qui vous intéressent'),text:l('Use the heart on a product to keep it in your selection.','Utilisez le cœur d’une fiche produit pour la garder dans votre sélection.'),href:'/catalogue',action:l('Browse products','Consulter les produits')},
   {done:sentRequest,title:l('Send your first request','Envoyer votre première demande'),text:l('Describe the part, the quantity and the destination. Manufacturers reply here.','Décrivez la pièce, la quantité et la destination. Les fabricants répondent ici.'),href:'/decrire-mon-besoin',action:l('Describe my requirement','Décrire mon besoin')},
   {done:companyReady,title:l('Present your company (manufacturers)','Présenter votre entreprise (fabricants)'),text:l('Only needed if you want buyers to find you.','Seulement si vous souhaitez être trouvé par des acheteurs.'),href:'/espace-fournisseur',action:l('Open my company profile','Ouvrir mon profil entreprise')},
  ];
- const done=steps.filter(s=>s.done).length;const next=steps.slice(0,-1).find(s=>!s.done);
+ const done=steps.filter(s=>s.done).length;const next=(supplierOnly?steps:steps.slice(0,-1)).find(s=>!s.done);
  const requestOrganization=(r:Data['requests'][number])=>data.organizations.find(o=>o.id===r.organization_id)?.id||data.organizations[0]?.id||'';
  return <main className="ws-page">
   <header className="ws-head">
-   <div><h1>{firstName?l('Hello','Bonjour')+', '+firstName:l('Hello','Bonjour')}</h1><p>{l('Here is where your purchasing and your company stand.','Voici où en sont vos achats et votre entreprise.')}</p></div>
-   <div className="ws-actions"><Link className="ui-btn ui-btn-secondary" href="/catalogue"><Search size={16} aria-hidden/>{l('Browse products','Consulter les produits')}</Link><Link className="ui-btn ui-btn-primary" href="/decrire-mon-besoin"><Plus size={16} aria-hidden/>{l('New request','Nouvelle demande')}</Link></div>
+   <div><h1>{firstName?l('Hello','Bonjour')+', '+firstName:l('Hello','Bonjour')}</h1><p>{supplierOnly?l('Here is where your company and your products stand.','Voici où en sont votre entreprise et vos produits.'):l('Here is where your purchasing and your company stand.','Voici où en sont vos achats et votre entreprise.')}</p></div>
+   <div className="ws-actions"><Link className="ui-btn ui-btn-secondary" href="/catalogue"><Search size={16} aria-hidden/>{l('Browse products','Consulter les produits')}</Link>{!supplierOnly&&<Link className="ui-btn ui-btn-primary" href="/decrire-mon-besoin"><Plus size={16} aria-hidden/>{l('New request','Nouvelle demande')}</Link>}</div>
   </header>
   {data.administration&&<Link className="ws-admin" href="/administration"><ShieldCheck size={18} aria-hidden/><span><strong>{l('Administration','Administration')}</strong> · {l('Manage companies, contacts and platform activity.','Gérez les entreprises, les contacts et l’activité de la plateforme.')}</span><ArrowRight size={16} aria-hidden/></Link>}
   {next&&<section className="ws-card ws-onboarding" aria-labelledby="ws-onboarding-title">
@@ -41,10 +47,10 @@ export default function MemberDashboard(){
    <ol>{steps.map(step=><li key={step.title} className={step.done?'done':step===next?'next':''}><span className="ws-check" aria-hidden>{step.done&&<Check size={13}/>}</span><div><strong>{step.title}</strong>{!step.done&&<p>{step.text}</p>}</div>{!step.done&&step.href&&<Link className={'ui-btn '+(step===next?'ui-btn-primary':'ui-btn-secondary')+' ui-btn-sm'} href={step.href}>{step.action}</Link>}{step.done&&<span className="ws-sr">{l('Completed','Terminé')}</span>}</li>)}</ol>
   </section>}
   <div className="ws-columns">
-   <section className="ws-card" aria-labelledby="ws-requests-title">
+   {!supplierOnly&&<section className="ws-card" aria-labelledby="ws-requests-title">
     <div className="ws-card-head"><h2 id="ws-requests-title">{l('Recent requests','Demandes récentes')}</h2><Link href="/operations">{l('View all','Tout voir')}<ArrowRight size={15} aria-hidden/></Link></div>
     {data.requests.length?<ul className="ws-list">{data.requests.map(r=><li key={r.id}><Link href={'/operations?organization='+requestOrganization(r)+'&request='+r.id}><span className="ws-list-icon" aria-hidden><FileText size={17}/></span><span className="ws-list-text"><strong>{r.title||l('Untitled draft','Brouillon sans titre')}</strong><small>{when(r.updated_at)}</small></span>{badge(r.state)}</Link></li>)}</ul>:<div className="ws-empty"><FileText size={22} aria-hidden/><strong>{l('No request yet','Aucune demande pour le moment')}</strong><p>{l('Start with a guided questionnaire or a custom request.','Commencez avec le questionnaire guidé ou une demande personnalisée.')}</p><Link className="ui-btn ui-btn-secondary ui-btn-sm" href="/decrire-mon-besoin">{l('Describe my requirement','Décrire mon besoin')}</Link></div>}
-   </section>
+   </section>}
    <section className="ws-card" aria-labelledby="ws-conversations-title">
     <div className="ws-card-head"><h2 id="ws-conversations-title">{l('Conversations','Conversations')}</h2><Link href="/messagerie">{l('Open inbox','Ouvrir la messagerie')}<ArrowRight size={15} aria-hidden/></Link></div>
     {data.conversations.length?<ul className="ws-list">{data.conversations.map(c=>{const organization=data.organizations.find(o=>[c.buyer_organization_id,c.supplier_organization_id].includes(o.id))?.id||'';return <li key={c.id}><Link href={'/messagerie?organization='+organization+'&conversation='+c.id}><span className="ws-list-icon" aria-hidden><MessageSquare size={17}/></span><span className="ws-list-text"><strong>{c.product_name}</strong><small>{when(c.updated_at)}</small></span><ArrowRight className="ws-list-arrow" size={16} aria-hidden/></Link></li>})}</ul>:<div className="ws-empty"><MessageSquare size={22} aria-hidden/><strong>{l('No conversation yet','Aucune conversation pour le moment')}</strong><p>{l('Open a product to contact its manufacturer.','Ouvrez une fiche produit pour contacter son fabricant.')}</p><Link className="ui-btn ui-btn-secondary ui-btn-sm" href="/catalogue">{l('Browse products','Consulter les produits')}</Link></div>}

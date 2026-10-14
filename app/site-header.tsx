@@ -1,13 +1,18 @@
 'use client';
 
 import {useEffect,useRef,useState,type ReactNode} from 'react';
-import {ArrowUpRight,Heart,LayoutGrid,LoaderCircle,Menu,UserRound,X} from 'lucide-react';
+import {ArrowUpRight,Building2,Factory,Heart,LayoutGrid,LoaderCircle,Menu,UserRound,X} from 'lucide-react';
+import type {WorkspaceCompany} from './marketplace';
 import Link from '@/components/site-link';
 import {LanguageSelector,useLanguage} from './language';
 import MessageLink from './message-link';
 
-export default function SiteHeader({path,signedIn,loading,favorites,children}:{path:string;signedIn:boolean;loading:boolean;favorites:number;children:ReactNode}) {
+export default function SiteHeader({path,signedIn,loading,favorites,company:workspaceCompany=null,accountName='',children}:{path:string;signedIn:boolean;loading:boolean;favorites:number;company?:WorkspaceCompany|null;accountName?:string;children:ReactNode}) {
  const {l}=useLanguage();
+ // A manufacturer-only account has no purchasing side: quote requests are a buyer feature.
+ const buyerTools=!signedIn||!workspaceCompany||workspaceCompany.buyer;
+ const AccountIcon=!signedIn?UserRound:workspaceCompany?.supplier?Factory:workspaceCompany?Building2:UserRound;
+ const accountLabel=signedIn?workspaceCompany?.name||accountName||l('My account','Mon compte'):l('My account','Mon compte');
  const [open,setOpen]=useState(false);
  const toggle=useRef<HTMLButtonElement>(null);
  const header=useRef<HTMLElement>(null);
@@ -23,19 +28,22 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
  },[open]);
  const primary=[
   [l('Components','Composants'),'/catalogue'],[l('Manufacturers','Fabricants'),'/fabricants'],
-  [l('Countries','Pays'),'/pays'],[l('Transport & import','Transport et importation'),'/transport-importation'],
+  [l('Transport & import','Transport et importation'),'/transport-importation'],
   [l('Buyer requests','Demandes d’achat'),'/demandes'],
   [l('Blog','Blog'),'/blog'],
-  [l('Describe my requirement','Décrire mon besoin'),'/decrire-mon-besoin'],
+  ...(buyerTools?[[l('Describe my requirement','Décrire mon besoin'),'/decrire-mon-besoin']]:[]),
  ];
- const discovery:string[][]=[];
+ // Countries sits on the right of the bar, next to the supplier link.
+ const discovery:string[][]=[[l('Countries','Pays'),'/pays']];
+ // Pages listed in the menu but not open yet.
+ const soon=new Set(['/transport-importation']);
  const company=[signedIn?l('My company','Mon entreprise'):l('Join as a supplier','Devenir fournisseur'),'/espace-fournisseur'];
  function active(href:string){
   if(href==='/catalogue')return path==='/catalogue'||path.startsWith('/produits/');
   if(href==='/decrire-mon-besoin')return path===href||path==='/demande-de-devis';
   return path===href||path.startsWith(href+'/');
  }
- function navLink([label,href]:string[],icon=false){return <Link key={href} href={href} className={[active(href)?'active':'',href==='/decrire-mon-besoin'?'header-request-nav':''].filter(Boolean).join(' ')||undefined} aria-current={active(href)?'page':undefined} onClick={()=>setOpen(false)}>{icon&&<LayoutGrid size={15} aria-hidden/>}{label}</Link>;}
+ function navLink([label,href]:string[],icon=false){if(soon.has(href))return <span key={href} className="nav-soon" aria-disabled="true">{label}<small>{l('In development','En développement')}</small></span>;return <Link key={href} href={href} className={[active(href)?'active':'',href==='/decrire-mon-besoin'?'header-request-nav':''].filter(Boolean).join(' ')||undefined} aria-current={active(href)?'page':undefined} onClick={()=>setOpen(false)}>{icon&&<LayoutGrid size={15} aria-hidden/>}{label}</Link>;}
  return <header className="site-header" ref={header}>
   <div className="header-main container">
    <div className="header-brand"><Link href="/" aria-label="GSL systems">{children}</Link><span className="header-tagline">{l('Components for robotics','Composants pour la robotique')}</span></div>
@@ -44,9 +52,9 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
     {signedIn&&<MessageLink/>}
     {signedIn&&<Link href="/selection" className="header-icon" aria-label={l('Saved products','Ma sélection')} title={l('Saved products','Ma sélection')} aria-current={active('/selection')?'page':undefined}><Heart size={19} aria-hidden/><span>{l('Saved products','Ma sélection')}</span>{favorites>0&&<b>{favorites}</b>}</Link>}
     <div className="header-account-actions" aria-busy={loading}>
-     {loading?<span className="account-signin account-loading" role="status"><LoaderCircle size={18} aria-hidden/>{l('Loading…','Chargement…')}</span>:<Link href={signedIn?'/compte':'/connexion'} className="account-signin" aria-current={active(signedIn?'/compte':'/connexion')?'page':undefined}><UserRound size={18} aria-hidden/>{signedIn?l('My workspace','Mon espace'):l('My account','Mon compte')}</Link>}
+     {loading?<span className="account-signin account-loading" role="status"><LoaderCircle size={18} aria-hidden/>{l('Loading…','Chargement…')}</span>:<Link href={signedIn?'/compte':'/connexion'} className={'account-signin'+(signedIn?' account-company':'')} title={signedIn?accountLabel:undefined} aria-current={active(signedIn?'/compte':'/connexion')?'page':undefined}><AccountIcon size={18} aria-hidden/><span dir="auto">{accountLabel}</span></Link>}
     </div>
-    <Link href="/decrire-mon-besoin" className="button-link header-quote">{l('Request a quote','Demander un devis')}<ArrowUpRight size={15} aria-hidden/></Link>
+    {buyerTools&&<Link href="/decrire-mon-besoin" className="button-link header-quote">{l('Request a quote','Demander un devis')}<ArrowUpRight size={15} aria-hidden/></Link>}
     <button type="button" ref={toggle} className="menu-toggle" aria-expanded={open} aria-controls="site-mobile-navigation" aria-label={l('Toggle navigation','Ouvrir ou fermer le menu')} onClick={()=>setOpen(value=>!value)}>{open?<X/>:<Menu/>}</button>
    </div>
   </div>
@@ -62,7 +70,7 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
    {signedIn&&<div className="mobile-member-links">
     {navLink([l('Messages','Messagerie'),'/messagerie'])}
     {navLink([l('Saved products','Ma sélection'),'/selection'])}
-    {navLink([l('My requests','Mes demandes'),'/operations'])}
+    {buyerTools&&navLink([l('My requests','Mes demandes'),'/operations'])}
    </div>}
   </nav>
  </header>;
