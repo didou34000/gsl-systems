@@ -428,5 +428,25 @@
     "دول التصنيع",
     "निर्माण देश",
     "制造国家"
+  ],
+  "Identified from public sources. Not registered on GSL and not verified.": [
+    "Identificados en fuentes públicas. No registrados en GSL y no verificados.",
+    "Identificados em fontes públicas. Não registados na GSL e não verificados.",
+    "Aus öffentlichen Quellen ermittelt. Nicht bei GSL registriert und nicht geprüft.",
+    "Individuati da fonti pubbliche. Non registrati su GSL e non verificati.",
+    "Kamuya açık kaynaklardan belirlendi. GSL’ye kayıtlı değil ve doğrulanmadı.",
+    "تم تحديدهم من مصادر عامة. غير مسجّلين في GSL وغير موثّقين.",
+    "सार्वजनिक स्रोतों से पहचाने गए। GSL पर पंजीकृत नहीं और सत्यापित नहीं।",
+    "根据公开来源识别。未在 GSL 注册，也未经核实。"
+  ],
+  "Robots and platforms": [
+    "Robots y plataformas",
+    "Robôs e plataformas",
+    "Roboter und Plattformen",
+    "Robot e piattaforme",
+    "Robotlar ve platformlar",
+    "الروبوتات والمنصات",
+    "रोबोट और प्लेटफ़ॉर्म",
+    "机器人与平台"
   ]
 }
