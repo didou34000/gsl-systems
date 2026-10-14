@@ -1,4 +1,5 @@
 import {cookies} from 'next/headers';
+import Image from 'next/image';
 import {notFound} from 'next/navigation';
 import {ArrowRight} from 'lucide-react';
 import Link from '@/components/site-link';
@@ -20,8 +21,8 @@ export default async function Page({params}:{params:Promise<{slug:string}>}){
   <nav className="catalogue-breadcrumb" aria-label={t('Breadcrumb','Fil d’Ariane')}><Link href="/blog">{t('Blog','Blog')}</Link></nav>
   <article>
    <header><time dateTime={a.date}>{date}</time><h1>{pick(a.title)}</h1><p className="blog-lead">{pick(a.summary)}</p>{language!=='fr'&&language!=='en'&&<p className="blog-language-note">{t('This article is available in English and French.','Cet article est disponible en anglais et en français.')}</p>}</header>
-   {a.cover&&<img className="blog-cover" src={a.cover} alt={pick(a.alt)} width={1600} height={900} decoding="async"/>}
-   <div className="blog-body">{a.body.map((block,i)=>block.kind==='h2'?<h2 key={i}>{pick(block.text)}</h2>:block.kind==='p'?<p key={i}>{pick(block.text)}</p>:block.kind==='list'?<ul key={i}>{block.items.map((item,j)=><li key={j}>{pick(item)}</li>)}</ul>:a.detail?<img key={i} className="blog-detail" src={a.detail} alt="" width={1200} height={800} loading="lazy" decoding="async"/>:null)}</div>
+   {a.cover&&<figure className="blog-figure blog-cover"><Image src={a.cover} alt={pick(a.alt)} width={1600} height={900} sizes="(max-width: 800px) 100vw, 760px" preload/><figcaption>{t('Generated illustration.','Illustration générée.')}</figcaption></figure>}
+   <div className="blog-body">{a.body.map((block,i)=>block.kind==='h2'?<h2 key={i}>{pick(block.text)}</h2>:block.kind==='p'?<p key={i}>{pick(block.text)}</p>:block.kind==='list'?<ul key={i}>{block.items.map((item,j)=><li key={j}>{pick(item)}</li>)}</ul>:a.detail?<figure key={i} className="blog-figure blog-detail"><Image src={a.detail} alt={pick(a.detailAlt)} width={1200} height={800} sizes="(max-width: 800px) 100vw, 760px"/><figcaption>{pick(a.detailAlt)} · {t('Generated illustration.','Illustration générée.')}</figcaption></figure>:null)}</div>
    <aside className="blog-cta"><p>{t('Need help specifying or sourcing this component?','Besoin d’aide pour spécifier ou trouver ce composant ?')}</p><Link href="/decrire-mon-besoin">{t('Describe my requirement','Décrire mon besoin')}<ArrowRight size={17} aria-hidden/></Link></aside>
   </article>
   <section className="blog-more" aria-labelledby="blog-more-title"><h2 id="blog-more-title">{t('Other articles','Autres articles')}</h2><ul>{others.map(o=><li key={o.slug}><Link href={'/blog/'+o.slug}>{pick(o.title)}<ArrowRight size={16} aria-hidden/></Link></li>)}</ul></section>
