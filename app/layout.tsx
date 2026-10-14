@@ -34,6 +34,7 @@ import './robotics.css';
 import './sourcing-flow.css';
 import './industrial-sheets.css';
 import './site-footer.css';
+import './blog.css';
 export async function generateMetadata():Promise<Metadata>{
  const language=resolveLanguage((await cookies()).get('gsl-language')?.value),h=await headers(),path=h.get('x-gsl-path')||'/';
  const titles:Record<string,[string,string]>={'/':['Composants robotiques et devis avec livraison','Robotics components & delivery enquiries'],'/catalogue':['Composants robotiques — actionneurs, réducteurs, capteurs','Robotics components — actuators, reducers, sensors'],'/fabricants':['Fabricants de composants robotiques hors Union européenne','Non-EU robotics component manufacturers'],'/secteurs':['Familles de composants robotiques','Robotics component families']};

@@ -448,5 +448,75 @@
     "الروبوتات والمنصات",
     "रोबोट और प्लेटफ़ॉर्म",
     "机器人与平台"
+  ],
+  "Blog: buyer guides for robotics components": [
+    "Blog: guías de compra de componentes robóticos",
+    "Blog: guias de compra de componentes robóticos",
+    "Blog: Einkaufsleitfäden für Robotikkomponenten",
+    "Blog: guide all’acquisto di componenti robotici",
+    "Blog: robotik bileşen satın alma rehberleri",
+    "المدونة: أدلة شراء المكوّنات الروبوتية",
+    "ब्लॉग: रोबोटिक्स घटकों के लिए खरीद गाइड",
+    "博客：机器人零部件采购指南"
+  ],
+  "Practical guides for buyers of robotics components: specifying, requesting quotes, importing and documenting.": [
+    "Guías prácticas para compradores de componentes robóticos: especificar, solicitar presupuestos, importar y documentar.",
+    "Guias práticos para compradores de componentes robóticos: especificar, pedir orçamentos, importar e documentar.",
+    "Praktische Leitfäden für Käufer von Robotikkomponenten: spezifizieren, Angebote anfragen, importieren und dokumentieren.",
+    "Guide pratiche per chi acquista componenti robotici: specificare, richiedere preventivi, importare e documentare.",
+    "Robotik bileşen alıcıları için pratik rehberler: tanımlama, teklif isteme, ithalat ve belgeleme.",
+    "أدلة عملية لمشتري المكوّنات الروبوتية: التحديد وطلب عروض الأسعار والاستيراد والتوثيق.",
+    "रोबोटिक्स घटकों के खरीदारों के लिए व्यावहारिक गाइड: विनिर्देश, कोटेशन अनुरोध, आयात और दस्तावेज़ीकरण।",
+    "面向机器人零部件买家的实用指南：规格定义、询价、进口与文件。"
+  ],
+  "Blog": [
+    "Blog",
+    "Blog",
+    "Blog",
+    "Blog",
+    "Blog",
+    "المدونة",
+    "ब्लॉग",
+    "博客"
+  ],
+  "Read the article": [
+    "Leer el artículo",
+    "Ler o artigo",
+    "Artikel lesen",
+    "Leggi l’articolo",
+    "Makaleyi oku",
+    "اقرأ المقال",
+    "लेख पढ़ें",
+    "阅读文章"
+  ],
+  "This article is available in English and French.": [
+    "Este artículo está disponible en inglés y francés.",
+    "Este artigo está disponível em inglês e francês.",
+    "Dieser Artikel ist auf Englisch und Französisch verfügbar.",
+    "Questo articolo è disponibile in inglese e francese.",
+    "Bu makale İngilizce ve Fransızca olarak mevcuttur.",
+    "هذا المقال متاح باللغتين الإنجليزية والفرنسية.",
+    "यह लेख अंग्रेज़ी और फ़्रेंच में उपलब्ध है।",
+    "本文提供英文和法文版本。"
+  ],
+  "Need help specifying or sourcing this component?": [
+    "¿Necesita ayuda para especificar o encontrar este componente?",
+    "Precisa de ajuda para especificar ou encontrar este componente?",
+    "Brauchen Sie Hilfe bei der Spezifikation oder Beschaffung dieser Komponente?",
+    "Serve aiuto per specificare o trovare questo componente?",
+    "Bu bileşeni tanımlamak veya tedarik etmek için yardım mı gerekiyor?",
+    "هل تحتاج إلى مساعدة في تحديد هذا المكوّن أو توريده؟",
+    "इस घटक को निर्दिष्ट करने या खोजने में मदद चाहिए?",
+    "需要帮助定义或采购此零部件吗？"
+  ],
+  "Other articles": [
+    "Otros artículos",
+    "Outros artigos",
+    "Weitere Artikel",
+    "Altri articoli",
+    "Diğer makaleler",
+    "مقالات أخرى",
+    "अन्य लेख",
+    "其他文章"
   ]
 }
