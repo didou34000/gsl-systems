@@ -177,3 +177,14 @@
 .gsl-home .hx-countries li:not(:last-child)::after{content:'·';margin-inline:10px;color:#7c8d9d}
 .gsl-home .home-referenced-note{margin:-8px 0 16px;color:var(--hx-muted);font-size:13px}
 .gsl-home .home-mini-visual .catalogue-company-monogram{width:64px;height:64px;aspect-ratio:auto}
+.gsl-home .hx-blog{padding-block:48px 56px;background:#fff;border-block:1px solid var(--hx-line)}
+.gsl-home .hx-blog ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:0;padding:0;list-style:none}
+.gsl-home .hx-blog li>a{display:flex;flex-direction:column;gap:10px;height:100%;color:var(--hx-ink)}
+.gsl-home .hx-blog img,.gsl-home .hx-blog-visual{width:100%;aspect-ratio:16/9;border-radius:8px;object-fit:cover}
+.gsl-home .hx-blog-visual{display:grid;place-items:center;background:linear-gradient(160deg,#F3F5F7,#E3E9EF);color:#3d6587}
+.gsl-home .hx-blog h3{margin:4px 0 0;font-size:18px;line-height:1.3;letter-spacing:-.01em;font-weight:650}
+.gsl-home .hx-blog li>a:hover h3{color:var(--hx-rust)}
+.gsl-home .hx-blog p{margin:0;color:var(--hx-muted);font-size:14.5px;line-height:1.55}
+.gsl-home .hx-blog-read{display:inline-flex;align-items:center;gap:6px;margin-top:auto;color:var(--hx-rust);font-size:14px;font-weight:600}
+[dir=rtl] .gsl-home .hx-blog-read svg{transform:scaleX(-1)}
+@media(max-width:900px){.gsl-home .hx-blog ul{grid-template-columns:1fr;gap:28px}}

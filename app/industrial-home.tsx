@@ -4,8 +4,7 @@ import HomeCatalogue from './home-catalogue';
 import HeroVideo from './hero-video';
 import {roboticsFamilies} from '@/lib/robotics';
 import {sourcingCountries} from '@/lib/sourcing-coverage';
-import {europeCountries} from '@/lib/europe-trade';
-import {languageOptions} from '@/lib/i18n/languages';
+import {blogArticles} from '@/lib/blog';
 import {countryName} from '@/lib/country-names';
 import {ArrowRight,Factory,Package,Search} from 'lucide-react';
 import {ProductTile,SupplierTile,type Actions} from './discovery';
@@ -43,19 +42,19 @@ function HomeSearch({base}:{base:string}){
  </section>;
 }
 
-function KeyFigures(){
- const {l}=useLanguage();
- const figures=[
-  [String(sourcingCountries.length),l('manufacturing countries outside the EU','pays de fabrication hors UE'),'/pays'],
-  [String(roboticsFamilies.length),l('component families','familles de composants'),'/secteurs'],
-  [String(europeCountries.length),l('European countries documented','pays d’Europe documentés'),'/pays'],
-  [String(languageOptions.length),l('languages available','langues disponibles'),''],
- ];
- return <section className="hx-figures" aria-labelledby="hx-figures-title" style={homeImages.figures?{backgroundImage:`linear-gradient(90deg,rgba(15,27,38,.94),rgba(15,27,38,.72)),url("${homeImages.figures}")`}:undefined}>
+function BlogBand(){
+ const {l,language}=useLanguage();
+ const pick=(text:{fr:string;en:string})=>language==='fr'?text.fr:text.en;
+ const icons=['transmissions-guidages','actionnement-transmission','pieces-mecaniques'];
+ return <section className="hx-blog" aria-labelledby="hx-blog-title">
   <div className="container">
-   <h2 id="hx-figures-title" className="sr-only">{l('GSL in figures','GSL en chiffres')}</h2>
-   <ul>{figures.map(([value,label,href])=><li key={label}>{href?<Link href={href}><strong>{value}</strong><span>{label}</span></Link>:<><strong>{value}</strong><span>{label}</span></>}</li>)}</ul>
-   <Link className="hx-figures-cta" href="/decrire-mon-besoin">{l('Get several quotes','Obtenez plusieurs devis')}<ArrowRight size={18} aria-hidden/></Link>
+   <div className="hx-section-head"><h2 id="hx-blog-title">{l('From the blog','Sur le blog')}</h2><Link href="/blog">{l('All articles','Tous les articles')}<ArrowRight size={17} aria-hidden/></Link></div>
+   <ul>{blogArticles.slice(0,3).map((a,i)=><li key={a.slug}><Link href={'/blog/'+a.slug}>
+    {a.cover?<img src={a.cover} alt={pick(a.alt)} width={800} height={450} loading="lazy" decoding="async"/>:<span className="hx-blog-visual" aria-hidden><CategoryIcon category={icons[i]} size={40} strokeWidth={1.2}/></span>}
+    <h3>{pick(a.title)}</h3>
+    <p>{pick(a.summary)}</p>
+    <span className="hx-blog-read">{l('Read the article','Lire l’article')}<ArrowRight size={16} aria-hidden/></span>
+   </Link></li>)}</ul>
   </div>
  </section>;
 }
@@ -105,7 +104,7 @@ export default function IndustrialHome({actions,live=false}:{actions:Actions;liv
  <section className="container gsl-section" id="suppliers"><div className="gsl-section-head"><div><h2>{l('Manufacturer directory','Annuaire des fabricants')}</h2></div><Link href="/fabricants">{l('All manufacturers','Tous les fabricants')}<ArrowRight size={18}/></Link></div><p className="gsl-demo-note">{l('Example profiles. No supplier identity or certification has been verified for these fictional companies.','Profils d’exemple. Aucune identité ni certification vérifiée pour ces entreprises fictives.')}</p><div className="discovery-suppliers-grid">{[suppliers[0],suppliers[4],suppliers[5]].map(s=><SupplierTile key={s.id} supplier={s}/>)}</div></section>
  </>}
  <p className="hx-supplier-line container">{l('Do you manufacture robotics components?','Vous fabriquez des composants robotiques ?')} <Link href="/inscription?next=%2Fespace-fournisseur">{l('Create my supplier profile','Créer mon profil fournisseur')}<ArrowRight size={16} aria-hidden/></Link></p>
- <KeyFigures/>
+ <BlogBand/>
  <ClosingBand/>
  </main>
 }
