@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useRef,useState,type FormEvent,type ReactNode} from 'react';
+import {useRef,useState,type FormEvent,type ReactNode} from 'react';
 import {ArrowRight,Globe2} from 'lucide-react';
 import Link from '@/components/site-link';
 import BrandLogo from '@/components/brand-logo';
@@ -38,19 +38,6 @@ function Newsletter(){
  </form>;
 }
 
-/** Strictly necessary storage only: the notice informs and records that it was read, nothing more. */
-function CookieNotice(){
- const {l}=useLanguage();
- const [visible,setVisible]=useState(false);
- useEffect(()=>{let seen=false;try{seen=localStorage.getItem('gsl-cookie-notice')==='1'}catch{}if(!seen){const timer=setTimeout(()=>setVisible(true),0);return()=>clearTimeout(timer)}},[]);
- if(!visible)return null;
- function accept(){try{localStorage.setItem('gsl-cookie-notice','1')}catch{}setVisible(false)}
- return <div className="cookie-notice" role="region" aria-label={l('Cookies','Cookies')}>
-  <p>{l('This site only uses storage needed for it to work (language, sign-in). No advertising cookies and no third-party audience measurement.','Ce site utilise uniquement le stockage nécessaire à son fonctionnement (langue, connexion). Aucun cookie publicitaire ni mesure d’audience tierce.')} <Link href="/cookies">{l('Learn more','En savoir plus')}</Link></p>
-  <button type="button" onClick={accept}>{l('Accept','Accepter')}</button>
- </div>;
-}
-
 export default function SiteFooter({signedIn,isDemo}:{signedIn:boolean;isDemo:boolean}){
  const {l,language}=useLanguage();
  const social=[['LinkedIn',socialLinks.linkedin,<LinkedInMark key="in"/>],['Instagram',socialLinks.instagram,<InstagramMark key="ig"/>]].filter(([,href])=>href) as [string,string,ReactNode][];
@@ -71,5 +58,5 @@ export default function SiteFooter({signedIn,isDemo}:{signedIn:boolean;isDemo:bo
    <div><h3>GSL systems</h3>{!signedIn&&<Link href="/connexion">{l('Sign in','S’identifier')}</Link>}<Link href="/contact">{l('Contact','Contact')}</Link><Link href="/accompagnement">{l('Assisted sourcing','Sourcing accompagné')}</Link><Link href="/guides">{l('Guides & resources','Guides & ressources')}</Link><Link href="/calculateur">{l('Cost calculator','Calculateur de coût')}</Link><Link href="/aide">{l('Help centre','Centre d’aide')}</Link></div>
   </div>
   <div className="container footer-bottom"><span>{isDemo?l('© 2026 GSL systems · Demonstration','© 2026 GSL systems · Démonstration'):'© 2026 GSL systems'}</span><span className="footer-region"><Globe2 size={15} aria-hidden/>{languageOptions.find(option=>option.code===language)?.name} · EUR</span><Link href="/mentions-legales">{l('Legal notice','Mentions légales')}</Link><Link href="/conditions-utilisation">{l('Terms of use','Conditions d’utilisation')}</Link><Link href="/confidentialite">{l('Data & privacy','Données & confidentialité')}</Link><Link href="/cookies">{l('Cookies','Cookies')}</Link><Link href="/credits">{l('Credits','Crédits')}</Link><Link href="/informations">{l('About this version','À propos de cette version')}</Link></div>
- </footer><CookieNotice/></>;
+ </footer></>;
 }
