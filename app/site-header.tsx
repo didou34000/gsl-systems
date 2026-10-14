@@ -24,6 +24,7 @@ export default function SiteHeader({path,signedIn,loading,favorites,children}:{p
  const primary=[
   [l('Components','Composants'),'/catalogue'],[l('Manufacturers','Fabricants'),'/fabricants'],
   [l('Countries','Pays'),'/pays'],[l('Transport & import','Transport et importation'),'/transport-importation'],
+  [l('Buyer requests','Demandes d’achat'),'/demandes'],
   [l('Blog','Blog'),'/blog'],
   [l('Describe my requirement','Décrire mon besoin'),'/decrire-mon-besoin'],
  ];

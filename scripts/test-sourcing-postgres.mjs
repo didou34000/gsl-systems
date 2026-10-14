@@ -74,6 +74,17 @@ try{
  await assert.rejects(call('submit',{id:created.id,revision:1}),/FORBIDDEN/);
  await as(ordinary,'aal1');const submitted=await call('submit',{id:created.id,revision:1});assert.equal(submitted.stage,'received');
  await assert.rejects(call('submit',{id:created.id,revision:1}),/CONFLICT/);
+ // Request board: nothing shared by default, buyer-only opt-in, locked teaser for visitors, lines for manufacturer members.
+ const board=()=>scalar('select public.request_board()');
+ await as(null,'aal1','anon');assert.deepEqual((await board()).requests,[]);
+ await as(outside,'aal1');await assert.rejects(scalar('select public.share_request_on_board($1,true)',[created.id]),/FORBIDDEN/);
+ await as(ordinary,'aal1');await scalar('select public.share_request_on_board($1,true)',[created.id]);
+ await as(null,'aal1','anon');let teaser=await board();assert.equal(teaser.unlocked,false);assert.equal(teaser.requests.length,1);assert.equal(teaser.requests[0].lines,2);assert.equal(teaser.requests[0].destination,'FR');
+ for(const hidden of ['title','items','contact','details'])assert.equal(teaser.requests[0][hidden],undefined,'Locked teaser omits '+hidden);
+ assert.ok(!JSON.stringify(teaser).includes('Acheteur'),'No buyer identity in the teaser');
+ await as(outside,'aal1');assert.equal((await board()).unlocked,false,'A signed-in non-manufacturer stays locked');
+ await as(ordinary,'aal1');teaser=await board();assert.equal(teaser.unlocked,true);assert.equal(teaser.requests[0].title,'Actionneurs pour robot');assert.equal(teaser.requests[0].items.length,2);assert.equal(teaser.requests[0].contact,undefined);
+ await scalar('select public.share_request_on_board($1,false)',[created.id]);assert.deepEqual((await board()).requests,[]);
  await assert.rejects(scalar("select public.workflow('cancel_rfq',$1::jsonb,$2)",[JSON.stringify({id:created.rfqId,revision:4}),randomUUID()]),/FORBIDDEN/);
  await as(owner1,'aal1');await assert.rejects(view(true),/MFA_REQUIRED/);
  await as(admin,'aal2');let c=(await view(true,created.id)).cases[0];
