@@ -2,8 +2,8 @@
 .gsl-home{--hx-night:#0F1B26;--hx-ink:#0F1B26;--hx-rust:#1F4E79;--hx-rust-dark:#173B5C;--hx-line:#D9DEE3;--hx-muted:#5A6571;--hx-soft:#F7F8FA}
 
 /* A short promise and two clear actions; component browsing starts below the hero. */
-.gsl-home .hx-hero{background:var(--hx-night);color:#ffffff}
-.gsl-home .hx-content{padding-block:64px 60px}
+.gsl-home .hx-hero{position:relative;isolation:isolate;overflow:hidden;background:#161b20;color:#ffffff}
+.gsl-home .hx-content{position:relative;z-index:1;padding-block:64px 60px}
 .gsl-home .hx-intro{max-width:880px;min-width:0}
 .gsl-home .hx-eyebrow{margin:0 0 18px;color:#aac5dc;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
 .gsl-home .hx-hero h1{font-weight:650;font-size:clamp(38px,4.3vw,62px);line-height:1.08;letter-spacing:-.035em;color:#ffffff;max-width:14em;margin:0;text-wrap:balance}
@@ -68,3 +68,24 @@
  .gsl-home .gsl-section-head>a{margin-top:12px}
 }
 .gsl-home .home-manufacturers{background:var(--hx-soft);border-color:var(--hx-line)}
+
+/* Video is decorative; a dark gradient protects text against every frame. */
+.gsl-home .hx-video-backdrop,.gsl-home .hx-video-shade{position:absolute;inset:0;pointer-events:none}
+.gsl-home .hx-video-backdrop{z-index:0;background-position:70% center;background-size:cover}
+.gsl-home .hx-video-backdrop video{display:block;width:100%;height:100%;object-fit:cover;object-position:70% center}
+.gsl-home .hx-video-shade{z-index:0;background:linear-gradient(90deg,rgba(9,14,19,.88),rgba(9,14,19,.78) 42%,rgba(9,14,19,.28)),linear-gradient(0deg,rgba(9,14,19,.35),transparent 60%)}
+.gsl-home .hx-hero h1{text-shadow:0 2px 18px #0005}
+.gsl-home .hx-eyebrow,.gsl-home .hx-context{color:#d4dee7}
+.gsl-home .hx-lead{color:#eef2f5}
+.gsl-home .hx-secondary{background:#0b1119a6;border-color:#adb9c4!important}
+.gsl-home .hx-secondary:hover{background:#0b1119db}
+.gsl-home .hx-video-control{position:absolute;z-index:2;inset-inline-end:24px;bottom:18px;display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 14px;border:1px solid #ffffff70;border-radius:6px;background:#0b1119b3;color:#ffffff;font-size:12px;cursor:pointer}
+.gsl-home .hx-video-control:hover{background:#0b1119e6}
+.gsl-home .hx-video-control:focus-visible{outline:2px solid #ffffff;outline-offset:4px}
+@media(max-width:760px){
+ .gsl-home .hx-content{padding-bottom:76px}
+ .gsl-home .hx-video-shade{background:linear-gradient(90deg,rgba(9,14,19,.82),rgba(9,14,19,.65)),linear-gradient(0deg,rgba(9,14,19,.42),transparent 70%)}
+ .gsl-home .hx-video-backdrop,.gsl-home .hx-video-backdrop video{background-position:68% center;object-position:68% center}
+ .gsl-home .hx-video-control{bottom:14px;inset-inline-end:18px}
+}
+@media(prefers-reduced-motion:reduce){.gsl-home .hx-video-backdrop video{display:none}}
