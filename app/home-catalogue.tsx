@@ -9,6 +9,7 @@ import {countryName} from '@/lib/country-names';
 import {productResearch} from '@/lib/catalogue-research';
 import {publishedPrice} from '@/lib/catalogue-display';
 import {referencedMakers,type ReferencedMaker as ReferencedMakerRow} from '@/lib/referenced-makers';
+import ProductPicture from './product-image';
 type Manufacturer={organization_id:string;display_name:string;country_code:string};
 type Product={product_id:string;name:string;category:string;description:string;specifications:Record<string,string>;manufacturer:Manufacturer};
 type Supplier=Manufacturer&{city:string;description:string;public_details?:{verification?:string;branding?:{logoId?:string}}};
@@ -42,7 +43,7 @@ function useFamilyLabel(){
 function ReferencedProduct({maker:m}:{maker:ReferencedMakerRow}){
  const {language}=useLanguage();const categoryLabel=useFamilyLabel();
  return <li className="home-mini"><Link href={'/catalogue?category='+m.family}>
-  <span className="home-mini-visual" aria-hidden><CategoryIcon category={m.family} size={40} strokeWidth={1.2}/></span>
+  {m.image?<ProductPicture image={m.image} alt={language==='fr'?m.productFr:m.productEn} className="home-mini-visual" linkCredit={false}/>:<span className="home-mini-visual" aria-hidden><CategoryIcon category={m.family} size={40} strokeWidth={1.2}/></span>}
   <span className="home-mini-family">{categoryLabel(m.family)}</span>
   <strong dir="auto">{language==='fr'?m.productFr:m.productEn}</strong>
   <span className="home-mini-meta">{m.company} · {countryName(m.country,language)}</span>

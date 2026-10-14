@@ -6,6 +6,7 @@ import {countryName} from '@/lib/country-names';
 import {referencedMakers} from '@/lib/referenced-makers';
 import {CategoryIcon,useCategoryLabel} from './catalogue-cards';
 import {useLanguage} from './language';
+import ProductPicture from './product-image';
 
 /** Public-source references, kept apart from published network profiles: no contact, save or compare actions. */
 export function ReferencedMakers({category='',country=''}:{category?:string;country?:string}){
@@ -16,6 +17,7 @@ export function ReferencedMakers({category='',country=''}:{category?:string;coun
   <h2 id="referenced-makers-title">{l('Manufacturers identified from public sources','Fabricants repérés dans des sources publiques')}</h2>
   <p>{l('These manufacturers are not registered on GSL and have not been verified by GSL. The information comes from their published documents; enquiries go through GSL.','Ces fabricants ne sont pas inscrits sur GSL et n’ont pas été vérifiés par GSL. Les informations viennent de leurs documents publiés ; les demandes passent par GSL.')}</p>
   <div className="catalogue-grid product-grid-mode">{rows.map(m=><article className="ind-card" key={m.id}>
+   {m.image&&<ProductPicture image={m.image} alt={language==='fr'?m.productFr:m.productEn}/>}
    <p className="ind-card-family"><CategoryIcon category={m.family} size={16}/>{categoryLabel(m.family)}</p>
    <h3 dir="auto">{language==='fr'?m.productFr:m.productEn}</h3>
    <p className="ind-card-maker"><CountryFlag code={m.country}/>{m.company}, {m.city}, {countryName(m.country,language)}</p>

@@ -1,5 +1,7 @@
 /** Manufacturers identified from public sources only. They are not registered, have not been contacted and are not verified by GSL; enquiries go through GSL. Unpublished values stay absent. */
-export type ReferencedMaker={id:string;company:string;country:string;city:string;website:string;family:string;productEn:string;productFr:string;reference:string;specs:{en:string;fr:string;value:string;valueFr?:string}[];noteEn:string;noteFr:string;sources:{url:string;title:string}[];checkedAt:string};
+/** A product picture with its rights. `illustration`: free photo of the same kind of object, not this product. `manufacturer`: the maker's photo, used with its written permission. */
+export type ProductImage={src:string;kind:'illustration'|'manufacturer';credit:string;license:string;sourceUrl:string};
+export type ReferencedMaker={id:string;image?:ProductImage;company:string;country:string;city:string;website:string;family:string;productEn:string;productFr:string;reference:string;specs:{en:string;fr:string;value:string;valueFr?:string}[];noteEn:string;noteFr:string;sources:{url:string;title:string}[];checkedAt:string};
 export const referencedMakers:ReferencedMaker[]=[
  {id:'wat-servo-400w',company:'WAT Motor',country:'TR',city:'Kapaklı (Tekirdağ)',website:'https://www.wat.com.tr',family:'actionnement-transmission',productEn:'400 W servo motor with integrated drive',productFr:'Servomoteur 400 W à variateur intégré',reference:'400W Entegre Motor Sürücü',
   specs:[{en:'Power',fr:'Puissance',value:'400 W'},{en:'Communication',fr:'Communication',value:'CAN, RS485'},{en:'Control modes',fr:'Modes de contrôle',value:'speed, position, torque',valueFr:'vitesse, position, couple'}],
