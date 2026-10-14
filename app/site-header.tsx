@@ -28,22 +28,20 @@ export default function SiteHeader({path,signedIn,loading,favorites,company:work
  },[open]);
  const primary=[
   [l('Components','Composants'),'/catalogue'],[l('Manufacturers','Fabricants'),'/fabricants'],
-  [l('Transport & import','Transport et importation'),'/transport-importation'],
   [l('Buyer requests','Demandes d’achat'),'/demandes'],
   [l('Blog','Blog'),'/blog'],
   ...(buyerTools?[[l('Describe my requirement','Décrire mon besoin'),'/decrire-mon-besoin']]:[]),
  ];
  // Countries sits on the right of the bar, next to the supplier link.
  const discovery:string[][]=[[l('Countries','Pays'),'/pays']];
- // Pages listed in the menu but not open yet.
- const soon=new Set(['/transport-importation']);
+
  const company=[signedIn?l('My company','Mon entreprise'):l('Join as a supplier','Devenir fournisseur'),'/espace-fournisseur'];
  function active(href:string){
   if(href==='/catalogue')return path==='/catalogue'||path.startsWith('/produits/');
   if(href==='/decrire-mon-besoin')return path===href||path==='/demande-de-devis';
   return path===href||path.startsWith(href+'/');
  }
- function navLink([label,href]:string[],icon=false){if(soon.has(href))return <span key={href} className="nav-soon" aria-disabled="true">{label}<small>{l('In development','En développement')}</small></span>;return <Link key={href} href={href} className={[active(href)?'active':'',href==='/decrire-mon-besoin'?'header-request-nav':''].filter(Boolean).join(' ')||undefined} aria-current={active(href)?'page':undefined} onClick={()=>setOpen(false)}>{icon&&<LayoutGrid size={15} aria-hidden/>}{label}</Link>;}
+ function navLink([label,href]:string[],icon=false){return <Link key={href} href={href} className={[active(href)?'active':'',href==='/decrire-mon-besoin'?'header-request-nav':''].filter(Boolean).join(' ')||undefined} aria-current={active(href)?'page':undefined} onClick={()=>setOpen(false)}>{icon&&<LayoutGrid size={15} aria-hidden/>}{label}</Link>;}
  return <header className="site-header" ref={header}>
   <div className="header-main container">
    <div className="header-brand"><Link href="/" aria-label="GSL systems">{children}</Link><span className="header-tagline">{l('Components for robotics','Composants pour la robotique')}</span></div>
