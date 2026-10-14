@@ -2,7 +2,7 @@
 import {trackJourney} from '@/lib/journey-analytics';
 import {useState} from 'react';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight, Armchair, BookOpen, Bot, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Hand, Droplets, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
+import {ArrowRight, ArrowUpRight, Armchair, BatteryCharging, BookOpen, Bot, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Grab, Droplets, Nut, Settings2, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import {countryName} from '@/lib/country-names';
@@ -24,7 +24,7 @@ export function useCategoryLabel() {
 }
 
 const categoryIcons: Record<string, LucideIcon> = {
-  'robots-plateformes': Bot, 'actionnement-transmission': Cog, prehension: Hand, 'capteurs-vision': ScanLine, 'commande-electronique': Cpu, 'mecanique-cablage': Cable,
+  'robots-plateformes': Bot, 'actionnement-transmission': Zap, 'transmissions-guidages': Settings2, 'cables-connecteurs': Cable, 'energie-batteries': BatteryCharging, 'pieces-mecaniques': Nut, prehension: Grab, 'capteurs-vision': ScanLine, 'commande-electronique': Cpu, 'mecanique-cablage': Cable,
   metal: Cog, electricite: Zap, emballage: Package, textile: Shirt, plasturgie: Boxes, machines: Factory, construction: Building2, mobilier: Armchair,
   'usinage-precision': ScanLine, 'tolerie-soudage': Hammer, 'fonderie-forge': Flame, 'aluminium-extrusion': Layers,
   'roulements-transmission': Cog, 'pompes-hydraulique': Droplets, 'ressorts-fixations': Wrench, 'moules-injection': Boxes,

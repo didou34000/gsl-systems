@@ -1,0 +1,182 @@
+{
+  "Explicit robotics offer": [
+    "Oferta robótica explícita",
+    "Oferta robótica explícita",
+    "Ausdrückliches Robotikangebot",
+    "Offerta robotica esplicita",
+    "Açık robotik teklif",
+    "عرض روبوتي صريح",
+    "स्पष्ट रोबोटिक्स पेशकश",
+    "明确的机器人产品"
+  ],
+  "Component to qualify": [
+    "Componente por calificar",
+    "Componente a qualificar",
+    "Zu qualifizierende Komponente",
+    "Componente da qualificare",
+    "Doğrulanacak bileşen",
+    "مكوّن قيد التأهيل",
+    "योग्यता जाँच हेतु घटक",
+    "待评定的零部件"
+  ],
+  "Components to qualify": [
+    "Componentes por calificar",
+    "Componentes a qualificar",
+    "Zu qualifizierende Komponenten",
+    "Componenti da qualificare",
+    "Doğrulanacak bileşenler",
+    "مكوّنات قيد التأهيل",
+    "योग्यता जाँच हेतु घटक",
+    "待评定的零部件"
+  ],
+  "Components for robotics": [
+    "Componentes para la robótica",
+    "Componentes para a robótica",
+    "Komponenten für die Robotik",
+    "Componenti per la robotica",
+    "Robotik için bileşenler",
+    "مكوّنات للروبوتات",
+    "रोबोटिक्स के लिए घटक",
+    "机器人零部件"
+  ],
+  "Delivery enquiries and tracking": [
+    "Presupuestos con entrega y seguimiento",
+    "Orçamentos com entrega e acompanhamento",
+    "Angebote mit Lieferung und Nachverfolgung",
+    "Preventivi con consegna e monitoraggio",
+    "Teslimatlı teklifler ve takip",
+    "عروض الأسعار مع التسليم والمتابعة",
+    "डिलीवरी सहित कोटेशन और ट्रैकिंग",
+    "含交付的报价与跟踪"
+  ],
+  "The request could not be saved. The service may need its database migration or configuration. Export your brief or retry; no transmission is confirmed.": [
+    "No se pudo guardar la solicitud. Es posible que el servicio necesite su migración de base de datos o su configuración. Exporte su expediente o vuelva a intentarlo; no se ha confirmado ningún envío.",
+    "Não foi possível guardar o pedido. O serviço pode precisar da migração da base de dados ou de configuração. Exporte o seu dossier ou tente novamente; nenhuma transmissão foi confirmada.",
+    "Die Anfrage konnte nicht gespeichert werden. Der Dienst benötigt möglicherweise seine Datenbankmigration oder Konfiguration. Exportieren Sie Ihr Dossier oder versuchen Sie es erneut; es wurde nichts übermittelt.",
+    "Impossibile salvare la richiesta. Il servizio potrebbe richiedere la migrazione del database o la configurazione. Esporta il fascicolo o riprova; nessuna trasmissione è confermata.",
+    "Talep kaydedilemedi. Hizmetin veritabanı geçişine veya yapılandırmaya ihtiyacı olabilir. Dosyanızı dışa aktarın veya tekrar deneyin; hiçbir gönderim onaylanmadı.",
+    "تعذّر حفظ الطلب. قد تحتاج الخدمة إلى ترحيل قاعدة البيانات أو إلى إعدادها. صدّر ملفك أو أعد المحاولة؛ لم يتم تأكيد أي إرسال.",
+    "अनुरोध सहेजा नहीं जा सका। सेवा को डेटाबेस माइग्रेशन या कॉन्फ़िगरेशन की आवश्यकता हो सकती है। अपना विवरण निर्यात करें या पुनः प्रयास करें; कोई प्रेषण पुष्ट नहीं हुआ है।",
+    "无法保存该请求。服务可能需要数据库迁移或配置。请导出您的需求文件或重试；未确认任何发送。"
+  ],
+  "This draft stays private. After saving, add your documents and explicitly confirm transmission to GSL for qualification and a delivery quote. Follow progress in your account.": [
+    "Este borrador sigue siendo privado. Tras guardarlo, añada sus documentos y confirme expresamente su envío a GSL para la calificación y un presupuesto con entrega. Siga su avance en su cuenta.",
+    "Este rascunho permanece privado. Depois de guardar, adicione os seus documentos e confirme explicitamente a transmissão à GSL para qualificação e orçamento com entrega. Acompanhe o progresso na sua conta.",
+    "Dieser Entwurf bleibt privat. Fügen Sie nach dem Speichern Ihre Dokumente hinzu und bestätigen Sie ausdrücklich die Übermittlung an GSL zur Qualifizierung und für ein Angebot mit Lieferung. Den Fortschritt verfolgen Sie in Ihrem Konto.",
+    "Questa bozza resta privata. Dopo il salvataggio, aggiungi i tuoi documenti e conferma esplicitamente la trasmissione a GSL per la qualificazione e un preventivo con consegna. Segui l’avanzamento nel tuo account.",
+    "Bu taslak gizli kalır. Kaydettikten sonra belgelerinizi ekleyin ve doğrulama ile teslimatlı teklif için GSL’ye gönderimi açıkça onaylayın. İlerlemeyi hesabınızdan takip edin.",
+    "تبقى هذه المسودة خاصة. بعد الحفظ، أضف مستنداتك وأكّد صراحةً إرسالها إلى GSL للتأهيل وعرض سعر مع التسليم. تابع التقدّم من حسابك.",
+    "यह मसौदा निजी रहता है। सहेजने के बाद अपने दस्तावेज़ जोड़ें और योग्यता जाँच तथा डिलीवरी सहित कोटेशन के लिए GSL को भेजने की स्पष्ट पुष्टि करें। प्रगति अपने खाते में देखें।",
+    "此草稿保持私密。保存后，请添加您的文件，并明确确认发送给 GSL 进行评定和含交付的报价。可在您的账户中跟踪进度。"
+  ],
+  "Save my delivery enquiry": [
+    "Guardar mi presupuesto con entrega",
+    "Guardar o meu orçamento com entrega",
+    "Meine Lieferanfrage speichern",
+    "Salva la mia richiesta con consegna",
+    "Teslimatlı talebimi kaydet",
+    "حفظ طلب عرض السعر مع التسليم",
+    "मेरी डिलीवरी पूछताछ सहेजें",
+    "保存我的含交付询价"
+  ],
+  "You will explicitly confirm transmission to GSL in the next step.": [
+    "Confirmará expresamente el envío a GSL en el siguiente paso.",
+    "Confirmará explicitamente a transmissão à GSL no passo seguinte.",
+    "Im nächsten Schritt bestätigen Sie ausdrücklich die Übermittlung an GSL.",
+    "Confermerai esplicitamente la trasmissione a GSL nel passaggio successivo.",
+    "Bir sonraki adımda GSL’ye gönderimi açıkça onaylayacaksınız.",
+    "ستؤكد صراحةً الإرسال إلى GSL في الخطوة التالية.",
+    "अगले चरण में आप GSL को भेजने की स्पष्ट पुष्टि करेंगे।",
+    "您将在下一步明确确认发送给 GSL。"
+  ],
+  "Qualification": [
+    "Calificación",
+    "Qualificação",
+    "Qualifizierung",
+    "Qualificazione",
+    "Yeterlilik",
+    "التأهيل",
+    "योग्यता",
+    "资质评定"
+  ],
+  "Documented certification": [
+    "Certificación documentada",
+    "Certificação documentada",
+    "Dokumentierte Zertifizierung",
+    "Certificazione documentata",
+    "Belgelenmiş sertifika",
+    "شهادة موثّقة",
+    "प्रलेखित प्रमाणन",
+    "有文件证明的认证"
+  ],
+  "Qualification level": [
+    "Nivel de calificación",
+    "Nível de qualificação",
+    "Qualifizierungsstufe",
+    "Livello di qualificazione",
+    "Yeterlilik düzeyi",
+    "مستوى التأهيل",
+    "योग्यता स्तर",
+    "评定等级"
+  ],
+  "All published levels": [
+    "Todos los niveles publicados",
+    "Todos os níveis publicados",
+    "Alle veröffentlichten Stufen",
+    "Tutti i livelli pubblicati",
+    "Yayımlanan tüm düzeyler",
+    "جميع المستويات المنشورة",
+    "सभी प्रकाशित स्तर",
+    "所有已发布等级"
+  ],
+  "Potentially suitable component — to qualify": [
+    "Componente potencialmente adecuado — por calificar",
+    "Componente potencialmente adequado — a qualificar",
+    "Potenziell geeignete Komponente — zu qualifizieren",
+    "Componente potenzialmente adatto — da qualificare",
+    "Uygun olabilecek bileşen — doğrulanacak",
+    "مكوّن قد يكون مناسبًا — قيد التأهيل",
+    "संभावित रूप से उपयुक्त घटक — योग्यता जाँच शेष",
+    "可能适用的零部件 — 待评定"
+  ],
+  "Production capacity / process": [
+    "Capacidad de producción / proceso",
+    "Capacidade de produção / processo",
+    "Produktionskapazität / Verfahren",
+    "Capacità produttiva / processo",
+    "Üretim kapasitesi / süreç",
+    "القدرة الإنتاجية / العملية",
+    "उत्पादन क्षमता / प्रक्रिया",
+    "产能 / 工艺"
+  ],
+  "Only reviewed documents match this filter. No certification is inferred from a group name.": [
+    "Solo los documentos revisados corresponden a este filtro. No se deduce ninguna certificación del nombre de un grupo.",
+    "Apenas os documentos analisados correspondem a este filtro. Nenhuma certificação é deduzida do nome de um grupo.",
+    "Nur geprüfte Dokumente entsprechen diesem Filter. Aus einem Konzernnamen wird keine Zertifizierung abgeleitet.",
+    "Solo i documenti esaminati corrispondono a questo filtro. Nessuna certificazione viene dedotta dal nome di un gruppo.",
+    "Bu filtreye yalnızca incelenmiş belgeler uyar. Bir grup adından sertifika çıkarılmaz.",
+    "لا يطابق هذا المرشّح إلا المستندات التي تمت مراجعتها. لا تُستنتج أي شهادة من اسم مجموعة.",
+    "केवल समीक्षा किए गए दस्तावेज़ ही इस फ़िल्टर से मेल खाते हैं। किसी समूह के नाम से कोई प्रमाणन नहीं माना जाता।",
+    "仅经审核的文件符合此筛选条件。不会根据集团名称推断任何认证。"
+  ],
+  "Request a quote with delivery": [
+    "Solicitar un presupuesto con entrega",
+    "Pedir um orçamento com entrega",
+    "Angebot mit Lieferung anfordern",
+    "Richiedi un preventivo con consegna",
+    "Teslimatlı teklif isteyin",
+    "اطلب عرض سعر مع التسليم",
+    "डिलीवरी सहित कोटेशन का अनुरोध करें",
+    "申请含交付的报价"
+  ],
+  "GSL studies your requirement and delivery conditions. The documentary profile does not establish that a manufacturer account is registered.": [
+    "GSL estudia su necesidad y las condiciones de entrega. La ficha documental no acredita que exista una cuenta de fabricante registrada.",
+    "A GSL analisa a sua necessidade e as condições de entrega. A ficha documental não comprova que exista uma conta de fabricante registada.",
+    "GSL prüft Ihren Bedarf und die Lieferbedingungen. Das dokumentarische Profil belegt nicht, dass ein Herstellerkonto registriert ist.",
+    "GSL esamina la tua esigenza e le condizioni di consegna. La scheda documentale non dimostra che un account produttore sia registrato.",
+    "GSL ihtiyacınızı ve teslimat koşullarını inceler. Belge profili, bir üretici hesabının kayıtlı olduğunu kanıtlamaz.",
+    "تدرس GSL احتياجك وشروط التسليم. لا يُثبت الملف التوثيقي أن حساب المصنّع مسجّل.",
+    "GSL आपकी आवश्यकता और डिलीवरी शर्तों का अध्ययन करता है। दस्तावेज़ी प्रोफ़ाइल यह स्थापित नहीं करती कि निर्माता खाता पंजीकृत है।",
+    "GSL 会研究您的需求和交付条件。资料档案并不能证明制造商账户已注册。"
+  ]
+}

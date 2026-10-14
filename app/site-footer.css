@@ -1,0 +1,40 @@
+/* Footer — October 14 2026: social links and newsletter first, then SEO link columns. */
+.site-footer .footer-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 56px;align-items:start;padding-bottom:32px;border-bottom:1px solid #ffffff1f}
+.site-footer .footer-identity p{max-width:30em;margin:14px 0 0;font-size:15px;line-height:1.6}
+.site-footer .footer-social{display:flex;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+.site-footer .footer-social a{display:grid;place-items:center;width:40px;height:40px;border:1px solid #ffffff33;border-radius:8px;color:#fff}
+.site-footer .footer-social a:hover{background:#ffffff14;border-color:#ffffff66}
+.site-footer .footer-newsletter{display:flex;flex-direction:column;gap:10px}
+.site-footer .footer-newsletter>label:first-child{color:#fff;font-size:15px;font-weight:600}
+.site-footer .footer-newsletter>div{display:flex;gap:8px}
+.site-footer .footer-newsletter input[type=email]{flex:1;min-width:0;height:46px;padding:0 14px;border:1px solid #ffffff40;border-radius:6px;background:#ffffff0d;color:#fff;font-size:15px}
+.site-footer .footer-newsletter input[type=email]::placeholder{color:#9aa7b3}
+.site-footer .footer-newsletter input[type=email]:focus{outline:2px solid #8fb4d4;outline-offset:1px}
+.site-footer .footer-newsletter button{display:inline-flex;align-items:center;gap:8px;height:46px;padding:0 18px;border:0;border-radius:6px;background:#fff;color:#0F1B26;font-weight:600;font-size:14px;cursor:pointer}
+.site-footer .footer-newsletter button:hover{background:#e6edf3}
+.site-footer .footer-newsletter button:disabled{opacity:.6;cursor:wait}
+.site-footer .footer-consent{display:block;padding-inline-start:24px;text-indent:-24px;color:#b9c4ce;font-size:13px;line-height:1.5}
+.site-footer .footer-consent input{margin:0 8px 0 0;vertical-align:-2px}
+.site-footer .footer-consent a{text-decoration:underline;text-underline-offset:3px}
+.site-footer .footer-newsletter p,.site-footer .footer-newsletter-done{margin:0;color:#e6edf3;font-size:14px}
+.site-footer .footer-trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.site-footer .footer-grid-wide{grid-template-columns:repeat(5,minmax(0,1fr));gap:32px}
+.site-footer .footer-grid-wide>div{display:flex;flex-direction:column;gap:9px;min-width:0}
+.site-footer .footer-grid-wide h3{margin:0 0 6px}
+.site-footer .footer-grid-wide>div>a{display:block;min-height:0;margin:0;padding:2px 0;font-size:14px;line-height:1.4;color:#c3ccd5}
+.site-footer .footer-grid-wide>div>a:hover{color:#fff}
+.site-footer .footer-bottom{align-items:center}
+.site-footer .footer-bottom .footer-region{display:inline-flex;align-items:center;gap:6px;margin:0;padding:0;margin-inline-end:auto}
+.cookie-notice{position:fixed;inset-inline:16px;bottom:16px;z-index:60;display:flex;align-items:center;gap:16px;max-width:760px;margin-inline:auto;padding:14px 16px;border:1px solid #D9DEE3;border-radius:10px;background:#fff;box-shadow:0 10px 30px rgba(15,27,38,.18);color:#14191F}
+.cookie-notice p{margin:0;font-size:14px;line-height:1.5}
+.cookie-notice a{color:#1F4E79;text-decoration:underline;text-underline-offset:3px}
+.cookie-notice button{flex-shrink:0;min-height:40px;padding:0 18px;border:0;border-radius:6px;background:#1F4E79;color:#fff;font-weight:600;cursor:pointer}
+.cookie-notice button:hover{background:#173B5C}
+@media(max-width:1000px){.site-footer .footer-grid-wide{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:760px){
+ .site-footer .footer-top{grid-template-columns:1fr}
+ .site-footer .footer-newsletter>div{flex-direction:column}
+ .site-footer .footer-newsletter button{justify-content:center}
+ .site-footer .footer-grid-wide{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}
+ .cookie-notice{flex-direction:column;align-items:stretch;gap:10px}
+}

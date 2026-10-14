@@ -10,3 +10,9 @@ export const brandAssets = {
   apple: '/apple-touch-icon.png?v=gsl-20261013',
   social: '/brand/gsl-systems-social.png',
 } as const;
+
+/** Public social profiles shown at the top of the footer. An empty value hides the icon. */
+export const socialLinks = {
+  linkedin: '',
+  instagram: '',
+} as const;

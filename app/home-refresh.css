@@ -89,3 +89,87 @@
  .gsl-home .hx-video-control{bottom:14px;inset-inline-end:18px}
 }
 @media(prefers-reduced-motion:reduce){.gsl-home .hx-video-backdrop video{display:none}}
+
+/* October 14 2026 — hero countries, search, family icons, compact tiles, key figures, closing band. */
+.gsl-home .hx-countries{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:28px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);max-width:1080px}
+.gsl-home .hx-countries>div>a{display:inline-block;margin-bottom:10px;color:#c7d1da;font-size:13px;line-height:1.4}
+.gsl-home .hx-countries>div>a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+.gsl-home .hx-countries ul{display:flex;flex-wrap:wrap;gap:6px 16px;margin:0;padding:0;list-style:none}
+.gsl-home .hx-countries li{display:inline-flex;align-items:center;gap:7px;color:#fff;font-size:14px;line-height:1.4}
+.gsl-home .hx-countries .country-flag{width:20px;height:15px;border-radius:2px;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+
+.gsl-home .hx-search{padding-block:36px 8px}
+.gsl-home .hx-search h2,.gsl-home .hx-section-head h2{font-size:22px;line-height:1.3;letter-spacing:-.02em;margin:0 0 16px;font-weight:650}
+.gsl-home .hx-search form{padding:18px;border:1px solid var(--hx-line);border-radius:10px;background:#fff}
+.gsl-home .hx-search-kind{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.gsl-home .hx-search-kind label{position:relative;display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 14px;border:1px solid var(--hx-line);border-radius:999px;color:var(--hx-muted);font-size:14px;cursor:pointer}
+.gsl-home .hx-search-kind input{position:absolute;opacity:0;pointer-events:none}
+.gsl-home .hx-search-kind label.is-active{border-color:var(--hx-rust);background:#EEF3F8;color:var(--hx-rust)}
+.gsl-home .hx-search-kind label:focus-within{outline:2px solid var(--hx-rust);outline-offset:2px}
+.gsl-home .hx-search-field{display:flex;align-items:center;gap:12px;min-height:54px;padding-inline-start:16px;border:1px solid #b9c4ce;border-radius:8px;background:#fff}
+.gsl-home .hx-search-field:focus-within{border-color:var(--hx-rust);box-shadow:0 0 0 3px #1F4E7926}
+.gsl-home .hx-search-field>svg{color:var(--hx-muted);flex-shrink:0}
+.gsl-home .hx-search-field input{flex:1;min-width:0;height:52px;border:0;outline:0;background:transparent;font-size:16px;color:var(--hx-ink)}
+.gsl-home .hx-search-field button{display:inline-flex;align-items:center;gap:8px;align-self:stretch;margin:4px;padding:0 20px;border:0;border-radius:6px;background:var(--hx-rust);color:#fff;font-size:15px;font-weight:600;cursor:pointer}
+.gsl-home .hx-search-field button:hover{background:var(--hx-rust-dark)}
+
+.gsl-home .hx-families{padding-block:36px 8px}
+.gsl-home .hx-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
+.gsl-home .hx-section-head>a{display:inline-flex;align-items:center;gap:6px;color:var(--hx-rust);font-size:14px;font-weight:600;white-space:nowrap}
+.gsl-home .hx-families ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
+.gsl-home .hx-families ul a{display:flex;align-items:center;gap:14px;height:100%;min-height:72px;padding:14px 16px;border:1px solid var(--hx-line);border-radius:8px;background:#fff;color:var(--hx-ink);font-size:14px;line-height:1.35}
+.gsl-home .hx-families ul a:hover{border-color:#8fa9bd;color:var(--hx-rust)}
+.gsl-home .hx-family-icon{display:grid;place-items:center;flex-shrink:0;width:44px;height:44px;border-radius:8px;background:#EEF3F8;color:var(--hx-rust)}
+
+.gsl-home .home-mini-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
+.gsl-home .home-mini a{display:flex;flex-direction:column;gap:6px;height:100%;padding:10px 10px 12px;border:1px solid var(--hx-line);border-radius:8px;background:#fff;color:var(--hx-ink)}
+.gsl-home .home-mini a:hover{border-color:#8fa9bd;box-shadow:0 6px 18px rgba(15,27,38,.08)}
+.gsl-home .home-mini-visual{display:grid;place-items:center;aspect-ratio:1;margin-bottom:4px;border-radius:6px;background:linear-gradient(160deg,#F3F5F7,#E3E9EF);color:#3d6587}
+.gsl-home .home-mini-visual .catalogue-company-logo{width:64%;height:auto;object-fit:contain}
+.gsl-home .home-mini-visual .catalogue-company-monogram{display:grid;place-items:center;width:56%;aspect-ratio:1;border-radius:50%;background:#fff;color:var(--hx-rust);font-size:20px;font-weight:650}
+.gsl-home .home-mini-family{color:var(--hx-muted);font-size:11.5px;line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.gsl-home .home-mini strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;font-size:13.5px;line-height:1.35;font-weight:600}
+.gsl-home .home-mini-price{margin-top:auto;color:var(--hx-rust);font-size:14px;font-weight:650}
+.gsl-home .home-mini-meta{display:flex;align-items:center;gap:6px;color:var(--hx-muted);font-size:12px;line-height:1.3;min-width:0}
+.gsl-home .home-mini-maker .home-mini-meta{margin-top:auto}
+.gsl-home .home-mini-meta .country-flag{width:16px;height:12px;flex-shrink:0}
+
+.gsl-home .hx-supplier-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin-block:8px 40px;color:var(--hx-muted);font-size:15px}
+.gsl-home .hx-supplier-line a{display:inline-flex;align-items:center;gap:6px;color:var(--hx-rust);font-weight:600}
+
+.gsl-home .hx-figures{background:var(--hx-night) center/cover no-repeat;color:#fff}
+.gsl-home .hx-figures .container{display:flex;flex-direction:column;align-items:center;gap:28px;padding-block:48px}
+.gsl-home .hx-figures ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;width:100%;max-width:960px;margin:0;padding:0;list-style:none;text-align:center}
+.gsl-home .hx-figures li>*{display:flex;flex-direction:column;gap:6px;color:#fff}
+.gsl-home .hx-figures strong{font-size:clamp(30px,3.4vw,42px);line-height:1;font-weight:650;letter-spacing:-.02em}
+.gsl-home .hx-figures span{color:#b9c7d4;font-size:14px;line-height:1.4}
+.gsl-home .hx-figures a:hover span{color:#fff}
+.gsl-home .hx-figures-cta{display:inline-flex!important;flex-direction:row!important;align-items:center;gap:10px!important;min-height:50px;padding:0 24px;border-radius:6px;background:#2F7D4F;color:#fff;font-weight:600;font-size:15px}
+.gsl-home .hx-figures-cta:hover{background:#266842}
+.gsl-home .hx-figures a:focus-visible{outline:2px solid #fff;outline-offset:4px}
+
+.gsl-home .hx-closing{display:grid;grid-template-columns:minmax(0,1fr);align-items:center;gap:clamp(24px,5vw,64px);padding-block:clamp(48px,7vw,88px)}
+.gsl-home .hx-closing.has-photo{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}
+.gsl-home .hx-closing img{width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:10px}
+.gsl-home .hx-closing h2{max-width:20em;margin:0;font-size:clamp(26px,3vw,38px);line-height:1.15;letter-spacing:-.03em;font-weight:650;text-wrap:balance}
+.gsl-home .hx-closing p{max-width:38em;margin:16px 0 0;color:var(--hx-muted);font-size:17px;line-height:1.6}
+.gsl-home .hx-closing-actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 20px;margin-top:26px}
+.gsl-home .hx-closing-actions a{display:inline-flex;align-items:center;gap:8px;color:var(--hx-rust);font-weight:600}
+.gsl-home .hx-closing-actions .hx-closing-primary{min-height:48px;padding:0 20px;border-radius:6px;background:var(--hx-rust);color:#fff}
+.gsl-home .hx-closing-actions .hx-closing-primary:hover{background:var(--hx-rust-dark)}
+[dir=rtl] .gsl-home :is(.hx-search-field button,.hx-section-head>a,.hx-supplier-line a,.hx-figures-cta,.hx-closing-actions a) svg{transform:scaleX(-1)}
+
+@media(max-width:1100px){.gsl-home .home-mini-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:1000px){.gsl-home .hx-families ul{grid-template-columns:repeat(2,minmax(0,1fr))}.gsl-home .hx-countries{grid-template-columns:1fr;gap:18px}}
+@media(max-width:760px){
+ .gsl-home .home-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .gsl-home .hx-figures ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .gsl-home .hx-closing.has-photo{grid-template-columns:1fr}
+ .gsl-home .hx-closing img{max-width:360px}
+ .gsl-home .hx-search form{padding:12px}
+ .gsl-home .hx-search-field{flex-wrap:wrap;padding:6px 6px 6px 14px}
+ .gsl-home .hx-search-field button{flex-basis:100%;justify-content:center;min-height:46px;margin:0}
+ .gsl-home .hx-families ul a{min-height:64px;padding:10px;gap:10px;font-size:13px}
+ .gsl-home .hx-family-icon{width:38px;height:38px}
+ .gsl-home .hx-countries{margin-top:28px}
+}

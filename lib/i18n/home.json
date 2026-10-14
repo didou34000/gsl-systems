@@ -1,0 +1,432 @@
+{
+  "What are you looking for?": [
+    "¿Qué busca?",
+    "O que procura?",
+    "Wonach suchen Sie?",
+    "Cosa sta cercando?",
+    "Ne arıyorsunuz?",
+    "عمّ تبحث؟",
+    "आप क्या खोज रहे हैं?",
+    "您在寻找什么？"
+  ],
+  "A component": [
+    "Un componente",
+    "Um componente",
+    "Eine Komponente",
+    "Un componente",
+    "Bir bileşen",
+    "مكوّن",
+    "एक घटक",
+    "零部件"
+  ],
+  "A manufacturer or supplier": [
+    "Un fabricante o proveedor",
+    "Um fabricante ou fornecedor",
+    "Einen Hersteller oder Lieferanten",
+    "Un produttore o fornitore",
+    "Bir üretici veya tedarikçi",
+    "مصنّع أو مورّد",
+    "एक निर्माता या आपूर्तिकर्ता",
+    "制造商或供应商"
+  ],
+  "Component, reference or criterion": [
+    "Componente, referencia o criterio",
+    "Componente, referência ou critério",
+    "Komponente, Referenz oder Kriterium",
+    "Componente, riferimento o criterio",
+    "Bileşen, referans veya kriter",
+    "مكوّن أو مرجع أو معيار",
+    "घटक, संदर्भ या मानदंड",
+    "零部件、型号或参数"
+  ],
+  "Company name or speciality": [
+    "Nombre o especialidad de la empresa",
+    "Nome ou especialidade da empresa",
+    "Firmenname oder Spezialgebiet",
+    "Nome o specialità dell’azienda",
+    "Şirket adı veya uzmanlık alanı",
+    "اسم الشركة أو تخصصها",
+    "कंपनी का नाम या विशेषज्ञता",
+    "公司名称或专长"
+  ],
+  "Harmonic reducer, joint actuator, encoder…": [
+    "Reductor armónico, actuador articular, codificador…",
+    "Redutor harmónico, atuador articular, encoder…",
+    "Harmonic-Getriebe, Gelenkaktor, Drehgeber…",
+    "Riduttore armonico, attuatore articolare, encoder…",
+    "Harmonik redüktör, eklem aktüatörü, enkoder…",
+    "مخفض توافقي، مشغّل مفصلي، مُرمِّز…",
+    "हार्मोनिक रिड्यूसर, जॉइंट एक्चुएटर, एनकोडर…",
+    "谐波减速器、关节执行器、编码器…"
+  ],
+  "Company name, speciality or country…": [
+    "Nombre, especialidad o país de la empresa…",
+    "Nome, especialidade ou país da empresa…",
+    "Firmenname, Spezialgebiet oder Land…",
+    "Nome, specialità o paese dell’azienda…",
+    "Şirket adı, uzmanlık alanı veya ülke…",
+    "اسم الشركة أو تخصصها أو بلدها…",
+    "कंपनी का नाम, विशेषज्ञता या देश…",
+    "公司名称、专长或国家…"
+  ],
+  "manufacturing countries outside the EU": [
+    "países de fabricación fuera de la UE",
+    "países de fabrico fora da UE",
+    "Herstellungsländer außerhalb der EU",
+    "paesi di produzione fuori dall’UE",
+    "AB dışındaki üretim ülkesi",
+    "دول تصنيع خارج الاتحاد الأوروبي",
+    "ईयू के बाहर निर्माण देश",
+    "欧盟以外的制造国"
+  ],
+  "component families": [
+    "familias de componentes",
+    "famílias de componentes",
+    "Komponentenfamilien",
+    "famiglie di componenti",
+    "bileşen ailesi",
+    "عائلات مكوّنات",
+    "घटक श्रेणियाँ",
+    "零部件类别"
+  ],
+  "European countries documented": [
+    "países europeos documentados",
+    "países europeus documentados",
+    "dokumentierte europäische Länder",
+    "paesi europei documentati",
+    "belgelenmiş Avrupa ülkesi",
+    "دول أوروبية موثّقة",
+    "प्रलेखित यूरोपीय देश",
+    "已记录的欧洲国家"
+  ],
+  "languages available": [
+    "idiomas disponibles",
+    "idiomas disponíveis",
+    "verfügbare Sprachen",
+    "lingue disponibili",
+    "kullanılabilir dil",
+    "لغات متاحة",
+    "उपलब्ध भाषाएँ",
+    "可用语言"
+  ],
+  "GSL in figures": [
+    "GSL en cifras",
+    "A GSL em números",
+    "GSL in Zahlen",
+    "GSL in cifre",
+    "Rakamlarla GSL",
+    "GSL بالأرقام",
+    "आंकड़ों में GSL",
+    "GSL 数据一览"
+  ],
+  "Get several quotes": [
+    "Obtenga varios presupuestos",
+    "Obtenha vários orçamentos",
+    "Mehrere Angebote erhalten",
+    "Ottieni più preventivi",
+    "Birden fazla teklif alın",
+    "احصل على عدة عروض أسعار",
+    "कई कोटेशन प्राप्त करें",
+    "获取多份报价"
+  ],
+  "One contact, from the first enquiry to the quote.": [
+    "Un único interlocutor, de la primera consulta al presupuesto.",
+    "Um único interlocutor, do primeiro pedido ao orçamento.",
+    "Ein Ansprechpartner, von der ersten Anfrage bis zum Angebot.",
+    "Un unico interlocutore, dalla prima richiesta al preventivo.",
+    "İlk talepten teklife kadar tek bir muhatap.",
+    "جهة اتصال واحدة، من الطلب الأول حتى عرض السعر.",
+    "पहली पूछताछ से कोटेशन तक, एक ही संपर्क।",
+    "从首次询价到报价，只需一个联系人。"
+  ],
+  "Describe your requirement once. GSL helps you choose manufacturers, prepare a precise enquiry and compare quotes with delivery to Europe.": [
+    "Describa su necesidad una sola vez. GSL le ayuda a elegir fabricantes, preparar una consulta precisa y comparar presupuestos con entrega en Europa.",
+    "Descreva a sua necessidade uma única vez. A GSL ajuda-o a escolher fabricantes, preparar um pedido preciso e comparar orçamentos com entrega na Europa.",
+    "Beschreiben Sie Ihren Bedarf einmal. GSL hilft Ihnen, Hersteller auszuwählen, eine präzise Anfrage vorzubereiten und Angebote mit Lieferung nach Europa zu vergleichen.",
+    "Descriva la sua esigenza una sola volta. GSL la aiuta a scegliere i produttori, preparare una richiesta precisa e confrontare preventivi con consegna in Europa.",
+    "İhtiyacınızı bir kez tanımlayın. GSL üreticileri seçmenize, net bir talep hazırlamanıza ve Avrupa’ya teslimatlı teklifleri karşılaştırmanıza yardımcı olur.",
+    "صف احتياجك مرة واحدة. تساعدك GSL على اختيار المصنّعين وإعداد طلب دقيق ومقارنة عروض الأسعار مع التسليم إلى أوروبا.",
+    "अपनी आवश्यकता एक बार बताइए। GSL निर्माताओं को चुनने, सटीक पूछताछ तैयार करने और यूरोप में डिलीवरी सहित कोटेशन की तुलना करने में आपकी मदद करता है।",
+    "只需描述一次需求。GSL 帮助您选择制造商、准备准确的询价，并比较含欧洲交付的报价。"
+  ],
+  "Contact us": [
+    "Contáctenos",
+    "Contacte-nos",
+    "Kontakt aufnehmen",
+    "Contattaci",
+    "Bize ulaşın",
+    "اتصل بنا",
+    "हमसे संपर्क करें",
+    "联系我们"
+  ],
+  "B2B sourcing · Robotics": [
+    "Abastecimiento B2B · Robótica",
+    "Sourcing B2B · Robótica",
+    "B2B-Beschaffung · Robotik",
+    "Sourcing B2B · Robotica",
+    "B2B tedarik · Robotik",
+    "التوريد بين الشركات · الروبوتات",
+    "B2B सोर्सिंग · रोबोटिक्स",
+    "B2B 采购 · 机器人"
+  ],
+  "Find the right manufacturers for your robotics components.": [
+    "Los fabricantes adecuados para sus componentes robóticos.",
+    "Os fabricantes certos para os seus componentes robóticos.",
+    "Die richtigen Hersteller für Ihre Robotikkomponenten.",
+    "I produttori giusti per i vostri componenti robotici.",
+    "Robotik bileşenleriniz için doğru üreticiler.",
+    "المصنّعون المناسبون لمكوّناتك الروبوتية.",
+    "आपके रोबोटिक्स घटकों के लिए सही निर्माता।",
+    "为您的机器人零部件找到合适的制造商。"
+  ],
+  "GSL supports you from manufacturer selection to a quote with delivery to Europe.": [
+    "GSL le acompaña desde la elección del fabricante hasta el presupuesto con entrega en Europa.",
+    "A GSL acompanha-o desde a escolha do fabricante até ao orçamento com entrega na Europa.",
+    "GSL begleitet Sie von der Herstellerauswahl bis zum Angebot mit Lieferung nach Europa.",
+    "GSL vi accompagna dalla scelta del produttore al preventivo con consegna in Europa.",
+    "GSL, üretici seçiminden Avrupa’ya teslimatlı teklife kadar size eşlik eder.",
+    "ترافقك GSL من اختيار المصنّع حتى عرض السعر مع التسليم إلى أوروبا.",
+    "GSL निर्माता चुनने से लेकर यूरोप में डिलीवरी सहित कोटेशन तक आपका साथ देता है।",
+    "GSL 陪伴您从选择制造商到获得含欧洲交付的报价。"
+  ],
+  "Get a quote with delivery": [
+    "Obtener un presupuesto con entrega",
+    "Obter um orçamento com entrega",
+    "Angebot mit Lieferung erhalten",
+    "Ottieni un preventivo con consegna",
+    "Teslimatlı teklif alın",
+    "احصل على عرض سعر مع التسليم",
+    "डिलीवरी सहित कोटेशन प्राप्त करें",
+    "获取含交付的报价"
+  ],
+  "Manufacturers in 10 countries outside the European Union": [
+    "Fabricantes en 10 países fuera de la Unión Europea",
+    "Fabricantes em 10 países fora da União Europeia",
+    "Hersteller in 10 Ländern außerhalb der Europäischen Union",
+    "Produttori in 10 paesi fuori dall’Unione europea",
+    "Avrupa Birliği dışındaki 10 ülkede üreticiler",
+    "مصنّعون في 10 دول خارج الاتحاد الأوروبي",
+    "यूरोपीय संघ के बाहर 10 देशों में निर्माता",
+    "欧盟以外 10 个国家的制造商"
+  ],
+  "Buyers and delivery in Europe": [
+    "Compradores y entrega en Europa",
+    "Compradores e entrega na Europa",
+    "Käufer und Lieferung in Europa",
+    "Acquirenti e consegna in Europa",
+    "Avrupa’daki alıcılar ve teslimat",
+    "المشترون والتسليم في أوروبا",
+    "यूरोप में खरीदार और डिलीवरी",
+    "欧洲买家与交付"
+  ],
+  "and the other European countries": [
+    "y los demás países europeos",
+    "e os outros países europeus",
+    "und die übrigen europäischen Länder",
+    "e gli altri paesi europei",
+    "ve diğer Avrupa ülkeleri",
+    "وسائر الدول الأوروبية",
+    "और अन्य यूरोपीय देश",
+    "以及其他欧洲国家"
+  ],
+  "Price on request": [
+    "Precio a consultar",
+    "Preço sob consulta",
+    "Preis auf Anfrage",
+    "Prezzo su richiesta",
+    "Fiyat talep üzerine",
+    "السعر عند الطلب",
+    "मूल्य अनुरोध पर",
+    "价格面议"
+  ],
+  "Thank you. Your newsletter sign-up has been recorded.": [
+    "Gracias. Su suscripción al boletín ha quedado registrada.",
+    "Obrigado. A sua inscrição na newsletter foi registada.",
+    "Danke. Ihre Newsletter-Anmeldung wurde gespeichert.",
+    "Grazie. La sua iscrizione alla newsletter è stata registrata.",
+    "Teşekkürler. Bülten kaydınız alındı.",
+    "شكرًا. تم تسجيل اشتراكك في النشرة الإخبارية.",
+    "धन्यवाद। आपका न्यूज़लेटर पंजीकरण दर्ज कर लिया गया है।",
+    "谢谢。您的新闻通讯订阅已记录。"
+  ],
+  "Newsletter: sourcing guides and new manufacturers": [
+    "Boletín: guías de abastecimiento y nuevos fabricantes",
+    "Newsletter: guias de sourcing e novos fabricantes",
+    "Newsletter: Beschaffungsleitfäden und neue Hersteller",
+    "Newsletter: guide al sourcing e nuovi produttori",
+    "Bülten: tedarik rehberleri ve yeni üreticiler",
+    "النشرة الإخبارية: أدلة التوريد ومصنّعون جدد",
+    "न्यूज़लेटर: सोर्सिंग गाइड और नए निर्माता",
+    "新闻通讯：采购指南与新制造商"
+  ],
+  "Work email": [
+    "Correo electrónico profesional",
+    "E-mail profissional",
+    "Geschäftliche E-Mail",
+    "E-mail di lavoro",
+    "İş e-postası",
+    "البريد الإلكتروني المهني",
+    "कार्य ईमेल",
+    "工作邮箱"
+  ],
+  "Subscribe": [
+    "Suscribirse",
+    "Inscrever-se",
+    "Abonnieren",
+    "Iscriviti",
+    "Abone ol",
+    "اشترك",
+    "सदस्यता लें",
+    "订阅"
+  ],
+  "I agree to receive GSL news by email. I can unsubscribe at any time.": [
+    "Acepto recibir las novedades de GSL por correo electrónico. Puedo darme de baja en cualquier momento.",
+    "Aceito receber as novidades da GSL por e-mail. Posso cancelar a inscrição a qualquer momento.",
+    "Ich bin damit einverstanden, GSL-Neuigkeiten per E-Mail zu erhalten. Ich kann mich jederzeit abmelden.",
+    "Accetto di ricevere le novità di GSL via e-mail. Posso annullare l’iscrizione in qualsiasi momento.",
+    "GSL haberlerini e-posta ile almayı kabul ediyorum. İstediğim zaman abonelikten çıkabilirim.",
+    "أوافق على تلقي أخبار GSL عبر البريد الإلكتروني، ويمكنني إلغاء الاشتراك في أي وقت.",
+    "मैं ईमेल द्वारा GSL की खबरें प्राप्त करने के लिए सहमत हूँ। मैं किसी भी समय सदस्यता समाप्त कर सकता हूँ।",
+    "我同意通过电子邮件接收 GSL 资讯，并可随时退订。"
+  ],
+  "Privacy": [
+    "Privacidad",
+    "Privacidade",
+    "Datenschutz",
+    "Privacy",
+    "Gizlilik",
+    "الخصوصية",
+    "गोपनीयता",
+    "隐私"
+  ],
+  "Sign-up is unavailable right now. Please try again later.": [
+    "La suscripción no está disponible en este momento. Inténtelo más tarde.",
+    "A inscrição não está disponível de momento. Tente mais tarde.",
+    "Die Anmeldung ist derzeit nicht möglich. Bitte versuchen Sie es später erneut.",
+    "L’iscrizione non è al momento disponibile. Riprova più tardi.",
+    "Kayıt şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+    "التسجيل غير متاح حاليًا. يُرجى المحاولة لاحقًا.",
+    "पंजीकरण अभी उपलब्ध नहीं है। कृपया बाद में पुनः प्रयास करें।",
+    "暂时无法订阅，请稍后再试。"
+  ],
+  "Too many attempts. Please try again in an hour.": [
+    "Demasiados intentos. Inténtelo de nuevo dentro de una hora.",
+    "Demasiadas tentativas. Tente novamente dentro de uma hora.",
+    "Zu viele Versuche. Bitte versuchen Sie es in einer Stunde erneut.",
+    "Troppi tentativi. Riprova tra un’ora.",
+    "Çok fazla deneme. Lütfen bir saat sonra tekrar deneyin.",
+    "محاولات كثيرة جدًا. يُرجى المحاولة بعد ساعة.",
+    "बहुत अधिक प्रयास। कृपया एक घंटे बाद पुनः प्रयास करें।",
+    "尝试次数过多，请一小时后再试。"
+  ],
+  "This site only uses storage needed for it to work (language, sign-in). No advertising cookies and no third-party audience measurement.": [
+    "Este sitio solo utiliza el almacenamiento necesario para su funcionamiento (idioma, inicio de sesión). Sin cookies publicitarias ni medición de audiencia de terceros.",
+    "Este site utiliza apenas o armazenamento necessário ao seu funcionamento (idioma, sessão). Sem cookies publicitários nem medição de audiência de terceiros.",
+    "Diese Website nutzt nur die für ihren Betrieb nötige Speicherung (Sprache, Anmeldung). Keine Werbe-Cookies und keine Reichweitenmessung durch Dritte.",
+    "Questo sito utilizza solo l’archiviazione necessaria al suo funzionamento (lingua, accesso). Nessun cookie pubblicitario né misurazione dell’audience di terze parti.",
+    "Bu site yalnızca çalışması için gereken depolamayı kullanır (dil, oturum). Reklam çerezi ve üçüncü taraf kitle ölçümü yoktur.",
+    "يستخدم هذا الموقع فقط التخزين اللازم لعمله (اللغة، تسجيل الدخول). لا ملفات تعريف ارتباط إعلانية ولا قياس جمهور من طرف ثالث.",
+    "यह साइट केवल अपने संचालन के लिए आवश्यक संग्रहण (भाषा, साइन-इन) का उपयोग करती है। कोई विज्ञापन कुकी या तृतीय-पक्ष दर्शक मापन नहीं।",
+    "本网站仅使用运行所必需的存储（语言、登录）。不使用广告 Cookie，也不进行第三方访问统计。"
+  ],
+  "Learn more": [
+    "Más información",
+    "Saber mais",
+    "Mehr erfahren",
+    "Scopri di più",
+    "Daha fazla bilgi",
+    "معرفة المزيد",
+    "और जानें",
+    "了解更多"
+  ],
+  "Accept": [
+    "Aceptar",
+    "Aceitar",
+    "Akzeptieren",
+    "Accetta",
+    "Kabul et",
+    "قبول",
+    "स्वीकार करें",
+    "接受"
+  ],
+  "Components for robotics.": [
+    "Componentes para la robótica.",
+    "Componentes para a robótica.",
+    "Komponenten für die Robotik.",
+    "Componenti per la robotica.",
+    "Robotik için bileşenler.",
+    "مكوّنات للروبوتات.",
+    "रोबोटिक्स के लिए घटक।",
+    "机器人零部件。"
+  ],
+  "Buyers": [
+    "Compradores",
+    "Compradores",
+    "Käufer",
+    "Acquirenti",
+    "Alıcılar",
+    "المشترون",
+    "खरीदार",
+    "买家"
+  ],
+  "Buyer area": [
+    "Espacio comprador",
+    "Área do comprador",
+    "Käuferbereich",
+    "Area acquirente",
+    "Alıcı alanı",
+    "مساحة المشتري",
+    "खरीदार क्षेत्र",
+    "买家空间"
+  ],
+  "Requests & delivery": [
+    "Solicitudes y entrega",
+    "Pedidos e entrega",
+    "Anfragen und Lieferung",
+    "Richieste e consegna",
+    "Talepler ve teslimat",
+    "الطلبات والتسليم",
+    "अनुरोध और डिलीवरी",
+    "询价与交付"
+  ],
+  "Transport & import": [
+    "Transporte e importación",
+    "Transporte e importação",
+    "Transport und Import",
+    "Trasporto e importazione",
+    "Taşıma ve ithalat",
+    "النقل والاستيراد",
+    "परिवहन और आयात",
+    "运输与进口"
+  ],
+  "Become a supplier or manufacturer": [
+    "Hacerse proveedor o fabricante",
+    "Tornar-se fornecedor ou fabricante",
+    "Lieferant oder Hersteller werden",
+    "Diventare fornitore o produttore",
+    "Tedarikçi veya üretici olun",
+    "كن مورّدًا أو مصنّعًا",
+    "आपूर्तिकर्ता या निर्माता बनें",
+    "成为供应商或制造商"
+  ],
+  "Manufacturer area": [
+    "Espacio fabricante",
+    "Área do fabricante",
+    "Herstellerbereich",
+    "Area produttore",
+    "Üretici alanı",
+    "مساحة المصنّع",
+    "निर्माता क्षेत्र",
+    "制造商空间"
+  ],
+  "Manufacturing countries": [
+    "Países de fabricación",
+    "Países de fabrico",
+    "Herstellungsländer",
+    "Paesi di produzione",
+    "Üretim ülkeleri",
+    "دول التصنيع",
+    "निर्माण देश",
+    "制造国家"
+  ]
+}
