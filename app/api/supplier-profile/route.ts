@@ -3,6 +3,8 @@ import {phoneDetails} from '@/lib/onboarding/phone';
 import {getCountryRequirements} from '@/lib/onboarding/country-requirements';
 import {allowedOrigin} from '@/lib/auth-policy';
 import {productPublicationIssues,normalizeProductCategory,companyPublicationSchema,companyIssues,supplierSubmissionSchema,supplierDraftSchema,profileIssues,supplierValidationIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
+// Company details typed at sign-up; they pre-fill a first supplier profile.
+const signupCompany=(m:Record<string,unknown>|undefined)=>{const t=(v:unknown,max:number)=>typeof v==='string'?v.trim().slice(0,max):'';return {name:t(m?.company_name,160),country:/^[A-Z]{2}$/.test(t(m?.company_country,2))?t(m?.company_country,2):'',legalForm:t(m?.company_legal_form,120)}};
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 export async function GET(){try{
@@ -14,7 +16,7 @@ export async function GET(){try{
  const {data:pendingUploads,error:pe}=await db.from('onboarding_uploads').select('id,name,state').eq('owner_id',user.id).in('state',['reserved','deleting','failed']);if(pe)throw pe;
  const publication=application?.organization_id?await db.from('published_supplier_profiles').select('organization_id,public_details').eq('organization_id',application.organization_id).is('withdrawn_at',null).maybeSingle():null;if(publication?.error)throw publication.error;
  const publishedProducts=application?.organization_id?await db.from('published_products').select('product_id',{count:'exact',head:true}).eq('organization_id',application.organization_id).is('withdrawn_at',null):null;if(publishedProducts?.error)throw publishedProducts.error;
- return json({application,publishedProducts:publishedProducts?.count||0,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email});
+ return json({application,publishedProducts:publishedProducts?.count||0,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email,signup:signupCompany(user.user_metadata)});
 }catch{return json({error:'UNAVAILABLE'},503)}}
 export async function POST(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);

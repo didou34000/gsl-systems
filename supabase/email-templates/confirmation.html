@@ -1,27 +1,32 @@
 <!doctype html>
-<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><title>Votre code de confirmation GSL systems</title></head>
-<body style="margin:0;padding:0;background-color:#f2f4f7;font-family:Arial,Helvetica,sans-serif;color:#252c33;">
-<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Votre code personnel est valable 10 minutes.</div>
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#f2f4f7;"><tr><td align="center" style="padding:32px 16px;">
-<table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;background-color:#ffffff;border:1px solid #e0e5eb;border-radius:8px;">
-<tr><td style="height:4px;background-color:#2254ff;border-radius:8px 8px 0 0;font-size:1px;line-height:4px;">&nbsp;</td></tr>
-<tr><td style="padding:0 12px;"><img src="https://gsl-systems.vercel.app/brand/gsl-systems-original.png" width="330" height="137" alt="GSL systems • Global Supply Link" style="display:block;width:330px;max-width:100%;height:auto;border:0;"></td></tr>
-<tr><td style="padding:0 36px 36px;">
-<p style="margin:0 0 12px;color:#2254ff;font-size:10px;font-weight:bold;letter-spacing:1.5px;">CONFIRMATION DU COMPTE</p>
-<h1 style="margin:0 0 22px;font-size:27px;line-height:1.25;letter-spacing:-0.5px;font-weight:700;">Confirmez votre adresse email</h1>
-<p style="margin:0 0 12px;font-size:15px;line-height:1.7;">Bonjour,</p>
-<p style="margin:0 0 26px;font-size:15px;line-height:1.7;color:#56616e;">Saisissez ce code sur GSL systems pour activer votre compte.</p>
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding:24px 12px;background-color:#eff3ff;border:1px solid #dbe4ff;border-radius:6px;">
-<p style="margin:0 0 10px;font-size:11px;line-height:1.5;color:#56616e;">VOTRE CODE DE VÉRIFICATION</p>
-<p style="margin:0;font-family:Consolas,'Courier New',monospace;font-size:30px;font-weight:bold;letter-spacing:5px;line-height:1.4;color:#2254ff;">{{ .Token }}</p>
+<html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="supported-color-schemes" content="light"><title>Votre code de confirmation GSL systems</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body style="margin:0;padding:0;background-color:#F3F5F7;font-family:Inter,'Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;color:#14191F;-webkit-font-smoothing:antialiased;">
+<div style="display:none;max-height:0;overflow:hidden;opacity:0;">Votre code pour activer votre compte GSL systems.</div>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background-color:#F3F5F7;"><tr><td align="center" style="padding:32px 16px;">
+<table role="presentation" width="560" cellspacing="0" cellpadding="0" border="0" style="width:100%;max-width:560px;background-color:#ffffff;border:1px solid #D9DEE3;border-radius:8px;">
+<tr><td style="height:4px;background-color:#1F4E79;border-radius:8px 8px 0 0;font-size:1px;line-height:4px;">&nbsp;</td></tr>
+<tr><td align="center" style="padding:32px 32px 8px;"><a href="https://www.gsl-systems.com" style="text-decoration:none;"><img src="https://www.gsl-systems.com/brand/gsl-systems-email.png" width="168" height="80" alt="GSL systems" style="display:block;margin:0 auto;width:168px;height:auto;border:0;"></a></td></tr>
+<tr><td style="padding:24px 40px 36px;font-family:Inter,'Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<h1 style="margin:0 0 20px;font-family:Inter,'Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:24px;line-height:1.3;font-weight:700;color:#14191F;text-align:center;">Confirmez votre adresse email</h1>
+<p style="margin:0 0 12px;font-size:15px;line-height:1.7;">{{ if .Data.display_name }}Bonjour {{ .Data.display_name }},{{ else }}Bonjour,{{ end }}</p>
+<p style="margin:0 0 24px;font-size:15px;line-height:1.7;color:#5A6571;">Merci pour votre inscription. Saisissez ce code sur la page de confirmation pour activer votre compte.</p>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td align="center" style="padding:22px 12px;background-color:#F3F5F7;border:1px solid #D9DEE3;border-radius:6px;">
+<p style="margin:0 0 8px;font-family:Inter,'Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:13px;line-height:1.5;color:#5A6571;">Votre code</p>
+<p style="margin:0;font-family:Inter,'Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:34px;font-weight:700;letter-spacing:8px;padding-left:8px;line-height:1.3;color:#1F4E79;font-variant-numeric:tabular-nums;">{{ .Token }}</p>
 </td></tr></table>
-<p style="margin:16px 0 28px;font-size:13px;line-height:1.6;color:#56616e;">Ce code est valable <strong style="color:#252c33;">10 minutes</strong> et ne peut être utilisé qu’une seule fois.</p>
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="border-top:1px solid #e7ebef;padding-top:22px;">
-<p style="margin:0 0 10px;font-size:12px;line-height:1.7;color:#6a7582;">Ne communiquez ce code à personne. Notre équipe ne vous le demandera jamais.</p>
-<p style="margin:0;font-size:12px;line-height:1.7;color:#6a7582;">Si vous n’êtes pas à l’origine de cette demande, vous pouvez ignorer cet email.</p>
+<p style="margin:16px 0 24px;font-size:13px;line-height:1.6;color:#5A6571;text-align:center;">Code demandé pour {{ .Email }}. Il ne sert qu’une fois et expire après un court délai.</p>
+<p style="margin:0 0 28px;font-size:14px;line-height:1.7;color:#5A6571;">Une fois votre compte activé, vous pourrez compléter la fiche de votre entreprise.</p>
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0"><tr><td style="border-top:1px solid #D9DEE3;padding-top:20px;">
+<p style="margin:0 0 8px;font-size:12px;line-height:1.7;color:#5A6571;">Ne communiquez ce code à personne : l’équipe GSL systems ne vous le demandera jamais.</p>
+<p style="margin:0;font-size:12px;line-height:1.7;color:#5A6571;">Vous n’êtes pas à l’origine de cette demande ? Ignorez cet email, votre compte reste inchangé.</p>
 </td></tr></table>
-</td></tr></table>
-<p style="margin:22px 0 5px;font-size:12px;font-weight:bold;color:#465360;">GSL systems</p>
-<p style="margin:0;font-size:11px;line-height:1.6;color:#7b8591;">Global Supply Link</p>
+</td></tr>
+<tr><td style="padding:20px 40px;background-color:#0F1B26;border-radius:0 0 8px 8px;font-family:Inter,'Segoe UI',Roboto,'Helvetica Neue',Helvetica,Arial,sans-serif;">
+<p style="margin:0 0 4px;font-size:13px;font-weight:600;color:#ffffff;">GSL systems</p>
+<p style="margin:0;font-size:12px;line-height:1.6;color:#B8C2CC;">Sourcing de composants industriels · <a href="https://www.gsl-systems.com" style="color:#ffffff;text-decoration:underline;">gsl-systems.com</a> · <a href="mailto:contact@gsl-systems.com" style="color:#ffffff;text-decoration:underline;">contact@gsl-systems.com</a></p>
+</td></tr>
+</table>
 </td></tr></table>
 </body></html>

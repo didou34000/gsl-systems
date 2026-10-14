@@ -72,11 +72,11 @@ globalThis.__gslLocaleAuthFixture={auth:{
  select:()=>({eq:()=>({maybeSingle:async()=>({data:{user_id:'fixture'},error:null})})}),
  update:profile=>({eq:async()=>{calls.push(['profile',profile]);return {error:null}}}),
 })};
-const authSource=(await compile('app/api/auth/route.ts')).replace("'@/lib/supabase/server'",JSON.stringify(authUrl)).replace("'@/lib/auth-policy'",JSON.stringify(policyUrl)).replace("'@/lib/i18n/languages'",JSON.stringify(languagesUrl));
+const authSource=(await compile('app/api/auth/route.ts')).replace("'@/lib/supabase/server'",JSON.stringify(authUrl)).replace("'@/lib/auth-policy'",JSON.stringify(policyUrl)).replace("'@/lib/i18n/languages'",JSON.stringify(languagesUrl)).replace("'@/lib/onboarding/iso-countries'",JSON.stringify(dataUrl(await compile('lib/onboarding/iso-countries.ts')))).replace("'@/lib/sourcing-coverage'",JSON.stringify(dataUrl(await compile('lib/sourcing-coverage.ts'))));
 const route=await import(dataUrl(authSource));
 for(const language of locales){
  for(const action of ['signup','reset','profile']){
-  const request=new Request('https://www.gsl-systems.com/api/auth',{method:'POST',headers:{origin:'https://www.gsl-systems.com','Content-Type':'application/json'},body:JSON.stringify({action,language,email:'locales@example.invalid',name:'Locale tester',password:'synthetic-safe-passphrase',next:'/compte'})});
+  const request=new Request('https://www.gsl-systems.com/api/auth',{method:'POST',headers:{origin:'https://www.gsl-systems.com','Content-Type':'application/json'},body:JSON.stringify({action,language,email:'locales@example.invalid',name:'Locale tester',country:'FR',password:'synthetic-safe-passphrase',next:'/compte'})});
   const result=await route.POST(request);assert.equal(result.status,200,language+' '+action);
   const call=calls.at(-1);
   if(action==='signup'){assert.equal(call[1].options.data.language,language);assert.equal(new URL(call[1].options.emailRedirectTo).searchParams.get('lang'),language);}

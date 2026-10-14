@@ -1,6 +1,8 @@
 import {resolveLanguage} from '@/lib/i18n/languages';
 import {authClient} from '@/lib/supabase/server';
 import {allowedOrigin,safeNext,validPassword} from '@/lib/auth-policy';
+import {countryCodes} from '@/lib/onboarding/iso-countries';
+import {isSourcingCountry} from '@/lib/sourcing-coverage';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 export async function GET(){
@@ -31,7 +33,10 @@ export async function POST(request:Request){
   let error:{code?:string;status?:number;message:string}|null=null;
   if(action==='signup'){
    if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
-   ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback.toString(),data:{display_name:body.name.trim(),language:resolveLanguage(body.language)}}}));
+   // The sign-up asks for the company: its name doubles as the display name until a person's name is set.
+   if(typeof body.country!=='string'||!countryCodes.includes(body.country)||(body.purpose==='supplier'&&!isSourcingCountry(body.country)))return json({error:'COUNTRY'},400);
+   const legalForm=typeof body.legalForm==='string'?body.legalForm.trim().slice(0,120):'';
+   ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback.toString(),data:{display_name:body.name.trim(),language:resolveLanguage(body.language),company_name:body.name.trim(),company_country:body.country,company_legal_form:legalForm}}}));
   }else if(action==='verify'){
    ({error}=await db.auth.verifyOtp({email,token:body.code,type:body.flow==='recovery'?'recovery':'email'}));
    if(!error)return json({ok:true,next:body.flow==='recovery'?'/nouveau-mot-de-passe?next='+encodeURIComponent(safeNext(body.next)):safeNext(body.next)==='/compte'?'/compte?confirmed=1':safeNext(body.next)});
@@ -46,7 +51,21 @@ export async function POST(request:Request){
    ({error}=await db.auth.signOut({scope:'local'}));
   }else if(action==='password'||action==='profile'){
    const {data:{user}}=await db.auth.getUser();if(!user||!user.email_confirmed_at)return json({error:'LOGIN_REQUIRED'},401);
-   if(action==='password')({error}=await db.auth.updateUser({password:body.password}));
+   if(action==='password'){
+    // With an authenticator enrolled, Supabase only changes the password of an aal2 session.
+    // A recovery code gives aal1, so the current authenticator code is checked first.
+    const level=await db.auth.mfa.getAuthenticatorAssuranceLevel();
+    if(level.error)return json({error:'UNAVAILABLE'},503);
+    if(level.data.nextLevel==='aal2'&&level.data.currentLevel!=='aal2'){
+     if(typeof body.mfaCode!=='string'||!/^\d{6}$/.test(body.mfaCode))return json({error:'MFA_REQUIRED'},403);
+     const factors=await db.auth.mfa.listFactors();
+     const factor=factors.data?.totp.find(f=>f.status==='verified');
+     if(factors.error||!factor)return json({error:'UNAVAILABLE'},503);
+     const verified=await db.auth.mfa.challengeAndVerify({factorId:factor.id,code:body.mfaCode});
+     if(verified.error)return verified.error.status===429?json({error:'RATE_LIMIT'},429):json({error:'MFA_CODE'},400);
+    }
+    ({error}=await db.auth.updateUser({password:body.password}));
+   }
    else{
     if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
     const {data:existing,error:readError}=await db.from('profiles').select('user_id').eq('user_id',user.id).maybeSingle();
@@ -64,6 +83,7 @@ export async function POST(request:Request){
    if(action==='login')return json({error:'CREDENTIALS'},400);
    if(error.code==='same_password')return json({error:'SAME_PASSWORD'},400);
    if(error.code==='weak_password')return json({error:'PASSWORD'},400);
+   if(error.code==='insufficient_aal')return json({error:'MFA_REQUIRED'},403);
    // Never disclose account existence or echo provider/SMTP internals.
    if(['user_already_exists','email_exists'].includes(error.code||''))return json({ok:true});
    return json({error:emailAction?'EMAIL_UNAVAILABLE':'UNAVAILABLE'},503);
