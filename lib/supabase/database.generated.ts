@@ -90,6 +90,7 @@ export interface DatabaseRows {
     accepted_proposal_id: string | null;
     created_at: string;
     updated_at: string;
+    board_shared_at: string | null;
   };
   delivery_events: {
     id: string;

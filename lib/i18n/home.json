@@ -538,5 +538,175 @@
     "جميع المقالات",
     "सभी लेख",
     "全部文章"
+  ],
+  "pcs": [
+    "uds.",
+    "un.",
+    "Stk.",
+    "pz",
+    "adet",
+    "قطعة",
+    "नग",
+    "件"
+  ],
+  "Details are reserved for registered manufacturers": [
+    "El detalle está reservado a los fabricantes registrados",
+    "O detalhe está reservado aos fabricantes registados",
+    "Details sind registrierten Herstellern vorbehalten",
+    "Il dettaglio è riservato ai produttori registrati",
+    "Ayrıntılar kayıtlı üreticilere ayrılmıştır",
+    "التفاصيل مخصّصة للمصنّعين المسجّلين",
+    "विवरण केवल पंजीकृत निर्माताओं के लिए है",
+    "详细信息仅向注册制造商开放"
+  ],
+  "Create your manufacturer account to see each request’s title and lines, then reply through GSL. Buyer identity and contact details are never shown.": [
+    "Cree su cuenta de fabricante para ver el título y las líneas de cada solicitud y responder a través de GSL. La identidad y los datos de contacto del comprador nunca se muestran.",
+    "Crie a sua conta de fabricante para ver o título e as linhas de cada pedido e responder através da GSL. A identidade e os contactos do comprador nunca são mostrados.",
+    "Erstellen Sie Ihr Herstellerkonto, um Titel und Positionen jeder Anfrage zu sehen und über GSL zu antworten. Identität und Kontaktdaten des Käufers werden nie angezeigt.",
+    "Crea il tuo account produttore per vedere il titolo e le righe di ogni richiesta e rispondere tramite GSL. L’identità e i contatti dell’acquirente non vengono mai mostrati.",
+    "Her talebin başlığını ve kalemlerini görmek ve GSL üzerinden yanıt vermek için üretici hesabınızı oluşturun. Alıcının kimliği ve iletişim bilgileri asla gösterilmez.",
+    "أنشئ حساب المصنّع لرؤية عنوان كل طلب وبنوده ثم الرد عبر GSL. لا تُعرض هوية المشتري ولا بيانات الاتصال به أبدًا.",
+    "प्रत्येक अनुरोध का शीर्षक और पंक्तियाँ देखने और GSL के माध्यम से उत्तर देने के लिए अपना निर्माता खाता बनाएँ। खरीदार की पहचान और संपर्क विवरण कभी नहीं दिखाए जाते।",
+    "创建制造商账户即可查看每个需求的标题和明细，并通过 GSL 回复。买家身份和联系方式绝不会显示。"
+  ],
+  "Register as a manufacturer": [
+    "Registrarme como fabricante",
+    "Registar-me como fabricante",
+    "Als Hersteller registrieren",
+    "Registrati come produttore",
+    "Üretici olarak kaydol",
+    "سجّل كمصنّع",
+    "निर्माता के रूप में पंजीकरण करें",
+    "注册为制造商"
+  ],
+  "Buyer requests": [
+    "Solicitudes de compra",
+    "Pedidos de compra",
+    "Kaufanfragen",
+    "Richieste di acquisto",
+    "Alım talepleri",
+    "طلبات الشراء",
+    "खरीद अनुरोध",
+    "采购需求"
+  ],
+  "European buyers who agree to it publish a summary of their request here. Only the reference, destination, deadline and number of lines are public.": [
+    "Los compradores europeos que lo aceptan publican aquí un resumen de su solicitud. Solo la referencia, el destino, el plazo y el número de líneas son públicos.",
+    "Os compradores europeus que o aceitam publicam aqui um resumo do seu pedido. Apenas a referência, o destino, o prazo e o número de linhas são públicos.",
+    "Europäische Käufer, die zustimmen, veröffentlichen hier eine Zusammenfassung ihrer Anfrage. Öffentlich sind nur Referenz, Zielland, Frist und Anzahl der Positionen.",
+    "Gli acquirenti europei che lo accettano pubblicano qui un riepilogo della loro richiesta. Sono pubblici solo il riferimento, la destinazione, la scadenza e il numero di righe.",
+    "Kabul eden Avrupalı alıcılar taleplerinin bir özetini burada yayımlar. Yalnızca referans, varış ülkesi, son tarih ve kalem sayısı herkese açıktır.",
+    "ينشر هنا المشترون الأوروبيون الموافقون ملخصًا لطلبهم. المرجع والوجهة والموعد النهائي وعدد البنود فقط هي العامة.",
+    "सहमति देने वाले यूरोपीय खरीदार यहाँ अपने अनुरोध का सारांश प्रकाशित करते हैं। केवल संदर्भ, गंतव्य, समय-सीमा और पंक्तियों की संख्या सार्वजनिक है।",
+    "同意公开的欧洲买家在此发布其需求摘要。仅编号、目的地、截止日期和明细行数公开。"
+  ],
+  "Loading requests…": [
+    "Cargando solicitudes…",
+    "A carregar pedidos…",
+    "Anfragen werden geladen…",
+    "Caricamento delle richieste…",
+    "Talepler yükleniyor…",
+    "جارٍ تحميل الطلبات…",
+    "अनुरोध लोड हो रहे हैं…",
+    "正在加载需求…"
+  ],
+  "The request board is not active yet. Published requests will appear here.": [
+    "La página de solicitudes aún no está activa. Las solicitudes publicadas aparecerán aquí.",
+    "A página de pedidos ainda não está ativa. Os pedidos publicados aparecerão aqui.",
+    "Die Anfrageseite ist noch nicht aktiv. Veröffentlichte Anfragen erscheinen hier.",
+    "La pagina delle richieste non è ancora attiva. Le richieste pubblicate appariranno qui.",
+    "Talep sayfası henüz etkin değil. Yayımlanan talepler burada görünecek.",
+    "صفحة الطلبات غير مفعّلة بعد. ستظهر الطلبات المنشورة هنا.",
+    "अनुरोध पृष्ठ अभी सक्रिय नहीं है। प्रकाशित अनुरोध यहाँ दिखाई देंगे।",
+    "需求页面尚未启用。已发布的需求将显示在此处。"
+  ],
+  "No request is published at the moment.": [
+    "No hay ninguna solicitud publicada por ahora.",
+    "Nenhum pedido publicado de momento.",
+    "Derzeit ist keine Anfrage veröffentlicht.",
+    "Al momento non è pubblicata alcuna richiesta.",
+    "Şu anda yayımlanmış talep yok.",
+    "لا يوجد أي طلب منشور حاليًا.",
+    "इस समय कोई अनुरोध प्रकाशित नहीं है।",
+    "目前没有已发布的需求。"
+  ],
+  "Unlocked": [
+    "Desbloqueado",
+    "Desbloqueado",
+    "Entsperrt",
+    "Sbloccato",
+    "Kilit açık",
+    "مفتوح",
+    "अनलॉक",
+    "已解锁"
+  ],
+  "Locked": [
+    "Bloqueado",
+    "Bloqueado",
+    "Gesperrt",
+    "Bloccato",
+    "Kilitli",
+    "مقفل",
+    "लॉक",
+    "已锁定"
+  ],
+  "Delivery to": [
+    "Entrega en",
+    "Entrega em",
+    "Lieferung nach",
+    "Consegna in",
+    "Teslimat yeri",
+    "التسليم إلى",
+    "डिलीवरी",
+    "交付至"
+  ],
+  "Lines": [
+    "Líneas",
+    "Linhas",
+    "Positionen",
+    "Righe",
+    "Kalemler",
+    "البنود",
+    "पंक्तियाँ",
+    "明细行"
+  ],
+  "Deadline": [
+    "Plazo",
+    "Prazo",
+    "Frist",
+    "Scadenza",
+    "Son tarih",
+    "الموعد النهائي",
+    "समय-सीमा",
+    "截止日期"
+  ],
+  "Reply through GSL": [
+    "Responder a través de GSL",
+    "Responder através da GSL",
+    "Über GSL antworten",
+    "Rispondi tramite GSL",
+    "GSL üzerinden yanıtla",
+    "الرد عبر GSL",
+    "GSL के माध्यम से उत्तर दें",
+    "通过 GSL 回复"
+  ],
+  "Buyer requests for robotics components": [
+    "Solicitudes de compra de componentes robóticos",
+    "Pedidos de compra de componentes robóticos",
+    "Kaufanfragen für Robotikkomponenten",
+    "Richieste di acquisto di componenti robotici",
+    "Robotik bileşen alım talepleri",
+    "طلبات شراء مكوّنات روبوتية",
+    "रोबोटिक्स घटकों के खरीद अनुरोध",
+    "机器人零部件采购需求"
+  ],
+  "European buyers’ requests for robotics components. Register as a manufacturer to see the details and reply through GSL.": [
+    "Solicitudes de compradores europeos de componentes robóticos. Regístrese como fabricante para ver el detalle y responder a través de GSL.",
+    "Pedidos de compradores europeus de componentes robóticos. Registe-se como fabricante para ver o detalhe e responder através da GSL.",
+    "Anfragen europäischer Käufer nach Robotikkomponenten. Registrieren Sie sich als Hersteller, um Details zu sehen und über GSL zu antworten.",
+    "Richieste di acquirenti europei di componenti robotici. Registrati come produttore per vedere il dettaglio e rispondere tramite GSL.",
+    "Avrupalı alıcıların robotik bileşen talepleri. Ayrıntıları görmek ve GSL üzerinden yanıt vermek için üretici olarak kaydolun.",
+    "طلبات مشترين أوروبيين لمكوّنات روبوتية. سجّل كمصنّع لرؤية التفاصيل والرد عبر GSL.",
+    "रोबोटिक्स घटकों के लिए यूरोपीय खरीदारों के अनुरोध। विवरण देखने और GSL के माध्यम से उत्तर देने के लिए निर्माता के रूप में पंजीकरण करें।",
+    "欧洲买家的机器人零部件需求。注册为制造商即可查看详情并通过 GSL 回复。"
   ]
 }
