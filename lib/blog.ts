@@ -1,11 +1,11 @@
 /**
  * Buyer guides published under /blog. Method only: no market figure, price or supplier claim.
- * Regulations are cited by their official reference. Images stay null until the owner supplies
- * the files listed in /mnt/project-files/images-site/LISTE-IMAGES.md, then point to /blog/<file>.
+ * Regulations are cited by their official reference. Owner-supplied generated illustrations
+ * are stored under /blog; they are not evidence of a real product or supplier.
  */
 type Text={fr:string;en:string};
 export type BlogBlock={kind:'p';text:Text}|{kind:'h2';text:Text}|{kind:'list';items:Text[]}|{kind:'image';key:'detail'};
-export type BlogArticle={slug:string;date:string;title:Text;summary:Text;cover:string|null;detail:string|null;alt:Text;body:BlogBlock[]};
+export type BlogArticle={slug:string;date:string;title:Text;summary:Text;cover:string|null;detail:string|null;alt:Text;detailAlt:Text;body:BlogBlock[]};
 
 const p=(fr:string,en:string):BlogBlock=>({kind:'p',text:{fr,en}});
 const h=(fr:string,en:string):BlogBlock=>({kind:'h2',text:{fr,en}});
@@ -13,7 +13,8 @@ const list=(...items:[string,string][]):BlogBlock=>({kind:'list',items:items.map
 const detail:BlogBlock={kind:'image',key:'detail'};
 
 export const blogArticles:BlogArticle[]=[
- {slug:'choisir-reducteur-articulation-robot',date:'2026-10-14',cover:null,detail:null,
+ {slug:'choisir-reducteur-articulation-robot',date:'2026-10-14',cover:'/blog/article-reducteurs-couverture.jpg',detail:'/blog/article-reducteurs-detail.jpg',
+  detailAlt:{"fr": "Réducteur ouvert montrant son mécanisme interne, tenu par une main gantée", "en": "Opened reducer showing its internal mechanism, held by a gloved hand"},
   title:{fr:'Réducteur harmonique, cycloïdal ou planétaire : choisir pour une articulation de robot',en:'Harmonic, cycloidal or planetary: choosing a reducer for a robot joint'},
   summary:{fr:'Les critères à comparer et les questions à poser au fabricant avant de demander un devis.',en:'The criteria to compare and the questions to ask the manufacturer before requesting a quote.'},
   alt:{fr:'Réducteurs de robot posés sur un établi',en:'Robot reducers on a workbench'},
@@ -28,7 +29,8 @@ export const blogArticles:BlogArticle[]=[
    list(['Les valeurs de la fiche technique sont-elles mesurées sur votre banc ou calculées ?','Are datasheet values measured on your test bench or calculated?'],['Pouvez-vous fournir une courbe de jeu et de rigidité pour la référence exacte ?','Can you provide a backlash and stiffness curve for the exact reference?'],['Quel lubrifiant est utilisé, et quel intervalle d’entretien recommandez-vous ?','Which lubricant is used, and what maintenance interval do you recommend?'],['Quelle est la quantité minimale de commande et le délai pour des échantillons ?','What is the minimum order quantity and the lead time for samples?']),
    p('Décrivez l’articulation (charge, vitesse, cycle, encombrement disponible) plutôt qu’une référence : un fabricant peut alors proposer la technologie adaptée, et les offres reçues restent comparables.','Describe the joint (load, speed, duty cycle, available space) rather than a part number: a manufacturer can then propose the right technology, and the offers you receive stay comparable.'),
   ]},
- {slug:'preparer-demande-devis-actionneurs',date:'2026-10-14',cover:null,detail:null,
+ {slug:'preparer-demande-devis-actionneurs',date:'2026-10-14',cover:'/blog/article-devis-actionneurs-couverture.jpg',detail:'/blog/article-devis-actionneurs-detail.jpg',
+  detailAlt:{"fr": "Technicien mesurant un arbre de servomoteur avec un pied à coulisse", "en": "Technician measuring a servomotor shaft with a caliper"},
   title:{fr:'Préparer une demande de devis pour des actionneurs',en:'Preparing a quote request for actuators'},
   summary:{fr:'Les informations à donner pour recevoir des offres précises et comparables.',en:'The information to give in order to receive precise, comparable offers.'},
   alt:{fr:'Actionneur de robot et pied à coulisse sur un bureau',en:'Robot actuator and caliper on a desk'},
@@ -43,7 +45,8 @@ export const blogArticles:BlogArticle[]=[
    list(['Quantités : échantillons, présérie, puis volume annuel estimé.','Quantities: samples, pre-series, then estimated annual volume.'],['Lieu de livraison et Incoterm souhaité.','Delivery place and preferred Incoterm.'],['Documents attendus avec l’offre : fiche technique, déclaration de conformité, rapports d’essai.','Documents expected with the offer: datasheet, declaration of conformity, test reports.'],['Date à laquelle vous devez décider.','Date by which you must decide.']),
    p('Joignez un plan ou un croquis de l’articulation si vous l’avez. Indiquez aussi ce qui est négociable : un fabricant peut proposer une variante standard moins chère si l’encombrement ou la tension ont un peu de marge.','Attach a drawing or sketch of the joint if you have one. Also say what is negotiable: a manufacturer may offer a cheaper standard variant if size or voltage have some margin.'),
   ]},
- {slug:'importer-composants-hors-ue-documents',date:'2026-10-14',cover:null,detail:null,
+ {slug:'importer-composants-hors-ue-documents',date:'2026-10-14',cover:'/blog/article-import-documents-couverture.jpg',detail:'/blog/article-import-documents-detail.jpg',
+  detailAlt:{"fr": "Classeur de documents et moteur emballé sur un bureau", "en": "Document binder and packaged motor on a desk"},
   title:{fr:'Importer des composants fabriqués hors UE : les documents à exiger',en:'Importing components made outside the EU: the documents to require'},
   summary:{fr:'Conformité, marquage, identification douanière : ce qu’il faut demander avant la commande.',en:'Conformity, marking, customs identification: what to ask for before ordering.'},
   alt:{fr:'Caisses de composants dans un entrepôt',en:'Component crates in a warehouse'},
@@ -57,7 +60,8 @@ export const blogArticles:BlogArticle[]=[
    list(['Un numéro EORI pour l’entreprise qui dédouane.','An EORI number for the company clearing the goods.'],['Le code de nomenclature douanière du produit, à vérifier dans la base TARIC de la Commission européenne.','The product’s customs tariff code, to be checked in the European Commission’s TARIC database.'],['Le justificatif d’origine, si vous voulez bénéficier d’un accord commercial entre l’UE et le pays de fabrication.','The proof of origin, if you want to benefit from a trade agreement between the EU and the country of manufacture.'],['L’Incoterm, qui fixe qui paie et qui assume le risque à chaque étape du transport.','The Incoterm, which sets who pays and who bears the risk at each stage of transport.']),
    p('Demandez ces documents par écrit dans la demande de devis. Un fabricant qui ne peut pas les fournir pour la référence exacte doit être écarté, ou qualifié avant toute commande.','Ask for these documents in writing in the quote request. A manufacturer who cannot provide them for the exact reference should be set aside, or qualified before any order.'),
   ]},
- {slug:'batteries-lithium-robots-transport-documents',date:'2026-10-14',cover:null,detail:null,
+ {slug:'batteries-lithium-robots-transport-documents',date:'2026-10-14',cover:'/blog/article-batteries-couverture.jpg',detail:'/blog/article-batteries-detail.jpg',
+  detailAlt:{"fr": "Pack batterie protégé par des calages dans un carton d’expédition ouvert", "en": "Battery pack held in protective padding inside an open shipping box"},
   title:{fr:'Batteries lithium pour robots : transport et documents',en:'Lithium batteries for robots: transport and documents'},
   summary:{fr:'Les justificatifs à obtenir avant d’expédier ou d’importer un pack batterie.',en:'The evidence to obtain before shipping or importing a battery pack.'},
   alt:{fr:'Pack batterie lithium sur un tapis antistatique',en:'Lithium battery pack on an antistatic mat'},
@@ -65,13 +69,14 @@ export const blogArticles:BlogArticle[]=[
    p('Les batteries lithium-ion sont classées marchandises dangereuses pour le transport. Un pack sans les bons documents peut être refusé par le transporteur ou bloqué à l’arrivée. Il faut donc traiter la batterie comme un sujet à part dans la demande de devis.','Lithium-ion batteries are classed as dangerous goods for transport. A pack without the right documents can be refused by the carrier or held on arrival. The battery must therefore be treated as a separate subject in the quote request.'),
    h('Les documents à exiger','Documents to require'),
    list(['Le résumé des essais UN 38.3, prévus par le Manuel d’épreuves et de critères des Nations unies, pour la référence exacte du pack.','The UN 38.3 test summary, from the United Nations Manual of Tests and Criteria, for the exact pack reference.'],['La fiche de données de sécurité du pack ou des cellules.','The safety data sheet for the pack or the cells.'],['La référence et le fabricant des cellules utilisées.','The reference and manufacturer of the cells used.'],['La description du système de gestion de batterie (BMS) : protections, communication, équilibrage.','A description of the battery management system (BMS): protections, communication, balancing.']),
-   detail,
    h('La réglementation européenne','European regulation'),
    p('Le règlement (UE) 2023/1542 relatif aux batteries encadre la mise sur le marché européen des batteries, avec des obligations d’étiquetage, d’information et de fin de vie qui entrent en vigueur par étapes. Vérifiez avec votre fournisseur quelles obligations s’appliquent déjà au type de batterie que vous importez.','Regulation (EU) 2023/1542 concerning batteries governs placing batteries on the EU market, with labelling, information and end-of-life obligations coming into force in stages. Check with your supplier which obligations already apply to the type of battery you import.'),
    h('Le transport','Transport'),
+   detail,
    list(['Les règles diffèrent selon le mode : route (ADR), mer (code IMDG) et air (instructions de l’IATA).','Rules differ by mode: road (ADR), sea (IMDG Code) and air (IATA instructions).'],['L’état de charge à l’expédition, l’emballage et l’étiquetage sont imposés par ces règles.','State of charge at shipment, packaging and labelling are set by these rules.'],['Confirmez avec le transporteur, avant la commande, qu’il accepte l’envoi tel qu’il sera préparé.','Confirm with the carrier, before ordering, that it accepts the shipment as it will be prepared.']),
   ]},
- {slug:'cables-dynamiques-connecteurs-robotique',date:'2026-10-14',cover:null,detail:null,
+ {slug:'cables-dynamiques-connecteurs-robotique',date:'2026-10-14',cover:'/blog/article-cables-couverture.jpg',detail:'/blog/article-cables-detail.jpg',
+  detailAlt:{"fr": "Chaîne porte-câbles sur un banc de mouvement linéaire", "en": "Cable carrier on a linear motion test bench"},
   title:{fr:'Câbles dynamiques et connecteurs pour la robotique : ce qu’il faut vérifier',en:'Dynamic cables and connectors for robotics: what to check'},
   summary:{fr:'Flexion, torsion, connectique : les points qui font la différence dans une articulation.',en:'Bending, torsion, connectors: the points that make the difference in a joint.'},
   alt:{fr:'Faisceau de câbles traversant une articulation de robot',en:'Cable harness running through a robot joint'},
