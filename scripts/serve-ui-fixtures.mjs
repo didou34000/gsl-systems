@@ -11,7 +11,7 @@ const iso=encoded(compile('lib/onboarding/iso-countries.ts'));
 const coverage=encoded(compile('lib/sourcing-coverage.ts'));
 const countries=encoded(compile('lib/onboarding/country-requirements.ts'));
 const options=encoded(compile('lib/onboarding/country-options.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'../sourcing-coverage'",JSON.stringify(coverage)));
-const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'../sourcing-coverage'",JSON.stringify(coverage)).replace("'./country-requirements'",JSON.stringify(countries)).replace("'./country-options'",JSON.stringify(options)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'../sourcing-coverage'",JSON.stringify(coverage)).replace("'./country-requirements'",JSON.stringify(countries)).replace("'./country-options'",JSON.stringify(options)).replace("'../products/spec-fields'",JSON.stringify(encoded(compile('lib/products/spec-fields.ts')))).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
 const {emptyProfile,supplierDraftSchema,supplierSchema,productPublicationIssues,companyIssues,profileIssues,supplierValidationIssues}=await import(encoded(code));
 const org=randomUUID(),product=randomUUID(),user=randomUUID();
 let favorites=[product];let buyerCompany=null;let requests=[];let profile=emptyProfile();

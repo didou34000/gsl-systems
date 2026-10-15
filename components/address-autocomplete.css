@@ -1,0 +1,13 @@
+.address-autocomplete{display:grid;gap:9px;font-size:13px;font-weight:500;min-width:0}
+.address-autocomplete-box{position:relative}
+.address-autocomplete-box input{width:100%}
+.address-autocomplete-popup{position:absolute;z-index:30;top:calc(100% + 4px);left:0;right:0;background:#fff;border:1px solid #D9DEE3;border-radius:4px;box-shadow:0 8px 24px rgba(15,27,38,.10);overflow:hidden}
+.address-autocomplete-popup ul{list-style:none;margin:0;padding:4px 0;max-height:280px;overflow-y:auto}
+.address-autocomplete-popup li{display:grid;gap:2px;padding:9px 12px;cursor:pointer;color:#14191F;font-weight:400}
+.address-autocomplete-popup li span{font-size:14px;line-height:1.4;overflow-wrap:anywhere}
+.address-autocomplete-popup li small{font-size:12px;color:#5A6571;line-height:1.4}
+.address-autocomplete-popup li.active,.address-autocomplete-popup li:hover{background:#F3F5F7;box-shadow:inset 2px 0 #1F4E79}
+.address-autocomplete-attribution{margin:0;padding:6px 12px;border-top:1px solid #D9DEE3;font-size:11px;font-weight:400;text-align:right;color:#5A6571}
+.address-autocomplete-attribution a{color:inherit}
+.address-autocomplete-hint{font-size:12px;font-weight:400;color:#5A6571;line-height:1.5}
+.address-autocomplete-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

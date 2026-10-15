@@ -1,0 +1,47 @@
+/* Public product page — "Acier" palette. Builds on industrial-sheets.css (.ind-*). */
+.ps .ps-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start;padding-bottom:32px;border-bottom:1px solid var(--ind-line,#D9DEE3)}
+.ps-gallery{min-width:0}
+.ps-gallery .product-picture{margin:0}
+.ps-gallery .product-picture img{border:1px solid var(--ind-line,#D9DEE3)}
+.ps-gallery-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;aspect-ratio:4/3;border:1px solid var(--ind-line,#D9DEE3);border-radius:8px;background:var(--ind-soft,#F3F5F7);color:#8A949E;text-align:center;padding:24px}
+.ps-gallery-empty p{margin:0;font-size:13.5px;color:var(--ind-muted,#5A6571)}
+.ps-thumbnails{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.ps-thumbnails button{width:72px;height:54px;padding:0;border:1px solid var(--ind-line,#D9DEE3);border-radius:4px;overflow:hidden;background:#fff}
+.ps-thumbnails button[aria-pressed=true]{border-color:var(--ind-accent,#1F4E79);box-shadow:0 0 0 1px var(--ind-accent,#1F4E79)}
+.ps-thumbnails img{display:block;width:100%;height:100%;object-fit:cover}
+.ps-summary{display:flex;flex-direction:column;gap:12px;min-width:0}
+.ps-summary h1{margin:0;font-size:clamp(26px,2.8vw,36px);line-height:1.18;font-weight:600;letter-spacing:-.6px;color:var(--ind-ink,#14191F);overflow-wrap:anywhere}
+.ps-summary .ind-meta{margin:0}
+.ps-reference{margin:0;font-size:14px;color:var(--ind-muted,#5A6571)}
+.ps-reference span{color:var(--ind-ink,#14191F);font-weight:500}
+.ps-badges{display:flex;flex-wrap:wrap;gap:8px}
+.ps-badges:empty{display:none}
+.ps-summary .robotics-scope{margin:0;padding:12px 14px;border-radius:6px;background:var(--ind-soft,#F3F5F7);font-size:14px;color:var(--ind-muted,#5A6571)}
+.ps-facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:4px 0 0;border-top:1px solid var(--ind-line,#D9DEE3)}
+.ps-facts>div{padding:12px 12px 12px 0;border-bottom:1px solid var(--ind-line,#D9DEE3);min-width:0}
+.ps-facts>div:nth-child(even){padding-left:12px;border-left:1px solid var(--ind-line,#D9DEE3)}
+.ps-facts dt{font-size:12.5px;color:var(--ind-muted,#5A6571)}
+.ps-facts dd{display:flex;align-items:center;gap:7px;margin:3px 0 0;font-size:15px;font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.ps-mobile-actions{display:none}
+.ps .ind-sheet-layout{margin-top:28px}
+.ps .ind-sheet-main{gap:36px}
+.ps .ind-footnote a{color:var(--ind-accent,#1F4E79);font-weight:500;text-decoration:underline;text-underline-offset:3px}
+.ps-contact .ind-button,.ps-contact .ind-button-secondary{width:100%}
+.ps-price{margin:4px 0 0;font-size:13px;line-height:1.5;color:var(--ind-muted,#5A6571)}
+.ps-maker{gap:12px}
+.ps-maker-kicker{margin:0;font-size:12.5px;color:var(--ind-muted,#5A6571)}
+.ps-maker-head{display:flex;align-items:center;gap:12px;min-width:0}
+.ps-maker-head .catalogue-company-monogram,.ps-maker-head .catalogue-company-logo{flex:0 0 44px;width:44px;height:44px;font-size:16px;border-radius:6px}
+.ps-maker-head div{display:flex;flex-direction:column;gap:3px;min-width:0}
+.ps-maker-head strong{font-size:16px;overflow-wrap:anywhere}
+.ps-maker-head span{display:flex;align-items:center;gap:7px;font-size:13.5px;color:var(--ind-muted,#5A6571)}
+.ps-maker-status{margin:0;padding:8px 10px;border-radius:4px;background:var(--ind-soft,#F3F5F7);font-size:13px;color:var(--ind-ink,#14191F)}
+.ps-maker-site{display:flex;align-items:flex-start;gap:7px;margin:0;font-size:13px;line-height:1.45;color:var(--ind-muted,#5A6571)}
+.ps-maker-site svg{flex-shrink:0;margin-top:2px}
+.ps-maker-link{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--ind-accent,#1F4E79)}
+.ps-maker-link:hover{color:var(--ind-accent-dark,#173B5C)}
+[dir=rtl] .ps-maker-link svg{transform:scaleX(-1)}
+@media(max-width:1100px){.ps .ps-intro{grid-template-columns:1fr;gap:24px}.ps-gallery,.ps-gallery-empty{max-width:560px}}
+@media(max-width:860px){.ps-mobile-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}.ps-mobile-actions a{flex:1 1 200px}}
+@media(max-width:640px){.ps .ps-intro{padding-bottom:24px}.ps-gallery-empty{aspect-ratio:16/9}.ps-facts{grid-template-columns:1fr}.ps-facts>div:nth-child(even){padding-left:0;border-left:0}}
+.ps-description{white-space:pre-line}

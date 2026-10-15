@@ -8,7 +8,7 @@ import {useLanguage} from './language';
 import {useUnreadMessages} from './message-link';
 
 /** Routes that belong to the signed-in workspace and share its navigation. */
-export const workspaceRoutes=['/compte','/messagerie','/operations','/espace-fournisseur','/mes-produits','/selection'];
+export const workspaceRoutes=['/compte','/messagerie','/operations','/espace-fournisseur','/mes-produits','/selection','/compte/securite'];
 
 type Item={href:string;label:string;Icon:typeof LayoutDashboard;count?:number;current:boolean};
 
@@ -30,7 +30,7 @@ export default function WorkspaceShell({path,user,company=null,favorites,childre
   ]},
   {label:l('Account','Compte'),items:[
    {href:'/compte?vue=parametres',label:l('Account settings','Paramètres du compte'),Icon:Settings,current:settings},
-   {href:'/compte/securite',label:l('Security','Sécurité'),Icon:ShieldCheck,current:false},
+   {href:'/compte/securite',label:l('Security','Sécurité'),Icon:ShieldCheck,current:path==='/compte/securite'},
   ]},
  ];
  async function signOut(){setLeaving(true);try{await fetch('/api/auth',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'logout'})})}finally{window.location.assign('/connexion')}}

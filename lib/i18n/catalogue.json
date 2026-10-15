@@ -1528,5 +1528,415 @@
     "صورة من الشركة المصنّعة، مستخدمة بإذنها",
     "निर्माता की फ़ोटो, अनुमति से उपयोग",
     "制造商照片，经许可使用"
+  ],
+  "Manufacturer reference": [
+    "Referencia del fabricante",
+    "Referência do fabricante",
+    "Herstellerreferenz",
+    "Riferimento del produttore",
+    "Üretici referansı",
+    "مرجع الشركة المصنعة",
+    "निर्माता संदर्भ",
+    "制造商型号"
+  ],
+  "No photo published for this product": [
+    "No se ha publicado ninguna foto de este producto",
+    "Nenhuma foto publicada para este produto",
+    "Für dieses Produkt wurde kein Foto veröffentlicht",
+    "Nessuna foto pubblicata per questo prodotto",
+    "Bu ürün için yayımlanmış fotoğraf yok",
+    "لم تُنشر أي صورة لهذا المنتج",
+    "इस उत्पाद के लिए कोई फ़ोटो प्रकाशित नहीं है",
+    "该产品暂无已发布的照片"
+  ],
+  "Photo": [
+    "Foto",
+    "Foto",
+    "Foto",
+    "Foto",
+    "Fotoğraf",
+    "صورة",
+    "फ़ोटो",
+    "照片"
+  ],
+  "Documented by GSL from public sources": [
+    "Documentado por GSL a partir de fuentes públicas",
+    "Documentado pela GSL a partir de fontes públicas",
+    "Von GSL anhand öffentlicher Quellen dokumentiert",
+    "Documentato da GSL a partire da fonti pubbliche",
+    "GSL tarafından kamuya açık kaynaklardan belgelendi",
+    "وثّقته GSL من مصادر عامة",
+    "GSL द्वारा सार्वजनिक स्रोतों से प्रलेखित",
+    "由 GSL 根据公开来源整理"
+  ],
+  "Not admitted to the GSL catalogue": [
+    "No admitido en el catálogo de GSL",
+    "Não admitido no catálogo GSL",
+    "Nicht in den GSL-Katalog aufgenommen",
+    "Non ammesso al catalogo GSL",
+    "GSL kataloğuna kabul edilmedi",
+    "غير مقبول في كتالوج GSL",
+    "GSL कैटलॉग में शामिल नहीं",
+    "未纳入 GSL 目录"
+  ],
+  "Profile reviewed by GSL": [
+    "Expediente examinado por GSL",
+    "Dossiê examinado pela GSL",
+    "Von GSL geprüftes Unternehmensprofil",
+    "Profilo esaminato da GSL",
+    "GSL tarafından incelenen profil",
+    "ملف راجعته GSL",
+    "GSL द्वारा समीक्षित प्रोफ़ाइल",
+    "经 GSL 审核的企业资料"
+  ],
+  "Sales unit": [
+    "Unidad de venta",
+    "Unidade de venda",
+    "Verkaufseinheit",
+    "Unità di vendita",
+    "Satış birimi",
+    "وحدة البيع",
+    "बिक्री इकाई",
+    "销售单位"
+  ],
+  "Published by its manufacturer and reachable by direct link. GSL has not reviewed this product and it does not appear in the catalogue.": [
+    "Publicado por su fabricante y accesible mediante enlace directo. GSL no ha examinado este producto y no aparece en el catálogo.",
+    "Publicado pelo seu fabricante e acessível por link direto. A GSL não examinou este produto e ele não aparece no catálogo.",
+    "Vom Hersteller veröffentlicht und über einen direkten Link erreichbar. GSL hat dieses Produkt nicht geprüft und es erscheint nicht im Katalog.",
+    "Pubblicato dal produttore e raggiungibile tramite link diretto. GSL non ha esaminato questo prodotto e non compare nel catalogo.",
+    "Üreticisi tarafından yayımlandı ve doğrudan bağlantıyla erişilebilir. GSL bu ürünü incelemedi ve ürün katalogda yer almıyor.",
+    "نشرته الشركة المصنعة ويمكن الوصول إليه عبر رابط مباشر. لم تراجع GSL هذا المنتج ولا يظهر في الكتالوج.",
+    "इसके निर्माता द्वारा प्रकाशित और सीधे लिंक से उपलब्ध। GSL ने इस उत्पाद की समीक्षा नहीं की है और यह कैटलॉग में नहीं दिखता।",
+    "由制造商自行发布，可通过直接链接访问。GSL 尚未审核该产品，它不会出现在目录中。"
+  ],
+  "On quotation": [
+    "Bajo presupuesto",
+    "Sob orçamento",
+    "Auf Anfrage",
+    "Su preventivo",
+    "Teklif üzerine",
+    "حسب عرض السعر",
+    "कोटेशन पर",
+    "按报价"
+  ],
+  "No technical specification published. Ask the manufacturer for its datasheet.": [
+    "No se ha publicado ninguna especificación técnica. Pida la ficha técnica al fabricante.",
+    "Nenhuma especificação técnica publicada. Peça a ficha técnica ao fabricante.",
+    "Keine technischen Daten veröffentlicht. Fordern Sie das Datenblatt beim Hersteller an.",
+    "Nessuna specifica tecnica pubblicata. Chiedete la scheda tecnica al produttore.",
+    "Yayımlanmış teknik özellik yok. Teknik föyü üreticiden isteyin.",
+    "لم تُنشر أي مواصفات فنية. اطلب ورقة البيانات من الشركة المصنعة.",
+    "कोई तकनीकी विनिर्देश प्रकाशित नहीं है। निर्माता से उसकी डेटाशीट माँगें।",
+    "未发布技术规格。请向制造商索取产品规格书。"
+  ],
+  "Commercial terms": [
+    "Condiciones comerciales",
+    "Condições comerciais",
+    "Geschäftsbedingungen",
+    "Condizioni commerciali",
+    "Ticari koşullar",
+    "الشروط التجارية",
+    "वाणिज्यिक शर्तें",
+    "商务条件"
+  ],
+  "Compliance and documents": [
+    "Conformidad y documentos",
+    "Conformidade e documentos",
+    "Konformität und Dokumente",
+    "Conformità e documenti",
+    "Uygunluk ve belgeler",
+    "المطابقة والمستندات",
+    "अनुपालन और दस्तावेज़",
+    "合规与文件"
+  ],
+  "Regulatory compliance": [
+    "Conformidad reglamentaria",
+    "Conformidade regulamentar",
+    "Regulatorische Konformität",
+    "Conformità normativa",
+    "Mevzuata uygunluk",
+    "المطابقة التنظيمية",
+    "नियामक अनुपालन",
+    "法规合规性"
+  ],
+  "Not assessed by GSL": [
+    "No evaluada por GSL",
+    "Não avaliada pela GSL",
+    "Nicht von GSL bewertet",
+    "Non valutata da GSL",
+    "GSL tarafından değerlendirilmedi",
+    "لم تقيّمها GSL",
+    "GSL द्वारा मूल्यांकन नहीं किया गया",
+    "GSL 未评估"
+  ],
+  "Not established by this listing": [
+    "No acreditada por esta ficha",
+    "Não comprovada por esta ficha",
+    "Durch diesen Eintrag nicht belegt",
+    "Non dimostrata da questa scheda",
+    "Bu kayıtla kanıtlanmış değil",
+    "لا تثبتها هذه البطاقة",
+    "इस सूची से प्रमाणित नहीं",
+    "本页面不构成证明"
+  ],
+  "document reviewed, currently valid": [
+    "documento examinado, vigente",
+    "documento examinado, em vigor",
+    "Dokument geprüft, derzeit gültig",
+    "documento esaminato, in corso di validità",
+    "belge incelendi, geçerli",
+    "مستند تمت مراجعته وساري المفعول",
+    "दस्तावेज़ की समीक्षा की गई, वर्तमान में मान्य",
+    "文件已审核，目前有效"
+  ],
+  "None documented": [
+    "Ninguna documentada",
+    "Nenhuma documentada",
+    "Keine dokumentiert",
+    "Nessuna documentata",
+    "Belgelenmiş yok",
+    "لا شيء موثق",
+    "कोई प्रलेखित नहीं",
+    "无书面证明"
+  ],
+  "Published documents": [
+    "Documentos publicados",
+    "Documentos publicados",
+    "Veröffentlichte Dokumente",
+    "Documenti pubblicati",
+    "Yayımlanan belgeler",
+    "المستندات المنشورة",
+    "प्रकाशित दस्तावेज़",
+    "已发布文件"
+  ],
+  "public sources": [
+    "fuentes públicas",
+    "fontes públicas",
+    "öffentliche Quellen",
+    "fonti pubbliche",
+    "kamuya açık kaynak",
+    "مصادر عامة",
+    "सार्वजनिक स्रोत",
+    "个公开来源"
+  ],
+  "public source": [
+    "fuente pública",
+    "fonte pública",
+    "öffentliche Quelle",
+    "fonte pubblica",
+    "kamuya açık kaynak",
+    "مصدر عام",
+    "सार्वजनिक स्रोत",
+    "个公开来源"
+  ],
+  "No document published with this listing": [
+    "No se ha publicado ningún documento con esta ficha",
+    "Nenhum documento publicado com esta ficha",
+    "Zu diesem Eintrag wurde kein Dokument veröffentlicht",
+    "Nessun documento pubblicato con questa scheda",
+    "Bu kayıtla yayımlanmış belge yok",
+    "لم يُنشر أي مستند مع هذه البطاقة",
+    "इस सूची के साथ कोई दस्तावेज़ प्रकाशित नहीं है",
+    "本页面未附带任何文件"
+  ],
+  "Points to confirm": [
+    "Puntos por confirmar",
+    "Pontos a confirmar",
+    "Zu bestätigende Punkte",
+    "Punti da confermare",
+    "Teyit edilecek noktalar",
+    "نقاط يجب تأكيدها",
+    "पुष्टि किए जाने वाले बिंदु",
+    "待确认事项"
+  ],
+  "This manufacturer is documented from public sources. GSL handles your enquiry and the quote with delivery.": [
+    "Este fabricante está documentado a partir de fuentes públicas. GSL gestiona su solicitud y el presupuesto con entrega.",
+    "Este fabricante está documentado a partir de fontes públicas. A GSL trata o seu pedido e o orçamento com entrega.",
+    "Dieser Hersteller ist anhand öffentlicher Quellen dokumentiert. GSL bearbeitet Ihre Anfrage und das Angebot mit Lieferung.",
+    "Questo produttore è documentato a partire da fonti pubbliche. GSL gestisce la vostra richiesta e il preventivo con consegna.",
+    "Bu üretici kamuya açık kaynaklardan belgelenmiştir. Talebinizi ve teslimatlı teklifi GSL yürütür.",
+    "هذه الشركة المصنعة موثقة من مصادر عامة. تتولى GSL طلبك وعرض السعر مع التسليم.",
+    "यह निर्माता सार्वजनिक स्रोतों से प्रलेखित है। GSL आपकी पूछताछ और डिलीवरी सहित कोटेशन संभालता है।",
+    "该制造商的信息来自公开来源。GSL 负责处理您的询价及含交付的报价。"
+  ],
+  "Ask a question through GSL messaging, or request a priced quote including delivery.": [
+    "Haga su pregunta por la mensajería de GSL o solicite un presupuesto con precio, entrega incluida.",
+    "Faça a sua pergunta pela mensagem da GSL ou peça um orçamento com preço, entrega incluída.",
+    "Stellen Sie Ihre Frage über die GSL-Nachrichten oder fordern Sie ein Preisangebot inklusive Lieferung an.",
+    "Ponete la vostra domanda tramite la messaggistica GSL o richiedete un preventivo con prezzo, consegna inclusa.",
+    "Sorunuzu GSL mesajlaşma üzerinden sorun veya teslimat dahil fiyatlı teklif isteyin.",
+    "اطرح سؤالك عبر مراسلة GSL أو اطلب عرض سعر يشمل التسليم.",
+    "GSL मैसेजिंग से अपना प्रश्न पूछें, या डिलीवरी सहित मूल्य वाला कोटेशन माँगें।",
+    "可通过 GSL 消息提问，或申请含交付的报价。"
+  ],
+  "View the manufacturer profile": [
+    "Ver la ficha del fabricante",
+    "Ver a ficha do fabricante",
+    "Herstellerprofil ansehen",
+    "Vedi la scheda del produttore",
+    "Üretici profilini görüntüle",
+    "عرض ملف الشركة المصنعة",
+    "निर्माता प्रोफ़ाइल देखें",
+    "查看制造商资料"
+  ],
+  "Other products from this manufacturer": [
+    "Otros productos de este fabricante",
+    "Outros produtos deste fabricante",
+    "Weitere Produkte dieses Herstellers",
+    "Altri prodotti di questo produttore",
+    "Bu üreticinin diğer ürünleri",
+    "منتجات أخرى من هذه الشركة المصنعة",
+    "इस निर्माता के अन्य उत्पाद",
+    "该制造商的其他产品"
+  ],
+  "All its offers": [
+    "Todas sus ofertas",
+    "Todas as suas ofertas",
+    "Alle Angebote",
+    "Tutte le sue offerte",
+    "Tüm teklifleri",
+    "جميع عروضه",
+    "इसके सभी ऑफ़र",
+    "全部产品"
+  ],
+  "published manufacturers": [
+    "fabricantes publicados",
+    "fabricantes publicados",
+    "veröffentlichte Hersteller",
+    "produttori pubblicati",
+    "yayımlanmış üretici",
+    "شركات مصنعة منشورة",
+    "प्रकाशित निर्माता",
+    "家已发布制造商"
+  ],
+  "published manufacturer": [
+    "fabricante publicado",
+    "fabricante publicado",
+    "veröffentlichter Hersteller",
+    "produttore pubblicato",
+    "yayımlanmış üretici",
+    "شركة مصنعة منشورة",
+    "प्रकाशित निर्माता",
+    "家已发布制造商"
+  ],
+  "identified manufacturers, unverified": [
+    "fabricantes identificados, no verificados",
+    "fabricantes identificados, não verificados",
+    "ermittelte Hersteller, nicht verifiziert",
+    "produttori individuati, non verificati",
+    "tespit edilen üretici, doğrulanmadı",
+    "شركات مصنعة محددة، غير متحقق منها",
+    "पहचाने गए निर्माता, असत्यापित",
+    "家已识别制造商，未核实"
+  ],
+  "identified manufacturer, unverified": [
+    "fabricante identificado, no verificado",
+    "fabricante identificado, não verificado",
+    "ermittelter Hersteller, nicht verifiziert",
+    "produttore individuato, non verificato",
+    "tespit edilen üretici, doğrulanmadı",
+    "شركة مصنعة محددة، غير متحقق منها",
+    "पहचाना गया निर्माता, असत्यापित",
+    "家已识别制造商，未核实"
+  ],
+  "Approximate position: country centre": [
+    "Posición aproximada: centro del país",
+    "Posição aproximada: centro do país",
+    "Ungefähre Position: Landesmitte",
+    "Posizione approssimativa: centro del paese",
+    "Yaklaşık konum: ülke merkezi",
+    "موقع تقريبي: وسط البلد",
+    "अनुमानित स्थिति: देश का केंद्र",
+    "大致位置：国家中心"
+  ],
+  "Where the manufacturers are": [
+    "Dónde están los fabricantes",
+    "Onde estão os fabricantes",
+    "Wo die Hersteller sind",
+    "Dove si trovano i produttori",
+    "Üreticiler nerede",
+    "أين توجد الشركات المصنعة",
+    "निर्माता कहाँ स्थित हैं",
+    "制造商分布"
+  ],
+  "Manufacturers published on GSL and manufacturers identified from public sources, placed at their declared city, or at the centre of their country when the city is not recognised.": [
+    "Fabricantes publicados en GSL y fabricantes identificados en fuentes públicas, situados en su ciudad declarada, o en el centro de su país cuando no se reconoce la ciudad.",
+    "Fabricantes publicados na GSL e fabricantes identificados em fontes públicas, situados na cidade declarada, ou no centro do país quando a cidade não é reconhecida.",
+    "Auf GSL veröffentlichte und aus öffentlichen Quellen ermittelte Hersteller, an ihrer angegebenen Stadt platziert oder in der Landesmitte, wenn die Stadt nicht erkannt wird.",
+    "Produttori pubblicati su GSL e produttori individuati da fonti pubbliche, collocati nella città dichiarata, o al centro del paese quando la città non è riconosciuta.",
+    "GSL'de yayımlanan ve kamuya açık kaynaklardan tespit edilen üreticiler, beyan edilen şehirlerine, şehir tanınmadığında ise ülkelerinin merkezine yerleştirilir.",
+    "الشركات المصنعة المنشورة على GSL وتلك المحددة من مصادر عامة، موضوعة في مدينتها المعلنة، أو في وسط بلدها عندما لا تُعرف المدينة.",
+    "GSL पर प्रकाशित निर्माता और सार्वजनिक स्रोतों से पहचाने गए निर्माता, उनके घोषित शहर पर, या शहर पहचाना न जाने पर उनके देश के केंद्र में दिखाए गए हैं।",
+    "在 GSL 发布的制造商和从公开来源识别的制造商，按其申报城市标注；无法识别城市时标注在所在国家中心。"
+  ],
+  "Published profiles could not be loaded. Only manufacturers identified from public sources are placed on the map.": [
+    "No se han podido cargar las fichas publicadas. En el mapa solo figuran los fabricantes identificados en fuentes públicas.",
+    "Não foi possível carregar as fichas publicadas. Apenas os fabricantes identificados em fontes públicas aparecem no mapa.",
+    "Die veröffentlichten Profile konnten nicht geladen werden. Auf der Karte stehen nur aus öffentlichen Quellen ermittelte Hersteller.",
+    "Non è stato possibile caricare le schede pubblicate. Sulla mappa compaiono solo i produttori individuati da fonti pubbliche.",
+    "Yayımlanan profiller yüklenemedi. Haritada yalnızca kamuya açık kaynaklardan tespit edilen üreticiler gösteriliyor.",
+    "تعذّر تحميل الملفات المنشورة. لا تظهر على الخريطة إلا الشركات المصنعة المحددة من مصادر عامة.",
+    "प्रकाशित प्रोफ़ाइल लोड नहीं हो सकीं। मानचित्र पर केवल सार्वजनिक स्रोतों से पहचाने गए निर्माता दिखाए गए हैं।",
+    "无法加载已发布的资料。地图上仅显示从公开来源识别的制造商。"
+  ],
+  "Map of manufacturer locations. The list next to the map gives the same information.": [
+    "Mapa de ubicación de los fabricantes. La lista junto al mapa ofrece la misma información.",
+    "Mapa da localização dos fabricantes. A lista ao lado do mapa dá a mesma informação.",
+    "Karte der Herstellerstandorte. Die Liste neben der Karte enthält dieselben Informationen.",
+    "Mappa delle sedi dei produttori. L'elenco accanto alla mappa riporta le stesse informazioni.",
+    "Üretici konumları haritası. Haritanın yanındaki liste aynı bilgileri verir.",
+    "خريطة مواقع الشركات المصنعة. تقدم القائمة بجانب الخريطة المعلومات نفسها.",
+    "निर्माताओं के स्थानों का मानचित्र। मानचित्र के पास की सूची वही जानकारी देती है।",
+    "制造商位置地图。地图旁的列表提供相同信息。"
+  ],
+  "Published on GSL": [
+    "Publicado en GSL",
+    "Publicado na GSL",
+    "Auf GSL veröffentlicht",
+    "Pubblicato su GSL",
+    "GSL'de yayımlandı",
+    "منشور على GSL",
+    "GSL पर प्रकाशित",
+    "已在 GSL 发布"
+  ],
+  "Identified from public sources, unverified": [
+    "Identificado en fuentes públicas, no verificado",
+    "Identificado em fontes públicas, não verificado",
+    "Aus öffentlichen Quellen ermittelt, nicht verifiziert",
+    "Individuato da fonti pubbliche, non verificato",
+    "Kamuya açık kaynaklardan tespit edildi, doğrulanmadı",
+    "محدد من مصادر عامة، غير متحقق منه",
+    "सार्वजनिक स्रोतों से पहचाना गया, असत्यापित",
+    "从公开来源识别，未核实"
+  ],
+  "Show this country’s manufacturers": [
+    "Ver los fabricantes de este país",
+    "Ver os fabricantes deste país",
+    "Hersteller dieses Landes anzeigen",
+    "Vedi i produttori di questo paese",
+    "Bu ülkenin üreticilerini göster",
+    "عرض الشركات المصنعة في هذا البلد",
+    "इस देश के निर्माता देखें",
+    "查看该国制造商"
+  ],
+  "Sourcing countries with no manufacturer listed yet:": [
+    "Países de abastecimiento sin fabricante registrado por ahora:",
+    "Países de abastecimento ainda sem fabricante listado:",
+    "Beschaffungsländer ohne bisher gelisteten Hersteller:",
+    "Paesi di approvvigionamento ancora senza produttori elencati:",
+    "Henüz üretici listelenmemiş tedarik ülkeleri:",
+    "بلدان التوريد التي لا توجد فيها شركة مصنعة مدرجة بعد:",
+    "सोर्सिंग देश जिनमें अभी तक कोई निर्माता सूचीबद्ध नहीं है:",
+    "尚未列出制造商的采购国家："
+  ],
+  "Positions show the city declared by the company, not a verified factory location. Cartography:": [
+    "Las posiciones indican la ciudad declarada por la empresa, no un emplazamiento de fábrica verificado. Cartografía:",
+    "As posições indicam a cidade declarada pela empresa, não um local de fábrica verificado. Cartografia:",
+    "Die Positionen zeigen die vom Unternehmen angegebene Stadt, keinen verifizierten Fabrikstandort. Kartografie:",
+    "Le posizioni indicano la città dichiarata dall'azienda, non una sede di stabilimento verificata. Cartografia:",
+    "Konumlar, şirketin beyan ettiği şehri gösterir; doğrulanmış bir fabrika yeri değildir. Haritacılık:",
+    "تُظهر المواقع المدينة التي أعلنتها الشركة، وليس موقع مصنع متحققًا منه. الخرائط:",
+    "स्थितियाँ कंपनी द्वारा घोषित शहर दिखाती हैं, किसी सत्यापित कारखाने का स्थान नहीं। मानचित्रण:",
+    "位置为企业申报的城市，并非经核实的工厂地点。地图数据："
   ]
 }

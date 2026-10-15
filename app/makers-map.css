@@ -1,0 +1,52 @@
+/* Manufacturer map on /fabricants — "Acier" palette, static SVG. */
+.makers-map{--mm-ink:#14191F;--mm-muted:#5A6571;--mm-line:#D9DEE3;--mm-soft:#F3F5F7;--mm-steel:#1F4E79;--mm-steel-dark:#173B5C;--mm-night:#0F1B26;padding-block:8px 72px;color:var(--mm-ink)}
+.makers-map-head{max-width:760px;padding-top:32px;border-top:1px solid var(--mm-line)}
+.makers-map-head h2{margin:0;font-size:24px;font-weight:600;letter-spacing:-.3px}
+.makers-map-head p{margin:8px 0 0;font-size:15px;line-height:1.6;color:var(--mm-muted)}
+.makers-map-alert{margin:16px 0 0;padding:12px 14px;border:1px solid var(--mm-line);border-radius:6px;background:var(--mm-soft);font-size:14px;line-height:1.55;color:var(--mm-muted)}
+.makers-map-layout{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px;align-items:start;margin-top:24px}
+.makers-map-figure{margin:0;border:1px solid var(--mm-line);border-radius:8px;background:#F7F8FA;overflow:hidden}
+.makers-map-figure svg{display:block;width:100%;height:auto}
+.makers-map-context{fill:#E6E9EC;stroke:#F7F8FA;stroke-width:.8}
+.makers-map-figure path.is-other{fill:#E6E9EC;stroke:#F7F8FA;stroke-width:.8;stroke-linejoin:round}
+.makers-map-figure path.is-sourcing{fill:#C9D6E3;stroke:#F7F8FA;stroke-width:.8;stroke-linejoin:round}
+.makers-map-figure path.is-selected{fill:#9FB6CC}
+.makers-map-marker{cursor:pointer}
+.makers-map-marker circle{stroke-width:2}
+.makers-map-marker text{font:600 11px var(--gsl-sans,Inter,system-ui,sans-serif);pointer-events:none}
+.makers-map-marker.is-published circle{fill:var(--mm-steel);stroke:#fff}
+.makers-map-marker.is-published text{fill:#fff}
+.makers-map-marker.is-published:hover circle{fill:var(--mm-steel-dark)}
+.makers-map-marker.is-referenced circle{fill:#fff;stroke:var(--mm-steel)}
+.makers-map-marker.is-referenced text{fill:var(--mm-steel)}
+.makers-map-marker.is-referenced:hover circle{fill:var(--mm-soft)}
+.makers-map-marker.is-approximate circle{stroke-dasharray:3 2}
+.makers-map-marker:focus-visible{outline:none}
+.makers-map-marker:focus-visible circle{stroke:var(--mm-night);stroke-width:3}
+.makers-map-legend{display:flex;flex-wrap:wrap;gap:8px 22px;padding:12px 16px;border-top:1px solid var(--mm-line);font-size:13px;color:var(--mm-muted)}
+.makers-map-legend span{display:flex;align-items:center;gap:8px}
+.makers-map-legend i{display:inline-block;width:12px;height:12px;border-radius:50%;flex-shrink:0}
+.makers-map-legend i.is-published{background:var(--mm-steel)}
+.makers-map-legend i.is-referenced{background:#fff;border:2px solid var(--mm-steel)}
+.makers-map-legend i.is-sourcing{background:#C9D6E3;border-radius:2px}
+.makers-map-list{display:flex;flex-direction:column;gap:18px}
+.makers-map-reset{align-self:flex-start;font-size:14px;font-weight:600;color:var(--mm-steel)}
+.makers-map-country{padding-bottom:16px;border-bottom:1px solid var(--mm-line)}
+.makers-map-country.is-selected{padding:14px;border:1px solid var(--mm-steel);border-radius:8px}
+.makers-map-country h3{display:flex;align-items:center;gap:8px;margin:0;font-size:16px;font-weight:600}
+.makers-map-country>p{margin:4px 0 8px;font-size:13px;color:var(--mm-muted)}
+.makers-map-country ul{margin:0;padding:0;list-style:none;display:grid;gap:6px}
+.makers-map-country li{display:flex;flex-direction:column;gap:1px;font-size:14px}
+.makers-map-country li a{font-weight:500;color:var(--mm-ink)}
+.makers-map-country li a:hover{color:var(--mm-steel)}
+.makers-map-country li strong{font-weight:500}
+.makers-map-country li span{font-size:12.5px;color:var(--mm-muted)}
+.makers-map-filter{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:14px;font-weight:600;color:var(--mm-steel)}
+.makers-map-filter:hover,.makers-map-reset:hover{color:var(--mm-steel-dark)}
+.makers-map-empty{margin:0;font-size:13px;line-height:1.6;color:var(--mm-muted)}
+.makers-map-note{margin:20px 0 0;font-size:13px;line-height:1.6;color:var(--mm-muted)}
+.makers-map-note a{text-decoration:underline;text-underline-offset:3px}
+.makers-map :is(a):focus-visible{outline:3px solid var(--mm-steel);outline-offset:3px}
+[dir=rtl] .makers-map-filter svg{transform:scaleX(-1)}
+@media(max-width:1000px){.makers-map-layout{grid-template-columns:1fr;gap:24px}.makers-map-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 24px}.makers-map-reset,.makers-map-empty{grid-column:1/-1}}
+@media(max-width:640px){.makers-map{padding-block:0 48px}.makers-map-head h2{font-size:21px}.makers-map-figure{border-radius:6px}.makers-map-legend{font-size:12px;gap:6px 14px;padding:10px 12px}.makers-map-list{grid-template-columns:1fr}}

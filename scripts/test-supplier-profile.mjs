@@ -6,8 +6,9 @@ const compile=p=>ts.transpileModule(fs.readFileSync(p,'utf8'),{compilerOptions:{
 const iso='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/iso-countries.ts')).toString('base64');
 const country='data:text/javascript;base64,'+Buffer.from(compile('lib/onboarding/country-requirements.ts')).toString('base64');
 const scope='data:text/javascript;base64,'+Buffer.from(compile('lib/sourcing-coverage.ts')).toString('base64');
-const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'../sourcing-coverage'",JSON.stringify(scope)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
-const {sourcingIssues,productPublicationIssues,documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
+const specModule='data:text/javascript;base64,'+Buffer.from(compile('lib/products/spec-fields.ts')).toString('base64');
+const code=compile('lib/onboarding/supplier-profile.ts').replaceAll("'./iso-countries'",JSON.stringify(iso)).replace("'./country-requirements'",JSON.stringify(country)).replace("'../sourcing-coverage'",JSON.stringify(scope)).replace("'../products/spec-fields'",JSON.stringify(specModule)).replace("'zod'",JSON.stringify(pathToFileURL(process.cwd()+'/node_modules/zod/index.js').href));
+const {productPublicationProfile,sourcingIssues,productPublicationIssues,documentIssues,supplierSubmissionSchema,supplierDraftSchema,supplierSchema,emptyProfile,productSchema,certificateSchema,profileIssues,profileSuggestions,supplierValidationIssues}=await import('data:text/javascript;base64,'+Buffer.from(code).toString('base64'));
 const p=emptyProfile();
 assert.ok(profileIssues(p,[]).length>5);
 Object.assign(p,{activity:'manufacturer',website:'https://example.com',legalName:'Test company',country:'TR',legalForm:'Ltd',description:'A'.repeat(120),identifiers:{mersis:'test',trade_registry_number:'test',trade_registry_office:'test'},attestation:true});
@@ -63,10 +64,42 @@ assert.ok(profileSuggestions(minimal,[]).some(x=>x.path.startsWith('certificates
 assert.ok(profileIssues({...minimal,legalName:''},[]).some(x=>x.path==='legalName'),'essential identity still required');
 console.log('Optional documents: incomplete certificates retained privately, submission allowed and essentials still enforced.');
 
-const directProduct={...minimal,contact:{...minimal.contact,email:'unfinished'},products:[productSchema.parse({id:crypto.randomUUID(),listingStatus:'publish',name:'Industrial product',category:'metal',description:'A made-to-order metal component for industrial use.',origin:'TR',ce:'required'})]};
+const directProduct={...minimal,contact:{...minimal.contact,email:'unfinished'},products:[productSchema.parse({id:crypto.randomUUID(),listingStatus:'publish',name:'Industrial product',category:'metal',description:'A made-to-order metal component for industrial use.',origin:'TR',ce:'required',moq:'50',unit:'pcs',family:'pieces-mecaniques',specs:{kind:'machined',tolerance_mm:'0,02'}})]};
 assert.deepEqual(productPublicationIssues(directProduct),[],'documents and partial company contact do not block products');
 assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],origin:''}]}).some(x=>x.path==='products.0'));
-console.log('Product essentials validated without optional certificates, CE documents or company draft fields.');
+assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],moq:''}]}).some(x=>x.path==='products.0.moq'),'minimum order quantity is required');
+assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],unit:''}]}).some(x=>x.path==='products.0.moq'),'minimum order unit is required');
+assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],family:''}]}).some(x=>x.path==='products.0.family'),'product type is required');
+assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],specs:{kind:'machined'}}]}).some(x=>x.path==='products.0.specs'),'required technical value enforced');
+assert.ok(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],specs:{kind:'machined',tolerance_mm:'0.02 mm'}}]}).some(x=>x.path==='products.0.specs.format'),'numbers without unit');
+assert.deepEqual(productPublicationIssues({...directProduct,products:[{...directProduct.products[0],listingStatus:'draft',moq:'',family:''}]}),[],'private drafts stay unrestricted');
+const sent=productPublicationProfile(directProduct).products[0];
+assert.equal(sent.category,'metal');assert.ok(sent.description.startsWith(directProduct.products[0].description+'\n\nTechnical specifications (declared by the supplier)'));assert.ok(sent.description.includes('- General tolerance: 0.02 mm'));
+assert.equal(productPublicationProfile({...directProduct,products:[{...directProduct.products[0],specs:{kind:'molded',tolerance_mm:'0.1'}}]}).products[0].category,'plasturgie');
+console.log('Product essentials validated without optional certificates, CE documents or company draft fields; MOQ, product type and technical values required.');
+
+const specs=await import(specModule);
+for(const family of specs.productFamilies){
+ const keys=new Set();for(const f of family.fields){assert.ok(!keys.has(f.key)||f.kinds,family.id+': duplicate key '+f.key);keys.add(f.key);assert.ok(f.en&&f.fr,family.id+'.'+f.key+': labels');}
+ if(family.id!=='autre')assert.ok(family.fields[0].key==='kind'&&family.fields[0].options.length>=3,family.id+': kind first');
+ assert.ok(['metal','machines','electricite','construction','plasturgie','textile','emballage','mobilier','other'].includes(family.category),family.id+': category accepted by publish_supplier_products');
+ for(const kind of family.fields[0]?.options||[{value:''}]){
+  const values=Object.fromEntries(specs.specFields(family.id,kind.value).map(f=>[f.key,f.key==='kind'?kind.value:f.type==='number'?'12.5':f.type==='select'?f.options[0].value:'Sample value']));
+  assert.deepEqual(specs.specIssues(family.id,values),[],family.id+'/'+kind.value+': complete values accepted');
+  const text=specs.composePublishedDescription('Own description of the product, long enough.',family.id,values);
+  const parsed=specs.parsePublishedDescription(text);
+  assert.equal(parsed.description,'Own description of the product, long enough.',family.id+': own text restored');
+  assert.equal(parsed.familyId,family.id);assert.deepEqual(parsed.specs,specs.normalizeSpecs(family.id,values),family.id+'/'+kind.value+': values survive publication');
+  const view=specs.publishedSpecificationRows({category:family.category,description:text,specifications:{minimum_quantity:'50',unit:'pcs'}});
+  assert.equal(view.rows.length,Object.keys(specs.normalizeSpecs(family.id,values)).length);assert.ok(view.commercial.some(r=>r.key==='minimum_quantity'&&specs.formatSpecRow(r,'fr')==='50 pièces'));
+  assert.ok(text.length<5000);
+ }
+}
+assert.equal(specs.stripSpecificationBlock('Plain text without block'),'Plain text without block');
+assert.equal(specs.formatSpecRow({key:'r',en:'',fr:'',value:'50',valueEn:'50',valueFr:'50',unit:':1'},'en'),'50:1');
+assert.equal(specs.formatSpecRow({key:'r',en:'',fr:'',value:'1.5',valueEn:'1.5',valueFr:'1.5',unit:'N·m'},'fr'),'1,5 N·m');
+assert.equal(specs.publishedSpecificationRows({category:'actionnement-transmission',description:'Reviewed',specifications:{robotics_family:'actionnement-transmission',torque_nm:'30'}}).rows[0].value,'30','reviewed admission values are read');
+console.log('Per-family technical specifications: every family and type validates, publishes into the description and parses back to labelled rows with units.');
 
 for(const country of ['TR','MA','TN','RS','MK','BA','MD','GE','AL','EG'])assert.deepEqual(sourcingIssues({...emptyProfile(),country}),[]);
 assert.equal(supplierDraftSchema.safeParse({...emptyProfile(),country:'BE'}).success,true);

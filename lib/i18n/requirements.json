@@ -878,5 +878,615 @@
     "مسودة خاصة — لم تُرسل للمورّدين.",
     "निजी प्रारूप — आपूर्तिकर्ताओं को नहीं भेजा गया।",
     "私人草稿 — 尚未发送给供应商。"
+  ],
+  "Account security": [
+    "Seguridad de la cuenta",
+    "Segurança da conta",
+    "Kontosicherheit",
+    "Sicurezza dell'account",
+    "Hesap güvenliği",
+    "أمان الحساب",
+    "खाता सुरक्षा",
+    "账户安全"
+  ],
+  "Enter the contact name and a valid professional email.": [
+    "Indica el nombre del contacto y un correo profesional válido.",
+    "Indique o nome do contacto e um e-mail profissional válido.",
+    "Geben Sie den Namen der Kontaktperson und eine gültige geschäftliche E-Mail-Adresse an.",
+    "Indica il nome del contatto e un'email professionale valida.",
+    "İrtibat kişisinin adını ve geçerli bir iş e-postasını girin.",
+    "أدخل اسم جهة الاتصال وبريدًا إلكترونيًا مهنيًا صالحًا.",
+    "संपर्क व्यक्ति का नाम और एक मान्य व्यावसायिक ईमेल दर्ज करें।",
+    "请输入联系人姓名和有效的工作邮箱。"
+  ],
+  "This address is outside the European Union. Deliveries are currently arranged within the EU only; the delivery country was not changed.": [
+    "Esta dirección está fuera de la Unión Europea. Por ahora las entregas solo se organizan dentro de la UE; el país de entrega no se ha modificado.",
+    "Este endereço está fora da União Europeia. De momento, as entregas são organizadas apenas na UE; o país de entrega não foi alterado.",
+    "Diese Adresse liegt außerhalb der Europäischen Union. Lieferungen werden derzeit nur innerhalb der EU organisiert; das Lieferland wurde nicht geändert.",
+    "Questo indirizzo è fuori dall'Unione europea. Per ora le consegne sono organizzate solo nell'UE; il paese di consegna non è stato modificato.",
+    "Bu adres Avrupa Birliği dışında. Teslimatlar şu anda yalnızca AB içinde düzenleniyor; teslimat ülkesi değiştirilmedi.",
+    "هذا العنوان خارج الاتحاد الأوروبي. يتم تنظيم التسليم حاليًا داخل الاتحاد الأوروبي فقط؛ لم يتم تغيير بلد التسليم.",
+    "यह पता यूरोपीय संघ के बाहर है। फ़िलहाल डिलीवरी केवल यूरोपीय संघ के भीतर की जाती है; डिलीवरी देश नहीं बदला गया।",
+    "该地址位于欧盟以外。目前仅在欧盟境内安排交付；交付国家未更改。"
+  ],
+  "Purchasing will be enabled for this company when you save the request.": [
+    "Las compras se activarán para esta empresa al guardar la solicitud.",
+    "As compras serão ativadas para esta empresa ao guardar o pedido.",
+    "Der Einkauf wird für dieses Unternehmen beim Speichern der Anfrage aktiviert.",
+    "Gli acquisti saranno attivati per questa azienda al salvataggio della richiesta.",
+    "Talebi kaydettiğinizde bu şirket için satın alma etkinleştirilecek.",
+    "سيتم تفعيل الشراء لهذه الشركة عند حفظ الطلب.",
+    "अनुरोध सहेजते समय इस कंपनी के लिए ख़रीद सक्षम हो जाएगी।",
+    "保存需求时将为该企业启用采购功能。"
+  ],
+  "Your request is saved to your company. Already have an account?": [
+    "Tu solicitud se guarda en tu empresa. ¿Ya tienes una cuenta?",
+    "O seu pedido é guardado na sua empresa. Já tem uma conta?",
+    "Ihre Anfrage wird in Ihrem Unternehmen gespeichert. Sie haben bereits ein Konto?",
+    "La richiesta viene salvata nella tua azienda. Hai già un account?",
+    "Talebiniz şirketinize kaydedilir. Zaten hesabınız var mı?",
+    "يُحفظ طلبك في شركتك. هل لديك حساب بالفعل؟",
+    "आपका अनुरोध आपकी कंपनी में सहेजा जाता है। क्या आपका पहले से खाता है?",
+    "您的需求将保存到您的企业。已有账户？"
+  ],
+  "Your request is saved to your company. Manufacturers see its name and country.": [
+    "Tu solicitud se guarda en tu empresa. Los fabricantes ven su nombre y su país.",
+    "O seu pedido é guardado na sua empresa. Os fabricantes veem o nome e o país.",
+    "Ihre Anfrage wird in Ihrem Unternehmen gespeichert. Hersteller sehen dessen Namen und Land.",
+    "La richiesta viene salvata nella tua azienda. I produttori ne vedono nome e paese.",
+    "Talebiniz şirketinize kaydedilir. Üreticiler şirketin adını ve ülkesini görür.",
+    "يُحفظ طلبك في شركتك. يرى المصنّعون اسمها وبلدها.",
+    "आपका अनुरोध आपकी कंपनी में सहेजा जाता है। निर्माता उसका नाम और देश देखते हैं।",
+    "您的需求将保存到您的企业。制造商可以看到企业名称和国家。"
+  ],
+  "Your account could not be loaded. You can continue; it will be checked again when you save.": [
+    "No se pudo cargar tu cuenta. Puedes continuar; se comprobará de nuevo al guardar.",
+    "Não foi possível carregar a sua conta. Pode continuar; será verificada novamente ao guardar.",
+    "Ihr Konto konnte nicht geladen werden. Sie können fortfahren; es wird beim Speichern erneut geprüft.",
+    "Impossibile caricare il tuo account. Puoi continuare; verrà verificato di nuovo al salvataggio.",
+    "Hesabınız yüklenemedi. Devam edebilirsiniz; kaydederken yeniden kontrol edilecek.",
+    "تعذّر تحميل حسابك. يمكنك المتابعة؛ سيتم التحقق منه مجددًا عند الحفظ.",
+    "आपका खाता लोड नहीं हो सका। आप जारी रख सकते हैं; सहेजते समय इसकी फिर से जाँच होगी।",
+    "无法加载您的账户。您可以继续；保存时将再次检查。"
+  ],
+  "Preparing the PDF…": [
+    "Preparando el PDF…",
+    "A preparar o PDF…",
+    "PDF wird erstellt…",
+    "Preparazione del PDF…",
+    "PDF hazırlanıyor…",
+    "جارٍ إعداد ملف PDF…",
+    "PDF तैयार हो रहा है…",
+    "正在生成 PDF…"
+  ],
+  "Export my brief (PDF)": [
+    "Exportar mi expediente (PDF)",
+    "Exportar o meu dossiê (PDF)",
+    "Meine Unterlagen exportieren (PDF)",
+    "Esporta il mio dossier (PDF)",
+    "Dosyamı dışa aktar (PDF)",
+    "تصدير ملفي (PDF)",
+    "मेरा विवरण निर्यात करें (PDF)",
+    "导出我的需求文件（PDF）"
+  ],
+  "Some answers were pre-filled from your account and previous requests. You can change them.": [
+    "Algunas respuestas se han completado a partir de tu cuenta y de solicitudes anteriores. Puedes modificarlas.",
+    "Algumas respostas foram preenchidas a partir da sua conta e de pedidos anteriores. Pode alterá-las.",
+    "Einige Antworten wurden aus Ihrem Konto und früheren Anfragen übernommen. Sie können sie ändern.",
+    "Alcune risposte sono state precompilate dal tuo account e dalle richieste precedenti. Puoi modificarle.",
+    "Bazı yanıtlar hesabınızdan ve önceki taleplerinizden önceden dolduruldu. Bunları değiştirebilirsiniz.",
+    "تمت تعبئة بعض الإجابات مسبقًا من حسابك وطلباتك السابقة. يمكنك تعديلها.",
+    "कुछ उत्तर आपके खाते और पिछले अनुरोधों से पहले से भरे गए हैं। आप उन्हें बदल सकते हैं।",
+    "部分答案已根据您的账户和以往需求预先填写，您可以修改。"
+  ],
+  "Enter your company name (at least 2 characters) and its country.": [
+    "Indica el nombre de tu empresa (2 caracteres como mínimo) y su país.",
+    "Indique o nome da sua empresa (mínimo 2 caracteres) e o país.",
+    "Geben Sie den Namen Ihres Unternehmens (mindestens 2 Zeichen) und sein Land an.",
+    "Indica il nome della tua azienda (almeno 2 caratteri) e il paese.",
+    "Şirketinizin adını (en az 2 karakter) ve ülkesini girin.",
+    "أدخل اسم شركتك (حرفان على الأقل) وبلدها.",
+    "अपनी कंपनी का नाम (कम से कम 2 अक्षर) और उसका देश दर्ज करें।",
+    "请输入企业名称（至少 2 个字符）及其所在国家。"
+  ],
+  "Enter a delivery postal code, a city and a delivery country in the European Union.": [
+    "Indica un código postal, una ciudad y un país de entrega de la Unión Europea.",
+    "Indique um código postal, uma cidade e um país de entrega na União Europeia.",
+    "Geben Sie eine Postleitzahl, einen Ort und ein Lieferland in der Europäischen Union an.",
+    "Indica un codice postale, una città e un paese di consegna nell'Unione europea.",
+    "Avrupa Birliği içinde bir posta kodu, şehir ve teslimat ülkesi girin.",
+    "أدخل رمزًا بريديًا ومدينة وبلد تسليم داخل الاتحاد الأوروبي.",
+    "यूरोपीय संघ में एक पिन/पोस्टल कोड, शहर और डिलीवरी देश दर्ज करें।",
+    "请输入欧盟境内的邮政编码、城市和交付国家。"
+  ],
+  "Delivery and support": [
+    "Entrega y acompañamiento",
+    "Entrega e acompanhamento",
+    "Lieferung und Begleitung",
+    "Consegna e assistenza",
+    "Teslimat ve destek",
+    "التسليم والمرافقة",
+    "डिलीवरी और सहायता",
+    "交付与支持"
+  ],
+  "Delivery address": [
+    "Dirección de entrega",
+    "Morada de entrega",
+    "Lieferadresse",
+    "Indirizzo di consegna",
+    "Teslimat adresi",
+    "عنوان التسليم",
+    "डिलीवरी पता",
+    "交付地址"
+  ],
+  "Optional. Suggestions fill in the postal code, city and country; you can also type the address freely.": [
+    "Opcional. Las sugerencias completan el código postal, la ciudad y el país; también puedes escribir la dirección libremente.",
+    "Opcional. As sugestões preenchem o código postal, a cidade e o país; também pode escrever a morada livremente.",
+    "Optional. Vorschläge ergänzen Postleitzahl, Ort und Land; Sie können die Adresse auch frei eingeben.",
+    "Facoltativo. I suggerimenti completano codice postale, città e paese; puoi anche scrivere l'indirizzo liberamente.",
+    "İsteğe bağlı. Öneriler posta kodunu, şehri ve ülkeyi doldurur; adresi serbestçe de yazabilirsiniz.",
+    "اختياري. تملأ الاقتراحات الرمز البريدي والمدينة والبلد؛ ويمكنك أيضًا كتابة العنوان بحرية.",
+    "वैकल्पिक। सुझाव पोस्टल कोड, शहर और देश भर देते हैं; आप पता स्वयं भी लिख सकते हैं।",
+    "可选。建议会自动填写邮政编码、城市和国家；您也可以自由输入地址。"
+  ],
+  "Delivery postal code": [
+    "Código postal de entrega",
+    "Código postal de entrega",
+    "Postleitzahl der Lieferadresse",
+    "Codice postale di consegna",
+    "Teslimat posta kodu",
+    "الرمز البريدي للتسليم",
+    "डिलीवरी पोस्टल कोड",
+    "交付邮政编码"
+  ],
+  "Include a transport study": [
+    "Incluir un estudio de transporte",
+    "Incluir um estudo de transporte",
+    "Eine Transportstudie einbeziehen",
+    "Includere uno studio di trasporto",
+    "Bir taşıma çalışması ekle",
+    "تضمين دراسة للنقل",
+    "परिवहन अध्ययन शामिल करें",
+    "包含运输方案评估"
+  ],
+  "Plan customs support": [
+    "Prever acompañamiento aduanero",
+    "Prever acompanhamento aduaneiro",
+    "Zollbegleitung vorsehen",
+    "Prevedere assistenza doganale",
+    "Gümrük desteği planla",
+    "التخطيط لمرافقة جمركية",
+    "सीमा शुल्क सहायता की योजना बनाएं",
+    "安排清关支持"
+  ],
+  "Price, Incoterm, importer and logistics availability are confirmed in the quote. No transport rate is calculated here.": [
+    "El precio, el Incoterm, el importador y la disponibilidad logística se confirman en el presupuesto. Aquí no se calcula ninguna tarifa de transporte.",
+    "O preço, o Incoterm, o importador e a disponibilidade logística são confirmados no orçamento. Nenhuma tarifa de transporte é calculada aqui.",
+    "Preis, Incoterm, Importeur und logistische Verfügbarkeit werden im Angebot bestätigt. Hier wird kein Transporttarif berechnet.",
+    "Prezzo, Incoterm, importatore e disponibilità logistica sono confermati nel preventivo. Qui non viene calcolata alcuna tariffa di trasporto.",
+    "Fiyat, Incoterm, ithalatçı ve lojistik uygunluk teklifte teyit edilir. Burada taşıma ücreti hesaplanmaz.",
+    "يتم تأكيد السعر وشروط Incoterm والمستورد والتوافر اللوجستي في عرض السعر. لا يتم حساب أي تعرفة نقل هنا.",
+    "मूल्य, Incoterm, आयातक और लॉजिस्टिक उपलब्धता की पुष्टि कोटेशन में की जाती है। यहाँ कोई परिवहन दर नहीं गिनी जाती।",
+    "价格、Incoterm、进口方和物流可用性将在报价中确认。此处不计算运费。"
+  ],
+  "Business contact details": [
+    "Datos de contacto profesionales",
+    "Dados de contacto profissionais",
+    "Geschäftliche Kontaktdaten",
+    "Recapiti professionali",
+    "İş iletişim bilgileri",
+    "بيانات الاتصال المهنية",
+    "व्यावसायिक संपर्क विवरण",
+    "业务联系方式"
+  ],
+  "Contact name and role": [
+    "Nombre y cargo del contacto",
+    "Nome e função do contacto",
+    "Name und Funktion der Kontaktperson",
+    "Nome e ruolo del contatto",
+    "İrtibat kişisinin adı ve görevi",
+    "اسم جهة الاتصال ومنصبها",
+    "संपर्क व्यक्ति का नाम और पद",
+    "联系人姓名及职务"
+  ],
+  "Phone (optional)": [
+    "Teléfono (opcional)",
+    "Telefone (opcional)",
+    "Telefon (optional)",
+    "Telefono (facoltativo)",
+    "Telefon (isteğe bağlı)",
+    "الهاتف (اختياري)",
+    "फ़ोन (वैकल्पिक)",
+    "电话（可选）"
+  ],
+  "These details stay private. The brief is sent to GSL only after your confirmation.": [
+    "Estos datos son privados. El expediente se envía a GSL solo tras tu confirmación.",
+    "Estes dados permanecem privados. O dossiê só é enviado à GSL após a sua confirmação.",
+    "Diese Angaben bleiben privat. Die Unterlagen werden erst nach Ihrer Bestätigung an GSL übermittelt.",
+    "Questi dati restano privati. Il dossier viene inviato a GSL solo dopo la tua conferma.",
+    "Bu bilgiler gizli kalır. Dosya yalnızca onayınızdan sonra GSL'ye gönderilir.",
+    "تبقى هذه البيانات خاصة. لا يُرسل الملف إلى GSL إلا بعد تأكيدك.",
+    "ये विवरण निजी रहते हैं। विवरण आपकी पुष्टि के बाद ही GSL को भेजा जाता है।",
+    "这些信息保持私密。需求文件仅在您确认后发送给 GSL。"
+  ],
+  "Sign in to save this request to your company. Your draft is kept and you come back here.": [
+    "Inicia sesión para guardar esta solicitud en tu empresa. Tu borrador se conserva y vuelves aquí.",
+    "Inicie sessão para guardar este pedido na sua empresa. O seu rascunho é mantido e regressa aqui.",
+    "Melden Sie sich an, um diese Anfrage in Ihrem Unternehmen zu speichern. Ihr Entwurf bleibt erhalten und Sie kehren hierher zurück.",
+    "Accedi per salvare questa richiesta nella tua azienda. La bozza viene conservata e torni qui.",
+    "Bu talebi şirketinize kaydetmek için oturum açın. Taslağınız korunur ve buraya geri dönersiniz.",
+    "سجّل الدخول لحفظ هذا الطلب في شركتك. تُحفظ مسودتك وتعود إلى هنا.",
+    "इस अनुरोध को अपनी कंपनी में सहेजने के लिए साइन इन करें। आपका ड्राफ़्ट सुरक्षित रहता है और आप यहीं लौटते हैं।",
+    "登录后即可将此需求保存到您的企业。草稿会保留，登录后返回此处。"
+  ],
+  "Saved to": [
+    "Guardado en",
+    "Guardado em",
+    "Gespeichert in",
+    "Salvato in",
+    "Kaydedildiği yer",
+    "محفوظ في",
+    "यहाँ सहेजा गया",
+    "保存到"
+  ],
+  "Your buyer company will be created when you save:": [
+    "Tu empresa compradora se creará al guardar:",
+    "A sua empresa compradora será criada ao guardar:",
+    "Ihr einkaufendes Unternehmen wird beim Speichern angelegt:",
+    "La tua azienda acquirente verrà creata al salvataggio:",
+    "Alıcı şirketiniz kaydettiğinizde oluşturulacak:",
+    "سيتم إنشاء شركتك المشترية عند الحفظ:",
+    "सहेजते समय आपकी ख़रीदार कंपनी बनाई जाएगी:",
+    "保存时将创建您的采购企业："
+  ],
+  "Sign in and save": [
+    "Iniciar sesión y guardar",
+    "Iniciar sessão e guardar",
+    "Anmelden und speichern",
+    "Accedi e salva",
+    "Oturum aç ve kaydet",
+    "تسجيل الدخول والحفظ",
+    "साइन इन करें और सहेजें",
+    "登录并保存"
+  ],
+  "Type at least 3 characters to see suggestions, or enter the address freely.": [
+    "Escribe al menos 3 caracteres para ver sugerencias, o introduce la dirección libremente.",
+    "Escreva pelo menos 3 caracteres para ver sugestões, ou introduza a morada livremente.",
+    "Geben Sie mindestens 3 Zeichen ein, um Vorschläge zu sehen, oder tragen Sie die Adresse frei ein.",
+    "Digita almeno 3 caratteri per vedere i suggerimenti, oppure inserisci l'indirizzo liberamente.",
+    "Öneri görmek için en az 3 karakter yazın veya adresi serbestçe girin.",
+    "اكتب 3 أحرف على الأقل لرؤية الاقتراحات، أو أدخل العنوان بحرية.",
+    "सुझाव देखने के लिए कम से कम 3 अक्षर लिखें, या पता स्वयं दर्ज करें।",
+    "输入至少 3 个字符以查看建议，或直接自由输入地址。"
+  ],
+  "Searching addresses…": [
+    "Buscando direcciones…",
+    "A procurar moradas…",
+    "Adressen werden gesucht…",
+    "Ricerca degli indirizzi…",
+    "Adresler aranıyor…",
+    "جارٍ البحث عن العناوين…",
+    "पते खोजे जा रहे हैं…",
+    "正在搜索地址…"
+  ],
+  "suggestions available. Use the arrow keys to choose one.": [
+    "sugerencias disponibles. Usa las flechas para elegir una.",
+    "sugestões disponíveis. Use as setas para escolher uma.",
+    "Vorschläge verfügbar. Wählen Sie mit den Pfeiltasten.",
+    "suggerimenti disponibili. Usa le frecce per sceglierne uno.",
+    "öneri mevcut. Birini seçmek için ok tuşlarını kullanın.",
+    "اقتراحات متاحة. استخدم مفاتيح الأسهم لاختيار أحدها.",
+    "सुझाव उपलब्ध हैं। चुनने के लिए तीर कुंजियों का उपयोग करें।",
+    "条建议可用。使用方向键进行选择。"
+  ],
+  "Yes": [
+    "Sí",
+    "Sim",
+    "Ja",
+    "Sì",
+    "Evet",
+    "نعم",
+    "हाँ",
+    "是"
+  ],
+  "No": [
+    "No",
+    "Não",
+    "Nein",
+    "No",
+    "Hayır",
+    "لا",
+    "नहीं",
+    "否"
+  ],
+  "Project": [
+    "Proyecto",
+    "Projeto",
+    "Projekt",
+    "Progetto",
+    "Proje",
+    "المشروع",
+    "परियोजना",
+    "项目"
+  ],
+  "Context and purpose": [
+    "Contexto y objeto",
+    "Contexto e objeto",
+    "Kontext und Zweck",
+    "Contesto e oggetto",
+    "Bağlam ve amaç",
+    "السياق والغرض",
+    "संदर्भ और उद्देश्य",
+    "背景与目的"
+  ],
+  "Scope of supply": [
+    "Alcance del suministro",
+    "Âmbito do fornecimento",
+    "Lieferumfang",
+    "Perimetro della fornitura",
+    "Tedarik kapsamı",
+    "نطاق التوريد",
+    "आपूर्ति का दायरा",
+    "供货范围"
+  ],
+  "Transport study": [
+    "Estudio de transporte",
+    "Estudo de transporte",
+    "Transportstudie",
+    "Studio di trasporto",
+    "Taşıma çalışması",
+    "دراسة النقل",
+    "परिवहन अध्ययन",
+    "运输方案评估"
+  ],
+  "Customs support": [
+    "Acompañamiento aduanero",
+    "Acompanhamento aduaneiro",
+    "Zollbegleitung",
+    "Assistenza doganale",
+    "Gümrük desteği",
+    "المرافقة الجمركية",
+    "सीमा शुल्क सहायता",
+    "清关支持"
+  ],
+  "Quantities and delivery": [
+    "Cantidades y entrega",
+    "Quantidades e entrega",
+    "Mengen und Lieferung",
+    "Quantità e consegna",
+    "Miktarlar ve teslimat",
+    "الكميات والتسليم",
+    "मात्रा और डिलीवरी",
+    "数量与交付"
+  ],
+  "Compliance and standards": [
+    "Conformidad y normas",
+    "Conformidade e normas",
+    "Konformität und Normen",
+    "Conformità e norme",
+    "Uygunluk ve standartlar",
+    "المطابقة والمعايير",
+    "अनुपालन और मानक",
+    "合规与标准"
+  ],
+  "Documents expected": [
+    "Documentos esperados",
+    "Documentos esperados",
+    "Erwartete Unterlagen",
+    "Documenti attesi",
+    "Beklenen belgeler",
+    "المستندات المطلوبة",
+    "अपेक्षित दस्तावेज़",
+    "所需文件"
+  ],
+  "Acceptance criteria": [
+    "Criterios de recepción",
+    "Critérios de receção",
+    "Abnahmekriterien",
+    "Criteri di accettazione",
+    "Kabul kriterleri",
+    "معايير الاستلام",
+    "स्वीकृति मानदंड",
+    "验收标准"
+  ],
+  "Confidentiality": [
+    "Confidencialidad",
+    "Confidencialidade",
+    "Vertraulichkeit",
+    "Riservatezza",
+    "Gizlilik",
+    "السرية",
+    "गोपनीयता",
+    "保密"
+  ],
+  "This document and its attachments are confidential. They are provided only so that a quotation can be prepared and must not be shared with third parties without the issuer’s consent.": [
+    "Este documento y sus anexos son confidenciales. Se comunican únicamente para preparar una oferta y no pueden compartirse con terceros sin el consentimiento del emisor.",
+    "Este documento e os seus anexos são confidenciais. São comunicados apenas para a preparação de uma proposta e não podem ser partilhados com terceiros sem o consentimento do emissor.",
+    "Dieses Dokument und seine Anlagen sind vertraulich. Sie werden ausschließlich zur Erstellung eines Angebots übermittelt und dürfen ohne Zustimmung des Ausstellers nicht an Dritte weitergegeben werden.",
+    "Questo documento e i suoi allegati sono riservati. Sono forniti solo per la preparazione di un'offerta e non possono essere condivisi con terzi senza il consenso dell'emittente.",
+    "Bu belge ve ekleri gizlidir. Yalnızca teklif hazırlanması amacıyla iletilir ve düzenleyenin onayı olmadan üçüncü kişilerle paylaşılamaz.",
+    "هذه الوثيقة ومرفقاتها سرية. تُقدَّم فقط لإعداد عرض سعر ولا يجوز مشاركتها مع أطراف ثالثة دون موافقة مُصدرها.",
+    "यह दस्तावेज़ और इसके संलग्नक गोपनीय हैं। ये केवल कोटेशन तैयार करने के लिए दिए गए हैं और जारीकर्ता की सहमति के बिना तीसरे पक्ष से साझा नहीं किए जा सकते।",
+    "本文件及其附件均属保密内容，仅供编制报价使用，未经发布方同意不得向第三方披露。"
+  ],
+  "Date": [
+    "Fecha",
+    "Data",
+    "Datum",
+    "Data",
+    "Tarih",
+    "التاريخ",
+    "दिनांक",
+    "日期"
+  ],
+  "Version": [
+    "Versión",
+    "Versão",
+    "Version",
+    "Versione",
+    "Sürüm",
+    "الإصدار",
+    "संस्करण",
+    "版本"
+  ],
+  "Status": [
+    "Estado",
+    "Estado",
+    "Status",
+    "Stato",
+    "Durum",
+    "الحالة",
+    "स्थिति",
+    "状态"
+  ],
+  "Sent to GSL": [
+    "Enviado a GSL",
+    "Enviado à GSL",
+    "An GSL übermittelt",
+    "Inviato a GSL",
+    "GSL'ye gönderildi",
+    "أُرسل إلى GSL",
+    "GSL को भेजा गया",
+    "已发送给 GSL"
+  ],
+  "Private draft saved": [
+    "Borrador privado guardado",
+    "Rascunho privado guardado",
+    "Privater Entwurf gespeichert",
+    "Bozza privata salvata",
+    "Özel taslak kaydedildi",
+    "تم حفظ المسودة الخاصة",
+    "निजी ड्राफ़्ट सहेजा गया",
+    "私密草稿已保存"
+  ],
+  "Email": [
+    "Correo electrónico",
+    "E-mail",
+    "E-Mail",
+    "Email",
+    "E-posta",
+    "البريد الإلكتروني",
+    "ईमेल",
+    "电子邮箱"
+  ],
+  "Phone": [
+    "Teléfono",
+    "Telefone",
+    "Telefon",
+    "Telefono",
+    "Telefon",
+    "الهاتف",
+    "फ़ोन",
+    "电话"
+  ],
+  "Technical specification": [
+    "Pliego de condiciones",
+    "Caderno de encargos",
+    "Lastenheft",
+    "Capitolato tecnico",
+    "Teknik şartname",
+    "دفتر الشروط الفنية",
+    "तकनीकी विनिर्देश",
+    "技术规格书"
+  ],
+  "Robotics component sourcing": [
+    "Abastecimiento de componentes robóticos",
+    "Aprovisionamento de componentes robóticos",
+    "Beschaffung von Robotikkomponenten",
+    "Approvvigionamento di componenti robotici",
+    "Robotik bileşen tedariki",
+    "توريد مكونات الروبوتات",
+    "रोबोटिक्स घटक सोर्सिंग",
+    "机器人零部件采购"
+  ],
+  "Document": [
+    "Documento",
+    "Documento",
+    "Dokument",
+    "Documento",
+    "Belge",
+    "الوثيقة",
+    "दस्तावेज़",
+    "文件"
+  ],
+  "Buyer": [
+    "Comprador",
+    "Comprador",
+    "Käufer",
+    "Acquirente",
+    "Alıcı",
+    "المشتري",
+    "ख़रीदार",
+    "采购方"
+  ],
+  "No.": [
+    "N.º",
+    "N.º",
+    "Nr.",
+    "N.",
+    "No.",
+    "رقم",
+    "क्र.",
+    "序号"
+  ],
+  "Designation / reference": [
+    "Designación / referencia",
+    "Designação / referência",
+    "Bezeichnung / Referenz",
+    "Designazione / riferimento",
+    "Tanım / referans",
+    "التسمية / المرجع",
+    "विवरण / संदर्भ",
+    "名称 / 型号"
+  ],
+  "Confidential": [
+    "Confidencial",
+    "Confidencial",
+    "Vertraulich",
+    "Riservato",
+    "Gizli",
+    "سري",
+    "गोपनीय",
+    "保密"
+  ],
+  "Your company requires two-step verification. Enable it in your account security, then save again.": [
+    "Tu empresa exige la verificación en dos pasos. Actívala en la seguridad de tu cuenta y vuelve a guardar.",
+    "A sua empresa exige a verificação em dois passos. Ative-a na segurança da conta e volte a guardar.",
+    "Ihr Unternehmen verlangt die Zwei-Faktor-Bestätigung. Aktivieren Sie sie in der Kontosicherheit und speichern Sie erneut.",
+    "La tua azienda richiede la verifica in due passaggi. Attivala nella sicurezza dell'account, poi salva di nuovo.",
+    "Şirketiniz iki adımlı doğrulama gerektiriyor. Hesap güvenliğinden etkinleştirip yeniden kaydedin.",
+    "تشترط شركتك التحقق بخطوتين. فعّله من إعدادات أمان حسابك ثم احفظ مجددًا.",
+    "आपकी कंपनी के लिए दो-चरणीय सत्यापन आवश्यक है। इसे खाता सुरक्षा में चालू करें, फिर दोबारा सहेजें।",
+    "您的企业要求启用两步验证。请在账户安全中启用后再次保存。"
+  ],
+  "Your role in this company does not allow saving requests. Choose another company or ask an administrator.": [
+    "Tu rol en esta empresa no permite guardar solicitudes. Elige otra empresa o consulta a un administrador.",
+    "A sua função nesta empresa não permite guardar pedidos. Escolha outra empresa ou contacte um administrador.",
+    "Ihre Rolle in diesem Unternehmen erlaubt das Speichern von Anfragen nicht. Wählen Sie ein anderes Unternehmen oder wenden Sie sich an einen Administrator.",
+    "Il tuo ruolo in questa azienda non consente di salvare richieste. Scegli un'altra azienda o rivolgiti a un amministratore.",
+    "Bu şirketteki rolünüz talep kaydetmeye izin vermiyor. Başka bir şirket seçin veya bir yöneticiye başvurun.",
+    "لا يسمح دورك في هذه الشركة بحفظ الطلبات. اختر شركة أخرى أو تواصل مع أحد المسؤولين.",
+    "इस कंपनी में आपकी भूमिका अनुरोध सहेजने की अनुमति नहीं देती। कोई अन्य कंपनी चुनें या किसी व्यवस्थापक से संपर्क करें।",
+    "您在该企业中的角色无权保存需求。请选择其他企业或联系管理员。"
+  ],
+  "Some information was not accepted. Check the delivery details and contact, then try again.": [
+    "Parte de la información no fue aceptada. Revisa la entrega y el contacto y vuelve a intentarlo.",
+    "Algumas informações não foram aceites. Verifique a entrega e o contacto e tente novamente.",
+    "Einige Angaben wurden nicht akzeptiert. Prüfen Sie Lieferung und Kontakt und versuchen Sie es erneut.",
+    "Alcune informazioni non sono state accettate. Controlla consegna e contatto, poi riprova.",
+    "Bazı bilgiler kabul edilmedi. Teslimat ve iletişim bilgilerini kontrol edip yeniden deneyin.",
+    "لم يتم قبول بعض المعلومات. تحقّق من بيانات التسليم وجهة الاتصال ثم أعد المحاولة.",
+    "कुछ जानकारी स्वीकार नहीं की गई। डिलीवरी और संपर्क विवरण जाँचें, फिर दोबारा प्रयास करें।",
+    "部分信息未被接受。请检查交付和联系信息后重试。"
+  ],
+  "The request could not be saved right now. Your draft is kept in this tab: export it or try again in a moment.": [
+    "No se pudo guardar la solicitud por ahora. Tu borrador se conserva en esta pestaña: expórtalo o vuelve a intentarlo en un momento.",
+    "Não foi possível guardar o pedido de momento. O seu rascunho é mantido neste separador: exporte-o ou tente novamente daqui a pouco.",
+    "Die Anfrage konnte gerade nicht gespeichert werden. Ihr Entwurf bleibt in diesem Tab erhalten: Exportieren Sie ihn oder versuchen Sie es gleich erneut.",
+    "Al momento non è stato possibile salvare la richiesta. La bozza resta in questa scheda: esportala o riprova tra poco.",
+    "Talep şu anda kaydedilemedi. Taslağınız bu sekmede korunuyor: dışa aktarın veya birazdan yeniden deneyin.",
+    "تعذّر حفظ الطلب حاليًا. تبقى مسودتك محفوظة في علامة التبويب هذه: صدّرها أو أعد المحاولة بعد قليل.",
+    "अनुरोध अभी सहेजा नहीं जा सका। आपका ड्राफ़्ट इस टैब में सुरक्षित है: इसे निर्यात करें या थोड़ी देर बाद फिर प्रयास करें।",
+    "暂时无法保存需求。您的草稿仍保留在此标签页中：请导出或稍后重试。"
   ]
 }

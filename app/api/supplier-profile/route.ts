@@ -2,7 +2,8 @@ import {authClient} from '@/lib/supabase/server';
 import {phoneDetails} from '@/lib/onboarding/phone';
 import {getCountryRequirements} from '@/lib/onboarding/country-requirements';
 import {allowedOrigin} from '@/lib/auth-policy';
-import {productPublicationIssues,normalizeProductCategory,companyPublicationSchema,companyIssues,supplierSubmissionSchema,supplierDraftSchema,profileIssues,supplierValidationIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
+import {stripSpecificationBlock} from '@/lib/products/spec-fields';
+import {productPublicationIssues,productPublicationProfile,normalizeProductCategory,companyPublicationSchema,companyIssues,supplierSubmissionSchema,supplierDraftSchema,profileIssues,supplierValidationIssues,type SupplierFile} from '@/lib/onboarding/supplier-profile';
 // Company details typed at sign-up; they pre-fill a first supplier profile.
 const signupCompany=(m:Record<string,unknown>|undefined)=>{const t=(v:unknown,max:number)=>typeof v==='string'?v.trim().slice(0,max):'';return {name:t(m?.company_name,160),country:/^[A-Z]{2}$/.test(t(m?.company_country,2))?t(m?.company_country,2):'',legalForm:t(m?.company_legal_form,120)}};
 export const dynamic='force-dynamic';
@@ -14,9 +15,14 @@ export async function GET(){try{
  const signed=await Promise.all((files||[]).map(async f=>{const {data}=await db.storage.from('gsl-onboarding').createSignedUrl(f.object_path,600,{download:!['logo','factory','product'].includes(f.kind)});return {id:f.id,kind:f.kind,name:f.name,size:f.size,caption:f.caption,url:data?.signedUrl}}));
  const {data:events,error:ee}=await db.from('supplier_application_events').select('id,status,created_at').eq('owner_id',user.id).order('created_at',{ascending:false}).limit(20);if(ee)throw ee;
  const {data:pendingUploads,error:pe}=await db.from('onboarding_uploads').select('id,name,state').eq('owner_id',user.id).in('state',['reserved','deleting','failed']);if(pe)throw pe;
- const publication=application?.organization_id?await db.from('published_supplier_profiles').select('organization_id,public_details').eq('organization_id',application.organization_id).is('withdrawn_at',null).maybeSingle():null;if(publication?.error)throw publication.error;
- const publishedProducts=application?.organization_id?await db.from('published_products').select('product_id',{count:'exact',head:true}).eq('organization_id',application.organization_id).is('withdrawn_at',null):null;if(publishedProducts?.error)throw publishedProducts.error;
- return json({application,publishedProducts:publishedProducts?.count||0,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email,signup:signupCompany(user.user_metadata)});
+ const publication=application?.organization_id?await db.from('published_supplier_profiles').select('organization_id,display_name,country_code,city,description,processes,materials,published_at,public_details').eq('organization_id',application.organization_id).is('withdrawn_at',null).maybeSingle():null;if(publication?.error)throw publication.error;
+ const live=application?.organization_id?await db.from('published_products').select('product_id,name,description,category,specifications,published_at').eq('organization_id',application.organization_id).is('withdrawn_at',null).limit(100):null;if(live?.error)throw live.error;
+ const liveRows=live?.data||[];
+ // Public catalogue visibility requires a GSL admission (component_products view). Unknown when that view is unavailable.
+ let catalogue:string[]|null=null;if(liveRows.length){const visible=await db.from('component_products').select('product_id').in('product_id',liveRows.map(r=>r.product_id));if(!visible.error)catalogue=(visible.data||[]).map(r=>String(r.product_id));}else catalogue=[];
+ // Publication appends the technical block to each description; the editor keeps the supplier's own text.
+ if(application?.payload&&Array.isArray(application.payload.products))application.payload={...application.payload,products:application.payload.products.map((v:{description?:unknown})=>typeof v?.description==='string'?{...v,description:stripSpecificationBlock(v.description)}:v)};
+ return json({application,publishedProducts:liveRows.length,liveProducts:liveRows,catalogue,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email,signup:signupCompany(user.user_metadata)});
 }catch{return json({error:'UNAVAILABLE'},503)}}
 export async function POST(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);
@@ -29,7 +35,8 @@ export async function POST(request:Request){
  const parsed=supplierDraftSchema.safeParse(body.profile);if(!parsed.success)return json({error:'INVALID'},400);
  const profile=parsed.data;profile.products=profile.products.map(p=>({...p,category:normalizeProductCategory(p.category)}));
  const issues=productPublicationIssues(profile);if(issues.length)return json({error:'INCOMPLETE',issues},422);
- const {data,error}=await db.rpc('publish_supplier_products',{profile,expected_revision:body.revision});if(error)throw error;
+ // Category derived from the product family; family and technical values published inside the description (see lib/products/spec-fields.ts).
+ const {data,error}=await db.rpc('publish_supplier_products',{profile:productPublicationProfile(profile),expected_revision:body.revision});if(error)throw error;
  return json({application:data});
  }
  if(body.action==='publish'){

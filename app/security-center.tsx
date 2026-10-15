@@ -2,13 +2,12 @@
 
 import {useEffect, useRef, useState, type FormEvent} from 'react';
 import {useSearchParams} from 'next/navigation';
-import {ArrowLeft, ArrowRight, Check, CheckCircle2, ChevronDown, Copy, KeyRound, LoaderCircle, LockKeyhole, LogOut, MailCheck, RefreshCw, ShieldCheck, Smartphone, Trash2} from 'lucide-react';
+import {ArrowRight, Check, CheckCircle2, ChevronDown, Copy, KeyRound, LoaderCircle, LockKeyhole, LogOut, MailCheck, RefreshCw, ShieldCheck, Smartphone, Trash2} from 'lucide-react';
 import Link from '@/components/site-link';
-import BrandLogo from '@/components/brand-logo';
 import {localizedHref} from '@/lib/i18n/languages';
 import {normalizeAuthenticatorCode} from '@/lib/security/code';
 import {securityTranslate, type SecurityKey} from '@/lib/security/translations';
-import {LanguageSelector, useLanguage} from './language';
+import {useLanguage} from './language';
 
 type Factor = {id: string; name: string; status: 'verified' | 'unverified'};
 type Snapshot = {email: string; factors: Factor[]; level: string; nextLevel: string};
@@ -135,12 +134,8 @@ export default function SecurityCenter() {
   const qrSource = enrollment?.qrCode.startsWith('data:image/') ? enrollment.qrCode : enrollment?.qrCode ? 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(enrollment.qrCode) : '';
 
   return <div className="security-shell">
-    <header className="security-topbar">
-      <Link href="/" className="security-brand" aria-label="GSL systems"><BrandLogo eager/></Link>
-      <div><LanguageSelector/><Link className="security-back" href="/compte"><ArrowLeft size={16} aria-hidden/>{t('back')}</Link></div>
-    </header>
     <main className="security-main">
-      <header className="security-heading"><span className="security-eyebrow"><ShieldCheck size={15} aria-hidden/>GSL SYSTEMS</span><h1>{t('title')}</h1><p>{t('subtitle')}</p></header>
+      <header className="security-heading"><h1>{t('title')}</h1><p>{t('subtitle')}</p></header>
       {loading ? <div className="security-gate" role="status"><LoaderCircle className="security-spinner" size={28}/><p>{t('loading')}</p></div> : !data ? <section className="security-gate">
         <span className="security-large-icon"><LockKeyhole size={30} aria-hidden/></span>
         <h2>{t(error === 'LOGIN_REQUIRED' ? 'signInTitle' : 'entryTitle')}</h2>
