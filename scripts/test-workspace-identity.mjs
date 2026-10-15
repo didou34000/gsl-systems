@@ -1,0 +1,30 @@
+import assert from 'node:assert/strict';
+import {readFile} from 'node:fs/promises';
+import {transpileModule,ModuleKind,ScriptTarget} from 'typescript';
+const moduleUrl=source=>'data:text/javascript;base64,'+Buffer.from(transpileModule(source,{compilerOptions:{module:ModuleKind.ESNext,target:ScriptTarget.ES2022}}).outputText).toString('base64');
+const identityUrl=moduleUrl(await readFile('lib/workspace-identity.ts','utf8'));
+const {workspaceIdentity}=await import(identityUrl);
+const original={id:'company-a',legal_name:'Ancien compte',trading_name:'Ancienne enseigne',buyer:true,supplier:false};
+const application=(legalName,organization_id=null,tradingName='')=>({organization_id,payload:{legalName,tradingName}});
+const saved=application('twiice auto',null,'Twiice auto');
+assert.equal(workspaceIdentity([original],saved).companyLabel,'twiice auto','Saved private draft labels the single-company account without publication');
+assert.deepEqual(workspaceIdentity([original],saved).company,{name:'Ancien compte',buyer:true,supplier:false},'Label does not rename organizations or change tools/permissions');
+assert.equal(original.legal_name,'Ancien compte');assert.equal(workspaceIdentity([original],null).companyLabel,'Ancien compte','Registered name precedes a stale trading name');
+assert.deepEqual(workspaceIdentity([],saved),{company:null,companyLabel:'twiice auto'},'A private draft does not invent an organization');
+const second={...original,id:'company-b',legal_name:'Autre entreprise',supplier:true};
+assert.equal(workspaceIdentity([second,original],application('Nouveau nom','company-a')).companyLabel,'Nouveau nom');
+assert.equal(workspaceIdentity([second,original],saved).companyLabel,'Autre entreprise','Unlinked draft cannot rename an unrelated company in a multi-company account');
+assert.equal(workspaceIdentity([original],application('Inaccessible','revoked-org')).companyLabel,'Ancien compte','Revoked membership is not reintroduced through the profile');
+assert.equal(workspaceIdentity([original],application('   ')).companyLabel,'Ancien compte');
+assert.equal(workspaceIdentity([original],{organization_id:null,payload:null}).companyLabel,'Ancien compte');
+
+let guest=false,queryError=false,current=saved;const queries=[];
+function query(table){const filters=[];const chain={select(){return chain},order(){return chain},limit(){return chain},eq(...args){filters.push(args);return chain},maybeSingle(){return chain},then(resolve,reject){queries.push({table,filters});if(table==='supplier_applications')assert.ok(filters.some(([key,id])=>key==='owner_id'&&id==='user-a'),'Private profile query must be scoped to authenticated owner');const data={workspace_drafts:[],saved_selections:[],profiles:{display_name:'Nom personnel'},organizations:[original],supplier_applications:current}[table];return Promise.resolve({data,error:queryError&&table==='supplier_applications'?{message:'unavailable'}:null}).then(resolve,reject)}};return chain;}
+globalThis.__workspaceIdentityDb={auth:{getUser:async()=>({data:{user:guest?null:{id:'user-a',email:'test@example.invalid',email_confirmed_at:'2026-10-15',user_metadata:{}}}})},from:query};
+let source=await readFile('lib/supabase/workspace.ts','utf8');source=source.replace("import {authClient} from './server';",'const authClient=async()=>globalThis.__workspaceIdentityDb;').replace("'@/lib/workspace-identity'",JSON.stringify(identityUrl)).replace("'@/lib/auth-policy'",JSON.stringify(moduleUrl('export const allowedOrigin=()=>true;'))).replace("'zod'",JSON.stringify(import.meta.resolve('zod')));
+const {readWorkspace}=await import(moduleUrl(source));
+let response=await readWorkspace(),data=await response.json();assert.equal(response.status,200);assert.equal(data.companyLabel,'twiice auto');assert.equal(data.user.name,'Nom personnel');
+current=application('Deuxième nom');data=await (await readWorkspace()).json();assert.equal(data.companyLabel,'Deuxième nom','Reload uses persisted profile, not an optimistic browser-only label');
+queryError=true;assert.equal((await readWorkspace()).status,503);queryError=false;
+guest=true;queries.length=0;assert.equal((await readWorkspace()).status,401);assert.equal(queries.length,0,'Guests never query private account data');
+console.log('Workspace identity: persisted private rename, reload, legal/trading priority, linked and multi-company scope, preserved roles and organization records, owner-bound API and unavailable/auth errors passed.');

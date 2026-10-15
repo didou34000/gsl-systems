@@ -7,12 +7,12 @@ import Link from '@/components/site-link';
 import {LanguageSelector,useLanguage} from './language';
 import MessageLink from './message-link';
 
-export default function SiteHeader({path,signedIn,loading,favorites,company:workspaceCompany=null,accountName='',children}:{path:string;signedIn:boolean;loading:boolean;favorites:number;company?:WorkspaceCompany|null;accountName?:string;children:ReactNode}) {
+export default function SiteHeader({path,signedIn,loading,favorites,company:workspaceCompany=null,companyLabel='',accountName='',children}:{path:string;signedIn:boolean;loading:boolean;favorites:number;company?:WorkspaceCompany|null;companyLabel?:string;accountName?:string;children:ReactNode}) {
  const {l}=useLanguage();
  // A manufacturer-only account has no purchasing side: quote requests are a buyer feature.
  const buyerTools=!signedIn||!workspaceCompany||workspaceCompany.buyer;
  const AccountIcon=!signedIn?UserRound:workspaceCompany?.supplier?Factory:workspaceCompany?Building2:UserRound;
- const accountLabel=signedIn?workspaceCompany?.name||accountName||l('My account','Mon compte'):l('My account','Mon compte');
+ const accountLabel=signedIn?companyLabel||workspaceCompany?.name||accountName||l('My account','Mon compte'):l('My account','Mon compte');
  const [open,setOpen]=useState(false);
  const toggle=useRef<HTMLButtonElement>(null);
  const header=useRef<HTMLElement>(null);
