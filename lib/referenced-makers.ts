@@ -24,3 +24,10 @@ export const referencedMakers:ReferencedMaker[]=[
   noteEn:'Prototype under testing, not commercially available.',noteFr:'Prototype en test, pas encore commercialisé.',
   sources:[{url:'https://www.akinrobotics.com/en',title:'AKINROBOTICS, site officiel'},{url:'https://humanoid.guide/product/akinci-5/',title:'humanoid.guide, AKINCI-5'}],checkedAt:'2026-10-13'},
 ];
+
+/** Public page addresses of the referenced entries: one product page per entry, one maker page per company. */
+export const referencedMakerId=(m:Pick<ReferencedMaker,'company'>)=>'repere-'+m.company.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+export const referencedProductHref=(m:Pick<ReferencedMaker,'id'>)=>'/produits/'+m.id;
+export const referencedMakerHref=(m:Pick<ReferencedMaker,'company'>)=>'/fabricants/'+referencedMakerId(m);
+export const findReferencedProduct=(id:string)=>referencedMakers.find(m=>m.id===id)||null;
+export const findReferencedMaker=(id:string)=>{const products=referencedMakers.filter(m=>referencedMakerId(m)===id);return products.length?products:null};

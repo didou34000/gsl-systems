@@ -3,7 +3,7 @@ import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import {ArrowRight,ExternalLink} from 'lucide-react';
 import {countryName} from '@/lib/country-names';
-import {referencedMakers} from '@/lib/referenced-makers';
+import {referencedMakerHref,referencedMakers,referencedProductHref} from '@/lib/referenced-makers';
 import {CategoryIcon,useCategoryLabel} from './catalogue-cards';
 import {useLanguage} from './language';
 import ProductPicture from './product-image';
@@ -19,8 +19,8 @@ export function ReferencedMakers({category='',country=''}:{category?:string;coun
   <div className="catalogue-grid product-grid-mode">{rows.map(m=><article className="ind-card" key={m.id}>
    {m.image&&<ProductPicture image={m.image} alt={language==='fr'?m.productFr:m.productEn}/>}
    <p className="ind-card-family"><CategoryIcon category={m.family} size={16}/>{categoryLabel(m.family)}</p>
-   <h3 dir="auto">{language==='fr'?m.productFr:m.productEn}</h3>
-   <p className="ind-card-maker"><CountryFlag code={m.country}/>{m.company}, {m.city}, {countryName(m.country,language)}</p>
+   <h3 dir="auto"><Link href={referencedProductHref(m)}>{language==='fr'?m.productFr:m.productEn}</Link></h3>
+   <p className="ind-card-maker"><CountryFlag code={m.country}/><Link href={referencedMakerHref(m)}>{m.company}</Link>, {m.city}, {countryName(m.country,language)}</p>
    <span className="catalogue-status">{l('Not registered, unverified','Non inscrit, non vérifié')}</span>
    {m.specs.length>0?<dl className="ind-specs">{m.specs.map(s=><div key={s.fr}><dt>{language==='fr'?s.fr:s.en}</dt><dd>{language==='fr'&&s.valueFr?s.valueFr:s.value}</dd></div>)}</dl>:<p className="ind-card-description">{l('No specifications published by the manufacturer.','Aucune caractéristique publiée par le fabricant.')}</p>}
    <p className="ind-card-description">{language==='fr'?m.noteFr:m.noteEn}</p>

@@ -8,7 +8,7 @@ import CountryFlag from '@/components/country-flag';
 import {countryName} from '@/lib/country-names';
 import {productResearch} from '@/lib/catalogue-research';
 import {publishedPrice} from '@/lib/catalogue-display';
-import {referencedMakers,type ReferencedMaker as ReferencedMakerRow} from '@/lib/referenced-makers';
+import {referencedMakerHref,referencedMakers,referencedProductHref,type ReferencedMaker as ReferencedMakerRow} from '@/lib/referenced-makers';
 import ProductPicture from './product-image';
 type Manufacturer={organization_id:string;display_name:string;country_code:string};
 type Product={product_id:string;name:string;category:string;description:string;specifications:Record<string,string>;manufacturer:Manufacturer};
@@ -42,7 +42,7 @@ function useFamilyLabel(){
 }
 function ReferencedProduct({maker:m}:{maker:ReferencedMakerRow}){
  const {language}=useLanguage();const categoryLabel=useFamilyLabel();
- return <li className="home-mini"><Link href={'/catalogue?category='+m.family}>
+ return <li className="home-mini"><Link href={referencedProductHref(m)}>
   {m.image?<ProductPicture image={m.image} alt={language==='fr'?m.productFr:m.productEn} className="home-mini-visual" linkCredit={false}/>:<span className="home-mini-visual" aria-hidden><CategoryIcon category={m.family} size={40} strokeWidth={1.2}/></span>}
   <span className="home-mini-family">{categoryLabel(m.family)}</span>
   <strong dir="auto">{language==='fr'?m.productFr:m.productEn}</strong>
@@ -51,7 +51,7 @@ function ReferencedProduct({maker:m}:{maker:ReferencedMakerRow}){
 }
 function ReferencedMaker({maker:m}:{maker:ReferencedMakerRow}){
  const {language}=useLanguage();const categoryLabel=useFamilyLabel();
- return <li className="home-mini home-mini-maker"><Link href={'/catalogue?category='+m.family}>
+ return <li className="home-mini home-mini-maker"><Link href={referencedMakerHref(m)}>
   <span className="home-mini-visual"><span className="catalogue-company-monogram" aria-hidden>{m.company.split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase()}</span></span>
   <strong>{m.company}</strong>
   <span className="home-mini-family">{categoryLabel(m.family)}</span>

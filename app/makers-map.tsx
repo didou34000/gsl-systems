@@ -3,7 +3,7 @@ import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import europe from '@/lib/maps/europe.json';
 import {makerPoint} from '@/lib/maps/maker-cities';
-import {referencedMakers} from '@/lib/referenced-makers';
+import {referencedMakerHref,referencedMakers} from '@/lib/referenced-makers';
 import {isSourcingCountry,sourcingCountries} from '@/lib/sourcing-coverage';
 import {countryName} from '@/lib/country-names';
 import type {MakerLocation} from '@/lib/supabase/public-catalogue';
@@ -66,7 +66,7 @@ export default function MakersMap({published,available,selected=''}:{published:M
     {countries.map(code=>{const here=makers.filter(m=>m.country===code);const own=here.filter(m=>m.kind==='published'),found=here.filter(m=>m.kind==='referenced');return <div key={code} className={'makers-map-country'+(selected===code?' is-selected':'')}>
      <h3><CountryFlag code={code}/>{countryName(code,language)}</h3>
      <p>{[own.length?count(own.length,'published'):'',found.length?count(found.length,'referenced'):''].filter(Boolean).join(' · ')}</p>
-     <ul>{own.map(m=><li key={m.id}><Link href={'/fabricants/'+m.id}>{m.name}</Link>{m.city&&<span>{m.city}</span>}</li>)}{found.map(m=><li key={m.id}><strong>{m.name}</strong><span>{m.city} · {l('Not registered, unverified','Non inscrit, non vérifié')}</span></li>)}</ul>
+     <ul>{own.map(m=><li key={m.id}><Link href={'/fabricants/'+m.id}>{m.name}</Link>{m.city&&<span>{m.city}</span>}</li>)}{found.map(m=><li key={m.id}><Link href={referencedMakerHref({company:m.name})}>{m.name}</Link><span>{m.city} · {l('Not registered, unverified','Non inscrit, non vérifié')}</span></li>)}</ul>
      {isSourcingCountry(code)&&selected!==code&&<Link className="makers-map-filter" href={filter(code)}>{l('Show this country’s manufacturers','Voir les fabricants de ce pays')}<ArrowRight size={15} aria-hidden/></Link>}
     </div>})}
     {empty.length>0&&<p className="makers-map-empty">{l('Sourcing countries with no manufacturer listed yet:','Pays de sourcing sans fabricant référencé pour l’instant :')} {empty.map(code=>countryName(code,language)).join(', ')}.</p>}
