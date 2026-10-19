@@ -12,6 +12,7 @@ import {SaveProduct} from './saved-selection';
 import {CompareProduct} from './compare-product';
 import {CategoryIcon,CompanyMark,ProductCard,useCategoryLabel} from './catalogue-cards';
 import ProductPicture from './product-image';
+import {productPhotoIds} from '@/lib/products/review';
 import type {PublicProduct,PublicSupplier} from './public-profiles';
 import './product-sheet.css';
 
@@ -20,7 +21,7 @@ type Row={key:string;label:string;value:string};
 type Source={url:string;title:string};
 
 // Shown in their own sections (commercial terms, compliance) or internal to the review: never repeated in the specification table.
-const reserved=new Set(['minimum_quantity','unit','lead_time','manufacturing_country','robotics_site','verification','compliance','qualification','delivery_status','delivery_evidence','candidate_id','robotics_family','robotics_offer','robotics_checked_at','robotics_sources','research_data','points_to_confirm','production_evidence','certifications','certification_documented']);
+const reserved=new Set(['minimum_quantity','unit','lead_time','manufacturing_country','robotics_site','verification','compliance','qualification','delivery_status','delivery_evidence','candidate_id','robotics_family','robotics_offer','robotics_checked_at','robotics_sources','research_data','photo_ids','points_to_confirm','production_evidence','certifications','certification_documented']);
 /** Stored specification keys as labelled rows, robotics metrics first with their units. */
 function fallbackSpecRows(p:PublicProduct,l:L):Row[]{
  const spec=p.specifications||{};const metrics=technicalRows(p.category,spec);const shown=new Set(metrics.map(m=>m.key));
@@ -50,6 +51,7 @@ function Gallery({images,name,category}:{images:ProductImage[];name:string;categ
 
 export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],images=[]}:{product:PublicProduct;similar:PublicProduct[];manufacturer?:PublicSupplier|null;makerProducts?:PublicProduct[];images?:ProductImage[]}){
  const {l,language}=useLanguage();const categoryLabel=useCategoryLabel();const spec=p.specifications||{};
+ const supplierPhotos=productPhotoIds(spec.photo_ids).map(id=>({src:'/api/product-images?id='+id,kind:'manufacturer' as const,credit:manufacturer?.display_name||l('Manufacturer','Fabricant'),license:l('Publication authorised by the supplier','Publication autorisée par le fournisseur'),sourceUrl:'/produits/'+p.product_id}));
  const robotics=!!spec.robotics_family;const candidate=!!spec.candidate_id;const admitted=p.catalogue_status!=='not_admitted';
  const sheet=publishedSpecificationRows(p);const description=sheet.description.trim();const sources=sourcesOf(spec.robotics_sources);const rows=specificationRows(sheet,p,l,language);
  const quote='/decrire-mon-besoin?selection='+p.product_id+'&supplier='+p.organization_id;
@@ -70,7 +72,7 @@ export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],im
   <nav className="catalogue-breadcrumb"><Link href="/catalogue"><ArrowLeft size={16}/>{l('Catalogue','Catalogue')}</Link><span aria-hidden>/</span><Link href={'/catalogue?category='+encodeURIComponent(p.category)}>{categoryLabel(p.category)}</Link></nav>
   <div className="ind-sheet-layout ps-layout"><div className="ind-sheet-main">
    <div className="ps-intro">
-    <Gallery images={images} name={p.name} category={sheet.familyId||p.category}/>
+    <Gallery images={[...supplierPhotos,...images]} name={p.name} category={sheet.familyId||p.category}/>
     <div className="ps-summary">
      <p className="ind-card-family"><CategoryIcon category={sheet.familyId||p.category} size={16}/>{familyLabel}</p>
      <h1 dir="auto">{p.name}</h1>

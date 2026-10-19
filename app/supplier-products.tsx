@@ -1,10 +1,13 @@
 'use client';
 import {useState, type ReactNode} from 'react';
+import Image from 'next/image';
 import {ArrowLeft, ExternalLink, Eye, Pencil, Plus, Trash2, Upload, Send} from 'lucide-react';
 import {Dialog, DialogContent, DialogDescription, DialogTitle} from '@/components/ui/dialog';
 import CountryPicker from '@/components/country-picker';
 import CountryFlag from '@/components/country-flag';
 import {useLanguage} from './language';
+import ProductPhotos from './product-photos';
+import type {ProductReview} from '@/lib/products/review';
 import {
   composePublishedDescription, formatSpecRow, isRequired, KIND_KEY, legacyCategories, normalizeSpecs, productFamilies, productFamily,
   publishedSpecificationRows, quantityUnitLabels, quantityUnits, specFields, specIssues, type SpecField,
@@ -13,7 +16,7 @@ import {normalizeProductCategory, productPublicationCategory, productPublication
 
 type Product = SupplierProfile['products'][number];
 export type LiveProduct = {product_id: string; name: string; description: string; category: string; specifications: Record<string, string>; published_at: string};
-export type ProductState = 'draft' | 'unpublished' | 'changed' | 'pending' | 'visible';
+export type ProductState = 'draft' | 'unpublished' | 'changed' | 'pending' | 'visible' | 'corrections';
 
 const same = (a: unknown, b: unknown) => String(a ?? '').trim() === String(b ?? '').trim();
 /**
@@ -47,7 +50,8 @@ export function productState(p: Product, row: LiveProduct | undefined, catalogue
   return {state: catalogue?.includes(row.product_id) ? 'visible' : 'pending', live: row};
 }
 
-export default function SupplierProducts({profile, files, live, catalogue, companyPublished, locked, busy, onChange, onPublish, onAddFiles, savedAt}: {
+export default function SupplierProducts({profile, files, live, catalogue, companyPublished, locked, busy, onChange, onPublish, onAddFiles, savedAt, reviews=[], preparePhotos, onPhotoUploading}: {
+  reviews?:ProductReview[]; preparePhotos:()=>Promise<boolean>; onPhotoUploading:(busy:boolean)=>void;
   profile: SupplierProfile; files: SupplierFile[]; live: LiveProduct[]; catalogue: string[] | null; companyPublished: boolean; locked: boolean; busy: boolean; savedAt?: string;
   onChange: (products: Product[]) => void; onPublish: (attested: boolean) => Promise<boolean>; onAddFiles: (product: Product) => void;
 }) {
@@ -59,21 +63,29 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
   const [showErrors, setShowErrors] = useState(false);
   const products = profile.products;
   const matches = matchLiveProducts(products, live);
-  const states = new Map(products.map(p => [p.id, productState(p, matches.get(p.id), catalogue)]));
+  const states = new Map(products.map(p => {
+    const state=productState(p,matches.get(p.id),catalogue),review=reviews.find(r=>r.sourceId===p.id);
+    const current=review&&review.payload.description===composePublishedDescription(p.description,p.family,normalizeSpecs(p.family,p.specs))&&['name','reference','family','moq','unit','origin','materials','processes','leadTime'].every(k=>same(p[k as keyof Product],review.payload[k as keyof Product]))&&JSON.stringify(p.photoIds||[])===JSON.stringify(review.payload.photoIds||[])&&JSON.stringify(normalizeSpecs(p.family,p.specs))===JSON.stringify(normalizeSpecs(review.payload.family,review.payload.specs));
+    if(p.listingStatus!=='draft'&&current&&review?.status==='pending')return [p.id,{...state,state:'pending' as const}];
+    if(p.listingStatus!=='draft'&&current&&review?.status==='changes_requested')return [p.id,{...state,state:'corrections' as const}];
+    return [p.id,state];
+  }));
   const matched = new Set([...states.values()].map(s => s.live?.product_id).filter(Boolean));
   const orphans = live.filter(row => !matched.has(row.product_id));
   const stateLabel: Record<ProductState, string> = {
     draft: l('Private draft', 'Brouillon privé'),
-    unpublished: l('Not published yet', 'Pas encore publié'),
-    changed: l('Published · changes not published', 'Publié · modifications non publiées'),
-    pending: l('Published · awaiting catalogue admission', 'Publié · en attente d’admission au catalogue'),
+    unpublished: l('Ready to submit', 'À envoyer pour validation'),
+    changed: l('Changes to submit', 'Modifications à envoyer'),
+    pending: l('Awaiting administrator approval', 'En attente de validation admin'),
+    corrections:l('Corrections requested','Corrections demandées'),
     visible: l('Visible in the catalogue', 'Visible au catalogue'),
   };
   const stateHint: Record<ProductState, string> = {
     draft: l('Only you can see it.', 'Vous seul le voyez.'),
-    unpublished: l('Included in your next publication.', 'Inclus dans votre prochaine publication.'),
-    changed: l('Buyers see the previous version until you publish.', 'Les acheteurs voient la version précédente jusqu’à votre publication.'),
-    pending: l('Not yet shown to buyers: GSL must first admit it to the robotics selection.', 'Pas encore visible des acheteurs : GSL doit d’abord l’admettre dans la sélection robotique.'),
+    unpublished: l('Private until administrator approval.', 'Privé jusqu’à la validation par un administrateur.'),
+    changed: l('New products and photos stay private until approved by an administrator. The last approved version stays online while changes are reviewed.','Les nouveaux produits et leurs photos restent privés jusqu’à la validation admin. La dernière version validée reste en ligne pendant l’examen des modifications.'),
+    pending: l('An administrator must approve the submitted version.', 'Un administrateur doit valider la version envoyée.'),
+    corrections:l('Read the administrator feedback, then submit the corrected product.','Consultez le retour de l’administrateur, puis renvoyez le produit corrigé.'),
     visible: l('Buyers can find it in the catalogue.', 'Les acheteurs le trouvent dans le catalogue.'),
   };
   const issuesOf = (p: Product) => productPublicationIssues({...profile, attestation: true, products: [{...p, listingStatus: 'publish'}]}).filter(i => i.path.startsWith('products.'));
@@ -101,7 +113,7 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
     if (ok) {setPublishing(false);setAttested(false);}
   }
   const current = products.find(p => p.id === editing);
-  if (current) return <ProductEditor product={current} files={files} showErrors={showErrors} issues={issuesOf(current)} state={states.get(current.id)!} stateLabel={stateLabel} locked={locked}
+  if (current) return <ProductEditor product={current} files={files} showErrors={showErrors} issues={issuesOf(current)} state={states.get(current.id)!} stateLabel={stateLabel} locked={locked||busy} preparePhotos={preparePhotos} onPhotoUploading={onPhotoUploading} feedback={reviews.find(r=>r.sourceId===current.id)?.feedback||''}
     onPatch={values => patch(current.id, values)} onBack={() => {setEditing(null);window.scrollTo({top: 0, behavior: 'smooth'});}} onPreview={() => setPreview(current.id)} onAddFiles={() => onAddFiles(current)}
     previewNode={preview === current.id ? <ProductPreview product={current} live={states.get(current.id)?.live} onClose={() => setPreview(null)}/> : null}/>;
   const previewed = products.find(p => p.id === preview);
@@ -109,15 +121,15 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
     <div className="sp-dashboard-head">
       <div>
         <h2>{l('Your products', 'Vos produits')}</h2>
-        <p>{products.length ? l('{count} product(s) · {published} published · {visible} visible in the catalogue', '{count} produit(s) · {published} publié(s) · {visible} visible(s) au catalogue').replace('{count}', String(products.length)).replace('{published}', String(publishedCount)).replace('{visible}', String(visibleCount)) : l('Add your first product. Name, type, description, minimum order and key specifications are enough to publish.', 'Ajoutez votre premier produit. Nom, type, description, quantité minimale et caractéristiques clés suffisent pour publier.')}</p>
+        <p>{products.length ? l('{count} product(s) · {published} published · {visible} visible in the catalogue', '{count} produit(s) · {published} publié(s) · {visible} visible(s) au catalogue').replace('{count}', String(products.length)).replace('{published}', String(publishedCount)).replace('{visible}', String(visibleCount)) : l('Add a product, complete the required fields, then submit it for administrator approval.','Ajoutez un produit, complétez les champs obligatoires, puis envoyez-le pour validation par un administrateur.')}</p>
       </div>
       <div className="sp-dashboard-actions">
         <button type="button" className="sw-secondary" disabled={locked || products.length >= 30} onClick={add}><Plus size={16} aria-hidden/>{l('Add a product', 'Ajouter un produit')}</button>
-        {!locked && <button type="button" className="button-link" disabled={busy || !companyPublished || !toPublish.length} onClick={() => {setShowErrors(true);setPublishing(true);}}><Send size={16} aria-hidden/>{l('Publish my products', 'Publier mes produits')}</button>}
+        {!locked && <button type="button" className="button-link" disabled={busy || !companyPublished || !toPublish.length} onClick={() => {setShowErrors(true);setPublishing(true);}}><Send size={16} aria-hidden/>{l('Submit for approval', 'Envoyer pour validation')}</button>}
       </div>
     </div>
     {!companyPublished && <p className="sp-note">{l('Publish your company before listing its products.', 'Publiez votre entreprise avant de mettre ses produits en ligne.')}</p>}
-    <p className="sp-note">{l('Publishing a product puts it online under your company. It appears in the public catalogue only after GSL admits it to the robotics selection.', 'Publier un produit le met en ligne au nom de votre entreprise. Il n’apparaît dans le catalogue public qu’après son admission par GSL dans la sélection robotique.')}</p>
+    <p className="sp-note">{l('New products and photos stay private until approved by an administrator. The last approved version stays online while changes are reviewed.','Les nouveaux produits et photos restent privés jusqu’à leur validation par un administrateur. La dernière version approuvée reste en ligne pendant l’examen des modifications.')}</p>
     {products.length > 0 && <div className="sp-table-wrap"><table className="sp-table">
       <thead><tr>
         <th scope="col">{l('Product', 'Produit')}</th><th scope="col">{l('Type', 'Type')}</th><th scope="col">{l('Minimum order', 'Quantité minimale')}</th>
@@ -144,27 +156,27 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
     {previewed && <ProductPreview product={previewed} live={states.get(previewed.id)?.live} onClose={() => setPreview(null)}/>}
     <Dialog open={publishing} onOpenChange={open => {if (!open) setPublishing(false);}}>
       <DialogContent className="sw-dialog">
-        <DialogTitle>{l('Publish your products?', 'Publier vos produits ?')}</DialogTitle>
-        <DialogDescription>{l('Products included in the publication are put online under your company. Private drafts stay private.', 'Les produits inclus dans la publication sont mis en ligne au nom de votre entreprise. Les brouillons privés restent privés.')}</DialogDescription>
+        <DialogTitle>{l('Submit products for approval?', 'Envoyer les produits pour validation ?')}</DialogTitle>
+        <DialogDescription>{l('This sends a private request to GSL administrators. Nothing new goes online before their approval.','Cet envoi crée une demande privée auprès des administrateurs GSL. Aucune nouveauté n’est mise en ligne avant leur validation.')}</DialogDescription>
         <ul className="sw-dialog-list">
-          <li>{l('{count} product(s) published or updated', '{count} produit(s) publié(s) ou mis à jour').replace('{count}', String(toPublish.length))}</li>
+          <li>{l('{count} product(s) submitted for approval','{count} produit(s) envoyé(s) pour validation').replace('{count}', String(toPublish.length))}</li>
           {products.length - toPublish.length > 0 && <li>{l('{count} private draft(s) not published', '{count} brouillon(s) privé(s) non publié(s)').replace('{count}', String(products.length - toPublish.length))}</li>}
           {(orphans.length > 0 || products.some(p => p.listingStatus === 'draft' && states.get(p.id)?.live)) && <li>{l('Products removed from the list or set back to draft are withdrawn.', 'Les produits retirés de la liste ou repassés en brouillon sont retirés du site.')}</li>}
-          <li>{l('Each product then awaits admission to the catalogue by GSL before buyers can find it.', 'Chaque produit attend ensuite son admission au catalogue par GSL avant d’être visible des acheteurs.')}</li>
-          {visibleCount > 0 && <li><strong>{l('Products already visible in the catalogue go back to awaiting admission until GSL reviews them again.', 'Les produits déjà visibles au catalogue repassent en attente d’admission jusqu’à un nouvel examen par GSL.')}</strong></li>}
+          <li>{l('An administrator checks the product and photos before approving publication.','Un administrateur examine le produit et ses photos avant d’autoriser la publication.')}</li>
         </ul>
         {blocking.length > 0 && <div className="sw-alert" role="alert"><strong>{l('Complete these products first, or keep them as private drafts:', 'Complétez d’abord ces produits, ou gardez-les en brouillon privé :')}</strong><ul>{blocking.map(p => <li key={p.id}><button type="button" onClick={() => {setPublishing(false);setEditing(p.id);setShowErrors(true);}}>{p.name || l('Untitled product', 'Produit sans titre')} — {l(issuesOf(p)[0].en, issuesOf(p)[0].fr)}</button></li>)}</ul></div>}
         <label className="sw-checkbox"><input type="checkbox" checked={attested} onChange={e => setAttested(e.target.checked)}/><span>{l('I am authorised to publish these products and confirm that the information is accurate to my knowledge.', 'Je suis habilité à publier ces produits et confirme l’exactitude des informations à ma connaissance.')}</span></label>
         <div className="sw-dialog-actions">
           <button type="button" className="sw-secondary" onClick={() => setPublishing(false)}>{l('Cancel', 'Annuler')}</button>
-          <button type="button" className="button-link" disabled={busy || !attested || blocking.length > 0} onClick={() => void confirmPublish()}>{busy ? l('Publishing…', 'Publication…') : l('Publish', 'Publier')}</button>
+          <button type="button" className="button-link" disabled={busy || !attested || blocking.length > 0} onClick={() => void confirmPublish()}>{busy ? l('Sending…', 'Envoi…') : l('Submit for approval', 'Envoyer pour validation')}</button>
         </div>
       </DialogContent>
     </Dialog>
   </section>;
 }
 
-function ProductEditor({product: p, files, issues, showErrors, state, stateLabel, locked, onPatch, onBack, onPreview, onAddFiles, previewNode}: {
+function ProductEditor({product: p, files, issues, showErrors, state, stateLabel, locked, onPatch, onBack, onPreview, onAddFiles, previewNode, preparePhotos, onPhotoUploading, feedback}: {
+  preparePhotos:()=>Promise<boolean>;onPhotoUploading:(busy:boolean)=>void;feedback:string;
   product: Product; files: SupplierFile[]; issues: {path: string; en: string; fr: string}[]; showErrors: boolean; state: {state: ProductState; live?: LiveProduct}; stateLabel: Record<ProductState, string>; locked: boolean;
   onPatch: (values: Partial<Product>) => void; onBack: () => void; onPreview: () => void; onAddFiles: () => void; previewNode: ReactNode;
 }) {
@@ -191,43 +203,45 @@ function ProductEditor({product: p, files, issues, showErrors, state, stateLabel
         ? <select value={value} onChange={e => setSpec(field.key, e.target.value)}><option value="">{l('Select', 'Choisir')}</option>{field.options!.map(o => <option key={o.value} value={o.value}>{l(o.en, o.fr)}</option>)}</select>
         : <input value={value} inputMode={field.type === 'number' ? 'decimal' : undefined} maxLength={field.max || (field.type === 'number' ? 20 : 120)} list={listId} placeholder={field.placeholder} aria-invalid={invalid.has(field.key) || undefined} onChange={e => setSpec(field.key, e.target.value)}/>}
       {listId && <datalist id={listId}>{field.suggestions!.map(s => <option key={s} value={s}/>)}</datalist>}
+      {isRequired(field,kindValue)&&required}
       {field.hintEn && <small>{l(field.hintEn, field.hintFr || field.hintEn)}</small>}
     </label>;
   }
   const fields = family ? specFields(family.id, kindValue) : [];
   const kindField = fields.find(f => f.key === KIND_KEY);
-  const photos = files.filter(f => f.kind === 'product' && (f.caption === p.reference || f.caption === p.name) && (p.reference || p.name));
+  const required=<small className="sp-required">{l('Required for approval','Obligatoire pour la validation')}</small>;
   return <section className="sw-section sp-editor">
     <div className="sp-editor-head">
       <button type="button" className="sw-secondary" onClick={onBack}><ArrowLeft size={16} aria-hidden/>{l('Back to my products', 'Retour à mes produits')}</button>
       <span className={'sp-state sp-state-' + state.state}>{stateLabel[state.state]}</span>
     </div>
     <h2>{p.name || l('New product', 'Nouveau produit')}</h2>
-    <p>{l('Fields marked * are required to publish. Your entries are saved automatically as a private draft.', 'Les champs marqués * sont nécessaires pour publier. Votre saisie est enregistrée automatiquement en brouillon privé.')}</p>
+    <p>{l('Red notes identify the required information. Your entries are saved automatically as a private draft.','Les indications rouges signalent les informations obligatoires. Votre saisie est enregistrée automatiquement en brouillon privé.')}</p>
+    {feedback&&<p className="sp-note" role="status"><strong>{l('Administrator feedback','Retour de l’administrateur')}</strong> : {feedback}</p>}
     {showErrors && issues.length > 0 && <div className="sw-alert" role="alert"><ul>{issues.map(i => <li key={i.path}>{l(i.en, i.fr)}</li>)}</ul></div>}
     <fieldset className="sw-fieldset" disabled={locked}>
       <div className="sp-block">
         <h3>{l('Essentials', 'L’essentiel')}</h3>
         <div className="sw-fields">
-          <label className={'sw-field' + (needs('products.0') && !p.name.trim() ? ' sp-invalid' : '')}><span>{l('Product name', 'Nom du produit')} *</span><input value={p.name} maxLength={250} onChange={e => onPatch({name: e.target.value})}/></label>
+          <label className={'sw-field' + (needs('products.0') && !p.name.trim() ? ' sp-invalid' : '')}><span>{l('Product name', 'Nom du produit')} *</span><input value={p.name} maxLength={250} onChange={e => onPatch({name: e.target.value})}/>{required}</label>
           <label className="sw-field"><span>{l('Exact reference / model', 'Référence exacte / modèle')}</span><input value={p.reference} maxLength={250} onChange={e => onPatch({reference: e.target.value})}/></label>
           <label className={'sw-field' + (needs('products.0.family') ? ' sp-invalid' : '')}><span>{l('Product type', 'Type de produit')} *</span>
             <select value={p.family} onChange={e => chooseFamily(e.target.value)}><option value="">{l('Select', 'Choisir')}</option>{productFamilies.map(f => <option key={f.id} value={f.id}>{l(f.en, f.fr)}</option>)}</select>
-            <small>{l('Determines the technical specifications requested below.', 'Détermine les caractéristiques techniques demandées plus bas.')}</small></label>
+            <small>{l('Determines the technical specifications requested below.', 'Détermine les caractéristiques techniques demandées plus bas.')}</small>{required}</label>
           {kindField && input(kindField)}
-          {family?.id === 'autre' && <label className="sw-field"><span>{l('Category', 'Catégorie')} *</span><select value={normalizeProductCategory(p.category)} onChange={e => onPatch({category: e.target.value})}><option value="">{l('Select', 'Choisir')}</option>{legacyCategories.map(c => <option key={c.value} value={c.value}>{l(c.en, c.fr)}</option>)}</select></label>}
-          <CountryPicker scope="sourcing" label={l('Country of manufacture', 'Pays de fabrication') + ' *'} value={p.origin} onChange={v => onPatch({origin: v})} language={language} disabled={locked}/>
+          {family?.id === 'autre' && <label className="sw-field"><span>{l('Category', 'Catégorie')} *</span><select value={normalizeProductCategory(p.category)} onChange={e => onPatch({category: e.target.value})}><option value="">{l('Select', 'Choisir')}</option>{legacyCategories.map(c => <option key={c.value} value={c.value}>{l(c.en, c.fr)}</option>)}</select>{required}</label>}
+          <div><CountryPicker scope="sourcing" label={l('Country of manufacture', 'Pays de fabrication') + ' *'} value={p.origin} onChange={v => onPatch({origin: v})} language={language} disabled={locked}/>{required}</div>
           <label className={'sw-field sw-wide' + (needs('products.0') && p.description.trim().length < 30 ? ' sp-invalid' : '')}><span>{l('Description & intended use', 'Description et usage prévu')} *</span>
             <textarea rows={4} maxLength={5000} value={p.description} onChange={e => onPatch({description: e.target.value})}/>
-            <small>{l('At least 30 characters. Include dimensions, applications and customisation.', 'Au moins 30 caractères. Indiquez dimensions, applications et personnalisation.')} {p.description.trim().length}/30</small></label>
+            <small>{l('At least 30 characters. Include dimensions, applications and customisation.', 'Au moins 30 caractères. Indiquez dimensions, applications et personnalisation.')} {p.description.trim().length}/30</small>{required}</label>
         </div>
       </div>
       <div className="sp-block">
         <h3>{l('Ordering', 'Commande')}</h3>
         <div className="sw-fields">
           <div className={'sp-moq' + (needs('products.0.moq') ? ' sp-invalid' : '')}>
-            <label className="sw-field"><span>{l('Minimum order quantity', 'Quantité minimale de commande')} *</span><input inputMode="decimal" maxLength={30} value={p.moq} placeholder="100" onChange={e => onPatch({moq: e.target.value.replace(/[\s  ]/g, '').replace(',', '.')})}/></label>
-            <label className="sw-field"><span>{l('Unit', 'Unité')} *</span><select value={(quantityUnits as readonly string[]).includes(p.unit) ? p.unit : ''} onChange={e => onPatch({unit: e.target.value})}><option value="">{l('Select', 'Choisir')}</option>{quantityUnits.map(u => <option key={u} value={u}>{l(quantityUnitLabels[u].en, quantityUnitLabels[u].fr)}</option>)}</select></label>
+            <label className="sw-field"><span>{l('Minimum order quantity', 'Quantité minimale de commande')} *</span><input inputMode="decimal" maxLength={30} value={p.moq} placeholder="100" onChange={e => onPatch({moq: e.target.value.replace(/[\s  ]/g, '').replace(',', '.')})}/>{required}</label>
+            <label className="sw-field"><span>{l('Unit', 'Unité')} *</span><select value={(quantityUnits as readonly string[]).includes(p.unit) ? p.unit : ''} onChange={e => onPatch({unit: e.target.value})}><option value="">{l('Select', 'Choisir')}</option>{quantityUnits.map(u => <option key={u} value={u}>{l(quantityUnitLabels[u].en, quantityUnitLabels[u].fr)}</option>)}</select>{required}</label>
           </div>
           <label className="sw-field"><span>{l('Lead time & assumptions', 'Délai et hypothèses')}</span><input value={p.leadTime} maxLength={250} placeholder={l('6 weeks after sample approval', '6 semaines après validation de l’échantillon')} onChange={e => onPatch({leadTime: e.target.value})}/></label>
         </div>
@@ -258,13 +272,13 @@ function ProductEditor({product: p, files, issues, showErrors, state, stateLabel
       </details>
       <div className="sp-block">
         <h3>{l('Photos and documents', 'Photos et documents')}</h3>
-        <p className="sp-note">{photos.length ? l('{count} photo(s) attached to this product.', '{count} photo(s) jointe(s) à ce produit.').replace('{count}', String(photos.length)) : l('No photo yet. Photos are optional and reviewed before display.', 'Aucune photo pour l’instant. Les photos sont facultatives et examinées avant affichage.')}</p>
-        <button type="button" className="sw-secondary" onClick={onAddFiles}><Upload size={16} aria-hidden/>{l('Add product photos and documents', 'Ajouter les photos et documents du produit')}</button>
+        <ProductPhotos product={p.id} value={p.photoIds||[]} disabled={locked} prepare={preparePhotos} onChange={photoIds=>onPatch({photoIds})} onUploading={onPhotoUploading}/>
+        <button type="button" className="sw-secondary" onClick={onAddFiles}><Upload size={16} aria-hidden/>{l('Supporting documents','Justificatifs')}</button>
       </div>
       <div className="sp-block">
         <h3>{l('Product visibility', 'Visibilité du produit')}</h3>
         <div className="sp-visibility">
-          <label className="sw-checkbox"><input type="radio" name={'visibility-' + p.id} checked={p.listingStatus !== 'draft'} onChange={() => onPatch({listingStatus: 'publish'})}/><span>{l('Include in the publication', 'Inclure dans la publication')}</span></label>
+          <label className="sw-checkbox"><input type="radio" name={'visibility-' + p.id} checked={p.listingStatus !== 'draft'} onChange={() => onPatch({listingStatus: 'publish'})}/><span>{l('Include in the approval request', 'Inclure dans la demande de validation')}</span></label>
           <label className="sw-checkbox"><input type="radio" name={'visibility-' + p.id} checked={p.listingStatus === 'draft'} onChange={() => onPatch({listingStatus: 'draft'})}/><span>{l('Private draft — complete later', 'Brouillon privé — à compléter plus tard')}</span></label>
         </div>
       </div>
@@ -292,6 +306,7 @@ export function ProductPreview({product: p, live, onClose}: {product: Product; l
     <DialogContent className="sw-dialog sp-preview">
       <DialogTitle>{p.name || l('Untitled product', 'Produit sans titre')}</DialogTitle>
       <DialogDescription>{l('Private preview of the product page. Nothing here is published.', 'Aperçu privé de la page produit. Rien n’est publié ici.')}{live && <> <a href={'/produits/' + live.product_id} target="_blank" rel="noreferrer">{l('Open the published page', 'Ouvrir la page publiée')} <ExternalLink size={13} aria-hidden/></a></>}</DialogDescription>
+      <div className="sp-photo-grid">{(p.photoIds||[]).map((id,i)=><Image key={id} unoptimized width={400} height={300} src={'/api/product-images?id='+id} alt={l('Product photo','Photo du produit')+' '+(i+1)}/>)}</div>
       <p className="sp-preview-meta">{view.family ? l(view.family.en, view.family.fr) : l('Product type to choose', 'Type de produit à choisir')}{p.origin && <> · <CountryFlag code={p.origin}/> {countries.of(p.origin)}</>}</p>
       <p className="sw-multiline">{view.description || l('Description to write.', 'Description à rédiger.')}</p>
       {view.rows.length > 0 && <><h3>{l('Technical specifications', 'Caractéristiques techniques')}</h3><dl className="sp-spec-list">{view.rows.map(r => <div key={r.key}><dt>{l(r.en, r.fr)}</dt><dd>{formatSpecRow(r, language)}</dd></div>)}</dl></>}

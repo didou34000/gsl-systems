@@ -18,7 +18,7 @@ for (const [key, row] of Object.entries(supplier)) {
   }
 }
 const staticKeys = new Set();
-for (const filename of ['app/supplier-workspace.tsx', 'app/supplier-products.tsx', 'app/supplier-identity.tsx', 'app/company-branding.tsx', 'app/review-tools.tsx', 'app/request-files.tsx']) {
+for (const filename of ['app/supplier-workspace.tsx', 'app/supplier-products.tsx', 'app/product-photos.tsx', 'app/admin-product-reviews.tsx', 'app/supplier-identity.tsx', 'app/company-branding.tsx', 'app/review-tools.tsx', 'app/request-files.tsx']) {
   const source = ts.createSourceFile(filename, await readFile(filename, 'utf8'), ts.ScriptTarget.Latest, true, ts.ScriptKind.TSX);
   function visit(node) {
     if (ts.isCallExpression(node) && node.expression.getText(source) === 'l') {

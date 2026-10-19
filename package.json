@@ -14,7 +14,7 @@
     "db:generate": "drizzle-kit generate",
     "test:admin": "node scripts/test-admin-postgres.mjs && node scripts/test-admin-api.mjs && node scripts/test-admin-export.mjs && node scripts/test-admin-ui.mjs && node scripts/test-admin-access-translations.mjs",
     "test:i18n": "node scripts/test-i18n.mjs && node scripts/test-i18n-database.mjs && node scripts/test-supplier-translations.mjs && node scripts/test-sourcing-content.mjs",
-    "test:operational": "node --experimental-strip-types scripts/test-operational-rules.mjs && node scripts/test-supplier-profile.mjs && node scripts/test-supplier-files.mjs && node scripts/test-country-requirements.mjs && node scripts/test-requirement.mjs && node scripts/test-postgres.mjs && node scripts/test-image-derivation.mjs",
+    "test:operational": "node --experimental-strip-types scripts/test-operational-rules.mjs && node scripts/test-supplier-profile.mjs && node scripts/test-supplier-files.mjs && node scripts/test-country-requirements.mjs && node scripts/test-requirement.mjs && node scripts/test-postgres.mjs && node scripts/test-image-derivation.mjs && node scripts/test-product-review-api.mjs",
     "build:vercel": "next build --webpack",
     "dev:legacy": "node scripts/run-framework.mjs dev",
     "build:legacy": "node scripts/run-framework.mjs build",
