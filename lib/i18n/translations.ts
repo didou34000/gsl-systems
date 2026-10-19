@@ -20,6 +20,7 @@ import referenced from './referenced.json';
 import home from './home.json';
 import coreAdditions from './core-additions.json';
 import supplierProducts from './supplier-products.json';
+import requestBoard from './request-board.json';
 import type {Language} from './languages';
 // English keys keep existing l(English, French) call sites compatible.
 // Untranslated technical/editorial copy explicitly falls back to English.
@@ -27,7 +28,7 @@ import type {Language} from './languages';
 type AdditionalLanguage=Exclude<Language,'en'|'fr'>;
 export type TranslationRow = readonly [string,string,string,string,string,string,string,string];
 export const translationLanguages=['es','pt','de','it','tr','ar','hi','zh'] as const;
-export const translations:Record<string,readonly string[]>={...supplierProducts,...core,...catalogue,...sourcing,...auth,...messages,...account,...operations,...offers,...publicCopy,...requirements,...supplier,...extra,...countryRequirements,...workspace,...onboarding,...countries,...robotics,...humanoid,...referenced,...home,...coreAdditions};
+export const translations:Record<string,readonly string[]>={...requestBoard,...supplierProducts,...core,...catalogue,...sourcing,...auth,...messages,...account,...operations,...offers,...publicCopy,...requirements,...supplier,...extra,...countryRequirements,...workspace,...onboarding,...countries,...robotics,...humanoid,...referenced,...home,...coreAdditions};
 export function translate(language:Language,english:string,french:string=english){
  if(language==='fr')return french;
  if(language==='en')return english;

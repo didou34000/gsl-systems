@@ -23,7 +23,8 @@
     "test:sourcing-pages": "node scripts/test-country-guides.mjs",
     "test:public-catalogue": "node scripts/test-public-catalogue.mjs",
     "test:robotics": "node scripts/test-robotics-criteria.mjs && node scripts/test-robotics-postgres.mjs && node scripts/test-requirement.mjs",
-    "test:sourcing": "node scripts/test-sourcing-api.mjs && node scripts/test-sourcing-postgres.mjs && node scripts/test-requirement.mjs && node scripts/test-robotics-criteria.mjs"
+    "test:sourcing": "node scripts/test-sourcing-api.mjs && node scripts/test-sourcing-postgres.mjs && node scripts/test-requirement.mjs && node scripts/test-robotics-criteria.mjs",
+    "test:request-board": "node --experimental-strip-types scripts/test-request-board.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",

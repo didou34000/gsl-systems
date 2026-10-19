@@ -91,6 +91,7 @@ export interface DatabaseRows {
     created_at: string;
     updated_at: string;
     board_shared_at: string | null;
+    board_families: string[];
   };
   delivery_events: {
     id: string;
