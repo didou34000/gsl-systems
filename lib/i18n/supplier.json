@@ -3979,14 +3979,54 @@
     "जैसा आपके रजिस्ट्री उद्धरण में लिखा है। सुझाव पंजीकरण देश के अनुसार आते हैं।",
     "与注册摘录一致。建议根据注册国家显示。"
   ],
-  "Identity saved in your account. Your company profile remains private.": [
-    "Identidad guardada en su cuenta. La ficha de su empresa sigue siendo privada.",
-    "Identidade guardada na sua conta. A ficha da sua empresa continua privada.",
-    "Identität in Ihrem Konto gespeichert. Ihr Unternehmensprofil bleibt privat.",
-    "Identità salvata nel suo account. La scheda della sua azienda resta privata.",
-    "Kimlik hesabınıza kaydedildi. Şirket profiliniz gizli kalır.",
-    "تم حفظ الهوية في حسابك. يبقى ملف شركتك خاصًا.",
-    "पहचान आपके खाते में सहेजी गई। आपकी कंपनी प्रोफ़ाइल निजी रहती है।",
-    "身份信息已保存到您的账户。您的企业资料仍为私密。"
+  "Save information": [
+    "Guardar la información",
+    "Guardar informações",
+    "Informationen speichern",
+    "Salva le informazioni",
+    "Bilgileri kaydet",
+    "حفظ المعلومات",
+    "जानकारी सहेजें",
+    "保存信息"
+  ],
+  "Reload page": [
+    "Recargar la página",
+    "Recarregar a página",
+    "Seite neu laden",
+    "Ricarica la pagina",
+    "Sayfayı yeniden yükle",
+    "إعادة تحميل الصفحة",
+    "पेज फिर से लोड करें",
+    "重新加载页面"
+  ],
+  "Information saved.": [
+    "Información guardada.",
+    "Informações guardadas.",
+    "Informationen gespeichert.",
+    "Informazioni salvate.",
+    "Bilgiler kaydedildi.",
+    "تم حفظ المعلومات.",
+    "जानकारी सहेजी गई।",
+    "信息已保存。"
+  ],
+  "Profile actions": [
+    "Acciones del perfil",
+    "Ações do perfil",
+    "Profilaktionen",
+    "Azioni del profilo",
+    "Profil işlemleri",
+    "إجراءات الملف الشخصي",
+    "प्रोफ़ाइल कार्रवाइयाँ",
+    "个人资料操作"
+  ],
+  "Save your information before leaving this page.": [
+    "Guarda tu información antes de salir de esta página.",
+    "Guarde as suas informações antes de sair desta página.",
+    "Speichern Sie Ihre Informationen, bevor Sie diese Seite verlassen.",
+    "Salva le informazioni prima di uscire da questa pagina.",
+    "Bu sayfadan ayrılmadan önce bilgilerinizi kaydedin.",
+    "احفظ معلوماتك قبل مغادرة هذه الصفحة.",
+    "इस पेज से जाने से पहले अपनी जानकारी सहेजें।",
+    "离开此页面前请保存您的信息。"
   ]
 }
