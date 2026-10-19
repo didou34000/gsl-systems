@@ -35,11 +35,9 @@ function unpublishedCompanyChanges(p:SupplierProfile,pub:Publication|null):[stri
  if(differ(contact,published)||differ(p.contact.languages,d.languages))out.push(['Reference contact','Contact de référence']);
  return out;
 }
-const companyName=(p:{legalName:string})=>p.legalName.trim();
 /** Products saved before per-type specifications existed get their empty defaults. */
 const withProductDefaults=(p:SupplierProfile):SupplierProfile=>({...p,products:(p.products||[]).map(v=>({...v,family:v.family||'',specs:v.specs&&typeof v.specs==='object'?v.specs:{},updatedAt:v.updatedAt||''}))});
 /** The header and side menu read the company from /api/workspace; marketplace.tsx listens to these events. */
-function announceCompanyName(previous:string,name:string){window.dispatchEvent(new CustomEvent('gsl-company-name',{detail:{previous,name}}))}
 function refreshAccount(){window.dispatchEvent(new Event('gsl-account-refresh'))}
 
 export default function SupplierWorkspace({view='company'}:{view?:'company'|'products'}){
@@ -82,22 +80,19 @@ export default function SupplierWorkspace({view='company'}:{view?:'company'|'pro
    if(!r.ok){setError(d.error||'UNAVAILABLE');if(d.issues?.length){setValidation(d.issues);const target=d.issues[0].step;if(visibleSteps.includes(target))setStep(target);else if(!productView)setStep(4)}if(d.error==='INCOMPLETE')setShowIssues(true);return false;}
    revisionRef.current=d.application.revision;setDirty(editVersion.current!==sentVersion);setApp(previous=>({...previous,...d.application,payload:body,reviewer_notes:previous?.reviewer_notes||''}));
    if(action!=='save')await load(false,false);
-   if(action==='publish'||action==='publish_products')refreshAccount();
+   if(action==='publish'||action==='publish_products'||body.legalName!==app?.payload.legalName||body.tradingName!==app?.payload.tradingName)refreshAccount();
    if(!background&&!override&&!productView&&(action==='publish'||action==='submit')){setConfirmation(action);window.scrollTo({top:0,behavior:'smooth'})}
    if(!background)setMessage(action==='publish_products'?l('Products published. They now await admission to the public catalogue by GSL; their status is shown in the table.','Produits publiés. Ils attendent maintenant leur admission au catalogue public par GSL ; leur statut figure dans le tableau.'):action==='publish'?l('Your company is online, marked as unverified. You can complete it later.','Votre entreprise est en ligne, avec la mention Non vérifiée. Vous pouvez la compléter plus tard.'):action==='submit'?l('Application received. You can follow its review from your account.','Dossier reçu. Vous pouvez suivre son examen depuis votre compte.'):action==='reopen'?l('Your file is open for changes.','Votre dossier peut être modifié.'):l('Draft saved in your account.','Brouillon enregistré dans votre compte.'));return true;
   }catch{setError('UNAVAILABLE');return false}finally{setBusy(false);setAutosaving(false)}})();
   inflight.current=run;try{return await run}finally{if(inflight.current===run)inflight.current=null}
  }
- /** Identity changes apply at once: optimistic header, then save, and publish when the company is already online. */
+ /** Refresh private account labels after the server confirms saving; only an online profile is republished. */
  async function applyIdentity(identity:Identity){
   const next:SupplierProfile={...profile,...identity,attestation:!!publication};
-  const previousName=companyName(profile),nextName=companyName(next),renamed=!!publication&&previousName!==nextName;
   editVersion.current++;setProfile(next);setDirty(true);setValidation([]);
-  if(renamed)announceCompanyName(previousName,nextName);
   const ok=await save(publication?'publish':'save',false,next);
-  if(!ok&&renamed)announceCompanyName(nextName,previousName);
   if(ok&&publication){setMessage(l('Change published. Your public profile and workspace header are up to date.','Modification publiée. Votre fiche publique et l’en-tête de votre espace sont à jour.'))}
-  else if(ok)setMessage(l('Saved in your private draft. Publish your company to make it public.','Enregistré dans votre brouillon privé. Publiez votre entreprise pour la rendre publique.'));
+  else if(ok)setMessage(l('Identity saved in your account. Your company profile remains private.','Identité enregistrée dans votre compte. Votre fiche entreprise reste privée.'));
   return ok;
  }
  async function upload(file:File){
