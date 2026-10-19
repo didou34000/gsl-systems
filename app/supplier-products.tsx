@@ -50,8 +50,8 @@ export function productState(p: Product, row: LiveProduct | undefined, catalogue
   return {state: catalogue?.includes(row.product_id) ? 'visible' : 'pending', live: row};
 }
 
-export default function SupplierProducts({profile, files, live, catalogue, companyPublished, locked, busy, onChange, onPublish, onAddFiles, savedAt, reviews=[], preparePhotos, onPhotoUploading}: {
-  reviews?:ProductReview[]; preparePhotos:()=>Promise<boolean>; onPhotoUploading:(busy:boolean)=>void;
+export default function SupplierProducts({profile, files, live, catalogue, companyPublished, locked, busy, onChange, onPublish, onAddFiles, savedAt, reviews=[], reviewAvailable=true, preparePhotos, onPhotoUploading}: {
+  reviews?:ProductReview[]; reviewAvailable?:boolean; preparePhotos:()=>Promise<boolean>; onPhotoUploading:(busy:boolean)=>void;
   profile: SupplierProfile; files: SupplierFile[]; live: LiveProduct[]; catalogue: string[] | null; companyPublished: boolean; locked: boolean; busy: boolean; savedAt?: string;
   onChange: (products: Product[]) => void; onPublish: (attested: boolean) => Promise<boolean>; onAddFiles: (product: Product) => void;
 }) {
@@ -125,9 +125,10 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
       </div>
       <div className="sp-dashboard-actions">
         <button type="button" className="sw-secondary" disabled={locked || products.length >= 30} onClick={add}><Plus size={16} aria-hidden/>{l('Add a product', 'Ajouter un produit')}</button>
-        {!locked && <button type="button" className="button-link" disabled={busy || !companyPublished || !toPublish.length} onClick={() => {setShowErrors(true);setPublishing(true);}}><Send size={16} aria-hidden/>{l('Submit for approval', 'Envoyer pour validation')}</button>}
+        {!locked && <button type="button" className="button-link" disabled={busy || !reviewAvailable || !companyPublished || !toPublish.length} onClick={() => {setShowErrors(true);setPublishing(true);}}><Send size={16} aria-hidden/>{l('Submit for approval', 'Envoyer pour validation')}</button>}
       </div>
     </div>
+    {!reviewAvailable && <p className="sw-alert" role="status">{l('Product submission is temporarily unavailable. You can still edit and save your information.','L’envoi des produits est temporairement indisponible. Vous pouvez continuer à modifier et enregistrer vos informations.')}</p>}
     {!companyPublished && <p className="sp-note">{l('Publish your company before listing its products.', 'Publiez votre entreprise avant de mettre ses produits en ligne.')}</p>}
     <p className="sp-note">{l('New products and photos stay private until approved by an administrator. The last approved version stays online while changes are reviewed.','Les nouveaux produits et photos restent privés jusqu’à leur validation par un administrateur. La dernière version approuvée reste en ligne pendant l’examen des modifications.')}</p>
     {products.length > 0 && <div className="sp-table-wrap"><table className="sp-table">
@@ -168,7 +169,7 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
         <label className="sw-checkbox"><input type="checkbox" checked={attested} onChange={e => setAttested(e.target.checked)}/><span>{l('I am authorised to publish these products and confirm that the information is accurate to my knowledge.', 'Je suis habilité à publier ces produits et confirme l’exactitude des informations à ma connaissance.')}</span></label>
         <div className="sw-dialog-actions">
           <button type="button" className="sw-secondary" onClick={() => setPublishing(false)}>{l('Cancel', 'Annuler')}</button>
-          <button type="button" className="button-link" disabled={busy || !attested || blocking.length > 0} onClick={() => void confirmPublish()}>{busy ? l('Sending…', 'Envoi…') : l('Submit for approval', 'Envoyer pour validation')}</button>
+          <button type="button" className="button-link" disabled={busy || !reviewAvailable || !attested || blocking.length > 0} onClick={() => void confirmPublish()}>{busy ? l('Sending…', 'Envoi…') : l('Submit for approval', 'Envoyer pour validation')}</button>
         </div>
       </DialogContent>
     </Dialog>
