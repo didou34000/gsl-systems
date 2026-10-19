@@ -12,4 +12,14 @@
 
 .gsl-file-drop{border:1.5px dashed #c6bcb0;border-radius:12px;background:#f5f7f9;transition:background .15s,border-color .15s}.gsl-file-drop>button{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;width:100%;min-height:148px;padding:24px;border:0;background:transparent;color:#253640;cursor:pointer;border-radius:12px}.gsl-file-drop>button>svg{color:#1F4E79}.gsl-file-drop>button>strong{font-size:15px;font-weight:600}.gsl-file-drop>button>span{font-size:13px;color:#68737a}.gsl-file-drop:focus-within{outline:3px solid #2357d9;outline-offset:3px}.gsl-file-drop.is-dragging{background:#d6e5f3;border-color:#1F4E79}.gsl-file-drop.is-disabled{opacity:.5}.gsl-file-drop.is-disabled>button{cursor:not-allowed}.branding-photos article[draggable=true]{cursor:grab}.branding-photos article.is-dragging{opacity:.5}.branding-photo-order{display:flex;gap:5px;align-items:center}.branding-photos .branding-photo-order button{padding:7px}.branding-photos img{pointer-events:none}.branding-drop{margin-top:18px}
 
-.sw-bottom.sw-profile-actions{justify-content:flex-start;align-items:center}.sw-profile-actions .button-link{justify-content:center;min-height:44px}@media(max-width:650px){.sw-profile-actions>button{flex:1 1 100%;justify-content:center}}
+/* Fit the actual content column, including tablet layouts with both sidebars. */
+.sw-bottom.sw-profile-actions{
+ display:grid;
+ grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));
+ width:100%;min-width:0;max-width:100%;align-items:stretch;
+}
+.sw-page .sw-profile-actions>button{
+ width:100%;min-width:0;max-width:100%;height:auto;min-height:48px;
+ justify-content:center;white-space:normal;overflow-wrap:anywhere;line-height:1.4;
+}
+.sw-profile-actions>button svg{flex-shrink:0}

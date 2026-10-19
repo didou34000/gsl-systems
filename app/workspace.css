@@ -311,8 +311,11 @@
 .ws-main .sw-page :is(input,select,textarea):focus{outline:none;border-color:var(--ui-rust);box-shadow:var(--ui-focus)}
 .ws-main .sw-page label{font-weight:550}
 .ws-main .sw-bottom{position:sticky;bottom:0;z-index:5;margin-top:4px;padding:12px 16px;border:1px solid var(--ui-line);border-radius:12px;background:rgba(255,255,255,.96);backdrop-filter:blur(6px)}
+/* Opaque sticky profile actions avoid backdrop repaint seams while saving or scrolling. */
+.ws-main .sw-bottom.sw-profile-actions{background:#ffffff;-webkit-backdrop-filter:none;backdrop-filter:none;isolation:isolate}
 .ws-main .sw-page :is(.sw-secondary,.sw-bottom button:not(.button-link)){min-height:40px;padding:0 16px;border:1px solid var(--ui-line-strong);border-radius:var(--ui-radius);background:#ffffff;color:var(--ui-ink);font-size:14px;font-weight:600}
 .ws-main .sw-page .button-link{min-height:40px;font-size:14px}
+.ws-main .sw-page .sw-bottom.sw-profile-actions>button{min-height:48px;padding:12px 16px}
 
 /* Sign-in, sign-up and recovery */
 .auth-page{padding-block:56px 72px}
