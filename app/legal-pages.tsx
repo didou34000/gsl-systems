@@ -1,7 +1,7 @@
 // Drafted 2026-10-13 without legal review: a lawyer must review these texts before commercial launch.
 import type {ReactNode} from 'react';
 import Link from '@/components/site-link';
-import {operator} from '@/lib/operator';
+import {operator,businesses} from '@/lib/operator';
 
 export const legalPaths=['/mentions-legales','/conditions-utilisation','/confidentialite','/cookies'];
 const updated='13 octobre 2026';
@@ -11,8 +11,9 @@ type Section=[string,ReactNode];
 
 function sections(path:string):{title:string;intro:string;items:Section[]}{
  const contact=<a href={'mailto:'+operator.email}>{operator.email}</a>;
- if(path==='/mentions-legales')return {title:'Mentions légales',intro:'Informations prévues par l’article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.',items:[
-  ['Éditeur du site',<dl key="e" className="legal-list"><dt>Exploitant</dt><dd>{value(operator.company)}</dd><dt>Forme juridique et capital</dt><dd>{value([operator.legalForm,operator.capital].filter(Boolean).join(' · '))}</dd><dt>Adresse</dt><dd>{value(operator.address)}</dd><dt>Immatriculation</dt><dd>{value(operator.registration)}</dd><dt>TVA intracommunautaire</dt><dd>{value(operator.vatNumber)}</dd><dt>Contact</dt><dd>{contact}{operator.phone&&<> · {operator.phone}</>}</dd><dt>Responsables</dt><dd>{operator.name}</dd></dl>],
+ if(path==='/mentions-legales')return {title:'Mentions légales',intro:'Informations prévues par l’article 1-1 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l’économie numérique.',items:[
+  ['Coéditeurs du site',<dl key="e" className="legal-list"><dt>Nom du site</dt><dd>{operator.brand}</dd><dt>Coéditeurs</dt><dd>{value(operator.company)}</dd><dt>Email</dt><dd>{contact}</dd><dt>Téléphone professionnel</dt><dd>{operator.phone?<a href={'tel:'+operator.phone.replace(/[^\d+]/g,'')}>{operator.phone}</a>:value('')}</dd></dl>],
+  ['Identité des deux entreprises',<div key="businesses" className="legal-businesses">{businesses.map(business=><article key={business.siren} className="legal-business"><h3>{business.name} — EI</h3><dl className="legal-list"><dt>Identité enregistrée</dt><dd>{business.legalName}</dd><dt>Forme juridique</dt><dd>{business.legalForm}</dd><dt>Régime</dt><dd>{business.regime}</dd>{business.tradeName&&<><dt>Nom commercial déclaré</dt><dd>{business.tradeName}</dd></>}<dt>Adresse professionnelle</dt><dd>{business.address}</dd><dt>SIREN</dt><dd>{business.siren}</dd><dt>SIRET du siège</dt><dd>{business.siret}</dd><dt>Immatriculation</dt><dd>{business.registration}</dd>{business.vatNumber&&<><dt>TVA intracommunautaire</dt><dd>{business.vatNumber}</dd></>}</dl></article>)}</div>],
   ['Directeur de la publication',value(operator.publicationDirector)],
   ['Hébergement',<p key="h">Le site est hébergé par Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, États-Unis (vercel.com). Les comptes, données et documents privés sont stockés chez Supabase, dans la région AWS eu-west-3 (Paris).</p>],
   ['Propriété intellectuelle','Les textes, la marque GSL systems et la mise en page du site appartiennent à l’exploitant. Les fiches entreprises et produits restent la propriété de leurs auteurs, qui en accordent l’affichage sur la plateforme. Les crédits des photographies figurent sur la page Crédits.'],
@@ -47,4 +48,4 @@ function sections(path:string):{title:string;intro:string;items:Section[]}{
 }
 
 export default function LegalPage({path}:{path:string}){const page=sections(path);
- return <main className="container directory narrow legal-page"><div className="page-intro"><div><h1>{page.title}</h1><p>{page.intro}</p></div></div><div className="prose">{page.items.map(([title,body])=><section key={title}><h2>{title}</h2>{typeof body==='string'?<p>{body}</p>:body}</section>)}<p className="legal-updated">Dernière mise à jour : {updated}.</p><nav className="legal-nav"><Link href="/mentions-legales">Mentions légales</Link><Link href="/conditions-utilisation">Conditions d’utilisation</Link><Link href="/confidentialite">Données et confidentialité</Link><Link href="/cookies">Cookies</Link></nav></div></main>}
+ return <main className="container directory narrow legal-page"><div className="page-intro"><div><h1>{page.title}</h1><p>{page.intro}</p></div></div><div className="prose">{page.items.map(([title,body])=><section key={title}><h2>{title}</h2>{typeof body==='string'?<p>{body}</p>:body}</section>)}<p className="legal-updated">Dernière mise à jour : {path==='/mentions-legales'?'19 octobre 2026':updated}.</p><nav className="legal-nav"><Link href="/mentions-legales">Mentions légales</Link><Link href="/conditions-utilisation">Conditions d’utilisation</Link><Link href="/confidentialite">Données et confidentialité</Link><Link href="/cookies">Cookies</Link></nav></div></main>}
