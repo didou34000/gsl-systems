@@ -5,6 +5,7 @@ import {publicMetadata} from '@/lib/seo';
 import {brandAssets} from '@/lib/brand';
 import {Suspense} from 'react';
 import Marketplace from './marketplace';
+import {Analytics} from '@vercel/analytics/next';
 import {LanguageProvider} from './language';
 import '@fontsource-variable/inter';
 import './globals.css';
@@ -43,4 +44,4 @@ export async function generateMetadata():Promise<Metadata>{
  const description=language==='fr'?'Trouvez des fabricants de composants robotiques hors Union européenne et préparez vos devis avec livraison : qualification, prix détaillés et suivi.':'Find robotics component manufacturers outside the European Union and prepare delivery enquiries with qualification, transparent quotes and tracking.';
  return {...publicMetadata(path,title,description,language),...(h.get('x-gsl-filtered')==='true'?{robots:{index:false,follow:true}}:{}),icons:{icon:[{url:brandAssets.iconPng,type:'image/png',sizes:'32x32'},{url:brandAssets.icon,type:'image/svg+xml',sizes:'any'}],shortcut:brandAssets.shortcut,apple:{url:brandAssets.apple,type:'image/png',sizes:'180x180'}}};
 }
-export default async function RootLayout({children}:{children:React.ReactNode}){const language=resolveLanguage((await cookies()).get('gsl-language')?.value);return <html lang={language} dir={languageDirection(language)}><body><Suspense fallback={<div className="loading-page">GSL systems · Loading…</div>}><LanguageProvider initialLanguage={language}><Marketplace>{children}</Marketplace></LanguageProvider></Suspense></body></html>}
+export default async function RootLayout({children}:{children:React.ReactNode}){const language=resolveLanguage((await cookies()).get('gsl-language')?.value);return <html lang={language} dir={languageDirection(language)}><body><Suspense fallback={<div className="loading-page">GSL systems · Loading…</div>}><LanguageProvider initialLanguage={language}><Marketplace>{children}</Marketplace></LanguageProvider></Suspense><Analytics/></body></html>}
