@@ -208,3 +208,14 @@
 .sp-spec-list dt{color:#5A6571}
 .sp-spec-list dd{margin:0;color:#14191F;font-weight:500;overflow-wrap:anywhere}
 @media(max-width:720px){.si-summary{grid-template-columns:1fr}.sp-moq{grid-template-columns:1fr}.sp-dashboard-actions{width:100%}.sp-dashboard-actions>*{flex:1 1 auto}}
+
+/* Requirements stay visible before submission, including conditional technical fields. */
+.sp-editor .sp-required,.sp-editor .sw-field .sp-required{display:block;color:#b42318;font-size:12px;font-weight:500;line-height:1.4;margin-top:3px}
+.sp-state-corrections{background:#fff1ee;color:#9a351b}
+.sp-photo-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:12px;margin-block:16px}
+.sp-photo-grid figure{margin:0;min-width:0;border:1px solid #d9dee3;border-radius:8px;overflow:hidden}
+.sp-photo-grid img{width:100%;height:160px;object-fit:contain;background:#f5f7f9}
+.sp-photo-grid figcaption{display:flex;justify-content:space-between;align-items:center;gap:8px;padding:10px;font-size:12px}
+.sp-photo-grid button{min-height:36px}.sp-photos .gsl-file-drop{margin-bottom:16px}
+.product-review-page{max-width:1100px;margin:auto;padding:28px}.product-review-card{background:white;border:1px solid #d9dee3;border-radius:12px;padding:24px;margin-top:20px}
+.catalogue-product-visual .catalogue-supplier-photo{width:100%;height:100%;object-fit:contain}

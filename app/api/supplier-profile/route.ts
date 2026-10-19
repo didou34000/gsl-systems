@@ -18,11 +18,12 @@ export async function GET(){try{
  const publication=application?.organization_id?await db.from('published_supplier_profiles').select('organization_id,display_name,country_code,city,description,processes,materials,published_at,public_details').eq('organization_id',application.organization_id).is('withdrawn_at',null).maybeSingle():null;if(publication?.error)throw publication.error;
  const live=application?.organization_id?await db.from('published_products').select('product_id,name,description,category,specifications,published_at').eq('organization_id',application.organization_id).is('withdrawn_at',null).limit(100):null;if(live?.error)throw live.error;
  const liveRows=live?.data||[];
+ const reviews=await db.rpc('supplier_product_review',{action:'own',args:{}});if(reviews.error)throw reviews.error;
  // Public catalogue visibility requires a GSL admission (component_products view). Unknown when that view is unavailable.
  let catalogue:string[]|null=null;if(liveRows.length){const visible=await db.from('component_products').select('product_id').in('product_id',liveRows.map(r=>r.product_id));if(!visible.error)catalogue=(visible.data||[]).map(r=>String(r.product_id));}else catalogue=[];
  // Publication appends the technical block to each description; the editor keeps the supplier's own text.
  if(application?.payload&&Array.isArray(application.payload.products))application.payload={...application.payload,products:application.payload.products.map((v:{description?:unknown})=>typeof v?.description==='string'?{...v,description:stripSpecificationBlock(v.description)}:v)};
- return json({application,publishedProducts:liveRows.length,liveProducts:liveRows,catalogue,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email,signup:signupCompany(user.user_metadata)});
+ return json({application,productReviews:reviews.data||[],publishedProducts:liveRows.length,liveProducts:liveRows,catalogue,publication:publication?.data||null,files:signed,pendingUploads,events,email:user.email,signup:signupCompany(user.user_metadata)});
 }catch{return json({error:'UNAVAILABLE'},503)}}
 export async function POST(request:Request){
  if(!allowedOrigin(request))return json({error:'ORIGIN'},403);
@@ -36,7 +37,7 @@ export async function POST(request:Request){
  const profile=parsed.data;profile.products=profile.products.map(p=>({...p,category:normalizeProductCategory(p.category)}));
  const issues=productPublicationIssues(profile);if(issues.length)return json({error:'INCOMPLETE',issues},422);
  // Category derived from the product family; family and technical values published inside the description (see lib/products/spec-fields.ts).
- const {data,error}=await db.rpc('publish_supplier_products',{profile:productPublicationProfile(profile),expected_revision:body.revision});if(error)throw error;
+ const {data,error}=await db.rpc('submit_supplier_products',{profile:productPublicationProfile(profile),expected_revision:body.revision});if(error)throw error;
  return json({application:data});
  }
  if(body.action==='publish'){

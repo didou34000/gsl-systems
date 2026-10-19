@@ -1,4 +1,5 @@
 'use client';
+import {productPhotoIds} from '@/lib/products/review';
 import {trackJourney} from '@/lib/journey-analytics';
 import {useState} from 'react';
 import Image from 'next/image';
@@ -44,11 +45,12 @@ export function ResearchLabel() {
 }
 
 export function ProductVisual({product}: {product: CardProduct}) {
+  const photo=productPhotoIds(product.specifications?.photo_ids)[0];
   const categoryLabel = useCategoryLabel();
   const {l} = useLanguage();
   return <div className={'catalogue-product-visual visual-' + categoryGroup(product.category).replace(/[^a-z]/g, '')}>
     <span className="catalogue-category">{categoryLabel(product.category)}</span>
-    <div className="catalogue-visual-symbol" aria-hidden><CategoryIcon category={product.category} size={68} strokeWidth={1}/></div>
+    {photo?<Image className="catalogue-supplier-photo" unoptimized width={640} height={480} src={'/api/product-images?id='+photo} alt={product.name}/>:<div className="catalogue-visual-symbol" aria-hidden><CategoryIcon category={product.category} size={68} strokeWidth={1}/></div>}
     <span className="catalogue-visual-caption">{l('Product sheet', 'Fiche produit')}<ArrowUpRight size={16} aria-hidden/></span>
   </div>;
 }

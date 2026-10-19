@@ -98,7 +98,7 @@ export default function AdminDashboard(){
   const openTasks=data?.tasks.filter(task=>task.status!=='done')||[];
   const overdueTasks=openTasks.filter(task=>task.dueDate&&task.dueDate<today);
   const shellViewer=data&&validSnapshotAccess(data)?{email:data.viewer.email,role:data.viewer.role,permissions:data.viewer.permissions,reviewer:data.viewer.reviewer}:null;
-  const selectSection=(id:AdminSection)=>{if(id==='review'||id==='catalogue'||id==='sourcing')return;navigate(id);};
+  const selectSection=(id:AdminSection)=>{if(id==='review'||id==='product-review'||id==='catalogue'||id==='sourcing')return;navigate(id);};
   const filtersActive=Boolean(query)||statusFilter!=='all'||countryFilter!=='all';
   const tableView=(['companies','products','inbox','activity'] as const).find(item=>item===view);
   const recent=(key:'companies'|'products'|'contacts')=>(data?.trend||[]).slice(-30).reduce((sum,point)=>sum+(point[key]||0),0);
