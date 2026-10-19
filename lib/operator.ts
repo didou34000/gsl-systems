@@ -6,7 +6,7 @@ export const businesses=[
   registration:'Inscrit au Registre national des entreprises (RNE) le 16 juillet 2026',tradeName:'',vatNumber:''},
  {name:'Dorian Vuattoux',legalName:'VUATTOUX DORIAN',legalForm:'Entrepreneur individuel (EI)',regime:'Micro-entreprise',
   address:'163 allée François-Xavier Fabre, 34980 Montferrier-sur-Lez, France',siren:'940 102 262',siret:'940 102 262 00018',
-  registration:'Inscrit au Registre national des entreprises (RNE) le 27 janvier 2025',tradeName:'SOUTH CONCIERGERIE',vatNumber:''},
+  registration:'Inscrit au Registre national des entreprises (RNE) le 27 janvier 2025',tradeName:'',vatNumber:''},
 ];
 // Both businesses were confirmed as co-publishers by the operator.
 // Publication director and professional phone follow lagencedusud.com/mentions-legales,
