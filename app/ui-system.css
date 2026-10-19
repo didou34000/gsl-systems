@@ -52,3 +52,10 @@
 .site-header .account-company span{max-width:200px;overflow:hidden;text-overflow:ellipsis}.site-header .account-company svg{color:var(--ui-accent,#1F4E79);flex-shrink:0}
 @media(max-width:760px){.site-header .account-company span{max-width:120px}}
 .ws-avatar svg{display:block}
+
+/* Distinct legal identities for the two sole proprietorships. */
+.legal-businesses{display:grid;gap:20px}
+.legal-business{min-width:0;padding:22px;border:1px solid #D9DEE3;border-radius:8px;background:#fff}
+.legal-business h3{margin:0 0 18px;font-size:19px;line-height:1.4}
+.legal-business .legal-list dd{min-width:0;overflow-wrap:anywhere}
+@media(max-width:640px){.legal-business{padding:18px}}
