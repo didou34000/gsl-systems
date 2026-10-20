@@ -64,7 +64,7 @@ export const countryRequirements: Readonly<Record<string, CountryRequirements>> 
   FR: {
     ...base, countryCode: 'FR', registryName: 'RNE / INPI', registryUrl: 'https://data.inpi.fr/',
     sources: ['https://entreprendre.service-public.gouv.fr/vosdroits/R19859', 'https://www.entreprises.gouv.fr/la-dge/actualites/attestation-dimmatriculation-au-registre-national-des-entreprises-ou-extrait-rne'],
-    fields: [field('siren', 'SIREN — company identifier', 'SIREN — identifiant de l’entreprise', true), field('headquarters_siret', 'Registered office SIRET', 'SIRET de l’établissement siège'), field('vat_number', 'VAT number, if applicable', 'Numéro de TVA, si applicable')],
+    fields: [field('siren', 'SIREN, company identifier', 'SIREN, identifiant de l’entreprise', true), field('headquarters_siret', 'Registered office SIRET', 'SIRET de l’établissement siège'), field('vat_number', 'VAT number, if applicable', 'Numéro de TVA, si applicable')],
     evidence: label('RNE registration attestation; a current Kbis may also be provided where applicable.', 'Attestation d’immatriculation au RNE ; un extrait Kbis à jour peut également être fourni si applicable.'),
     note: label('The SIREN identifies the entity; each establishment has its own SIRET. VAT eligibility needs a separate check.', 'Le SIREN identifie l’entité ; chaque établissement possède son SIRET. Le statut TVA nécessite un contrôle distinct.'),
   },
@@ -93,7 +93,7 @@ function countryPack(code: string): CountryRequirements {
   };
 }
 
-export function getCountryRequirements(code:string):CountryRequirements{const pack=countryPack(code);return {...pack,maintenanceOwner:'GSL systems — Dorian Vuattoux et Célian Duval',status:['FR','TR'].includes(pack.countryCode)?'active':'needs_review',fields:[...pack.fields,field('registration_explanation','If registration evidence or an identifier does not apply, explain why','Si un justificatif ou identifiant ne s’applique pas, expliquez pourquoi')]};}
+export function getCountryRequirements(code:string):CountryRequirements{const pack=countryPack(code);return {...pack,maintenanceOwner:'GSL systems, Dorian Vuattoux et Célian Duval',status:['FR','TR'].includes(pack.countryCode)?'active':'needs_review',fields:[...pack.fields,field('registration_explanation','If registration evidence or an identifier does not apply, explain why','Si un justificatif ou identifiant ne s’applique pas, expliquez pourquoi')]};}
 
 /** Completeness is deliberately NOT verification, authenticity or permission to publish. */
 export function assessCountryDetails(code: string, entityKind: EntityKind, values: Record<string, string>) {

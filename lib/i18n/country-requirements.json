@@ -219,15 +219,15 @@
     "पहचानकर्ता को ठीक मुद्रित रूप में रखें। केवल पंजीकरण से कर या VAT की स्थिति का अनुमान न लगाएँ।",
     "请严格保留识别号的印刷形式。不能仅凭登记推断税务或增值税状态。"
   ],
-  "SIREN — company identifier": [
-    "SIREN — identificador de empresa",
-    "SIREN — identificador da empresa",
-    "SIREN — Unternehmenskennung",
-    "SIREN — identificativo dell’azienda",
-    "SIREN — şirket tanımlayıcısı",
-    "SIREN — معرّف الشركة",
-    "SIREN — कंपनी पहचानकर्ता",
-    "SIREN — 企业识别号"
+  "SIREN, company identifier": [
+    "SIREN, identificador de empresa",
+    "SIREN, identificador da empresa",
+    "SIREN, Unternehmenskennung",
+    "SIREN, identificativo dell’azienda",
+    "SIREN, şirket tanımlayıcısı",
+    "SIREN, معرّف الشركة",
+    "SIREN, कंपनी पहचानकर्ता",
+    "SIREN, 企业识别号"
   ],
   "Registered office SIRET": [
     "SIRET del domicilio social",

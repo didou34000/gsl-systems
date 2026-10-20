@@ -1,4 +1,4 @@
-/* Footer — October 14 2026: social links and newsletter first, then SEO link columns. */
+/* Footer, October 14 2026: social links and newsletter first, then SEO link columns. */
 .site-footer .footer-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px 56px;align-items:start;padding-bottom:32px;border-bottom:1px solid #ffffff1f}
 .site-footer .footer-identity p{max-width:30em;margin:14px 0 0;font-size:15px;line-height:1.6}
 .site-footer .footer-social{display:flex;gap:10px;margin:18px 0 0;padding:0;list-style:none}

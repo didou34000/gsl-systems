@@ -62,7 +62,7 @@ export default function RequestBoard(){
      {board.unlocked&&r.title?<h3 dir="auto">{r.title}</h3>:<div className="board-blur" aria-hidden><span/><span/></div>}
      {r.reasons.length>0&&<ul className="board-reasons">{r.reasons.map(x=><li key={x.key}>{reason(x)}</li>)}</ul>}
      <dl>
-      <div><dt>{l('Delivery to','Livraison')}</dt><dd>{r.destination?countryName(r.destination,language):'—'}</dd></div>
+      <div><dt>{l('Delivery to','Livraison')}</dt><dd>{r.destination?countryName(r.destination,language):l('Not specified','Non renseigné')}</dd></div>
       <div><dt>{l('Lines','Lignes')}</dt><dd>{r.lines}</dd></div>
       <div><dt>{l('Deadline','Échéance')}</dt><dd>{r.deadline?date(r.deadline):l('Not specified','Non précisée')}</dd></div>
       <div><dt>{l('Published','Publiée')}</dt><dd>{date(r.shared_at)}</dd></div>

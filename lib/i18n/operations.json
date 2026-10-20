@@ -259,15 +259,15 @@
     "निजी प्रारूप",
     "私人草稿"
   ],
-  "Quote selected — no payment made": [
-    "Oferta seleccionada — sin pago",
-    "Proposta selecionada — sem pagamento",
-    "Angebot ausgewählt — keine Zahlung erfolgt",
-    "Preventivo selezionato — nessun pagamento",
-    "Teklif seçildi — ödeme yapılmadı",
-    "تم اختيار العرض — لم يتم الدفع",
-    "प्रस्ताव चुना गया — भुगतान नहीं हुआ",
-    "已选报价 — 未付款"
+  "Quote selected, no payment made": [
+    "Oferta seleccionada, sin pago",
+    "Proposta selecionada, sem pagamento",
+    "Angebot ausgewählt, keine Zahlung erfolgt",
+    "Preventivo selezionato, nessun pagamento",
+    "Teklif seçildi, ödeme yapılmadı",
+    "تم اختيار العرض, لم يتم الدفع",
+    "प्रस्ताव चुना गया, भुगतान नहीं हुआ",
+    "已选报价, 未付款"
   ],
   "Transmitted in the platform": [
     "Transmitido en la plataforma",

@@ -34,7 +34,7 @@ assert.equal(translate('ar','Messages','Messages'),'الرسائل');
 assert.equal(translate('zh','New request','Nouvelle demande'),'新建询价');
 assert.equal(translate('es','Company photo 2','Photo de l’entreprise 2'),'Foto de empresa 2');
 assert.equal(translate('ar','Remove photo 3','Retirer la photo 3'),'إزالة الصورة 3');
-assert.equal(translate('de','Product 2 — Email address: check the format or length.',''),'Produkt 2 — E-Mail-Adresse: Format oder Länge prüfen.');
+assert.equal(translate('de','Product 2, Email address: check the format or length.',''),'Produkt 2, E-Mail-Adresse: Format oder Länge prüfen.');
 assert.equal(translate('de','An untranslated technical term','Terme non traduit'),'An untranslated technical term');
 
 // A newly added label on a critical workflow must ship in all ten languages.

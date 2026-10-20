@@ -1,4 +1,4 @@
-/* Public product page — "Acier" palette. Builds on industrial-sheets.css (.ind-*). */
+/* Public product page, "Acier" palette. Builds on industrial-sheets.css (.ind-*). */
 .ps .ps-intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:32px;align-items:start;padding-bottom:32px;border-bottom:1px solid var(--ind-line,#D9DEE3)}
 .ps-gallery{min-width:0}
 .ps-gallery .product-picture{margin:0}

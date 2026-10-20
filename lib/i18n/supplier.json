@@ -1569,15 +1569,15 @@
     "प्रकाशन में शामिल करें",
     "包含在发布内容中"
   ],
-  "Private draft — complete later": [
+  "Private draft, complete later": [
     "Borrador privado: completar después",
-    "Rascunho privado — completar mais tarde",
+    "Rascunho privado, completar mais tarde",
     "Privater Entwurf – später vervollständigen",
-    "Bozza privata — completa in seguito",
-    "Özel taslak — daha sonra tamamlayın",
-    "مسودة خاصة — تُستكمل لاحقًا",
-    "निजी ड्राफ़्ट — बाद में पूरा करें",
-    "私密草稿——稍后完善"
+    "Bozza privata, completa in seguito",
+    "Özel taslak, daha sonra tamamlayın",
+    "مسودة خاصة, تُستكمل لاحقًا",
+    "निजी ड्राफ़्ट, बाद में पूरा करें",
+    "私密草稿，稍后完善"
   ],
   "Product or service name": [
     "Nombre del producto o servicio",
@@ -2959,15 +2959,15 @@
     "जमा करने से पहले आवश्यक",
     "提交前必填"
   ],
-  "Optional — complete later": [
+  "Optional, complete later": [
     "Opcional: completar después",
-    "Opcional — completar mais tarde",
+    "Opcional, completar mais tarde",
     "Optional – später vervollständigen",
-    "Facoltativo — completa in seguito",
-    "İsteğe bağlı — sonra tamamlayın",
-    "اختياري — يُستكمل لاحقًا",
-    "वैकल्पिक — बाद में पूरा करें",
-    "选填——稍后完善"
+    "Facoltativo, completa in seguito",
+    "İsteğe bağlı, sonra tamamlayın",
+    "اختياري, يُستكمل لاحقًا",
+    "वैकल्पिक, बाद में पूरा करें",
+    "选填，稍后完善"
   ],
   "I am authorised to represent this company. I confirm that these details are accurate to my knowledge and that I have the rights to share the uploaded photos and documents with GSL for review.": [
     "Estoy autorizado para representar a esta empresa. Confirmo que estos datos son correctos según mi conocimiento y que tengo derecho a compartir las fotos y documentos con GSL para su revisión.",
@@ -3289,15 +3289,15 @@
     "सार्वजनिक फ़ील्ड में गोपनीय जानकारी की जाँच हुई",
     "已检查公开字段中的保密信息"
   ],
-  "Sources, dates, observations — internal only": [
+  "Sources, dates, observations, internal only": [
     "Fuentes, fechas y observaciones: solo uso interno",
-    "Fontes, datas e observações — apenas uso interno",
+    "Fontes, datas e observações, apenas uso interno",
     "Quellen, Daten, Beobachtungen – nur intern",
-    "Fonti, date, osservazioni — solo uso interno",
-    "Kaynaklar, tarihler, gözlemler — yalnızca dahili kullanım",
-    "المصادر والتواريخ والملاحظات — للاستخدام الداخلي فقط",
-    "स्रोत, तारीखें, टिप्पणियाँ — केवल आंतरिक उपयोग",
-    "来源、日期、观察记录——仅供内部使用"
+    "Fonti, date, osservazioni, solo uso interno",
+    "Kaynaklar, tarihler, gözlemler, yalnızca dahili kullanım",
+    "المصادر والتواريخ والملاحظات, للاستخدام الداخلي فقط",
+    "स्रोत, तारीखें, टिप्पणियाँ, केवल आंतरिक उपयोग",
+    "来源、日期、观察记录，仅供内部使用"
   ],
   "Save checks": [
     "Guardar controles",
@@ -3439,15 +3439,15 @@
     "इस अनुरोध के लिए आपके पुष्ट किए सभी प्राप्तकर्ता",
     "您为此请求确认的所有接收方"
   ],
-  "Transfer incomplete — remove and upload again": [
+  "Transfer incomplete, remove and upload again": [
     "Transferencia incompleta: elimine el archivo y súbalo de nuevo",
-    "Transferência incompleta — remova e envie novamente",
+    "Transferência incompleta, remova e envie novamente",
     "Übertragung unvollständig – entfernen und erneut hochladen",
-    "Trasferimento incompleto — rimuovi e carica di nuovo",
-    "Aktarım tamamlanmadı — kaldırıp yeniden yükleyin",
-    "النقل غير مكتمل — أزل الملف وارفعه مجددًا",
-    "अपलोड अधूरा — हटाकर दोबारा अपलोड करें",
-    "传输未完成——请移除后重新上传"
+    "Trasferimento incompleto, rimuovi e carica di nuovo",
+    "Aktarım tamamlanmadı, kaldırıp yeniden yükleyin",
+    "النقل غير مكتمل, أزل الملف وارفعه مجددًا",
+    "अपलोड अधूरा, हटाकर दोबारा अपलोड करें",
+    "传输未完成，请移除后重新上传"
   ],
   "File scan completed; its content has not been certified.": [
     "Análisis del archivo completado; su contenido no está certificado.",

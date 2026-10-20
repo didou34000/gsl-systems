@@ -1,4 +1,4 @@
-/* Manufacturer map on /fabricants — "Acier" palette, static SVG. */
+/* Manufacturer map on /fabricants, "Acier" palette, static SVG. */
 .makers-map{--mm-ink:#14191F;--mm-muted:#5A6571;--mm-line:#D9DEE3;--mm-soft:#F3F5F7;--mm-steel:#1F4E79;--mm-steel-dark:#173B5C;--mm-night:#0F1B26;padding-block:8px 72px;color:var(--mm-ink)}
 .makers-map-head{max-width:760px;padding-top:32px;border-top:1px solid var(--mm-line)}
 .makers-map-head h2{margin:0;font-size:24px;font-weight:600;letter-spacing:-.3px}
