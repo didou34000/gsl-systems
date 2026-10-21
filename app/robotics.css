@@ -48,7 +48,9 @@ a.robotics-family-count:hover{color:#1F4E79}
 .robotics-family-status{margin:0 0 16px;font-size:14px;color:#5A6571}
 
 /* Families page: one thin technical drawing per family, a generic part rather than a listed product. */
-.robotics-family-list .family-pictogram{flex-shrink:0;width:120px;height:90px;padding:8px;border:1px solid #D9DEE3;border-radius:8px;background:#ffffff;fill:none;stroke:#1F4E79;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.robotics-family-list .family-pictogram{flex-shrink:0;width:120px;height:90px;padding:8px;border:1px solid #D9DEE3;border-radius:8px;background:#ffffff;color:#1F4E79;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .robotics-family-list .family-pictogram *{vector-effect:non-scaling-stroke}
 .robotics-family-list .robotics-family-text{flex:1;min-width:0}
 @media(max-width:760px){.robotics-family-list li{display:grid;grid-template-columns:72px 1fr;column-gap:16px;row-gap:12px}.robotics-family-list .family-pictogram{width:72px;height:54px;padding:3px}.robotics-family-list .robotics-family-count{grid-column:2}}
+
+.family-pictogram .family-pictogram-fill{fill:currentColor;fill-opacity:.06;stroke:none}
