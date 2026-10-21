@@ -117,11 +117,12 @@
 .gsl-home .hx-section-head{display:flex;align-items:baseline;justify-content:space-between;gap:16px}
 .gsl-home .hx-section-head>a{display:inline-flex;align-items:center;gap:6px;color:var(--hx-rust);font-size:14px;font-weight:600;white-space:nowrap}
 .gsl-home .hx-families ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0;padding:0;list-style:none}
-.gsl-home .hx-families ul a{display:flex;flex-direction:column;align-items:stretch;gap:12px;height:100%;padding:10px 10px 14px;border:1px solid var(--hx-line);border-radius:8px;background:#fff;color:var(--hx-ink);font-size:14px;line-height:1.35}
-.gsl-home .hx-families ul a:hover{border-color:#8fa9bd;color:var(--hx-rust)}
-.gsl-home .hx-families .family-pictogram{display:block;width:100%;height:96px;padding:10px;border-radius:6px;background:#F3F5F7;fill:none;stroke:#1F4E79;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.gsl-home .hx-families ul a{display:flex;flex-direction:column;align-items:stretch;gap:12px;height:100%;padding:12px 12px 14px;border:1px solid var(--hx-line);border-radius:10px;background:#fff;color:var(--hx-ink);font-size:14px;line-height:1.4;transition:border-color .15s,box-shadow .15s}
+.gsl-home .hx-families ul a:hover{border-color:#8fa9bd;color:var(--hx-rust);box-shadow:0 3px 12px #1f4e790a}
+.gsl-home .hx-families ul a:focus-visible{outline:2px solid var(--hx-rust);outline-offset:3px}
+.gsl-home .hx-families .family-pictogram{display:block;width:100%;height:104px;padding:16px;border-radius:7px;background:#F3F5F7;color:#1F4E79;fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .gsl-home .hx-families .family-pictogram *{vector-effect:non-scaling-stroke}
-.gsl-home .hx-families ul a>span{padding-inline:6px}
+.gsl-home .hx-families ul a>span{display:block;min-height:2.8em;padding-inline:4px;font-weight:500;text-wrap:balance}
 
 .gsl-home .home-mini-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px;margin:0;padding:0;list-style:none}
 .gsl-home .home-mini a{display:flex;flex-direction:column;gap:6px;height:100%;padding:10px 10px 12px;border:1px solid var(--hx-line);border-radius:8px;background:#fff;color:var(--hx-ink)}
@@ -172,7 +173,7 @@
  .gsl-home .hx-search-field{flex-wrap:wrap;padding:6px 6px 6px 14px}
  .gsl-home .hx-search-field button{flex-basis:100%;justify-content:center;min-height:46px;margin:0}
  .gsl-home .hx-families ul a{padding:8px 8px 12px;gap:10px;font-size:13px}
- .gsl-home .hx-families .family-pictogram{height:72px;padding:6px}
+ .gsl-home .hx-families .family-pictogram{height:80px;padding:10px}
  .gsl-home .hx-countries{margin-top:28px}
 }
 .gsl-home .hx-countries ul{gap:4px 0}
