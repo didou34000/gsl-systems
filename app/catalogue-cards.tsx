@@ -6,6 +6,7 @@ import Image from 'next/image';
 import {ArrowRight, ArrowUpRight, Armchair, BatteryCharging, BookOpen, Bot, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Grab, Droplets, Nut, Settings2, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
+import FactoryMark, {factoryCountries} from '@/components/factory-mark';
 import {countryName} from '@/lib/country-names';
 import {companyResearch, productResearch, researchCategories, type CompanyResearch} from '@/lib/catalogue-research';
 import {categoryGroup, gslContactHref, publishedPrice, researchValue} from '@/lib/catalogue-display';
@@ -15,7 +16,7 @@ import {SaveProduct} from './saved-selection';
 import {CompareProduct} from './compare-product';
 
 export type CardProduct = {product_id: string; organization_id?: string; name: string; category: string; description?: string; specifications: Record<string, string>};
-export type CardSupplier = {organization_id: string; display_name: string; country_code: string; city?: string; description?: string; public_details?: {qualification?:string;delivery_status?:string;verification?: string; branding?: {logoId?: string; coverIds?: string[]}; research?: CompanyResearch}};
+export type CardSupplier = {organization_id: string; display_name: string; country_code: string; city?: string; description?: string; public_details?: {qualification?:string;delivery_status?:string;verification?: string; branding?: {logoId?: string; coverIds?: string[]}; sites?: {country?: string}[]; research?: CompanyResearch}};
 
 export function useCategoryLabel() {
   const {l} = useLanguage();
@@ -59,7 +60,7 @@ export function CompanyMark({supplier}: {supplier: CardSupplier}) {
   const [failed, setFailed] = useState(false);
   return supplier.public_details?.branding?.logoId && !failed
     ? <Image unoptimized width={64} height={64} className="catalogue-company-logo" src={'/api/company-images?id=' + encodeURIComponent(supplier.public_details.branding.logoId)} alt="" onError={() => setFailed(true)}/>
-    : <span className="catalogue-company-monogram" aria-hidden>{supplier.display_name.trim().split(/\s+/).slice(0, 2).map(word => word[0]).join('').toUpperCase() || <Factory size={26}/>}</span>;
+    : <span className="catalogue-company-monogram is-factory" aria-hidden><FactoryMark countries={factoryCountries(supplier.country_code, supplier.public_details?.sites)}/></span>;
 }
 
 /** Key figures shown on cards and sheets: robotics metrics first, then declared basics. */

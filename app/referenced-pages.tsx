@@ -4,6 +4,7 @@ import {ProductSheet} from './product-sheet';
 import {ArrowLeft,ArrowRight,ExternalLink,MessageSquare} from 'lucide-react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
+import FactoryMark,{factoryCountries} from '@/components/factory-mark';
 import {countryName} from '@/lib/country-names';
 import {type PublicProduct,type PublicSupplier} from './public-profiles';
 import {useLanguage} from './language';
@@ -34,8 +35,8 @@ export function ReferencedMakerPage({id}:{id:string}){
  return <main className="container ind-sheet ref-maker">
   <nav className="catalogue-breadcrumb"><Link href="/fabricants"><ArrowLeft size={16}/>{l('Manufacturers','Fabricants')}</Link><span aria-hidden>/</span><span>{m.company}</span></nav>
   <div className="ind-sheet-layout"><div className="ind-sheet-main">
-   <h1 dir="auto">{m.company}</h1>
-   <p className="ind-meta"><span><CountryFlag code={m.country}/>{m.city}, {countryName(m.country,language)}</span></p>
+   <div className="ind-company-head ref-maker-head"><span className="catalogue-company-monogram is-factory" aria-hidden><FactoryMark countries={factoryCountries(m.country)}/></span><div><h1 dir="auto">{m.company}</h1>
+   <p className="ind-meta"><span><CountryFlag code={m.country}/>{m.city}, {countryName(m.country,language)}</span></p></div></div>
    <p><span className="catalogue-status">{l('Not registered, unverified','Non inscrit, non vérifié')}</span></p>
    <p className="robotics-scope" role="note">{l('This manufacturer was identified by GSL from its published documents. It has no account on GSL, has not been contacted and has not been verified. Enquiries go through GSL.','Ce fabricant a été repéré par GSL dans ses documents publiés. Il n’a pas de compte sur GSL, n’a pas été contacté et n’a pas été vérifié. Les demandes passent par GSL.')}</p>
    <section className="ind-section"><h2>{l('Identified offers','Offres repérées')}</h2><dl className="ind-datasheet">{products.map(p=><div key={p.id}><dt><Link href={'/produits/'+p.id}>{fr?p.productFr:p.productEn}</Link></dt><dd dir="auto">{p.reference}</dd></div>)}</dl></section>

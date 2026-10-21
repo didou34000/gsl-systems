@@ -1,0 +1,14 @@
+/* Stand-in for companies without an image: factory pictogram flying its countries' flags (components/factory-mark.tsx). */
+.factory-mark{display:block;width:100%;height:100%;overflow:visible}
+.factory-mark-body{fill:var(--factory-fill,#E3E9EF);stroke:var(--factory-ink,#1F4E79);stroke-width:1.6;stroke-linejoin:round}
+.factory-mark-detail{fill:var(--factory-ink,#1F4E79)}
+.factory-mark-ground{fill:none;stroke:var(--factory-ink,#1F4E79);stroke-width:1.6;stroke-linecap:round}
+.factory-mark-pole{fill:none;stroke:var(--factory-pole,#14191F);stroke-width:1.2;stroke-linecap:round}
+.factory-mark-flag-edge{fill:none;stroke:#0F1B26;stroke-opacity:.3;stroke-width:.5}
+.catalogue-company-monogram.is-factory{padding:3px;background:#F3F5F7}
+.company-cover-fallback>.factory-mark{opacity:1;width:150px;height:150px;--factory-fill:#1B3550;--factory-ink:#C9D6E3;--factory-pole:#C9D6E3}
+.sw-preview-brand>.factory-mark{width:84px;height:84px;flex-shrink:0}
+.ref-maker-head{align-items:center;gap:18px;margin-bottom:6px}
+.ref-maker-head .catalogue-company-monogram{width:72px;height:72px}
+.ref-maker-head h1{margin:0}
+@media(max-width:760px){.company-cover-fallback>.factory-mark{opacity:1;width:96px;height:96px}.sw-preview-brand>.factory-mark{width:60px;height:60px}.ref-maker-head .catalogue-company-monogram{width:56px;height:56px}}

@@ -5,6 +5,7 @@ import Link from '@/components/site-link';
 import {useLanguage} from './language';
 import {CategoryIcon,CompanyMark,useCategoryLabel} from './catalogue-cards';
 import CountryFlag from '@/components/country-flag';
+import FactoryMark,{factoryCountries} from '@/components/factory-mark';
 import {countryName} from '@/lib/country-names';
 import {productResearch} from '@/lib/catalogue-research';
 import {publishedPrice} from '@/lib/catalogue-display';
@@ -52,7 +53,7 @@ function ReferencedProduct({maker:m}:{maker:ReferencedMakerRow}){
 function ReferencedMaker({maker:m}:{maker:ReferencedMakerRow}){
  const {language}=useLanguage();const categoryLabel=useFamilyLabel();
  return <li className="home-mini home-mini-maker"><Link href={referencedMakerHref(m)}>
-  <span className="home-mini-visual"><span className="catalogue-company-monogram" aria-hidden>{m.company.split(/\s+/).slice(0,2).map(w=>w[0]).join('').toUpperCase()}</span></span>
+  <span className="home-mini-visual"><span className="catalogue-company-monogram is-factory" aria-hidden><FactoryMark countries={factoryCountries(m.country)}/></span></span>
   <strong>{m.company}</strong>
   <span className="home-mini-family">{categoryLabel(m.family)}</span>
   <span className="home-mini-meta">{m.city} · {countryName(m.country,language)}</span>
