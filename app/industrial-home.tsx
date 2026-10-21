@@ -9,6 +9,7 @@ import {countryName} from '@/lib/country-names';
 import {ArrowRight,Factory,Package,Search} from 'lucide-react';
 import {ProductTile,SupplierTile,type Actions} from './discovery';
 import {CategoryIcon} from './catalogue-cards';
+import FamilyPictogram from './family-pictogram';
 import {useLanguage} from './language';
 import Link from '@/components/site-link';
 import {products,suppliers} from '@/lib/catalog';
@@ -96,7 +97,7 @@ export default function IndustrialHome({actions,live=false}:{actions:Actions;liv
  <HomeSearch base={base}/>
  <nav className="hx-families container" aria-labelledby="hx-families-title">
   <div className="hx-section-head"><h2 id="hx-families-title">{l('Component families','Familles de composants')}</h2><Link href="/secteurs">{l('All families','Toutes les familles')}<ArrowRight size={17} aria-hidden/></Link></div>
-  <ul>{roboticsFamilies.map(f=><li key={f.id}><Link href={base+'/catalogue?category='+f.id}><span className="hx-family-icon"><CategoryIcon category={f.id} size={24} strokeWidth={1.5}/></span><span>{l(f.en,f.fr)}</span></Link></li>)}</ul>
+  <ul>{roboticsFamilies.map(f=><li key={f.id}><Link href={base+'/catalogue?category='+f.id}><FamilyPictogram family={f.id}/><span>{l(f.en,f.fr)}</span></Link></li>)}</ul>
  </nav>
 
  {live?<HomeCatalogue/>:<>
