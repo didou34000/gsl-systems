@@ -848,5 +848,95 @@
     "المنتجات المضمّنة في طلبك",
     "आपके अनुरोध में शामिल उत्पाद",
     "已纳入您需求的产品"
+  ],
+  "Where each family sits in a humanoid robot": [
+    "Dónde se sitúa cada familia en un robot humanoide",
+    "Onde cada família se situa num robô humanoide",
+    "Wo jede Familie in einem humanoiden Roboter sitzt",
+    "Dove si colloca ogni famiglia in un robot umanoide",
+    "Her ailenin insansı robotta yer aldığı konum",
+    "موضع كل عائلة في الروبوت البشري",
+    "ह्यूमनॉइड रोबोट में प्रत्येक श्रेणी का स्थान",
+    "各类别在人形机器人中的位置"
+  ],
+  "Rotary and linear motors and actuators": [
+    "Motores y actuadores rotativos o lineales",
+    "Motores e atuadores rotativos ou lineares",
+    "Rotations- und Linearmotoren und Aktoren",
+    "Motori e attuatori rotativi o lineari",
+    "Döner ve doğrusal motorlar ile aktüatörler",
+    "المحركات والمشغلات الدوارة والخطية",
+    "घूर्णी और रैखिक मोटर व एक्चुएटर",
+    "旋转与直线电机及执行器"
+  ],
+  "Reducers, screws, bearings and linear guides": [
+    "Reductores, husillos, rodamientos y guías lineales",
+    "Redutores, fusos, rolamentos e guias lineares",
+    "Getriebe, Spindeln, Lager und Linearführungen",
+    "Riduttori, viti, cuscinetti e guide lineari",
+    "Redüktörler, vidalar, rulmanlar ve lineer kılavuzlar",
+    "المخفضات واللوالب والمحامل والموجهات الخطية",
+    "रिड्यूसर, स्क्रू, बेयरिंग और लीनियर गाइड",
+    "减速器、丝杠、轴承与直线导轨"
+  ],
+  "Encoders, force sensors and vision systems": [
+    "Codificadores, sensores de fuerza y sistemas de visión",
+    "Encoders, sensores de força e sistemas de visão",
+    "Drehgeber, Kraftsensoren und Bildverarbeitungssysteme",
+    "Encoder, sensori di forza e sistemi di visione",
+    "Enkoderler, kuvvet sensörleri ve görüntü sistemleri",
+    "المرمّزات وحساسات القوة وأنظمة الرؤية",
+    "एनकोडर, बल सेंसर और विज़न सिस्टम",
+    "编码器、力传感器与视觉系统"
+  ],
+  "PCBs, controllers and embedded computing": [
+    "PCB, controladores y computación embarcada",
+    "PCB, controladores e computação embarcada",
+    "Leiterplatten, Steuerungen und Embedded-Computing",
+    "PCB, controllori e calcolo embedded",
+    "PCB'ler, kontrolörler ve gömülü bilişim",
+    "لوحات الدوائر ووحدات التحكم والحوسبة المدمجة",
+    "पीसीबी, कंट्रोलर और एम्बेडेड कंप्यूटिंग",
+    "电路板、控制器与嵌入式计算"
+  ],
+  "Dynamic cables, harnesses and connectors": [
+    "Cables dinámicos, mazos y conectores",
+    "Cabos dinâmicos, chicotes e conectores",
+    "Bewegte Leitungen, Kabelbäume und Steckverbinder",
+    "Cavi dinamici, cablaggi e connettori",
+    "Dinamik kablolar, kablo demetleri ve konektörler",
+    "الكابلات المرنة وحزم الأسلاك والموصلات",
+    "डायनेमिक केबल, हार्नेस और कनेक्टर",
+    "动态线缆、线束与连接器"
+  ],
+  "Batteries, BMS, chargers and power supplies": [
+    "Baterías, BMS, cargadores y fuentes de alimentación",
+    "Baterias, BMS, carregadores e fontes de alimentação",
+    "Akkus, BMS, Ladegeräte und Netzteile",
+    "Batterie, BMS, caricatori e alimentatori",
+    "Bataryalar, BMS, şarj cihazları ve güç kaynakları",
+    "البطاريات وأنظمة إدارتها والشواحن ومزودات الطاقة",
+    "बैटरी, बीएमएस, चार्जर और पावर सप्लाई",
+    "电池、BMS、充电器与电源"
+  ],
+  "Grippers and end effectors": [
+    "Pinzas y efectores finales",
+    "Garras e efetuadores finais",
+    "Greifer und Endeffektoren",
+    "Pinze ed effettori finali",
+    "Tutucular ve uç efektörler",
+    "القابضات والمؤثرات الطرفية",
+    "ग्रिपर और एंड इफ़ेक्टर",
+    "夹爪与末端执行器"
+  ],
+  "Robot structures and mechanical components": [
+    "Estructuras de robot y componentes mecánicos",
+    "Estruturas de robô e componentes mecânicos",
+    "Roboterstrukturen und mechanische Bauteile",
+    "Strutture per robot e componenti meccanici",
+    "Robot yapıları ve mekanik bileşenler",
+    "هياكل الروبوتات والمكوّنات الميكانيكية",
+    "रोबोट संरचनाएँ और यांत्रिक घटक",
+    "机器人结构与机械部件"
   ]
 }

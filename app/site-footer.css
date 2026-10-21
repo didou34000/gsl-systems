@@ -17,7 +17,7 @@
 .site-footer .footer-consent input{margin:0 8px 0 0;vertical-align:-2px}
 .site-footer .footer-consent a{text-decoration:underline;text-underline-offset:3px}
 .site-footer .footer-newsletter p,.site-footer .footer-newsletter-done{margin:0;color:#e6edf3;font-size:14px}
-.site-footer .footer-trap{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
+.site-footer .footer-trap{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);opacity:0;pointer-events:none}
 .site-footer .footer-grid-wide{grid-template-columns:repeat(5,minmax(0,1fr));gap:32px}
 .site-footer .footer-grid-wide>div{display:flex;flex-direction:column;gap:9px;min-width:0}
 .site-footer .footer-grid-wide h3{margin:0 0 6px}
