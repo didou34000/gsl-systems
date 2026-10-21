@@ -22,7 +22,7 @@
 .robotics-families-head h1{font-weight:650;font-size:clamp(34px,3.6vw,52px);line-height:1.08;letter-spacing:-.035em;color:#0F1B26;margin:0}
 .robotics-families-head p{margin:16px 0 0;font-size:18px;line-height:1.6;color:#5A6571}
 .robotics-family-list{margin:0;padding:0;list-style:none;border-top:1px solid #D9DEE3}
-.robotics-family-list li{display:flex;align-items:flex-start;justify-content:space-between;gap:32px;padding:26px 0;border-bottom:1px solid #D9DEE3}
+.robotics-family-list li{display:flex;align-items:flex-start;justify-content:space-between;gap:28px;padding:26px 0;border-bottom:1px solid #D9DEE3}
 .robotics-family-list h2{margin:0;font-size:22px;font-weight:650;letter-spacing:-.015em;line-height:1.25;color:#0F1B26}
 .robotics-family-list h2 a:hover{color:#1F4E79}
 .robotics-family-list p{margin:8px 0 0;max-width:62ch;font-size:16px;line-height:1.55;color:#3f444a}
@@ -47,38 +47,8 @@ a.robotics-family-count:hover{color:#1F4E79}
 .gsl-home .hx-form select{max-width:170px}
 .robotics-family-status{margin:0 0 16px;font-size:14px;color:#5A6571}
 
-/* Humanoid overview on the families page: thin steel line drawing, families placed on the body. */
-.robot-overview{--robot-ink:#1F4E79;--robot-paper:#ffffff;margin:0 0 40px;padding:28px 24px;border:1px solid #D9DEE3;border-radius:10px;background:var(--robot-paper)}
-.robot-overview-stage{position:relative;max-width:1040px;margin:0 auto;aspect-ratio:1000/640}
-.robot-overview svg{display:block;width:100%;height:100%}
-.robot-overview-body :is(path,rect,circle){fill:var(--robot-paper);stroke:var(--robot-ink);stroke-width:1.4;stroke-linejoin:round}
-.robot-overview-body .robot-detail{fill:none;stroke-width:1;opacity:.55}
-.robot-overview-body .robot-joint{stroke-width:1.2}
-.robot-limb-outline{stroke:var(--robot-ink);stroke-linecap:round}
-.robot-limb-fill{stroke:var(--robot-paper);stroke-linecap:round}
-.robot-overview-leaders polyline{fill:none;stroke:#8C99A6;stroke-width:1;transition:stroke .15s}
-.robot-overview-leaders polyline.is-active{stroke:var(--robot-ink);stroke-width:1.4}
-.robot-point{fill:var(--robot-ink)}
-.robot-point-ring{fill:none;stroke:var(--robot-ink);stroke-width:1;opacity:0;transition:opacity .15s}
-.is-active>.robot-point-ring{opacity:1}
-.robot-overview-labels{margin:0;padding:0;list-style:none}
-.robot-overview-labels li{position:absolute;width:29%;transform:translateY(-50%)}
-.robot-overview-labels li.is-left{right:70%;text-align:right}
-.robot-overview-labels li.is-right{left:70%;text-align:left}
-.robot-overview-labels a{display:block;padding:4px 0;color:#0F1B26}
-.robot-overview-labels strong{display:block;font-size:15px;font-weight:600;line-height:1.3;letter-spacing:-.005em}
-.robot-overview-labels span{display:block;margin-top:3px;font-size:13px;line-height:1.4;color:#5A6571}
-.robot-overview-labels a:is(:hover,.is-active) strong{color:#1F4E79}
-.robot-overview-labels a:focus-visible{outline:2px solid #1F4E79;outline-offset:3px;border-radius:3px}
-@media(max-width:900px){.robot-overview-labels strong{font-size:14px}.robot-overview-labels span{display:none}}
-@media(max-width:760px){
- .robot-overview{padding:20px 16px}
- .robot-overview-stage{aspect-ratio:auto}
- .robot-overview svg{height:auto;max-width:520px;margin:0 auto}
- .robot-overview-leaders{display:none}
- .robot-overview-labels{margin-top:16px;border-top:1px solid #D9DEE3}
- .robot-overview-labels li,.robot-overview-labels li:is(.is-left,.is-right){position:static;width:auto;transform:none;text-align:start;border-bottom:1px solid #D9DEE3;top:auto!important}
- .robot-overview svg{max-width:300px}
- .robot-overview-labels a{padding:10px 0}
- .robot-overview-labels strong{font-size:14px}
-}
+/* Families page: one thin technical drawing per family, a generic part rather than a listed product. */
+.robotics-family-list .family-pictogram{flex-shrink:0;width:120px;height:90px;padding:8px;border:1px solid #D9DEE3;border-radius:8px;background:#ffffff;fill:none;stroke:#1F4E79;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.robotics-family-list .family-pictogram *{vector-effect:non-scaling-stroke}
+.robotics-family-list .robotics-family-text{flex:1;min-width:0}
+@media(max-width:760px){.robotics-family-list li{display:grid;grid-template-columns:72px 1fr;column-gap:16px;row-gap:12px}.robotics-family-list .family-pictogram{width:72px;height:54px;padding:3px}.robotics-family-list .robotics-family-count{grid-column:2}}
