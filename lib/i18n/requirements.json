@@ -869,15 +869,15 @@
     "वार्षिक",
     "每年"
   ],
-  "Private draft — not sent to suppliers.": [
-    "Borrador privado — no enviado a proveedores.",
-    "Rascunho privado — não enviado a fornecedores.",
-    "Privater Entwurf — nicht an Lieferanten gesendet.",
-    "Bozza privata — non inviata ai fornitori.",
-    "Özel taslak — tedarikçilere gönderilmedi.",
-    "مسودة خاصة — لم تُرسل للمورّدين.",
-    "निजी प्रारूप — आपूर्तिकर्ताओं को नहीं भेजा गया।",
-    "私人草稿 — 尚未发送给供应商。"
+  "Private draft, not sent to suppliers.": [
+    "Borrador privado, no enviado a proveedores.",
+    "Rascunho privado, não enviado a fornecedores.",
+    "Privater Entwurf, nicht an Lieferanten gesendet.",
+    "Bozza privata, non inviata ai fornitori.",
+    "Özel taslak, tedarikçilere gönderilmedi.",
+    "مسودة خاصة, لم تُرسل للمورّدين.",
+    "निजी प्रारूप, आपूर्तिकर्ताओं को नहीं भेजा गया।",
+    "私人草稿, 尚未发送给供应商。"
   ],
   "Account security": [
     "Seguridad de la cuenta",

@@ -1,4 +1,4 @@
-/* Signed-in workspace — October 2026. Navigation, dashboard, settings and shared page patterns. */
+/* Signed-in workspace, October 2026. Navigation, dashboard, settings and shared page patterns. */
 .ws-shell{display:grid;grid-template-columns:256px minmax(0,1fr);min-height:calc(100dvh - 137px);background:var(--ui-soft);color:var(--ui-ink)}
 .ws-main{min-width:0;background:var(--ui-soft)}
 .ws-main>main,.ws-main>section{background:transparent}

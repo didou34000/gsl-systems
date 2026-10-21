@@ -1,4 +1,4 @@
-/* Home page — October 2026. Scoped to the home page and loaded last. */
+/* Home page, October 2026. Scoped to the home page and loaded last. */
 .gsl-home{--hx-night:#0F1B26;--hx-ink:#0F1B26;--hx-rust:#1F4E79;--hx-rust-dark:#173B5C;--hx-line:#D9DEE3;--hx-muted:#5A6571;--hx-soft:#F7F8FA}
 
 /* A short promise and two clear actions; component browsing starts below the hero. */
@@ -90,7 +90,7 @@
 }
 @media(prefers-reduced-motion:reduce){.gsl-home .hx-video-backdrop video{display:none}}
 
-/* October 14 2026 — hero countries, search, family icons, compact tiles, key figures, closing band. */
+/* October 14 2026, hero countries, search, family icons, compact tiles, key figures, closing band. */
 .gsl-home .hx-countries{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,1fr);gap:28px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.16);max-width:1080px}
 .gsl-home .hx-countries>div>a{display:inline-block;margin-bottom:10px;color:#c7d1da;font-size:13px;line-height:1.4}
 .gsl-home .hx-countries>div>a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}

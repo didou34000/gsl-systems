@@ -1,4 +1,4 @@
-/* Shared interface system — October 2026. Loaded last: one button family, one set of tokens.
+/* Shared interface system, October 2026. Loaded last: one button family, one set of tokens.
    Same direction as the home page (Inter, neutral greys, rust as the single action colour). */
 :root{--ui-ink:#0F1B26;--ui-text:#3d4247;--ui-muted:#5A6571;--ui-faint:#8b9096;--ui-line:#D9DEE3;--ui-line-strong:#d4cfc8;--ui-soft:#F7F8FA;--ui-hover:#F7F8FA;--ui-rust:#1F4E79;--ui-rust-dark:#173B5C;--ui-rust-soft:#f8ede9;--ui-danger:#b42318;--ui-success:#1f7a4d;--ui-radius:8px;--ui-focus:0 0 0 3px rgba(168,76,53,.28)}
 

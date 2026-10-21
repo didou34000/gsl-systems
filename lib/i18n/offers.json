@@ -729,15 +729,15 @@
     "चुने प्राप्तकर्ता",
     "已选收件人"
   ],
-  "Unavailable company — remove this selection": [
-    "Empresa no disponible — elimina esta selección",
-    "Empresa indisponível — remova esta seleção",
-    "Unternehmen nicht verfügbar — Auswahl entfernen",
-    "Azienda non disponibile — rimuovi la selezione",
-    "Şirket kullanılamıyor — seçimi kaldırın",
-    "شركة غير متاحة — أزل هذا الاختيار",
-    "कंपनी अनुपलब्ध — यह चयन हटाएँ",
-    "企业不可用 — 请移除此选择"
+  "Unavailable company, remove this selection": [
+    "Empresa no disponible, elimina esta selección",
+    "Empresa indisponível, remova esta seleção",
+    "Unternehmen nicht verfügbar, Auswahl entfernen",
+    "Azienda non disponibile, rimuovi la selezione",
+    "Şirket kullanılamıyor, seçimi kaldırın",
+    "شركة غير متاحة, أزل هذا الاختيار",
+    "कंपनी अनुपलब्ध, यह चयन हटाएँ",
+    "企业不可用, 请移除此选择"
   ],
   "The limit of five recipients has been reached.": [
     "Se ha alcanzado el límite de cinco destinatarios.",

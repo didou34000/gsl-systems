@@ -70,7 +70,7 @@ export function specificationSections(input:SpecificationInput){
   {label:t('Reference','Référence'),value:reference},
   {label:t('Date','Date'),value:new Intl.DateTimeFormat(lang,{dateStyle:'long'}).format(input.date)},
   {label:t('Version','Version'),value:input.revision?String(input.revision):t('Draft','Brouillon')},
-  {label:t('Status','Statut'),value:input.status==='submitted'?t('Sent to GSL','Transmis à GSL'):input.status==='saved'?t('Private draft saved','Brouillon privé enregistré'):t('Private draft — not sent to suppliers.','Brouillon privé — aucun envoi à un fournisseur.')},
+  {label:t('Status','Statut'),value:input.status==='submitted'?t('Sent to GSL','Transmis à GSL'):input.status==='saved'?t('Private draft saved','Brouillon privé enregistré'):t('Private draft, not sent to suppliers.','Brouillon privé, aucun envoi à un fournisseur.')},
  ]);
  const buyer=rows([
   {label:t('Company','Entreprise'),value:input.company?.name.trim()||''},{label:t('Company country','Pays de l’entreprise'),value:region(input.company?.country||'')},
@@ -86,7 +86,7 @@ export function buildSpecificationPdf(JsPDFClass:typeof JsPDF,input:Specificatio
  const doc=new JsPDFClass({unit:'mm',format:'a4',compress:true});
  doc.addFileToVFS('Inter-Regular.ttf',assets.regular);doc.addFont('Inter-Regular.ttf','Inter','normal');
  doc.addFileToVFS('Inter-SemiBold.ttf',assets.semibold);doc.addFont('Inter-SemiBold.ttf','Inter','bold');
- doc.setProperties({title:`${t('Technical specification','Cahier des charges')} — ${s.title}`,subject:s.reference,author:input.company?.name||'GSL systems',creator:'GSL systems',keywords:s.reference});
+ doc.setProperties({title:`${t('Technical specification','Cahier des charges')}, ${s.title}`,subject:s.reference,author:input.company?.name||'GSL systems',creator:'GSL systems',keywords:s.reference});
  try{doc.setLanguage(s.lang as Parameters<JsPDF['setLanguage']>[0])}catch{}
  const W=210,H=297,M=18,CW=W-2*M,top=26,bottom=H-20;let y=M;
  const font=(weight:'normal'|'bold',size:number,color=ink)=>{doc.setFont('Inter',weight);doc.setFontSize(size);doc.setTextColor(...color)};

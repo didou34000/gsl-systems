@@ -39,12 +39,12 @@ export function translate(language:Language,english:string,french:string=english
  const photo=english.match(/^(Company photo|Remove photo) (\d+)$/);
  if(photo){const template=translations[photo[1]+' {number}']?.[index];if(template)return template.replace('{number}',photo[2]);}
  // Validation messages are composed from fixed schema labels and a row number.
- const issue=english.match(/^(?:(Product|Site|Certificate)( \d+)? — )?(.+): check the format or length\.$/);
+ const issue=english.match(/^(?:(Product|Site|Certificate)( \d+)?, )?(.+): check the format or length\.$/);
  if(issue){
   const suffix=translations['check the format or length.']?.[index];
   const label=translations[issue[3]]?.[index];
   const section=issue[1]?translations[issue[1]]?.[index]:'';
-  if(suffix&&label&&(!issue[1]||section))return `${section?section+(issue[2]||'')+' — ':''}${label}: ${suffix}`;
+  if(suffix&&label&&(!issue[1]||section))return `${section?section+(issue[2]||'')+', ':''}${label}: ${suffix}`;
  }
  return english;
 }

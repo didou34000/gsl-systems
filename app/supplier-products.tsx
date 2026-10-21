@@ -91,7 +91,7 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
   const issuesOf = (p: Product) => productPublicationIssues({...profile, attestation: true, products: [{...p, listingStatus: 'publish'}]}).filter(i => i.path.startsWith('products.'));
   const familyLabel = (p: Product) => {const f = productFamily(p.family); if (!f) return l('To choose', 'À choisir'); const k = f.fields.find(x => x.key === KIND_KEY)?.options?.find(o => o.value === p.specs?.[KIND_KEY]); return k ? l(k.en, k.fr) : l(f.en, f.fr);};
   const unitLabel = (unit: string) => quantityUnitLabels[unit] ? l(quantityUnitLabels[unit].en, quantityUnitLabels[unit].fr) : unit;
-  const date = (value?: string) => value ? new Date(value).toLocaleDateString(language, {day: 'numeric', month: 'short', year: 'numeric'}) : '—';
+  const date = (value?: string) => value ? new Date(value).toLocaleDateString(language, {day: 'numeric', month: 'short', year: 'numeric'}) : l('Not specified','Non renseigné');
   function patch(id: string, values: Partial<Product>) {
     onChange(products.map(p => p.id === id ? {...p, ...values, updatedAt: new Date().toISOString()} : p));
   }
@@ -165,7 +165,7 @@ export default function SupplierProducts({profile, files, live, catalogue, compa
           {(orphans.length > 0 || products.some(p => p.listingStatus === 'draft' && states.get(p.id)?.live)) && <li>{l('Products removed from the list or set back to draft are withdrawn.', 'Les produits retirés de la liste ou repassés en brouillon sont retirés du site.')}</li>}
           <li>{l('An administrator checks the product and photos before approving publication.','Un administrateur examine le produit et ses photos avant d’autoriser la publication.')}</li>
         </ul>
-        {blocking.length > 0 && <div className="sw-alert" role="alert"><strong>{l('Complete these products first, or keep them as private drafts:', 'Complétez d’abord ces produits, ou gardez-les en brouillon privé :')}</strong><ul>{blocking.map(p => <li key={p.id}><button type="button" onClick={() => {setPublishing(false);setEditing(p.id);setShowErrors(true);}}>{p.name || l('Untitled product', 'Produit sans titre')} — {l(issuesOf(p)[0].en, issuesOf(p)[0].fr)}</button></li>)}</ul></div>}
+        {blocking.length > 0 && <div className="sw-alert" role="alert"><strong>{l('Complete these products first, or keep them as private drafts:', 'Complétez d’abord ces produits, ou gardez-les en brouillon privé :')}</strong><ul>{blocking.map(p => <li key={p.id}><button type="button" onClick={() => {setPublishing(false);setEditing(p.id);setShowErrors(true);}}>{p.name || l('Untitled product', 'Produit sans titre')}, {l(issuesOf(p)[0].en, issuesOf(p)[0].fr)}</button></li>)}</ul></div>}
         <label className="sw-checkbox"><input type="checkbox" checked={attested} onChange={e => setAttested(e.target.checked)}/><span>{l('I am authorised to publish these products and confirm that the information is accurate to my knowledge.', 'Je suis habilité à publier ces produits et confirme l’exactitude des informations à ma connaissance.')}</span></label>
         <div className="sw-dialog-actions">
           <button type="button" className="sw-secondary" onClick={() => setPublishing(false)}>{l('Cancel', 'Annuler')}</button>
@@ -280,7 +280,7 @@ function ProductEditor({product: p, files, issues, showErrors, state, stateLabel
         <h3>{l('Product visibility', 'Visibilité du produit')}</h3>
         <div className="sp-visibility">
           <label className="sw-checkbox"><input type="radio" name={'visibility-' + p.id} checked={p.listingStatus !== 'draft'} onChange={() => onPatch({listingStatus: 'publish'})}/><span>{l('Include in the approval request', 'Inclure dans la demande de validation')}</span></label>
-          <label className="sw-checkbox"><input type="radio" name={'visibility-' + p.id} checked={p.listingStatus === 'draft'} onChange={() => onPatch({listingStatus: 'draft'})}/><span>{l('Private draft — complete later', 'Brouillon privé — à compléter plus tard')}</span></label>
+          <label className="sw-checkbox"><input type="radio" name={'visibility-' + p.id} checked={p.listingStatus === 'draft'} onChange={() => onPatch({listingStatus: 'draft'})}/><span>{l('Private draft, complete later', 'Brouillon privé, à compléter plus tard')}</span></label>
         </div>
       </div>
     </fieldset>
