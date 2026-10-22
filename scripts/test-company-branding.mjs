@@ -18,7 +18,7 @@ export async function testCompanyBranding(db){
  await assert.rejects(publish(a.revision,{...p,branding:{logoId:covers[0].id,coverIds:[]}}),/IMAGE_NOT_READY/);
  await as(other);await publish(0,{...p,branding:{logoId:'',coverIds:[]}});await assert.rejects(publish(1,p),/IMAGE_NOT_READY/);
  await as(owner);p.contact.publish=true;p.branding={logoId:'',coverIds:[covers[4].id]};a=await publish(a.revision);
- await as(null,'anon');await assert.rejects(image('read',{id:logo.id}),/NOT_FOUND/);pub=(await db.query('select public_details from public.published_supplier_profiles where organization_id=$1',[org])).rows[0].public_details;assert.equal(pub.referenceContact.email,p.contact.email);assert.equal(pub.branding.coverIds[0],covers[4].id);
+ await as(null,'anon');await assert.rejects(image('read',{id:logo.id}),/NOT_FOUND/);pub=(await db.query('select public_details from public.published_supplier_profiles where organization_id=$1',[org])).rows[0].public_details;assert.ok(!pub.referenceContact,'legacy contact opt-in no longer exposes contact details');assert.equal(pub.branding.coverIds[0],covers[4].id);
  await as(owner);p.contact.publish=false;a=await publish(a.revision);assert.ok(!(await db.query('select public_details from public.published_supplier_profiles where organization_id=$1',[org])).rows[0].public_details.referenceContact);await assert.rejects(db.query('select private.publish_supplier_basics_core($1,$2)',[JSON.stringify(p),a.revision]),/permission denied/);
- await db.exec('reset role');console.log('Company branding: private staged images, owner isolation, public selected logo + five photos, limit/type enforcement, replacement, cover order, contact opt-in and revocation passed.');
+ await db.exec('reset role');console.log('Company branding: private staged images, owner isolation, public selected logo + five photos, limit/type enforcement, replacement, cover order, contact privacy even for legacy opt-ins passed.');
 }

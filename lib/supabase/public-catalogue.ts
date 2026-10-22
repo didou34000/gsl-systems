@@ -1,3 +1,4 @@
+import {publicCatalogueValue} from '@/lib/public-contact';
 import {z} from 'zod';
 import {createClient,type SupabaseClient} from '@supabase/supabase-js';
 import {runtimeConfig} from '@/lib/runtime-config';
@@ -12,7 +13,7 @@ const supplierColumns='organization_id,display_name,country_code,city,descriptio
 /** The component_* views are absent until their migrations are applied: PostgREST reports PGRST205, Postgres 42P01. */
 export const missingRelation=(error:DbError)=>!!error&&(error.code==='PGRST205'||error.code==='42P01');
 const unavailable=()=>Error('CATALOGUE_UNAVAILABLE');
-const tag=<T extends object>(row:T,status:CatalogueStatus)=>({...row,catalogue_status:status});
+const tag=<T extends object>(row:T,status:CatalogueStatus)=>publicCatalogueValue({...row,catalogue_status:status});
 
 // Direct pages only. The catalogue listing (search_components_catalogue) is not affected: admission stays an admin decision.
 export async function supplierProfile(id:string,db:Db=publicCatalogue()){

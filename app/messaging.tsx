@@ -1,4 +1,5 @@
 'use client';
+import {findReferencedProduct,referencedMakerId} from '@/lib/referenced-makers';
 import {useEffect,useRef,useState} from 'react';
 import {useSearchParams} from 'next/navigation';
 import {MessageSquare,Send,ArrowUpRight,RefreshCw,ArrowLeft,Check} from 'lucide-react';
@@ -9,12 +10,14 @@ type Conversation={id:string;buyer_organization_id:string;supplier_organization_
 type Message={id:string;body:string;sender_organization_id:string;created_at:string};
 type Organization={id:string;legal_name:string;can_buy:boolean;can_sell:boolean;managed_by_gsl:boolean};
 type Inbox={existingConversation?:string|null;product?:{product_id:string;name:string;supplier_name:string;organization_id:string;supplier_managed_by_gsl:boolean};supplier?:{organization_id:string;display_name:string;supplier_managed_by_gsl:boolean};organizations:Organization[];organization:string|null;filterOrganization:string|null;replyOrganizations:Organization[];mfaRequired:boolean;conversations:Conversation[];moreConversations:boolean;selected:Conversation|null;messages:Message[];moreMessages:boolean};
-export default function Messaging(){const query=useSearchParams();return <MessagingInbox key={[query.get('product'),query.get('supplier'),query.get('organization'),query.get('replyOrganization'),query.get('conversation')].join(':')}/>}
+export default function Messaging(){const query=useSearchParams();return <MessagingInbox key={[query.get('product'),query.get('supplier'),query.get('reference'),query.get('organization'),query.get('replyOrganization'),query.get('conversation')].join(':')}/>}
 function MessagingInbox(){
  const {l,language}=useLanguage(),query=useSearchParams(),product=query.get('product'),supplier=query.get('supplier');
+ const reference=findReferencedProduct(query.get('reference')||'');
+ const referenceText=reference&&referencedMakerId(reference)===supplier?reference.company+' · '+reference.reference+'\n\n':'';
  const [scope,setScope]=useState(query.get('organization')||''),[company,setCompany]=useState(query.get('replyOrganization')||''),[conversation,setConversation]=useState(query.get('conversation')||''),[page,setPage]=useState(0),[cursor,setCursor]=useState<{date:string;id:string}|null>(null),[tick,setTick]=useState(0),[data,setData]=useState<Inbox|null>(null),[loading,setLoading]=useState(true),[error,setError]=useState(''),[sendError,setSendError]=useState(''),[busy,setBusy]=useState(false),[drafts,setDrafts]=useState<Record<string,string>>({}),[companyName,setCompanyName]=useState(''),[country,setCountry]=useState(''),[sent,setSent]=useState(false),[showList,setShowList]=useState(false);
  const retry=useRef<{signature:string;command:string}|null>(null),companyCommand=useRef<{signature:string;command:string}|null>(null),inFlight=useRef(false),bottom=useRef<HTMLDivElement>(null),readIds=useRef(new Set<string>());
- const activeCompany=company||data?.organization||'',draftKey=(activeCompany||'guest')+':'+(conversation||product||supplier||''),body=drafts[draftKey]||'';
+ const activeCompany=company||data?.organization||'',draftKey=(activeCompany||'guest')+':'+(conversation||product||supplier||''),body=drafts[draftKey]??(!conversation?referenceText:'');
  useEffect(()=>{
   const controller=new AbortController();let running=false;
   async function load(){if(running)return;running=true;try{
@@ -46,14 +49,14 @@ function MessagingInbox(){
     const r=await fetch('/api/platform',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({action:'buyer_company',args,command:companyCommand.current.command})}),d=await r.json() as {error?:string;result:{organizationId:string}};if(!r.ok)throw Error(d.error||'UNAVAILABLE');
     sendingCompany=d.result.organizationId;setDrafts(ds=>({...ds,[sendingCompany+':'+(conversation||product||supplier||'')]:body}));setCompany(sendingCompany);setLoading(true);
    }
-   const snapshot={organization:sendingCompany,product:selected?null:product,supplier:selected?null:supplier,conversation:selected?.id||null,body:body.trim()},signature=JSON.stringify(snapshot);
+   const snapshot={organization:sendingCompany,product:selected?null:product,supplier:selected?null:data?.supplier?.organization_id||supplier,conversation:selected?.id||null,body:body.trim()},signature=JSON.stringify(snapshot);
    if(retry.current?.signature!==signature)retry.current={signature,command:crypto.randomUUID()};
    const r=await fetch('/api/messaging',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({...snapshot,command:retry.current.command})}),d=await r.json() as {error?:string;conversation:string};if(!r.ok)throw Error(d.error||'UNAVAILABLE');
    retry.current=null;setDrafts(ds=>({...ds,[draftKey]:'',[sendingCompany+':'+(conversation||product||supplier||'')]:''}));setCompany(sendingCompany);setConversation(d.conversation);setCursor(null);setTick(n=>n+1);setLoading(true);setSent(true);window.dispatchEvent(new Event('gsl-messages-changed'));
   }catch(e){setSendError(e instanceof Error?e.message:'UNAVAILABLE')}finally{setBusy(false);inFlight.current=false}
  }
  const feedback=(code:string)=>code==='MFA_REQUIRED'?l('Verify your identity to open conversations managed by GSL.','Vérifiez votre identité pour ouvrir les conversations gérées par GSL.'):code==='RATE_LIMITED'?l('Please wait a minute before sending again.','Patientez une minute avant de réessayer.'):code==='NOT_PUBLISHED'?l('This listing is no longer published. Your existing conversations remain in the inbox.','Cette fiche n’est plus publiée. Vos conversations existantes restent dans la messagerie.'):code==='FORBIDDEN'?l('You no longer have access to this conversation.','Vous n’avez pas accès à cette conversation.'):code==='OWN_PRODUCT'?l('This is your own company. Buyers can contact you from this page.','Il s’agit de votre entreprise. Les acheteurs peuvent vous contacter depuis cette fiche.'):code==='LOGIN_REQUIRED'?l('Sign in to continue.','Connectez-vous pour continuer.'):code==='COMPANY_ALREADY_PRESENT'?l('Your company already exists. Refresh the inbox to use it.','Votre entreprise existe déjà. Actualisez la messagerie pour la retrouver.'):l('Could not connect. Your message has not been cleared; please try again.','Connexion impossible. Votre texte est conservé : vous pouvez réessayer.');
- const returnQuery=new URLSearchParams();if(product)returnQuery.set('product',product);if(supplier)returnQuery.set('supplier',supplier);if(scope)returnQuery.set('organization',scope);if(company)returnQuery.set('replyOrganization',company);if(conversation)returnQuery.set('conversation',conversation);returnQuery.set('lang',language);const returnTo='/messagerie?'+returnQuery;
+ const returnQuery=new URLSearchParams();if(product)returnQuery.set('product',product);if(supplier)returnQuery.set('supplier',supplier);if(referenceText)returnQuery.set('reference',reference!.id);if(scope)returnQuery.set('organization',scope);if(company)returnQuery.set('replyOrganization',company);if(conversation)returnQuery.set('conversation',conversation);returnQuery.set('lang',language);const returnTo='/messagerie?'+returnQuery;
  const ownedSides=(c:Conversation)=>data?.organizations.filter(o=>(o.id===c.buyer_organization_id&&o.can_buy)||(o.id===c.supplier_organization_id&&o.can_sell))||[];
  const conversationPeer=(c:Conversation)=>{const sides=ownedSides(c);return sides.length===1?(sides[0].id===c.buyer_organization_id?c.supplier_name:c.buyer_name):c.buyer_name+' ↔ '+c.supplier_name};
  const peer=selected?(activeCompany?(selected.buyer_organization_id===activeCompany?selected.supplier_name:selected.buyer_name):conversationPeer(selected)):targetName,topic=selected?.product_id?selected.product_name:data?.product?.name;

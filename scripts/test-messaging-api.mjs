@@ -6,7 +6,10 @@ import {transpileModule,ModuleKind,ScriptTarget} from 'typescript';
 // Actual route code; adapters model database filtering and capture query scope.
 // Row-security authorization is covered separately by the PostgreSQL fixture.
 const compile=source=>transpileModule(source,{compilerOptions:{module:ModuleKind.ESNext,target:ScriptTarget.ES2022}}).outputText;
+const moduleUrl=path=>'data:text/javascript;base64,'+Buffer.from(compile(requireSource(path,'utf8'))).toString('base64');
+const {readFileSync:requireSource}=await import('node:fs');
 const source=(await readFile('app/api/messaging/route.ts','utf8'))
+ .replace("'@/lib/referenced-makers'",JSON.stringify(moduleUrl('lib/referenced-makers.ts')))
  .replace("import {authClient} from '@/lib/supabase/server';",'const authClient=async()=>globalThis.__gslMessagingApi;')
  .replace("import {allowedOrigin} from '@/lib/auth-policy';","const allowedOrigin=request=>request.headers.get('origin')==='https://example.invalid';")
  .replace("from 'zod'",`from '${import.meta.resolve('zod')}'`);
@@ -49,6 +52,7 @@ function fixture({bothSides=false,mfa=false,guest=false}={}){
   from:table=>new Query(table),
   rpc:async(name,args)=>{
    rpcs.push({name,args});
+   if(name==='referenced_messaging_target')return {data:'a5100000-0000-4000-8000-000000000901',error:null};
    if(name==='messaging_access')return {data:{mfaRequired:mfa,managedOrganizationIds:mfa?[]:[a,b]},error:null};
    if(name==='messaging_summary')return {data:args.p_ids.map(id=>({id,unread:1,last_body:'Synthetic excerpt',supplier_managed_by_gsl:true})),error:null};
    if(name==='messaging_unread')return {data:2,error:null};
@@ -83,10 +87,14 @@ const command={organization:b,product:null,supplier:null,conversation:cb,body:'S
 const post=origin=>new Request('https://example.invalid/api/messaging',{method:'POST',headers:{origin,'content-type':'application/json'},body:JSON.stringify(command)});
 assert.equal((await POST(post('https://evil.invalid'))).status,403);assert.equal(rpcs.length,0);
 assert.equal((await POST(post('https://example.invalid'))).status,200);assert.equal(rpcs[0].args.p_company,b);assert.equal(rpcs[0].args.p_conversation,cb);
+fixture({guest:true});response=await GET(request('supplier=repere-wat-motor'));assert.equal(response.status,401);data=await response.json();assert.equal(data.supplier.display_name,'WAT Motor');assert.equal(rpcs.length,0,'Guests never create recipients');
+fixture();response=await GET(request('supplier=repere-wat-motor'));assert.equal(response.status,200);data=await response.json();assert.equal(data.supplier.organization_id,'a5100000-0000-4000-8000-000000000901');assert.equal(data.supplier.supplier_managed_by_gsl,true);assert.equal(rpcs[0].name,'referenced_messaging_target');
+fixture();assert.equal((await GET(request('supplier=repere-unknown'))).status,400);assert.equal(rpcs.length,0);
 delete globalThis.__gslMessagingApi;
 console.log('Messaging API: aggregate default, optional company filter, deep-link sender, explicit two-sided identity, MFA gate, public provenance allowlist, origin validation, unchanged command identity. No hosted services.');
 
 const platformSource=(await readFile('app/api/platform/route.ts','utf8'))
+ .replace("'@/lib/public-contact'",JSON.stringify(moduleUrl('lib/public-contact.ts')))
  .replace("import {authClient} from '@/lib/supabase/server';",'const authClient=async()=>globalThis.__gslMessagingApi;')
  .replace("import {allowedOrigin} from '@/lib/auth-policy';","const allowedOrigin=request=>request.headers.get('origin')==='https://example.invalid';")
  .replace("import {searchSchema} from '@/lib/search-criteria';",'const searchSchema={safeParse:()=>({success:false})};')
