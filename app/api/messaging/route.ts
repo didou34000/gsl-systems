@@ -1,3 +1,4 @@
+import {findReferencedMaker} from '@/lib/referenced-makers';
 import {authClient} from '@/lib/supabase/server';
 import {allowedOrigin} from '@/lib/auth-policy';
 import {z} from 'zod';
@@ -14,6 +15,7 @@ export async function GET(request:Request){
   const url=new URL(request.url),db=await authClient();
   const {data:{user}}=await db.auth.getUser();
   const productId=url.searchParams.get('product'),supplierId=url.searchParams.get('supplier'),conversation=url.searchParams.get('conversation');
+  const referenced=supplierId?findReferencedMaker(supplierId):null;
   const filterOrganization=url.searchParams.get('organization'),requestedReply=url.searchParams.get('replyOrganization');
   for(const id of [conversation,filterOrganization,requestedReply])if(id&&!uuid.safeParse(id).success)return json({error:'INVALID'},400);
   let product=null,supplier=null;
@@ -25,7 +27,17 @@ export async function GET(request:Request){
    if(s.error)throw s.error;if(!s.data)return json({error:'NOT_PUBLISHED'},404);
    product={...found.data,supplier_name:s.data.display_name,supplier_managed_by_gsl:sourced(s.data.public_details)};
   }
-  if(supplierId&&!conversation){
+  if(referenced&&!conversation){
+   if(productId)return json({error:'INVALID'},400);
+   let organization=supplierId!;
+   if(user?.email_confirmed_at){
+    const target=await db.rpc('referenced_messaging_target',{reference:supplierId});
+    if(target.error){if(target.error.message.includes('NOT_PUBLISHED'))return json({error:'NOT_PUBLISHED'},404);throw target.error;}
+    if(!uuid.safeParse(target.data).success)throw Error('INVALID_TARGET');organization=target.data as string;
+   }
+   supplier={organization_id:organization,display_name:referenced[0].company,supplier_managed_by_gsl:true};
+  }
+  if(supplierId&&!referenced&&!conversation){
    if(!uuid.safeParse(supplierId).success)return json({error:'INVALID'},400);
    const found=await db.from('published_supplier_profiles').select('organization_id,display_name,public_details').eq('organization_id',supplierId).is('withdrawn_at',null).maybeSingle();
    if(found.error)throw found.error;if(!found.data)return json({error:'NOT_PUBLISHED'},404);

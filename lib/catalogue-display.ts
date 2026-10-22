@@ -37,5 +37,6 @@ export function publishedPrice(commercial: ProductCommercial, locale = 'fr'): st
 }
 
 export function gslContactHref(supplier: string, product?: string) {
+  if(supplier.startsWith('repere-'))return '/messagerie?supplier='+encodeURIComponent(supplier)+(product?'&reference='+encodeURIComponent(product):'');
   return product ? '/messagerie?product=' + encodeURIComponent(product) : '/messagerie?supplier=' + encodeURIComponent(supplier);
 }
