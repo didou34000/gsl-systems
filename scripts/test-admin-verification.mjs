@@ -21,6 +21,11 @@ export async function testAdminVerification(db){
  await as(ids.admin);await assert.rejects(verify('company.verify',{id:randomUUID()}),/NOT_FOUND/);await assert.rejects(verify('company.delete',{id:org}),/INVALID/);
  await verify('company.verify',{id:org});
  await as(null,'aal1','anon');assert.equal(await companyStatus(org),'verified');
+ // Acceptance puts the company online among manufacturers, even before it has an offer.
+ assert.equal((await db.query('select 1 from public.component_supplier_profiles where organization_id=$1',[org])).rows.length,1);
+ const listed=await scalar('select public.search_components_catalogue($1)',[JSON.stringify({})]);
+ assert.deepEqual(listed.suppliers.find(s=>s.organization_id===org)?.matched_products,[],'verified company listed without offers');
+ assert.equal((await scalar('select public.search_components_catalogue($1)',[JSON.stringify({category:'prehension'})])).suppliers.some(s=>s.organization_id===org),false,'product filters exclude it');
  // A supplier republication keeps the administrator's decision.
  await as(ids.supplier);profile.description='Synthetic company for administrator verification, updated.';application=await scalar('select public.publish_supplier_basics($1,$2)',[JSON.stringify(profile),application.revision]);
  await as(null,'aal1','anon');assert.equal(await companyStatus(org),'verified','republication keeps verification');
@@ -34,6 +39,12 @@ export async function testAdminVerification(db){
  await as(null,'aal1','anon');assert.equal(await productStatus(product),'verified','queue approval verifies the product');assert.ok(await inCatalogue(product));
  await as(ids.admin);await verify('product.unverify',{id:product});
  await as(null,'aal1','anon');assert.equal(await productStatus(product),'unverified');assert.equal(await inCatalogue(product),false);
+ // One-click acceptance puts the product online as published; removing it takes it out again.
+ await as(ids.admin);await verify('product.verify',{id:product});
+ await as(null,'aal1','anon');assert.equal(await productStatus(product),'verified');assert.ok(await inCatalogue(product),'one-click acceptance publishes the product');
+ assert.equal((await db.query('select count(*)::int n from public.component_products where product_id=$1',[product])).rows[0].n,1);
+ await as(ids.admin);await verify('product.unverify',{id:product});
+ await as(null,'aal1','anon');assert.equal(await inCatalogue(product),false);
  // Direct verification from the admin table admits an already published product.
  await as(ids.admin);await assert.rejects(verify('product.verify',{id:product,family:'actionnement-transmission',site:'Sfax plant',roboticsOffer:'too short',sources}),/INVALID/);
  await assert.rejects(verify('product.verify',{id:product,family:'actionnement-transmission',site:'Sfax plant',roboticsOffer:'Servo actuator for robotic joints and arms.',sources:[]}),/INVALID/);
@@ -43,5 +54,5 @@ export async function testAdminVerification(db){
  await as(null,'aal1','anon');assert.equal(await companyStatus(org),'unverified');
  await as(ids.supplier);await assert.rejects(db.query('select * from private.admin_verifications'),/permission denied/);
  await db.exec('reset role');assert.equal(await scalar("select count(*)::int from private.admin_events where resource_id=$1 and action like 'company_%'",[org]),2);
- console.log('Admin verification: owner/admin + AAL2 gate, company verify/unverify kept across republication, queue approval verifies, product unverify removes from catalogue, direct product verification admits to catalogue, audit events passed.');
+ console.log('Admin verification: owner/admin + AAL2 gate, company verify/unverify kept across republication, queue approval verifies, product unverify removes from catalogue, one-click company/product acceptance online, direct product verification admits to catalogue, audit events passed.');
 }

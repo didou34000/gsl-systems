@@ -4,8 +4,9 @@ import {z} from 'zod';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store',Vary:'Cookie'}});
 const id=z.string().uuid();
-const input=z.discriminatedUnion('action',[
- z.object({action:z.enum(['company.verify','company.unverify','product.unverify']),id}).strict(),
+// One-click acceptance sends only the id; the detailed form still admits a product with its robotics review.
+const input=z.union([
+ z.object({action:z.enum(['company.verify','company.unverify','product.verify','product.unverify']),id}).strict(),
  z.object({action:z.literal('product.verify'),id,family:z.string().max(80),site:z.string().trim().min(3).max(500),roboticsOffer:z.string().trim().min(21).max(4000),source:z.string().url().max(2048).regex(/^https?:\/\//i)}).strict(),
 ]);
 const codes=['LOGIN_REQUIRED','ADMIN_REQUIRED','MFA_REQUIRED','PERMISSION_REQUIRED','NOT_FOUND','INVALID','COMPANY_REQUIRED','COUNTRY_OUTSIDE_SCOPE'] as const;
