@@ -145,6 +145,25 @@ try{
  await db.query('delete from private.curated_catalogue_companies where organization_id=$1',[companies[0]]);
  assert.equal(await scalar('select count(*)::int from public.memberships where organization_id=$1 and user_id=any($2::uuid[])',[companies[0],[owner1,owner2]]),0,'Removing catalogue provenance removes derived access');
  assert.equal(await scalar('select count(*)::int from public.memberships where organization_id=$1 and user_id=$2',[companies[0],outsider]),1,'Manual viewer membership remains untouched');
+
+ await as(null,'aal1','anon');await assert.rejects(db.query("select public.referenced_messaging_target('repere-wat-motor')"),/permission denied/);
+ await as(unconfirmed);await assert.rejects(db.query("select public.referenced_messaging_target('repere-wat-motor')"),/LOGIN_REQUIRED/);
+ await as(buyer);await assert.rejects(db.query("select public.referenced_messaging_target('repere-unknown')"),/NOT_PUBLISHED/);
+ const slugs=['repere-wat-motor','repere-opkon','repere-cure-bionics','repere-acrome-robotics','repere-akinrobotics'];
+ for(const slug of slugs){
+  await as(buyer);const target=await scalar('select public.referenced_messaging_target($1)',[slug]);
+  assert.equal(await scalar('select public.referenced_messaging_target($1)',[slug]),target,'Target creation is idempotent');
+  await db.exec('reset role');assert.equal(await scalar("select private.curated_company_research_valid(public_details->'research',(select source_id from private.curated_catalogue_companies where organization_id=$1)) from public.published_supplier_profiles where organization_id=$1",[target]),true,'Messaging recipient stays editable in the admin catalogue');await as(buyer);
+  assert.equal(await scalar('select count(*)::int from public.memberships where organization_id=$1',[target]),0,'Visitor gains no supplier membership');
+  const enquiry=await direct(buyerOrg,target,null,'Internal enquiry for '+slug);
+  await as(owner1);assert.ok((await scalar('select public.messaging_summary($1)',[[enquiry.conversation]]))[0].supplier_managed_by_gsl);
+  await direct(target,null,enquiry.conversation,'GSL reply for '+slug);
+  await as(buyer);assert.equal(await scalar('select count(*)::int from public.product_messages where conversation_id=$1',[enquiry.conversation]),2,'Buyer receives the GSL reply');
+  await as(outsider);assert.equal(await scalar('select count(*)::int from public.product_messages where conversation_id=$1',[enquiry.conversation]),0);
+ }
+ await db.exec('reset role');await db.query("update public.published_supplier_profiles set withdrawn_at=now() where organization_id='a5100000-0000-4000-8000-000000000901'");
+ await as(buyer);await assert.rejects(db.query("select public.referenced_messaging_target('repere-wat-motor')"),/NOT_PUBLISHED/);
+ console.log('Referenced makers: five valid internal recipients, no visitor membership, GSL replies, repeat calls, guest/unconfirmed/outsider isolation and withdrawal checks passed.');
  console.log('Curated messaging: 50 companies × 2 owners; live role/MFA isolation; aggregate visibility; correct reply identity; direct/RFQ/contact deduplication; inactive/revoked recipient exclusion; no historical backfill.');
 }catch(error){console.error(error.message,error.where||'',error.position||'');process.exitCode=1}
 finally{await db.close()}

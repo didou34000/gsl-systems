@@ -71,7 +71,7 @@
 .ind-datasheet dd.is-missing,.is-missing{color:#8A949E;font-weight:400}
 .ind-footnote{margin:12px 0 0;font-size:13px;line-height:1.55;color:var(--ind-muted)}
 .ind-sources{margin:16px 0 0;padding:0;list-style:none;border-top:1px solid var(--ind-line)}
-.ind-sources a{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid var(--ind-line);font-size:14px;font-weight:500;color:var(--ind-accent)}
+.ind-sources a,.ind-sources li>span{display:flex;align-items:center;gap:9px;padding:10px 0;border-bottom:1px solid var(--ind-line);font-size:14px;font-weight:500;color:var(--ind-accent)}
 .ind-sources a svg:last-child{margin-left:auto}
 .ind-evidence{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin:20px 0 0}
 .ind-evidence dt{font-size:14px;font-weight:600}

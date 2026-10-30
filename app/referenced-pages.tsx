@@ -1,7 +1,8 @@
 'use client';
 
+import {gslContactHref} from '@/lib/catalogue-display';
 import {ProductSheet} from './product-sheet';
-import {ArrowLeft,ArrowRight,ExternalLink,MessageSquare} from 'lucide-react';
+import {ArrowLeft,ArrowRight,MessageSquare} from 'lucide-react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import FactoryMark,{factoryCountries} from '@/components/factory-mark';
@@ -40,8 +41,8 @@ export function ReferencedMakerPage({id}:{id:string}){
    <p><span className="catalogue-status">{l('Not registered, unverified','Non inscrit, non vérifié')}</span></p>
    <p className="robotics-scope" role="note">{l('This manufacturer was identified by GSL from its published documents. It has no account on GSL, has not been contacted and has not been verified. Enquiries go through GSL.','Ce fabricant a été repéré par GSL dans ses documents publiés. Il n’a pas de compte sur GSL, n’a pas été contacté et n’a pas été vérifié. Les demandes passent par GSL.')}</p>
    <section className="ind-section"><h2>{l('Identified offers','Offres repérées')}</h2><dl className="ind-datasheet">{products.map(p=><div key={p.id}><dt><Link href={'/produits/'+p.id}>{fr?p.productFr:p.productEn}</Link></dt><dd dir="auto">{p.reference}</dd></div>)}</dl></section>
-   <section className="ind-section"><h2>{l('Sources','Sources')}</h2><ul className="ind-sources">{sources.map(x=><li key={x.url}><a href={x.url} target="_blank" rel="noopener noreferrer">{x.title}<ExternalLink size={14} aria-hidden/></a></li>)}{/^https?:\/\//.test(m.website)&&<li><a href={m.website} target="_blank" rel="noopener noreferrer">{l('Company website','Site de l’entreprise')}<ExternalLink size={14} aria-hidden/></a></li>}</ul><p className="ind-footnote">{l('Checked on','Consulté le')} {checked}.</p></section>
+   <section className="ind-section"><h2>{l('Sources','Sources')}</h2><ul className="ind-sources">{sources.map(x=><li key={x.url}><span>{x.title}</span></li>)}</ul><p className="ind-footnote">{l('Checked on','Consulté le')} {checked}.</p></section>
   </div>
-  <aside className="ind-sheet-aside"><section className="ind-panel ps-contact"><h2>{l('Contact GSL','Contacter GSL')}</h2><p>{l('GSL handles your enquiry with this manufacturer and the quote including delivery.','GSL traite votre demande auprès de ce fabricant et le devis avec livraison.')}</p><Link className="ind-button" href="/decrire-mon-besoin"><MessageSquare size={17} aria-hidden/>{l('Describe my need','Décrire mon besoin')}<ArrowRight size={16} aria-hidden/></Link></section></aside></div>
+  <aside className="ind-sheet-aside"><section className="ind-panel ps-contact"><h2>{l('Contact GSL','Contacter GSL')}</h2><p>{l('GSL handles your enquiry with this manufacturer and the quote including delivery.','GSL traite votre demande auprès de ce fabricant et le devis avec livraison.')}</p><Link className="ind-button" href={gslContactHref(id)}><MessageSquare size={17} aria-hidden/>{l('Contact via GSL','Contacter via GSL')}<ArrowRight size={16} aria-hidden/></Link></section></aside></div>
  </main>;
 }

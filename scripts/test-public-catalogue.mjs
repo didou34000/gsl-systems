@@ -7,6 +7,7 @@ import ts from 'typescript';
 const dataUrl=source=>'data:text/javascript;base64,'+Buffer.from(source).toString('base64');
 const compile=path=>ts.transpileModule(fs.readFileSync(path,'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022}}).outputText;
 const source=compile('lib/supabase/public-catalogue.ts')
+ .replace("'@/lib/public-contact'",JSON.stringify(dataUrl(compile('lib/public-contact.ts'))))
  .replace("'zod'",JSON.stringify(import.meta.resolve('zod')))
  .replace("'@supabase/supabase-js'",JSON.stringify(dataUrl('export function createClient(){throw Error("no network in tests")}')))
  .replace("'@/lib/runtime-config'",JSON.stringify(dataUrl('export function runtimeConfig(){throw Error("no configuration in tests")}')));
@@ -76,3 +77,13 @@ assert.equal(makerPoint('TR','Kapaklı (Tekirdağ)').precision,'city');
 assert.deepEqual(makerPoint('MK','Unknown village'),{x:centre('MK')[0],y:centre('MK')[1],precision:'country'});
 assert.equal(makerPoint('ZZ','Paris'),null);
 console.log('public catalogue fallback and map placement: ok');
+
+// Public payloads redact structured contacts, outbound sources and inline contact text
+// while preserving technical numbers and the original private/editorial object.
+const {publicCatalogueValue}=await import(dataUrl(compile('lib/public-contact.ts')));
+const original={description:'CNC parts. sales@example.invalid https://maker.example/contact Phone: +90 212 555 0100',public_details:{website:'https://maker.example',referenceContact:{email:'sales@example.invalid',phone:'+902125550100'},research:{sources:[{url:'https://maker.example/specs',title:'Technical catalogue'}]}},specifications:{power:'400 W',dimensions:'100 x 200 x 300 mm',voltage:'8–24 VDC',tolerance:'+0.001 mm',research_data:JSON.stringify({sources:[{url:'https://maker.example/specs',title:'Technical catalogue'}]}),robotics_sources:JSON.stringify([{url:'https://maker.example',title:'Company catalogue'}])}};
+const clean=publicCatalogueValue(original);
+assert.ok(!JSON.stringify(clean).includes('maker.example'));assert.ok(!JSON.stringify(clean).includes('sales@example.invalid'));assert.ok(!JSON.stringify(clean).includes('555'));
+assert.equal(clean.specifications.power,'400 W');assert.equal(clean.specifications.dimensions,'100 x 200 x 300 mm');assert.equal(clean.specifications.tolerance,'+0.001 mm');assert.equal(clean.public_details.research.sources[0].title,'Technical catalogue');
+assert.equal(original.public_details.referenceContact.email,'sales@example.invalid');
+console.log('Public catalogue: contact redaction, nested/stringified sources, technical numbers and private originals preserved.');

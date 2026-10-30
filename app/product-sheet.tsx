@@ -3,10 +3,11 @@ import {useState} from 'react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import {countryName} from '@/lib/country-names';
+import {gslContactHref} from '@/lib/catalogue-display';
 import {technicalRows} from '@/lib/robotics';
 import type {ProductImage} from '@/lib/referenced-makers';
 import {formatSpecRow,publishedSpecificationRows,quantityUnitLabels,type PublishedRows} from '@/lib/products/spec-fields';
-import {ArrowLeft,ArrowRight,ArrowUpRight,Factory,FileText,MapPin,MessageSquare} from 'lucide-react';
+import {ArrowLeft,ArrowRight,Factory,FileText,MapPin,MessageSquare} from 'lucide-react';
 import {useLanguage} from './language';
 import {SaveProduct} from './saved-selection';
 import {CompareProduct} from './compare-product';
@@ -40,7 +41,7 @@ function specificationRows(sheet:PublishedRows,p:PublicProduct,l:L,language:stri
  return [...rows,...fallbackSpecRows(p,l).filter(r=>!seen.has(r.key))];
 }
 
-function sourcesOf(raw?:string):Source[]{if(!raw)return [];try{const list=JSON.parse(raw);return Array.isArray(list)?list.filter((x):x is Source=>!!x&&typeof x.url==='string'&&/^https?:\/\//.test(x.url)).map(x=>({url:x.url,title:typeof x.title==='string'&&x.title?x.title:x.url})):[]}catch{return []}}
+function sourcesOf(raw?:string):Source[]{if(!raw)return [];try{const list=JSON.parse(raw);return Array.isArray(list)?list.filter((x):x is Source=>!!x&&typeof x.title==='string'&&!!x.title).map(x=>({url:x.url,title:typeof x.title==='string'&&x.title?x.title:x.url})):[]}catch{return []}}
 
 function Gallery({images,name,category}:{images:ProductImage[];name:string;category:string}){
  const {l}=useLanguage();const [active,setActive]=useState(0);
@@ -54,9 +55,9 @@ export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],im
  const supplierPhotos=productPhotoIds(spec.photo_ids).map(id=>({src:'/api/product-images?id='+id,kind:'manufacturer' as const,credit:manufacturer?.display_name||l('Manufacturer','Fabricant'),license:l('Publication authorised by the supplier','Publication autorisée par le fournisseur'),sourceUrl:'/produits/'+p.product_id}));
  const robotics=!!spec.robotics_family;const candidate=!!spec.candidate_id;const admitted=p.catalogue_status!=='not_admitted';
  const sheet=publishedSpecificationRows(p);const description=sheet.description.trim();const sources=sourcesOf(spec.robotics_sources);const rows=specificationRows(sheet,p,l,language);
- const quote='/decrire-mon-besoin?selection='+p.product_id+'&supplier='+p.organization_id;
- // Candidate offers come from public sources: there is no company account to message, GSL handles the enquiry.
- const message=candidate?quote:'/messagerie?product='+p.product_id;
+ const quote=gslContactHref(p.organization_id,p.product_id);
+ // All contact stays in GSL messaging; the team handles unregistered manufacturers.
+ const message=gslContactHref(p.organization_id,p.product_id);
  const details=manufacturer?.public_details||{};
  const makerName=manufacturer?.display_name||l('Company profile','Fiche entreprise');
  const makerLocation=manufacturer?[manufacturer.city,countryName(manufacturer.country_code,language)].filter(Boolean).join(', '):'';
@@ -67,7 +68,7 @@ export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],im
  const commercial:[string,string][]=[[l('Minimum order','Quantité minimale'),minimum],[l('Sales unit','Unité de vente'),quantityUnitLabels[spec.unit||'']?l(quantityUnitLabels[spec.unit].en,quantityUnitLabels[spec.unit].fr):spec.unit||''],[l('Lead time','Délai'),spec.lead_time||''],[l('Manufacturing country','Pays de fabrication'),made],[l('Production site','Site de production'),spec.robotics_site||'']];
  const certified=spec.certification_documented==='true'&&!!spec.certifications;
  const missing=(value:string,text=l('To confirm','À confirmer'))=>value||<span className="is-missing">{text}</span>;
- const actions=<><Link className="ind-button" href={message}><MessageSquare size={17} aria-hidden/>{candidate?l('Contact GSL','Contacter GSL'):l('Contact the manufacturer','Contacter le fabricant')}</Link><Link className="ind-button-secondary" href={quote}><FileText size={17} aria-hidden/>{l('Request a quote','Demander un devis')}</Link></>;
+ const actions=<><Link className="ind-button" href={message}><MessageSquare size={17} aria-hidden/>{l('Contact via GSL','Contacter via GSL')}</Link><Link className="ind-button-secondary" href={quote}><FileText size={17} aria-hidden/>{l('Request a quote','Demander un devis')}</Link></>;
  return <main className="container ind-sheet ind-product-sheet ps">
   <nav className="catalogue-breadcrumb"><Link href="/catalogue"><ArrowLeft size={16}/>{l('Catalogue','Catalogue')}</Link><span aria-hidden>/</span><Link href={'/catalogue?category='+encodeURIComponent(p.category)}>{categoryLabel(p.category)}</Link></nav>
   <div className="ind-sheet-layout ps-layout"><div className="ind-sheet-main">
@@ -103,7 +104,7 @@ export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],im
      <div><dt>{l('Published documents','Documents publiés')}</dt><dd>{sources.length?sources.length+' '+(sources.length>1?l('public sources','sources publiques'):l('public source','source publique')):<span className="is-missing">{l('No document published with this listing','Aucun document publié avec cette fiche')}</span>}</dd></div>
      {spec.points_to_confirm&&<div><dt>{l('Points to confirm','Points à confirmer')}</dt><dd dir="auto">{spec.points_to_confirm}</dd></div>}
     </dl>
-    {sources.length>0&&<ul className="ind-sources">{sources.map(x=><li key={x.url}><a href={x.url} target="_blank" rel="noopener noreferrer"><FileText size={15} aria-hidden/>{x.title}<ArrowUpRight size={14} aria-hidden/></a></li>)}</ul>}
+    {sources.length>0&&<ul className="ind-sources">{sources.map((x,i)=><li key={x.title+i}><span><FileText size={15} aria-hidden/>{x.title}</span></li>)}</ul>}
     {robotics&&<dl className="ind-evidence"><div><dt>{l('Documented by GSL','Documenté par GSL')}</dt><dd>{l('Published sources establish the offer and production location. No factory inspection is implied.','Les sources publiées étayent l’offre et le lieu de production. Aucune inspection d’usine n’est présumée.')}</dd></div><div><dt>{l('Manufacturer declarations','Déclarations du fabricant')}</dt><dd>{l('Specifications and performance remain attributed to their sources. Confirm the exact configuration.','Les caractéristiques et performances restent attribuées à leurs sources. Confirmez la configuration exacte.')}</dd></div><div><dt>{l('Supporting documents: review to confirm','Justificatifs : revue à confirmer')}</dt><dd>{l('A document review must identify the reference, issuer, validity and scope. No product compliance is asserted by admission.','Une revue de justificatif doit préciser la référence, l’émetteur, la validité et le périmètre. L’admission n’atteste pas la conformité produit.')}</dd></div></dl>}
     <p className="ind-footnote">{l('Confirm quantity, tolerances, finish, delivery terms and technical evidence with the supplier. Publication does not establish regulatory conformity.','Confirmez les quantités, tolérances, finitions, conditions de livraison et justificatifs techniques avec le fournisseur. La publication ne prouve pas la conformité réglementaire.')} <Link href={quote}>{l('Ask for supporting documents','Demander les justificatifs')}</Link></p>
    </section>
