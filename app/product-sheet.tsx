@@ -7,7 +7,7 @@ import {gslContactHref} from '@/lib/catalogue-display';
 import {technicalRows} from '@/lib/robotics';
 import type {ProductImage} from '@/lib/referenced-makers';
 import {formatSpecRow,publishedSpecificationRows,quantityUnitLabels,type PublishedRows} from '@/lib/products/spec-fields';
-import {ArrowLeft,ArrowRight,Factory,FileText,MapPin,MessageSquare} from 'lucide-react';
+import {ArrowLeft,ArrowRight,BadgeCheck,Factory,FileText,MapPin,MessageSquare} from 'lucide-react';
 import {useLanguage} from './language';
 import {SaveProduct} from './saved-selection';
 import {CompareProduct} from './compare-product';
@@ -61,7 +61,7 @@ export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],im
  const details=manufacturer?.public_details||{};
  const makerName=manufacturer?.display_name||l('Company profile','Fiche entreprise');
  const makerLocation=manufacturer?[manufacturer.city,countryName(manufacturer.country_code,language)].filter(Boolean).join(', '):'';
- const makerStatus=details.candidate?l('Documented by GSL from public sources','Documenté par GSL à partir de sources publiques'):details.verification==='unverified'?l('Unverified company','Entreprise non vérifiée'):manufacturer?.catalogue_status==='not_admitted'?l('Not admitted to the GSL catalogue','Non admis au catalogue GSL'):l('Profile reviewed by GSL','Dossier examiné par GSL');
+ const makerStatus=details.candidate?l('Documented by GSL from public sources','Documenté par GSL à partir de sources publiques'):details.verification==='unverified'?l('Unverified company','Entreprise non vérifiée'):details.verification==='verified'?l('Company verified by GSL','Entreprise vérifiée par GSL'):manufacturer?.catalogue_status==='not_admitted'?l('Not admitted to the GSL catalogue','Non admis au catalogue GSL'):l('Profile reviewed by GSL','Dossier examiné par GSL');
  const moq=sheet.commercial.find(r=>r.key==='minimum_quantity');const minimum=moq?formatSpecRow(moq,language):spec.minimum_quantity?spec.minimum_quantity+(spec.unit?' '+spec.unit:''):'';const familyLabel=sheet.family?l(sheet.family.en,sheet.family.fr):categoryLabel(p.category);
  const made=spec.manufacturing_country?countryName(spec.manufacturing_country,language):'';
  const others=makerProducts.filter(x=>x.product_id!==p.product_id).slice(0,4);
@@ -82,6 +82,7 @@ export function ProductSheet({product:p,similar,manufacturer,makerProducts=[],im
      <div className="ps-badges">
       {!admitted&&<span className="catalogue-status">{l('Not admitted to the GSL catalogue','Non admis au catalogue GSL')}</span>}
       {spec.verification==='unverified'&&<span className="catalogue-status">{l('Unverified product','Produit non vérifié')}</span>}
+      {spec.verification==='verified'&&<span className="catalogue-status catalogue-status-verified"><BadgeCheck size={13} aria-hidden/>{l('Verified product','Produit vérifié')}</span>}
       {spec.qualification&&<span className={'source-badge'+(spec.qualification==='potential'?' source-badge-potential':'')}>{spec.qualification==='explicit'?l('Explicit robotics offer','Offre robotique explicite'):l('Component to qualify','Composant à qualifier')}</span>}
      </div>
      {!admitted?<p className="robotics-scope" role="note">{l('Published by its manufacturer and reachable by direct link. GSL has not reviewed this product and it does not appear in the catalogue.','Publié par son fabricant et accessible par lien direct. GSL n’a pas examiné ce produit et il n’apparaît pas dans le catalogue.')}</p>:!robotics&&<p className="robotics-scope" role="note">{l('This historical industrial profile has not been admitted to the robotics shortlist. Its suitability for robotics needs evidence.','Cette fiche industrielle historique n’est pas admise à la présélection robotique. Son adéquation à la robotique doit être étayée.')}</p>}

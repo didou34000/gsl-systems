@@ -157,6 +157,7 @@
 .referenced-makers>p{max-width:720px;margin:0 0 18px;font-size:14px;line-height:1.55;color:var(--ind-muted)}
 .referenced-makers .ind-card h3{margin:0;font-size:17px}
 .referenced-makers .catalogue-status{align-self:flex-start}
+.catalogue-status.catalogue-status-verified{align-items:center;gap:5px;color:#1F4E79;background:#eaf1f8;border-color:#c9d9e9}
 .referenced-sources{margin:0;padding:0;list-style:none;display:grid;gap:4px;font-size:13px}
 .referenced-sources a{display:inline-flex;align-items:center;gap:5px;color:var(--ind-accent);overflow-wrap:anywhere}
 .referenced-sources a:hover{color:var(--ind-accent-dark)}

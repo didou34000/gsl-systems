@@ -3,7 +3,7 @@ import {productPhotoIds} from '@/lib/products/review';
 import {trackJourney} from '@/lib/journey-analytics';
 import {useState} from 'react';
 import Image from 'next/image';
-import {ArrowRight, ArrowUpRight, Armchair, BatteryCharging, BookOpen, Bot, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Grab, Droplets, Nut, Settings2, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
+import {ArrowRight, ArrowUpRight, Armchair, BadgeCheck, BatteryCharging, BookOpen, Bot, Boxes, Building2, Cable, CircleDot, Cog, Cpu, Grab, Droplets, Nut, Settings2, Factory, Flame, Hammer, Layers, Package, ScanLine, Shirt, SlidersHorizontal, Truck, Workflow, Wrench, Zap, type LucideIcon} from 'lucide-react';
 import Link from '@/components/site-link';
 import CountryFlag from '@/components/country-flag';
 import FactoryMark, {factoryCountries} from '@/components/factory-mark';
@@ -97,6 +97,7 @@ export function ProductCard({product: p, supplier}: {product: CardProduct; suppl
       {research && <div><dt>{l('Price', 'Prix')}</dt><dd>{price || l('Not disclosed', 'Non communiqué')}</dd></div>}
     </dl>
     {!research && p.specifications.verification === 'unverified' && <span className="catalogue-status">{l('Unverified product', 'Produit non vérifié')}</span>}
+    {!research && p.specifications.verification === 'verified' && <span className="catalogue-status catalogue-status-verified"><BadgeCheck size={13} aria-hidden/>{l('Verified product', 'Produit vérifié')}</span>}
     <div className="ind-card-actions"><CompareProduct id={p.product_id}/><Link onClick={open} href={'/produits/' + p.product_id}>{l('View datasheet', 'Voir la fiche')}<ArrowRight size={16} aria-hidden/></Link></div>
   </article>;
 }
@@ -114,6 +115,7 @@ export function SupplierCard({supplier: s, products = []}: {supplier: CardSuppli
     {categories.length > 0 && <ul className="ind-tags">{categories.slice(0, 4).map(category => <li key={category}><CategoryIcon category={category} size={13}/>{categoryLabel(category)}</li>)}</ul>}
     {products.length > 0 && <div className="ind-company-products"><p>{products.length} {products.length > 1 ? l('published offers', 'offres publiées') : l('published offer', 'offre publiée')}</p><ul>{products.slice(0, 3).map(p => <li key={p.product_id}><Link href={'/produits/' + p.product_id}>{p.name}<ArrowUpRight size={14} aria-hidden/></Link></li>)}</ul></div>}
     {!research && s.public_details?.verification === 'unverified' && <span className="catalogue-status">{l('Unverified company', 'Entreprise non vérifiée')}</span>}
+    {!research && s.public_details?.verification === 'verified' && <span className="catalogue-status catalogue-status-verified"><BadgeCheck size={13} aria-hidden/>{l('Verified company', 'Entreprise vérifiée')}</span>}
     <div className="ind-card-actions"><Link className="ind-button" href={'/fabricants/' + s.organization_id}>{l('View manufacturer', 'Voir le fabricant')}<ArrowRight size={16} aria-hidden/></Link><Link className="ind-button-secondary" href={gslContactHref(s.organization_id)}>{research ? l('Contact GSL', 'Contacter GSL') : l('Contact', 'Contacter')}</Link></div>
   </article>;
 }

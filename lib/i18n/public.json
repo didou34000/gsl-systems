@@ -2308,5 +2308,45 @@
     "لقطة مقرّبة لمخرطة CNC أثناء تشغيل قطعة معدنية, صورة توضيحية",
     "धातु के पुर्ज़े की मशीनिंग करती CNC लेथ का क्लोज़-अप, चित्रण",
     "CNC 车床加工金属零件特写, 示意图"
+  ],
+  "Verified product": [
+    "Producto verificado",
+    "Produto verificado",
+    "Geprüftes Produkt",
+    "Prodotto verificato",
+    "Doğrulanmış ürün",
+    "منتج متحقق منه",
+    "सत्यापित उत्पाद",
+    "已核实的产品"
+  ],
+  "Verified company": [
+    "Empresa verificada",
+    "Empresa verificada",
+    "Geprüftes Unternehmen",
+    "Azienda verificata",
+    "Doğrulanmış şirket",
+    "شركة متحقق منها",
+    "सत्यापित कंपनी",
+    "已核实的企业"
+  ],
+  "Company verified by GSL": [
+    "Empresa verificada por GSL",
+    "Empresa verificada pela GSL",
+    "Von GSL geprüftes Unternehmen",
+    "Azienda verificata da GSL",
+    "GSL tarafından doğrulanmış şirket",
+    "شركة تحققت منها GSL",
+    "GSL द्वारा सत्यापित कंपनी",
+    "经 GSL 核实的企业"
+  ],
+  "GSL checked the identity and activity of this company. This is not an on-site audit or certification of any product. Technical requirements and supporting evidence must be checked for the exact reference and use.": [
+    "GSL ha comprobado la identidad y la actividad de esta empresa. No se trata de una auditoría in situ ni de una certificación de producto. Los requisitos técnicos y los justificantes deben revisarse para la referencia y el uso exactos.",
+    "A GSL verificou a identidade e a atividade desta empresa. Não se trata de uma auditoria no local nem de uma certificação de produto. Os requisitos técnicos e os comprovativos devem ser verificados para a referência e a utilização exatas.",
+    "GSL hat die Identität und Tätigkeit dieses Unternehmens geprüft. Es handelt sich weder um ein Vor-Ort-Audit noch um eine Produktzertifizierung. Technische Anforderungen und Nachweise müssen für die genaue Referenz und Verwendung geprüft werden.",
+    "GSL ha verificato l’identità e l’attività di questa azienda. Non si tratta di un audit in loco né di una certificazione di prodotto. Requisiti tecnici e documenti di supporto vanno verificati per il riferimento e l’uso esatti.",
+    "GSL bu şirketin kimliğini ve faaliyetini kontrol etti. Bu, yerinde bir denetim veya ürün sertifikası değildir. Teknik gereklilikler ve destekleyici belgeler, tam referans ve kullanım için kontrol edilmelidir.",
+    "تحققت GSL من هوية هذه الشركة ونشاطها. هذا ليس تدقيقًا ميدانيًا ولا شهادة لأي منتج. يجب التحقق من المتطلبات الفنية والمستندات الداعمة للمرجع والاستخدام المحددين.",
+    "GSL ने इस कंपनी की पहचान और गतिविधि की जाँच की है। यह न तो स्थल पर ऑडिट है और न ही किसी उत्पाद का प्रमाणन। तकनीकी आवश्यकताओं और सहायक दस्तावेज़ों की जाँच सटीक संदर्भ और उपयोग के लिए की जानी चाहिए।",
+    "GSL 已核实该企业的身份和经营活动。这既不是现场审核, 也不是任何产品的认证。技术要求和证明材料须针对具体型号和用途进行核实。"
   ]
 }
