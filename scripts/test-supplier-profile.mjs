@@ -103,5 +103,5 @@ console.log('Per-family technical specifications: every family and type validate
 
 for(const country of ['TR','MA','TN','RS','MK','BA','MD','GE','AL','EG'])assert.deepEqual(sourcingIssues({...emptyProfile(),country}),[]);
 assert.equal(supplierDraftSchema.safeParse({...emptyProfile(),country:'BE'}).success,true);
-assert.ok(sourcingIssues({...emptyProfile(),country:'TR',sites:[{address:{country:'FR'}}]}).some(x=>x.path==='sites.0.address.country'));
+assert.ok(sourcingIssues({...emptyProfile(),country:'TR',sites:[{address:{country:'CN'}}]}).some(x=>x.path==='sites.0.address.country'));
 console.log('All ten sourcing countries accepted; out-of-scope production site blocked; legacy private draft preserved.');

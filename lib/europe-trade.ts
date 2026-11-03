@@ -1,6 +1,6 @@
 /**
  * How each European country outside the GSL sourcing scope trades with the EU.
- * Display only: these countries are not part of supplier registration (see sourcing-coverage).
+ * Trade framework shown on /pays. Supplier registration scope lives in sourcing-coverage (supplierCountries).
  * Dates are entry into force; reviewed with sourcing-agreements on the same day.
  */
 export type EuropeStatus='eu'|'eea'|'switzerland'|'uk'|'dcfta'|'saa'|'customs'|'customs-territory'|'none'|'sanctions';

@@ -4,7 +4,7 @@ import {ArrowRight,ArrowUpRight} from 'lucide-react';
 import Link from '@/components/site-link';
 import europe from '@/lib/maps/europe.json';
 import {countryAgreement,agreementNames} from '@/lib/sourcing-agreements';
-import {isSourcingCountry} from '@/lib/sourcing-coverage';
+import {isSourcingCountry,isSupplierCountry} from '@/lib/sourcing-coverage';
 import {europeCountry,europeStatusText} from '@/lib/europe-trade';
 import {countryOptions,countryName} from '@/lib/country-names';
 import {useLanguage} from './language';
@@ -28,7 +28,7 @@ export default function SourcingNetwork(){
  const pending=!result||result.country!==selected;
  const groups:[Group,string][]=[['sourcing',l('GSL sourcing countries','Pays de sourcing GSL')],['eu',l('European Union','Union européenne')],['europe',l('Other European countries','Autres pays d’Europe')]];
  return <section className="countries container">
-  <header className="countries-intro"><h1>{l('Countries and their trade with the EU','Les pays et leurs échanges avec l’UE')}</h1><p>{l('GSL looks for manufacturers in ten countries outside the EU that have a trade agreement with it. The map also shows how every European country trades with the European Union.','GSL recherche des fabricants dans dix pays hors UE liés à elle par un accord commercial. La carte indique aussi comment chaque pays d’Europe commerce avec l’Union européenne.')}</p></header>
+  <header className="countries-intro"><h1>{l('Countries and their trade with the EU','Les pays et leurs échanges avec l’UE')}</h1><p>{l('GSL lists manufacturers across Europe and in ten partner countries outside the EU that have a trade agreement with it. The map also shows how every European country trades with the European Union.','GSL référence des fabricants dans toute l’Europe et dans dix pays partenaires hors UE liés à elle par un accord commercial. La carte indique aussi comment chaque pays d’Europe commerce avec l’Union européenne.')}</p></header>
   <div className="countries-explorer">
    <figure className="countries-map">
     <svg viewBox={`0 0 ${europe.width} ${europe.height}`} role="img" aria-label={l('Map of Europe and the GSL sourcing countries. The country lists below the map give the same information.','Carte de l’Europe et des pays de sourcing GSL. Les listes de pays sous la carte donnent les mêmes informations.')}>
@@ -50,7 +50,7 @@ export default function SourcingNetwork(){
     </>:other&&text?<>
      <dl><div><dt>{l('Trade with the EU','Échanges avec l’UE')}</dt><dd>{l(...text.title)}</dd></div>{other.since&&text.since&&<div><dt>{l(...text.since)}</dt><dd><time dateTime={other.since}>{date(other.since)}</time></dd></div>}{other.provisional&&<div><dt>{l('Provisionally applied since','Appliqué à titre provisoire depuis')}</dt><dd><time dateTime={other.provisional}>{date(other.provisional)}</time></dd></div>}</dl>
      <p>{l(...text.note)}</p>
-     <p className="countries-scope">{l('This country is outside the GSL supplier scope. No manufacturer profile is published for it.','Ce pays est hors du périmètre fournisseurs de GSL. Aucune fiche fabricant n’y est publiée.')}</p>
+     {isSupplierCountry(selected)?<><p className="countries-scope">{l('Manufacturers registered in this country can join GSL and publish their components.','Les fabricants immatriculés dans ce pays peuvent rejoindre GSL et publier leurs composants.')}</p><div className="countries-actions"><Link className="button-link" href={'/fabricants?country='+selected}>{l('View manufacturers','Voir les fabricants')}<ArrowRight size={16}/></Link></div></>:<p className="countries-scope">{l('This country is outside the GSL supplier scope. No manufacturer profile is published for it.','Ce pays est hors du périmètre fournisseurs de GSL. Aucune fiche fabricant n’y est publiée.')}</p>}
     </>:null}
    </div>
   </div>
