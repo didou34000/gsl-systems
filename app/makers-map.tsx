@@ -4,7 +4,7 @@ import CountryFlag from '@/components/country-flag';
 import europe from '@/lib/maps/europe.json';
 import {makerPoint} from '@/lib/maps/maker-cities';
 import {referencedMakerHref,referencedMakers} from '@/lib/referenced-makers';
-import {isSourcingCountry,sourcingCountries} from '@/lib/sourcing-coverage';
+import {isSupplierCountry,sourcingCountries} from '@/lib/sourcing-coverage';
 import {countryName} from '@/lib/country-names';
 import type {MakerLocation} from '@/lib/supabase/public-catalogue';
 import {ArrowRight} from 'lucide-react';
@@ -52,7 +52,7 @@ export default function MakersMap({published,available,selected=''}:{published:M
    <figure className="makers-map-figure">
     <svg viewBox={`${view.x} ${view.y} ${view.width} ${view.height}`} role="img" aria-label={l('Map of manufacturer locations. The list next to the map gives the same information.','Carte des implantations des fabricants. La liste à côté de la carte donne les mêmes informations.')}>
      <path className="makers-map-context" d={europe.context}/>
-     {europe.countries.filter(c=>c.path).map(c=><path key={c.code} d={c.path} className={isSourcingCountry(c.code)?(selected===c.code?'is-sourcing is-selected':'is-sourcing'):'is-other'}/>)}
+     {europe.countries.filter(c=>c.path).map(c=><path key={c.code} d={c.path} className={isSupplierCountry(c.code)?(selected===c.code?'is-sourcing is-selected':'is-sourcing'):'is-other'}/>)}
      {markers.map(m=>{const r=radius(m);return <Link key={m.key} href={filter(m.country)} className={'makers-map-marker is-'+m.kind+(m.precision==='country'?' is-approximate':'')}>
       <title>{markerTitle(m)}</title>
       <circle cx={m.x} cy={m.y} r={r}/>
@@ -67,7 +67,7 @@ export default function MakersMap({published,available,selected=''}:{published:M
      <h3><CountryFlag code={code}/>{countryName(code,language)}</h3>
      <p>{[own.length?count(own.length,'published'):'',found.length?count(found.length,'referenced'):''].filter(Boolean).join(' · ')}</p>
      <ul>{own.map(m=><li key={m.id}><Link href={'/fabricants/'+m.id}>{m.name}</Link>{m.city&&<span>{m.city}</span>}</li>)}{found.map(m=><li key={m.id}><Link href={referencedMakerHref({company:m.name})}>{m.name}</Link><span>{m.city} · {l('Not registered, unverified','Non inscrit, non vérifié')}</span></li>)}</ul>
-     {isSourcingCountry(code)&&selected!==code&&<Link className="makers-map-filter" href={filter(code)}>{l('Show this country’s manufacturers','Voir les fabricants de ce pays')}<ArrowRight size={15} aria-hidden/></Link>}
+     {isSupplierCountry(code)&&selected!==code&&<Link className="makers-map-filter" href={filter(code)}>{l('Show this country’s manufacturers','Voir les fabricants de ce pays')}<ArrowRight size={15} aria-hidden/></Link>}
     </div>})}
     {empty.length>0&&<p className="makers-map-empty">{l('Sourcing countries with no manufacturer listed yet:','Pays de sourcing sans fabricant référencé pour l’instant :')} {empty.map(code=>countryName(code,language)).join(', ')}.</p>}
    </div>

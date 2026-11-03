@@ -1,5 +1,5 @@
 import {z} from 'zod';
-import {isSourcingCountry} from '../sourcing-coverage';
+import {isSupplierCountry} from '../sourcing-coverage';
 import {assessCountryDetails} from './country-requirements';
 import {specIssues,categoryForFamily,composePublishedDescription,normalizeSpecs,quantityUnits} from '../products/spec-fields';
 const text=z.string().trim().max(250).default('');
@@ -126,7 +126,7 @@ export function productPublicationIssues(p:SupplierProfile):ProfileIssue[]{
 /** Legacy countries remain editable in drafts; publication and submission enforce the commercial scope. */
 export function sourcingIssues(p:SupplierProfile):ProfileIssue[]{
  const out:ProfileIssue[]=[];
- const add=(country:string,step:number,path:string)=>{if(!isSourcingCountry(country))out.push({step,path,en:'Choose one of the 10 GSL sourcing countries.',fr:'Choisissez l’un des 10 pays de sourcing GSL.'})};
+ const add=(country:string,step:number,path:string)=>{if(!isSupplierCountry(country))out.push({step,path,en:'Choose one of the countries covered by GSL.',fr:'Choisissez l’un des pays couverts par GSL.'})};
  add(p.country,0,'country');
  p.sites.forEach((s,i)=>add(s.address.country,1,`sites.${i}.address.country`));
  p.products.forEach((p,i)=>{if(p.listingStatus!=='draft')add(p.origin,2,`products.${i}.origin`)});

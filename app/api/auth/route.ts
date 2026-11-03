@@ -2,7 +2,7 @@ import {resolveLanguage} from '@/lib/i18n/languages';
 import {authClient} from '@/lib/supabase/server';
 import {allowedOrigin,safeNext,validPassword} from '@/lib/auth-policy';
 import {countryCodes} from '@/lib/onboarding/iso-countries';
-import {isSourcingCountry} from '@/lib/sourcing-coverage';
+import {isSupplierCountry} from '@/lib/sourcing-coverage';
 export const dynamic='force-dynamic';
 const json=(data:unknown,status=200)=>Response.json(data,{status,headers:{'Cache-Control':'private, no-store'}});
 export async function GET(){
@@ -34,7 +34,7 @@ export async function POST(request:Request){
   if(action==='signup'){
    if(typeof body.name!=='string'||body.name.trim().length<2||body.name.length>100)return json({error:'NAME'},400);
    // The sign-up asks for the company: its name doubles as the display name until a person's name is set.
-   if(typeof body.country!=='string'||!countryCodes.includes(body.country)||(body.purpose==='supplier'&&!isSourcingCountry(body.country)))return json({error:'COUNTRY'},400);
+   if(typeof body.country!=='string'||!countryCodes.includes(body.country)||(body.purpose==='supplier'&&!isSupplierCountry(body.country)))return json({error:'COUNTRY'},400);
    const legalForm=typeof body.legalForm==='string'?body.legalForm.trim().slice(0,120):'';
    ({error}=await db.auth.signUp({email,password:body.password,options:{emailRedirectTo:callback.toString(),data:{display_name:body.name.trim(),language:resolveLanguage(body.language),company_name:body.name.trim(),company_country:body.country,company_legal_form:legalForm}}}));
   }else if(action==='verify'){

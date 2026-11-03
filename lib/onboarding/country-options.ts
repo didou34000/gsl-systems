@@ -1,4 +1,4 @@
-import {sourcingCountries} from '../sourcing-coverage';
+import {supplierCountries} from '../sourcing-coverage';
 /** Commercial supplier scope, independent of ISO validation for legacy drafts and buyer countries. */
-export const availableCountries:readonly string[]=sourcingCountries;
-export const countryGroups=[{en:'GSL sourcing countries',fr:'Pays de sourcing GSL',codes:sourcingCountries}];
+export const availableCountries:readonly string[]=supplierCountries;
+export const countryGroups=[{en:'GSL sourcing countries',fr:'Pays de sourcing GSL',codes:supplierCountries}];

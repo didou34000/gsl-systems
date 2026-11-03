@@ -89,7 +89,7 @@ export default function IndustrialHome({actions,live=false}:{actions:Actions;liv
     </div>
    </div>
    <div className="hx-countries">
-    <div><Link href="/pays">{l('Manufacturers in 10 countries outside the European Union','Fabricants dans 10 pays hors Union européenne')}</Link><ul>{sourcingCountries.map(code=><li key={code}>{countryName(code,language)}</li>)}</ul></div>
+    <div><Link href="/pays">{l('Manufacturers across Europe and in 10 partner countries','Fabricants dans toute l’Europe et dans 10 pays partenaires')}</Link><ul>{sourcingCountries.map(code=><li key={code}>{countryName(code,language)}</li>)}</ul></div>
     <div><Link href="/pays">{l('Buyers and delivery in Europe','Acheteurs et livraison en Europe')}</Link><ul><li>{l('European Union','Union européenne')} {l('and the other European countries','et les autres pays d’Europe')}</li></ul></div>
    </div>
   </div>

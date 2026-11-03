@@ -44,7 +44,7 @@ let signed=null;
 globalThis.__gslRecoveryFixture={auth:{signUp:async args=>{signed=args;return {error:null}}}};
 const signup=body=>route.POST(new Request('https://www.gsl-systems.com/api/auth',{method:'POST',headers:{origin:'https://www.gsl-systems.com','Content-Type':'application/json'},body:JSON.stringify({action:'signup',email:'a@example.invalid',password:'a-new-long-passphrase',name:'Atelier Exemple',language:'fr',next:'/compte',...body})}));
 assert.equal((await signup({})).status,400);
-assert.equal((await signup({country:'FR',purpose:'supplier'})).status,400);
+assert.equal((await signup({country:'CN',purpose:'supplier'})).status,400);
 assert.equal((await signup({country:'TR',purpose:'supplier',legalForm:'limited şirket (Ltd. Şti.)'})).status,200);
 assert.deepEqual([signed.options.data.company_name,signed.options.data.company_country,signed.options.data.company_legal_form],['Atelier Exemple','TR','limited şirket (Ltd. Şti.)']);
 assert.equal((await signup({country:'FR',purpose:'buyer'})).status,200);

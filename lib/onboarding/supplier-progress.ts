@@ -1,4 +1,4 @@
-import {isSourcingCountry} from '../sourcing-coverage';
+import {isSupplierCountry} from '../sourcing-coverage';
 import {isRequired,KIND_KEY,normalizeNumber,quantityUnits,specFields,specIssues} from '../products/spec-fields';
 import {companyIssues,companyPublicationSchema,productPublicationCategory,productPublicationIssues,publicationCategories,type SupplierProfile} from './supplier-profile';
 
@@ -14,7 +14,7 @@ export function supplierProgress(profile:SupplierProfile,view:'company'|'product
  if(view==='company'){
   const checks=[
    profile.legalName.trim().length>=2,
-   isSourcingCountry(profile.country),
+   isSupplierCountry(profile.country),
    Boolean(profile.headquarters.city.trim()),
    Boolean(profile.activity),
    profile.description.trim().length>=30,
@@ -35,7 +35,7 @@ export function supplierProgress(profile:SupplierProfile,view:'company'|'product
    Boolean(product.family)&&!technical.some(issue=>issue.code==='FAMILY'),
    publicationCategories.includes(productPublicationCategory(product)),
    product.description.trim().length>=30,
-   isSourcingCountry(product.origin),
+   isSupplierCountry(product.origin),
    /^\d+(\.\d+)?$/.test(quantity)&&Number(quantity)>0,
    (quantityUnits as readonly string[]).includes(product.unit),
   );
